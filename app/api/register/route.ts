@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createUser, findUserByPhone } from "@/models/user";
+import { hash } from "bcryptjs";
 
 export async function POST(req: NextRequest) {
   try {
-    const { phone, unitNumber, lastName } = await req.json();
+    const { phone, unitNumber, lastName, pass } = await req.json();
 
     //اعنبار سنجی
-    if (!phone || !unitNumber || !lastName) {
+    if (!phone || !unitNumber || !lastName || !pass) {
       return NextResponse.json(
         { success: false, message: "خطا تمام فیلدها الزامی هستند" },
         { status: 400 },
@@ -22,7 +23,14 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const newUser = await createUser(phone, unitNumber, lastName);
+    const hashedPassword = await hash(pass, 12);
+
+    const newUser = await createUser(
+      phone,
+      unitNumber,
+      lastName,
+      hashedPassword,
+    );
     return NextResponse.json({
       success: true,
       message: "درخواست ثبت شد. منتظر تأیید مدیر باشید.",

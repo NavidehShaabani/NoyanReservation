@@ -10,6 +10,7 @@ export type User = {
   is_verified: boolean;
   role: string;
   created_at: Date;
+  pass: string;
 };
 
 // ایجاد کاربر جدید – برگرداندن کاربر ساخته شده
@@ -17,10 +18,11 @@ export async function createUser(
   phone: string,
   unitNumber: string,
   lastName: string,
+  hashedPassword: string,
 ): Promise<User> {
   const result = await query(
-    "INSERT INTO users (phone, unit_number, last_name) VALUES ($1, $2, $3) RETURNING *",
-    [phone, unitNumber, lastName],
+    "INSERT INTO users (phone, unit_number, last_name,pass) VALUES ($1, $2, $3,$4) RETURNING *",
+    [phone, unitNumber, lastName, hashedPassword],
   );
   return result.rows[0] as User;
 }

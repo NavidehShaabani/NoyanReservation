@@ -6,6 +6,8 @@ export async function handleRegisterSubmit(
   phone: string,
   unitNumber: string,
   lastName: string,
+  pass: string,
+  confirmPass: string,
   setMessage: (msg: string) => void,
   setIsLoading: (loading: boolean) => void,
   router: any,
@@ -15,10 +17,16 @@ export async function handleRegisterSubmit(
   setMessage("");
 
   try {
+    if (pass.trim() !== confirmPass.trim()) {
+      setMessage(" تکرار کلمه عبور صحیح نمی باشد");
+      setIsLoading(false);
+      return;
+    }
+
     const res = await fetch("/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ phone, unitNumber, lastName }),
+      body: JSON.stringify({ phone, unitNumber, lastName, pass }),
     });
 
     const data = await res.json();

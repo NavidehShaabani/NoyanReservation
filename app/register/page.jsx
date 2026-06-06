@@ -15,12 +15,14 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-
+import { PasswordInput } from "@/components/custom/password-input";
 export default function RegisterPage() {
   const router = useRouter();
   const [phone, setPhone] = useState("");
   const [unitNumber, setUnitNumber] = useState("");
   const [lastName, setLastName] = useState("");
+  const [pass, setPass] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -46,6 +48,8 @@ export default function RegisterPage() {
                 phone,
                 unitNumber,
                 lastName,
+                pass,
+                confirmPass,
                 setMessage,
                 setIsLoading,
                 router,
@@ -87,6 +91,33 @@ export default function RegisterPage() {
                 required
               />
             </div>
+
+            <div className="space-y-2">
+              <label htmlFor="pass">کلمه عبور </label>
+
+              <PasswordInput
+                id="pass"
+                value={pass}
+                onChange={(e) => setPass(e.target.value)}
+                placeholder="کلمه عبور را وارد کنید"
+                required
+                dir="ltr"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="confirmPass">تکرار کلمه عبور </label>
+
+              <PasswordInput
+                id="confirmPass"
+                value={confirmPass}
+                onChange={(e) => setConfirmPass(e.target.value)}
+                placeholder="تکرار کلمه عبور را وارد کنید"
+                required
+                dir="ltr"
+              />
+            </div>
+
             <Button type="submit" disabled={isLoading} className="w-full">
               {isLoading ? "در حال ثبت‌نام..." : "ثبت‌نام"}
             </Button>
