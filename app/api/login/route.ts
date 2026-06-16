@@ -2,10 +2,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { findUserByPhone } from "@/models/user";
 import { createToken } from "@/lib/jwt";
-
+import { compare } from "bcryptjs";
 export async function POST(req: NextRequest) {
   try {
-    const { phone } = await req.json();
+    const { phone, pass } = await req.json();
 
     if (!phone) {
       return NextResponse.json(
@@ -14,12 +14,28 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    if (!pass) {
+      return NextResponse.json(
+        { success: false, message: "کلمه عبور الزامی است" },
+        { status: 400 },
+      );
+    }
+
     const user = await findUserByPhone(phone);
 
     if (!user) {
       return NextResponse.json(
-        { success: false, message: "کاربری با این شماره یافت نشد" },
+        { success: false, message: "کاربر یافت نشد" },
         { status: 404 },
+      );
+    }
+
+    const isValid = await compare(pass, user.pass);
+
+    if (!isValid) {
+      return NextResponse.json(
+        { success: false, message: "رمز عبور اشتباه است" },
+        { status: 401 },
       );
     }
 

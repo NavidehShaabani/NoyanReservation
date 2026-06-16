@@ -1,13 +1,17 @@
 "use client";
 import { SyntheticEvent } from "react";
 
-export async function handleLogin(e: SyntheticEvent, phone: string) {
+export async function handleLogin(
+  e: SyntheticEvent,
+  phone: string,
+  pass: string,
+) {
   e.preventDefault();
 
   const res = await fetch("/api/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ phone }),
+    body: JSON.stringify({ phone, pass }),
   });
 
   const data = await res.json();

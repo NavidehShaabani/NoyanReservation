@@ -5,10 +5,12 @@ import { handleLogin } from "@/components/actions/loginAction";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { PasswordInput } from "@/components/custom/password-input";
 
 export default function LoginPage() {
   const router = useRouter();
   const [phone, setPhone] = useState("");
+  const [pass, setPass] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -18,7 +20,7 @@ export default function LoginPage() {
     setMessage("");
 
     try {
-      const { role } = await handleLogin(e, phone);
+      const { role } = await handleLogin(e, phone, pass);
       setMessage("✔ ورود موفقیت‌آمیز بود");
       if (role === "admin") {
         setTimeout(() => router.push("/admin"), 1000);
@@ -29,7 +31,7 @@ export default function LoginPage() {
       if (err.message === "not_verified") {
         setMessage("❌ حساب کاربری شما هنوز تأیید نشده است");
       } else if (err.message === "unauthorized") {
-        setMessage("❌ شماره تلفن معتبر نیست");
+        setMessage("❌ شماره تلفن یا رمز عبور معتبر نیست");
       } else {
         setMessage("❌ خطا در ورود به سیستم");
       }
@@ -61,6 +63,18 @@ export default function LoginPage() {
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="مثال: 09123456789"
                 required
+              />
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="pass">کلمه عبور </label>
+
+              <PasswordInput
+                id="pass"
+                value={pass}
+                onChange={(e) => setPass(e.target.value)}
+                placeholder="کلمه عبور را وارد کنید"
+                required
+                dir="ltr"
               />
             </div>
             <Button type="submit" disabled={isLoading} className="w-full">

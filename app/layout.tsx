@@ -1,9 +1,30 @@
 import type { Metadata } from "next";
-//import { Inter } from "next/font/google";
 import "./globals.css"; // <-- این خط حتما باید باشد
 import { cn } from "@/lib/utils"; // <-- اضافه کردن کلاس cn (اگر وجود ندارد، یک فایل lib/utils.ts بسازید)
-// import HeaderMenu from "@/components/HeaderMenu";
-//const inter = Inter({ subsets: ["latin"] });
+import PWARegister from "@/components/PWARegister";
+
+export const metadata: Metadata = {
+  title: "برج یار",
+  description: "مدیریت سالن و خدمات برج",
+  manifest: "/manifest.json", // ← لینک به فایل manifest.json در پوشه public
+
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "برج یار",
+  },
+  icons: {
+    apple: "/icons/icon-192x192.png",
+  },
+};
+
+export const viewport = {
+  themeColor: "#3b82f6",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export default function RootLayout({
   children,
@@ -12,13 +33,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <head>
-        <title>برج یار</title>
-      </head>
       <body className={cn("min-h-screen bg-background text-foreground")}>
         {/* <HeaderMenu /> */}
         {/* <div className="pt-20">{children}</div> */}
         {children}
+        <PWARegister />
       </body>
     </html>
   );
