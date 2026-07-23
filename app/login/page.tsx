@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/custom/password-input";
+import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -45,6 +46,38 @@ export default function LoginPage() {
       className="flex items-center justify-center min-h-screen bg-gray-100 p-4"
       dir="rtl"
     >
+      <Image
+        src="/images/background_login_lab.png"
+        alt="Background"
+        fill
+        className="object-contain"
+        priority
+      />
+
+      {/* بک‌گراند هوشمند با قابلیت تشخیص دستگاه */}
+      {/* <picture className="absolute inset-0 -z-10">
+       
+        <source
+          media="(max-width: 768px)"
+          srcSet="/images/background_login_mob.png"
+          type="image/png"
+        />
+      
+        <source
+          media="(min-width: 769px)"
+          srcSet="/images/background_login_lab.png"
+          type="image/png"
+        />
+       
+        <Image
+          src="/images/background_login_lab.png"
+          alt="Background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </picture> */}
+
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-2xl text-center">

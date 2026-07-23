@@ -50,3 +50,111 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* ===== پس‌زمینه موج‌دار شماره ۱ ===== */
+.wave-bg-1 {
+  background: linear-gradient(135deg, #6c63ff 0%, #3f3d9e 100%);
+  position: relative;
+}
+.wave-bg-1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 40%
+    );
+  z-index: 1;
+}
+.wave-bg-1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200'%3E%3Cpath d='M0,100 C300,200 600,0 900,100 C1050,150 1150,100 1200,80 L1200,200 L0,200 Z' fill='%23ffffff' opacity='0.15'/%3E%3C/svg%3E")
+    no-repeat bottom;
+  background-size: cover;
+  z-index: 2;
+}
+
+/* ===== پس‌زمینه موج‌دار شماره ۲ (با دایره‌های طرح دار) ===== */
+.wave-bg-2 {
+  background: linear-gradient(120deg, #ff6b6b 0%, #ee5a24 100%);
+  position: relative;
+  overflow: hidden;
+}
+.wave-bg-2::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  top: -200px;
+  right: -200px;
+  z-index: 1;
+}
+.wave-bg-2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200'%3E%3Cpath d='M0,150 C200,50 400,180 600,120 C800,60 1000,150 1200,100 L1200,200 L0,200 Z' fill='%23ffffff' opacity='0.1'/%3E%3C/svg%3E")
+    no-repeat bottom;
+  background-size: cover;
+  z-index: 2;
+}
+
+/* ===== پس‌زمینه موج‌دار شماره ۳ (با نقطه‌چین و خطوط مورب) ===== */
+.wave-bg-3 {
+  background: #0c0c1d;
+  position: relative;
+  overflow: hidden;
+}
+.wave-bg-3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(
+      circle at 30% 40%,
+      rgba(108, 99, 255, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(108, 99, 255, 0.05) 0%,
+      transparent 40%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(255, 255, 255, 0.02) 20px,
+      rgba(255, 255, 255, 0.02) 21px
+    );
+  z-index: 1;
+}
+.wave-bg-3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200'%3E%3Cpath d='M0,160 C250,100 450,200 700,140 C950,80 1100,160 1200,120 L1200,200 L0,200 Z' fill='%236C63FF' opacity='0.15'/%3E%3C/svg%3E")
+    no-repeat bottom;
+  background-size: cover;
+  z-index: 2;
+}
