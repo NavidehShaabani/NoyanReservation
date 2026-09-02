@@ -1,0 +1,11 @@
+{
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Login"
+  },
+  "footer": {
+    "copyright": "© 2026 Noyan Reservation"
+  }
+}

@@ -1,11 +1,15 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
+
 const nextConfig = {
   reactStrictMode: true,
+
   turbopack: {},
 
-  //output: "export", // ← این خط باعث میشه خروجی استاتیک بگیریم برای تنظیمات Netlify
   images: {
-    unoptimized: true, // برای Netlify لازمه
+    unoptimized: true,
   },
 };
 
-module.exports = nextConfig;
+export default withNextIntl(nextConfig);

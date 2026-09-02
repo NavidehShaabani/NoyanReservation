@@ -39,7 +39,6 @@ erDiagram
         bigint resource_asset_id FK
         numeric_12_2 price
         tinyint price_unit FK
-        smallint measurment_unit FK
         smallint price_for " 1=per_booking ,2=hourly ,3=daily , 4=monthly ,5=yearly"
         date valid_from_date
         date valid_to_date
@@ -107,9 +106,11 @@ erDiagram
     }
     BOOKING{
         bigint id PK
-        bigint created_by_user_id FK
+        created_by_user_id FK
+        bigint user_id FK
         bigint resource_id FK
         bigint booking_type_id FK
+        int cancellation_policy_id FK
         int status "1=pending , 2=confirmed ,3=cancelled , 4=completed"
         text notes
         datetime2 created_at
@@ -126,7 +127,6 @@ erDiagram
      BOOKING_CLASS{
         bigint booking_id FK "PK"
         bigint coach_user_id FK
-        bigint booker_id FK
         varchar(200) title
         smallint gender_restriction "1-femail,2-mail,3-both"
         smallint min_age
@@ -138,10 +138,9 @@ erDiagram
 
      }
      BOOKING_PARTY_EVENT{
-        bigint booking_id FK "PK"
+        bigint id PK
+        bigint booking_id FK
         text title
-        bigint host_user_id FK
-        bigint booker_id FK
         int max_qusts
         smallint gender_guests "1-femail,2-mail,3-both"
         text description
@@ -151,7 +150,7 @@ erDiagram
      BOOKING_PRIVATE{
         bigint booking_id FK "PK"
         text description
-        bigint booker_id FK
+
      }
 
      BOOKING_ASSETS{
@@ -192,7 +191,7 @@ erDiagram
         time(5) end_time
         datetime2 effective_from
         datetime2 effective_to "nullable"
-        smallint status
+
      }
 
      CLASS_REGISTRATION{

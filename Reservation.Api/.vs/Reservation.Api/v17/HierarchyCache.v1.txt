@@ -1,0 +1,547 @@
+﻿++Solution 'Reservation.Api' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:Reservation.Api.sln
+++Reservation.Api
+i:{00000000-0000-0000-0000-000000000000}:Reservation.Api
+++Connected Services 
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:>219
+++Dependencies
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:>218
+++Analyzers
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:analyzers
+++Frameworks
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:frameworks
+++Packages
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:packages
+++Properties
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\properties\
+++launchSettings.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\properties\launchsettings.json
+++Controllers
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\controllers\
+++AuthController.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\controllers\authcontroller.cs
+++TestController.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\controllers\testcontroller.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\testcontroller.cs
+++Data
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\data\
+++DatabaseConnection.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\data\databaseconnection.cs
+++Models
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\models\
+++LoginRequest.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\models\loginrequest.cs
+++appsettings.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\appsettings.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\appsettings.json
+++Program.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\program.cs
+++WeatherForecast.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\weatherforecast.cs
+++No service dependencies discovered
+++Microsoft.AspNetCore.Analyzers
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.2\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\system.text.json\10.0.3\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\microsoft.netcore.app
+++BCrypt.Net-Next (4.2.0)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:>239
+++Microsoft.Data.SqlClient (7.0.2)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:>237
+++Swashbuckle.AspNetCore (6.2.3)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:>238
+++appsettings.Development.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\appsettings.development.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\appsettings.development.json
+++bin
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\
+++Debug
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\
+++net6.0
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win\lib\net6.0\
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\
+++runtimes
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\
+++BCrypt-Net-Next.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\bcrypt-net-next.dll
+++Microsoft.Bcl.AsyncInterfaces.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.bcl.asyncinterfaces.dll
+++Microsoft.Bcl.Cryptography.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.bcl.cryptography.dll
+++Microsoft.Bcl.TimeProvider.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.bcl.timeprovider.dll
+++Microsoft.Data.SqlClient.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.data.sqlclient.dll
+++Microsoft.Data.SqlClient.Extensions.Abstractions.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.data.sqlclient.extensions.abstractions.dll
+++Microsoft.Data.SqlClient.Internal.Logging.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.data.sqlclient.internal.logging.dll
+++Microsoft.Extensions.Caching.Abstractions.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.extensions.caching.abstractions.dll
+++Microsoft.Extensions.Caching.Memory.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.extensions.caching.memory.dll
+++Microsoft.Extensions.DependencyInjection.Abstractions.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.extensions.dependencyinjection.abstractions.dll
+++Microsoft.Extensions.Logging.Abstractions.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.extensions.logging.abstractions.dll
+++Microsoft.Extensions.Options.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.extensions.options.dll
+++Microsoft.Extensions.Primitives.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.extensions.primitives.dll
+++Microsoft.IdentityModel.Abstractions.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.identitymodel.abstractions.dll
+++Microsoft.IdentityModel.JsonWebTokens.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.identitymodel.jsonwebtokens.dll
+++Microsoft.IdentityModel.Logging.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.identitymodel.logging.dll
+++Microsoft.IdentityModel.Protocols.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.identitymodel.protocols.dll
+++Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.identitymodel.protocols.openidconnect.dll
+++Microsoft.IdentityModel.Tokens.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.identitymodel.tokens.dll
+++Microsoft.OpenApi.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.openapi.dll
+++Microsoft.SqlServer.Server.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\microsoft.sqlserver.server.dll
+++Reservation.Api.deps.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\reservation.api.deps.json
+++Reservation.Api.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\reservation.api.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\ref\reservation.api.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\refint\reservation.api.dll
+++Reservation.Api.exe
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\reservation.api.exe
+++Reservation.Api.pdb
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\reservation.api.pdb
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.pdb
+++Reservation.Api.runtimeconfig.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\reservation.api.runtimeconfig.json
+++Swashbuckle.AspNetCore.Swagger.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\swashbuckle.aspnetcore.swagger.dll
+++Swashbuckle.AspNetCore.SwaggerGen.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\swashbuckle.aspnetcore.swaggergen.dll
+++Swashbuckle.AspNetCore.SwaggerUI.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\swashbuckle.aspnetcore.swaggerui.dll
+++System.Configuration.ConfigurationManager.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.configuration.configurationmanager.dll
+++System.Diagnostics.DiagnosticSource.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.diagnostics.diagnosticsource.dll
+++System.Formats.Asn1.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.formats.asn1.dll
+++System.IdentityModel.Tokens.Jwt.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.identitymodel.tokens.jwt.dll
+++System.IO.Pipelines.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.io.pipelines.dll
+++System.Runtime.CompilerServices.Unsafe.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.runtime.compilerservices.unsafe.dll
+++System.Security.Cryptography.Pkcs.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.security.cryptography.pkcs.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win\lib\net6.0\system.security.cryptography.pkcs.dll
+++System.Security.Cryptography.ProtectedData.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.security.cryptography.protecteddata.dll
+++System.Text.Encodings.Web.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.text.encodings.web.dll
+++System.Text.Json.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.text.json.dll
+++System.Threading.Channels.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\system.threading.channels.dll
+++win
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win\
+++win-arm64
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win-arm64\
+++win-x64
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win-x64\
+++win-x86
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win-x86\
+++lib
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win\lib\
+++native
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win-arm64\native\
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win-x64\native\
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win-x86\native\
+++Microsoft.Data.SqlClient.SNI.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win-arm64\native\microsoft.data.sqlclient.sni.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win-x64\native\microsoft.data.sqlclient.sni.dll
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\bin\debug\net6.0\runtimes\win-x86\native\microsoft.data.sqlclient.sni.dll
+++obj
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\
+++project.assets.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\project.assets.json
+++project.nuget.cache
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\project.nuget.cache
+++Reservation.Api.csproj.nuget.dgspec.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\reservation.api.csproj.nuget.dgspec.json
+++Reservation.Api.csproj.nuget.g.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\reservation.api.csproj.nuget.g.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\reservation.api.csproj.nuget.g.props
+++Reservation.Api.csproj.nuget.g.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\reservation.api.csproj.nuget.g.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\reservation.api.csproj.nuget.g.targets
+++staticwebassets.pack.sentinel
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\staticwebassets.pack.sentinel
+++ref
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\ref\
+++refint
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\refint\
+++staticwebassets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\staticwebassets\
+++.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\.netcoreapp,version=v6.0.assemblyattributes.cs
+++apphost.exe
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\apphost.exe
+++Reservation.Api.AssemblyInfo.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.assemblyinfo.cs
+++Reservation.Api.AssemblyInfoInputs.cache
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.assemblyinfoinputs.cache
+++Reservation.Api.assets.cache
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.assets.cache
+++Reservation.Api.csproj.AssemblyReference.cache
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.csproj.assemblyreference.cache
+++Reservation.Api.csproj.BuildWithSkipAnalyzers
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.csproj.buildwithskipanalyzers
+++Reservation.Api.csproj.CopyComplete
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.csproj.copycomplete
+++Reservation.Api.csproj.CoreCompileInputs.cache
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.csproj.corecompileinputs.cache
+++Reservation.Api.csproj.FileListAbsolute.txt
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.csproj.filelistabsolute.txt
+++Reservation.Api.GeneratedMSBuildEditorConfig.editorconfig
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.generatedmsbuildeditorconfig.editorconfig
+++Reservation.Api.genruntimeconfig.cache
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.genruntimeconfig.cache
+++Reservation.Api.GlobalUsings.g.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.globalusings.g.cs
+++Reservation.Api.MvcApplicationPartsAssemblyInfo.cache
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.mvcapplicationpartsassemblyinfo.cache
+++Reservation.Api.MvcApplicationPartsAssemblyInfo.cs
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\reservation.api.mvcapplicationpartsassemblyinfo.cs
+++staticwebassets.build.json
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:g:\react projects\react-next-tailwind-shadcn-prisma-lucide\noyanreservation\reservation.api\reservation.api\obj\debug\net6.0\staticwebassets.build.json
+++Imports
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:>240
+++Sdk.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\sdk\sdk.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.illink.tasks\sdk\sdk.props
+++Sdk.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\sdk\sdk.targets
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.202\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.202\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.202\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.202\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\sdk\sdk.props
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.202\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.202\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.202\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.202\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\sdk\sdk.targets
+++Microsoft.Common.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.props
+++Microsoft.NET.Sdk.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.props
+++Sdk.Razor.CurrentVersion.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.props
+++Microsoft.NET.Sdk.Web.ProjectSystem.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.props
+++Microsoft.NET.Sdk.Publish.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.props
+++Microsoft.NET.Sdk.BeforeCommon.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.beforecommon.targets
+++Microsoft.CSharp.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.targets
+++Microsoft.NET.Sdk.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.targets
+++Microsoft.NET.Compatibility.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.targets
+++NuGet.Build.Tasks.Pack.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\nuget.build.tasks.pack\build\nuget.build.tasks.pack.targets
+++Sdk.Razor.CurrentVersion.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.targets
+++Microsoft.NET.Sdk.Web.ProjectSystem.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.targets
+++Microsoft.NET.Sdk.Publish.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.targets
+++Microsoft.LiveUnitTesting.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.liveunittesting.props
+++Microsoft.NuGet.ImportBefore.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.nuget.importbefore.props
+++NuGet.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\common7\ide\commonextensions\microsoft\nuget\nuget.props
+++Microsoft.NET.Sdk.DefaultItems.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.props
+++Microsoft.NET.Sdk.ImportWorkloads.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.props
+++Microsoft.NET.SupportedTargetFrameworks.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.supportedtargetframeworks.props
+++Microsoft.NET.SupportedPlatforms.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.supportedplatforms.props
+++Microsoft.NET.WindowsSdkSupportedTargetPlatforms.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.windowssdksupportedtargetplatforms.props
+++Microsoft.NET.Sdk.CSharp.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.props
+++Microsoft.NET.ILLink.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.illink.props
+++Microsoft.NET.Compatibility.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.props
+++Microsoft.NET.PackTool.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.props
+++Microsoft.NET.PackProjectTool.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.props
+++Microsoft.NET.Sdk.WindowsDesktop.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.props
+++Microsoft.NET.Windows.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.windows.props
+++Sdk.Razor.StaticAssets.ProjectSystem.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\sdk\sdk.razor.staticassets.projectsystem.props
+++Microsoft.TypeScript.Default.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.default.props
+++Microsoft.NET.Sdk.Web.DefaultItems.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.defaultitems.props
+++Microsoft.NET.DefaultAssemblyInfo.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.defaultassemblyinfo.targets
+++Microsoft.NET.DefaultOutputPaths.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.defaultoutputpaths.targets
+++Microsoft.NET.Sdk.ImportPublishProfile.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importpublishprofile.targets
+++Microsoft.NET.TargetFrameworkInference.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.targetframeworkinference.targets
+++Microsoft.NET.Sdk.Razor.BeforeCommon.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.beforecommon.targets
+++Microsoft.NET.Sdk.ImportWorkloads.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.targets
+++Microsoft.NET.RuntimeIdentifierInference.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.runtimeidentifierinference.targets
+++Microsoft.NET.EolTargetFrameworks.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.eoltargetframeworks.targets
+++Microsoft.NET.NuGetOfflineCache.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.nugetofflinecache.targets
+++Microsoft.Managed.Before.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.before.targets
+++Microsoft.CSharp.CurrentVersion.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.csharp.currentversion.targets
+++Microsoft.Managed.After.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.managed.after.targets
+++Microsoft.NET.Sdk.Common.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.common.targets
+++Microsoft.PackageDependencyResolution.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.packagedependencyresolution.targets
+++Microsoft.NET.Sdk.DefaultItems.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.targets
+++Microsoft.NET.Sdk.FrameworkReferenceResolution.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.frameworkreferenceresolution.targets
+++Microsoft.NET.Sdk.Shared.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.shared.targets
+++Microsoft.NET.DisableStandardFrameworkResolution.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.disablestandardframeworkresolution.targets
+++Microsoft.NET.DesignerSupport.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.designersupport.targets
+++Microsoft.NET.GenerateAssemblyInfo.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.generateassemblyinfo.targets
+++Microsoft.NET.GenerateGlobalUsings.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.generateglobalusings.targets
+++Microsoft.NET.GenerateSupportedRuntime.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.generatesupportedruntime.targets
+++Microsoft.NET.ComposeStore.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.composestore.targets
+++Microsoft.NET.CrossGen.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.crossgen.targets
+++Microsoft.NET.ObsoleteReferences.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.obsoletereferences.targets
+++Microsoft.NET.Publish.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.publish.targets
+++Microsoft.NET.PackTool.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.targets
+++Microsoft.NET.PackProjectTool.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.targets
+++Microsoft.NET.PreserveCompilationContext.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.preservecompilationcontext.targets
+++Microsoft.NET.ConflictResolution.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.conflictresolution.targets
+++Microsoft.NET.Sdk.CSharp.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.targets
+++Microsoft.NET.ILLink.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.illink.targets
+++Microsoft.NET.Sdk.Analyzers.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.analyzers.targets
+++Microsoft.NET.Compatibility.Common.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.common.targets
+++Microsoft.NET.Sdk.Razor.Configuration.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.configuration.targets
+++Microsoft.NET.Sdk.Razor.CodeGeneration.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.codegeneration.targets
+++Microsoft.NET.Sdk.Razor.SourceGenerators.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.sourcegenerators.targets
+++Microsoft.NET.Sdk.Razor.StaticWebAssets.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.staticwebassets.targets
+++Microsoft.NET.Sdk.Razor.ScopedCss.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.scopedcss.targets
+++Microsoft.NET.Sdk.Razor.JSModules.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.jsmodules.targets
+++Microsoft.NET.Sdk.Razor.GenerateAssemblyInfo.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.generateassemblyinfo.targets
+++Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.mvcapplicationpartsdiscovery.targets
+++Microsoft.NET.Sdk.Razor.DesignTime.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\razor\microsoft.net.sdk.razor.designtime.targets
+++Microsoft.TypeScript.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.targets
+++Microsoft.TypeScript.DotNetCore.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.dotnetcore.targets
+++Microsoft.Web.Designtime.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed.web\microsoft.web.designtime.targets
+++Default.pubxml
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\targets\publishprofiles\default.pubxml
+++Microsoft.NET.Sdk.Publish.ComputeFiles.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\targets\computetargets\microsoft.net.sdk.publish.computefiles.targets
+++Microsoft.NET.Sdk.Publish.FilterFiles.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.filterfiles.targets
+++Microsoft.NET.Sdk.Publish.CopyFiles.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.copyfiles.targets
+++Microsoft.NET.Sdk.Publish.TransformFiles.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\targets\transformtargets\microsoft.net.sdk.publish.transformfiles.targets
+++Microsoft.NET.Sdk.Publish.FileSystem.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\targets\publishtargets\microsoft.net.sdk.publish.filesystem.targets
+++Microsoft.NET.Sdk.DotNetCLITool.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.publish\targets\dotnetclitooltargets\microsoft.net.sdk.dotnetclitool.targets
+++Microsoft.Extensions.ApiDescription.Server.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\microsoft.extensions.apidescription.server\3.0.0\build\microsoft.extensions.apidescription.server.props
+++Swashbuckle.AspNetCore.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\swashbuckle.aspnetcore\6.2.3\build\swashbuckle.aspnetcore.props
+++Microsoft.NuGet.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\nuget\17.0\microsoft.nuget.props
+++Microsoft.NETCoreSdk.BundledVersions.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\microsoft.netcoresdk.bundledversions.props
+++Microsoft.NET.Sdk.WindowsDesktop.WindowsForms.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.windowsforms.props
+++Microsoft.NET.Sdk.WindowsDesktop.WPF.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.wpf.props
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain\workloadmanifest.targets
+++Microsoft.CSharp.Core.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.csharp.core.targets
+++Microsoft.CSharp.DesignTime.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.csharp.designtime.targets
+++Microsoft.Common.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.common.targets
+++Microsoft.ServiceModel.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.servicemodel.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.servicemodel.targets
+++Microsoft.NET.Sdk.DefaultItems.Shared.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.shared.targets
+++Microsoft.NETCoreSdk.BundledCliTools.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\microsoft.netcoresdk.bundledclitools.props
+++Microsoft.NET.DefaultPackageConflictOverrides.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\targets\microsoft.net.defaultpackageconflictoverrides.targets
+++Microsoft.CodeAnalysis.NetAnalyzers.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.props
+++Microsoft.CodeAnalysis.NetAnalyzers.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.targets
+++Microsoft.NET.ILLink.Tasks.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.illink.tasks\build\microsoft.net.illink.tasks.props
+++System.Windows.Forms.Analyzers.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.windowsdesktop\targets\system.windows.forms.analyzers.props
+++Microsoft.Managed.Core.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.targets
+++Microsoft.Managed.DesignTime.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed\microsoft.managed.designtime.targets
+++Microsoft.Common.CurrentVersion.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.common.currentversion.targets
+++Microsoft.Managed.Core.CurrentVersions.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\roslyn\microsoft.managed.core.currentversions.targets
+++Microsoft.LiveUnitTesting.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importbefore\microsoft.liveunittesting.targets
+++Microsoft.NET.props
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.net.props
+++Microsoft.CodeAnalysis.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\codeanalysis\microsoft.codeanalysis.targets
+++Microsoft.Xaml.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.xaml.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.xaml.targets
+++Microsoft.WorkflowBuildExtensions.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\bin\amd64\microsoft.workflowbuildextensions.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.workflowbuildextensions.targets
+++Microsoft.TeamTest.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\teamtest\microsoft.teamtest.targets
+++NuGet.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\common7\ide\commonextensions\microsoft\nuget\nuget.targets
+++Microsoft.Docker.ImportAfter.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.docker.importafter.targets
+++Microsoft.NET.Build.Extensions.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.net.build.extensions.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\microsoft.net.build.extensions\microsoft.net.build.extensions.targets
+++Microsoft.NuGet.ImportAfter.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.nuget.importafter.targets
+++Microsoft.QualityTools.Testing.Fakes.ImportAfter.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.qualitytools.testing.fakes.importafter.targets
+++Microsoft.Web.ImportAfter.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\current\microsoft.common.targets\importafter\microsoft.web.importafter.targets
+++System.Threading.Channels.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\system.threading.channels\10.0.3\buildtransitive\netcoreapp2.0\system.threading.channels.targets
+++System.Text.Encodings.Web.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\system.text.encodings.web\10.0.3\buildtransitive\netcoreapp2.0\system.text.encodings.web.targets
+++System.IO.Pipelines.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\system.io.pipelines\10.0.3\buildtransitive\netcoreapp2.0\system.io.pipelines.targets
+++System.Text.Json.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\system.text.json\10.0.3\buildtransitive\netcoreapp2.0\system.text.json.targets
+++Microsoft.Extensions.Logging.Abstractions.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.2\buildtransitive\net6.0\microsoft.extensions.logging.abstractions.targets
+++Microsoft.Extensions.ApiDescription.Server.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\microsoft.extensions.apidescription.server\3.0.0\build\microsoft.extensions.apidescription.server.targets
+++Microsoft.Extensions.Options.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\users\user\.nuget\packages\microsoft.extensions.options\8.0.2\buildtransitive\net6.0\microsoft.extensions.options.targets
+++Microsoft.Docker.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\sdks\microsoft.docker.sdk\build\microsoft.docker.targets
+++Microsoft.QualityTools.Testing.Fakes.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\v17.0\fakes\microsoft.qualitytools.testing.fakes.targets
+++Microsoft.Web.IISSupport.targets
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:c:\program files\microsoft visual studio\2022\enterprise\msbuild\microsoft\visualstudio\managed.web\microsoft.web.iissupport.targets
+++SQL Server Database (ConnectionStrings:DefaultConnection)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:>393
+++SQL Server Database dependency with connectionId 'ConnectionStrings:DefaultConnection' is detected
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:>394
+++Dapper (2.1.79)
+i:{bef0af46-cce7-449b-8115-b0f3bd461086}:>395

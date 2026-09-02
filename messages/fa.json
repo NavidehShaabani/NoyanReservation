@@ -1,0 +1,11 @@
+{
+  "login": {
+    "title": "ورود",
+    "username": "نام کاربری",
+    "password": "رمز عبور",
+    "submit": "ورود"
+  },
+  "footer": {
+    "copyright": "© ۲۰۲۶ نویان رزرو"
+  }
+}
