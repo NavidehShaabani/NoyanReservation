@@ -3,7 +3,13 @@
     "title": "Login",
     "username": "Username",
     "password": "Password",
-    "submit": "Login"
+    "submit": "Login",
+    "error": "Error",
+    "errors": {
+      "usernameRequired": "Username is required.",
+      "passwordRequired": "password is required.",
+      "bothRequired": "Username and password are required."
+    }
   },
   "footer": {
     "copyright": "© 2026 Noyan Reservation"

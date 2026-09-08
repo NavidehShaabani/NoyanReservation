@@ -10,7 +10,26 @@ import { getMessages } from "next-intl/server";
 
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-const vazirmatn = localFont({ src: "../../fonts/Vazirmatn-Regular.woff2" });
+
+const vazirmatn = localFont({
+  src: [
+    {
+      path: "../../fonts/Vazirmatn-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Vazirmatn-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Vazirmatn-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;

@@ -3,7 +3,13 @@
     "title": "ورود",
     "username": "نام کاربری",
     "password": "رمز عبور",
-    "submit": "ورود"
+    "submit": "ورود",
+    "error": "خطا",
+    "errors": {
+      "usernameRequired": "نام کاربری الزامی است.",
+      "passwordRequired": "رمز عبور الزامی است.",
+      "bothRequired": "نام کاربری و رمز عبور الزامی هستند."
+    }
   },
   "footer": {
     "copyright": "© ۲۰۲۶ نویان رزرو"
