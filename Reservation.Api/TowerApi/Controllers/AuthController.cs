@@ -33,7 +33,7 @@ namespace TowerApi.Controllers
                     });
                 }
 
-                if (string.IsNullOrWhiteSpace(request.PasswordHash))
+                if (string.IsNullOrWhiteSpace(request.Password))
                 {
                     return BadRequest(new
                     {

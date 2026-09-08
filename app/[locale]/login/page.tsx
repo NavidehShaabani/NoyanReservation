@@ -1,5 +1,5 @@
 "use client";
-import { useState, type SyntheticEvent } from "react";
+import { useState, type SyntheticEvent, useContext } from "react";
 import { useTranslations } from "next-intl";
 import {
   Field,
@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { AlertCircleIcon } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-
+import { AuthContext } from "@/context/AuthProvider";
 export default function Login() {
   const t = useTranslations("login");
   const tFooter = useTranslations("footer");
@@ -22,23 +22,26 @@ export default function Login() {
     "usernameRequired" | "passwordRequired" | "bothRequired" | ""
   >("");
   const [submitted, setSubmitted] = useState(false);
-
+  const { token, setToken } = useContext(AuthContext);
   const submit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
 
     if (!username && !password) {
       setError("bothRequired");
+      return;
     } else if (!username) {
       setError("usernameRequired");
+      return;
     } else if (!password) {
       setError("passwordRequired");
+      return;
     } else {
       setError("");
     }
 
     try {
-      const response = await fetch("https://localhost:7269/api/Auth/login", {
+      const response = await fetch("https://localhost:7295/api/Auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +58,7 @@ export default function Login() {
       }
 
       const data = await response.json();
-
+      setToken(data.accessToken);
       console.log("Login response:", data);
     } catch (error) {
       console.error("Login error:", error);

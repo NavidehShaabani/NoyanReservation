@@ -10,7 +10,7 @@ import { getMessages } from "next-intl/server";
 
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-
+import AuthProvider from "@/context/AuthProvider";
 const vazirmatn = localFont({
   src: [
     {
@@ -87,7 +87,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <AuthProvider>{children}</AuthProvider>
         </NextIntlClientProvider>
 
         <PWARegister />

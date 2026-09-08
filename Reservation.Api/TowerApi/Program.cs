@@ -52,8 +52,18 @@ if (string.IsNullOrWhiteSpace(connectionString))
 // ======================================================
 
 builder.Services.AddControllers();
-
-
+//________nsh
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReact", policy =>
+    {
+        policy
+            .WithOrigins("http://10.248.182.91:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+//________
 // ======================================================
 // Swagger
 // ======================================================
@@ -198,7 +208,8 @@ builder.Services.AddScoped<IJwtService, JwtService>();
 // ======================================================
 
 var app = builder.Build();
-
+//________nsh
+app.UseCors("AllowReact");
 
 // ======================================================
 // Swagger

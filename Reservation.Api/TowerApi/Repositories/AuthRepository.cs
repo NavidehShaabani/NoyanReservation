@@ -41,7 +41,7 @@ namespace TowerApi.Repositories
                     var query = "dbo.UserLogin";
                     var param = new DynamicParameters();
                     param.Add("@pUsername", user.Username);
-                    param.Add("@pPasswordHash", user.PasswordHash);
+                    param.Add("@pPasswordHash", user.Password);
 
                     param.Add("@ResultCode","", DbType.Int32, ParameterDirection.Output);
                     param.Add("@ResultMessage","", DbType.String, ParameterDirection.Output);
