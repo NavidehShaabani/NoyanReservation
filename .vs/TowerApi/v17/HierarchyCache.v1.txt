@@ -1,0 +1,275 @@
+﻿++Solution 'TowerApi' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:TowerApi.sln
+++TowerApi
+i:{00000000-0000-0000-0000-000000000000}:TowerApi
+++Connected Services 
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>449
+++Dependencies
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>448
+++Properties
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\properties\
+++wwwroot
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\
+++Controllers
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\controllers\
+++AuthController.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\controllers\authcontroller.cs
+++DatabaseTest.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\controllers\databasetest.cs
+++DataBase
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\database\
+++DbConnectionFactory.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\database\dbconnectionfactory.cs
+++IDbConnectionFactory.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\database\idbconnectionfactory.cs
+++Extensions
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\extensions\
+++SessionExtensions.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\extensions\sessionextensions.cs
+++Model
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\
+++Auth
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\auth\
+++LoginRequest.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\auth\loginrequest.cs
+++LoginResult.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\auth\loginresult.cs
+++UserSession.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\auth\usersession.cs
+++User
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\
+++UserInfo.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\userinfo.cs
+++UserMenu.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\usermenu.cs
+++UserRole.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\userrole.cs
+++Pages
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\
+++Repositories
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\repositories\
+++Services
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\
+++AuthService.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\authservice.cs
+++CurrentUser.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\currentuser.cs
+++IAuthService.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\iauthservice.cs
+++ICurrentUser.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\icurrentuser.cs
+++appsettings.json
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\appsettings.json
+++appsettings.Development.json
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\appsettings.development.json
+++Program.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\program.cs
+++No service dependencies discovered
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>450
+++Analyzers
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:analyzers
+++Frameworks
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:frameworks
+++Packages
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:packages
+++launchSettings.json
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\properties\launchsettings.json
+++css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\css\
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\
+++js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\js\
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\
+++favicon.ico
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\favicon.ico
+++Shared
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\shared\
+++_ViewImports.cshtml
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\_viewstart.cshtml
+++Error.cshtml
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\error.cshtml
+++Index.cshtml
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\index.cshtml
+++Privacy.cshtml
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\privacy.cshtml
+++AuthRepository.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\repositories\authrepository.cs
+++IAuthRepository.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\repositories\iauthrepository.cs
+++Microsoft.AspNetCore.Analyzers
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\users\user 5\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.2\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\users\user 5\.nuget\packages\system.text.json\10.0.3\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\microsoft.netcore.app
+++Dapper (2.1.79)
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>469
+++Swashbuckle.AspNetCore (6.5.0)
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>468
+++System.Data.SqlClient (4.9.1)
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>810
+++site.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\css\site.css
+++site.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\js\site.js
+++bootstrap
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\
+++jquery
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery\
+++jquery-validation
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation-unobtrusive\
+++_Layout.cshtml
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\shared\_layout.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\shared\_validationscriptspartial.cshtml
+++Error.cshtml.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\error.cshtml.cs
+++Index.cshtml.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\index.cshtml.cs
+++Privacy.cshtml.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\privacy.cshtml.cs
+++dist
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery\dist\
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\license
+++LICENSE.txt
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery\license.txt
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++_Layout.cshtml.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\shared\_layout.cshtml.css
+++jquery.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++bootstrap.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+++bootstrap-grid.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+++bootstrap-reboot.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+++bootstrap-utilities.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+++bootstrap.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+++jquery.min.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++bootstrap.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+++bootstrap.min.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+++bootstrap.rtl.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+++bootstrap-grid.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+++bootstrap-grid.min.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+++bootstrap-grid.rtl.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+++bootstrap-reboot.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+++bootstrap-reboot.rtl.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+++bootstrap-utilities.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+++bootstrap-utilities.min.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+++bootstrap-utilities.rtl.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+++bootstrap.bundle.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+++bootstrap.esm.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+++bootstrap.js.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+++bootstrap.min.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+++jquery.min.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\jquery\dist\jquery.min.map
+++bootstrap.min.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+++bootstrap.rtl.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+++bootstrap.rtl.min.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+++bootstrap-grid.min.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+++bootstrap-grid.rtl.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+++bootstrap-grid.rtl.min.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+++bootstrap-reboot.min.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+++bootstrap-reboot.rtl.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+++bootstrap-reboot.rtl.min.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+++bootstrap-utilities.min.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+++bootstrap-utilities.rtl.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+++bootstrap-utilities.rtl.min.css
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+++bootstrap.bundle.js.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+++bootstrap.esm.js.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+++bootstrap.esm.min.js
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+++bootstrap.min.js.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++bootstrap.rtl.min.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+++bootstrap-grid.rtl.min.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+++bootstrap-reboot.rtl.min.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+++bootstrap-utilities.rtl.min.css.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+++bootstrap.bundle.min.js.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+++bootstrap.esm.min.js.map
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
