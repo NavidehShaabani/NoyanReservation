@@ -23,6 +23,9 @@
 
 //app.Run();
 
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using TowerApi.DataBase;
 using TowerApi.Middleware;
 using TowerApi.Repositories;
@@ -56,7 +59,39 @@ builder.Services.AddControllers();
 // ======================================================
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.AddSecurityDefinition(
+        "Bearer",
+        new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+        {
+            Name = "Authorization",
+            Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+            Scheme = "bearer",
+            BearerFormat = "JWT",
+            In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+            Description =
+                "توکن JWT را وارد کنید. مثال: Bearer eyJhbGciOi..."
+        });
+
+    options.AddSecurityRequirement(
+        new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+        {
+            {
+                new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                {
+                    Reference =
+                        new Microsoft.OpenApi.Models.OpenApiReference
+                        {
+                            Type =
+                                Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        }
+                },
+                Array.Empty<string>()
+            }
+        });
+});
 
 
 // ======================================================
@@ -90,8 +125,43 @@ builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 
 
 // ======================================================
-// Authorization
+// JWT Authentication
 // ======================================================
+
+builder.Services.AddAuthentication(
+    JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        var jwtKey = builder.Configuration["Jwt:Key"];
+
+        if (string.IsNullOrWhiteSpace(jwtKey))
+        {
+            throw new InvalidOperationException(
+                "Jwt:Key پیدا نشد.");
+        }
+
+        options.TokenValidationParameters =
+            new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+
+                IssuerSigningKey =
+                    new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(jwtKey)),
+
+                ValidateIssuer = true,
+                ValidIssuer =
+                    builder.Configuration["Jwt:Issuer"],
+
+                ValidateAudience = true,
+                ValidAudience =
+                    builder.Configuration["Jwt:Audience"],
+
+                ValidateLifetime = true,
+
+                ClockSkew = TimeSpan.FromMinutes(1)
+            };
+    });
 
 builder.Services.AddAuthorization();
 
@@ -117,6 +187,11 @@ builder.Services.AddSession(options =>
         SameSiteMode.Lax;
 });
 
+// ======================================================
+// JWT
+// ======================================================
+
+builder.Services.AddScoped<IJwtService, JwtService>();
 
 // ======================================================
 // Build
@@ -144,6 +219,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseSession();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

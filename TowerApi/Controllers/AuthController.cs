@@ -109,16 +109,35 @@ namespace TowerApi.Controllers
                 HttpContext.Session.SetUserSession(userSession);
 
 
+                //return Ok(new
+                //{
+                //    success = true,
+
+                //    message = result.ResultMessage
+                //});
                 return Ok(new
                 {
                     success = true,
-
-                    message = result.ResultMessage
+                    message = result.ResultMessage,
+                    accessToken = result.AccessToken,
+                    expiresIn = result.ExpiresIn,
+                    user = new
+                    {
+                        userId = userSession.UserId,
+                        username = userSession.Username,
+                        fullName = userSession.FullName,
+                        roles = userSession.Roles
+                    }
                 });
             }
             catch (Exception ex)
             {
-                return null;
+                return StatusCode(500, new
+                {
+                    success = false,
+                    message = "خطایی در ورود رخ داده است.",
+                    error = ex.Message
+                });
             }
         }
         [HttpPost("logout")]
