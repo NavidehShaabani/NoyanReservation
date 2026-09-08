@@ -206,7 +206,10 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseMiddleware<SwaggerBasicAuthMiddleware>();
+    // ======================================================
+    // If we will used from User and password for Swagger
+    // ======================================================
+    //app.UseMiddleware<SwaggerBasicAuthMiddleware>();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
