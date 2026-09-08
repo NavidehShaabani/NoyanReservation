@@ -3,9 +3,9 @@ i:{00000000-0000-0000-0000-000000000000}:TowerApi.sln
 ++TowerApi
 i:{00000000-0000-0000-0000-000000000000}:TowerApi
 ++Connected Services 
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:>449
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>423
 ++Dependencies
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:>448
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>422
 ++Properties
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\properties\
 ++wwwroot
@@ -26,6 +26,10 @@ i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\extensions\
 ++SessionExtensions.cs
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\extensions\sessionextensions.cs
+++Middleware
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\middleware\
+++SwaggerBasicAuthMiddleware.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\middleware\swaggerbasicauthmiddleware.cs
 ++Model
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\
 ++Auth
@@ -38,16 +42,14 @@ i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\auth\usersession.cs
 ++User
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\
-++UserInfo.cs
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\userinfo.cs
-++UserMenu.cs
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\usermenu.cs
-++UserRole.cs
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\userrole.cs
 ++Pages
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\
 ++Repositories
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\repositories\
+++AuthRepository.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\repositories\authrepository.cs
+++IAuthRepository.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\repositories\iauthrepository.cs
 ++Services
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\
 ++AuthService.cs
@@ -58,6 +60,10 @@ i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\iauthservice.cs
 ++ICurrentUser.cs
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\icurrentuser.cs
+++IJwtService.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\ijwtservice.cs
+++JwtService.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\services\jwtservice.cs
 ++appsettings.json
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\appsettings.json
 ++appsettings.Development.json
@@ -65,7 +71,7 @@ i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\
 ++Program.cs
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\program.cs
 ++No service dependencies discovered
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:>450
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>424
 ++Analyzers
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:analyzers
 ++Frameworks
@@ -84,6 +90,12 @@ i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\lib\
 ++favicon.ico
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\favicon.ico
+++UserInfo.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\userinfo.cs
+++UserMenu.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\usermenu.cs
+++UserRole.cs
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\model\user\userrole.cs
 ++Shared
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\shared\
 ++_ViewImports.cshtml
@@ -96,10 +108,6 @@ i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\index.cshtml
 ++Privacy.cshtml
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\pages\privacy.cshtml
-++AuthRepository.cs
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\repositories\authrepository.cs
-++IAuthRepository.cs
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\repositories\iauthrepository.cs
 ++Microsoft.AspNetCore.Analyzers
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
 ++Microsoft.AspNetCore.App.Analyzers
@@ -117,21 +125,23 @@ i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdk
 ++Microsoft.CodeAnalysis.NetAnalyzers
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 ++Microsoft.Extensions.Logging.Generators
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\users\user 5\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.2\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
 ++Microsoft.NET.Sdk.Razor.SourceGenerators
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
 ++System.Text.Json.SourceGeneration
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\users\user 5\.nuget\packages\system.text.json\10.0.3\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
 ++Microsoft.AspNetCore.App
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\microsoft.aspnetcore.app
 ++Microsoft.NETCore.App
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\microsoft.netcore.app
 ++Dapper (2.1.79)
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:>469
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>442
+++Microsoft.AspNetCore.Authentication.JwtBearer (6.0.36)
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>444
 ++Swashbuckle.AspNetCore (6.5.0)
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:>468
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>441
 ++System.Data.SqlClient (4.9.1)
-i:{97692710-1f48-4463-9751-c3e54a6fb140}:>810
+i:{97692710-1f48-4463-9751-c3e54a6fb140}:>443
 ++site.css
 i:{97692710-1f48-4463-9751-c3e54a6fb140}:c:\d drive\api\tower\towerapi\towerapi\wwwroot\css\site.css
 ++site.js
