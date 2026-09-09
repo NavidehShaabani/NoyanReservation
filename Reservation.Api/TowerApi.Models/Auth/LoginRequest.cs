@@ -1,4 +1,4 @@
-﻿namespace TowerApi.Model.Auth
+﻿namespace TowerApi.Models.Auth
 {
     public class LoginRequest
     {

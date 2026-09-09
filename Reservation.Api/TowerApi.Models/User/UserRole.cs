@@ -1,4 +1,4 @@
-﻿namespace TowerApi.Model.User
+﻿namespace TowerApi.Models.User
 {
     public class UserRole
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TowerApi.Extensions;
-using TowerApi.Model.Auth;
+using TowerApi.Models.Auth;
 using TowerApi.Services;
 
 namespace TowerApi.Controllers

@@ -1,8 +1,8 @@
 ﻿using System.Data;
 using Dapper;
 using TowerApi.DataBase;
-using TowerApi.Model.Auth;
-using TowerApi.Model.User;
+using TowerApi.Models.Auth;
+using TowerApi.Models.User;
 
 namespace TowerApi.Repositories
 {

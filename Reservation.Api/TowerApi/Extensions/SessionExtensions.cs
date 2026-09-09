@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using TowerApi.Model.Auth;
+using TowerApi.Models.Auth;
 using Microsoft.AspNetCore.Http;
 
 namespace TowerApi.Extensions

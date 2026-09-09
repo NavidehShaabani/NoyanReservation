@@ -1,6 +1,6 @@
-﻿using TowerApi.Model.User;
+﻿using TowerApi.Models.User;
 
-namespace TowerApi.Model.Auth
+namespace TowerApi.Models.Auth
 {
     public class LoginResult
     {

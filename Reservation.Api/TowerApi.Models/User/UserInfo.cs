@@ -1,8 +1,6 @@
-﻿using TowerApi.Model.User;
-
-namespace TowerApi.Model.Auth
+﻿namespace TowerApi.Models.User
 {
-    public class UserSession
+    public class UserInfo
     {
         public long UserId { get; set; }
 
@@ -29,11 +27,5 @@ namespace TowerApi.Model.Auth
         public DateTime? LastLoginAt { get; set; }
 
         public DateTime? CreatedAt { get; set; }
-
-        public string? Avatar { get; set; }
-
-        public List<UserRole> Roles { get; set; } = new();
-
-        public List<UserMenu> Menus { get; set; } = new();
     }
 }

@@ -1,5 +1,5 @@
 ﻿using TowerApi.Extensions;
-using TowerApi.Model.Auth;
+using TowerApi.Models.Auth;
 
 namespace TowerApi.Services
 {

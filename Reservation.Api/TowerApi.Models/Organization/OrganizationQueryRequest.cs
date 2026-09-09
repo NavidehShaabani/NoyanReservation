@@ -1,4 +1,4 @@
-﻿namespace TowerApi.Model.Organization
+﻿namespace TowerApi.Models.Organization
 {
     public class OrganizationQueryRequest
     {

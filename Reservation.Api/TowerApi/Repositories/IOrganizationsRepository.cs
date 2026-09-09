@@ -1,4 +1,4 @@
-﻿using TowerApi.Model.Organization;
+﻿using TowerApi.Models.Organization;
 
 namespace TowerApi.Repositories
 {

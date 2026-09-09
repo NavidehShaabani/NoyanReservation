@@ -1,4 +1,4 @@
-﻿using TowerApi.Model.Auth;
+﻿using TowerApi.Models.Auth;
 using TowerApi.Repositories;
 
 namespace TowerApi.Services

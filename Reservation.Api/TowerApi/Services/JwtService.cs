@@ -2,7 +2,7 @@
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
-using TowerApi.Model.Auth;
+using TowerApi.Models.Auth;
 
 namespace TowerApi.Services
 {

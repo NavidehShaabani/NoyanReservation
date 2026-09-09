@@ -1,7 +1,7 @@
 ﻿using Dapper;
 using System.Data;
 using TowerApi.DataBase;
-using TowerApi.Model.Organization;
+using TowerApi.Models.Organization;
 
 namespace TowerApi.Repositories
 {

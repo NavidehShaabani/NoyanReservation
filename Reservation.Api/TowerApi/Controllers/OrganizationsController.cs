@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using TowerApi.Model.Organization;
+using TowerApi.Models.Organization;
 using TowerApi.Repositories;
 
 namespace TowerApi.Controllers
