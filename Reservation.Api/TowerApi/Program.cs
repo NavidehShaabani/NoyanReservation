@@ -116,7 +116,7 @@ builder.Services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
 // ======================================================
 
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
-
+builder.Services.AddScoped<IOrganizationsRepository, OrganizationsRepository>();
 
 // ======================================================
 // Services
