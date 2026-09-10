@@ -1,5 +1,6 @@
 ﻿using System.Data;
-namespace TowerApi.DataBase
+
+namespace TowerApi.Repositories.DataBase
 {
     public interface IDbConnectionFactory
     {

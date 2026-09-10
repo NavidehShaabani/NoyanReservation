@@ -1,7 +1,8 @@
-﻿using TowerApi.Models.Auth;
+﻿using Microsoft.Extensions.Configuration;
+using TowerApi.Models.Auth;
 using TowerApi.Repositories.Auth;
 
-namespace TowerApi.Services
+namespace TowerApi.Services.Auth
 {
     public class AuthService : IAuthService
     {

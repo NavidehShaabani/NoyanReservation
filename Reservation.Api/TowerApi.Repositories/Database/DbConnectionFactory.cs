@@ -1,7 +1,8 @@
-﻿using System.Data;
+﻿using Microsoft.Extensions.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
-namespace TowerApi.DataBase
+namespace TowerApi.Repositories.DataBase
 {
     public class DbConnectionFactory : IDbConnectionFactory
     {

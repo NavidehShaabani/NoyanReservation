@@ -6,8 +6,8 @@
 
         public string ResultMessage { get; set; } = string.Empty;
 
-        public Organization? Organization { get; set; }
+        public Organizations? Organization { get; set; }
 
-        public List<Organization> Organizations { get; set; } = new();
+        public List<Organizations> Organizations { get; set; } = new();
     }
 }

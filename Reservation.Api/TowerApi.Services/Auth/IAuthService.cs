@@ -1,10 +1,9 @@
 ﻿using TowerApi.Models.Auth;
 
-namespace TowerApi.Repositories
+namespace TowerApi.Services.Auth
 {
-    public interface IAuthRepository
+    public interface IAuthService
     {
         Task<LoginResult> LoginAsync(LoginRequest user);
     }
-
 }

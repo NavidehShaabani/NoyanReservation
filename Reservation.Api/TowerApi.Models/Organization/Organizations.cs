@@ -1,6 +1,6 @@
 ﻿namespace TowerApi.Models.Organization
 {
-    public class Organization
+    public class Organizations
     {
         public long OrgId { get; set; }
 

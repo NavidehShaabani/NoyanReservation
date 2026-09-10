@@ -1,9 +1,9 @@
 ﻿using Dapper;
 using System.Data;
-using TowerApi.DataBase;
+using TowerApi.Repositories.DataBase;
 using TowerApi.Models.Organization;
 
-namespace TowerApi.Repositories
+namespace TowerApi.Repositories.Organization
 {
     public class OrganizationsRepository : IOrganizationsRepository
     {
@@ -70,7 +70,7 @@ namespace TowerApi.Repositories
                 direction: ParameterDirection.Output);
 
             var organization =
-                await connection.QuerySingleOrDefaultAsync<Organization>(
+                await connection.QuerySingleOrDefaultAsync<Organizations>(
                     "dbo.OrganizationsAdd",
                     parameters,
                     commandType: CommandType.StoredProcedure);
@@ -149,7 +149,7 @@ namespace TowerApi.Repositories
                 direction: ParameterDirection.Output);
 
             var organization =
-                await connection.QuerySingleOrDefaultAsync<Organization>(
+                await connection.QuerySingleOrDefaultAsync<Organizations>(
                     "dbo.OrganizationsEdit",
                     parameters,
                     commandType: CommandType.StoredProcedure);
@@ -276,7 +276,7 @@ namespace TowerApi.Repositories
                 direction: ParameterDirection.Output);
 
             var organizations =
-                (await connection.QueryAsync<Organization>(
+                (await connection.QueryAsync<Organizations>(
                     "dbo.OrganizationsGet",
                     parameters,
                     commandType: CommandType.StoredProcedure))
@@ -301,7 +301,7 @@ namespace TowerApi.Repositories
 
                 Organizations =
                     orgId.HasValue
-                        ? new List<Organization>()
+                        ? new List<Organizations>()
                         : organizations
             };
         }

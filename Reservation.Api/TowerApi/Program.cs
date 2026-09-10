@@ -26,10 +26,10 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using TowerApi.DataBase;
 using TowerApi.Middleware;
-using TowerApi.Repositories;
+using TowerApi.Repositories.Extensions;
 using TowerApi.Services;
+using TowerApi.Services.Auth;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -63,6 +63,10 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
+
+
+
+
 //________
 // ======================================================
 // Swagger
@@ -108,15 +112,14 @@ builder.Services.AddSwaggerGen(options =>
 // Database
 // ======================================================
 
-builder.Services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
+//builder.Services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
 
 
 // ======================================================
 // Repositories
 // ======================================================
 
-builder.Services.AddScoped<IAuthRepository, AuthRepository>();
-builder.Services.AddScoped<IOrganizationsRepository, OrganizationsRepository>();
+builder.Services.RepositoriesExtention();
 
 // ======================================================
 // Services
@@ -232,12 +235,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseSession();
+//app.UseSession();
 
 app.UseAuthentication();
 
 app.UseAuthorization();
-
 
 // ======================================================
 // Controllers

@@ -1,10 +1,10 @@
 ﻿using System.Data;
 using Dapper;
-using TowerApi.DataBase;
+using TowerApi.Repositories.DataBase;
 using TowerApi.Models.Auth;
 using TowerApi.Models.User;
 
-namespace TowerApi.Repositories
+namespace TowerApi.Repositories.Auth
 {
 
     public class AuthRepository : IAuthRepository

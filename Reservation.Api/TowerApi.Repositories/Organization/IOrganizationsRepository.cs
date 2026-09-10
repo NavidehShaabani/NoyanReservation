@@ -1,6 +1,6 @@
 ﻿using TowerApi.Models.Organization;
 
-namespace TowerApi.Repositories
+namespace TowerApi.Repositories.Organization
 {
     public interface IOrganizationsRepository
     {

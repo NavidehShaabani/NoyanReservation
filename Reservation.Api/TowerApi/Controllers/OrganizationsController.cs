@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using TowerApi.Models.Organization;
-using TowerApi.Repositories;
+using TowerApi.Repositories.Organization;
+using TowerApi.Services;
 
 namespace TowerApi.Controllers
 {
@@ -13,11 +14,12 @@ namespace TowerApi.Controllers
     public class OrganizationsController : ControllerBase
     {
         private readonly IOrganizationsRepository _repository;
+        private readonly ICurrentUser _currentUser;
 
-        public OrganizationsController(
-            IOrganizationsRepository repository)
+        public OrganizationsController(IOrganizationsRepository repository, ICurrentUser currentUser)
         {
             _repository = repository;
+            _currentUser = currentUser;
         }
 
 
@@ -102,7 +104,7 @@ namespace TowerApi.Controllers
             try
             {
                 // استخراج UserId از JWT
-                var userId = GetCurrentUserId();
+                var userId = _currentUser.UserId;
 
                 if (!userId.HasValue)
                 {
@@ -172,7 +174,7 @@ namespace TowerApi.Controllers
                 }
 
                 // استخراج UserId از JWT
-                var userId = GetCurrentUserId();
+                var userId = _currentUser.UserId;
 
                 if (!userId.HasValue)
                 {
@@ -241,7 +243,7 @@ namespace TowerApi.Controllers
                 }
 
                 // استخراج UserId از JWT
-                var userId = GetCurrentUserId();
+                var userId = _currentUser.UserId;
 
                 if (!userId.HasValue)
                 {
@@ -291,27 +293,27 @@ namespace TowerApi.Controllers
         // JWT USER ID
         // =========================================================
 
-        private long? GetCurrentUserId()
-        {
-            var userIdClaim =
-                User.FindFirst(
-                    ClaimTypes.NameIdentifier);
+        //private long? GetCurrentUserId()
+        //{
+        //    var userIdClaim =
+        //        User.FindFirst(
+        //            ClaimTypes.NameIdentifier);
 
-            if (userIdClaim == null)
-                return null;
+        //    if (userIdClaim == null)
+        //        return null;
 
-            if (!long.TryParse(
-                    userIdClaim.Value,
-                    out var userId))
-            {
-                return null;
-            }
+        //    if (!long.TryParse(
+        //            userIdClaim.Value,
+        //            out var userId))
+        //    {
+        //        return null;
+        //    }
 
-            if (userId <= 0)
-                return null;
+        //    if (userId <= 0)
+        //        return null;
 
-            return userId;
-        }
+        //    return userId;
+        //}
 
 
         // =========================================================

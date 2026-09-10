@@ -7,10 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DataBase\**" />
     <Compile Remove="Model\**" />
+    <Compile Remove="Repositories\**" />
+    <Content Remove="DataBase\**" />
     <Content Remove="Model\**" />
+    <Content Remove="Repositories\**" />
+    <EmbeddedResource Remove="DataBase\**" />
     <EmbeddedResource Remove="Model\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <None Remove="DataBase\**" />
     <None Remove="Model\**" />
+    <None Remove="Repositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\AuthService.cs" />
+    <Compile Remove="Services\IAuthService.cs" />
+    <Compile Remove="Services\ICurrentUser.cs" />
+    <Compile Remove="Services\IJwtService.cs" />
+    <Compile Remove="Services\JwtService.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +38,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TowerApi.Models\TowerApi.Models.csproj" />
+    <ProjectReference Include="..\TowerApi.Repositories\TowerApi.Repositories.csproj" />
+    <ProjectReference Include="..\TowerApi.Services\TowerApi.Services.csproj" />
   </ItemGroup>
 
 </Project>
