@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TowerApi.Models.Unit
+﻿namespace TowerApi.Models.Unit
 {
-    internal class UnitUpdateRequest
+    public class UnitUpdateRequest
     {
+        public long BuildingId { get; set; }
+
+        public string UnitNumber { get; set; } = string.Empty;
+
+        public int? FloorNumber { get; set; }
+
+        public decimal? Area { get; set; }
+
+        public byte? Bedrooms { get; set; }
+
+        public string? UnitDescription { get; set; }
+
+        public bool IsActive { get; set; } = true;
     }
 }

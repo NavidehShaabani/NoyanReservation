@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TowerApi.Models.Unit
+﻿namespace TowerApi.Models.Unit
 {
-    internal class UnitQueryRequest
+    public class UnitQueryRequest
     {
+        public long? BuildingId { get; set; }
+
+        public string? Search { get; set; }
+
+        public int? FloorNumber { get; set; }
+
+        public int PageNumber { get; set; } = 1;
+
+        public int PageSize { get; set; } = 50;
+
+        public bool IncludeDeleted { get; set; } = false;
     }
 }

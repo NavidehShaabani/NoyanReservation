@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using TowerApi.Repositories.Auth;
+using TowerApi.Repositories.Building;
 using TowerApi.Repositories.DataBase;
 using TowerApi.Repositories.Organization;
+using TowerApi.Repositories.Unit;
 
 namespace TowerApi.Repositories.Extensions
 {
@@ -11,8 +13,9 @@ namespace TowerApi.Repositories.Extensions
         {
             _services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
             _services.AddScoped<IAuthRepository, AuthRepository>();
-            _services.AddScoped<IOrganizationsRepository, OrganizationsRepository>();
-
+            _services.AddScoped<IOrganizationRepository,OrganizationRepository>();
+            _services.AddScoped<IBuildingRepository,BuildingRepository>();
+            _services.AddScoped<IUnitRepository,UnitRepository>();
             return _services;
         }
     }

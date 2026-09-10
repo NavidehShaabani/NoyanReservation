@@ -2,23 +2,31 @@
 
 namespace TowerApi.Repositories.Organization
 {
-    public interface IOrganizationsRepository
+    public interface IOrganizationRepository
     {
-        Task<OrganizationResult> AddAsync(
-            OrganizationCreateRequest request,
-            int userCreater);
+        Task<(int ResultCode, string ResultMessage, OrganizationViewModel? Data)>
+            AddAsync(
+                OrganizationCreateRequest request,
+                int? userCreater);
 
-        Task<OrganizationResult> EditAsync(
-            long orgId,
-            OrganizationUpdateRequest request,
-            int userUpdater);
+        Task<(int ResultCode, string ResultMessage, OrganizationViewModel? Data)>
+            EditAsync(
+                long orgId,
+                OrganizationUpdateRequest request,
+                int? userUpdater);
 
-        Task<OrganizationResult> DeleteAsync(
-            long orgId,
-            int userUpdater);
+        Task<(int ResultCode, string ResultMessage)>
+            DeleteAsync(
+                long orgId,
+                int? userUpdater);
 
-        Task<OrganizationResult> GetAsync(
-            long? orgId,
-            OrganizationQueryRequest request);
+        Task<(int ResultCode, string ResultMessage, OrganizationViewModel? Data)>
+            GetByIdAsync(
+                long orgId,
+                bool includeDeleted);
+
+        Task<(int ResultCode, string ResultMessage, List<OrganizationViewModel> Data)>
+            GetListAsync(
+                OrganizationQueryRequest request);
     }
 }

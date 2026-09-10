@@ -6,8 +6,8 @@
 
         public string ResultMessage { get; set; } = string.Empty;
 
-        public Organizations? Organization { get; set; }
+        public OrganizationViewModel? Organization { get; set; }
 
-        public List<Organizations> Organizations { get; set; } = new();
+        public List<OrganizationViewModel> Organizations { get; set; } = new();
     }
 }

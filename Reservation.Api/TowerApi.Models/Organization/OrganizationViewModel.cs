@@ -1,6 +1,6 @@
 ﻿namespace TowerApi.Models.Organization
 {
-    public class Organizations
+    public class OrganizationViewModel
     {
         public long OrgId { get; set; }
 
@@ -16,11 +16,11 @@
 
         public bool IsDeleted { get; set; }
 
-        public DateTime CreatedAt { get; set; }
-
-        public int? UserCreater { get; set; }
+        public DateTime? CreatedAt { get; set; }
 
         public DateTime? UpdatedAt { get; set; }
+
+        public int? UserCreater { get; set; }
 
         public int? UserUpdater { get; set; }
     }

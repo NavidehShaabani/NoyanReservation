@@ -1,29 +1,30 @@
-﻿using Dapper;
-using System.Data;
-using TowerApi.Repositories.DataBase;
+﻿using System.Data;
+using Dapper;
 using TowerApi.Models.Organization;
+using TowerApi.Repositories.DataBase;
 
 namespace TowerApi.Repositories.Organization
 {
-    public class OrganizationsRepository : IOrganizationsRepository
+    public class OrganizationRepository : IOrganizationRepository
     {
         private readonly IDbConnectionFactory _connectionFactory;
 
-        public OrganizationsRepository(
+        public OrganizationRepository(
             IDbConnectionFactory connectionFactory)
         {
             _connectionFactory = connectionFactory;
         }
 
-        // =========================================================
-        // ADD
-        // =========================================================
-
-        public async Task<OrganizationResult> AddAsync(
-            OrganizationCreateRequest request,
-            int userCreater)
+        public async Task<
+            (int ResultCode,
+             string ResultMessage,
+             OrganizationViewModel? Data)>
+            AddAsync(
+                OrganizationCreateRequest request,
+                int? userCreater)
         {
-            using var connection = _connectionFactory.CreateConnection();
+            using var connection =
+                _connectionFactory.CreateConnection();
 
             var parameters = new DynamicParameters();
 
@@ -52,7 +53,6 @@ namespace TowerApi.Repositories.Organization
                 request.IsActive,
                 DbType.Boolean);
 
-            // از JWT
             parameters.Add(
                 "@UserCreater",
                 userCreater,
@@ -69,35 +69,36 @@ namespace TowerApi.Repositories.Organization
                 size: 500,
                 direction: ParameterDirection.Output);
 
-            var organization =
-                await connection.QuerySingleOrDefaultAsync<Organizations>(
+            var data =
+                await connection.QueryFirstOrDefaultAsync<OrganizationViewModel>(
                     "dbo.OrganizationsAdd",
                     parameters,
                     commandType: CommandType.StoredProcedure);
 
-            return new OrganizationResult
-            {
-                ResultCode =
-                    parameters.Get<int>("@ResultCode"),
+            var resultCode =
+                parameters.Get<int>("@ResultCode");
 
-                ResultMessage =
-                    parameters.Get<string>("@ResultMessage"),
+            var resultMessage =
+                parameters.Get<string>("@ResultMessage")
+                ?? string.Empty;
 
-                Organization = organization
-            };
+            return (
+                resultCode,
+                resultMessage,
+                data);
         }
 
-
-        // =========================================================
-        // EDIT
-        // =========================================================
-
-        public async Task<OrganizationResult> EditAsync(
-            long orgId,
-            OrganizationUpdateRequest request,
-            int userUpdater)
+        public async Task<
+            (int ResultCode,
+             string ResultMessage,
+             OrganizationViewModel? Data)>
+            EditAsync(
+                long orgId,
+                OrganizationUpdateRequest request,
+                int? userUpdater)
         {
-            using var connection = _connectionFactory.CreateConnection();
+            using var connection =
+                _connectionFactory.CreateConnection();
 
             var parameters = new DynamicParameters();
 
@@ -131,7 +132,6 @@ namespace TowerApi.Repositories.Organization
                 request.IsActive,
                 DbType.Boolean);
 
-            // از JWT
             parameters.Add(
                 "@UserUpdater",
                 userUpdater,
@@ -148,34 +148,34 @@ namespace TowerApi.Repositories.Organization
                 size: 500,
                 direction: ParameterDirection.Output);
 
-            var organization =
-                await connection.QuerySingleOrDefaultAsync<Organizations>(
+            var data =
+                await connection.QueryFirstOrDefaultAsync<OrganizationViewModel>(
                     "dbo.OrganizationsEdit",
                     parameters,
                     commandType: CommandType.StoredProcedure);
 
-            return new OrganizationResult
-            {
-                ResultCode =
-                    parameters.Get<int>("@ResultCode"),
+            var resultCode =
+                parameters.Get<int>("@ResultCode");
 
-                ResultMessage =
-                    parameters.Get<string>("@ResultMessage"),
+            var resultMessage =
+                parameters.Get<string>("@ResultMessage")
+                ?? string.Empty;
 
-                Organization = organization
-            };
+            return (
+                resultCode,
+                resultMessage,
+                data);
         }
 
-
-        // =========================================================
-        // DELETE
-        // =========================================================
-
-        public async Task<OrganizationResult> DeleteAsync(
-            long orgId,
-            int userUpdater)
+        public async Task<
+            (int ResultCode,
+             string ResultMessage)>
+            DeleteAsync(
+                long orgId,
+                int? userUpdater)
         {
-            using var connection = _connectionFactory.CreateConnection();
+            using var connection =
+                _connectionFactory.CreateConnection();
 
             var parameters = new DynamicParameters();
 
@@ -184,7 +184,6 @@ namespace TowerApi.Repositories.Organization
                 orgId,
                 DbType.Int64);
 
-            // از JWT
             parameters.Add(
                 "@UserUpdater",
                 userUpdater,
@@ -206,26 +205,28 @@ namespace TowerApi.Repositories.Organization
                 parameters,
                 commandType: CommandType.StoredProcedure);
 
-            return new OrganizationResult
-            {
-                ResultCode =
-                    parameters.Get<int>("@ResultCode"),
+            var resultCode =
+                parameters.Get<int>("@ResultCode");
 
-                ResultMessage =
-                    parameters.Get<string>("@ResultMessage")
-            };
+            var resultMessage =
+                parameters.Get<string>("@ResultMessage")
+                ?? string.Empty;
+
+            return (
+                resultCode,
+                resultMessage);
         }
 
-
-        // =========================================================
-        // GET
-        // =========================================================
-
-        public async Task<OrganizationResult> GetAsync(
-            long? orgId,
-            OrganizationQueryRequest request)
+        public async Task<
+            (int ResultCode,
+             string ResultMessage,
+             OrganizationViewModel? Data)>
+            GetByIdAsync(
+                long orgId,
+                bool includeDeleted)
         {
-            using var connection = _connectionFactory.CreateConnection();
+            using var connection =
+                _connectionFactory.CreateConnection();
 
             var parameters = new DynamicParameters();
 
@@ -233,6 +234,53 @@ namespace TowerApi.Repositories.Organization
                 "@OrgId",
                 orgId,
                 DbType.Int64);
+
+            parameters.Add(
+                "@IncludeDeleted",
+                includeDeleted,
+                DbType.Boolean);
+
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
+            var data =
+                await connection.QueryFirstOrDefaultAsync<OrganizationViewModel>(
+                    "dbo.OrganizationsGet",
+                    parameters,
+                    commandType: CommandType.StoredProcedure);
+
+            var resultCode =
+                parameters.Get<int>("@ResultCode");
+
+            var resultMessage =
+                parameters.Get<string>("@ResultMessage")
+                ?? string.Empty;
+
+            return (
+                resultCode,
+                resultMessage,
+                data);
+        }
+
+        public async Task<
+            (int ResultCode,
+             string ResultMessage,
+             List<OrganizationViewModel> Data)>
+            GetListAsync(
+                OrganizationQueryRequest request)
+        {
+            using var connection =
+                _connectionFactory.CreateConnection();
+
+            var parameters = new DynamicParameters();
 
             parameters.Add(
                 "@Search",
@@ -275,8 +323,8 @@ namespace TowerApi.Repositories.Organization
                 size: 500,
                 direction: ParameterDirection.Output);
 
-            var organizations =
-                (await connection.QueryAsync<Organizations>(
+            var data =
+                (await connection.QueryAsync<OrganizationViewModel>(
                     "dbo.OrganizationsGet",
                     parameters,
                     commandType: CommandType.StoredProcedure))
@@ -286,24 +334,13 @@ namespace TowerApi.Repositories.Organization
                 parameters.Get<int>("@ResultCode");
 
             var resultMessage =
-                parameters.Get<string>("@ResultMessage");
+                parameters.Get<string>("@ResultMessage")
+                ?? string.Empty;
 
-            return new OrganizationResult
-            {
-                ResultCode = resultCode,
-
-                ResultMessage = resultMessage,
-
-                Organization =
-                    orgId.HasValue
-                        ? organizations.FirstOrDefault()
-                        : null,
-
-                Organizations =
-                    orgId.HasValue
-                        ? new List<Organizations>()
-                        : organizations
-            };
+            return (
+                resultCode,
+                resultMessage,
+                data);
         }
     }
 }
