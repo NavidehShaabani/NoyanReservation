@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 type AuthContextType = {
   token: string | null;
@@ -18,7 +18,9 @@ export default function AuthProvider({
   children: React.ReactNode;
 }) {
   const [token, setToken] = useState<string | null>(null);
-
+  useEffect(() => {
+    console.log("for testttttt", token);
+  }, [token]);
   return (
     <AuthContext.Provider value={{ token, setToken }}>
       {children}
