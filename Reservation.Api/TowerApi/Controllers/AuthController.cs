@@ -69,44 +69,44 @@ namespace TowerApi.Controllers
                 }
 
 
-                var userSession = new UserSession
-                {
-                    UserId = result.User.UserId,
+                //var userSession = new UserSession
+                //{
+                //    UserId = result.User.UserId,
 
-                    Username = result.User.Username,
+                //    Username = result.User.Username,
 
-                    FirstName = result.User.FirstName,
+                //    FirstName = result.User.FirstName,
 
-                    LastName = result.User.LastName,
+                //    LastName = result.User.LastName,
 
-                    FullName = result.User.FullName,
+                //    FullName = result.User.FullName,
 
-                    Email = result.User.Email,
+                //    Email = result.User.Email,
 
-                    Mobile = result.User.Mobile,
+                //    Mobile = result.User.Mobile,
 
-                    NationalId = result.User.NationalId,
+                //    NationalId = result.User.NationalId,
 
-                    Gender = result.User.Gender,
+                //    Gender = result.User.Gender,
 
-                    BirthDate = result.User.BirthDate,
+                //    BirthDate = result.User.BirthDate,
 
-                    PhoneVerified = result.User.PhoneVerified,
+                //    PhoneVerified = result.User.PhoneVerified,
 
-                    LastLoginAt = result.User.LastLoginAt,
+                //    LastLoginAt = result.User.LastLoginAt,
 
-                    CreatedAt = result.User.CreatedAt,
+                //    CreatedAt = result.User.CreatedAt,
 
-                    // فعلاً SP مقدار Avatar ندارد
-                    Avatar = null,
+                //    // فعلاً SP مقدار Avatar ندارد
+                //    Avatar = null,
 
-                    Roles = result.Roles,
+                //    Roles = result.Roles,
 
-                    Menus = result.Menus
-                };
+                //    Menus = result.Menus
+                //};
 
 
-                HttpContext.Session.SetUserSession(userSession);
+                //HttpContext.Session.SetUserSession(userSession);
 
 
                 //return Ok(new
@@ -123,10 +123,11 @@ namespace TowerApi.Controllers
                     expiresIn = result.ExpiresIn,
                     user = new
                     {
-                        userId = userSession.UserId,
-                        username = userSession.Username,
-                        fullName = userSession.FullName,
-                        roles = userSession.Roles
+                        userId = result.User.UserId,
+                        username = result.User.Username,
+                        fullName = result.User.FullName,
+                        roles = result.Roles,
+                        menus = result.Menus
                     }
                 });
             }

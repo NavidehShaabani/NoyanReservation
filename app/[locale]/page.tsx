@@ -1,4 +1,3 @@
-"use client";
 import { promises } from "dns";
 import { redirect } from "next/navigation";
 

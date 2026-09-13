@@ -1,6 +1,6 @@
 "use client";
 import { useState, type SyntheticEvent, useContext } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Field,
   FieldDescription,
@@ -13,16 +13,20 @@ import { Button } from "@/components/ui/button";
 import { AlertCircleIcon } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AuthContext } from "@/context/AuthProvider";
+import { useRouter } from "next/navigation";
 export default function Login() {
   const t = useTranslations("login");
   const tFooter = useTranslations("footer");
+  const locale = useLocale();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<
     "usernameRequired" | "passwordRequired" | "bothRequired" | ""
   >("");
   const [submitted, setSubmitted] = useState(false);
-  const { token, setToken } = useContext(AuthContext);
+  const router = useRouter();
+  const { token, setToken, setUser } = useContext(AuthContext);
+
   const submit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
@@ -59,7 +63,10 @@ export default function Login() {
 
       const data = await response.json();
       setToken(data.accessToken);
+      setUser(data.user);
       console.log("Login response:", data);
+      console.log("User:", data.user);
+      router.push(`/${locale}/dashboard`);
     } catch (error) {
       console.error("Login error:", error);
     }
