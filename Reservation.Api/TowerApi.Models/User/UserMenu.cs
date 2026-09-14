@@ -1,12 +1,16 @@
-﻿namespace TowerApi.Models.User
+﻿using TowerApi.Models.General;
+
+namespace TowerApi.Models.User
 {
-    public class UserMenu
+     public class UserMenu
     {
         public long MenuId { get; set; }
 
+        public long RoleId { get; set; }
+
         public long? ParentId { get; set; }
 
-        public string Title { get; set; } = string.Empty;
+        public LocalizedText Name { get; set; } = new();
 
         public string? MenuUrl { get; set; }
 
@@ -14,16 +18,9 @@
 
         public int SortOrder { get; set; }
 
-        public string? MenuDescription { get; set; }
+        public bool IsPermission { get; set; }
 
-        public int PermissionLevel { get; set; }
-
-        public bool CanRead { get; set; }
-
-        public bool CanWrite { get; set; }
-
-        public bool CanFullAccess { get; set; }
-
+        public PermissionInfo Permission { get; set; } = new();
         public List<UserMenu> Children { get; set; } = new();
     }
 }

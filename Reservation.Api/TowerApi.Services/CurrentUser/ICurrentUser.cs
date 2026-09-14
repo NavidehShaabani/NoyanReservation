@@ -4,16 +4,22 @@ namespace TowerApi.Services
 {
     public interface ICurrentUser
     {
-        UserSession? User { get; }
-
         bool IsAuthenticated { get; }
 
         long? UserId { get; }
 
-        bool IsInRole(string roleName);
+        string Username { get; }
 
-        bool HasPermission(
-            long menuId,
-            int requiredLevel);
+        string FirstName { get; }
+
+        string LastName { get; }
+
+        string FullName { get; }
+
+        List<string> RoleCodes { get; }
+
+        UserSession? User { get; }
+
+        bool IsInRole(string roleCode);
     }
 }

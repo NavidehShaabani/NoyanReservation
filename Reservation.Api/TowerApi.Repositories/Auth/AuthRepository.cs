@@ -3,6 +3,8 @@ using Dapper;
 using TowerApi.Repositories.DataBase;
 using TowerApi.Models.Auth;
 using TowerApi.Models.User;
+using TowerApi.Models.General;
+using TowerApi.Services;
 
 namespace TowerApi.Repositories.Auth
 {
@@ -16,69 +18,150 @@ namespace TowerApi.Repositories.Auth
             _connectionFactory = connectionFactory;
         }
 
-        //public async Task<List<GetItemOnOfCategoriesViewModel>> ItemOnOffGetCategories(GetCategoryProducts dto)
-        //{
-        //    using (var connection = _iconnectionFactory.GetConnection)
-        //    {
-        //        var query = @"[dbo].[Stp_ItemOnOf_GetCategory]";
-        //        var param = new DynamicParameters();
-        //        param.Add("@pShopId", dto.ShopId);
-        //        param.Add("@pTitle", dto.Title);
-
-        //        var result = await connection.QueryAsync<GetItemOnOfCategoriesViewModel>(query, param, commandType: CommandType.StoredProcedure);
-        //        return result.ToList();
-        //    }
-        //}
         public async Task<LoginResult> LoginAsync(LoginRequest user)
         {
+            var result = new LoginResult();
+
             try
             {
+                using var connection = _connectionFactory.CreateConnection();
 
-                using (var connection = _connectionFactory.CreateConnection())
-                {
-                    LoginResult result = new LoginResult();
+                var parameters = new DynamicParameters();
 
-                    var query = "dbo.UserLogin";
-                    var param = new DynamicParameters();
-                    param.Add("@pUsername", user.Username);
-                    param.Add("@pPasswordHash", user.Password);
+                parameters.Add(
+                    "@pUsername",
+                    user.Username,
+                    DbType.String,
+                    ParameterDirection.Input);
 
-                    param.Add("@ResultCode","", DbType.Int32, ParameterDirection.Output);
-                    param.Add("@ResultMessage","", DbType.String, ParameterDirection.Output);
-                               
+                parameters.Add(
+                    "@pPassword",
+                    user.Password,
+                    DbType.String,
+                    ParameterDirection.Input);
+
+                parameters.Add(
+                    "@ResultCode",
+                    dbType: DbType.Int32,
+                    direction: ParameterDirection.Output);
+
+                parameters.Add(
+                    "@ResultMessage",
+                    dbType: DbType.String,
+                    size: 500,
+                    direction: ParameterDirection.Output);
 
 
-                    using (var multi =
-                    await connection.QueryMultipleAsync(query, param, commandType: CommandType.StoredProcedure))
+                using var multi =
+                    await connection.QueryMultipleAsync(
+                        "dbo.UserLogin",
+                        parameters,
+                        commandType: CommandType.StoredProcedure);
+
+
+                // =====================================================
+                // Result Set 1 : User
+                // =====================================================
+
+                result.User = multi
+                    .Read<UserInfo>()
+                    .FirstOrDefault();
+
+
+                // =====================================================
+                // Result Set 2 : Roles + Menus
+                // =====================================================
+
+                var rows = multi
+                    .Read<LoginRoleMenuRow>()
+                    .ToList();
+
+
+                // =====================================================
+                // Group Roles
+                // =====================================================
+
+                result.Roles = rows
+                    .GroupBy(x => new
                     {
-                        // Result Set 1
-                        result.User = multi
-                            .Read<UserInfo>()
-                            .FirstOrDefault();
+                        x.RoleId,
+                        x.RoleCode,
+                        x.RoleNameFa,
+                        x.RoleNameEn,
+                        x.RoleDescriptionFa,
+                        x.RoleDescriptionEn
+                    })
+                    .Select(roleGroup => new UserRole
+                    {
+                        RoleId = roleGroup.Key.RoleId,
 
-                        // Result Set 2
-                        result.Roles = multi
-                            .Read<UserRole>()
-                            .ToList();
+                        RoleCode = roleGroup.Key.RoleCode ?? string.Empty,
 
-                        // Result Set 3
-                        result.Menus = multi
-                            .Read<UserMenu>()
-                            .ToList();
-                    }
+                        RoleName = new LocalizedText
+                        {
+                            Fa = roleGroup.Key.RoleNameFa ?? string.Empty,
+                            En = roleGroup.Key.RoleNameEn ?? string.Empty
+                        },
+
+                        RoleDescription = new LocalizedText
+                        {
+                            Fa = roleGroup.Key.RoleDescriptionFa ?? string.Empty,
+                            En = roleGroup.Key.RoleDescriptionEn ?? string.Empty
+                        },
+
+                        Menus = roleGroup
+                            .Where(x => x.MenuId > 0)
+                            .Select(x => new UserMenu
+                            {
+                                MenuId = x.MenuId,
+
+                                RoleId = x.RoleId,
+
+                                ParentId = x.ParentId,
+
+                                Name = new LocalizedText
+                                {
+                                    Fa = x.TitleFa ?? string.Empty,
+                                    En = x.TitleEn ?? string.Empty
+                                },
+
+                                MenuUrl = x.MenuUrl,
+
+                                Icon = x.Icon,
+
+                                SortOrder = x.SortOrder,
+
+                                IsPermission = x.PermissionLevel > 1,
+
+                                Permission =
+                                    PermissionHelper.GetPermissionInfo(
+                                        x.PermissionLevel)
+                            })
+                            .ToList()
+                    })
+                    .ToList();
 
 
-                    result.ResultCode = param.Get<int>("@ResultCode");
-                    result.ResultMessage = param.Get<string>("@ResultMessage");
-               
+                // =====================================================
+                // Output Parameters
+                // =====================================================
 
-                    return result;
-                }
+                result.ResultCode =
+                    parameters.Get<int>("@ResultCode");
+
+                result.ResultMessage =
+                    parameters.Get<string>("@ResultMessage") ?? string.Empty;
+
+
+                return result;
             }
             catch (Exception ex)
             {
-                return null;
-
+                return new LoginResult
+                {
+                    ResultCode = 500,
+                    ResultMessage = $"خطا در انجام عملیات ورود: {ex.Message}"
+                };
             }
         }
     }

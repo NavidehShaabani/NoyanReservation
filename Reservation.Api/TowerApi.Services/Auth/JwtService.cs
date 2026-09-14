@@ -4,7 +4,6 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using TowerApi.Models.Auth;
-using System.Text.Json;
 
 namespace TowerApi.Services.Auth
 {
@@ -31,6 +30,7 @@ namespace TowerApi.Services.Auth
             var expireMinutes =
                 _configuration.GetValue<int>("Jwt:ExpireMinutes");
 
+
             var claims = new List<Claim>
             {
                 new Claim(
@@ -42,51 +42,51 @@ namespace TowerApi.Services.Auth
                     user.Username)
             };
 
-            if (user.Roles != null &&
-    user.Roles.Any())
-            {
-                claims.Add(
-                    new Claim(
-                        "Roles",
-                        JsonSerializer.Serialize(user.Roles)));
-            }
 
-            if (user.Menus != null &&
-                user.Menus.Any())
-            {
-                claims.Add(
-                    new Claim(
-                        "Menus",
-                        JsonSerializer.Serialize(user.Menus)));
-            }
+            // =====================================================
+            // User Information
+            // =====================================================
 
             if (!string.IsNullOrWhiteSpace(user.FirstName))
             {
-                claims.Add(new Claim(
-                    "FirstName",
-                    user.FirstName));
+                claims.Add(
+                    new Claim(
+                        "FirstName",
+                        user.FirstName));
             }
 
             if (!string.IsNullOrWhiteSpace(user.LastName))
             {
-                claims.Add(new Claim(
-                    "LastName",
-                    user.LastName));
+                claims.Add(
+                    new Claim(
+                        "LastName",
+                        user.LastName));
             }
 
+
+            // =====================================================
             // Roles
+            // =====================================================
+
             if (user.Roles != null)
             {
                 foreach (var role in user.Roles)
                 {
-                    if (!string.IsNullOrWhiteSpace(role.RoleName))
+                    // RoleCode برای Authorization
+                    if (!string.IsNullOrWhiteSpace(role.RoleCode))
                     {
-                        claims.Add(new Claim(
-                            ClaimTypes.Role,
-                            role.RoleName));
+                        claims.Add(
+                            new Claim(
+                                ClaimTypes.Role,
+                                role.RoleCode));
                     }
                 }
             }
+
+
+            // =====================================================
+            // JWT
+            // =====================================================
 
             var securityKey =
                 new SymmetricSecurityKey(
@@ -97,12 +97,14 @@ namespace TowerApi.Services.Auth
                     securityKey,
                     SecurityAlgorithms.HmacSha256);
 
+
             var token = new JwtSecurityToken(
                 issuer: issuer,
                 audience: audience,
                 claims: claims,
                 expires: DateTime.UtcNow.AddMinutes(expireMinutes),
                 signingCredentials: credentials);
+
 
             return new JwtSecurityTokenHandler()
                 .WriteToken(token);

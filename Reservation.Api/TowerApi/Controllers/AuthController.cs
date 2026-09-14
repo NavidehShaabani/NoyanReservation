@@ -24,25 +24,41 @@ namespace TowerApi.Controllers
         {
             try
             {
+                if (request == null)
+                {
+                    return BadRequest(new
+                    {
+                        success = false,
+                        code = 400,
+                        message = "اطلاعات ورود الزامی است."
+                    });
+                }
+
 
                 if (string.IsNullOrWhiteSpace(request.Username))
                 {
                     return BadRequest(new
                     {
+                        success = false,
+                        code = 400,
                         message = "نام کاربری الزامی است."
                     });
                 }
+
 
                 if (string.IsNullOrWhiteSpace(request.Password))
                 {
                     return BadRequest(new
                     {
+                        success = false,
+                        code = 400,
                         message = "رمز عبور الزامی است."
                     });
                 }
 
 
-                var result = await _authService.LoginAsync(request);
+                var result =
+                    await _authService.LoginAsync(request);
 
 
                 if (result.ResultCode != 200)
@@ -51,6 +67,7 @@ namespace TowerApi.Controllers
                         result.ResultCode,
                         new
                         {
+                            success = false,
                             code = result.ResultCode,
                             message = result.ResultMessage
                         });
@@ -63,84 +80,52 @@ namespace TowerApi.Controllers
                         500,
                         new
                         {
+                            success = false,
+                            code = 500,
                             message =
                                 "اطلاعات کاربر پس از ورود دریافت نشد."
                         });
                 }
 
 
-                //var userSession = new UserSession
-                //{
-                //    UserId = result.User.UserId,
-
-                //    Username = result.User.Username,
-
-                //    FirstName = result.User.FirstName,
-
-                //    LastName = result.User.LastName,
-
-                //    FullName = result.User.FullName,
-
-                //    Email = result.User.Email,
-
-                //    Mobile = result.User.Mobile,
-
-                //    NationalId = result.User.NationalId,
-
-                //    Gender = result.User.Gender,
-
-                //    BirthDate = result.User.BirthDate,
-
-                //    PhoneVerified = result.User.PhoneVerified,
-
-                //    LastLoginAt = result.User.LastLoginAt,
-
-                //    CreatedAt = result.User.CreatedAt,
-
-                //    // فعلاً SP مقدار Avatar ندارد
-                //    Avatar = null,
-
-                //    Roles = result.Roles,
-
-                //    Menus = result.Menus
-                //};
-
-
-                //HttpContext.Session.SetUserSession(userSession);
-
-
-                //return Ok(new
-                //{
-                //    success = true,
-
-                //    message = result.ResultMessage
-                //});
                 return Ok(new
                 {
                     success = true,
+
                     message = result.ResultMessage,
+
                     accessToken = result.AccessToken,
+
                     expiresIn = result.ExpiresIn,
+
                     user = new
                     {
                         userId = result.User.UserId,
+
                         username = result.User.Username,
+
                         fullName = result.User.FullName,
-                        roles = result.Roles,
-                        menus = result.Menus
+
+                        roles = result.Roles
                     }
                 });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new
-                {
-                    success = false,
-                    message = "خطایی در ورود رخ داده است.",
-                    error = ex.Message
-                });
+                return StatusCode(
+                    500,
+                    new
+                    {
+                        success = false,
+                        code = 500,
+                        message =
+                            "خطایی در ورود رخ داده است.",
+                        error = ex.Message
+                    });
             }
         }
+
+
         [HttpPost("logout")]
         public IActionResult Logout()
         {

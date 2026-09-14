@@ -17,8 +17,4 @@
     <ProjectReference Include="..\TowerApi.Models\TowerApi.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="User\" />
-  </ItemGroup>
-
 </Project>

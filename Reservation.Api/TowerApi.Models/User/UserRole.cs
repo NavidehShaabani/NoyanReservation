@@ -1,15 +1,17 @@
-﻿namespace TowerApi.Models.User
+﻿using TowerApi.Models.General;
+
+namespace TowerApi.Models.User
 {
     public class UserRole
     {
         public long RoleId { get; set; }
 
-        public string RoleName { get; set; } = string.Empty;
+        public string RoleCode { get; set; } = string.Empty;
 
-        public string? RoleDescription { get; set; }
+        public LocalizedText RoleName { get; set; } = new();
 
-        public long UserRoleId { get; set; }
+        public LocalizedText RoleDescription { get; set; } = new();
 
-        public DateTime? AssignedAt { get; set; }
+        public List<UserMenu> Menus { get; set; } = new();
     }
 }

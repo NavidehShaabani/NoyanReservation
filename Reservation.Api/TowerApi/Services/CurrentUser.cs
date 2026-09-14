@@ -1,5 +1,5 @@
 ﻿using System.Security.Claims;
-using System.Text.Json;
+using TowerApi.Models;
 using TowerApi.Models.Auth;
 using TowerApi.Models.User;
 
@@ -15,21 +15,35 @@ namespace TowerApi.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
+
+        // ============================================================
+        // Claims User
+        // ============================================================
+
         private ClaimsPrincipal? ClaimsUser =>
             _httpContextAccessor
                 .HttpContext?
                 .User;
 
+
+        // ============================================================
+        // Is Authenticated
+        // ============================================================
+
         public bool IsAuthenticated =>
             ClaimsUser?.Identity?.IsAuthenticated == true;
+
+
+        // ============================================================
+        // UserId
+        // ============================================================
 
         public long? UserId
         {
             get
             {
-                var claim =
-                    ClaimsUser?.FindFirst(
-                        ClaimTypes.NameIdentifier);
+                var claim = ClaimsUser?
+                    .FindFirst(ClaimTypes.NameIdentifier);
 
                 if (claim == null)
                     return null;
@@ -47,89 +61,132 @@ namespace TowerApi.Services
             }
         }
 
-        public UserSession? User
+
+        // ============================================================
+        // Username
+        // ============================================================
+
+        public string Username =>
+            ClaimsUser?
+                .FindFirst(ClaimTypes.Name)?
+                .Value
+            ?? string.Empty;
+
+
+        // ============================================================
+        // FirstName
+        // ============================================================
+
+        public string FirstName =>
+            ClaimsUser?
+                .FindFirst("FirstName")?
+                .Value
+            ?? string.Empty;
+
+
+        // ============================================================
+        // LastName
+        // ============================================================
+
+        public string LastName =>
+            ClaimsUser?
+                .FindFirst("LastName")?
+                .Value
+            ?? string.Empty;
+
+
+        // ============================================================
+        // FullName
+        // ============================================================
+
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}".Trim();
+            }
+        }
+
+
+        // ============================================================
+        // Role Codes
+        // ============================================================
+
+        public List<string> RoleCodes
         {
             get
             {
                 if (!IsAuthenticated)
+                    return new List<string>();
+
+                return ClaimsUser!
+                    .FindAll(ClaimTypes.Role)
+                    .Select(x => x.Value)
+                    .Where(x => !string.IsNullOrWhiteSpace(x))
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .ToList();
+            }
+        }
+
+
+        // ============================================================
+        // User Session
+        // ============================================================
+
+        public UserSession? User
+        {
+            get
+            {
+                if (!IsAuthenticated || !UserId.HasValue)
                     return null;
 
                 var user = new UserSession
                 {
-                    UserId = UserId ?? 0,
+                    UserId = UserId.Value,
 
-                    Username =
-                        ClaimsUser?
-                            .FindFirst(ClaimTypes.Name)?
-                            .Value ?? string.Empty,
+                    Username = Username,
 
-                    FirstName =
-                        ClaimsUser?
-                            .FindFirst("FirstName")?
-                            .Value,
+                    FirstName = FirstName,
 
-                    LastName =
-                        ClaimsUser?
-                            .FindFirst("LastName")?
-                            .Value
+                    LastName = LastName,
+
+                    Roles = new List<UserRole>()
                 };
 
-                var rolesClaim =
-                    ClaimsUser?
-                        .FindFirst("Roles")?
-                        .Value;
 
-                if (!string.IsNullOrWhiteSpace(rolesClaim))
+                // ----------------------------------------------------
+                // Build Roles from JWT Role Claims
+                // ----------------------------------------------------
+
+                foreach (var roleCode in RoleCodes)
                 {
-                    user.Roles =
-                        JsonSerializer.Deserialize<
-                            List<UserRole>>(
-                                rolesClaim)
-                        ?? new List<UserRole>();
+                    user.Roles.Add(
+                        new UserRole
+                        {
+                            RoleCode = roleCode
+                        });
                 }
 
-                var menusClaim =
-                    ClaimsUser?
-                        .FindFirst("Menus")?
-                        .Value;
-
-                if (!string.IsNullOrWhiteSpace(menusClaim))
-                {
-                    user.Menus =
-                        JsonSerializer.Deserialize<
-                            List<UserMenu>>(
-                                menusClaim)
-                        ?? new List<UserMenu>();
-                }
 
                 return user;
             }
         }
 
-        public bool IsInRole(string roleName)
+
+        // ============================================================
+        // IsInRole
+        // ============================================================
+
+        public bool IsInRole(string roleCode)
         {
             if (!IsAuthenticated ||
-                string.IsNullOrWhiteSpace(roleName))
+                string.IsNullOrWhiteSpace(roleCode))
             {
                 return false;
             }
 
-            return ClaimsUser!.IsInRole(roleName);
-        }
-
-        public bool HasPermission(
-            long menuId,
-            int requiredLevel)
-        {
-            var menu = User?.Menus
-                .FirstOrDefault(
-                    x => x.MenuId == menuId);
-
-            if (menu == null)
-                return false;
-
-            return menu.PermissionLevel >=
-                   requiredLevel;
+            return ClaimsUser!.IsInRole(roleCode);
         }
     }
 }
+

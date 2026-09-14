@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using TowerApi.Models.Auth;
+using TowerApi.Models.User;
 using TowerApi.Repositories.Auth;
 
 namespace TowerApi.Services.Auth
@@ -64,8 +65,7 @@ namespace TowerApi.Services.Auth
                 LastLoginAt = result.User.LastLoginAt,
                 CreatedAt = result.User.CreatedAt,
                 Avatar = null,
-                Roles = result.Roles,
-                Menus = result.Menus
+                Roles = result.Roles
             };
 
             var token = _jwtService.GenerateToken(userSession);

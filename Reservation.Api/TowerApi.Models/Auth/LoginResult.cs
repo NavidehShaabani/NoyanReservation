@@ -12,9 +12,6 @@ namespace TowerApi.Models.Auth
 
         public List<UserRole> Roles { get; set; } = new();
 
-        public List<UserMenu> Menus { get; set; } = new();
-
-        // JWT
         public string? AccessToken { get; set; }
 
         public int ExpiresIn { get; set; }
