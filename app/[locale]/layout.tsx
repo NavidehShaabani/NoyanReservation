@@ -82,7 +82,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale} dir={direction}>
       <body
         className={cn(
-          "min-h-screen bg-background text-foreground",
+          "min-h-screen bg-background-login text-foreground",
           vazirmatn.className,
         )}
       >

@@ -58,7 +58,15 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReact", policy =>
     {
         policy
-            .WithOrigins("http://10.242.106.91:3000")
+        //------nsh----برای تست موبایل فعلا این رو لازم دارم بعدا پاک می کنیم
+           // .WithOrigins("http://10.242.106.91:3000")
+            .WithOrigins(
+    "http://10.242.106.91:3000",
+    "http://10.242.106.91:5295"
+)
+
+
+
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -232,8 +240,8 @@ if (app.Environment.IsDevelopment())
 // ======================================================
 // Middleware
 // ======================================================
-
-app.UseHttpsRedirection();
+//-------nsh
+//app.UseHttpsRedirection();
 
 //app.UseSession();
 

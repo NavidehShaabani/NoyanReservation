@@ -25,7 +25,7 @@ export default function Login() {
   >("");
   const [submitted, setSubmitted] = useState(false);
   const router = useRouter();
-  const { token, setToken, setUser } = useContext(AuthContext);
+  const { setToken, setUser, setActiveRole } = useContext(AuthContext);
 
   const submit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,7 +45,8 @@ export default function Login() {
     }
 
     try {
-      const response = await fetch("https://localhost:7295/api/Auth/login", {
+      console.log("LOGIN START");
+      const response = await fetch("http://10.242.106.91:5295/api/Auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +56,7 @@ export default function Login() {
           password,
         }),
       });
-
+      console.log("STATUS:", response.status);
       if (!response.ok) {
         // setError("invalidCredentials");
         return;
@@ -65,18 +66,22 @@ export default function Login() {
       setToken(data.accessToken);
       setUser(data.user);
       console.log("Login response:", data);
-      console.log("User:", data.user);
-      router.push(`/${locale}/dashboard`);
+      if (data.user.roles.length > 1) {
+        router.push(`/${locale}/select-role`);
+      } else {
+        setActiveRole(data.user.roles[0]);
+        router.push(`/${locale}/dashboard`);
+      }
     } catch (error) {
       console.error("Login error:", error);
     }
   };
   return (
     <form onSubmit={submit}>
-      <div className=" relative  md:bg-background h-screen flex justify-center items-center">
+      <div className=" relative  md:bg-backgroundlogin h-screen flex justify-center items-center">
         <div className="bg-card w-full md:w-[70vw] h-full  md:h-[80vh] rounded-[0px] md:rounded-[5px] flex flex-col md:flex-row overflow-hidden drop-shadow-[0_20px_35px_rgba(0,0,0,0.25)] ">
           <div className="w-full md:w-2/3 h-full bg-card grid grid-rows-11 px-0 md:px-[10%] py-0 md:py-[1%]">
-            <div className="row-span-2  bg-background md:bg-card flex justify-center items-center md:justify-start  ">
+            <div className="row-span-2  bg-backgroundlogin md:bg-card flex justify-center items-center md:justify-start  ">
               <div
                 className="w-48 md:w-20 h-20 bg-card md:bg-primary"
                 style={{
