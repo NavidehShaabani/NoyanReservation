@@ -124,17 +124,16 @@ builder.Services.AddSwaggerGen(options =>
 
 
 // ======================================================
-// Repositories
+// Repositories Extention
 // ======================================================
 
 builder.Services.RepositoriesExtention();
 
 // ======================================================
-// Services
+// Services Extention
 // ======================================================
 
-builder.Services.AddScoped<IAuthService, AuthService>();
-
+builder.Services.ServiceExtention();
 
 // ======================================================
 // HttpContext

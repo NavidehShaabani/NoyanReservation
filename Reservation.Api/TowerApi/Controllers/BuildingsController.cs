@@ -197,11 +197,21 @@ namespace TowerApi.Controllers
             return resultCode switch
             {
                 200 => StatusCodes.Status200OK,
+
                 400 => StatusCodes.Status400BadRequest,
+
                 401 => StatusCodes.Status401Unauthorized,
+
                 403 => StatusCodes.Status403Forbidden,
+
                 404 => StatusCodes.Status404NotFound,
+
                 409 => StatusCodes.Status409Conflict,
+
+                410 => StatusCodes.Status410Gone,
+
+                429 => StatusCodes.Status429TooManyRequests,
+
                 _ => StatusCodes.Status500InternalServerError
             };
         }
