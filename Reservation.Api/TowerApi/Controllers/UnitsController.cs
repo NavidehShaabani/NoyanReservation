@@ -3,20 +3,24 @@ using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.Unit;
 using TowerApi.Repositories.Unit;
 using TowerApi.Services;
+using TowerApi.Services.Unit;
 
 namespace TowerApi.Controllers
 {
+
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
     public class UnitsController : ControllerBase
     {
-        private readonly IUnitRepository _repository;
+        private readonly IUnitService _service;
         private readonly ICurrentUser _currentUser;
 
-        public UnitsController(IUnitRepository repository,ICurrentUser currentUser)
+        public UnitsController(
+            IUnitService service,
+            ICurrentUser currentUser)
         {
-            _repository = repository;
+            _service = service;
             _currentUser = currentUser;
         }
 
@@ -25,7 +29,7 @@ namespace TowerApi.Controllers
             [FromQuery] UnitQueryRequest request)
         {
             var result =
-                await _repository.GetListAsync(request);
+                await _service.GetListAsync(request);
 
             return StatusCode(
                 GetHttpStatusCode(result.ResultCode),
@@ -44,7 +48,7 @@ namespace TowerApi.Controllers
             [FromQuery] bool includeDeleted = false)
         {
             var result =
-                await _repository.GetByIdAsync(
+                await _service.GetByIdAsync(
                     unitId,
                     includeDeleted);
 
@@ -66,7 +70,14 @@ namespace TowerApi.Controllers
             var userId = _currentUser.UserId;
 
             if (!userId.HasValue)
-                return Unauthorized();
+            {
+                return Unauthorized(new
+                {
+                    success = false,
+                    code = 401,
+                    message = "کاربر احراز هویت نشده است."
+                });
+            }
 
             if (userId.Value > int.MaxValue)
             {
@@ -80,7 +91,7 @@ namespace TowerApi.Controllers
             }
 
             var result =
-                await _repository.AddAsync(
+                await _service.AddAsync(
                     request,
                     (int)userId.Value);
 
@@ -103,7 +114,14 @@ namespace TowerApi.Controllers
             var userId = _currentUser.UserId;
 
             if (!userId.HasValue)
-                return Unauthorized();
+            {
+                return Unauthorized(new
+                {
+                    success = false,
+                    code = 401,
+                    message = "کاربر احراز هویت نشده است."
+                });
+            }
 
             if (userId.Value > int.MaxValue)
             {
@@ -117,7 +135,7 @@ namespace TowerApi.Controllers
             }
 
             var result =
-                await _repository.EditAsync(
+                await _service.EditAsync(
                     unitId,
                     request,
                     (int)userId.Value);
@@ -140,7 +158,14 @@ namespace TowerApi.Controllers
             var userId = _currentUser.UserId;
 
             if (!userId.HasValue)
-                return Unauthorized();
+            {
+                return Unauthorized(new
+                {
+                    success = false,
+                    code = 401,
+                    message = "کاربر احراز هویت نشده است."
+                });
+            }
 
             if (userId.Value > int.MaxValue)
             {
@@ -154,7 +179,7 @@ namespace TowerApi.Controllers
             }
 
             var result =
-                await _repository.DeleteAsync(
+                await _service.DeleteAsync(
                     unitId,
                     (int)userId.Value);
 
@@ -174,21 +199,13 @@ namespace TowerApi.Controllers
             return resultCode switch
             {
                 200 => StatusCodes.Status200OK,
-
                 400 => StatusCodes.Status400BadRequest,
-
                 401 => StatusCodes.Status401Unauthorized,
-
                 403 => StatusCodes.Status403Forbidden,
-
                 404 => StatusCodes.Status404NotFound,
-
                 409 => StatusCodes.Status409Conflict,
-
                 410 => StatusCodes.Status410Gone,
-
                 429 => StatusCodes.Status429TooManyRequests,
-
                 _ => StatusCodes.Status500InternalServerError
             };
         }

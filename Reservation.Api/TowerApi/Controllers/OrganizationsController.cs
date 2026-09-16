@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.Organization;
 using TowerApi.Repositories.Organization;
 using TowerApi.Services;
+using TowerApi.Services.Organization;
 
 namespace TowerApi.Controllers
 {
@@ -11,14 +12,14 @@ namespace TowerApi.Controllers
     [Authorize]
     public class OrganizationsController : ControllerBase
     {
-        private readonly IOrganizationRepository _repository;
+        private readonly IOrganizationService _service;
         private readonly ICurrentUser _currentUser;
 
         public OrganizationsController(
-            IOrganizationRepository repository,
+            IOrganizationService service,
             ICurrentUser currentUser)
         {
-            _repository = repository;
+            _service = service;
             _currentUser = currentUser;
         }
 
@@ -28,7 +29,7 @@ namespace TowerApi.Controllers
             [FromQuery] OrganizationQueryRequest request)
         {
             var result =
-                await _repository.GetListAsync(request);
+                await _service.GetListAsync(request);
 
             return StatusCode(
                 MapStatusCode(result.ResultCode),
@@ -48,7 +49,7 @@ namespace TowerApi.Controllers
             [FromQuery] bool includeDeleted = false)
         {
             var result =
-                await _repository.GetByIdAsync(
+                await _service.GetByIdAsync(
                     orgId,
                     includeDeleted);
 
@@ -86,12 +87,13 @@ namespace TowerApi.Controllers
                 {
                     success = false,
                     code = 400,
-                    message = "شناسه کاربر برای ثبت اطلاعات معتبر نیست."
+                    message =
+                        "شناسه کاربر برای ثبت اطلاعات معتبر نیست."
                 });
             }
 
             var result =
-                await _repository.AddAsync(
+                await _service.AddAsync(
                     request,
                     (int)userId.Value);
 
@@ -130,12 +132,13 @@ namespace TowerApi.Controllers
                 {
                     success = false,
                     code = 400,
-                    message = "شناسه کاربر برای ویرایش اطلاعات معتبر نیست."
+                    message =
+                        "شناسه کاربر برای ویرایش اطلاعات معتبر نیست."
                 });
             }
 
             var result =
-                await _repository.EditAsync(
+                await _service.EditAsync(
                     orgId,
                     request,
                     (int)userId.Value);
@@ -174,12 +177,13 @@ namespace TowerApi.Controllers
                 {
                     success = false,
                     code = 400,
-                    message = "شناسه کاربر برای حذف اطلاعات معتبر نیست."
+                    message =
+                        "شناسه کاربر برای حذف اطلاعات معتبر نیست."
                 });
             }
 
             var result =
-                await _repository.DeleteAsync(
+                await _service.DeleteAsync(
                     orgId,
                     (int)userId.Value);
 
@@ -199,19 +203,12 @@ namespace TowerApi.Controllers
             return resultCode switch
             {
                 200 => StatusCodes.Status200OK,
-
                 400 => StatusCodes.Status400BadRequest,
-
                 401 => StatusCodes.Status401Unauthorized,
-
                 403 => StatusCodes.Status403Forbidden,
-
                 404 => StatusCodes.Status404NotFound,
-
                 409 => StatusCodes.Status409Conflict,
-
                 410 => StatusCodes.Status410Gone,
-
                 429 => StatusCodes.Status429TooManyRequests,
                 _ => StatusCodes.Status500InternalServerError
             };

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.Building;
 using TowerApi.Repositories.Building;
 using TowerApi.Services;
+using TowerApi.Services.Building;
 
 namespace TowerApi.Controllers
 {
@@ -11,14 +12,14 @@ namespace TowerApi.Controllers
     [Authorize]
     public class BuildingsController : ControllerBase
     {
-        private readonly IBuildingRepository _repository;
+        private readonly IBuildingService _service;
         private readonly ICurrentUser _currentUser;
 
         public BuildingsController(
-            IBuildingRepository repository,
+            IBuildingService service,
             ICurrentUser currentUser)
         {
-            _repository = repository;
+            _service = service;
             _currentUser = currentUser;
         }
 
@@ -27,7 +28,7 @@ namespace TowerApi.Controllers
             [FromQuery] BuildingQueryRequest request)
         {
             var result =
-                await _repository.GetListAsync(request);
+                await _service.GetListAsync(request);
 
             return StatusCode(
                 GetHttpStatusCode(result.ResultCode),
@@ -46,7 +47,7 @@ namespace TowerApi.Controllers
             [FromQuery] bool includeDeleted = false)
         {
             var result =
-                await _repository.GetByIdAsync(
+                await _service.GetByIdAsync(
                     buildingId,
                     includeDeleted);
 
@@ -65,16 +66,16 @@ namespace TowerApi.Controllers
         public async Task<IActionResult> Create(
             [FromBody] BuildingCreateRequest request)
         {
-            if (!_currentUser.IsAuthenticated)
-            {
-                return Unauthorized();
-            }
-
             var userId = _currentUser.UserId;
 
             if (!userId.HasValue)
             {
-                return Unauthorized();
+                return Unauthorized(new
+                {
+                    success = false,
+                    code = 401,
+                    message = "کاربر احراز هویت نشده است."
+                });
             }
 
             if (userId.Value > int.MaxValue)
@@ -89,7 +90,7 @@ namespace TowerApi.Controllers
             }
 
             var result =
-                await _repository.AddAsync(
+                await _service.AddAsync(
                     request,
                     (int)userId.Value);
 
@@ -109,16 +110,16 @@ namespace TowerApi.Controllers
             long buildingId,
             [FromBody] BuildingUpdateRequest request)
         {
-            if (!_currentUser.IsAuthenticated)
-            {
-                return Unauthorized();
-            }
-
             var userId = _currentUser.UserId;
 
             if (!userId.HasValue)
             {
-                return Unauthorized();
+                return Unauthorized(new
+                {
+                    success = false,
+                    code = 401,
+                    message = "کاربر احراز هویت نشده است."
+                });
             }
 
             if (userId.Value > int.MaxValue)
@@ -133,7 +134,7 @@ namespace TowerApi.Controllers
             }
 
             var result =
-                await _repository.EditAsync(
+                await _service.EditAsync(
                     buildingId,
                     request,
                     (int)userId.Value);
@@ -153,16 +154,16 @@ namespace TowerApi.Controllers
         public async Task<IActionResult> Delete(
             long buildingId)
         {
-            if (!_currentUser.IsAuthenticated)
-            {
-                return Unauthorized();
-            }
-
             var userId = _currentUser.UserId;
 
             if (!userId.HasValue)
             {
-                return Unauthorized();
+                return Unauthorized(new
+                {
+                    success = false,
+                    code = 401,
+                    message = "کاربر احراز هویت نشده است."
+                });
             }
 
             if (userId.Value > int.MaxValue)
@@ -177,7 +178,7 @@ namespace TowerApi.Controllers
             }
 
             var result =
-                await _repository.DeleteAsync(
+                await _service.DeleteAsync(
                     buildingId,
                     (int)userId.Value);
 
@@ -197,21 +198,13 @@ namespace TowerApi.Controllers
             return resultCode switch
             {
                 200 => StatusCodes.Status200OK,
-
                 400 => StatusCodes.Status400BadRequest,
-
                 401 => StatusCodes.Status401Unauthorized,
-
                 403 => StatusCodes.Status403Forbidden,
-
                 404 => StatusCodes.Status404NotFound,
-
                 409 => StatusCodes.Status409Conflict,
-
                 410 => StatusCodes.Status410Gone,
-
                 429 => StatusCodes.Status429TooManyRequests,
-
                 _ => StatusCodes.Status500InternalServerError
             };
         }
