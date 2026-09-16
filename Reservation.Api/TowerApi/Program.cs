@@ -84,7 +84,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition(
-        "Bearer",
+        "JWT Token",
         new Microsoft.OpenApi.Models.OpenApiSecurityScheme
         {
             Name = "Authorization",
@@ -92,8 +92,7 @@ builder.Services.AddSwaggerGen(options =>
             Scheme = "bearer",
             BearerFormat = "JWT",
             In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-            Description =
-                "توکن JWT را وارد کنید. مثال: Bearer eyJhbGciOi..."
+            Description ="Please enter JWT token into below box. Exmple:Otg35Ftj...." 
         });
 
     options.AddSecurityRequirement(
@@ -107,7 +106,7 @@ builder.Services.AddSwaggerGen(options =>
                         {
                             Type =
                                 Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
-                            Id = "Bearer"
+                            Id = "JWT Token"
                         }
                 },
                 Array.Empty<string>()
