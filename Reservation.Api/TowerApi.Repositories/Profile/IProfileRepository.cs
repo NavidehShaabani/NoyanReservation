@@ -16,5 +16,11 @@ namespace TowerApi.Repositories.Profile
         )> CompleteProfileAsync(
             long userId,
             CompleteProfileRequest request);
+
+        Task<(
+            int ResultCode,
+            string ResultMessage,
+            UserProfileResponse? Data)>
+            GetAsync(long userId);
     }
 }

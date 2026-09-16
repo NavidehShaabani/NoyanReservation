@@ -56,7 +56,48 @@ namespace TowerApi.Controllers
                     data = result.Data
                 });
         }
+        
+        // GET: api/UserProfiles
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var userId = _currentUser.UserId;
 
+            if (!userId.HasValue)
+            {
+                return Unauthorized(new
+                {
+                    success = false,
+                    code = 401,
+                    message = "کاربر احراز هویت نشده است."
+                });
+            }
+
+            if (userId.Value > int.MaxValue)
+            {
+                return BadRequest(new
+                {
+                    success = false,
+                    code = 400,
+                    message =
+                        "شناسه کاربر برای دریافت پروفایل معتبر نیست."
+                });
+            }
+
+            var result =
+                await _profileService.GetAsync(
+                    userId.Value);
+
+            return StatusCode(
+                MapStatusCode(result.ResultCode),
+                new
+                {
+                    success = result.ResultCode == 200,
+                    code = result.ResultCode,
+                    message = result.ResultMessage,
+                    data = result.Data
+                });
+        }
 
         private static int MapStatusCode(
             int resultCode)
@@ -82,5 +123,6 @@ namespace TowerApi.Controllers
                 _ => StatusCodes.Status500InternalServerError
             };
         }
+        
     }
 }

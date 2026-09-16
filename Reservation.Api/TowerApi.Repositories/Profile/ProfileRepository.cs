@@ -195,5 +195,50 @@ namespace TowerApi.Repositories.Profile
                 response
             );
         }
+
+        public async Task<(
+            int ResultCode,
+            string ResultMessage,
+            UserProfileResponse? Data)>
+            GetAsync(long userId)
+        {
+            using var connection =
+                _connectionFactory.CreateConnection();
+
+            var parameters = new DynamicParameters();
+
+            parameters.Add(
+                "@UserId",
+                userId,
+                DbType.Int64);
+
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
+            var data =
+                await connection.QueryFirstOrDefaultAsync<UserProfileResponse>(
+                    "dbo.UserProfilesGet",
+                    parameters,
+                    commandType: CommandType.StoredProcedure);
+
+            var resultCode =
+                parameters.Get<int>("@ResultCode");
+
+            var resultMessage =
+                parameters.Get<string>("@ResultMessage");
+
+            return (
+                resultCode,
+                resultMessage,
+                data);
+        }
     }
 }

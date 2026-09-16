@@ -34,5 +34,21 @@ namespace TowerApi.Services.Profile
                 userId,
                 request);
         }
+        public async Task<(
+            int ResultCode,
+            string ResultMessage,
+            UserProfileResponse? Data)>
+            GetAsync(long userId)
+        {
+            if (userId <= 0)
+            {
+                return (
+                    400,
+                    "شناسه کاربر معتبر نیست.",
+                    null);
+            }
+
+            return await _repository.GetAsync(userId);
+        }
     }
 }
