@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.Registration;
 using TowerApi.Repositories.Registration;
+using TowerApi.Services.ApiResponses;
+using TowerApi.Services.Helper;
 
 namespace TowerApi.Controllers
 {
@@ -11,17 +13,15 @@ namespace TowerApi.Controllers
     public class RegistrationController : ControllerBase
     {
         private readonly IRegistrationService _registrationService;
+        private readonly IApiResponseFactory _responseFactory;
 
         public RegistrationController(
-            IRegistrationService registrationService)
+            IRegistrationService registrationService,
+            IApiResponseFactory responseFactory)
         {
             _registrationService = registrationService;
+            _responseFactory = responseFactory;
         }
-
-
-        // ============================================
-        // Mobile Signup
-        // ============================================
 
         [AllowAnonymous]
         [HttpPost("mobile")]
@@ -41,21 +41,23 @@ namespace TowerApi.Controllers
                     requestIp,
                     userAgent);
 
+            if (result.ResultCode == 200)
+            {
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.CreatedSuccessfully",
+                        result.Data));
+            }
+
             return StatusCode(
-                MapStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage,
-                    data = result.Data
-                });
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
-
-
-        // ============================================
-        // Mobile OTP Verify
-        // ============================================
 
         [AllowAnonymous]
         [HttpPost("mobile/verify")]
@@ -66,21 +68,23 @@ namespace TowerApi.Controllers
                 await _registrationService.VerifyOtpAsync(
                     request);
 
+            if (result.ResultCode == 200)
+            {
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.UpdatedSuccessfully",
+                        result.Data));
+            }
+
             return StatusCode(
-                MapStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage,
-                    data = result.Data
-                });
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
-
-
-        // ============================================
-        // Username + Password Signup
-        // ============================================
 
         [AllowAnonymous]
         [HttpPost("username")]
@@ -100,45 +104,23 @@ namespace TowerApi.Controllers
                     requestIp,
                     userAgent);
 
-            return StatusCode(
-                MapStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage,
-                    data = result.Data
-                });
-        }
-
-
-        // ============================================
-        // Status Mapping
-        // ============================================
-
-        private static int MapStatusCode(
-            int resultCode)
-        {
-            return resultCode switch
+            if (result.ResultCode == 200)
             {
-                200 => StatusCodes.Status200OK,
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.CreatedSuccessfully",
+                        result.Data));
+            }
 
-                400 => StatusCodes.Status400BadRequest,
-
-                401 => StatusCodes.Status401Unauthorized,
-
-                403 => StatusCodes.Status403Forbidden,
-
-                404 => StatusCodes.Status404NotFound,
-
-                409 => StatusCodes.Status409Conflict,
-
-                410 => StatusCodes.Status410Gone,
-
-                429 => StatusCodes.Status429TooManyRequests,
-
-                _ => StatusCodes.Status500InternalServerError
-            };
+            return StatusCode(
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
     }
+
 }

@@ -2,7 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using TowerApi.Extensions;
 using TowerApi.Models.Auth;
+using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Auth;
+using TowerApi.Services.Helper;
+using TowerApi.Services.Localization;
 
 namespace TowerApi.Controllers
 {
@@ -11,120 +14,99 @@ namespace TowerApi.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
+        private readonly IApiResponseFactory _responseFactory;
+        private readonly ILocalizationService _localization;
 
-        public AuthController(IAuthService authService)
+        public AuthController(
+            IAuthService authService,
+            IApiResponseFactory responseFactory,
+            ILocalizationService localization)
         {
             _authService = authService;
+            _responseFactory = responseFactory;
+            _localization = localization;
         }
-
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(
             [FromBody] LoginRequest request)
         {
+            if (request == null)
+            {
+                return BadRequest(
+                    _responseFactory.Error(
+                        400,
+                        "Auth.LoginInformationRequired"));
+            }
+
+            if (string.IsNullOrWhiteSpace(request.Username))
+            {
+                return BadRequest(
+                    _responseFactory.Error(
+                        400,
+                        "Auth.UsernameRequired"));
+            }
+
+            if (string.IsNullOrWhiteSpace(request.Password))
+            {
+                return BadRequest(
+                    _responseFactory.Error(
+                        400,
+                        "Auth.PasswordRequired"));
+            }
+
             try
             {
-                if (request == null)
-                {
-                    return BadRequest(new
-                    {
-                        success = false,
-                        code = 400,
-                        message = "اطلاعات ورود الزامی است."
-                    });
-                }
-
-
-                if (string.IsNullOrWhiteSpace(request.Username))
-                {
-                    return BadRequest(new
-                    {
-                        success = false,
-                        code = 400,
-                        message = "نام کاربری الزامی است."
-                    });
-                }
-
-
-                if (string.IsNullOrWhiteSpace(request.Password))
-                {
-                    return BadRequest(new
-                    {
-                        success = false,
-                        code = 400,
-                        message = "رمز عبور الزامی است."
-                    });
-                }
-
-
                 var result =
                     await _authService.LoginAsync(request);
-
 
                 if (result.ResultCode != 200)
                 {
                     return StatusCode(
-                        result.ResultCode,
-                        new
-                        {
-                            success = false,
-                            code = result.ResultCode,
-                            message = result.ResultMessage
-                        });
+                        ApiResponseMessageMapper.GetHttpStatusCode(
+                            result.ResultCode),
+                        _responseFactory.Error(
+                            result.ResultCode,
+                            ApiResponseMessageMapper.GetMessageKey(
+                                result.ResultCode)));
                 }
-
 
                 if (result.User == null)
                 {
                     return StatusCode(
-                        500,
-                        new
-                        {
-                            success = false,
-                            code = 500,
-                            message =
-                                "اطلاعات کاربر پس از ورود دریافت نشد."
-                        });
+                        StatusCodes.Status500InternalServerError,
+                        _responseFactory.Error(
+                            500,
+                            "Auth.UserNotFoundAfterLogin"));
                 }
-
 
                 return Ok(new
                 {
                     success = true,
-
-                    message = result.ResultMessage,
-
+                    code = 200,
+                    messageKey = "Auth.LoginSuccessfully",
+                    message = _localization.Get(
+                        "Auth.LoginSuccessfully"),
                     accessToken = result.AccessToken,
-
                     expiresIn = result.ExpiresIn,
-
                     user = new
                     {
                         userId = result.User.UserId,
-
                         username = result.User.Username,
-
                         fullName = result.User.FullName,
-
                         roles = result.Roles
                     }
                 });
             }
-            catch (Exception ex)
+            catch
             {
                 return StatusCode(
-                    500,
-                    new
-                    {
-                        success = false,
-                        code = 500,
-                        message =
-                            "خطایی در ورود رخ داده است.",
-                        error = ex.Message
-                    });
+                    StatusCodes.Status500InternalServerError,
+                    _responseFactory.Error(
+                        500,
+                        "Auth.LoginFailed"));
             }
         }
-
 
         [HttpPost("logout")]
         public IActionResult Logout()
@@ -134,7 +116,10 @@ namespace TowerApi.Controllers
             return Ok(new
             {
                 success = true,
-                message = "با موفقیت خارج شدید."
+                code = 200,
+                messageKey = "Auth.LogoutSuccessfully",
+                message = _localization.Get(
+                    "Auth.LogoutSuccessfully")
             });
         }
     }

@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.Unit;
 using TowerApi.Repositories.Unit;
 using TowerApi.Services;
+using TowerApi.Services.ApiResponses;
+using TowerApi.Services.Helper;
 using TowerApi.Services.Unit;
 
 namespace TowerApi.Controllers
 {
-
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
@@ -15,13 +16,16 @@ namespace TowerApi.Controllers
     {
         private readonly IUnitService _service;
         private readonly ICurrentUser _currentUser;
+        private readonly IApiResponseFactory _responseFactory;
 
         public UnitsController(
             IUnitService service,
-            ICurrentUser currentUser)
+            ICurrentUser currentUser,
+            IApiResponseFactory responseFactory)
         {
             _service = service;
             _currentUser = currentUser;
+            _responseFactory = responseFactory;
         }
 
         [HttpGet]
@@ -31,15 +35,22 @@ namespace TowerApi.Controllers
             var result =
                 await _service.GetListAsync(request);
 
+            if (result.ResultCode == 200)
+            {
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.GetSuccessfully",
+                        result.Data));
+            }
+
             return StatusCode(
-                GetHttpStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage,
-                    data = result.Data
-                });
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
 
         [HttpGet("{unitId:long}")]
@@ -52,15 +63,22 @@ namespace TowerApi.Controllers
                     unitId,
                     includeDeleted);
 
+            if (result.ResultCode == 200)
+            {
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.GetSuccessfully",
+                        result.Data));
+            }
+
             return StatusCode(
-                GetHttpStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage,
-                    data = result.Data
-                });
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
 
         [HttpPost]
@@ -71,23 +89,18 @@ namespace TowerApi.Controllers
 
             if (!userId.HasValue)
             {
-                return Unauthorized(new
-                {
-                    success = false,
-                    code = 401,
-                    message = "کاربر احراز هویت نشده است."
-                });
+                return Unauthorized(
+                    _responseFactory.Error(
+                        401,
+                        "Common.Unauthorized"));
             }
 
             if (userId.Value > int.MaxValue)
             {
-                return BadRequest(new
-                {
-                    success = false,
-                    code = 400,
-                    message =
-                        "شناسه کاربر برای ثبت اطلاعات معتبر نیست."
-                });
+                return BadRequest(
+                    _responseFactory.Error(
+                        400,
+                        "Common.InvalidUserId"));
             }
 
             var result =
@@ -95,15 +108,22 @@ namespace TowerApi.Controllers
                     request,
                     (int)userId.Value);
 
+            if (result.ResultCode == 200)
+            {
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.CreatedSuccessfully",
+                        result.Data));
+            }
+
             return StatusCode(
-                GetHttpStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage,
-                    data = result.Data
-                });
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
 
         [HttpPut("{unitId:long}")]
@@ -115,23 +135,18 @@ namespace TowerApi.Controllers
 
             if (!userId.HasValue)
             {
-                return Unauthorized(new
-                {
-                    success = false,
-                    code = 401,
-                    message = "کاربر احراز هویت نشده است."
-                });
+                return Unauthorized(
+                    _responseFactory.Error(
+                        401,
+                        "Common.Unauthorized"));
             }
 
             if (userId.Value > int.MaxValue)
             {
-                return BadRequest(new
-                {
-                    success = false,
-                    code = 400,
-                    message =
-                        "شناسه کاربر برای ویرایش اطلاعات معتبر نیست."
-                });
+                return BadRequest(
+                    _responseFactory.Error(
+                        400,
+                        "Common.InvalidUserId"));
             }
 
             var result =
@@ -140,15 +155,22 @@ namespace TowerApi.Controllers
                     request,
                     (int)userId.Value);
 
+            if (result.ResultCode == 200)
+            {
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.UpdatedSuccessfully",
+                        result.Data));
+            }
+
             return StatusCode(
-                GetHttpStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage,
-                    data = result.Data
-                });
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
 
         [HttpDelete("{unitId:long}")]
@@ -159,23 +181,18 @@ namespace TowerApi.Controllers
 
             if (!userId.HasValue)
             {
-                return Unauthorized(new
-                {
-                    success = false,
-                    code = 401,
-                    message = "کاربر احراز هویت نشده است."
-                });
+                return Unauthorized(
+                    _responseFactory.Error(
+                        401,
+                        "Common.Unauthorized"));
             }
 
             if (userId.Value > int.MaxValue)
             {
-                return BadRequest(new
-                {
-                    success = false,
-                    code = 400,
-                    message =
-                        "شناسه کاربر برای حذف اطلاعات معتبر نیست."
-                });
+                return BadRequest(
+                    _responseFactory.Error(
+                        400,
+                        "Common.InvalidUserId"));
             }
 
             var result =
@@ -183,31 +200,22 @@ namespace TowerApi.Controllers
                     unitId,
                     (int)userId.Value);
 
-            return StatusCode(
-                GetHttpStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage
-                });
-        }
-
-        private static int GetHttpStatusCode(
-            int resultCode)
-        {
-            return resultCode switch
+            if (result.ResultCode == 200)
             {
-                200 => StatusCodes.Status200OK,
-                400 => StatusCodes.Status400BadRequest,
-                401 => StatusCodes.Status401Unauthorized,
-                403 => StatusCodes.Status403Forbidden,
-                404 => StatusCodes.Status404NotFound,
-                409 => StatusCodes.Status409Conflict,
-                410 => StatusCodes.Status410Gone,
-                429 => StatusCodes.Status429TooManyRequests,
-                _ => StatusCodes.Status500InternalServerError
-            };
+                return Ok(
+                    _responseFactory.Success<object>(
+                        200,
+                        "Common.DeletedSuccessfully"));
+            }
+
+            return StatusCode(
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
     }
+
 }

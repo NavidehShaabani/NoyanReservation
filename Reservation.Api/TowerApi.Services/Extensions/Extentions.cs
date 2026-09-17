@@ -4,6 +4,7 @@ using TowerApi.Repositories.Building;
 using TowerApi.Repositories.DataBase;
 using TowerApi.Repositories.Organization;
 using TowerApi.Repositories.Unit;
+using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Auth;
 using TowerApi.Services.Building;
 using TowerApi.Services.Localization;
@@ -11,7 +12,7 @@ using TowerApi.Services.Organization;
 using TowerApi.Services.Profile;
 using TowerApi.Services.Unit;
 
-namespace TowerApi.Repositories.Extensions
+namespace TowerApi.Services.Extensions
 {
     public static class Extentions
     {
@@ -23,6 +24,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IUnitService, UnitService>();
             _services.AddScoped<IOrganizationService, OrganizationService>();
             _services.AddScoped<ILocalizationService,LocalizationService>();
+            _services.AddScoped<IApiResponseFactory,ApiResponseFactory>();
             return _services;
         }
     }

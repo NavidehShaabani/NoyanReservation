@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.Profile;
 using TowerApi.Services;
+using TowerApi.Services.ApiResponses;
+using TowerApi.Services.Helper;
 using TowerApi.Services.Profile;
 
 namespace TowerApi.Controllers
@@ -13,15 +15,17 @@ namespace TowerApi.Controllers
     {
         private readonly IProfileService _profileService;
         private readonly ICurrentUser _currentUser;
+        private readonly IApiResponseFactory _responseFactory;
 
         public ProfileController(
             IProfileService profileService,
-            ICurrentUser currentUser)
+            ICurrentUser currentUser,
+            IApiResponseFactory responseFactory)
         {
             _profileService = profileService;
             _currentUser = currentUser;
+            _responseFactory = responseFactory;
         }
-
 
         [HttpPut("complete")]
         public async Task<IActionResult> CompleteProfile(
@@ -31,33 +35,35 @@ namespace TowerApi.Controllers
 
             if (!userId.HasValue || userId.Value <= 0)
             {
-                return Unauthorized(new
-                {
-                    success = false,
-                    code = 401,
-                    message = "کاربر احراز هویت نشده است."
-                });
+                return Unauthorized(
+                    _responseFactory.Error(
+                        401,
+                        "Common.Unauthorized"));
             }
-
 
             var result =
                 await _profileService.CompleteProfileAsync(
                     userId.Value,
                     request);
 
+            if (result.ResultCode == 200)
+            {
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.UpdatedSuccessfully",
+                        result.Data));
+            }
 
             return StatusCode(
-                MapStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage,
-                    data = result.Data
-                });
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
-        
-        // GET: api/UserProfiles
+
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -65,64 +71,40 @@ namespace TowerApi.Controllers
 
             if (!userId.HasValue)
             {
-                return Unauthorized(new
-                {
-                    success = false,
-                    code = 401,
-                    message = "کاربر احراز هویت نشده است."
-                });
+                return Unauthorized(
+                    _responseFactory.Error(
+                        401,
+                        "Common.Unauthorized"));
             }
 
             if (userId.Value > int.MaxValue)
             {
-                return BadRequest(new
-                {
-                    success = false,
-                    code = 400,
-                    message =
-                        "شناسه کاربر برای دریافت پروفایل معتبر نیست."
-                });
+                return BadRequest(
+                    _responseFactory.Error(
+                        400,
+                        "Common.InvalidUserId"));
             }
 
             var result =
                 await _profileService.GetAsync(
                     userId.Value);
 
-            return StatusCode(
-                MapStatusCode(result.ResultCode),
-                new
-                {
-                    success = result.ResultCode == 200,
-                    code = result.ResultCode,
-                    message = result.ResultMessage,
-                    data = result.Data
-                });
-        }
-
-        private static int MapStatusCode(
-            int resultCode)
-        {
-            return resultCode switch
+            if (result.ResultCode == 200)
             {
-                200 => StatusCodes.Status200OK,
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.GetSuccessfully",
+                        result.Data));
+            }
 
-                400 => StatusCodes.Status400BadRequest,
-
-                401 => StatusCodes.Status401Unauthorized,
-
-                403 => StatusCodes.Status403Forbidden,
-
-                404 => StatusCodes.Status404NotFound,
-
-                409 => StatusCodes.Status409Conflict,
-
-                410 => StatusCodes.Status410Gone,
-
-                429 => StatusCodes.Status429TooManyRequests,
-
-                _ => StatusCodes.Status500InternalServerError
-            };
+            return StatusCode(
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
         }
-        
     }
 }

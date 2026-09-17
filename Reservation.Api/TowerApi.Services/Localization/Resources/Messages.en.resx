@@ -117,6 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Auth.LoginFailed" xml:space="preserve">
+    <value>An error occurred during login.</value>
+  </data>
+  <data name="Auth.LoginInformationRequired" xml:space="preserve">
+    <value>Login information is required.</value>
+  </data>
+  <data name="Auth.LoginSuccessfully" xml:space="preserve">
+    <value>Login successful.</value>
+  </data>
+  <data name="Auth.LogoutSuccessfully" xml:space="preserve">
+    <value>Logged out successfully.</value>
+  </data>
+  <data name="Auth.PasswordRequired" xml:space="preserve">
+    <value>Password is required.</value>
+  </data>
+  <data name="Auth.UsernameRequired" xml:space="preserve">
+    <value>Username is required.</value>
+  </data>
+  <data name="Auth.UserNotFoundAfterLogin" xml:space="preserve">
+    <value>User information was not received after login.</value>
+  </data>
+  <data name="Common.Conflict" xml:space="preserve">
+    <value>The requested operation conflicts with existing information.</value>
+  </data>
   <data name="Common.CreatedSuccessfully" xml:space="preserve">
     <value>Created successfully.</value>
   </data>
@@ -128,6 +152,9 @@
   </data>
   <data name="Common.GetSuccessfully" xml:space="preserve">
     <value>Information retrieved successfully.</value>
+  </data>
+  <data name="Common.Gone" xml:space="preserve">
+    <value>The requested information is no longer available.</value>
   </data>
   <data name="Common.InvalidRequest" xml:space="preserve">
     <value>The submitted information is invalid.</value>
@@ -146,5 +173,8 @@
   </data>
   <data name="Common.UpdatedSuccessfully" xml:space="preserve">
     <value>Updated successfully.</value>
+  </data>
+  <data name="ommon.TooManyRequests" xml:space="preserve">
+    <value>Too many requests. Please try again later.</value>
   </data>
 </root>

@@ -117,6 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Auth.LoginFailed" xml:space="preserve">
+    <value>خطایی در ورود رخ داده است.</value>
+  </data>
+  <data name="Auth.LoginInformationRequired" xml:space="preserve">
+    <value>اطلاعات ورود الزامی است.</value>
+  </data>
+  <data name="Auth.LoginSuccessfully" xml:space="preserve">
+    <value>ورود با موفقیت انجام شد.</value>
+  </data>
+  <data name="Auth.LogoutSuccessfully" xml:space="preserve">
+    <value>با موفقیت خارج شدید.</value>
+  </data>
+  <data name="Auth.PasswordRequired" xml:space="preserve">
+    <value>رمز عبور الزامی است.</value>
+  </data>
+  <data name="Auth.UsernameRequired" xml:space="preserve">
+    <value>نام کاربری الزامی است.</value>
+  </data>
+  <data name="Auth.UserNotFoundAfterLogin" xml:space="preserve">
+    <value>اطلاعات کاربر پس از ورود دریافت نشد.</value>
+  </data>
+  <data name="Common.Conflict" xml:space="preserve">
+    <value>این اطلاعات با اطلاعات موجود در تضاد است.</value>
+  </data>
   <data name="Common.CreatedSuccessfully" xml:space="preserve">
     <value>با موفقیت ثبت شد.</value>
   </data>
@@ -128,6 +152,9 @@
   </data>
   <data name="Common.GetSuccessfully" xml:space="preserve">
     <value>اطلاعات با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Common.Gone" xml:space="preserve">
+    <value>اطلاعات مورد نظر دیگر در دسترس نیست.</value>
   </data>
   <data name="Common.InvalidRequest" xml:space="preserve">
     <value>اطلاعات ارسال شده معتبر نیست.</value>
@@ -146,5 +173,8 @@
   </data>
   <data name="Common.UpdatedSuccessfully" xml:space="preserve">
     <value>با موفقیت ویرایش شد.</value>
+  </data>
+  <data name="ommon.TooManyRequests" xml:space="preserve">
+    <value>تعداد درخواست‌های شما بیش از حد مجاز است.</value>
   </data>
 </root>

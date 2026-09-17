@@ -26,10 +26,11 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using TowerApi.Middleware;
+
 using TowerApi.Repositories.Extensions;
 using TowerApi.Services;
 using TowerApi.Services.Auth;
+using TowerApi.Services.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -92,7 +93,7 @@ builder.Services.AddSwaggerGen(options =>
             Scheme = "bearer",
             BearerFormat = "JWT",
             In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-            Description ="Please enter JWT token into below box. Exmple:Otg35Ftj...." 
+            Description = "Please enter JWT token into below box. Exmple:Otg35Ftj...."
         });
 
     options.AddSecurityRequirement(
@@ -113,7 +114,35 @@ builder.Services.AddSwaggerGen(options =>
             }
         });
 });
+//===============switch to FA and EN
+//builder.Services.AddSwaggerGen(options =>
+//{
+//    options.AddSecurityDefinition(
+//        "Accept-Language",
+//        new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+//        {
+//            Name = "Accept-Language",
+//            Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+//            In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+//            Description = "Language: fa or en"
+//        });
 
+//    options.AddSecurityRequirement(
+//        new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+//        {
+//            {
+//                new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+//                {
+//                    Reference = new Microsoft.OpenApi.Models.OpenApiReference
+//                    {
+//                        Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+//                        Id = "Accept-Language"
+//                    }
+//                },
+//                Array.Empty<string>()
+//            }
+//        });
+//});
 
 // ======================================================
 // Database
