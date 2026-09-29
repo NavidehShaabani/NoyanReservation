@@ -13,5 +13,12 @@
   },
   "footer": {
     "copyright": "© 2026 Noyan Reservation"
+  },
+  "header": {
+    "headerDescription": "Reservation and facility management system"
+  },
+  "select-role": {
+    "pageTitle": "Which role would you like to sign in as?",
+    "buttonTitle": "select"
   }
 }

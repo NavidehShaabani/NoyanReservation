@@ -1,11 +1,36 @@
 "use client";
 
 import { createContext, useState, useEffect } from "react";
-
+export type localizedText = {
+  en: string | null;
+  fa: string | null;
+};
+type Permission = {
+  code: number;
+  fa: string;
+  en: string;
+  canRead: boolean;
+  canWrite: boolean;
+  canDelete: boolean;
+};
+type Menu = {
+  menuId: number;
+  roleId: number;
+  parentId: number | null;
+  name: localizedText;
+  menuUrl: string | null;
+  icon: string | null;
+  sortOrder: number;
+  isPermission: boolean;
+  permission: Permission;
+  children: Menu[];
+};
 type Role = {
   roleId: number;
-  roleName: string | null;
-  roleDescription: string | null;
+  roleCode: string;
+  roleName: localizedText;
+  roleDescription: localizedText;
+  menus: Menu[];
 };
 type User = {
   userId: number;

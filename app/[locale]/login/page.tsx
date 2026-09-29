@@ -46,7 +46,7 @@ export default function Login() {
 
     try {
       console.log("LOGIN START");
-      const response = await fetch("http://10.242.106.91:5295/api/Auth/login", {
+      const response = await fetch("http://10.208.8.91:5295/api/Auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,12 +78,19 @@ export default function Login() {
   };
   return (
     <form onSubmit={submit}>
-      <div className=" relative  md:bg-backgroundlogin h-screen flex justify-center items-center">
-        <div className="bg-card w-full md:w-[70vw] h-full  md:h-[80vh] rounded-[0px] md:rounded-[5px] flex flex-col md:flex-row overflow-hidden drop-shadow-[0_20px_35px_rgba(0,0,0,0.25)] ">
+      <div className="   md:bg-backgroundlogin h-screen flex justify-center items-center">
+        <div
+          className="bg-card w-full md:w-[70vw] h-full  md:h-[80vh] rounded-[0px] md:rounded-[10px] flex flex-col md:flex-row overflow-hidden 
+        
+        
+  shadow-[20px_20px_43px_#b3b3b3,-20px_-20px_43px_#f2f2f2]
+        
+        "
+        >
           <div className="w-full md:w-2/3 h-full bg-card grid grid-rows-11 px-0 md:px-[10%] py-0 md:py-[1%]">
             <div className="row-span-2  bg-backgroundlogin md:bg-card flex justify-center items-center md:justify-start  ">
               <div
-                className="w-48 md:w-20 h-20 bg-card md:bg-primary"
+                className="w-48 md:w-20 h-20 bg-primary"
                 style={{
                   maskImage: "url('/images/NOYAN.svg')",
                   maskRepeat: "no-repeat",
@@ -93,22 +100,43 @@ export default function Login() {
               />
             </div>
             <div
-              className="row-span-8 md:row-span-7  flex-row   px-[5%] md:px-0 py-[10%] md:py-[5%]    bg-[url('/images/main_pic.jpg')]
-    bg-contain
-    bg-center
-    md:bg-none  
-    "
+              className="
+            
+    login-mobile-bg
+    row-span-9 md:row-span-7
+    flex-row
+   
+    px-[5%] md:px-0
+    py-[10vh]
+     md:py-[5%]
+  "
             >
               <div
-                className="px-[5%] md:px-[0px] pt-[20%] pb-[35%] md:pt-[0px] md:pb-[0px] 
-                rounded-[5px] md:rounded-[0px] bg-[rgba(255,255,255,0.15)] md:bg-transparent 
-                backdrop-blur-sm md:backdrop-blur-none
-            "
+                className="
+  px-[5%]
+  md:px-0
+pt-[10vh]
+pb-[10vh]
+  md:pt-0
+  md:pb-0
+
+  rounded-[10px]
+  md:rounded-none
+
+  bg-[#ebe9e5]
+  backdrop-blur-xl
+
+  md:bg-transparent
+  md:backdrop-blur-none
+"
               >
                 <FieldGroup className="gap-2">
                   {/* <Field data-invalid={submitted && !username.trim()}> */}
                   <Field>
-                    <FieldLabel htmlFor="fieldgroup-username">
+                    <FieldLabel
+                      htmlFor="fieldgroup-username"
+                      className="text-foreground"
+                    >
                       {t("username")}
                     </FieldLabel>
                     <Input
@@ -119,13 +147,29 @@ export default function Login() {
                       onChange={(e) => {
                         setUsername(e.target.value);
                       }}
-                      className={`bg-white/10 border-input md:focus-visible:border-ring
-                                md:focus-visible:ring-ring/50 md:bg-transparent ${submitted && !username.trim() ? "border-destructive" : ""} `}
+                      className={`    ${submitted && !username.trim() ? "border-destructive" : ""} 
+                                
+
+
+                                
+       border-none
+      rounded-[7px]  
+    bg-surface
+   shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
+ 
+   focus-visible:ring-1
+   focus-visible:ring-primary/30  
+
+
+                                `}
                     />
                   </Field>
                   {/* <Field data-invalid={submitted && !password.trim()}> */}
                   <Field>
-                    <FieldLabel htmlFor="fieldgroup-password">
+                    <FieldLabel
+                      htmlFor="fieldgroup-password"
+                      className="text-foreground"
+                    >
                       {t("password")}
                     </FieldLabel>
                     <Input
@@ -134,22 +178,70 @@ export default function Login() {
                       type="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className={`bg-white/10 border-input md:focus-visible:border-ring
-                                md:focus-visible:ring-ring/50 md:bg-transparent" ${submitted && !password.trim() ? "border-destructive" : ""}`}
+                      className={`
+                            md:bg-transparent" ${submitted && !password.trim() ? "border-destructive" : ""}
+                                
+                                
+                                
+       border-none
+      rounded-[7px]  
+    bg-surface
+   shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
+   focus-visible:ring-1
+   focus-visible:ring-primary/30       
+                                
+                                
+                                `}
                     />
                   </Field>
                   {/* <Field orientation="horizontal"> */}
                   <div className="min-h-4">
                     {/* فضای معادل error برای Button */}
                   </div>
-                  <Button className="w-full " type="submit">
+                  <Button
+                    className="
+    w-full
+    rounded-[7px]
+
+    bg-surface
+    text-[hsl(90_10%_20%)]
+
+    shadow-[5px_5px_10px_#d3d1ce,-5px_-5px_10px_#ffffff]
+
+    hover:bg-surface
+    hover:text-foreground
+    hover:shadow-[6px_6px_12px_#d0cecb,-6px_-6px_12px_#ffffff]
+
+    active:bg-surface
+    active:text-foreground
+    active:shadow-[inset_4px_4px_8px_#d3d1ce,inset_-4px_-4px_8px_#ffffff]
+
+    transition-all
+    duration-150
+  "
+                    type="submit"
+                  >
                     {t("submit")}
                   </Button>
                   {/* </Field> */}
                 </FieldGroup>
-                <div className="mt-1">
+                <div className="mt-3  min-h-0">
                   {error && (
-                    <Alert variant="destructive" className="w-full">
+                    <Alert
+                      variant="destructive"
+                      className="w-full 
+                    
+                   
+      
+        rounded-[7px]
+        border-none
+        bg-surface
+        text-destructive
+        shadow-[inset_3px_3px_5px_#e4e2df,inset_-3px_-3px_5px_#ffffff]
+      
+                    
+                    "
+                    >
                       <AlertCircleIcon />
                       <AlertTitle>{t("error")}</AlertTitle>
                       <AlertDescription>
