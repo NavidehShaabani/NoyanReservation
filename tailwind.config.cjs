@@ -31,6 +31,7 @@ module.exports = {
         backgroundlogin: "hsl(var(--backgroundlogin))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        surface: "hsl(var(--surface))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

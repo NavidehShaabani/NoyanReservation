@@ -13,5 +13,12 @@
   },
   "footer": {
     "copyright": "© ۲۰۲۶ نویان رزرو"
+  },
+  "header": {
+    "headerDescription": "سامانه رزرو و مدیریت امکانات مجموعه"
+  },
+  "select-role": {
+    "pageTitle": "می خواهید با کدام نقش وارد شوید؟",
+    "buttonTitle": "انتخاب"
   }
 }
