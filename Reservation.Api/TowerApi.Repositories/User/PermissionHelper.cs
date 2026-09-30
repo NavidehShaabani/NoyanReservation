@@ -4,7 +4,7 @@ namespace TowerApi.Services
 {
     public static class PermissionHelper
     {
-        public static PermissionInfo GetPermissionInfo(byte level)
+        public static PermissionInfo GetPermissionInfo(int level)
         {
             return level switch
             {

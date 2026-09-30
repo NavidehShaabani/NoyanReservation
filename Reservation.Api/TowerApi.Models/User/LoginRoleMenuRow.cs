@@ -30,6 +30,14 @@ namespace TowerApi.Models.User
 
         public int SortOrder { get; set; }
 
-        public byte PermissionLevel { get; set; }
+        public string? MenuDescriptionFa { get; set; }
+
+        public string? MenuDescriptionEn { get; set; }
+
+        public int MenuLevel { get; set; }
+
+        public int PermissionLevel { get; set; }
+
+        public string? HierarchyPath { get; set; }
     }
 }

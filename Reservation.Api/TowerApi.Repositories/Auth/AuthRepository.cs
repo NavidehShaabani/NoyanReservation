@@ -24,7 +24,8 @@ namespace TowerApi.Repositories.Auth
 
             try
             {
-                using var connection = _connectionFactory.CreateConnection();
+                using var connection =
+                    _connectionFactory.CreateConnection();
 
                 var parameters = new DynamicParameters();
 
@@ -51,96 +52,113 @@ namespace TowerApi.Repositories.Auth
                     size: 500,
                     direction: ParameterDirection.Output);
 
-
                 using var multi =
                     await connection.QueryMultipleAsync(
                         "dbo.UserLogin",
                         parameters,
                         commandType: CommandType.StoredProcedure);
 
-
                 // =====================================================
                 // Result Set 1 : User
                 // =====================================================
 
-                result.User = multi
-                    .Read<UserInfo>()
-                    .FirstOrDefault();
-
+                result.User =
+                    multi
+                        .Read<UserInfo>()
+                        .FirstOrDefault();
 
                 // =====================================================
                 // Result Set 2 : Roles + Menus
                 // =====================================================
 
-                var rows = multi
-                    .Read<LoginRoleMenuRow>()
-                    .ToList();
-
+                var rows =
+                    multi
+                        .Read<LoginRoleMenuRow>()
+                        .ToList();
 
                 // =====================================================
                 // Group Roles
                 // =====================================================
 
-                result.Roles = rows
-                    .GroupBy(x => new
-                    {
-                        x.RoleId,
-                        x.RoleCode,
-                        x.RoleNameFa,
-                        x.RoleNameEn,
-                        x.RoleDescriptionFa,
-                        x.RoleDescriptionEn
-                    })
-                    .Select(roleGroup => new UserRole
-                    {
-                        RoleId = roleGroup.Key.RoleId,
-
-                        RoleCode = roleGroup.Key.RoleCode ?? string.Empty,
-
-                        RoleName = new LocalizedText
+                result.Roles =
+                    rows
+                        .GroupBy(x => new
                         {
-                            Fa = roleGroup.Key.RoleNameFa ?? string.Empty,
-                            En = roleGroup.Key.RoleNameEn ?? string.Empty
-                        },
-
-                        RoleDescription = new LocalizedText
+                            x.RoleId,
+                            x.RoleCode,
+                            x.RoleNameFa,
+                            x.RoleNameEn,
+                            x.RoleDescriptionFa,
+                            x.RoleDescriptionEn
+                        })
+                        .Select(roleGroup =>
                         {
-                            Fa = roleGroup.Key.RoleDescriptionFa ?? string.Empty,
-                            En = roleGroup.Key.RoleDescriptionEn ?? string.Empty
-                        },
+                            var menus =
+                                roleGroup
+                                    .Where(x => x.MenuId > 0)
+                                    .Select(x => new UserMenu
+                                    {
+                                        MenuId = x.MenuId,
 
-                        Menus = roleGroup
-                            .Where(x => x.MenuId > 0)
-                            .Select(x => new UserMenu
+                                        RoleId = x.RoleId,
+
+                                        ParentId = x.ParentId,
+
+                                        Name = new LocalizedText
+                                        {
+                                            Fa = x.TitleFa ?? string.Empty,
+                                            En = x.TitleEn ?? string.Empty
+                                        },
+
+                                        MenuUrl = x.MenuUrl,
+
+                                        Icon = x.Icon,
+
+                                        SortOrder = x.SortOrder,
+
+                                        IsPermission =
+                                            x.PermissionLevel > 1,
+
+                                        Permission =
+                                            PermissionHelper.GetPermissionInfo(
+                                                x.PermissionLevel)
+                                    })
+                                    .ToList();
+
+                            return new UserRole
                             {
-                                MenuId = x.MenuId,
+                                RoleId = roleGroup.Key.RoleId,
 
-                                RoleId = x.RoleId,
+                                RoleCode =
+                                    roleGroup.Key.RoleCode
+                                    ?? string.Empty,
 
-                                ParentId = x.ParentId,
-
-                                Name = new LocalizedText
+                                RoleName = new LocalizedText
                                 {
-                                    Fa = x.TitleFa ?? string.Empty,
-                                    En = x.TitleEn ?? string.Empty
+                                    Fa =
+                                        roleGroup.Key.RoleNameFa
+                                        ?? string.Empty,
+
+                                    En =
+                                        roleGroup.Key.RoleNameEn
+                                        ?? string.Empty
                                 },
 
-                                MenuUrl = x.MenuUrl,
+                                RoleDescription = new LocalizedText
+                                {
+                                    Fa =
+                                        roleGroup.Key.RoleDescriptionFa
+                                        ?? string.Empty,
 
-                                Icon = x.Icon,
+                                    En =
+                                        roleGroup.Key.RoleDescriptionEn
+                                        ?? string.Empty
+                                },
 
-                                SortOrder = x.SortOrder,
-
-                                IsPermission = x.PermissionLevel > 1,
-
-                                Permission =
-                                    PermissionHelper.GetPermissionInfo(
-                                        x.PermissionLevel)
-                            })
-                            .ToList()
-                    })
-                    .ToList();
-
+                                Menus = BuildMenuTree(menus)
+                            };
+                        })
+                        .ToList();
 
                 // =====================================================
                 // Output Parameters
@@ -150,8 +168,8 @@ namespace TowerApi.Repositories.Auth
                     parameters.Get<int>("@ResultCode");
 
                 result.ResultMessage =
-                    parameters.Get<string>("@ResultMessage") ?? string.Empty;
-
+                    parameters.Get<string>("@ResultMessage")
+                    ?? string.Empty;
 
                 return result;
             }
@@ -160,8 +178,64 @@ namespace TowerApi.Repositories.Auth
                 return new LoginResult
                 {
                     ResultCode = 500,
-                    ResultMessage = $"خطا در انجام عملیات ورود: {ex.Message}"
+                    ResultMessage =
+                        $"خطا در انجام عملیات ورود: {ex.Message}"
                 };
+            }
+        }
+        private static List<UserMenu> BuildMenuTree(List<UserMenu> menus)
+        {
+            var lookup =
+                menus.ToDictionary(
+                    x => x.MenuId,
+                    x => x);
+
+            var roots = new List<UserMenu>();
+
+            foreach (var menu in menus)
+            {
+                // -----------------------------
+                // Root menu
+                // -----------------------------
+
+                if (!menu.ParentId.HasValue)
+                {
+                    roots.Add(menu);
+                    continue;
+                }
+
+                // -----------------------------
+                // Child menu
+                // -----------------------------
+
+                if (lookup.TryGetValue(
+                        menu.ParentId.Value,
+                        out var parent))
+                {
+                    parent.Children.Add(menu);
+                }
+            }
+
+            // -----------------------------
+            // Sort children recursively
+            // -----------------------------
+
+            SortMenuTree(roots);
+
+            return roots;
+        }
+        private static void SortMenuTree(List<UserMenu> menus)
+        {
+            menus.Sort(
+                (x, y) =>
+                    x.SortOrder.CompareTo(y.SortOrder));
+
+            foreach (var menu in menus)
+            {
+                if (menu.Children.Count > 0)
+                {
+                    SortMenuTree(menu.Children);
+                }
             }
         }
     }
