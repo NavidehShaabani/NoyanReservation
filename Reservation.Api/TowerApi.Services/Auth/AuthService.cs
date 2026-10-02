@@ -2,6 +2,7 @@
 using TowerApi.Models.Auth;
 using TowerApi.Models.User;
 using TowerApi.Repositories.Auth;
+using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.RefreshTokens;
 
 namespace TowerApi.Services.Auth
@@ -13,26 +14,44 @@ namespace TowerApi.Services.Auth
         private readonly IRefreshTokenRepository _refreshTokenRepository;
         private readonly RefreshTokenService _refreshTokenService;
         private readonly IConfiguration _configuration;
+        private readonly ILoginAttemptRepository _loginAttemptRepository;
 
         public AuthService( IAuthRepository authRepository,
                             IJwtService jwtService,
                             IRefreshTokenRepository refreshTokenRepository,
                             RefreshTokenService refreshTokenService,
-                            IConfiguration configuration)
+                            IConfiguration configuration,
+                            ILoginAttemptRepository loginAttemptRepository)
         {
             _authRepository = authRepository;
             _jwtService = jwtService;
             _refreshTokenRepository = refreshTokenRepository;
             _refreshTokenService = refreshTokenService;
             _configuration = configuration;
+            _loginAttemptRepository = loginAttemptRepository;
         }
 
-        public async Task<LoginResult> LoginAsync(
-    LoginRequest user,
-    string? deviceName,
-    string? userAgent,
-    string? ipAddress)
+        public async Task<LoginResult> LoginAsync(LoginRequest user,string? deviceName,string? userAgent,string? ipAddress)
         {
+            // 1. ساخت کلید ورود
+            var usernameKey = NormalizeUsernameKey(user.Username);
+
+            // 2. بررسی اینکه کاربر قفل نباشد
+            var attemptStatus =
+                await _loginAttemptRepository.CheckAsync(usernameKey);
+
+            if (!attemptStatus.CanAttempt)
+            {
+                return new LoginResult
+                {
+                    ResultCode = 429,
+                    ResultMessage =
+                        "تعداد تلاش‌های ورود بیش از حد مجاز است. لطفاً بعداً تلاش کنید.",
+                    User = null,
+                    Roles = new List<UserRole>()
+                };
+            }
+
             var result = await _authRepository.LoginAsync(user);
 
             if (result == null)
@@ -227,6 +246,10 @@ namespace TowerApi.Services.Auth
         public async Task RevokeAllSessionsAsync(long userId)
         {
             await _refreshTokenRepository.RevokeAllSessionsAsync(userId);
+        }
+        private static string NormalizeUsernameKey(string username)
+        {
+            return username.Trim().ToUpperInvariant();
         }
     }
 }

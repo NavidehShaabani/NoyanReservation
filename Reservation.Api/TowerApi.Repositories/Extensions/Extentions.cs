@@ -2,6 +2,7 @@
 using TowerApi.Repositories.Auth;
 using TowerApi.Repositories.Building;
 using TowerApi.Repositories.DataBase;
+using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.Organization;
 using TowerApi.Repositories.Profile;
 using TowerApi.Repositories.RefreshTokens;
@@ -15,11 +16,13 @@ namespace TowerApi.Repositories.Extensions
         {
             _services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
             _services.AddScoped<IAuthRepository, AuthRepository>();
+            _services.AddScoped<ILoginAttemptRepository,LoginAttemptRepository>();
             _services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
             _services.AddScoped<IOrganizationRepository,OrganizationRepository>();
             _services.AddScoped<IBuildingRepository,BuildingRepository>();
             _services.AddScoped<IUnitRepository,UnitRepository>();
             _services.AddScoped<IProfileRepository,ProfileRepository>();
+
 
             return _services;
         }
