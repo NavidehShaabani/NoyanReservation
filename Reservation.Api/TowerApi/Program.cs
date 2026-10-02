@@ -1,36 +1,12 @@
-﻿
-//// Add services to the container.
-//builder.Services.AddRazorPages();
-
-//var app = builder.Build();
-
-//// Configure the HTTP request pipeline.
-//if (!app.Environment.IsDevelopment())
-//{
-//    app.UseExceptionHandler("/Error");
-//    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-//    app.UseHsts();
-//}
-
-//app.UseHttpsRedirection();
-//app.UseStaticFiles();
-
-//app.UseRouting();
-
-//app.UseAuthorization();
-
-//app.MapRazorPages();
-
-//app.Run();
-
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
+using System.Threading.RateLimiting;
 using TowerApi.Repositories.Extensions;
 using TowerApi.Services;
 using TowerApi.Services.Auth;
 using TowerApi.Services.Extensions;
+using TowerApi.Services.RefreshTokenCleanup;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,18 +37,13 @@ builder.Services.AddCors(options =>
         policy
             //------nsh----برای تست موبایل فعلا این رو لازم دارم بعدا پاک می کنیم
             // .WithOrigins("http://10.208.8.91:3000")
-            .WithOrigins(
-    "http://10.208.8.91:3000",
-    "http://10.208.8.91:5295"
-)
-
-
-
+            .WithOrigins("http://10.208.8.91:3000",
+                        "http://10.208.8.91:5295")
             .AllowAnyHeader()
-            .AllowAnyMethod();
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
 });
-
 
 
 
@@ -149,6 +120,10 @@ builder.Services.AddSwaggerGen(options =>
 // ======================================================
 
 //builder.Services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
+// ======================================================
+// Services
+// ======================================================
+builder.Services.AddHostedService<RefreshTokenCleanupService>();
 
 
 // ======================================================
@@ -242,10 +217,108 @@ builder.Services.AddSession(options =>
 builder.Services.AddScoped<IJwtService, JwtService>();
 
 // ======================================================
+// Simple Rate Limiter for .NET 6
+// ======================================================
+
+var rateLimitStore = new System.Collections.Concurrent.ConcurrentDictionary<string, RateLimitInfo>();
+
+const int ipPermitLimit = 10;
+const int usernamePermitLimit = 5;
+
+var rateLimitWindow = TimeSpan.FromMinutes(1);
+
+// ======================================================
 // Build
 // ======================================================
 
 var app = builder.Build();
+
+// ======================================================
+// Rate Limiting - .NET 6
+// ======================================================
+
+app.Use(async (context, next) =>
+{
+    // فقط Login را Rate Limit می‌کنیم
+    //
+    // این مسیر را با مسیر واقعی Login خودت عوض کن.
+    // مثال:
+    // /api/auth/login
+    // /api/account/login
+    // /api/users/login
+
+    if (context.Request.Path.StartsWithSegments("/api/Auth/login"))
+    {
+        var ip =
+            context.Connection.RemoteIpAddress?.ToString()
+            ?? "unknown";
+
+        var username =
+            context.Request.Headers["X-Login-Username"]
+            .ToString()
+            .Trim()
+            .ToLowerInvariant();
+
+        if (string.IsNullOrWhiteSpace(username))
+        {
+            username = "unknown";
+        }
+
+
+        // ------------------------------------------
+        // IP Rate Limit
+        // حداکثر 10 درخواست در یک دقیقه
+        // ------------------------------------------
+
+        var ipKey = $"IP:{ip}";
+
+        if (!CheckRateLimit(
+                rateLimitStore,
+                ipKey,
+                ipPermitLimit,
+                rateLimitWindow))
+        {
+            context.Response.StatusCode =
+                StatusCodes.Status429TooManyRequests;
+
+            await context.Response.WriteAsJsonAsync(new
+            {
+                message = "تعداد درخواست‌های شما بیش از حد مجاز است. لطفاً یک دقیقه بعد دوباره تلاش کنید."
+            });
+
+            return;
+        }
+
+
+        // ------------------------------------------
+        // Username Rate Limit
+        // حداکثر 5 درخواست در یک دقیقه
+        // ------------------------------------------
+
+        var usernameKey = $"USERNAME:{username}";
+
+        if (!CheckRateLimit(
+                rateLimitStore,
+                usernameKey,
+                usernamePermitLimit,
+                rateLimitWindow))
+        {
+            context.Response.StatusCode =
+                StatusCodes.Status429TooManyRequests;
+
+            await context.Response.WriteAsJsonAsync(new
+            {
+                message = "تعداد تلاش برای این نام کاربری بیش از حد مجاز است. لطفاً یک دقیقه بعد دوباره تلاش کنید."
+            });
+
+            return;
+        }
+    }
+
+    await next();
+});
+
+
 //________nsh
 app.UseCors("AllowReact");
 
@@ -271,6 +344,7 @@ if (app.Environment.IsDevelopment())
 //app.UseHttpsRedirection();
 
 //app.UseSession();
+app.UseRouting();
 
 app.UseAuthentication();
 
@@ -288,3 +362,52 @@ app.MapControllers();
 // ======================================================
 
 app.Run();
+
+// ======================================================
+// Rate Limit Helper
+// ======================================================
+
+static bool CheckRateLimit(
+    System.Collections.Concurrent.ConcurrentDictionary<string, RateLimitInfo> store,
+    string key,
+    int permitLimit,
+    TimeSpan window)
+{
+    var now = DateTime.UtcNow;
+
+    var info = store.GetOrAdd(
+        key,
+        _ => new RateLimitInfo
+        {
+            Count = 0,
+            WindowStart = now
+        });
+
+    lock (info)
+    {
+        // اگر پنجره زمانی تمام شده، شمارنده را Reset کن
+        if (now - info.WindowStart >= window)
+        {
+            info.Count = 0;
+            info.WindowStart = now;
+        }
+
+        // اگر به سقف رسیده‌ایم
+        if (info.Count >= permitLimit)
+        {
+            return false;
+        }
+
+        info.Count++;
+
+        return true;
+    }
+}
+
+
+public class RateLimitInfo
+{
+    public int Count { get; set; }
+
+    public DateTime WindowStart { get; set; }
+}
