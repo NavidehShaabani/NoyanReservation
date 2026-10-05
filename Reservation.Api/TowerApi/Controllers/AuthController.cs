@@ -18,15 +18,18 @@ namespace TowerApi.Controllers
         private readonly IAuthService _authService;
         private readonly ILocalizationService _localization;
         private readonly IApiResponseFactory _responseFactory;
+        private readonly IWebHostEnvironment _environment;
 
         public AuthController(
             IAuthService authService,
             ILocalizationService localization,
-            IApiResponseFactory responseFactory)
+            IApiResponseFactory responseFactory, 
+            IWebHostEnvironment environment)
         {
             _authService = authService;
             _localization = localization;
             _responseFactory = responseFactory;
+            _environment = environment;
         }
 
         // =========================================
@@ -374,39 +377,44 @@ namespace TowerApi.Controllers
         // Cookie Helpers
         // =========================================
 
-        private void SetRefreshTokenCookie(
-            string token,
-            DateTime expiresAt)
+        private void SetRefreshTokenCookie(string token, DateTime expiresAt)
         {
+            var isDevelopment = _environment.IsDevelopment();
+
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = !isDevelopment,
+                SameSite = isDevelopment
+                    ? SameSiteMode.Lax
+                    : SameSiteMode.None,
+                Path = "/api/Auth",
+                Expires = expiresAt
+            };
+
             Response.Cookies.Append(
                 "refreshToken",
                 token,
-                new CookieOptions
-                {
-                    HttpOnly = true,
-                    Secure = true,
-                    SameSite = SameSiteMode.None,
-
-                    Expires = new DateTimeOffset(
-                        DateTime.SpecifyKind(
-                            expiresAt,
-                            DateTimeKind.Utc)),
-
-                    Path = "/api/Auth"
-                });
+                cookieOptions);
         }
 
         private void ClearRefreshTokenCookie()
         {
+            var isDevelopment = _environment.IsDevelopment();
+
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = !isDevelopment,
+                SameSite = isDevelopment
+                    ? SameSiteMode.Lax
+                    : SameSiteMode.None,
+                Path = "/api/Auth"
+            };
+
             Response.Cookies.Delete(
                 "refreshToken",
-                new CookieOptions
-                {
-                    HttpOnly = true,
-                    Secure = true,
-                    SameSite = SameSiteMode.None,
-                    Path = "/api/Auth"
-                });
+                cookieOptions);
         }
     }
 }

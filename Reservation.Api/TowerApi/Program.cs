@@ -319,9 +319,6 @@ app.Use(async (context, next) =>
 });
 
 
-//________nsh
-app.UseCors("AllowReact");
-
 // ======================================================
 // Swagger
 // ======================================================
@@ -345,6 +342,8 @@ if (app.Environment.IsDevelopment())
 
 //app.UseSession();
 app.UseRouting();
+
+app.UseCors("AllowReact");
 
 app.UseAuthentication();
 
