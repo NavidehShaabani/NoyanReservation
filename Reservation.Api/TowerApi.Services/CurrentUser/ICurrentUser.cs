@@ -21,5 +21,9 @@ namespace TowerApi.Services
         UserSession? User { get; }
 
         bool IsInRole(string roleCode);
+       
+        Guid? SessionId { get; }
+
+        long? ActiveRoleId { get; }
     }
 }

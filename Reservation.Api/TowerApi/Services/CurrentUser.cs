@@ -60,8 +60,53 @@ namespace TowerApi.Services
                     : null;
             }
         }
+        // ============================================================
+        // SessionId
+        // ============================================================
 
+        public Guid? SessionId
+        {
+            get
+            {
+                var value =
+                    _httpContextAccessor
+                        .HttpContext?
+                        .User
+                        .FindFirst(
+                            ClaimTypes.Sid)
+                        ?.Value;
 
+                return Guid.TryParse(
+                    value,
+                    out var result)
+                    ? result
+                    : null;
+            }
+        }
+
+        // ============================================================
+        // ActiveRoleId
+        // ============================================================
+
+        public long? ActiveRoleId
+        {
+            get
+            {
+                var value =
+                    _httpContextAccessor
+                        .HttpContext?
+                        .User
+                        .FindFirst(
+                            "active_role_id")
+                        ?.Value;
+
+                return long.TryParse(
+                    value,
+                    out var result)
+                    ? result
+                    : null;
+            }
+        }
         // ============================================================
         // Username
         // ============================================================

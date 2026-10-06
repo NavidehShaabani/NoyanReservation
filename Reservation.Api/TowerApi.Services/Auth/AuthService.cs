@@ -4,252 +4,684 @@ using TowerApi.Models.User;
 using TowerApi.Repositories.Auth;
 using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.RefreshTokens;
+using TowerApi.Repositories.SessionRepository;
 
 namespace TowerApi.Services.Auth
 {
     public class AuthService : IAuthService
     {
         private readonly IAuthRepository _authRepository;
-        private readonly IJwtService _jwtService;
-        private readonly IRefreshTokenRepository _refreshTokenRepository;
-        private readonly RefreshTokenService _refreshTokenService;
-        private readonly IConfiguration _configuration;
-        private readonly ILoginAttemptRepository _loginAttemptRepository;
 
-        public AuthService( IAuthRepository authRepository,
-                            IJwtService jwtService,
-                            IRefreshTokenRepository refreshTokenRepository,
-                            RefreshTokenService refreshTokenService,
-                            IConfiguration configuration,
-                            ILoginAttemptRepository loginAttemptRepository)
+        private readonly IUserSessionRepository _userSessionRepository;
+
+        private readonly IRefreshTokenRepository _refreshTokenRepository;
+
+        private readonly IJwtService _jwtService;
+
+        private readonly IConfiguration _configuration;
+
+        public AuthService(
+            IAuthRepository authRepository,
+            IUserSessionRepository userSessionRepository,
+            IRefreshTokenRepository refreshTokenRepository,
+            IJwtService jwtService,
+            IConfiguration configuration)
         {
             _authRepository = authRepository;
+
+            _userSessionRepository =
+                userSessionRepository;
+
+            _refreshTokenRepository =
+                refreshTokenRepository;
+
             _jwtService = jwtService;
-            _refreshTokenRepository = refreshTokenRepository;
-            _refreshTokenService = refreshTokenService;
+
             _configuration = configuration;
-            _loginAttemptRepository = loginAttemptRepository;
         }
 
-        public async Task<LoginResult> LoginAsync(LoginRequest user,string? deviceName,string? userAgent,string? ipAddress)
+
+        /* =====================================================
+           LOGIN
+           ===================================================== */
+
+        public async Task<LoginResult> LoginAsync(
+            LoginRequest request,
+            string? deviceName,
+            string? userAgent,
+            string? ipAddress)
         {
-            // 1. ساخت کلید ورود
-            var usernameKey = NormalizeUsernameKey(user.Username);
+            var result =
+                await _authRepository.LoginAsync(request);
 
-            // 2. بررسی اینکه کاربر قفل نباشد
-            var attemptStatus =
-                await _loginAttemptRepository.CheckAsync(usernameKey);
-
-            if (!attemptStatus.CanAttempt)
-            {
-                return new LoginResult
-                {
-                    ResultCode = 429,
-                    ResultMessage =
-                        "تعداد تلاش‌های ورود بیش از حد مجاز است. لطفاً بعداً تلاش کنید.",
-                    User = null,
-                    Roles = new List<UserRole>()
-                };
-            }
-
-            var result = await _authRepository.LoginAsync(user);
 
             if (result == null)
             {
                 return new LoginResult
                 {
                     ResultCode = 500,
-                    ResultMessage = "خطا در انجام عملیات ورود."
+                    ResultMessage =
+                        "خطا در انجام عملیات ورود."
                 };
             }
 
+
             if (result.ResultCode != 200)
+            {
                 return result;
+            }
+
 
             if (result.User == null)
             {
                 return new LoginResult
                 {
                     ResultCode = 500,
-                    ResultMessage = "اطلاعات کاربر پس از ورود دریافت نشد."
+                    ResultMessage =
+                        "اطلاعات کاربر پس از ورود دریافت نشد."
                 };
             }
 
-            if (result.Roles == null || !result.Roles.Any())
+
+            /*
+             * Session
+             */
+
+            var sessionId =
+                Guid.NewGuid();
+
+
+            /*
+             * فقط در صورتی که دقیقاً یک Role وجود دارد،
+             * همان Role به صورت خودکار فعال می‌شود.
+             */
+
+            long? activeRoleId = null;
+
+
+            if (result.Roles.Count == 1)
+            {
+                activeRoleId =
+                    result.Roles[0].RoleId;
+            }
+
+
+            var session =
+                new UserSessionEntity
+                {
+                    SessionId = sessionId,
+
+                    UserId =
+                        result.User.UserId,
+
+                    ActiveRoleId =
+                        activeRoleId,
+
+                    DeviceName =
+                        deviceName,
+
+                    UserAgent =
+                        userAgent,
+
+                    CreatedIp =
+                        ipAddress
+                };
+
+
+            var createdSession =
+                await _userSessionRepository
+                    .CreateAsync(session);
+
+
+            if (createdSession == null)
+            {
+                return new LoginResult
+                {
+                    ResultCode = 500,
+                    ResultMessage =
+                        "ایجاد نشست کاربر ناموفق بود."
+                };
+            }
+
+
+            /*
+             * JWT
+             */
+
+            var userSession =
+                BuildJwtUserSession(
+                    result.User,
+                    result.Roles,
+                    sessionId,
+                    activeRoleId);
+
+
+            result.AccessToken =
+                _jwtService.GenerateToken(
+                    userSession);
+
+
+            result.ExpiresIn =
+                _configuration.GetValue<int>(
+                    "Jwt:ExpireMinutes");
+
+
+            /*
+             * Refresh Token
+             */
+
+            var refreshToken =
+                RefreshTokenGenerator.Generate();
+
+
+            var refreshTokenHash =
+                RefreshTokenGenerator.Hash(
+                    refreshToken);
+
+
+            var refreshMinutes =
+                _configuration.GetValue<int>(
+                    "Jwt:RefreshTokenMinutes",
+                    60 * 24 * 30);
+
+
+            var refreshExpiresAt =
+                DateTime.UtcNow.AddMinutes(
+                    refreshMinutes);
+
+
+            await _refreshTokenRepository.SaveAsync(
+                result.User.UserId,
+                refreshTokenHash,
+                refreshExpiresAt,
+                DateTime.UtcNow,
+                sessionId,
+                deviceName,
+                userAgent,
+                ipAddress);
+
+
+            result.RefreshToken =
+                refreshToken;
+
+            result.RefreshTokenExpiresAt =
+                refreshExpiresAt;
+
+            result.SessionId =
+                sessionId;
+
+            result.ActiveRoleId =
+                activeRoleId;
+
+
+            return result;
+        }
+
+
+        /* =====================================================
+           REFRESH
+           ===================================================== */
+
+        public async Task<RefreshResult> RefreshAsync(
+            string refreshToken)
+        {
+            if (string.IsNullOrWhiteSpace(
+                refreshToken))
+            {
+                return new RefreshResult
+                {
+                    ResultCode = 401,
+                    ResultMessage =
+                        "Refresh Token الزامی است."
+                };
+            }
+
+
+            var oldHash =
+                RefreshTokenGenerator.Hash(
+                    refreshToken);
+
+
+            var oldToken =
+                await _refreshTokenRepository
+                    .GetActiveTokenAsync(
+                        oldHash);
+
+
+            if (oldToken == null)
+            {
+                return new RefreshResult
+                {
+                    ResultCode = 401,
+                    ResultMessage =
+                        "Refresh Token معتبر نیست."
+                };
+            }
+
+
+            var session =
+                await _userSessionRepository
+                    .GetByIdAsync(
+                        oldToken.SessionId);
+
+
+            if (session == null ||
+                session.RevokedAt.HasValue)
+            {
+                return new RefreshResult
+                {
+                    ResultCode = 401,
+                    ResultMessage =
+                        "نشست کاربر معتبر نیست."
+                };
+            }
+
+
+            /*
+             * گرفتن اطلاعات کامل User + Roles
+             */
+
+            var userResult =
+                await _authRepository
+                    .GetCurrentUserAsync(
+                        oldToken.UserId);
+
+
+            if (userResult == null ||
+                userResult.User == null)
+            {
+                return new RefreshResult
+                {
+                    ResultCode = 401,
+                    ResultMessage =
+                        "کاربر معتبر نیست."
+                };
+            }
+
+
+            /*
+             * اگر Role فعال قبلاً حذف/منقضی شده باشد،
+             * دیگر Role را داخل JWT قرار نمی‌دهیم.
+             */
+
+            long? activeRoleId =
+                session.ActiveRoleId;
+
+
+            if (activeRoleId.HasValue)
+            {
+                var validRole =
+                    userResult.Roles.Any(
+                        x =>
+                            x.RoleId ==
+                            activeRoleId.Value);
+
+
+                if (!validRole)
+                {
+                    activeRoleId = null;
+                }
+            }
+
+
+            /*
+             * Refresh Token جدید
+             */
+
+            var newRefreshToken =
+                RefreshTokenGenerator.Generate();
+
+
+            var newHash =
+                RefreshTokenGenerator.Hash(
+                    newRefreshToken);
+
+
+            var refreshMinutes =
+                _configuration.GetValue<int>(
+                    "Jwt:RefreshTokenMinutes",
+                    60 * 24 * 30);
+
+
+            var newExpiresAt =
+                DateTime.UtcNow.AddMinutes(
+                    refreshMinutes);
+
+
+            var rotated =
+                await _refreshTokenRepository
+                    .RotateAsync(
+                        oldHash,
+                        newHash,
+                        newExpiresAt,
+                        DateTime.UtcNow);
+
+
+            if (!rotated)
+            {
+                return new RefreshResult
+                {
+                    ResultCode = 401,
+                    ResultMessage =
+                        "Refresh Token قابل استفاده نیست."
+                };
+            }
+
+
+            /*
+             * JWT جدید
+             */
+
+            var jwtUser =
+                BuildJwtUserSession(
+                    userResult.User,
+                    userResult.Roles,
+                    session.SessionId,
+                    activeRoleId);
+
+
+            var accessToken =
+                _jwtService.GenerateToken(
+                    jwtUser);
+
+
+            var expiresIn =
+                _configuration.GetValue<int>(
+                    "Jwt:ExpireMinutes");
+
+
+            await _userSessionRepository
+                .UpdateLastSeenAsync(
+                    session.SessionId);
+
+
+            return new RefreshResult
+            {
+                ResultCode = 200,
+
+                ResultMessage =
+                    "Refresh موفق بود.",
+
+                AccessToken =
+                    accessToken,
+
+                ExpiresIn =
+                    expiresIn,
+
+                RefreshToken =
+                    newRefreshToken,
+
+                RefreshTokenExpiresAt =
+                    newExpiresAt,
+
+                SessionId =
+                    session.SessionId,
+
+                ActiveRoleId =
+                    activeRoleId
+            };
+        }
+
+
+        /* =====================================================
+           SELECT ROLE
+           ===================================================== */
+
+        public async Task<LoginResult> SelectRoleAsync(
+            long userId,
+            Guid sessionId,
+            long roleId)
+        {
+            var changed =
+                await _userSessionRepository
+                    .SetActiveRoleAsync(
+                        sessionId,
+                        userId,
+                        roleId);
+
+
+            if (!changed)
             {
                 return new LoginResult
                 {
                     ResultCode = 403,
-                    ResultMessage = "کاربر فاقد نقش فعال است."
+                    ResultMessage =
+                        "کاربر به این نقش دسترسی ندارد."
                 };
             }
 
-            var userSession = new UserSession
+
+            var result =
+                await _authRepository
+                    .GetCurrentUserAsync(
+                        userId);
+
+
+            if (result == null ||
+                result.User == null)
             {
-                UserId = result.User.UserId,
-                Username = result.User.Username,
-                FirstName = result.User.FirstName,
-                LastName = result.User.LastName,
-                FullName = result.User.FullName,
-                Email = result.User.Email,
-                Mobile = result.User.Mobile,
-                NationalId = result.User.NationalId,
-                Gender = result.User.Gender,
-                BirthDate = result.User.BirthDate,
-                PhoneVerified = result.User.PhoneVerified,
-                LastLoginAt = result.User.LastLoginAt,
-                CreatedAt = result.User.CreatedAt,
-                Avatar = null,
-                Roles = result.Roles
-            };
+                return new LoginResult
+                {
+                    ResultCode = 401,
+                    ResultMessage =
+                        "کاربر معتبر نیست."
+                };
+            }
 
-            var accessToken = _jwtService.GenerateToken(userSession);
 
-            var refreshDays =
-                _configuration.GetValue<int>("Jwt:RefreshTokenDays", 30);
+            var roleExists =
+                result.Roles.Any(
+                    x => x.RoleId == roleId);
 
-            var refreshToken = _refreshTokenService.GenerateToken();
-            var refreshTokenHash = _refreshTokenService.HashToken(refreshToken);
-            var expiresAt = DateTime.UtcNow.AddDays(refreshDays);
 
-            // هر Login یک SessionId مستقل دارد.
-            var sessionId = Guid.NewGuid();
+            if (!roleExists)
+            {
+                return new LoginResult
+                {
+                    ResultCode = 403,
+                    ResultMessage =
+                        "نقش انتخاب‌شده معتبر نیست."
+                };
+            }
 
-            await _refreshTokenRepository.SaveAsync(
-                result.User.UserId,
-                sessionId,
-                refreshTokenHash,
-                expiresAt,
-                deviceName,
-                userAgent,
-                ipAddress
-            );
 
-            result.AccessToken = accessToken;
+            var userSession =
+                BuildJwtUserSession(
+                    result.User,
+                    result.Roles,
+                    sessionId,
+                    roleId);
+
+
+            result.AccessToken =
+                _jwtService.GenerateToken(
+                    userSession);
+
+
             result.ExpiresIn =
-                _configuration.GetValue<int>("Jwt:ExpireMinutes");
+                _configuration.GetValue<int>(
+                    "Jwt:ExpireMinutes");
 
-            result.RefreshToken = refreshToken;
-            result.RefreshTokenExpiresAt = expiresAt;
+
+            result.SessionId =
+                sessionId;
+
+            result.ActiveRoleId =
+                roleId;
+
 
             return result;
         }
-        public async Task<LoginResult> RefreshAsync(string refreshToken)
+
+
+        /* =====================================================
+           ME
+           ===================================================== */
+
+        public async Task<LoginResult?> GetCurrentUserAsync(
+            long userId,
+            Guid sessionId)
         {
-            if (string.IsNullOrWhiteSpace(refreshToken))
+            var session =
+                await _userSessionRepository
+                    .GetByIdAsync(
+                        sessionId);
+
+
+            if (session == null ||
+                session.UserId != userId)
             {
-                return new LoginResult
-                {
-                    ResultCode = 401,
-                    ResultMessage = "Refresh Token معتبر نیست."
-                };
+                return null;
             }
 
-            var oldHash = _refreshTokenService.HashToken(refreshToken);
 
-            var storedToken =
-                await _refreshTokenRepository.GetActiveTokenAsync(oldHash);
+            var result =
+                await _authRepository
+                    .GetCurrentUserAsync(
+                        userId);
 
-            if (storedToken == null)
+
+            if (result == null ||
+                result.User == null)
             {
-                return new LoginResult
-                {
-                    ResultCode = 401,
-                    ResultMessage = "Refresh Token منقضی یا باطل شده است."
-                };
+                return null;
             }
 
-            var userResult =
-                await _authRepository.GetUserForRefreshAsync(storedToken.UserId);
 
-            if (userResult == null ||
-                userResult.ResultCode != 200 ||
-                userResult.User == null)
-            {
-                await _refreshTokenRepository.RevokeAsync(oldHash);
+            result.SessionId =
+                sessionId;
 
-                return new LoginResult
-                {
-                    ResultCode = 401,
-                    ResultMessage = "کاربر معتبر نیست."
-                };
-            }
+            result.ActiveRoleId =
+                session.ActiveRoleId;
 
-            var userSession = new UserSession
-            {
-                UserId = userResult.User.UserId,
-                Username = userResult.User.Username,
-                FirstName = userResult.User.FirstName,
-                LastName = userResult.User.LastName,
-                FullName = userResult.User.FullName,
-                Email = userResult.User.Email,
-                Mobile = userResult.User.Mobile,
-                NationalId = userResult.User.NationalId,
-                Gender = userResult.User.Gender,
-                BirthDate = userResult.User.BirthDate,
-                PhoneVerified = userResult.User.PhoneVerified,
-                LastLoginAt = userResult.User.LastLoginAt,
-                CreatedAt = userResult.User.CreatedAt,
-                Roles = userResult.Roles
-            };
 
-            var accessToken = _jwtService.GenerateToken(userSession);
-
-            var refreshDays =
-                _configuration.GetValue<int>("Jwt:RefreshTokenDays", 30);
-
-            var newRefreshToken = _refreshTokenService.GenerateToken();
-            var newHash = _refreshTokenService.HashToken(newRefreshToken);
-            var newExpiresAt = DateTime.UtcNow.AddDays(refreshDays);
-
-            var rotated = await _refreshTokenRepository.RotateAsync(
-                storedToken.Id,
-                newHash,
-                newExpiresAt);
-
-            if (!rotated)
-            {
-                return new LoginResult
-                {
-                    ResultCode = 401,
-                    ResultMessage = "Refresh Token قبلاً استفاده شده است."
-                };
-            }
-
-            return new LoginResult
-            {
-                ResultCode = 200,
-                ResultMessage = "توکن با موفقیت تمدید شد.",
-                User = userResult.User,
-                Roles = userResult.Roles,
-                AccessToken = accessToken,
-                ExpiresIn = _configuration.GetValue<int>("Jwt:ExpireMinutes"),
-                RefreshToken = newRefreshToken,
-                RefreshTokenExpiresAt = newExpiresAt
-            };
+            return result;
         }
 
-        public async Task RevokeRefreshTokenAsync(string refreshToken)
+
+        /* =====================================================
+           LOGOUT CURRENT SESSION
+           ===================================================== */
+
+        public async Task RevokeSessionAsync(
+            Guid sessionId)
         {
-            if (string.IsNullOrWhiteSpace(refreshToken))
+            await _userSessionRepository
+                .RevokeAsync(
+                    sessionId);
+        }
+
+
+        /* =====================================================
+           LOGOUT ALL
+           ===================================================== */
+
+        public async Task RevokeAllSessionsAsync(
+            long userId)
+        {
+            await _userSessionRepository
+                .RevokeAllAsync(
+                    userId);
+        }
+
+
+        /* =====================================================
+           LEGACY REFRESH REVOKE
+           ===================================================== */
+
+        public async Task RevokeRefreshTokenAsync(
+            string refreshToken)
+        {
+            if (string.IsNullOrWhiteSpace(
+                refreshToken))
+            {
                 return;
+            }
 
-            var hash = _refreshTokenService.HashToken(refreshToken);
 
-            await _refreshTokenRepository.RevokeAsync(hash);
+            var hash =
+                RefreshTokenGenerator.Hash(
+                    refreshToken);
+
+
+            var token =
+                await _refreshTokenRepository
+                    .GetActiveTokenAsync(
+                        hash);
+
+
+            if (token == null)
+            {
+                return;
+            }
+
+
+            await _userSessionRepository
+                .RevokeAsync(
+                    token.SessionId);
         }
 
-        public async Task<LoginResult?> GetCurrentUserAsync(long userId)
+
+        /* =====================================================
+           JWT USER
+           ===================================================== */
+
+        private static UserSession BuildJwtUserSession(
+            UserInfo user,
+            List<UserRole> roles,
+            Guid sessionId,
+            long? activeRoleId)
         {
-            return await _authRepository.GetUserForRefreshAsync(userId);
-        }
-        public async Task RevokeAllSessionsAsync(long userId)
-        {
-            await _refreshTokenRepository.RevokeAllSessionsAsync(userId);
-        }
-        private static string NormalizeUsernameKey(string username)
-        {
-            return username.Trim().ToUpperInvariant();
+            return new UserSession
+            {
+                SessionId =
+                    sessionId,
+
+                UserId =
+                    user.UserId,
+
+                ActiveRoleId =
+                    activeRoleId,
+
+                Username =
+                    user.Username ?? string.Empty,
+
+                FirstName =
+                    user.FirstName,
+
+                LastName =
+                    user.LastName,
+
+                FullName =
+                    user.FullName,
+
+                Email =
+                    user.Email,
+
+                Mobile =
+                    user.Mobile,
+
+                NationalId =
+                    user.NationalId,
+
+                Gender =
+                    user.Gender,
+
+                BirthDate =
+                    user.BirthDate,
+
+                PhoneVerified =
+                    user.PhoneVerified,
+
+                LastLoginAt =
+                    user.LastLoginAt,
+
+                CreatedAt =
+                    user.CreatedAt,
+
+                Roles =
+                    roles
+            };
         }
     }
 }

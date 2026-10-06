@@ -54,7 +54,7 @@ namespace TowerApi.Repositories.Auth
 
                 using var multi =
                     await connection.QueryMultipleAsync(
-                        "dbo.UserLogin",
+                        "dbo.App_UserLogin",
                         parameters,
                         commandType: CommandType.StoredProcedure);
 
@@ -190,7 +190,7 @@ namespace TowerApi.Repositories.Auth
                 using var connection = _connectionFactory.CreateConnection();
 
                 using var multi = await connection.QueryMultipleAsync(
-                    "dbo.UserGetForRefresh",
+                    "dbo.AppUserGetForRefresh",
                     new { UserId = userId },
                     commandType: CommandType.StoredProcedure
                 );
@@ -286,6 +286,150 @@ namespace TowerApi.Repositories.Auth
                     ResultMessage = "خطا در دریافت اطلاعات کاربر."
                 };
             }
+        }
+        public async Task<LoginResult?> GetCurrentUserAsync(
+    long userId)
+        {
+            using var connection =
+                _connectionFactory.CreateConnection();
+
+            var parameters =
+                new DynamicParameters();
+
+            parameters.Add(
+                "@UserId",
+                userId,
+                DbType.Int64);
+
+            using var multi =
+                await connection.QueryMultipleAsync(
+                    "dbo.App_UserGetForSession",
+                    parameters,
+                    commandType: CommandType.StoredProcedure);
+
+
+            var result =
+                new LoginResult();
+
+
+            result.User =
+                multi.Read<UserInfo>()
+                    .FirstOrDefault();
+
+
+            var rows =
+                multi.Read<LoginRoleMenuRow>()
+                    .ToList();
+
+
+            result.Roles =
+                rows
+                    .GroupBy(x => new
+                    {
+                        x.RoleId,
+                        x.RoleCode,
+                        x.RoleNameFa,
+                        x.RoleNameEn,
+                        x.RoleDescriptionFa,
+                        x.RoleDescriptionEn
+                    })
+                    .Select(roleGroup =>
+                    {
+                        var menus =
+                            roleGroup
+                                .Where(x => x.MenuId > 0)
+                                .Select(x =>
+                                    new UserMenu
+                                    {
+                                        MenuId =
+                                            x.MenuId,
+
+                                        RoleId =
+                                            x.RoleId,
+
+                                        ParentId =
+                                            x.ParentId,
+
+                                        Name =
+                                            new LocalizedText
+                                            {
+                                                Fa =
+                                                    x.TitleFa ??
+                                                    string.Empty,
+
+                                                En =
+                                                    x.TitleEn ??
+                                                    string.Empty
+                                            },
+
+                                        MenuUrl =
+                                            x.MenuUrl,
+
+                                        Icon =
+                                            x.Icon,
+
+                                        SortOrder =
+                                            x.SortOrder,
+
+                                        IsPermission =
+                                            x.PermissionLevel > 1,
+
+                                        Permission =
+                                            PermissionHelper
+                                                .GetPermissionInfo(
+                                                    x.PermissionLevel)
+                                    })
+                                .ToList();
+
+
+                        return new UserRole
+                        {
+                            RoleId =
+                                roleGroup.Key.RoleId,
+
+                            RoleCode =
+                                roleGroup.Key.RoleCode ??
+                                string.Empty,
+
+                            RoleName =
+                                new LocalizedText
+                                {
+                                    Fa =
+                                        roleGroup.Key.RoleNameFa ??
+                                        string.Empty,
+
+                                    En =
+                                        roleGroup.Key.RoleNameEn ??
+                                        string.Empty
+                                },
+
+                            RoleDescription =
+                                new LocalizedText
+                                {
+                                    Fa =
+                                        roleGroup.Key.RoleDescriptionFa ??
+                                        string.Empty,
+
+                                    En =
+                                        roleGroup.Key.RoleDescriptionEn ??
+                                        string.Empty
+                                },
+
+                            Menus =
+                                BuildMenuTree(
+                                    menus)
+                        };
+                    })
+                    .ToList();
+
+
+            result.ResultCode = 200;
+
+            result.ResultMessage =
+                "اطلاعات کاربر دریافت شد.";
+
+
+            return result;
         }
         private static List<UserMenu> BuildMenuTree(List<UserMenu> menus)
         {

@@ -6,6 +6,7 @@ using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.Organization;
 using TowerApi.Repositories.Profile;
 using TowerApi.Repositories.RefreshTokens;
+using TowerApi.Repositories.SessionRepository;
 using TowerApi.Repositories.Unit;
 
 namespace TowerApi.Repositories.Extensions
@@ -17,6 +18,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
             _services.AddScoped<IAuthRepository, AuthRepository>();
             _services.AddScoped<ILoginAttemptRepository,LoginAttemptRepository>();
+            _services.AddScoped<IUserSessionRepository, UserSessionRepository>();
             _services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
             _services.AddScoped<IOrganizationRepository,OrganizationRepository>();
             _services.AddScoped<IBuildingRepository,BuildingRepository>();

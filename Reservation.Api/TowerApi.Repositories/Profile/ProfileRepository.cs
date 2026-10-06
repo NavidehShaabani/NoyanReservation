@@ -150,7 +150,7 @@ namespace TowerApi.Repositories.Profile
 
             using var multi =
                 await connection.QueryMultipleAsync(
-                    "dbo.UsersCompleteProfile",
+                    "dbo.App_UsersCompleteProfile",
                     parameters,
                     commandType: CommandType.StoredProcedure);
 
@@ -225,7 +225,7 @@ namespace TowerApi.Repositories.Profile
 
             var data =
                 await connection.QueryFirstOrDefaultAsync<UserProfileResponse>(
-                    "dbo.UserProfilesGet",
+                    "dbo.App_UserProfilesGet",
                     parameters,
                     commandType: CommandType.StoredProcedure);
 

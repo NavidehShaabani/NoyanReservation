@@ -21,7 +21,7 @@ namespace TowerApi.Repositories.LoginAttempt
             using var connection = _connectionFactory.CreateConnection();
 
             return await connection.QuerySingleAsync<LoginAttemptStatus>(
-                "dbo.LoginAttemptCheck",
+                "dbo.App_LoginAttemptCheck",
                 new
                 {
                     UsernameKey = usernameKey,
@@ -37,7 +37,7 @@ namespace TowerApi.Repositories.LoginAttempt
             using var connection = _connectionFactory.CreateConnection();
 
             await connection.QuerySingleAsync(
-                "dbo.LoginAttemptFail",
+                "dbo.App_LoginAttemptFail",
                 new
                 {
                     UsernameKey = usernameKey,
@@ -53,7 +53,7 @@ namespace TowerApi.Repositories.LoginAttempt
             using var connection = _connectionFactory.CreateConnection();
 
             await connection.ExecuteAsync(
-                "dbo.LoginAttemptReset",
+                "dbo.App_LoginAttemptReset",
                 new
                 {
                     UsernameKey = usernameKey

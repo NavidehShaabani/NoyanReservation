@@ -11,27 +11,33 @@ namespace TowerApi.Repositories.RefreshTokens
     {
         Task SaveAsync(
         long userId,
-        Guid sessionId,
         string tokenHash,
         DateTime expiresAt,
+        DateTime createdAt,
+        Guid sessionId,
         string? deviceName,
         string? userAgent,
         string? createdIp);
 
-        Task<RefreshToken?> GetActiveTokenAsync(string tokenHash);
+        Task<RefreshToken?> GetActiveTokenAsync(
+            string tokenHash);
 
         Task<bool> RotateAsync(
-            long oldTokenId,
+            string oldTokenHash,
             string newTokenHash,
-            DateTime newExpiresAt);
+            DateTime newExpiresAt,
+            DateTime newCreatedAt);
 
-        Task RevokeAsync(string tokenHash);
+        Task RevokeAsync(
+            string tokenHash);
 
-        Task RevokeSessionAsync(Guid sessionId);
+        Task RevokeSessionAsync(
+            Guid sessionId);
 
-        Task RevokeAllSessionsAsync(long userId);
+        Task RevokeAllSessionsAsync(
+            long userId);
 
-        Task<int> CleanupExpiredAsync();
+        Task CleanupExpiredAsync();
 
         Task<IReadOnlyList<RefreshToken>> GetActiveSessionsAsync(long userId);
     }

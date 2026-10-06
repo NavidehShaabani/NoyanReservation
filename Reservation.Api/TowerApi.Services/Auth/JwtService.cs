@@ -11,41 +11,52 @@ namespace TowerApi.Services.Auth
     {
         private readonly IConfiguration _configuration;
 
-        public JwtService(IConfiguration configuration)
+        public JwtService(
+            IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
-        public string GenerateToken(UserSession user)
+
+        public string GenerateToken(
+            UserSession user)
         {
-            var key = _configuration["Jwt:Key"];
+            var key =
+                _configuration["Jwt:Key"];
 
             if (string.IsNullOrWhiteSpace(key))
+            {
                 throw new InvalidOperationException(
                     "Jwt:Key در تنظیمات پیدا نشد.");
+            }
 
-            var issuer = _configuration["Jwt:Issuer"];
-            var audience = _configuration["Jwt:Audience"];
+            var issuer =
+                _configuration["Jwt:Issuer"];
+
+            var audience =
+                _configuration["Jwt:Audience"];
 
             var expireMinutes =
-                _configuration.GetValue<int>("Jwt:ExpireMinutes");
+                _configuration.GetValue<int>(
+                    "Jwt:ExpireMinutes");
 
 
-            var claims = new List<Claim>
-            {
+            var claims =
+                new List<Claim>
+                {
                 new Claim(
                     ClaimTypes.NameIdentifier,
                     user.UserId.ToString()),
 
                 new Claim(
                     ClaimTypes.Name,
-                    user.Username)
-            };
+                    user.Username),
 
+                new Claim(
+                    ClaimTypes.Sid,
+                    user.SessionId.ToString())
+                };
 
-            // =====================================================
-            // User Information
-            // =====================================================
 
             if (!string.IsNullOrWhiteSpace(user.FirstName))
             {
@@ -54,6 +65,7 @@ namespace TowerApi.Services.Auth
                         "FirstName",
                         user.FirstName));
             }
+
 
             if (!string.IsNullOrWhiteSpace(user.LastName))
             {
@@ -64,33 +76,38 @@ namespace TowerApi.Services.Auth
             }
 
 
-            // =====================================================
-            // Roles
-            // =====================================================
+            /*
+             * فقط Role فعال Session
+             */
 
-            if (user.Roles != null)
+            if (user.ActiveRoleId.HasValue)
             {
-                foreach (var role in user.Roles)
+                var activeRole =
+                    user.Roles.FirstOrDefault(
+                        x => x.RoleId == user.ActiveRoleId.Value);
+
+                if (activeRole != null &&
+                    !string.IsNullOrWhiteSpace(
+                        activeRole.RoleCode))
                 {
-                    // RoleCode برای Authorization
-                    if (!string.IsNullOrWhiteSpace(role.RoleCode))
-                    {
-                        claims.Add(
-                            new Claim(
-                                ClaimTypes.Role,
-                                role.RoleCode));
-                    }
+                    claims.Add(
+                        new Claim(
+                            ClaimTypes.Role,
+                            activeRole.RoleCode));
                 }
+
+
+                claims.Add(
+                    new Claim(
+                        "active_role_id",
+                        user.ActiveRoleId.Value.ToString()));
             }
 
-
-            // =====================================================
-            // JWT
-            // =====================================================
 
             var securityKey =
                 new SymmetricSecurityKey(
                     Encoding.UTF8.GetBytes(key));
+
 
             var credentials =
                 new SigningCredentials(
@@ -98,12 +115,14 @@ namespace TowerApi.Services.Auth
                     SecurityAlgorithms.HmacSha256);
 
 
-            var token = new JwtSecurityToken(
-                issuer: issuer,
-                audience: audience,
-                claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(expireMinutes),
-                signingCredentials: credentials);
+            var token =
+                new JwtSecurityToken(
+                    issuer: issuer,
+                    audience: audience,
+                    claims: claims,
+                    expires: DateTime.UtcNow.AddMinutes(
+                        expireMinutes),
+                    signingCredentials: credentials);
 
 
             return new JwtSecurityTokenHandler()
