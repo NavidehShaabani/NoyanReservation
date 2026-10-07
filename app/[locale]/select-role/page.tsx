@@ -10,7 +10,13 @@ export default function SelectRole() {
   const router = useRouter();
   const t = useTranslations("select-role");
   return (
-    <div className="   md:bg-backgroundlogin  flex justify-center items-center">
+    <div
+      className="  
+    min-h-screen 
+    flex 
+    justify-center 
+    items-center"
+    >
       <div
         className="   bg-card
   w-full
