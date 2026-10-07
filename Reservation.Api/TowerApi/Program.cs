@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using System.Threading.RateLimiting;
 using TowerApi.Repositories.Extensions;
 using TowerApi.Services;
 using TowerApi.Services.Auth;
@@ -29,7 +28,10 @@ if (string.IsNullOrWhiteSpace(connectionString))
 // ======================================================
 
 builder.Services.AddControllers();
-//________nsh
+
+//=====================================================
+//   CORS
+//=====================================================
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", policy =>
@@ -182,7 +184,15 @@ builder.Services.AddAuthentication(
 
                 ValidateLifetime = true,
 
-                ClockSkew = TimeSpan.FromMinutes(1)
+                ClockSkew = TimeSpan.FromMinutes(1),
+
+                NameClaimType =
+                    System.Security.Claims
+                        .ClaimTypes.Name,
+
+                RoleClaimType =
+                    System.Security.Claims
+                        .ClaimTypes.Role
             };
     });
 

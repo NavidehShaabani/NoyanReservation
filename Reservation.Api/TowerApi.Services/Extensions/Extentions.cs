@@ -19,7 +19,8 @@ namespace TowerApi.Services.Extensions
         public static IServiceCollection ServiceExtention(this IServiceCollection _services)
         {
             _services.AddScoped<IAuthService, AuthService>();
-            _services.AddScoped<RefreshTokenService>();
+            //_services.AddScoped<RefreshTokenService>();
+            _services.AddScoped<IJwtService, JwtService>();
             _services.AddScoped<IProfileService,ProfileService>();
             _services.AddScoped<IBuildingService, BuildingService>();
             _services.AddScoped<IUnitService, UnitService>();

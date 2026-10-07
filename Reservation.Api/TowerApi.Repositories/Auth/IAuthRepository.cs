@@ -6,6 +6,7 @@ namespace TowerApi.Repositories.Auth
     {
         Task<LoginResult> LoginAsync(LoginRequest user);
         Task<LoginResult?> GetUserForRefreshAsync(long userId);
+        Task<LoginResult?> GetCurrentUserAsync(long userId);
     }
 
 }

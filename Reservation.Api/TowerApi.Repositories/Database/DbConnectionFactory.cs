@@ -15,8 +15,6 @@ namespace TowerApi.Repositories.DataBase
 
         public IDbConnection CreateConnection()
         {
-            try
-            {
                 var connectionString = _configuration.GetConnectionString("DefaultConnection");
                 var connection = new SqlConnection(
                     string.IsNullOrWhiteSpace(connectionString) ?
@@ -26,11 +24,6 @@ namespace TowerApi.Repositories.DataBase
                 connection.Open();
 
                 return connection;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
         }
     }
 }

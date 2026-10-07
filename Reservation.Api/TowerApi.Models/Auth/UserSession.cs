@@ -4,7 +4,11 @@ namespace TowerApi.Models.Auth
 {
     public class UserSession
     {
+        public Guid SessionId { get; set; }
+
         public long UserId { get; set; }
+
+        public long? ActiveRoleId { get; set; }
 
         public string Username { get; set; } = string.Empty;
 

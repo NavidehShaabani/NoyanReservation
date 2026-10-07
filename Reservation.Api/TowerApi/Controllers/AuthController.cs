@@ -16,33 +16,35 @@ namespace TowerApi.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
+
         private readonly ILocalizationService _localization;
+
         private readonly IApiResponseFactory _responseFactory;
-        private readonly IWebHostEnvironment _environment;
+
 
         public AuthController(
             IAuthService authService,
             ILocalizationService localization,
-            IApiResponseFactory responseFactory, 
-            IWebHostEnvironment environment)
+            IApiResponseFactory responseFactory)
         {
             _authService = authService;
+
             _localization = localization;
+
             _responseFactory = responseFactory;
-            _environment = environment;
         }
 
-        // =========================================
-        // Login
-        // POST: /api/Auth/login
-        // =========================================
+
+        /* =====================================================
+           LOGIN
+           ===================================================== */
 
         [HttpPost("login")]
         [AllowAnonymous]
-        
         public async Task<IActionResult> Login(
             [FromBody] LoginRequest request,
-            [FromHeader(Name = "X-Device-Name")] string? deviceName)
+            [FromHeader(Name = "X-Device-Name")]
+        string? deviceName)
         {
             if (request == null)
             {
@@ -52,7 +54,9 @@ namespace TowerApi.Controllers
                         "Auth.LoginInformationRequired"));
             }
 
-            if (string.IsNullOrWhiteSpace(request.Username))
+
+            if (string.IsNullOrWhiteSpace(
+                request.Username))
             {
                 return BadRequest(
                     _responseFactory.Error(
@@ -60,7 +64,9 @@ namespace TowerApi.Controllers
                         "Auth.UsernameRequired"));
             }
 
-            if (string.IsNullOrWhiteSpace(request.Password))
+
+            if (string.IsNullOrWhiteSpace(
+                request.Password))
             {
                 return BadRequest(
                     _responseFactory.Error(
@@ -68,100 +74,124 @@ namespace TowerApi.Controllers
                         "Auth.PasswordRequired"));
             }
 
+
+            var userAgent =
+                Request.Headers.UserAgent.ToString();
+
+            var ipAddress =
+                HttpContext.Connection
+                    .RemoteIpAddress?
+                    .ToString();
+
+
             try
             {
-                var userAgent = Request.Headers.UserAgent.ToString();
+                var result =
+                    await _authService.LoginAsync(
+                        request,
+                        deviceName,
+                        userAgent,
+                        ipAddress);
 
-                var ipAddress =
-                    HttpContext.Connection.RemoteIpAddress?.ToString();
 
-                var result = await _authService.LoginAsync(
-                    request,
-                    deviceName,
-                    userAgent,
-                    ipAddress);
-
-                if (result == null || result.ResultCode != 200)
+                if (result.ResultCode != 200)
                 {
-                    var errorCode = result?.ResultCode ?? 500;
-
                     return StatusCode(
-                        ApiResponseMessageMapper.GetHttpStatusCode(
-                            errorCode),
+                        ApiResponseMessageMapper
+                            .GetHttpStatusCode(
+                                result.ResultCode),
+
                         _responseFactory.Error(
-                            errorCode,
-                            result?.ResultMessage
-                                ?? "Auth.LoginFailed"));
+                            result.ResultCode,
+
+                            ApiResponseMessageMapper
+                                .GetMessageKey(
+                                    result.ResultCode)));
                 }
+
 
                 if (result.User == null)
                 {
                     return StatusCode(
-                        StatusCodes.Status500InternalServerError,
+                        500,
                         _responseFactory.Error(
                             500,
                             "Auth.UserNotFoundAfterLogin"));
                 }
 
-                if (string.IsNullOrWhiteSpace(result.AccessToken))
-                {
-                    return StatusCode(
-                        StatusCodes.Status500InternalServerError,
-                        _responseFactory.Error(
-                            500,
-                            "Auth.LoginFailed"));
-                }
 
-                if (string.IsNullOrWhiteSpace(result.RefreshToken) ||
+                if (string.IsNullOrWhiteSpace(
+                    result.RefreshToken) ||
                     result.RefreshTokenExpiresAt == null)
                 {
                     return StatusCode(
-                        StatusCodes.Status500InternalServerError,
+                        500,
                         _responseFactory.Error(
                             500,
                             "Auth.LoginFailed"));
                 }
 
-                // Refresh Token فقط در کوکی قرار می‌گیرد.
+
                 SetRefreshTokenCookie(
                     result.RefreshToken,
                     result.RefreshTokenExpiresAt.Value);
 
-                // توکن خام در پاسخ JSON قرار نمی‌گیرد.
+
                 return Ok(new
                 {
                     success = true,
-                    code = 200,
-                    messageKey = "Auth.LoginSuccessfully",
-                    message = _localization.Get(
-                        "Auth.LoginSuccessfully"),
 
-                    accessToken = result.AccessToken,
-                    expiresIn = result.ExpiresIn,
+                    code = 200,
+
+                    messageKey =
+                        "Auth.LoginSuccessfully",
+
+                    message =
+                        _localization.Get(
+                            "Auth.LoginSuccessfully"),
+
+                    accessToken =
+                        result.AccessToken,
+
+                    expiresIn =
+                        result.ExpiresIn,
 
                     user = new
                     {
-                        userId = result.User.UserId,
-                        username = result.User.Username,
-                        fullName = result.User.FullName,
-                        roles = result.Roles
+                        userId =
+                            result.User.UserId,
+
+                        username =
+                            result.User.Username,
+
+                        fullName =
+                            result.User.FullName,
+
+                        roles =
+                            result.Roles,
+
+                        activeRoleId =
+                            result.ActiveRoleId,
+
+                        sessionId =
+                            result.SessionId
                     }
                 });
             }
-            catch (Exception)
+            catch
             {
                 return StatusCode(
-                    StatusCodes.Status500InternalServerError,
+                    500,
                     _responseFactory.Error(
                         500,
                         "Auth.LoginFailed"));
             }
         }
 
-        // =========================================
-        // Refresh
-        // POST: /api/Auth/refresh
-        // =========================================
+
+        /* =====================================================
+           REFRESH
+           ===================================================== */
 
         [HttpPost("refresh")]
         [AllowAnonymous]
@@ -170,7 +200,9 @@ namespace TowerApi.Controllers
             var refreshToken =
                 Request.Cookies["refreshToken"];
 
-            if (string.IsNullOrWhiteSpace(refreshToken))
+
+            if (string.IsNullOrWhiteSpace(
+                refreshToken))
             {
                 ClearRefreshTokenCookie();
 
@@ -180,15 +212,19 @@ namespace TowerApi.Controllers
                         "Auth.RefreshTokenRequired"));
             }
 
+
             try
             {
                 var result =
-                    await _authService.RefreshAsync(refreshToken);
+                    await _authService.RefreshAsync(
+                        refreshToken);
 
-                if (result == null ||
-                    result.ResultCode != 200 ||
-                    string.IsNullOrWhiteSpace(result.AccessToken) ||
-                    string.IsNullOrWhiteSpace(result.RefreshToken) ||
+
+                if (result.ResultCode != 200 ||
+                    string.IsNullOrWhiteSpace(
+                        result.AccessToken) ||
+                    string.IsNullOrWhiteSpace(
+                        result.RefreshToken) ||
                     result.RefreshTokenExpiresAt == null)
                 {
                     ClearRefreshTokenCookie();
@@ -199,43 +235,76 @@ namespace TowerApi.Controllers
                             "Auth.RefreshTokenInvalid"));
                 }
 
-                // کوکی همین دستگاه با توکن چرخش‌یافته جایگزین می‌شود.
+
                 SetRefreshTokenCookie(
                     result.RefreshToken,
                     result.RefreshTokenExpiresAt.Value);
 
+
                 return Ok(new
                 {
                     success = true,
+
                     code = 200,
-                    accessToken = result.AccessToken,
-                    expiresIn = result.ExpiresIn
+
+                    accessToken =
+                        result.AccessToken,
+
+                    expiresIn =
+                        result.ExpiresIn,
+
+                    activeRoleId =
+                        result.ActiveRoleId
                 });
             }
-            catch (Exception)
+            catch
             {
                 return StatusCode(
-                    StatusCodes.Status500InternalServerError,
+                    500,
                     _responseFactory.Error(
                         500,
                         "Auth.RefreshFailed"));
             }
         }
 
-        // =========================================
-        // Me
-        // GET: /api/Auth/me
-        // =========================================
 
-        [HttpGet("ReloadUserInfo")]
+        /* =====================================================
+           SELECT ROLE
+           ===================================================== */
+
+        [HttpPost("SelectRole")]
         [Authorize]
-        public async Task<IActionResult> ReloadUserInfo()
+        public async Task<IActionResult> SelectRole(
+            [FromBody] SelectRoleRequest request)
         {
-            var userIdClaim = User.FindFirst(
-                ClaimTypes.NameIdentifier);
+            if (request == null ||
+                request.RoleId <= 0)
+            {
+                return BadRequest(
+                    _responseFactory.Error(
+                        400,
+                        "Auth.InvalidRole"));
+            }
 
-            if (userIdClaim == null ||
-                !long.TryParse(userIdClaim.Value, out var userId))
+
+            var userIdValue =
+                User.FindFirst(
+                    ClaimTypes.NameIdentifier)
+                ?.Value;
+
+
+            var sessionIdValue =
+                User.FindFirst(
+                    ClaimTypes.Sid)
+                ?.Value;
+
+
+            if (!long.TryParse(
+                    userIdValue,
+                    out var userId) ||
+                !Guid.TryParse(
+                    sessionIdValue,
+                    out var sessionId))
             {
                 return Unauthorized(
                     _responseFactory.Error(
@@ -243,16 +312,101 @@ namespace TowerApi.Controllers
                         "Auth.InvalidAccessToken"));
             }
 
+
             try
             {
                 var result =
-                    await _authService.GetCurrentUserAsync(userId);
+                    await _authService.SelectRoleAsync(
+                        userId,
+                        sessionId,
+                        request.RoleId);
+
+
+                if (result.ResultCode != 200)
+                {
+                    return StatusCode(
+                        result.ResultCode == 403
+                            ? 403
+                            : 401,
+
+                        _responseFactory.Error(
+                            result.ResultCode,
+                            "Auth.RoleSelectionFailed"));
+                }
+
+
+                return Ok(new
+                {
+                    success = true,
+
+                    code = 200,
+
+                    accessToken =
+                        result.AccessToken,
+
+                    expiresIn =
+                        result.ExpiresIn,
+
+                    activeRoleId =
+                        result.ActiveRoleId
+                });
+            }
+            catch
+            {
+                return StatusCode(
+                    500,
+                    _responseFactory.Error(
+                        500,
+                        "Auth.RoleSelectionFailed"));
+            }
+        }
+
+
+        /* =====================================================
+           ME
+           ===================================================== */
+
+        [HttpGet("GetUserInfo")]
+        [Authorize]
+        public async Task<IActionResult> GetUserInfo()
+        {
+            var userIdValue =
+                User.FindFirst(
+                    ClaimTypes.NameIdentifier)
+                ?.Value;
+
+
+            var sessionIdValue =
+                User.FindFirst(
+                    ClaimTypes.Sid)
+                ?.Value;
+
+
+            if (!long.TryParse(
+                    userIdValue,
+                    out var userId) ||
+                !Guid.TryParse(
+                    sessionIdValue,
+                    out var sessionId))
+            {
+                return Unauthorized(
+                    _responseFactory.Error(
+                        401,
+                        "Auth.InvalidAccessToken"));
+            }
+
+
+            try
+            {
+                var result =
+                    await _authService
+                        .GetCurrentUserAsync(
+                            userId,
+                            sessionId);
+
 
                 if (result == null ||
-                    result.ResultCode != 200 ||
-                    result.User == null ||
-                    result.Roles == null ||
-                    !result.Roles.Any())
+                    result.User == null)
                 {
                     return Unauthorized(
                         _responseFactory.Error(
@@ -260,161 +414,200 @@ namespace TowerApi.Controllers
                             "Auth.UserNotFound"));
                 }
 
+
                 return Ok(new
                 {
                     success = true,
+
                     code = 200,
 
                     user = new
                     {
-                        userId = result.User.UserId,
-                        username = result.User.Username,
-                        firstName = result.User.FirstName,
-                        lastName = result.User.LastName,
-                        fullName = result.User.FullName,
-                        email = result.User.Email,
-                        mobile = result.User.Mobile,
-                        roles = result.Roles
+                        userId =
+                            result.User.UserId,
+
+                        username =
+                            result.User.Username,
+
+                        firstName =
+                            result.User.FirstName,
+
+                        lastName =
+                            result.User.LastName,
+
+                        fullName =
+                            result.User.FullName,
+
+                        email =
+                            result.User.Email,
+
+                        mobile =
+                            result.User.Mobile,
+
+                        roles =
+                            result.Roles,
+
+                        activeRoleId =
+                            result.ActiveRoleId,
+
+                        sessionId =
+                            result.SessionId
                     }
                 });
             }
-            catch (Exception)
+            catch
             {
                 return StatusCode(
-                    StatusCodes.Status500InternalServerError,
+                    500,
                     _responseFactory.Error(
                         500,
                         "Auth.GetCurrentUserFailed"));
             }
         }
 
-        // =========================================
-        // Logout current device
-        // POST: /api/Auth/logout
-        // =========================================
+
+        /* =====================================================
+           LOGOUT CURRENT DEVICE
+           ===================================================== */
 
         [HttpPost("logout")]
-        [AllowAnonymous]
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
-            var refreshToken =
-                Request.Cookies["refreshToken"];
+            var sessionIdValue =
+                User.FindFirst(
+                    ClaimTypes.Sid)
+                ?.Value;
 
-            try
+
+            if (!Guid.TryParse(
+                sessionIdValue,
+                out var sessionId))
             {
-                if (!string.IsNullOrWhiteSpace(refreshToken))
-                {
-                    await _authService.RevokeRefreshTokenAsync(
-                        refreshToken);
-                }
-
-                ClearRefreshTokenCookie();
-
-                return Ok(new
-                {
-                    success = true,
-                    code = 200,
-                    message = "خروج از این دستگاه با موفقیت انجام شد."
-                });
+                return Unauthorized();
             }
-            catch (Exception)
+
+
+            await _authService
+                .RevokeSessionAsync(
+                    sessionId);
+
+
+            ClearRefreshTokenCookie();
+
+
+            return Ok(new
             {
-                ClearRefreshTokenCookie();
-
-                return StatusCode(
-                    StatusCodes.Status500InternalServerError,
-                    _responseFactory.Error(
-                        500,
-                        "Auth.LogoutFailed"));
-            }
+                success = true,
+                code = 200,
+                message = "نشست‌های فعال همه دستگاه‌ها باطل شدند."
+            });
         }
 
-        // =========================================
-        // Logout all devices
-        // POST: /api/Auth/logout-all
-        // =========================================
 
-        [Authorize]
+        /* =====================================================
+           LOGOUT ALL
+           ===================================================== */
+
         [HttpPost("logout-all")]
+        [Authorize]
         public async Task<IActionResult> LogoutAll()
         {
-            var userIdValue = User.FindFirst(
-                ClaimTypes.NameIdentifier)?.Value;
+            var userIdValue =
+                User.FindFirst(
+                    ClaimTypes.NameIdentifier)
+                ?.Value;
 
-            if (!long.TryParse(userIdValue, out var userId))
+
+            if (!long.TryParse(
+                userIdValue,
+                out var userId))
             {
-                return Unauthorized(
-                    _responseFactory.Error(
-                        401,
-                        "Auth.InvalidAccessToken"));
+                return Unauthorized();
             }
 
-            try
-            {
-                await _authService.RevokeAllSessionsAsync(userId);
 
-                // کوکی دستگاه فعلی هم پاک می‌شود.
-                ClearRefreshTokenCookie();
+            await _authService
+                .RevokeAllSessionsAsync(
+                    userId);
 
-                return Ok(new
-                {
-                    success = true,
-                    code = 200,
-                    message = "نشست‌های فعال همه دستگاه‌ها باطل شدند."
-                });
-            }
-            catch (Exception)
+
+            ClearRefreshTokenCookie();
+
+
+            return Ok(new
             {
-                return StatusCode(
-                    StatusCodes.Status500InternalServerError,
-                    _responseFactory.Error(
-                        500,
-                        "Auth.LogoutFailed"));
-            }
+                success = true,
+                code = 200,
+                message = "نشست‌های فعال همه دستگاه‌ها باطل شدند."
+            });
         }
 
-        // =========================================
-        // Cookie Helpers
-        // =========================================
 
-        private void SetRefreshTokenCookie(string token, DateTime expiresAt)
+        /* =====================================================
+           COOKIE
+           ===================================================== */
+
+        private void SetRefreshTokenCookie(
+            string token,
+            DateTime expiresAt)
         {
-            var isDevelopment = _environment.IsDevelopment();
+            var isDevelopment =
+                HttpContext.RequestServices
+                    .GetRequiredService<
+                        IWebHostEnvironment>()
+                    .IsDevelopment();
 
-            var cookieOptions = new CookieOptions
-            {
-                HttpOnly = true,
-                Secure = !isDevelopment,
-                SameSite = isDevelopment
-                    ? SameSiteMode.Lax
-                    : SameSiteMode.None,
-                Path = "/api/Auth",
-                Expires = expiresAt
-            };
 
             Response.Cookies.Append(
                 "refreshToken",
                 token,
-                cookieOptions);
+                new CookieOptions
+                {
+                    HttpOnly = true,
+
+                    Secure = !isDevelopment,
+
+                    SameSite =
+                        isDevelopment
+                            ? SameSiteMode.Lax
+                            : SameSiteMode.None,
+
+                    Expires =
+                        new DateTimeOffset(
+                            DateTime.SpecifyKind(
+                                expiresAt,
+                                DateTimeKind.Utc)),
+
+                    Path = "/api/Auth"
+                });
         }
+
 
         private void ClearRefreshTokenCookie()
         {
-            var isDevelopment = _environment.IsDevelopment();
+            var isDevelopment =
+                HttpContext.RequestServices
+                    .GetRequiredService<
+                        IWebHostEnvironment>()
+                    .IsDevelopment();
 
-            var cookieOptions = new CookieOptions
-            {
-                HttpOnly = true,
-                Secure = !isDevelopment,
-                SameSite = isDevelopment
-                    ? SameSiteMode.Lax
-                    : SameSiteMode.None,
-                Path = "/api/Auth"
-            };
 
             Response.Cookies.Delete(
                 "refreshToken",
-                cookieOptions);
+                new CookieOptions
+                {
+                    HttpOnly = true,
+
+                    Secure = !isDevelopment,
+
+                    SameSite =
+                        isDevelopment
+                            ? SameSiteMode.Lax
+                            : SameSiteMode.None,
+
+                    Path = "/api/Auth"
+                });
         }
     }
 }

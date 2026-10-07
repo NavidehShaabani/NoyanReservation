@@ -34,12 +34,9 @@ namespace TowerApi.Services.RefreshTokenCleanup
                     var repository = scope.ServiceProvider
                         .GetRequiredService<IRefreshTokenRepository>();
 
-                    var deletedCount =
-                        await repository.CleanupExpiredAsync();
+                    await repository.CleanupExpiredAsync();
 
-                    _logger.LogInformation(
-                        "Refresh token cleanup completed. Deleted: {Count}",
-                        deletedCount);
+                    _logger.LogInformation("Refresh token cleanup completed." );
                 }
                 catch (OperationCanceledException)
                     when (stoppingToken.IsCancellationRequested)
