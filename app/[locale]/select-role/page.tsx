@@ -5,10 +5,36 @@ import { AuthContext, localizedText } from "@/context/AuthProvider";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 export default function SelectRole() {
-  const { user, setActiveRole } = useContext(AuthContext);
+  const { user, token, setToken, setUser } = useContext(AuthContext);
   const locale = useLocale() as keyof localizedText;
   const router = useRouter();
   const t = useTranslations("select-role");
+  const selectRole = async (roleId: number) => {
+    const response = await fetch(
+      "http://10.208.8.91:5295/api/Auth/SelectRole",
+      {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          roleId,
+        }),
+      },
+    );
+    if (response.ok) {
+      const data = await response.json();
+      setToken(data.accessToken);
+      const activeRoleId = data.activeRoleId;
+      if (user) {
+        setUser({ ...user, activeRoleId });
+      }
+
+      router.push(`/${locale}/dashboard`);
+    }
+  };
   return (
     <div
       className="  
@@ -73,9 +99,8 @@ shadow-[7px_7px_17px_#e4e3df,-7px_-7px_17px_#f8f5f1]
           active:shadow-[inset_4px_4px_8px_rgba(163,174,187,0.22),inset_-4px_-4px_8px_rgba(255,255,255,0.8)]
 
         "
-              onClick={() => {
-                setActiveRole(role);
-                router.push(`/${locale}/dashboard`);
+              onClick={async () => {
+                await selectRole(role.roleId);
               }}
             >
               <span className="text-lg text-foreground">

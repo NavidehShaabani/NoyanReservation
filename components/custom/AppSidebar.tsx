@@ -9,6 +9,8 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarHeader,
+  useSidebar,
 } from "../ui/sidebar";
 import {
   LayoutDashboard,
@@ -29,12 +31,41 @@ function iconSelector(iconSub: string | null): LucideIcon {
   }
 }
 export default function AppSidebar() {
-  const { activeRole } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
+  const activeRole = user?.roles.find(
+    (role) => role.roleId === user.activeRoleId,
+  );
   const locale = useLocale() as locale;
+  const { setOpenMobile } = useSidebar();
   console.log("map list", activeRole);
   return (
     <>
       <Sidebar side={locale === "fa" ? "right" : "left"} variant="floating">
+        <SidebarHeader className="md:hidden border-b">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div
+                className="w-10 h-10 shrink-0 bg-primary"
+                style={{
+                  maskImage: "url('/images/NOYAN.svg')",
+                  maskRepeat: "no-repeat",
+                  maskPosition: "center",
+                  maskSize: "contain",
+                }}
+              />
+
+              <span className="text-sm font-medium">Noyan Reservation</span>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setOpenMobile(false)}
+              className="text-3xl "
+            >
+              ×
+            </button>
+          </div>
+        </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
             <SidebarGroupContent>

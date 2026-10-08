@@ -42,14 +42,14 @@ type User = {
   email: string | null;
   mobile: string | null;
   roles: Role[];
+  activeRoleId: number | null;
+  sessionId: string;
 };
 type AuthContextType = {
   token: string | null;
   setToken: React.Dispatch<React.SetStateAction<string | null>>;
   user: User | null;
   setUser: React.Dispatch<React.SetStateAction<User | null>>;
-  activeRole: Role | null;
-  setActiveRole: React.Dispatch<React.SetStateAction<Role | null>>;
 };
 
 export const AuthContext = createContext<AuthContextType>({
@@ -57,8 +57,6 @@ export const AuthContext = createContext<AuthContextType>({
   setToken: () => {},
   user: null,
   setUser: () => {},
-  activeRole: null,
-  setActiveRole: () => {},
 });
 
 export default function AuthProvider({
@@ -68,7 +66,7 @@ export default function AuthProvider({
 }) {
   const [token, setToken] = useState<string | null>(null);
   const [user, setUser] = useState<User | null>(null);
-  const [activeRole, setActiveRole] = useState<Role | null>(null);
+
   useEffect(() => {
     async function callRefresh() {
       const refreshResponse = await fetch(
@@ -87,8 +85,8 @@ export default function AuthProvider({
 
       const refreshData = await refreshResponse.json();
       const accessToken = refreshData.accessToken;
-      const reloadUserInfoResponse = await fetch(
-        "http://10.208.8.91:5295/api/Auth/ReloadUserInfo",
+      const userInfoResponse = await fetch(
+        "http://10.208.8.91:5295/api/Auth/GetUserInfo",
         {
           method: "GET",
           headers: {
@@ -96,11 +94,11 @@ export default function AuthProvider({
           },
         },
       );
-      if (!reloadUserInfoResponse.ok) {
+      if (!userInfoResponse.ok) {
         return;
       }
 
-      const userInfoData = await reloadUserInfoResponse.json();
+      const userInfoData = await userInfoResponse.json();
 
       setToken(accessToken);
       setUser(userInfoData.user);
@@ -110,9 +108,7 @@ export default function AuthProvider({
     // console.log("for testttttt", token);
   }, []);
   return (
-    <AuthContext.Provider
-      value={{ token, setToken, user, setUser, activeRole, setActiveRole }}
-    >
+    <AuthContext.Provider value={{ token, setToken, user, setUser }}>
       {children}
     </AuthContext.Provider>
   );

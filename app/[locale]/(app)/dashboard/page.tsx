@@ -224,7 +224,7 @@ export default async function Dashboard() {
         className="
             w-full
             h-full  
-            max-w-6xl
+            max-w-10xl
           
 
             rounded-[10px]

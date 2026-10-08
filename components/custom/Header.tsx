@@ -41,7 +41,7 @@
 // }
 
 import { useTranslations } from "next-intl";
-
+import { SidebarTrigger } from "@/components/ui/sidebar";
 export default function Header() {
   const t = useTranslations("header");
 
@@ -64,19 +64,25 @@ export default function Header() {
         rounded-[10px]
       "
     >
-      <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:gap-3">
-        <div
-          className="w-16 h-16 shrink-0 bg-primary"
-          style={{
-            maskImage: "url('/images/NOYAN.svg')",
-            maskRepeat: "no-repeat",
-            maskPosition: "center",
-            maskSize: "contain",
-          }}
-        />
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div
+            className="w-16 h-16 shrink-0 bg-primary"
+            style={{
+              maskImage: "url('/images/NOYAN.svg')",
+              maskRepeat: "no-repeat",
+              maskPosition: "center",
+              maskSize: "contain",
+            }}
+          />
 
-        <div className="text-sm text-muted-foreground">
-          {t("headerDescription")}
+          <div className="text-sm text-muted-foreground">
+            {t("headerDescription")}
+          </div>
+        </div>
+
+        <div className="md:hidden">
+          <SidebarTrigger />
         </div>
       </div>
     </header>
