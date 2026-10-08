@@ -254,7 +254,10 @@ namespace TowerApi.Controllers
                         result.ExpiresIn,
 
                     activeRoleId =
-                        result.ActiveRoleId
+                        result.ActiveRoleId,
+
+                    activeRoleCode = 
+                        result.ActiveRoleCode
                 });
             }
             catch

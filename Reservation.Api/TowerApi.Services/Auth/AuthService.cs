@@ -307,7 +307,19 @@ namespace TowerApi.Services.Auth
             long? activeRoleId =
                 session.ActiveRoleId;
 
+            UserRole? activeRole = null;
 
+            if (activeRoleId.HasValue)
+            {
+                activeRole =
+                    userResult.Roles.FirstOrDefault(
+                        x => x.RoleId == activeRoleId.Value);
+
+                if (activeRole == null)
+                {
+                    activeRoleId = null;
+                }
+            }
             if (activeRoleId.HasValue)
             {
                 var validRole =
@@ -400,25 +412,28 @@ namespace TowerApi.Services.Auth
                 ResultCode = 200,
 
                 ResultMessage =
-                    "Refresh موفق بود.",
+        "Refresh موفق بود.",
 
                 AccessToken =
-                    accessToken,
+        accessToken,
 
                 ExpiresIn =
-                    expiresIn,
+        expiresIn,
 
                 RefreshToken =
-                    newRefreshToken,
+        newRefreshToken,
 
                 RefreshTokenExpiresAt =
-                    newExpiresAt,
+        newExpiresAt,
 
                 SessionId =
-                    session.SessionId,
+        session.SessionId,
 
                 ActiveRoleId =
-                    activeRoleId
+        activeRoleId,
+
+                ActiveRoleCode =
+        activeRole?.RoleCode
             };
         }
 
