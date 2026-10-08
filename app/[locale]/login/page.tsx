@@ -48,6 +48,7 @@ export default function Login() {
       console.log("LOGIN START");
       const response = await fetch("http://10.208.8.91:5295/api/Auth/login", {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },

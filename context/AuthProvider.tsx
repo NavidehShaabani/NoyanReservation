@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useState, useEffect } from "react";
+
 export type localizedText = {
   en: string | null;
   fa: string | null;
@@ -36,6 +37,10 @@ type User = {
   userId: number;
   username: string;
   fullName: string | null;
+  firstName: string | null;
+  lastName: string | null;
+  email: string | null;
+  mobile: string | null;
   roles: Role[];
 };
 type AuthContextType = {
@@ -65,8 +70,45 @@ export default function AuthProvider({
   const [user, setUser] = useState<User | null>(null);
   const [activeRole, setActiveRole] = useState<Role | null>(null);
   useEffect(() => {
-    console.log("for testttttt", token);
-  }, [token]);
+    async function callRefresh() {
+      const refreshResponse = await fetch(
+        "http://10.208.8.91:5295/api/Auth/refresh",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: "",
+        },
+      );
+
+      if (!refreshResponse.ok) {
+        return;
+      }
+
+      const refreshData = await refreshResponse.json();
+      const accessToken = refreshData.accessToken;
+      const reloadUserInfoResponse = await fetch(
+        "http://10.208.8.91:5295/api/Auth/ReloadUserInfo",
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        },
+      );
+      if (!reloadUserInfoResponse.ok) {
+        return;
+      }
+
+      const userInfoData = await reloadUserInfoResponse.json();
+
+      setToken(accessToken);
+      setUser(userInfoData.user);
+    }
+    callRefresh();
+
+    // console.log("for testttttt", token);
+  }, []);
   return (
     <AuthContext.Provider
       value={{ token, setToken, user, setUser, activeRole, setActiveRole }}
