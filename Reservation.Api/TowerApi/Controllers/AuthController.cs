@@ -200,9 +200,7 @@ namespace TowerApi.Controllers
             var refreshToken =
                 Request.Cookies["refreshToken"];
 
-
-            if (string.IsNullOrWhiteSpace(
-                refreshToken))
+            if (string.IsNullOrWhiteSpace(refreshToken))
             {
                 ClearRefreshTokenCookie();
 
@@ -212,13 +210,11 @@ namespace TowerApi.Controllers
                         "Auth.RefreshTokenRequired"));
             }
 
-
             try
             {
                 var result =
-                    await _authService.RefreshAsync(
-                        refreshToken);
-
+                    await _authService
+                        .RefreshAsync(refreshToken);
 
                 if (result.ResultCode != 200 ||
                     string.IsNullOrWhiteSpace(
@@ -235,16 +231,13 @@ namespace TowerApi.Controllers
                             "Auth.RefreshTokenInvalid"));
                 }
 
-
                 SetRefreshTokenCookie(
                     result.RefreshToken,
                     result.RefreshTokenExpiresAt.Value);
 
-
                 return Ok(new
                 {
                     success = true,
-
                     code = 200,
 
                     accessToken =
@@ -253,24 +246,25 @@ namespace TowerApi.Controllers
                     expiresIn =
                         result.ExpiresIn,
 
+                    sessionId =
+                        result.SessionId,
+
                     activeRoleId =
                         result.ActiveRoleId,
 
-                    activeRoleCode = 
+                    activeRoleCode =
                         result.ActiveRoleCode
                 });
             }
             catch
             {
                 return StatusCode(
-                    500,
+                    StatusCodes.Status500InternalServerError,
                     _responseFactory.Error(
                         500,
                         "Auth.RefreshFailed"));
             }
         }
-
-
         /* =====================================================
            SELECT ROLE
            ===================================================== */

@@ -17,7 +17,6 @@ namespace TowerApi.Services.Auth
             _configuration = configuration;
         }
 
-
         public string GenerateToken(
             UserSession user)
         {
@@ -40,25 +39,48 @@ namespace TowerApi.Services.Auth
                 _configuration.GetValue<int>(
                     "Jwt:ExpireMinutes");
 
-
             var claims =
                 new List<Claim>
                 {
-                new Claim(
-                    ClaimTypes.NameIdentifier,
-                    user.UserId.ToString()),
+                    new Claim(
+                        ClaimTypes.NameIdentifier,
+                        user.UserId.ToString()),
 
-                new Claim(
-                    ClaimTypes.Name,
-                    user.Username),
-
-                new Claim(
-                    ClaimTypes.Sid,
-                    user.SessionId.ToString())
+                    new Claim(
+                        ClaimTypes.Name,
+                        user.Username ?? string.Empty)
                 };
 
+            // ----------------------------------------------------
+            // SessionId
+            // ----------------------------------------------------
 
-            if (!string.IsNullOrWhiteSpace(user.FirstName))
+            if (user.SessionId != Guid.Empty)
+            {
+                claims.Add(
+                    new Claim(
+                        ClaimTypes.Sid,
+                        user.SessionId.ToString()));
+            }
+
+            // ----------------------------------------------------
+            // ActiveRoleId
+            // ----------------------------------------------------
+
+            if (user.ActiveRoleId.HasValue)
+            {
+                claims.Add(
+                    new Claim(
+                        "ActiveRoleId",
+                        user.ActiveRoleId.Value.ToString()));
+            }
+
+            // ----------------------------------------------------
+            // User Information
+            // ----------------------------------------------------
+
+            if (!string.IsNullOrWhiteSpace(
+                user.FirstName))
             {
                 claims.Add(
                     new Claim(
@@ -66,8 +88,8 @@ namespace TowerApi.Services.Auth
                         user.FirstName));
             }
 
-
-            if (!string.IsNullOrWhiteSpace(user.LastName))
+            if (!string.IsNullOrWhiteSpace(
+                user.LastName))
             {
                 claims.Add(
                     new Claim(
@@ -75,55 +97,51 @@ namespace TowerApi.Services.Auth
                         user.LastName));
             }
 
+            // ----------------------------------------------------
+            // Roles
+            // ----------------------------------------------------
+            //
+            // فعلاً Roleهای کاربر را داخل JWT نگه می‌داریم
+            // چون ممکن است بخش‌های فعلی سیستم به آن وابسته باشند.
+            //
+            // Authorization نهایی در Program.cs بر اساس
+            // SessionId و ActiveRole فعلی DB اصلاح می‌شود.
+            // ----------------------------------------------------
 
-            /*
-             * فقط Role فعال Session
-             */
-
-            if (user.ActiveRoleId.HasValue)
+            if (user.Roles != null)
             {
-                var activeRole =
-                    user.Roles.FirstOrDefault(
-                        x => x.RoleId == user.ActiveRoleId.Value);
-
-                if (activeRole != null &&
-                    !string.IsNullOrWhiteSpace(
-                        activeRole.RoleCode))
+                foreach (var role in user.Roles)
                 {
-                    claims.Add(
-                        new Claim(
-                            ClaimTypes.Role,
-                            activeRole.RoleCode));
+                    if (!string.IsNullOrWhiteSpace(
+                        role.RoleCode))
+                    {
+                        claims.Add(
+                            new Claim(
+                                ClaimTypes.Role,
+                                role.RoleCode));
+                    }
                 }
-
-
-                claims.Add(
-                    new Claim(
-                        "active_role_id",
-                        user.ActiveRoleId.Value.ToString()));
             }
-
 
             var securityKey =
                 new SymmetricSecurityKey(
                     Encoding.UTF8.GetBytes(key));
-
 
             var credentials =
                 new SigningCredentials(
                     securityKey,
                     SecurityAlgorithms.HmacSha256);
 
-
             var token =
                 new JwtSecurityToken(
                     issuer: issuer,
                     audience: audience,
                     claims: claims,
-                    expires: DateTime.UtcNow.AddMinutes(
-                        expireMinutes),
-                    signingCredentials: credentials);
-
+                    expires:
+                        DateTime.UtcNow.AddMinutes(
+                            expireMinutes),
+                    signingCredentials:
+                        credentials);
 
             return new JwtSecurityTokenHandler()
                 .WriteToken(token);

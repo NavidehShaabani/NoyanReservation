@@ -2,6 +2,7 @@
 using Dapper;
 using System.Data;
 using TowerApi.Models.Auth;
+using TowerApi.Models.Common;
 using TowerApi.Repositories.DataBase;
 
 namespace TowerApi.Repositories.SessionRepository
@@ -210,5 +211,93 @@ namespace TowerApi.Repositories.SessionRepository
 
             return result.ToList();
         }
+        public async Task<ProcedureResult> ClearActiveRoleAsync(
+    Guid sessionId,
+    long userId)
+        {
+            using var connection =
+                _connectionFactory.CreateConnection();
+
+            var parameters = new DynamicParameters();
+
+            parameters.Add(
+                "@SessionId",
+                sessionId,
+                DbType.Guid);
+
+            parameters.Add(
+                "@UserId",
+                userId,
+                DbType.Int64);
+
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
+            await connection.ExecuteAsync(
+                "dbo.App_UserSessionClearActiveRole",
+                parameters,
+                commandType: CommandType.StoredProcedure);
+
+            return new ProcedureResult
+            {
+                ResultCode =
+                    parameters.Get<int>(
+                        "@ResultCode"),
+
+                ResultMessage =
+                    parameters.Get<string>(
+                        "@ResultMessage") ?? string.Empty
+            };
+        }
+        public async Task<SessionAuthorization?>
+    GetAuthorizationAsync(
+        Guid sessionId,
+        long userId)
+        {
+            using var connection =
+                _connectionFactory.CreateConnection();
+
+            var parameters =
+                new DynamicParameters();
+
+            parameters.Add(
+                "@SessionId",
+                sessionId,
+                DbType.Guid);
+
+            parameters.Add(
+                "@UserId",
+                userId,
+                DbType.Int64);
+
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
+            var result =
+                await connection.QueryFirstOrDefaultAsync<SessionAuthorization>(
+                    "dbo.App_UserSessionAuthorizationGet",
+                    parameters,
+                    commandType:
+                        CommandType.StoredProcedure);
+
+            return result;
+        }
     }
+
 }

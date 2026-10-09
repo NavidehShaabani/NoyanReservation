@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using System.Data;
 using TowerApi.Models.Auth;
+using TowerApi.Models.Common;
 using TowerApi.Repositories.DataBase;
 
 namespace TowerApi.Repositories.RefreshTokens
@@ -14,7 +15,6 @@ namespace TowerApi.Repositories.RefreshTokens
         {
             _connectionFactory = connectionFactory;
         }
-
 
         public async Task SaveAsync(
             long userId,
@@ -31,21 +31,51 @@ namespace TowerApi.Repositories.RefreshTokens
 
             var parameters = new DynamicParameters();
 
-            parameters.Add("@UserId", userId, DbType.Int64);
-            parameters.Add("@TokenHash", tokenHash, DbType.AnsiStringFixedLength);
-            parameters.Add("@ExpiresAt", expiresAt, DbType.DateTime);
-            parameters.Add("@CreatedAt", createdAt, DbType.DateTime);
-            parameters.Add("@SessionId", sessionId, DbType.Guid);
-            parameters.Add("@DeviceName", deviceName, DbType.String);
-            parameters.Add("@UserAgent", userAgent, DbType.String);
-            parameters.Add("@CreatedIp", createdIp, DbType.String);
+            parameters.Add(
+                "@UserId",
+                userId,
+                DbType.Int64);
+
+            parameters.Add(
+                "@TokenHash",
+                tokenHash,
+                DbType.AnsiStringFixedLength);
+
+            parameters.Add(
+                "@ExpiresAt",
+                expiresAt,
+                DbType.DateTime);
+
+            parameters.Add(
+                "@CreatedAt",
+                createdAt,
+                DbType.DateTime);
+
+            parameters.Add(
+                "@SessionId",
+                sessionId,
+                DbType.Guid);
+
+            parameters.Add(
+                "@DeviceName",
+                deviceName,
+                DbType.String);
+
+            parameters.Add(
+                "@UserAgent",
+                userAgent,
+                DbType.String);
+
+            parameters.Add(
+                "@CreatedIp",
+                createdIp,
+                DbType.String);
 
             await connection.ExecuteAsync(
                 "dbo.App_RefreshTokenSave",
                 parameters,
                 commandType: CommandType.StoredProcedure);
         }
-
 
         public async Task<RefreshToken?> GetActiveTokenAsync(
             string tokenHash)
@@ -66,8 +96,7 @@ namespace TowerApi.Repositories.RefreshTokens
                 commandType: CommandType.StoredProcedure);
         }
 
-
-        public async Task<bool> RotateAsync(
+        public async Task<ProcedureResult> RotateAsync(
             string oldTokenHash,
             string newTokenHash,
             DateTime newExpiresAt,
@@ -98,14 +127,33 @@ namespace TowerApi.Repositories.RefreshTokens
                 newCreatedAt,
                 DbType.DateTime);
 
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
             await connection.ExecuteAsync(
                 "dbo.App_RefreshTokenRotate",
                 parameters,
                 commandType: CommandType.StoredProcedure);
 
-            return true;
-        }
+            return new ProcedureResult
+            {
+                ResultCode =
+                    parameters.Get<int>(
+                        "@ResultCode"),
 
+                ResultMessage =
+                    parameters.Get<string>(
+                        "@ResultMessage") ?? string.Empty
+            };
+        }
 
         public async Task RevokeAsync(
             string tokenHash)
@@ -126,7 +174,6 @@ namespace TowerApi.Repositories.RefreshTokens
                 commandType: CommandType.StoredProcedure);
         }
 
-
         public async Task RevokeSessionAsync(
             Guid sessionId)
         {
@@ -145,7 +192,6 @@ namespace TowerApi.Repositories.RefreshTokens
                 parameters,
                 commandType: CommandType.StoredProcedure);
         }
-
 
         public async Task RevokeAllSessionsAsync(
             long userId)
@@ -166,7 +212,6 @@ namespace TowerApi.Repositories.RefreshTokens
                 commandType: CommandType.StoredProcedure);
         }
 
-
         public async Task CleanupExpiredAsync()
         {
             using var connection =
@@ -177,19 +222,23 @@ namespace TowerApi.Repositories.RefreshTokens
                 commandType: CommandType.StoredProcedure);
         }
 
-        public async Task<IReadOnlyList<RefreshToken>> GetActiveSessionsAsync(
-            long userId)
+        public async Task<IReadOnlyList<RefreshToken>>
+            GetActiveSessionsAsync(long userId)
         {
-            using var connection = _connectionFactory.CreateConnection();
+            using var connection =
+                _connectionFactory.CreateConnection();
 
-            var sessions = await connection.QueryAsync<RefreshToken>(
-                "dbo.App_RefreshTokenGetActiveSessions",
-                new { UserId = userId },
-                commandType: CommandType.StoredProcedure
-            );
+            var sessions =
+                await connection.QueryAsync<RefreshToken>(
+                    "dbo.App_RefreshTokenGetActiveSessions",
+                    new
+                    {
+                        UserId = userId
+                    },
+                    commandType:
+                        CommandType.StoredProcedure);
 
             return sessions.ToList();
         }
     }
-
 }

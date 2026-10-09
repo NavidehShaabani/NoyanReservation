@@ -223,47 +223,36 @@ namespace TowerApi.Services.Auth
            ===================================================== */
 
         public async Task<RefreshResult> RefreshAsync(
-            string refreshToken)
+    string refreshToken)
         {
-            if (string.IsNullOrWhiteSpace(
-                refreshToken))
+            if (string.IsNullOrWhiteSpace(refreshToken))
             {
                 return new RefreshResult
                 {
                     ResultCode = 401,
-                    ResultMessage =
-                        "Refresh Token الزامی است."
+                    ResultMessage = "Refresh Token الزامی است."
                 };
             }
 
-
             var oldHash =
-                RefreshTokenGenerator.Hash(
-                    refreshToken);
-
+                RefreshTokenGenerator.Hash(refreshToken);
 
             var oldToken =
                 await _refreshTokenRepository
-                    .GetActiveTokenAsync(
-                        oldHash);
-
+                    .GetActiveTokenAsync(oldHash);
 
             if (oldToken == null)
             {
                 return new RefreshResult
                 {
                     ResultCode = 401,
-                    ResultMessage =
-                        "Refresh Token معتبر نیست."
+                    ResultMessage = "Refresh Token معتبر نیست."
                 };
             }
 
-
             var session =
                 await _userSessionRepository
-                    .GetByIdAsync(
-                        oldToken.SessionId);
-
+                    .GetByIdAsync(oldToken.SessionId);
 
             if (session == null ||
                 session.RevokedAt.HasValue)
@@ -271,21 +260,13 @@ namespace TowerApi.Services.Auth
                 return new RefreshResult
                 {
                     ResultCode = 401,
-                    ResultMessage =
-                        "نشست کاربر معتبر نیست."
+                    ResultMessage = "نشست کاربر معتبر نیست."
                 };
             }
 
-
-            /*
-             * گرفتن اطلاعات کامل User + Roles
-             */
-
             var userResult =
                 await _authRepository
-                    .GetCurrentUserAsync(
-                        oldToken.UserId);
-
+                    .GetCurrentUserAsync(oldToken.UserId);
 
             if (userResult == null ||
                 userResult.User == null)
@@ -293,74 +274,67 @@ namespace TowerApi.Services.Auth
                 return new RefreshResult
                 {
                     ResultCode = 401,
-                    ResultMessage =
-                        "کاربر معتبر نیست."
+                    ResultMessage = "کاربر معتبر نیست."
                 };
             }
-
-
-            /*
-             * اگر Role فعال قبلاً حذف/منقضی شده باشد،
-             * دیگر Role را داخل JWT قرار نمی‌دهیم.
-             */
 
             long? activeRoleId =
                 session.ActiveRoleId;
 
             UserRole? activeRole = null;
 
+            // بررسی ActiveRole فعلی Session
             if (activeRoleId.HasValue)
             {
                 activeRole =
                     userResult.Roles.FirstOrDefault(
                         x => x.RoleId == activeRoleId.Value);
 
+                // اگر Role دیگر متعلق به کاربر نیست،
+                // مقدار آن را در DB هم NULL می‌کنیم.
                 if (activeRole == null)
                 {
+                    var clearResult =
+                        await _userSessionRepository
+                            .ClearActiveRoleAsync(
+                                session.SessionId,
+                                oldToken.UserId);
+
+                    if (!clearResult.IsSuccess)
+                    {
+                        return new RefreshResult
+                        {
+                            ResultCode =
+                                clearResult.ResultCode,
+
+                            ResultMessage =
+                                clearResult.ResultMessage
+                        };
+                    }
+
                     activeRoleId = null;
                 }
             }
-            if (activeRoleId.HasValue)
-            {
-                var validRole =
-                    userResult.Roles.Any(
-                        x =>
-                            x.RoleId ==
-                            activeRoleId.Value);
 
-
-                if (!validRole)
-                {
-                    activeRoleId = null;
-                }
-            }
-
-
-            /*
-             * Refresh Token جدید
-             */
-
+            // ساخت Refresh Token جدید
             var newRefreshToken =
                 RefreshTokenGenerator.Generate();
-
 
             var newHash =
                 RefreshTokenGenerator.Hash(
                     newRefreshToken);
-
 
             var refreshMinutes =
                 _configuration.GetValue<int>(
                     "Jwt:RefreshTokenMinutes",
                     60 * 24 * 30);
 
-
             var newExpiresAt =
                 DateTime.UtcNow.AddMinutes(
                     refreshMinutes);
 
-
-            var rotated =
+            // Rotate واقعی Refresh Token
+            var rotateResult =
                 await _refreshTokenRepository
                     .RotateAsync(
                         oldHash,
@@ -368,22 +342,19 @@ namespace TowerApi.Services.Auth
                         newExpiresAt,
                         DateTime.UtcNow);
 
-
-            if (!rotated)
+            if (!rotateResult.IsSuccess)
             {
                 return new RefreshResult
                 {
-                    ResultCode = 401,
+                    ResultCode =
+                        rotateResult.ResultCode,
+
                     ResultMessage =
-                        "Refresh Token قابل استفاده نیست."
+                        rotateResult.ResultMessage
                 };
             }
 
-
-            /*
-             * JWT جدید
-             */
-
+            // ساخت JWT جدید با Session فعلی
             var jwtUser =
                 BuildJwtUserSession(
                     userResult.User,
@@ -391,53 +362,30 @@ namespace TowerApi.Services.Auth
                     session.SessionId,
                     activeRoleId);
 
-
             var accessToken =
-                _jwtService.GenerateToken(
-                    jwtUser);
-
+                _jwtService.GenerateToken(jwtUser);
 
             var expiresIn =
                 _configuration.GetValue<int>(
                     "Jwt:ExpireMinutes");
 
-
             await _userSessionRepository
                 .UpdateLastSeenAsync(
                     session.SessionId);
 
-
             return new RefreshResult
             {
                 ResultCode = 200,
-
-                ResultMessage =
-        "Refresh موفق بود.",
-
-                AccessToken =
-        accessToken,
-
-                ExpiresIn =
-        expiresIn,
-
-                RefreshToken =
-        newRefreshToken,
-
-                RefreshTokenExpiresAt =
-        newExpiresAt,
-
-                SessionId =
-        session.SessionId,
-
-                ActiveRoleId =
-        activeRoleId,
-
-                ActiveRoleCode =
-        activeRole?.RoleCode
+                ResultMessage = "Refresh موفق بود.",
+                AccessToken = accessToken,
+                ExpiresIn = expiresIn,
+                RefreshToken = newRefreshToken,
+                RefreshTokenExpiresAt = newExpiresAt,
+                SessionId = session.SessionId,
+                ActiveRoleId = activeRoleId,
+                ActiveRoleCode = activeRole?.RoleCode
             };
         }
-
-
         /* =====================================================
            SELECT ROLE
            ===================================================== */

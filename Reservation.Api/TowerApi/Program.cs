@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 using System.Text;
 using TowerApi.Repositories.Extensions;
+using TowerApi.Repositories.SessionRepository;
 using TowerApi.Services;
 using TowerApi.Services.Auth;
 using TowerApi.Services.Extensions;
@@ -153,46 +155,124 @@ builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 // JWT Authentication
 // ======================================================
 
-builder.Services.AddAuthentication(
-    JwtBearerDefaults.AuthenticationScheme)
+builder.Services
+    .AddAuthentication(
+        JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        var jwtKey = builder.Configuration["Jwt:Key"];
-
-        if (string.IsNullOrWhiteSpace(jwtKey))
-        {
-            throw new InvalidOperationException(
-                "Jwt:Key پیدا نشد.");
-        }
-
         options.TokenValidationParameters =
             new TokenValidationParameters
             {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
 
-                IssuerSigningKey =
-                    new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(jwtKey)),
-
-                ValidateIssuer = true,
                 ValidIssuer =
                     builder.Configuration["Jwt:Issuer"],
 
-                ValidateAudience = true,
                 ValidAudience =
                     builder.Configuration["Jwt:Audience"],
 
-                ValidateLifetime = true,
+                IssuerSigningKey =
+                    new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(
+                            builder.Configuration["Jwt:Key"]!))
+            };
 
-                ClockSkew = TimeSpan.FromMinutes(1),
+        options.Events =
+            new JwtBearerEvents
+            {
+                OnTokenValidated =
+                    async context =>
+                    {
+                        var principal =
+                            context.Principal;
 
-                NameClaimType =
-                    System.Security.Claims
-                        .ClaimTypes.Name,
+                        if (principal == null)
+                        {
+                            context.Fail(
+                                "Principal معتبر نیست.");
 
-                RoleClaimType =
-                    System.Security.Claims
-                        .ClaimTypes.Role
+                            return;
+                        }
+
+                        var userIdValue =
+                            principal.FindFirst(
+                                ClaimTypes.NameIdentifier)
+                            ?.Value;
+
+                        var sessionIdValue =
+                            principal.FindFirst(
+                                ClaimTypes.Sid)
+                            ?.Value;
+
+                        if (!long.TryParse(
+                                userIdValue,
+                                out var userId) ||
+                            !Guid.TryParse(
+                                sessionIdValue,
+                                out var sessionId))
+                        {
+                            context.Fail(
+                                "SessionId یا UserId معتبر نیست.");
+
+                            return;
+                        }
+
+                        var sessionRepository =
+                            context.HttpContext
+                                .RequestServices
+                                .GetRequiredService<
+                                    IUserSessionRepository>();
+
+                        var authorization =
+                            await sessionRepository
+                                .GetAuthorizationAsync(
+                                    sessionId,
+                                    userId);
+
+                        if (authorization == null)
+                        {
+                            context.Fail(
+                                "نشست کاربر معتبر نیست.");
+
+                            return;
+                        }
+
+                        // تمام Roleهای قدیمی JWT را حذف کن.
+                        var oldRoleClaims =
+                            principal.Claims
+                                .Where(x =>
+                                    x.Type ==
+                                    ClaimTypes.Role)
+                                .ToList();
+
+                        foreach (var claim in oldRoleClaims)
+                        {
+                            if (principal.Identity
+                                    is ClaimsIdentity identity)
+                            {
+                                identity.RemoveClaim(
+                                    claim);
+                            }
+                        }
+
+                        // فقط Role فعلی Session
+                        // از DB معتبر است.
+                        if (!string.IsNullOrWhiteSpace(
+                            authorization.RoleCode))
+                        {
+                            if (principal.Identity
+                                    is ClaimsIdentity identity)
+                            {
+                                identity.AddClaim(
+                                    new Claim(
+                                        ClaimTypes.Role,
+                                        authorization.RoleCode));
+                            }
+                        }
+                    }
             };
     });
 

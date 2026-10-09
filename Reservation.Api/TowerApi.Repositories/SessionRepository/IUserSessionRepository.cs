@@ -1,6 +1,7 @@
 ﻿
 
 using TowerApi.Models.Auth;
+using TowerApi.Models.Common;
 
 namespace TowerApi.Repositories.SessionRepository
 {
@@ -28,5 +29,11 @@ namespace TowerApi.Repositories.SessionRepository
 
         Task<List<UserSessionEntity>> GetActiveAsync(
             long userId);
+        Task<ProcedureResult> ClearActiveRoleAsync(
+    Guid sessionId,
+    long userId);
+        Task<SessionAuthorization?> GetAuthorizationAsync(
+    Guid sessionId,
+    long userId);
     }
 }
