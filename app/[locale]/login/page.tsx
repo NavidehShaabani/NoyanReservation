@@ -25,7 +25,7 @@ export default function Login() {
   >("");
   const [submitted, setSubmitted] = useState(false);
   const router = useRouter();
-  const { setToken, setUser, setActiveRole } = useContext(AuthContext);
+  const { setToken, setUser } = useContext(AuthContext);
 
   const submit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -70,7 +70,8 @@ export default function Login() {
       if (data.user.roles.length > 1) {
         router.push(`/${locale}/select-role`);
       } else {
-        setActiveRole(data.user.roles[0]);
+        // setActiveRole(tdaa.user.roles[0]);
+
         router.push(`/${locale}/dashboard`);
       }
     } catch (error) {

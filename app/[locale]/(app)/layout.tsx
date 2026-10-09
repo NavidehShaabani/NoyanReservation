@@ -5,9 +5,6 @@ import { AuthContext } from "@/context/AuthProvider";
 import { useContext } from "react";
 import { SidebarProvider } from "@/components/ui/sidebar";
 export default function AppLayout({ children }: { children: React.ReactNode }) {
-  const { activeRole } = useContext(AuthContext);
-  console.log("activeRole", activeRole);
-  console.log("menus", activeRole?.menus);
   return (
     <div
       className="
