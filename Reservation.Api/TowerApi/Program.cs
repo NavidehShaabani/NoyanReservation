@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿//حتما یادت هست که کنترلرهای مربوط unit و Building و organazation  یادت هست الان می خوام ادامه بدم کنترلر نویسی رو میخوام با همون شرایط قبل و تمام مواردی که قبلاً تو طراحی استفاده کردیدم از مورد چندزبانه بودن که طراحی کردیم بحث repasitory , service, model و تمام موارد فوق پروسیجر زیر رو برام کنترلر کنی
+
+
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;

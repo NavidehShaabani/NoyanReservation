@@ -7,6 +7,7 @@ using TowerApi.Repositories.Unit;
 using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Auth;
 using TowerApi.Services.Building;
+using TowerApi.Services.Geo;
 using TowerApi.Services.Localization;
 using TowerApi.Services.Organization;
 using TowerApi.Services.Profile;
@@ -27,7 +28,8 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IOrganizationService, OrganizationService>();
             _services.AddScoped<ILocalizationService,LocalizationService>();
             _services.AddScoped<IApiResponseFactory,ApiResponseFactory>();
-           
+            _services.AddScoped<IGeoService, GeoService>();
+            
             return _services;
         }
     }

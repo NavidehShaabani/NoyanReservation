@@ -2,6 +2,7 @@
 using TowerApi.Repositories.Auth;
 using TowerApi.Repositories.Building;
 using TowerApi.Repositories.DataBase;
+using TowerApi.Repositories.Geo;
 using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.Organization;
 using TowerApi.Repositories.Profile;
@@ -24,7 +25,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IBuildingRepository,BuildingRepository>();
             _services.AddScoped<IUnitRepository,UnitRepository>();
             _services.AddScoped<IProfileRepository,ProfileRepository>();
-
+            _services.AddScoped<IGeoRepository, GeoRepository>();
 
             return _services;
         }
