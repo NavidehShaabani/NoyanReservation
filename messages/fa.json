@@ -20,5 +20,38 @@
   "select-role": {
     "pageTitle": "می خواهید با کدام نقش وارد شوید؟",
     "buttonTitle": "انتخاب"
+  },
+  "building": {
+    "residential-complex": "مجتمع مسکونی",
+    "standalone-building": "ساختمان مستقل",
+    "residential-complex_desc": "مجتمع مسکونی شامل چند برج یا آپارتمان",
+    "standalone-building_desc": "یک برج یا آپارتمان",
+    "building-type-form-title": "ساختار مسکونی خود را تعریف کنید",
+    "building-type-form-desc": "نوع ملک مسکونی‌ را که می‌خواهید مدیریت کنید، انتخاب کنید",
+    "select": "انتخاب",
+    "buildingName": "نام ساختمان",
+    "buildingAddress": "آدرس ساختمان",
+    "buildingDescription": "توضیحات",
+    "buildingNamePlaceholder": "نام ساختمان را وارد کنید",
+    "buildingAddressPlaceholder": "آدرس ساختمان را وارد کنید",
+    "buildingDescriptionPlaceholder": "توضیحات را وارد کنید",
+    "singleBuildingFormTitle": "مشخصات ساختمان",
+    "singleBuildingFormDesc": "نام، آدرس و سایر اطلاعات ساختمان خود را وارد کنید",
+    "residentialComplexFormTitle": "مشخصات مجتمع",
+    "residentialComplexFormDesc": "نام و توضیحات مجتمع مسکونی خود را وارد کنید",
+    "residentialComplexName": "نام مجتمع",
+    "residentialComplexDescription": "توضیحات",
+    "residentialComplexNamePlaceholder": "نام مجتمع را وارد کنید",
+    "residentialComplexDescriptionPlaceholder": "توضیحات را وارد کنید"
+  },
+  "geo": {
+    "geoFormTitle": "موقعیت مکانی",
+    "geoFormDescription": "کشور، استان و شهر محل ساختمان را انتخاب کنید",
+    "countrySelectLabel": "کشور",
+    "regionSelectLabel": "استان",
+    "citySelectLabel": "شهرستان",
+    "countrySelectPlaceholder": "کشور را انتخاب کنید",
+    "regionSelectPlaceholder": "استان را انتخاب کنید",
+    "citySelectPlaceholder": "شهر را انتخاب کنید"
   }
 }

@@ -50,6 +50,7 @@ type AuthContextType = {
   setToken: React.Dispatch<React.SetStateAction<string | null>>;
   user: User | null;
   setUser: React.Dispatch<React.SetStateAction<User | null>>;
+  isAuthReady: boolean;
 };
 
 export const AuthContext = createContext<AuthContextType>({
@@ -57,6 +58,7 @@ export const AuthContext = createContext<AuthContextType>({
   setToken: () => {},
   user: null,
   setUser: () => {},
+  isAuthReady: false,
 });
 
 export default function AuthProvider({
@@ -66,49 +68,58 @@ export default function AuthProvider({
 }) {
   const [token, setToken] = useState<string | null>(null);
   const [user, setUser] = useState<User | null>(null);
+  const [isAuthReady, setIsAuthReady] = useState(false);
 
   useEffect(() => {
     async function callRefresh() {
-      const refreshResponse = await fetch(
-        "http://10.208.8.91:5295/api/Auth/refresh",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: "",
-        },
-      );
-
-      if (!refreshResponse.ok) {
-        return;
-      }
-
-      const refreshData = await refreshResponse.json();
-      const accessToken = refreshData.accessToken;
-      const userInfoResponse = await fetch(
-        "http://10.208.8.91:5295/api/Auth/GetUserInfo",
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
+      try {
+        const refreshResponse = await fetch(
+          "http://10.208.8.91:5295/api/Auth/refresh",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+            body: "",
           },
-        },
-      );
-      if (!userInfoResponse.ok) {
-        return;
+        );
+
+        if (!refreshResponse.ok) {
+          return;
+        }
+
+        const refreshData = await refreshResponse.json();
+        const accessToken = refreshData.accessToken;
+        const userInfoResponse = await fetch(
+          "http://10.208.8.91:5295/api/Auth/GetUserInfo",
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          },
+        );
+        if (!userInfoResponse.ok) {
+          return;
+        }
+
+        const userInfoData = await userInfoResponse.json();
+
+        setToken(accessToken);
+        setUser(userInfoData.user);
+      } catch (error) {
+        console.error("Failed to initialize authentication:", error);
+      } finally {
+        setIsAuthReady(true);
       }
-
-      const userInfoData = await userInfoResponse.json();
-
-      setToken(accessToken);
-      setUser(userInfoData.user);
     }
     callRefresh();
 
     // console.log("for testttttt", token);
   }, []);
   return (
-    <AuthContext.Provider value={{ token, setToken, user, setUser }}>
+    <AuthContext.Provider
+      value={{ token, setToken, user, setUser, isAuthReady }}
+    >
       {children}
     </AuthContext.Provider>
   );

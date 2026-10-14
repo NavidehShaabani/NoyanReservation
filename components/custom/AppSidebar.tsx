@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "@/context/AuthProvider";
 import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 import {
   Sidebar,
   SidebarContent,
@@ -36,6 +37,7 @@ export default function AppSidebar() {
     (role) => role.roleId === user.activeRoleId,
   );
   const locale = useLocale() as locale;
+  const router = useRouter();
   const { setOpenMobile } = useSidebar();
   console.log("map list", activeRole);
   return (
@@ -74,7 +76,9 @@ export default function AppSidebar() {
                   const Icon = iconSelector(menu.icon);
                   return (
                     <SidebarMenuItem key={menu.menuId}>
-                      <SidebarMenuButton>
+                      <SidebarMenuButton
+                        onClick={() => router.push(`/${locale}${menu.menuUrl}`)}
+                      >
                         <Icon />
                         {menu.name[locale]}
                       </SidebarMenuButton>
