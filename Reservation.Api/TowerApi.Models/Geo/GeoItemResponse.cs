@@ -10,7 +10,7 @@ namespace TowerApi.Models.Geo
     {
         public string GeoId { get; set; } = string.Empty;
 
-        public string? GeoNameFr { get; set; }
+        public string? GeoNameFa { get; set; }
 
         public string? GeoNameEn { get; set; }
 
@@ -28,7 +28,7 @@ namespace TowerApi.Models.Geo
 
         public string? PL5 { get; set; }
 
-        public string? GeoPathFr { get; set; }
+        public string? GeoPathFa { get; set; }
 
         public string? GeoPathEn { get; set; }
     }
