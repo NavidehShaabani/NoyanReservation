@@ -520,187 +520,187 @@ EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'App_Menus', @level2type=N'COLUMN',@level2name=N'MenuId'
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[UnitsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[UnitsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[UnitsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[UnitsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesGetById]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesGet]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesDel]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesActive]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypeRolesGet]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypeRolesAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeesGetById]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeesGet]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeesEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeesDel]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeesAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeesActive]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsGetById]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsActive]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[BuildingsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[BuildingsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[BuildingsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[BuildingsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[Base_GeoGetChildren]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UsersSignup]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UsersOtpVerify]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UsersLoginGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionUpdateLastSeen]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionSetActiveRole]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionRevokeAll]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionRevoke]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionGetActive]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionCreate]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionClearActiveRole]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionAuthorizationGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UsersCompleteProfile]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserProfilesGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserLogin]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserGetForSession]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_UserGetForRefresh]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenSave]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRotate]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRevokeSession]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRevokeAll]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRevoke]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenGetActiveSessions]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenGetActive]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenCleanupExpired]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_LoginAttemptReset]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_LoginAttemptFail]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/15/2026 6:04:19 PM ******/
 DROP PROCEDURE [dbo].[App_LoginAttemptCheck]
 GO
 ALTER TABLE [dbo].[UserResidencies] DROP CONSTRAINT [FK_UserResidencies_Users]
@@ -716,6 +716,8 @@ GO
 ALTER TABLE [dbo].[Spaces] DROP CONSTRAINT [FK_Spaces_Buildings]
 GO
 ALTER TABLE [dbo].[Organizations] DROP CONSTRAINT [FK_Organizations_Geo]
+GO
+ALTER TABLE [dbo].[Organizations] DROP CONSTRAINT [FK_Organizations_Base_LookupValues]
 GO
 ALTER TABLE [dbo].[EmployeeTypeRoles] DROP CONSTRAINT [FK_EmployeeTypeRoles_Roles]
 GO
@@ -853,126 +855,126 @@ ALTER TABLE [dbo].[App_LoginAttempts] DROP CONSTRAINT [DF_LoginAttempts_LastAtte
 GO
 ALTER TABLE [dbo].[App_LoginAttempts] DROP CONSTRAINT [DF_LoginAttempts_FailedCount]
 GO
-/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[EmployeeTypeRoles] DROP CONSTRAINT [UQ_EmployeeTypeRoles]
 GO
-/****** Object:  Index [UQ_Users_Username]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_Users_Username]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [UQ_Users_Username]
 GO
-/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [UQ_Users_NationalId]
 GO
-/****** Object:  Index [UQ_Users_Email]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_Users_Email]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [UQ_Users_Email]
 GO
-/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_UserRoles] DROP CONSTRAINT [UQ_UserRoles_User_Role]
 GO
-/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_UserProfiles] DROP CONSTRAINT [UQ_UserProfiles_UserId]
 GO
-/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_UserOtpRateLimits] DROP CONSTRAINT [UQ_UserOtpRateLimits_Mobile]
 GO
-/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_RoleMenus] DROP CONSTRAINT [UQ_RoleMenus_Role_Menu]
 GO
-/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_RefreshTokens] DROP CONSTRAINT [UQ_RefreshTokens_TokenHash]
 GO
-/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UserResidencies]') AND type in (N'U'))
 DROP TABLE [dbo].[UserResidencies]
 GO
-/****** Object:  Table [dbo].[Units]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Units]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Units]') AND type in (N'U'))
 DROP TABLE [dbo].[Units]
 GO
-/****** Object:  Table [dbo].[Spaces]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Spaces]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Spaces]') AND type in (N'U'))
 DROP TABLE [dbo].[Spaces]
 GO
-/****** Object:  Table [dbo].[Organizations]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Organizations]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Organizations]') AND type in (N'U'))
 DROP TABLE [dbo].[Organizations]
 GO
-/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmployeeTypes]') AND type in (N'U'))
 DROP TABLE [dbo].[EmployeeTypes]
 GO
-/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmployeeTypeRoles]') AND type in (N'U'))
 DROP TABLE [dbo].[EmployeeTypeRoles]
 GO
-/****** Object:  Table [dbo].[Employees]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Employees]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Employees]') AND type in (N'U'))
 DROP TABLE [dbo].[Employees]
 GO
-/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmployeeAssignments]') AND type in (N'U'))
 DROP TABLE [dbo].[EmployeeAssignments]
 GO
-/****** Object:  Table [dbo].[Buildings]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Buildings]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Buildings]') AND type in (N'U'))
 DROP TABLE [dbo].[Buildings]
 GO
-/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Base_LookupValues]') AND type in (N'U'))
 DROP TABLE [dbo].[Base_LookupValues]
 GO
-/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Base_Lookup]') AND type in (N'U'))
 DROP TABLE [dbo].[Base_Lookup]
 GO
-/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Base_Geo]') AND type in (N'U'))
 DROP TABLE [dbo].[Base_Geo]
 GO
-/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserSessions]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserSessions]
 GO
-/****** Object:  Table [dbo].[App_Users]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_Users]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_Users]') AND type in (N'U'))
 DROP TABLE [dbo].[App_Users]
 GO
-/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserRoles]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserRoles]
 GO
-/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserProfiles]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserProfiles]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserOtpRequests]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserOtpRequests]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserOtpRateLimits]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserOtpRateLimits]
 GO
-/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_Roles]') AND type in (N'U'))
 DROP TABLE [dbo].[App_Roles]
 GO
-/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_RoleMenus]') AND type in (N'U'))
 DROP TABLE [dbo].[App_RoleMenus]
 GO
-/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_RefreshTokens]') AND type in (N'U'))
 DROP TABLE [dbo].[App_RefreshTokens]
 GO
-/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_Menus]') AND type in (N'U'))
 DROP TABLE [dbo].[App_Menus]
 GO
-/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/15/2026 6:04:19 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_LoginAttempts]') AND type in (N'U'))
 DROP TABLE [dbo].[App_LoginAttempts]
 GO
-/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -988,7 +990,7 @@ CREATE TABLE [dbo].[App_LoginAttempts](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1018,7 +1020,7 @@ CREATE TABLE [dbo].[App_Menus](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1041,7 +1043,7 @@ CREATE TABLE [dbo].[App_RefreshTokens](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1063,7 +1065,7 @@ CREATE TABLE [dbo].[App_RoleMenus](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1083,7 +1085,7 @@ CREATE TABLE [dbo].[App_Roles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1103,7 +1105,7 @@ CREATE TABLE [dbo].[App_UserOtpRateLimits](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1129,7 +1131,7 @@ CREATE TABLE [dbo].[App_UserOtpRequests](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1156,7 +1158,7 @@ CREATE TABLE [dbo].[App_UserProfiles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1180,7 +1182,7 @@ CREATE TABLE [dbo].[App_UserRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_Users]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_Users]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1211,7 +1213,7 @@ CREATE TABLE [dbo].[App_Users](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1232,7 +1234,7 @@ CREATE TABLE [dbo].[App_UserSessions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1256,7 +1258,7 @@ CREATE TABLE [dbo].[Base_Geo](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1270,7 +1272,7 @@ CREATE TABLE [dbo].[Base_Lookup](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1287,7 +1289,7 @@ CREATE TABLE [dbo].[Base_LookupValues](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Buildings]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Buildings]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1310,7 +1312,7 @@ CREATE TABLE [dbo].[Buildings](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1337,7 +1339,7 @@ CREATE TABLE [dbo].[EmployeeAssignments](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Employees]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Employees]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1369,7 +1371,7 @@ CREATE TABLE [dbo].[Employees](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1390,7 +1392,7 @@ CREATE TABLE [dbo].[EmployeeTypeRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1411,7 +1413,7 @@ CREATE TABLE [dbo].[EmployeeTypes](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Organizations]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Organizations]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1434,7 +1436,7 @@ CREATE TABLE [dbo].[Organizations](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Spaces]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Spaces]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1462,7 +1464,7 @@ CREATE TABLE [dbo].[Spaces](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Units]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[Units]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1487,7 +1489,7 @@ CREATE TABLE [dbo].[Units](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1553,6 +1555,8 @@ GO
 INSERT [dbo].[App_RefreshTokens] ([Id], [UserId], [TokenHash], [ExpiresAt], [CreatedAt], [RevokedAt], [ReplacedByTokenHash], [SessionId], [DeviceName], [UserAgent], [CreatedIp]) VALUES (11, 1, N'5E73D6FF4DDBF0EFF7483632099C1C666BF6B7A9384267E8123FA62FFB6F33AF', CAST(N'2026-11-12T11:56:20.793' AS DateTime), CAST(N'2026-10-13T11:56:20.793' AS DateTime), NULL, NULL, N'8a706548-5e2d-42ba-b329-61a140555874', N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1')
 GO
 INSERT [dbo].[App_RefreshTokens] ([Id], [UserId], [TokenHash], [ExpiresAt], [CreatedAt], [RevokedAt], [ReplacedByTokenHash], [SessionId], [DeviceName], [UserAgent], [CreatedIp]) VALUES (12, 1, N'8A8012C18C2259A9FA45FAA57503BC904C567D649AFEB1DF8F6D3D99C4D1A857', CAST(N'2026-11-13T12:07:12.187' AS DateTime), CAST(N'2026-10-14T12:07:12.187' AS DateTime), NULL, NULL, N'6ce80ef5-41e5-4395-bff3-ff1ccaae83a9', N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', N'127.0.0.1')
+GO
+INSERT [dbo].[App_RefreshTokens] ([Id], [UserId], [TokenHash], [ExpiresAt], [CreatedAt], [RevokedAt], [ReplacedByTokenHash], [SessionId], [DeviceName], [UserAgent], [CreatedIp]) VALUES (13, 1, N'5415F0C14FA3B5BE24279F8DA230AC1E2BAA98FEB82D0CE1EAEE234B17FF81DF', CAST(N'2026-11-14T14:32:32.920' AS DateTime), CAST(N'2026-10-15T14:32:32.920' AS DateTime), NULL, NULL, N'a93a2d0a-8627-473a-916a-d0171c4ec751', N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', N'127.0.0.1')
 GO
 SET IDENTITY_INSERT [dbo].[App_RefreshTokens] OFF
 GO
@@ -1802,7 +1806,7 @@ SET IDENTITY_INSERT [dbo].[App_UserRoles] OFF
 GO
 SET IDENTITY_INSERT [dbo].[App_Users] ON 
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (1, N'admin', N'1234', N'admin@boosatan.ir', N'09120000001', N'مدیر', N'سیستم', N'0012345678', 1, CAST(N'1985-01-15T00:00:00.000' AS DateTime), NULL, 1, CAST(N'2026-10-14T15:37:11.487' AS DateTime), 1, NULL, CAST(N'2026-09-01T17:22:05.450' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (1, N'admin', N'1234', N'admin@boosatan.ir', N'09120000001', N'مدیر', N'سیستم', N'0012345678', 1, CAST(N'1985-01-15T00:00:00.000' AS DateTime), NULL, 1, CAST(N'2026-10-15T18:02:32.127' AS DateTime), 1, NULL, CAST(N'2026-09-01T17:22:05.450' AS DateTime), NULL, NULL, NULL)
 GO
 INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (2, N'club.manager', N'1234', N'club.manager@boosatan.ir', N'09120000002', N'رضا', N'احمدی', N'0012345679', 1, CAST(N'1988-03-20T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.453' AS DateTime), NULL, NULL, NULL)
 GO
@@ -1829,6 +1833,8 @@ GO
 INSERT [dbo].[App_UserSessions] ([SessionId], [UserId], [ActiveRoleId], [DeviceName], [UserAgent], [CreatedIp], [CreatedAt], [LastSeenAt], [RevokedAt]) VALUES (N'd93c5191-db78-4303-b2f9-17b8e1b24da7', 1, NULL, N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1', CAST(N'2026-10-13T11:56:13.0404173' AS DateTime2), CAST(N'2026-10-13T11:56:13.0404173' AS DateTime2), NULL)
 GO
 INSERT [dbo].[App_UserSessions] ([SessionId], [UserId], [ActiveRoleId], [DeviceName], [UserAgent], [CreatedIp], [CreatedAt], [LastSeenAt], [RevokedAt]) VALUES (N'8a706548-5e2d-42ba-b329-61a140555874', 1, NULL, N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1', CAST(N'2026-10-13T11:56:20.7867739' AS DateTime2), CAST(N'2026-10-13T11:56:20.7867739' AS DateTime2), NULL)
+GO
+INSERT [dbo].[App_UserSessions] ([SessionId], [UserId], [ActiveRoleId], [DeviceName], [UserAgent], [CreatedIp], [CreatedAt], [LastSeenAt], [RevokedAt]) VALUES (N'a93a2d0a-8627-473a-916a-d0171c4ec751', 1, NULL, N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', N'127.0.0.1', CAST(N'2026-10-15T14:32:32.4607320' AS DateTime2), CAST(N'2026-10-15T14:32:32.4607320' AS DateTime2), NULL)
 GO
 INSERT [dbo].[App_UserSessions] ([SessionId], [UserId], [ActiveRoleId], [DeviceName], [UserAgent], [CreatedIp], [CreatedAt], [LastSeenAt], [RevokedAt]) VALUES (N'8fcfb327-1c13-4260-8642-fc3977c332a4', 1, 1, N'Mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1', CAST(N'2026-10-06T13:33:30.0777887' AS DateTime2), CAST(N'2026-10-06T13:36:20.3610257' AS DateTime2), NULL)
 GO
@@ -1868,7 +1874,7 @@ SET IDENTITY_INSERT [dbo].[Buildings] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Organizations] ON 
 GO
-INSERT [dbo].[Organizations] ([OrgId], [OrgName], [OrgType], [GeoId], [OrgDesc], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (1, N'برج بوستان', 1, N'010101', N'برج بوستان سلحشوران', 1, 0, CAST(N'2026-10-12T19:44:54.423' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Organizations] ([OrgId], [OrgName], [OrgType], [GeoId], [OrgDesc], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (1, N'برج بوستان', 1001, N'010101', N'برج بوستان سلحشوران', 1, 0, CAST(N'2026-10-12T19:44:54.423' AS DateTime), NULL, NULL, NULL)
 GO
 SET IDENTITY_INSERT [dbo].[Organizations] OFF
 GO
@@ -1912,13 +1918,13 @@ SET IDENTITY_INSERT [dbo].[UserResidencies] OFF
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_RefreshTokens] ADD  CONSTRAINT [UQ_RefreshTokens_TokenHash] UNIQUE NONCLUSTERED 
 (
 	[TokenHash] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_RoleMenus] ADD  CONSTRAINT [UQ_RoleMenus_Role_Menu] UNIQUE NONCLUSTERED 
 (
 	[RoleId] ASC,
@@ -1927,19 +1933,19 @@ ALTER TABLE [dbo].[App_RoleMenus] ADD  CONSTRAINT [UQ_RoleMenus_Role_Menu] UNIQU
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_UserOtpRateLimits] ADD  CONSTRAINT [UQ_UserOtpRateLimits_Mobile] UNIQUE NONCLUSTERED 
 (
 	[Mobile] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_UserProfiles] ADD  CONSTRAINT [UQ_UserProfiles_UserId] UNIQUE NONCLUSTERED 
 (
 	[UserId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_UserRoles] ADD  CONSTRAINT [UQ_UserRoles_User_Role] UNIQUE NONCLUSTERED 
 (
 	[UserId] ASC,
@@ -1948,7 +1954,7 @@ ALTER TABLE [dbo].[App_UserRoles] ADD  CONSTRAINT [UQ_UserRoles_User_Role] UNIQU
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_Users_Email]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_Users_Email]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Email] UNIQUE NONCLUSTERED 
 (
 	[Email] ASC
@@ -1956,7 +1962,7 @@ ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Email] UNIQUE NONCLUSTER
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_NationalId] UNIQUE NONCLUSTERED 
 (
 	[NationalId] ASC
@@ -1964,13 +1970,13 @@ ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_NationalId] UNIQUE NONCL
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_Users_Username]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_Users_Username]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Username] UNIQUE NONCLUSTERED 
 (
 	[Username] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/15/2026 6:04:19 PM ******/
 ALTER TABLE [dbo].[EmployeeTypeRoles] ADD  CONSTRAINT [UQ_EmployeeTypeRoles] UNIQUE NONCLUSTERED 
 (
 	[EmployeeTypeId] ASC,
@@ -2188,6 +2194,11 @@ REFERENCES [dbo].[App_Roles] ([RoleId])
 GO
 ALTER TABLE [dbo].[EmployeeTypeRoles] CHECK CONSTRAINT [FK_EmployeeTypeRoles_Roles]
 GO
+ALTER TABLE [dbo].[Organizations]  WITH CHECK ADD  CONSTRAINT [FK_Organizations_Base_LookupValues] FOREIGN KEY([OrgType])
+REFERENCES [dbo].[Base_LookupValues] ([LookupValueId])
+GO
+ALTER TABLE [dbo].[Organizations] CHECK CONSTRAINT [FK_Organizations_Base_LookupValues]
+GO
 ALTER TABLE [dbo].[Organizations]  WITH CHECK ADD  CONSTRAINT [FK_Organizations_Geo] FOREIGN KEY([GeoId])
 REFERENCES [dbo].[Base_Geo] ([GeoId])
 GO
@@ -2224,7 +2235,7 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[UserResidencies] CHECK CONSTRAINT [FK_UserResidencies_Users]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2293,7 +2304,7 @@ BEGIN
         @LockedUntil AS LockedUntil;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2381,7 +2392,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2396,7 +2407,7 @@ BEGIN
     WHERE UsernameKey = @UsernameKey;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2419,7 +2430,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2471,7 +2482,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2523,7 +2534,7 @@ BEGIN
     ORDER BY CreatedAt DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2550,7 +2561,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2577,7 +2588,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2604,7 +2615,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2753,7 +2764,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2805,7 +2816,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2930,7 +2941,7 @@ BEGIN
     OPTION (MAXRECURSION 100);
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3140,7 +3151,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3473,7 +3484,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3567,7 +3578,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4024,7 +4035,7 @@ BEGIN
 
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4082,7 +4093,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4144,7 +4155,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4206,7 +4217,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4242,7 +4253,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4281,7 +4292,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4331,7 +4342,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4382,7 +4393,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4511,7 +4522,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4538,7 +4549,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4648,7 +4659,7 @@ BEGIN
         m.SortOrder;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5113,7 +5124,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5662,7 +5673,7 @@ END;
 
 
 GO
-/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5776,7 +5787,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5895,7 +5906,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5986,7 +5997,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6116,7 +6127,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6229,7 +6240,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6271,7 +6282,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6389,7 +6400,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6431,7 +6442,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6546,7 +6557,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6592,7 +6603,7 @@ BEGIN
     FETCH NEXT @PageSize ROWS ONLY;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6611,7 +6622,7 @@ BEGIN
       AND ISNULL(IsDeleted, 0) = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6673,7 +6684,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6978,7 +6989,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7043,7 +7054,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7241,7 +7252,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7308,7 +7319,7 @@ BEGIN
     FETCH NEXT @PageSize ROWS ONLY;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7375,7 +7386,7 @@ BEGIN
     ORDER BY ea.StartDate DESC, ea.EmployeeAssignmentId DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7453,7 +7464,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7486,7 +7497,7 @@ BEGIN
     ORDER BY et.EmployeeTypeName, r.RoleName;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7528,7 +7539,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7598,7 +7609,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7663,7 +7674,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7728,7 +7739,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7769,7 +7780,7 @@ BEGIN
     FETCH NEXT @PageSize ROWS ONLY;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7808,7 +7819,7 @@ BEGIN
       AND ISNULL(etr.IsDeleted, 0) = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7940,7 +7951,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8030,7 +8041,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8175,7 +8186,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8303,7 +8314,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8439,7 +8450,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8512,7 +8523,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8659,7 +8670,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/15/2026 5:54:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/15/2026 6:04:19 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
