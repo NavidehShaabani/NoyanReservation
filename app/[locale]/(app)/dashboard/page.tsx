@@ -214,10 +214,8 @@ export default async function Dashboard() {
            mx-2 md:ms-0
           mb-2
           flex
-          flex-1
-        
+          flex-1 
           items-center
-        
         "
     >
       <div
@@ -225,14 +223,10 @@ export default async function Dashboard() {
             w-full
             h-full  
             max-w-10xl
-          
-
             rounded-[10px]
             bg-background
-
             shadow-[16px_16px_32px_rgba(209,207,204,0.55)]
             p-8 md:p-12
-
             flex
             flex-col
             gap-10
