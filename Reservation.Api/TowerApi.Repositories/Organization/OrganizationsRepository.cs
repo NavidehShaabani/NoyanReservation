@@ -36,7 +36,7 @@ namespace TowerApi.Repositories.Organization
             parameters.Add(
                 "@OrgType",
                 request.OrgType,
-                DbType.Byte);
+                DbType.Int32);
 
             parameters.Add(
                 "@GeoId",
@@ -115,7 +115,7 @@ namespace TowerApi.Repositories.Organization
             parameters.Add(
                 "@OrgType",
                 request.OrgType,
-                DbType.Byte);
+                DbType.Int32);
 
             parameters.Add(
                 "@GeoId",
@@ -290,7 +290,7 @@ namespace TowerApi.Repositories.Organization
             parameters.Add(
                 "@OrgType",
                 request.OrgType,
-                DbType.Byte);
+                DbType.Int32);
 
             parameters.Add(
                 "@GeoId",

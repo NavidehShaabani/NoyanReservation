@@ -168,11 +168,119 @@
   <data name="Common.SystemError" xml:space="preserve">
     <value>خطایی در سیستم رخ داده است.</value>
   </data>
+  <data name="Common.SystemError1" xml:space="preserve">
+    <value>خطای داخلی سیستم</value>
+  </data>
   <data name="Common.Unauthorized" xml:space="preserve">
     <value>کاربر احراز هویت نشده است.</value>
   </data>
   <data name="Common.UpdatedSuccessfully" xml:space="preserve">
     <value>با موفقیت ویرایش شد.</value>
+  </data>
+  <data name="EmployeeAssignments.ActiveSuccessfully" xml:space="preserve">
+    <value>تغییر وضعیت محل خدمت</value>
+  </data>
+  <data name="EmployeeAssignments.AddSuccessfully" xml:space="preserve">
+    <value>ثبت محل خدمت</value>
+  </data>
+  <data name="EmployeeAssignments.Conflict" xml:space="preserve">
+    <value>تداخل محل خدمت</value>
+  </data>
+  <data name="EmployeeAssignments.DeleteSuccessfully" xml:space="preserve">
+    <value>حذف محل خدمت</value>
+  </data>
+  <data name="EmployeeAssignments.EditSuccessfully" xml:space="preserve">
+    <value>ویرایش محل خدمت</value>
+  </data>
+  <data name="EmployeeAssignments.GetSuccessfully" xml:space="preserve">
+    <value>دریافت محل‌های خدمت</value>
+  </data>
+  <data name="EmployeeAssignments.InvalidData" xml:space="preserve">
+    <value>اطلاعات محل خدمت نامعتبر است</value>
+  </data>
+  <data name="EmployeeAssignments.InvalidDateRange" xml:space="preserve">
+    <value>بازه تاریخ محل خدمت نامعتبر است</value>
+  </data>
+  <data name="EmployeeAssignments.NotFound" xml:space="preserve">
+    <value>محل خدمت پیدا نشد</value>
+  </data>
+  <data name="EmployeeAssignments.ReferenceNotFound" xml:space="preserve">
+    <value>کارمند، سازمان یا ساختمان پیدا نشد</value>
+  </data>
+  <data name="Employees.ActiveSuccessfully" xml:space="preserve">
+    <value>تغییر وضعیت کارمند</value>
+  </data>
+  <data name="Employees.AddSuccessfully" xml:space="preserve">
+    <value>ثبت کارمند</value>
+  </data>
+  <data name="Employees.Conflict" xml:space="preserve">
+    <value>اطلاعات تکراری یا تعارض</value>
+  </data>
+  <data name="Employees.DeleteSuccessfully" xml:space="preserve">
+    <value>حذف کارمند</value>
+  </data>
+  <data name="Employees.EditSuccessfully" xml:space="preserve">
+    <value>ویرایش کارمند</value>
+  </data>
+  <data name="Employees.GetSuccessfully" xml:space="preserve">
+    <value>دریافت کارکنان</value>
+  </data>
+  <data name="Employees.InvalidData" xml:space="preserve">
+    <value>اطلاعات کارمند نامعتبر است</value>
+  </data>
+  <data name="Employees.InvalidDateRange" xml:space="preserve">
+    <value>بازه تاریخ استخدام نامعتبر است</value>
+  </data>
+  <data name="Employees.InvalidSalary" xml:space="preserve">
+    <value>حقوق یا نرخ ساعتی نامعتبر است</value>
+  </data>
+  <data name="Employees.NotFound" xml:space="preserve">
+    <value>کارمند پیدا نشد</value>
+  </data>
+  <data name="Employees.ReferenceNotFound" xml:space="preserve">
+    <value>سازمان یا نوع کارمند پیدا نشد</value>
+  </data>
+  <data name="EmployeeTypeRoles.AddSuccessfully" xml:space="preserve">
+    <value>افزودن نقش به نوع کارمند</value>
+  </data>
+  <data name="EmployeeTypeRoles.Conflict" xml:space="preserve">
+    <value>ارتباط نقش تکراری است</value>
+  </data>
+  <data name="EmployeeTypeRoles.GetSuccessfully" xml:space="preserve">
+    <value>دریافت نقش‌های نوع کارمند</value>
+  </data>
+  <data name="EmployeeTypeRoles.InvalidData" xml:space="preserve">
+    <value>اطلاعات نقش نامعتبر است</value>
+  </data>
+  <data name="EmployeeTypeRoles.NotFound" xml:space="preserve">
+    <value>نوع کارمند یا نقش پیدا نشد</value>
+  </data>
+  <data name="EmployeeTypes.ActiveSuccessfully" xml:space="preserve">
+    <value>تغییر وضعیت نوع کارمند</value>
+  </data>
+  <data name="EmployeeTypes.AddSuccessfully" xml:space="preserve">
+    <value>ثبت نوع کارمند</value>
+  </data>
+  <data name="EmployeeTypes.Conflict" xml:space="preserve">
+    <value>تعارض در ثبت یا حذف</value>
+  </data>
+  <data name="EmployeeTypes.DeleteSuccessfully" xml:space="preserve">
+    <value>حذف نوع کارمند</value>
+  </data>
+  <data name="EmployeeTypes.EditSuccessfully" xml:space="preserve">
+    <value>ویرایش نوع کارمند</value>
+  </data>
+  <data name="EmployeeTypes.GetSuccessfully" xml:space="preserve">
+    <value>دریافت نوع‌های کارمند</value>
+  </data>
+  <data name="EmployeeTypes.InvalidData" xml:space="preserve">
+    <value>اطلاعات نامعتبر است</value>
+  </data>
+  <data name="EmployeeTypes.NameRequired" xml:space="preserve">
+    <value>نام نوع کارمند الزامی است</value>
+  </data>
+  <data name="EmployeeTypes.NotFound" xml:space="preserve">
+    <value>نوع کارمند پیدا نشد</value>
   </data>
   <data name="Geo.GetChildrenSuccessfully" xml:space="preserve">
     <value>اطلاعات موقعیت‌های جغرافیایی با موفقیت دریافت شد.</value>

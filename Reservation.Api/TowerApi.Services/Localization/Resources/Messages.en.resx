@@ -168,11 +168,119 @@
   <data name="Common.SystemError" xml:space="preserve">
     <value>A system error occurred.</value>
   </data>
+  <data name="Common.SystemError1" xml:space="preserve">
+    <value>An internal system error occurred. Please try again later.</value>
+  </data>
   <data name="Common.Unauthorized" xml:space="preserve">
     <value>User is not authenticated.</value>
   </data>
   <data name="Common.UpdatedSuccessfully" xml:space="preserve">
     <value>Updated successfully.</value>
+  </data>
+  <data name="EmployeeAssignments.ActiveSuccessfully" xml:space="preserve">
+    <value>Employee assignment status changed successfully.</value>
+  </data>
+  <data name="EmployeeAssignments.AddSuccessfully" xml:space="preserve">
+    <value>Employee assignment created successfully.</value>
+  </data>
+  <data name="EmployeeAssignments.Conflict" xml:space="preserve">
+    <value>The date range or location conflicts with another active assignment.</value>
+  </data>
+  <data name="EmployeeAssignments.DeleteSuccessfully" xml:space="preserve">
+    <value>Employee assignment deleted successfully.</value>
+  </data>
+  <data name="EmployeeAssignments.EditSuccessfully" xml:space="preserve">
+    <value>Employee assignment updated successfully.</value>
+  </data>
+  <data name="EmployeeAssignments.GetSuccessfully" xml:space="preserve">
+    <value>Employee assignments retrieved successfully.</value>
+  </data>
+  <data name="EmployeeAssignments.InvalidData" xml:space="preserve">
+    <value>Invalid employee assignment information.</value>
+  </data>
+  <data name="EmployeeAssignments.InvalidDateRange" xml:space="preserve">
+    <value>The assignment end date cannot be earlier than the start date.</value>
+  </data>
+  <data name="EmployeeAssignments.NotFound" xml:space="preserve">
+    <value>The requested employee assignment was not found.</value>
+  </data>
+  <data name="EmployeeAssignments.ReferenceNotFound" xml:space="preserve">
+    <value>The requested employee, organization, building, or space was not found or is invalid.</value>
+  </data>
+  <data name="Employees.ActiveSuccessfully" xml:space="preserve">
+    <value>Employee status changed successfully.</value>
+  </data>
+  <data name="Employees.AddSuccessfully" xml:space="preserve">
+    <value>Employee created successfully.</value>
+  </data>
+  <data name="Employees.Conflict" xml:space="preserve">
+    <value>Employee information conflicts with existing data or contains duplicates.</value>
+  </data>
+  <data name="Employees.DeleteSuccessfully" xml:space="preserve">
+    <value>Employee deleted successfully.</value>
+  </data>
+  <data name="Employees.EditSuccessfully" xml:space="preserve">
+    <value>Employee information updated successfully.</value>
+  </data>
+  <data name="Employees.GetSuccessfully" xml:space="preserve">
+    <value>Employees retrieved successfully.</value>
+  </data>
+  <data name="Employees.InvalidData" xml:space="preserve">
+    <value>Invalid employee information.</value>
+  </data>
+  <data name="Employees.InvalidDateRange" xml:space="preserve">
+    <value>The employment end date cannot be earlier than the hire date.</value>
+  </data>
+  <data name="Employees.InvalidSalary" xml:space="preserve">
+    <value>Base salary and hourly rate cannot be negative.</value>
+  </data>
+  <data name="Employees.NotFound" xml:space="preserve">
+    <value>The requested employee was not found.</value>
+  </data>
+  <data name="Employees.ReferenceNotFound" xml:space="preserve">
+    <value>The requested organization or employee type was not found or is invalid.</value>
+  </data>
+  <data name="EmployeeTypeRoles.AddSuccessfully" xml:space="preserve">
+    <value>Role assigned to employee type successfully.</value>
+  </data>
+  <data name="EmployeeTypeRoles.Conflict" xml:space="preserve">
+    <value>This role has already been assigned to the employee type.</value>
+  </data>
+  <data name="EmployeeTypeRoles.GetSuccessfully" xml:space="preserve">
+    <value>Employee type roles retrieved successfully.</value>
+  </data>
+  <data name="EmployeeTypeRoles.InvalidData" xml:space="preserve">
+    <value>Invalid employee type ID or role ID.</value>
+  </data>
+  <data name="EmployeeTypeRoles.NotFound" xml:space="preserve">
+    <value>The requested employee type or role was not found.</value>
+  </data>
+  <data name="EmployeeTypes.ActiveSuccessfully" xml:space="preserve">
+    <value>Employee type status changed successfully.</value>
+  </data>
+  <data name="EmployeeTypes.AddSuccessfully" xml:space="preserve">
+    <value>Employee type created successfully.</value>
+  </data>
+  <data name="EmployeeTypes.Conflict" xml:space="preserve">
+    <value>The operation cannot be completed due to related or duplicate data.</value>
+  </data>
+  <data name="EmployeeTypes.DeleteSuccessfully" xml:space="preserve">
+    <value>Employee type deleted successfully.</value>
+  </data>
+  <data name="EmployeeTypes.EditSuccessfully" xml:space="preserve">
+    <value>Employee type updated successfully.</value>
+  </data>
+  <data name="EmployeeTypes.GetSuccessfully" xml:space="preserve">
+    <value>Employee types retrieved successfully.</value>
+  </data>
+  <data name="EmployeeTypes.InvalidData" xml:space="preserve">
+    <value>Invalid employee type information.</value>
+  </data>
+  <data name="EmployeeTypes.NameRequired" xml:space="preserve">
+    <value>Employee type name is required.</value>
+  </data>
+  <data name="EmployeeTypes.NotFound" xml:space="preserve">
+    <value>The requested employee type was not found.</value>
   </data>
   <data name="Geo.GetChildrenSuccessfully" xml:space="preserve">
     <value>Geographic locations retrieved successfully.</value>

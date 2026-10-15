@@ -7,6 +7,10 @@ using TowerApi.Repositories.Unit;
 using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Auth;
 using TowerApi.Services.Building;
+using TowerApi.Services.EmployeeAssignments;
+using TowerApi.Services.Employees;
+using TowerApi.Services.EmployeeTypeRoles;
+using TowerApi.Services.EmployeeTypes;
 using TowerApi.Services.Geo;
 using TowerApi.Services.Localization;
 using TowerApi.Services.Organization;
@@ -29,6 +33,10 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<ILocalizationService,LocalizationService>();
             _services.AddScoped<IApiResponseFactory,ApiResponseFactory>();
             _services.AddScoped<IGeoService, GeoService>();
+            _services.AddScoped<IEmployeeTypeService, EmployeeTypeService>();
+            _services.AddScoped<IEmployeeTypeRoleService, EmployeeTypeRoleService>();
+            _services.AddScoped<IEmployeeService, EmployeeService>();
+            _services.AddScoped<IEmployeeAssignmentService, EmployeeAssignmentService>();
             
             return _services;
         }

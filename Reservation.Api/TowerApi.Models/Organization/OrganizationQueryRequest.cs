@@ -4,7 +4,7 @@
     {
         public string? Search { get; set; }
 
-        public byte? OrgType { get; set; }
+        public int? OrgType { get; set; }
 
         public long? GeoId { get; set; }
 
