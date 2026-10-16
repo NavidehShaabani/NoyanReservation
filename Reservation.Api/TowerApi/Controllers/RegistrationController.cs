@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.Registration;
+using TowerApi.Models.Registration.TowerApi.Models.Registration;
 using TowerApi.Repositories.Registration;
 using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Helper;
@@ -47,7 +48,8 @@ namespace TowerApi.Controllers
                     _responseFactory.Success(
                         200,
                         "Common.CreatedSuccessfully",
-                        result.Data));
+                        //result.Data
+                        (object?)null));
             }
 
             return StatusCode(
@@ -74,7 +76,8 @@ namespace TowerApi.Controllers
                     _responseFactory.Success(
                         200,
                         "Common.UpdatedSuccessfully",
-                        result.Data));
+                        //result.Data
+                        (object?)null));
             }
 
             return StatusCode(
@@ -110,7 +113,8 @@ namespace TowerApi.Controllers
                     _responseFactory.Success(
                         200,
                         "Common.CreatedSuccessfully",
-                        result.Data));
+                        //result.Data
+                        (object?)null));
             }
 
             return StatusCode(

@@ -11,6 +11,7 @@ using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.Organization;
 using TowerApi.Repositories.Profile;
 using TowerApi.Repositories.RefreshTokens;
+using TowerApi.Repositories.Registration;
 using TowerApi.Repositories.SessionRepository;
 using TowerApi.Repositories.Unit;
 
@@ -34,7 +35,8 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IEmployeeTypeRoleRepository, EmployeeTypeRoleRepository>();
             _services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             _services.AddScoped<IEmployeeAssignmentRepository, EmployeeAssignmentRepository>();
-            
+            _services.AddScoped<IRegistrationRepository,RegistrationRepository>();
+
             return _services;
         }
     }
