@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Registration\**" />
+    <EmbeddedResource Remove="Registration\**" />
+    <None Remove="Registration\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TowerApi.Models\TowerApi.Models.csproj" />
     <ProjectReference Include="..\TowerApi.Repositories\TowerApi.Repositories.csproj" />
   </ItemGroup>

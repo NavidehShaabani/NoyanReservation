@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.Registration;
-using TowerApi.Models.Registration.TowerApi.Models.Registration;
 using TowerApi.Repositories.Registration;
 using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Helper;
@@ -30,25 +28,24 @@ namespace TowerApi.Controllers
             [FromBody] MobileSignupRequest request)
         {
             var requestIp =
-                HttpContext.Connection.RemoteIpAddress?
-                    .ToString();
+                HttpContext.Connection.RemoteIpAddress?.ToString();
 
             var userAgent =
                 Request.Headers.UserAgent.ToString();
 
-            var result =
-                await _registrationService.MobileSignupAsync(
-                    request,
-                    requestIp,
-                    userAgent);
+            var result = await _registrationService.MobileSignupAsync(
+                request,
+                requestIp,
+                userAgent);
 
             if (result.ResultCode == 200)
             {
+                // کد OTP، شناسه درخواست و اطلاعات حساس
+                // در پاسخ عمومی ارسال نمی‌شوند.
                 return Ok(
                     _responseFactory.Success(
                         200,
                         "Common.CreatedSuccessfully",
-                        //result.Data
                         (object?)null));
             }
 
@@ -67,8 +64,7 @@ namespace TowerApi.Controllers
             [FromBody] VerifyOtpRequest request)
         {
             var result =
-                await _registrationService.VerifyOtpAsync(
-                    request);
+                await _registrationService.VerifyOtpAsync(request);
 
             if (result.ResultCode == 200)
             {
@@ -76,7 +72,6 @@ namespace TowerApi.Controllers
                     _responseFactory.Success(
                         200,
                         "Common.UpdatedSuccessfully",
-                        //result.Data
                         (object?)null));
             }
 
@@ -88,8 +83,9 @@ namespace TowerApi.Controllers
                     ApiResponseMessageMapper.GetMessageKey(
                         result.ResultCode)));
         }
+    
 
-        [AllowAnonymous]
+    [AllowAnonymous]
         [HttpPost("username")]
         public async Task<IActionResult> UsernameSignup(
             [FromBody] UsernameSignupRequest request)
@@ -113,8 +109,7 @@ namespace TowerApi.Controllers
                     _responseFactory.Success(
                         200,
                         "Common.CreatedSuccessfully",
-                        //result.Data
-                        (object?)null));
+                        result.Data));
             }
 
             return StatusCode(

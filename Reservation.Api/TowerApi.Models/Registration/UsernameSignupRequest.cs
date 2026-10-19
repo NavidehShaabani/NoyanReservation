@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using TowerApi.Models.Registration.TowerApi.Models.Registration;
+
 
 namespace TowerApi.Models.Registration
 {

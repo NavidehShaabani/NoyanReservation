@@ -171,6 +171,9 @@
   <data name="Common.SystemError1" xml:space="preserve">
     <value>An internal system error occurred. Please try again later.</value>
   </data>
+  <data name="Common.TooManyRequests" xml:space="preserve">
+    <value>Too many requests. Please try again later.</value>
+  </data>
   <data name="Common.Unauthorized" xml:space="preserve">
     <value>User is not authenticated.</value>
   </data>
@@ -300,7 +303,55 @@
   <data name="Geo.ParentRequired" xml:space="preserve">
     <value>A parent ID is required for this geographic level.</value>
   </data>
-  <data name="ommon.TooManyRequests" xml:space="preserve">
+  <data name="Signup.AlreadyActivated" xml:space="preserve">
+    <value>This account has already been activated.</value>
+  </data>
+  <data name="Signup.Conflict" xml:space="preserve">
+    <value>Registration conflicts with existing data.</value>
+  </data>
+  <data name="Signup.InvalidCredentials" xml:space="preserve">
+    <value>The username or password is invalid.</value>
+  </data>
+  <data name="Signup.InvalidData" xml:space="preserve">
+    <value>The supplied information is invalid.</value>
+  </data>
+  <data name="Signup.InvalidGeo" xml:space="preserve">
+    <value>The specified geographical location is invalid.</value>
+  </data>
+  <data name="Signup.InvalidOrgType" xml:space="preserve">
+    <value>The specified organization type is invalid.</value>
+  </data>
+  <data name="Signup.InvalidOtp" xml:space="preserve">
+    <value>The verification code is incorrect.</value>
+  </data>
+  <data name="Signup.MobileConflict" xml:space="preserve">
+    <value>This mobile number is already registered and verified.</value>
+  </data>
+  <data name="Signup.NotFound" xml:space="preserve">
+    <value>The signup request or requested information was not found.</value>
+  </data>
+  <data name="Signup.OtpAlreadyUsed" xml:space="preserve">
+    <value>This verification code has already been used.</value>
+  </data>
+  <data name="Signup.OtpAttemptsExceeded" xml:space="preserve">
+    <value>The maximum number of verification attempts has been reached.</value>
+  </data>
+  <data name="Signup.OtpExpired" xml:space="preserve">
+    <value>The verification code has expired. Please request a new code.</value>
+  </data>
+  <data name="Signup.OtpRequestCreated" xml:space="preserve">
+    <value>Signup request created. A verification code will be sent.</value>
+  </data>
+  <data name="Signup.OtpVerifiedSuccessfully" xml:space="preserve">
+    <value>Verification successful. Registration completed.</value>
+  </data>
+  <data name="Signup.RateLimited" xml:space="preserve">
     <value>Too many requests. Please try again later.</value>
+  </data>
+  <data name="Signup.RegisterSuccessfully" xml:space="preserve">
+    <value>Registration completed successfully.</value>
+  </data>
+  <data name="Signup.UsernameConflict" xml:space="preserve">
+    <value>This username is already in use.</value>
   </data>
 </root>

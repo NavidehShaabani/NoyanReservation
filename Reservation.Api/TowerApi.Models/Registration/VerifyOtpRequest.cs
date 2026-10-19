@@ -1,22 +1,18 @@
-﻿
+﻿using System.ComponentModel.DataAnnotations;
+
 namespace TowerApi.Models.Registration
 {
-    public class VerifyOtpRequest
+    public sealed class VerifyOtpRequest
     {
+        [Range(1, long.MaxValue)]
         public long UserId { get; set; }
 
+        [Range(1, long.MaxValue)]
         public long OtpRequestId { get; set; }
 
+        [Required]
+        [RegularExpression(@"^[0-9]{6}$",
+            ErrorMessage = "کد تأیید باید دقیقاً ۶ رقم باشد.")]
         public string OtpCode { get; set; } = string.Empty;
-
-        public long? RoleId { get; set; }
-
-        public long? UnitId { get; set; }
-
-        public byte? RelationshipType { get; set; }
-
-        public DateTime? StartDate { get; set; }
-
-        public DateTime? EndDate { get; set; }
     }
 }

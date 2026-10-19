@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\RegistrationController.cs" />
     <Compile Remove="Services\AuthService.cs" />
     <Compile Remove="Services\IAuthService.cs" />
     <Compile Remove="Services\ICurrentUser.cs" />
