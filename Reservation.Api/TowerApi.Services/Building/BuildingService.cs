@@ -136,5 +136,51 @@ namespace TowerApi.Services.Building
                 buildingId,
                 userId);
         }
+        public async Task<BuildingBulkServiceResult<object>>
+           BulkSaveAsync(
+               BuildingBulkSaveRequest request,
+               long currentUserId)
+        {
+            var result = await _repository.BulkSaveAsync(
+                request.Buildings,
+                currentUserId);
+
+            return new BuildingBulkServiceResult<object>
+            {
+                Code = result.ResultCode,
+                MessageKey = result.ResultCode switch
+                {
+                    200 => "Buildings.BulkSaveSuccessfully",
+                    400 => "Buildings.InvalidData",
+                    404 => "Buildings.ReferenceNotFound",
+                    409 => "Buildings.Conflict",
+                    _ => "Common.SystemError"
+                },
+                Data = null
+            };
+        }
+
+        public async Task<
+            BuildingBulkServiceResult<List<BuildingByOrgResponse>>>
+            GetByOrgIdAsync(long orgId)
+        {
+            var result = await _repository.GetByOrgIdAsync(orgId);
+
+            return new BuildingBulkServiceResult<
+                List<BuildingByOrgResponse>>
+            {
+                Code = result.ResultCode,
+                MessageKey = result.ResultCode switch
+                {
+                    200 => "Buildings.GetByOrgIdSuccessfully",
+                    400 => "Buildings.InvalidOrgId",
+                    404 => "Buildings.OrganizationNotFound",
+                    _ => "Common.SystemError"
+                },
+                Data = result.ResultCode == 200
+                    ? result.Data
+                    : null
+            };
+        }
     }
 }

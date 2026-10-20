@@ -138,6 +138,27 @@
   <data name="Auth.UserNotFoundAfterLogin" xml:space="preserve">
     <value>User information was not received after login.</value>
   </data>
+  <data name="Buildings.BulkSaveSuccessfully" xml:space="preserve">
+    <value>Buildings were saved and updated successfully.</value>
+  </data>
+  <data name="Buildings.Conflict" xml:space="preserve">
+    <value>A building with the same name already exists within the organization.</value>
+  </data>
+  <data name="Buildings.GetByOrgIdSuccessfully" xml:space="preserve">
+    <value>The organization's buildings were retrieved successfully.</value>
+  </data>
+  <data name="Buildings.InvalidData" xml:space="preserve">
+    <value>The submitted building data is invalid.</value>
+  </data>
+  <data name="Buildings.InvalidOrgId" xml:space="preserve">
+    <value>The organization ID is invalid.</value>
+  </data>
+  <data name="Buildings.OrganizationNotFound" xml:space="preserve">
+    <value>The specified organization was not found or has been deleted.</value>
+  </data>
+  <data name="Buildings.ReferenceNotFound" xml:space="preserve">
+    <value>One of the specified organizations or buildings was not found or has been deleted.</value>
+  </data>
   <data name="Common.Conflict" xml:space="preserve">
     <value>The requested operation conflicts with existing information.</value>
   </data>
@@ -170,6 +191,9 @@
   </data>
   <data name="Common.SystemError1" xml:space="preserve">
     <value>An internal system error occurred. Please try again later.</value>
+  </data>
+  <data name="Common.SystemError2" xml:space="preserve">
+    <value>A system error occurred</value>
   </data>
   <data name="Common.TooManyRequests" xml:space="preserve">
     <value>Too many requests. Please try again later.</value>

@@ -28,5 +28,14 @@ namespace TowerApi.Repositories.Building
         Task<(int ResultCode, string ResultMessage, List<BuildingViewModel> Data)>
             GetListAsync(
                 BuildingQueryRequest request);
+        Task<(int ResultCode, string? ResultMessage)> BulkSaveAsync(
+            IEnumerable<BuildingBulkItem> buildings,
+            long currentUserId);
+
+        Task<(
+            int ResultCode,
+            string? ResultMessage,
+            List<BuildingByOrgResponse> Data
+        )> GetByOrgIdAsync(long orgId);
     }
 }

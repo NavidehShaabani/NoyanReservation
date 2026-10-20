@@ -215,5 +215,60 @@ namespace TowerApi.Controllers
                     ApiResponseMessageMapper.GetMessageKey(
                         result.ResultCode)));
         }
+        // POST: api/BuildingsBulk/save
+        [HttpPost("BulkSave")]
+        public async Task<IActionResult> BulkSave(
+            [FromBody] BuildingBulkSaveRequest request)
+        {
+            if (!_currentUser.UserId.HasValue)
+            {
+                return Unauthorized();
+            }
+
+            var result = await _service.BulkSaveAsync(
+                request,
+                _currentUser.UserId.Value);
+
+            if (result.Code == 200)
+            {
+                return Ok(_responseFactory.Success(
+                    result.Code,
+                    result.MessageKey,
+                    result.Data));
+            }
+
+            var statusCode =
+                ApiResponseMessageMapper.GetHttpStatusCode(result.Code);
+
+            return StatusCode(
+                statusCode,
+                _responseFactory.Error(
+                    result.Code,
+                    result.MessageKey));
+        }
+
+        // GET: api/BuildingsBulk/by-org/10
+        [HttpGet("by-org/{orgId:long}")]
+        public async Task<IActionResult> GetByOrgId(long orgId)
+        {
+            var result = await _service.GetByOrgIdAsync(orgId);
+
+            if (result.Code == 200)
+            {
+                return Ok(_responseFactory.Success(
+                    result.Code,
+                    result.MessageKey,
+                    result.Data));
+            }
+
+            var statusCode =
+                ApiResponseMessageMapper.GetHttpStatusCode(result.Code);
+
+            return StatusCode(
+                statusCode,
+                _responseFactory.Error(
+                    result.Code,
+                    result.MessageKey));
+        }
     }
 }

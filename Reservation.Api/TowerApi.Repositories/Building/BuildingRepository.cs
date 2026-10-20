@@ -289,5 +289,114 @@ namespace TowerApi.Repositories.Building
                 data
             );
         }
+        public async Task<(int ResultCode, string? ResultMessage)>
+           BulkSaveAsync(
+               IEnumerable<BuildingBulkItem> buildings,
+               long currentUserId)
+        {
+            var table = new DataTable();
+
+            // ترتیب و نوع ستون‌ها باید با dbo.BuildingBulkType
+            // در SQL Server یکسان باشد.
+            table.Columns.Add("BuildingId", typeof(long));
+            table.Columns.Add("BuildingName", typeof(string));
+            table.Columns.Add("BuildingAddress", typeof(string));
+            table.Columns.Add("BuildingDescription", typeof(string));
+            table.Columns.Add("IsActive", typeof(bool));
+            table.Columns.Add("OrgId", typeof(long));
+
+            foreach (var building in buildings)
+            {
+                table.Rows.Add(
+                    building.BuildingId.HasValue
+                        ? building.BuildingId.Value
+                        : DBNull.Value,
+
+                    (object?)building.BuildingName ?? DBNull.Value,
+
+                    (object?)building.BuildingAddress ?? DBNull.Value,
+
+                    (object?)building.BuildingDescription ?? DBNull.Value,
+
+                    building.IsActive.HasValue
+                        ? building.IsActive.Value
+                        : DBNull.Value,
+
+                    building.OrgId.HasValue
+                        ? building.OrgId.Value
+                        : DBNull.Value
+                );
+            }
+
+            var parameters = new DynamicParameters();
+
+            parameters.Add(
+                "@Buildings",
+                table.AsTableValuedParameter("dbo.BuildingBulkType"));
+
+            parameters.Add(
+                "@CurrentUserId",
+                currentUserId,
+                DbType.Int64);
+
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
+            using var connection = _connectionFactory.CreateConnection();
+
+            await connection.ExecuteAsync(
+                "dbo.Buildings_BulkSave",
+                parameters,
+                commandType: CommandType.StoredProcedure);
+
+            return (
+                parameters.Get<int>("@ResultCode"),
+                parameters.Get<string?>("@ResultMessage")
+            );
+        }
+
+        public async Task<(
+            int ResultCode,
+            string? ResultMessage,
+            List<BuildingByOrgResponse> Data
+        )> GetByOrgIdAsync(long orgId)
+        {
+            var parameters = new DynamicParameters();
+
+            parameters.Add("@OrgId", orgId, DbType.Int64);
+
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
+            using var connection = _connectionFactory.CreateConnection();
+
+            var result = (await connection.QueryAsync<BuildingByOrgResponse>(
+                "dbo.Buildings_GetByOrgId",
+                parameters,
+                commandType: CommandType.StoredProcedure
+            )).ToList();
+
+            return (
+                parameters.Get<int>("@ResultCode"),
+                parameters.Get<string?>("@ResultMessage"),
+                result
+            );
+        }
     }
 }

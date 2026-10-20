@@ -32,5 +32,13 @@ namespace TowerApi.Services.Building
             DeleteAsync(
                 long buildingId,
                 int userId);
+
+        Task<BuildingBulkServiceResult<object>> BulkSaveAsync(
+            BuildingBulkSaveRequest request,
+            long currentUserId);
+
+        Task<BuildingBulkServiceResult<List<BuildingByOrgResponse>>>
+            GetByOrgIdAsync(long orgId);
+
     }
 }

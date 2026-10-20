@@ -304,54 +304,78 @@
     <value>تعداد درخواست‌های شما بیش از حد مجاز است.</value>
   </data>
   <data name="Signup.RegisterSuccessfully" xml:space="preserve">
-  <value>ثبت‌نام با موفقیت انجام شد.</value>
-</data>
+    <value>ثبت‌نام با موفقیت انجام شد.</value>
+  </data>
   <data name="Signup.OtpRequestCreated" xml:space="preserve">
-  <value>درخواست ثبت‌نام ایجاد شد و کد تأیید ارسال خواهد شد.</value>
-</data>
+    <value>درخواست ثبت‌نام ایجاد شد و کد تأیید ارسال خواهد شد.</value>
+  </data>
   <data name="Signup.OtpVerifiedSuccessfully" xml:space="preserve">
-  <value>کد تأیید شد و ثبت‌نام با موفقیت تکمیل شد.</value>
-</data>
+    <value>کد تأیید شد و ثبت‌نام با موفقیت تکمیل شد.</value>
+  </data>
   <data name="Signup.InvalidData" xml:space="preserve">
-  <value>اطلاعات واردشده معتبر نیست.</value>
-</data>
+    <value>اطلاعات واردشده معتبر نیست.</value>
+  </data>
   <data name="Signup.InvalidGeo" xml:space="preserve">
-  <value>موقعیت جغرافیایی معتبر نیست.</value>
-</data>
+    <value>موقعیت جغرافیایی معتبر نیست.</value>
+  </data>
   <data name="Signup.InvalidOrgType" xml:space="preserve">
-  <value>نوع سازمان معتبر نیست.</value>
-</data>
+    <value>نوع سازمان معتبر نیست.</value>
+  </data>
   <data name="Signup.InvalidCredentials" xml:space="preserve">
-  <value>نام کاربری یا رمز عبور معتبر نیست.</value>
-</data>
+    <value>نام کاربری یا رمز عبور معتبر نیست.</value>
+  </data>
   <data name="Signup.InvalidOtp" xml:space="preserve">
-  <value>کد تأیید اشتباه است.</value>
-</data>
+    <value>کد تأیید اشتباه است.</value>
+  </data>
   <data name="Signup.NotFound" xml:space="preserve">
-  <value>درخواست یا اطلاعات ثبت‌نام پیدا نشد.</value>
-</data>
+    <value>درخواست یا اطلاعات ثبت‌نام پیدا نشد.</value>
+  </data>
   <data name="Signup.Conflict" xml:space="preserve">
-  <value>ثبت‌نام با اطلاعات موجود تداخل دارد.</value>
-</data>
+    <value>ثبت‌نام با اطلاعات موجود تداخل دارد.</value>
+  </data>
   <data name="Signup.UsernameConflict" xml:space="preserve">
-  <value>این نام کاربری قبلاً استفاده شده است.</value>
-</data>
+    <value>این نام کاربری قبلاً استفاده شده است.</value>
+  </data>
   <data name="Signup.MobileConflict" xml:space="preserve">
-  <value>این شماره موبایل قبلاً ثبت و تأیید شده است.</value>
-</data>
+    <value>این شماره موبایل قبلاً ثبت و تأیید شده است.</value>
+  </data>
   <data name="Signup.OtpAlreadyUsed" xml:space="preserve">
-  <value>این کد قبلاً استفاده شده است.</value>
-</data>
+    <value>این کد قبلاً استفاده شده است.</value>
+  </data>
   <data name="Signup.AlreadyActivated" xml:space="preserve">
-  <value>این حساب قبلاً فعال شده است.</value>
-</data>
+    <value>این حساب قبلاً فعال شده است.</value>
+  </data>
   <data name="Signup.OtpExpired" xml:space="preserve">
-  <value>کد تأیید منقضی شده است؛ کد جدید درخواست کنید.</value>
-</data>
+    <value>کد تأیید منقضی شده است؛ کد جدید درخواست کنید.</value>
+  </data>
   <data name="Signup.RateLimited" xml:space="preserve">
-  <value>تعداد درخواست‌ها بیش از حد مجاز است. لطفاً بعداً تلاش کنید.</value>
-</data>
+    <value>تعداد درخواست‌ها بیش از حد مجاز است. لطفاً بعداً تلاش کنید.</value>
+  </data>
   <data name="Signup.OtpAttemptsExceeded" xml:space="preserve">
-  <value>تعداد تلاش‌های مجاز برای وارد کردن کد تأیید تمام شده است.</value>
-</data>
+    <value>تعداد تلاش‌های مجاز برای وارد کردن کد تأیید تمام شده است.</value>
+  </data>
+  <data name="Buildings.BulkSaveSuccessfully" xml:space="preserve">
+    <value>عملیات ثبت و ویرایش ساختمان‌ها با موفقیت انجام شد.</value>
+  </data>
+  <data name="Buildings.Conflict" xml:space="preserve">
+    <value>نام یکی از ساختمان‌ها در سازمان مربوطه تکراری است.</value>
+  </data>
+  <data name="Buildings.GetByOrgIdSuccessfully" xml:space="preserve">
+    <value>اطلاعات ساختمان‌های سازمان با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Buildings.InvalidData" xml:space="preserve">
+    <value>اطلاعات ارسالی ساختمان‌ها معتبر نیست.</value>
+  </data>
+  <data name="Buildings.InvalidOrgId" xml:space="preserve">
+    <value>شناسه سازمان معتبر نیست.</value>
+  </data>
+  <data name="Buildings.OrganizationNotFound" xml:space="preserve">
+    <value>سازمان موردنظر یافت نشد یا حذف شده است.</value>
+  </data>
+  <data name="Buildings.ReferenceNotFound" xml:space="preserve">
+    <value>یکی از سازمان‌ها یا ساختمان‌های ارسالی یافت نشد یا حذف شده است.</value>
+  </data>
+  <data name="Common.SystemError2" xml:space="preserve">
+    <value>خطای سیستمی رخ داده است.</value>
+  </data>
 </root>
