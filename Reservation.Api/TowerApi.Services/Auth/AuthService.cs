@@ -114,6 +114,7 @@ namespace TowerApi.Services.Auth
                     UserId =
                         result.User.UserId,
 
+
                     ActiveRoleId =
                         activeRoleId,
 

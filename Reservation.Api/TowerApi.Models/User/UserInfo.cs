@@ -23,6 +23,8 @@
         public DateTime? BirthDate { get; set; }
 
         public bool PhoneVerified { get; set; }
+        
+        public int OrgId { get; set; }
 
         public DateTime? LastLoginAt { get; set; }
 

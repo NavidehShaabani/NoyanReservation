@@ -160,6 +160,9 @@ namespace TowerApi.Controllers
                     {
                         userId =
                             result.User.UserId,
+                        
+                        orgId =
+                            result.User.OrgId,
 
                         username =
                             result.User.Username,
