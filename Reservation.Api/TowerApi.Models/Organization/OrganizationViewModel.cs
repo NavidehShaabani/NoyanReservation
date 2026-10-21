@@ -5,7 +5,7 @@
         public long OrgId { get; set; }
         public string OrgName { get; set; } = string.Empty;
         public int OrgType { get; set; }
-        public long GeoId { get; set; }
+        public string GeoId { get; set; }
         public string? OrgDesc { get; set; }
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }

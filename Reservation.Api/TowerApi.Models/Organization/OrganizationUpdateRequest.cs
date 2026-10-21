@@ -6,7 +6,7 @@
 
         public int OrgType { get; set; }
 
-        public long GeoId { get; set; }
+        public string GeoId { get; set; }
 
         public string? OrgDesc { get; set; }
 
