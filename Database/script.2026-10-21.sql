@@ -244,9 +244,25 @@ EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'BuildingId'
 GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'SortId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'LookupValueTitleEn'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'LookupValueTitleFr'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'LookupId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'LookupValueId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Lookup', @level2type=N'COLUMN',@level2name=N'LookupTitle'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Lookup', @level2type=N'COLUMN',@level2name=N'LookupId'
+GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo'
 GO
-EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoPath'
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoPathEn'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoPathFa'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'PL5'
 GO
@@ -260,7 +276,11 @@ EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'ParantId'
 GO
-EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoName'
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoType'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoNameEn'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoNameFa'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoId'
 GO
@@ -500,124 +520,211 @@ EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'App_Menus', @level2type=N'COLUMN',@level2name=N'MenuId'
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[UnitsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[UnitsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[UnitsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[UnitsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[Units_BulkSave]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[Units_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeTypesGetById]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeTypesGet]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeTypesEdit]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeTypesDel]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeTypesAdd]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeTypesActive]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeTypeRolesGet]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeTypeRolesAdd]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeesGetById]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeesGet]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeesEdit]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeesDel]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeesAdd]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeesActive]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeAssignmentsGetById]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeAssignmentsGet]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeAssignmentsEdit]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeAssignmentsDel]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeAssignmentsAdd]
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[EmployeeAssignmentsActive]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[BuildingsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[BuildingsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[BuildingsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[BuildingsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[Buildings_GetByOrgId]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[Buildings_GetByOrgId]
+GO
+/****** Object:  StoredProcedure [dbo].[Buildings_BulkSave]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[Buildings_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[Base_GeoGetChildren]
+GO
+/****** Object:  StoredProcedure [dbo].[Base_Geo_GetById]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[Base_Geo_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupWithPassword]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[App_UsersSignupWithPassword]
+GO
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupVerifyOtp]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[App_UsersSignupVerifyOtp]
+GO
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupStartOtp]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[App_UsersSignupStartOtp]
+GO
+/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UsersSignup]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UsersOtpVerify]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UsersLoginGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionUpdateLastSeen]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionSetActiveRole]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionRevokeAll]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionRevoke]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionGetActive]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionCreate]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionClearActiveRole]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionAuthorizationGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UsersCompleteProfile]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserProfilesGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserLogin]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserGetForSession]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_UserGetForRefresh]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_SuperAdminRegister]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP PROCEDURE [dbo].[App_SuperAdminRegister]
+GO
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenSave]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRotate]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRevokeSession]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRevokeAll]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRevoke]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenGetActiveSessions]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenGetActive]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenCleanupExpired]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_LoginAttemptReset]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_LoginAttemptFail]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/21/2026 2:25:28 PM ******/
 DROP PROCEDURE [dbo].[App_LoginAttemptCheck]
 GO
 ALTER TABLE [dbo].[UserResidencies] DROP CONSTRAINT [FK_UserResidencies_Users]
@@ -633,6 +740,8 @@ GO
 ALTER TABLE [dbo].[Spaces] DROP CONSTRAINT [FK_Spaces_Buildings]
 GO
 ALTER TABLE [dbo].[Organizations] DROP CONSTRAINT [FK_Organizations_Geo]
+GO
+ALTER TABLE [dbo].[Organizations] DROP CONSTRAINT [FK_Organizations_Base_LookupValues]
 GO
 ALTER TABLE [dbo].[EmployeeTypeRoles] DROP CONSTRAINT [FK_EmployeeTypeRoles_Roles]
 GO
@@ -654,11 +763,21 @@ ALTER TABLE [dbo].[EmployeeAssignments] DROP CONSTRAINT [FK_EmployeeAssignments_
 GO
 ALTER TABLE [dbo].[Buildings] DROP CONSTRAINT [FK_Buildings_Orgs]
 GO
+ALTER TABLE [dbo].[Base_LookupValues] DROP CONSTRAINT [FK_Base_LookupValues_Base_Lookup]
+GO
 ALTER TABLE [dbo].[Base_Geo] DROP CONSTRAINT [FK_Geo_Geo]
+GO
+ALTER TABLE [dbo].[App_UserSignupPending] DROP CONSTRAINT [FK_App_UserSignupPending_Users]
+GO
+ALTER TABLE [dbo].[App_UserSignupPending] DROP CONSTRAINT [FK_App_UserSignupPending_OrgType]
+GO
+ALTER TABLE [dbo].[App_UserSignupPending] DROP CONSTRAINT [FK_App_UserSignupPending_Geo]
 GO
 ALTER TABLE [dbo].[App_UserSessions] DROP CONSTRAINT [FK_UserSessions_Users]
 GO
 ALTER TABLE [dbo].[App_UserSessions] DROP CONSTRAINT [FK_UserSessions_Roles]
+GO
+ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [FK_App_Users_Organizations]
 GO
 ALTER TABLE [dbo].[App_UserRoles] DROP CONSTRAINT [FK_UserRoles_Users]
 GO
@@ -718,6 +837,10 @@ ALTER TABLE [dbo].[Buildings] DROP CONSTRAINT [DF_Buildings_CreatedAt]
 GO
 ALTER TABLE [dbo].[Buildings] DROP CONSTRAINT [DF_Buildings_IsActive]
 GO
+ALTER TABLE [dbo].[App_UserSignupRateLimits] DROP CONSTRAINT [DF_App_UserSignupRateLimits_RequestCount]
+GO
+ALTER TABLE [dbo].[App_UserSignupPending] DROP CONSTRAINT [DF_App_UserSignupPending_CreatedAt]
+GO
 ALTER TABLE [dbo].[App_UserSessions] DROP CONSTRAINT [DF_UserSessions_CreatedAt]
 GO
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [DF_Users_CreatedAt]
@@ -768,118 +891,165 @@ ALTER TABLE [dbo].[App_LoginAttempts] DROP CONSTRAINT [DF_LoginAttempts_LastAtte
 GO
 ALTER TABLE [dbo].[App_LoginAttempts] DROP CONSTRAINT [DF_LoginAttempts_FailedCount]
 GO
-/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/21/2026 2:25:28 PM ******/
 ALTER TABLE [dbo].[EmployeeTypeRoles] DROP CONSTRAINT [UQ_EmployeeTypeRoles]
 GO
-/****** Object:  Index [UQ_Users_Username]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_App_UserSignupRateLimits_RateKey]    Script Date: 10/21/2026 2:25:28 PM ******/
+ALTER TABLE [dbo].[App_UserSignupRateLimits] DROP CONSTRAINT [UQ_App_UserSignupRateLimits_RateKey]
+GO
+/****** Object:  Index [UQ_Users_Username]    Script Date: 10/21/2026 2:25:28 PM ******/
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [UQ_Users_Username]
 GO
-/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/21/2026 2:25:28 PM ******/
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [UQ_Users_NationalId]
 GO
-/****** Object:  Index [UQ_Users_Email]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_Users_Email]    Script Date: 10/21/2026 2:25:28 PM ******/
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [UQ_Users_Email]
 GO
-/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/21/2026 2:25:28 PM ******/
 ALTER TABLE [dbo].[App_UserRoles] DROP CONSTRAINT [UQ_UserRoles_User_Role]
 GO
-/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/21/2026 2:25:28 PM ******/
 ALTER TABLE [dbo].[App_UserProfiles] DROP CONSTRAINT [UQ_UserProfiles_UserId]
 GO
-/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/21/2026 2:25:28 PM ******/
 ALTER TABLE [dbo].[App_UserOtpRateLimits] DROP CONSTRAINT [UQ_UserOtpRateLimits_Mobile]
 GO
-/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/21/2026 2:25:28 PM ******/
 ALTER TABLE [dbo].[App_RoleMenus] DROP CONSTRAINT [UQ_RoleMenus_Role_Menu]
 GO
-/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/21/2026 2:25:28 PM ******/
 ALTER TABLE [dbo].[App_RefreshTokens] DROP CONSTRAINT [UQ_RefreshTokens_TokenHash]
 GO
-/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UserResidencies]') AND type in (N'U'))
 DROP TABLE [dbo].[UserResidencies]
 GO
-/****** Object:  Table [dbo].[Units]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Units]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Units]') AND type in (N'U'))
 DROP TABLE [dbo].[Units]
 GO
-/****** Object:  Table [dbo].[Spaces]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Spaces]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Spaces]') AND type in (N'U'))
 DROP TABLE [dbo].[Spaces]
 GO
-/****** Object:  Table [dbo].[Organizations]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Organizations]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Organizations]') AND type in (N'U'))
 DROP TABLE [dbo].[Organizations]
 GO
-/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmployeeTypes]') AND type in (N'U'))
 DROP TABLE [dbo].[EmployeeTypes]
 GO
-/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmployeeTypeRoles]') AND type in (N'U'))
 DROP TABLE [dbo].[EmployeeTypeRoles]
 GO
-/****** Object:  Table [dbo].[Employees]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Employees]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Employees]') AND type in (N'U'))
 DROP TABLE [dbo].[Employees]
 GO
-/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmployeeAssignments]') AND type in (N'U'))
 DROP TABLE [dbo].[EmployeeAssignments]
 GO
-/****** Object:  Table [dbo].[Buildings]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Buildings]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Buildings]') AND type in (N'U'))
 DROP TABLE [dbo].[Buildings]
 GO
-/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 10/21/2026 2:25:28 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Base_LookupValues]') AND type in (N'U'))
+DROP TABLE [dbo].[Base_LookupValues]
+GO
+/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 10/21/2026 2:25:28 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Base_Lookup]') AND type in (N'U'))
+DROP TABLE [dbo].[Base_Lookup]
+GO
+/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Base_Geo]') AND type in (N'U'))
 DROP TABLE [dbo].[Base_Geo]
 GO
-/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserSignupRateLimits]    Script Date: 10/21/2026 2:25:28 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserSignupRateLimits]') AND type in (N'U'))
+DROP TABLE [dbo].[App_UserSignupRateLimits]
+GO
+/****** Object:  Table [dbo].[App_UserSignupPending]    Script Date: 10/21/2026 2:25:28 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserSignupPending]') AND type in (N'U'))
+DROP TABLE [dbo].[App_UserSignupPending]
+GO
+/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserSessions]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserSessions]
 GO
-/****** Object:  Table [dbo].[App_Users]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_Users]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_Users]') AND type in (N'U'))
 DROP TABLE [dbo].[App_Users]
 GO
-/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserRoles]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserRoles]
 GO
-/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserProfiles]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserProfiles]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserOtpRequests]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserOtpRequests]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserOtpRateLimits]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserOtpRateLimits]
 GO
-/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_Roles]') AND type in (N'U'))
 DROP TABLE [dbo].[App_Roles]
 GO
-/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_RoleMenus]') AND type in (N'U'))
 DROP TABLE [dbo].[App_RoleMenus]
 GO
-/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_RefreshTokens]') AND type in (N'U'))
 DROP TABLE [dbo].[App_RefreshTokens]
 GO
-/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_Menus]') AND type in (N'U'))
 DROP TABLE [dbo].[App_Menus]
 GO
-/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/21/2026 2:25:28 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_LoginAttempts]') AND type in (N'U'))
 DROP TABLE [dbo].[App_LoginAttempts]
 GO
-/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  UserDefinedTableType [dbo].[UnitBulkType]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP TYPE [dbo].[UnitBulkType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingBulkType]    Script Date: 10/21/2026 2:25:28 PM ******/
+DROP TYPE [dbo].[BuildingBulkType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingBulkType]    Script Date: 10/21/2026 2:25:28 PM ******/
+CREATE TYPE [dbo].[BuildingBulkType] AS TABLE(
+	[BuildingId] [bigint] NULL,
+	[BuildingName] [nvarchar](150) NULL,
+	[BuildingAddress] [nvarchar](500) NULL,
+	[BuildingDescription] [nvarchar](1000) NULL,
+	[IsActive] [bit] NULL,
+	[OrgId] [bigint] NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[UnitBulkType]    Script Date: 10/21/2026 2:25:29 PM ******/
+CREATE TYPE [dbo].[UnitBulkType] AS TABLE(
+	[UnitId] [bigint] NULL,
+	[BuildingId] [bigint] NULL,
+	[UnitNumber] [nvarchar](50) NULL,
+	[FloorNumber] [int] NULL,
+	[Area] [decimal](10, 2) NULL,
+	[Bedrooms] [tinyint] NULL,
+	[UnitDescription] [nvarchar](1000) NULL,
+	[IsActive] [bit] NULL
+)
+GO
+/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -895,7 +1065,7 @@ CREATE TABLE [dbo].[App_LoginAttempts](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -925,7 +1095,7 @@ CREATE TABLE [dbo].[App_Menus](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -948,7 +1118,7 @@ CREATE TABLE [dbo].[App_RefreshTokens](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -970,7 +1140,7 @@ CREATE TABLE [dbo].[App_RoleMenus](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -990,7 +1160,7 @@ CREATE TABLE [dbo].[App_Roles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1010,7 +1180,7 @@ CREATE TABLE [dbo].[App_UserOtpRateLimits](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1036,7 +1206,7 @@ CREATE TABLE [dbo].[App_UserOtpRequests](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1063,7 +1233,7 @@ CREATE TABLE [dbo].[App_UserProfiles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1087,7 +1257,7 @@ CREATE TABLE [dbo].[App_UserRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_Users]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_Users]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1097,9 +1267,9 @@ CREATE TABLE [dbo].[App_Users](
 	[Username] [nvarchar](100) NULL,
 	[PasswordHash] [nvarchar](500) NULL,
 	[Email] [nvarchar](150) NULL,
-	[Mobile] [nvarchar](30) NOT NULL,
-	[FirstName] [nvarchar](100) NOT NULL,
-	[LastName] [nvarchar](100) NOT NULL,
+	[Mobile] [nvarchar](30) NULL,
+	[FirstName] [nvarchar](100) NULL,
+	[LastName] [nvarchar](100) NULL,
 	[NationalId] [nvarchar](10) NULL,
 	[Gender] [int] NOT NULL,
 	[BirthDate] [datetime] NULL,
@@ -1112,13 +1282,14 @@ CREATE TABLE [dbo].[App_Users](
 	[UserCreater] [int] NULL,
 	[UpdatedAt] [datetime] NULL,
 	[UserUpdater] [int] NULL,
+	[OrgId] [bigint] NULL,
  CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
 (
 	[UserId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1139,28 +1310,96 @@ CREATE TABLE [dbo].[App_UserSessions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[App_UserSignupPending]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[App_UserSignupPending](
+	[UserId] [bigint] NOT NULL,
+	[OrgName] [nvarchar](200) NOT NULL,
+	[OrgType] [int] NOT NULL,
+	[GeoId] [nvarchar](10) NOT NULL,
+	[CreatedAt] [datetime2](0) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[UserId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[App_UserSignupRateLimits]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[App_UserSignupRateLimits](
+	[RateLimitId] [bigint] IDENTITY(1,1) NOT NULL,
+	[RateKey] [nvarchar](200) NOT NULL,
+	[WindowStart] [datetime2](0) NOT NULL,
+	[RequestCount] [int] NOT NULL,
+	[LastRequestAt] [datetime2](0) NULL,
+ CONSTRAINT [PK_App_UserSignupRateLimits] PRIMARY KEY CLUSTERED 
+(
+	[RateLimitId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Base_Geo](
-	[GeoId] [bigint] NOT NULL,
-	[GeoName] [nvarchar](300) NOT NULL,
-	[ParantId] [bigint] NULL,
-	[PL1] [bigint] NULL,
-	[PL2] [bigint] NULL,
-	[PL3] [bigint] NULL,
-	[PL4] [bigint] NULL,
-	[PL5] [bigint] NULL,
-	[GeoPath] [nvarchar](550) NULL,
+	[GeoId] [nvarchar](10) NOT NULL,
+	[GeoNameFa] [nvarchar](300) NOT NULL,
+	[GeoNameEn] [nvarchar](300) NULL,
+	[GeoType] [tinyint] NULL,
+	[ParantId] [nvarchar](10) NULL,
+	[PL1] [nvarchar](10) NULL,
+	[PL2] [nvarchar](10) NULL,
+	[PL3] [nvarchar](10) NULL,
+	[PL4] [nvarchar](10) NULL,
+	[PL5] [nvarchar](10) NULL,
+	[GeoPathFa] [nvarchar](550) NULL,
+	[GeoPathEn] [nvarchar](550) NULL,
  CONSTRAINT [PK_Geo] PRIMARY KEY CLUSTERED 
 (
 	[GeoId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Buildings]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Base_Lookup](
+	[LookupId] [int] NOT NULL,
+	[LookupTitle] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Base_Lookup] PRIMARY KEY CLUSTERED 
+(
+	[LookupId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Base_LookupValues](
+	[LookupValueId] [int] NOT NULL,
+	[LookupId] [int] NULL,
+	[LookupValueTitleFr] [nvarchar](250) NULL,
+	[LookupValueTitleEn] [varchar](250) NULL,
+	[SortId] [int] NULL,
+ CONSTRAINT [PK_Tbl_LookupValues] PRIMARY KEY CLUSTERED 
+(
+	[LookupValueId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Buildings]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1183,7 +1422,7 @@ CREATE TABLE [dbo].[Buildings](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1210,7 +1449,7 @@ CREATE TABLE [dbo].[EmployeeAssignments](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Employees]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Employees]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1242,7 +1481,7 @@ CREATE TABLE [dbo].[Employees](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1263,7 +1502,7 @@ CREATE TABLE [dbo].[EmployeeTypeRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1284,7 +1523,7 @@ CREATE TABLE [dbo].[EmployeeTypes](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Organizations]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Organizations]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1292,8 +1531,8 @@ GO
 CREATE TABLE [dbo].[Organizations](
 	[OrgId] [bigint] IDENTITY(1,1) NOT NULL,
 	[OrgName] [nvarchar](200) NOT NULL,
-	[OrgType] [tinyint] NOT NULL,
-	[GeoId] [bigint] NOT NULL,
+	[OrgType] [int] NOT NULL,
+	[GeoId] [nvarchar](10) NOT NULL,
 	[OrgDesc] [nvarchar](1000) NULL,
 	[IsActive] [bit] NOT NULL,
 	[IsDeleted] [bit] NULL,
@@ -1307,7 +1546,7 @@ CREATE TABLE [dbo].[Organizations](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Spaces]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Spaces]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1335,7 +1574,7 @@ CREATE TABLE [dbo].[Spaces](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Units]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[Units]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1360,7 +1599,7 @@ CREATE TABLE [dbo].[Units](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1420,6 +1659,14 @@ GO
 SET IDENTITY_INSERT [dbo].[App_RefreshTokens] ON 
 GO
 INSERT [dbo].[App_RefreshTokens] ([Id], [UserId], [TokenHash], [ExpiresAt], [CreatedAt], [RevokedAt], [ReplacedByTokenHash], [SessionId], [DeviceName], [UserAgent], [CreatedIp]) VALUES (9, 1, N'7FE952C303D41D95367C5CCC2BE89E0EA87FBCDFFA9FC12DD44A62637851F430', CAST(N'2026-11-05T13:33:30.430' AS DateTime), CAST(N'2026-10-06T13:33:30.430' AS DateTime), NULL, NULL, N'8fcfb327-1c13-4260-8642-fc3977c332a4', N'Mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1')
+GO
+INSERT [dbo].[App_RefreshTokens] ([Id], [UserId], [TokenHash], [ExpiresAt], [CreatedAt], [RevokedAt], [ReplacedByTokenHash], [SessionId], [DeviceName], [UserAgent], [CreatedIp]) VALUES (10, 1, N'E7E6061C3C8B5BD42805B57DEFA9D2725508D30793340A3FD1DF562DA7C29825', CAST(N'2026-11-12T11:56:13.337' AS DateTime), CAST(N'2026-10-13T11:56:13.337' AS DateTime), NULL, NULL, N'd93c5191-db78-4303-b2f9-17b8e1b24da7', N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1')
+GO
+INSERT [dbo].[App_RefreshTokens] ([Id], [UserId], [TokenHash], [ExpiresAt], [CreatedAt], [RevokedAt], [ReplacedByTokenHash], [SessionId], [DeviceName], [UserAgent], [CreatedIp]) VALUES (11, 1, N'5E73D6FF4DDBF0EFF7483632099C1C666BF6B7A9384267E8123FA62FFB6F33AF', CAST(N'2026-11-12T11:56:20.793' AS DateTime), CAST(N'2026-10-13T11:56:20.793' AS DateTime), NULL, NULL, N'8a706548-5e2d-42ba-b329-61a140555874', N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1')
+GO
+INSERT [dbo].[App_RefreshTokens] ([Id], [UserId], [TokenHash], [ExpiresAt], [CreatedAt], [RevokedAt], [ReplacedByTokenHash], [SessionId], [DeviceName], [UserAgent], [CreatedIp]) VALUES (12, 1, N'8A8012C18C2259A9FA45FAA57503BC904C567D649AFEB1DF8F6D3D99C4D1A857', CAST(N'2026-11-13T12:07:12.187' AS DateTime), CAST(N'2026-10-14T12:07:12.187' AS DateTime), NULL, NULL, N'6ce80ef5-41e5-4395-bff3-ff1ccaae83a9', N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', N'127.0.0.1')
+GO
+INSERT [dbo].[App_RefreshTokens] ([Id], [UserId], [TokenHash], [ExpiresAt], [CreatedAt], [RevokedAt], [ReplacedByTokenHash], [SessionId], [DeviceName], [UserAgent], [CreatedIp]) VALUES (13, 1, N'5415F0C14FA3B5BE24279F8DA230AC1E2BAA98FEB82D0CE1EAEE234B17FF81DF', CAST(N'2026-11-14T14:32:32.920' AS DateTime), CAST(N'2026-10-15T14:32:32.920' AS DateTime), NULL, NULL, N'a93a2d0a-8627-473a-916a-d0171c4ec751', N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', N'127.0.0.1')
 GO
 SET IDENTITY_INSERT [dbo].[App_RefreshTokens] OFF
 GO
@@ -1613,6 +1860,8 @@ INSERT [dbo].[App_Roles] ([RoleId], [RoleName], [RoleDescription], [RoleCode], [
 GO
 INSERT [dbo].[App_Roles] ([RoleId], [RoleName], [RoleDescription], [RoleCode], [RoleNameFa], [RoleNameEn], [RoleDescriptionFa], [RoleDescriptionEn]) VALUES (7, N'عضو خارجی باشگاه', N'کاربر خارج از برج که عضو باشگاه ورزشی است', N'EXTERNAL_CLUB_MEMBER', N'عضو خارجی باشگاه', N'External Club Member', N'کاربر خارج از برج که عضو باشگاه ورزشی است', N'A user from outside the building who is a member of the sports club')
 GO
+INSERT [dbo].[App_Roles] ([RoleId], [RoleName], [RoleDescription], [RoleCode], [RoleNameFa], [RoleNameEn], [RoleDescriptionFa], [RoleDescriptionEn]) VALUES (8, N'Super Admin', N'System super administrator', N'SUPER_ADMIN', N'مدیر سیستم', N'Super Admin', N'دسترسی مدیریتی سطح سیستم', N'System-level administrative access')
+GO
 SET IDENTITY_INSERT [dbo].[App_Roles] OFF
 GO
 SET IDENTITY_INSERT [dbo].[App_UserProfiles] ON 
@@ -1669,35 +1918,65 @@ SET IDENTITY_INSERT [dbo].[App_UserRoles] OFF
 GO
 SET IDENTITY_INSERT [dbo].[App_Users] ON 
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (1, N'admin', N'1234', N'admin@boosatan.ir', N'09120000001', N'مدیر', N'سیستم', N'0012345678', 1, CAST(N'1985-01-15T00:00:00.000' AS DateTime), NULL, 1, CAST(N'2026-10-06T17:03:29.920' AS DateTime), 1, NULL, CAST(N'2026-09-01T17:22:05.450' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (1, N'admin', N'1234', N'admin@boosatan.ir', N'09120000001', N'مدیر', N'سیستم', N'0012345678', 1, CAST(N'1985-01-15T00:00:00.000' AS DateTime), NULL, 1, CAST(N'2026-10-15T18:02:32.127' AS DateTime), 1, NULL, CAST(N'2026-09-01T17:22:05.450' AS DateTime), NULL, NULL, NULL, 1)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (2, N'club.manager', N'1234', N'club.manager@boosatan.ir', N'09120000002', N'رضا', N'احمدی', N'0012345679', 1, CAST(N'1988-03-20T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.453' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (2, N'club.manager', N'1234', N'club.manager@boosatan.ir', N'09120000002', N'رضا', N'احمدی', N'0012345679', 1, CAST(N'1988-03-20T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.453' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (3, N'building.manager', N'1234', N'building.manager@boosatan.ir', N'09120000003', N'مهدی', N'کریمی', N'0012345680', 1, CAST(N'1982-07-10T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.457' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (3, N'building.manager', N'1234', N'building.manager@boosatan.ir', N'09120000003', N'مهدی', N'کریمی', N'0012345680', 1, CAST(N'1982-07-10T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.457' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (4, N'accountant', N'1234', N'accountant@boosatan.ir', N'09120000004', N'سارا', N'محمدی', N'0012345681', 2, CAST(N'1990-11-05T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.460' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (4, N'accountant', N'1234', N'accountant@boosatan.ir', N'09120000004', N'سارا', N'محمدی', N'0012345681', 2, CAST(N'1990-11-05T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.460' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (5, N'reception', N'1234', N'reception@boosatan.ir', N'09120000005', N'نگار', N'حسینی', N'0012345682', 2, CAST(N'1994-04-12T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.460' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (5, N'reception', N'1234', N'reception@boosatan.ir', N'09120000005', N'نگار', N'حسینی', N'0012345682', 2, CAST(N'1994-04-12T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.460' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (6, N'ali.mohammadi', N'1234', N'ali.mohammadi@example.com', N'09120000006', N'علی', N'محمدی', N'0012345683', 1, CAST(N'1987-06-18T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.460' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (6, N'ali.mohammadi', N'1234', N'ali.mohammadi@example.com', N'09120000006', N'علی', N'محمدی', N'0012345683', 1, CAST(N'1987-06-18T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.460' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (7, N'maryam.ahmadi', N'1234', N'maryam.ahmadi@example.com', N'09120000007', N'مریم', N'احمدی', N'0012345684', 2, CAST(N'1991-02-25T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.463' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (7, N'maryam.ahmadi', N'1234', N'maryam.ahmadi@example.com', N'09120000007', N'مریم', N'احمدی', N'0012345684', 2, CAST(N'1991-02-25T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.463' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (8, N'hassan.rezaei', N'1234', N'hassan.rezaei@example.com', N'09120000008', N'حسن', N'رضایی', N'0012345685', 1, CAST(N'1980-09-03T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.463' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (8, N'hassan.rezaei', N'1234', N'hassan.rezaei@example.com', N'09120000008', N'حسن', N'رضایی', N'0012345685', 1, CAST(N'1980-09-03T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.463' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (9, N'fatemeh.rezaei', N'1234', N'fatemeh.rezaei@example.com', N'09120000009', N'فاطمه', N'رضایی', N'0012345686', 2, CAST(N'1985-12-14T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.467' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (9, N'fatemeh.rezaei', N'1234', N'fatemeh.rezaei@example.com', N'09120000009', N'فاطمه', N'رضایی', N'0012345686', 2, CAST(N'1985-12-14T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.467' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (10, N'mohammad.soleimani', N'1234', N'mohammad.soleimani@example.com', N'09120000010', N'محمد', N'سلیمانی', N'0012345687', 1, CAST(N'1993-08-21T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.467' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (10, N'mohammad.soleimani', N'1234', N'mohammad.soleimani@example.com', N'09120000010', N'محمد', N'سلیمانی', N'0012345687', 1, CAST(N'1993-08-21T00:00:00.000' AS DateTime), NULL, 1, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.467' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (11, N'guest.test', N'1234', N'guest@example.com', N'09120000011', N'رضا', N'کاظمی', N'0012345688', 1, CAST(N'1995-10-10T00:00:00.000' AS DateTime), NULL, 0, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.470' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[App_Users] ([UserId], [Username], [PasswordHash], [Email], [Mobile], [FirstName], [LastName], [NationalId], [Gender], [BirthDate], [AvatarUrl], [PhoneVerified], [LastLoginAt], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (11, N'guest.test', N'1234', N'guest@example.com', N'09120000011', N'رضا', N'کاظمی', N'0012345688', 1, CAST(N'1995-10-10T00:00:00.000' AS DateTime), NULL, 0, NULL, 1, NULL, CAST(N'2026-09-01T17:22:05.470' AS DateTime), NULL, NULL, NULL, NULL)
 GO
 SET IDENTITY_INSERT [dbo].[App_Users] OFF
 GO
+INSERT [dbo].[App_UserSessions] ([SessionId], [UserId], [ActiveRoleId], [DeviceName], [UserAgent], [CreatedIp], [CreatedAt], [LastSeenAt], [RevokedAt]) VALUES (N'd93c5191-db78-4303-b2f9-17b8e1b24da7', 1, NULL, N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1', CAST(N'2026-10-13T11:56:13.0404173' AS DateTime2), CAST(N'2026-10-13T11:56:13.0404173' AS DateTime2), NULL)
+GO
+INSERT [dbo].[App_UserSessions] ([SessionId], [UserId], [ActiveRoleId], [DeviceName], [UserAgent], [CreatedIp], [CreatedAt], [LastSeenAt], [RevokedAt]) VALUES (N'8a706548-5e2d-42ba-b329-61a140555874', 1, NULL, N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1', CAST(N'2026-10-13T11:56:20.7867739' AS DateTime2), CAST(N'2026-10-13T11:56:20.7867739' AS DateTime2), NULL)
+GO
+INSERT [dbo].[App_UserSessions] ([SessionId], [UserId], [ActiveRoleId], [DeviceName], [UserAgent], [CreatedIp], [CreatedAt], [LastSeenAt], [RevokedAt]) VALUES (N'a93a2d0a-8627-473a-916a-d0171c4ec751', 1, NULL, N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', N'127.0.0.1', CAST(N'2026-10-15T14:32:32.4607320' AS DateTime2), CAST(N'2026-10-15T14:32:32.4607320' AS DateTime2), NULL)
+GO
 INSERT [dbo].[App_UserSessions] ([SessionId], [UserId], [ActiveRoleId], [DeviceName], [UserAgent], [CreatedIp], [CreatedAt], [LastSeenAt], [RevokedAt]) VALUES (N'8fcfb327-1c13-4260-8642-fc3977c332a4', 1, 1, N'Mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0', N'127.0.0.1', CAST(N'2026-10-06T13:33:30.0777887' AS DateTime2), CAST(N'2026-10-06T13:36:20.3610257' AS DateTime2), NULL)
 GO
-INSERT [dbo].[Base_Geo] ([GeoId], [GeoName], [ParantId], [PL1], [PL2], [PL3], [PL4], [PL5], [GeoPath]) VALUES (1, N'آذربایجان شرقی', NULL, NULL, NULL, NULL, NULL, NULL, N'آذربایجان شرقی')
+INSERT [dbo].[App_UserSessions] ([SessionId], [UserId], [ActiveRoleId], [DeviceName], [UserAgent], [CreatedIp], [CreatedAt], [LastSeenAt], [RevokedAt]) VALUES (N'6ce80ef5-41e5-4395-bff3-ff1ccaae83a9', 1, NULL, N'mobile', N'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0', N'127.0.0.1', CAST(N'2026-10-14T12:07:11.8124107' AS DateTime2), CAST(N'2026-10-14T12:07:11.8124107' AS DateTime2), NULL)
 GO
-INSERT [dbo].[Base_Geo] ([GeoId], [GeoName], [ParantId], [PL1], [PL2], [PL3], [PL4], [PL5], [GeoPath]) VALUES (2, N'تبریز', 1, 1, NULL, NULL, NULL, NULL, N'آذربایجان شرقی/تبریز')
+INSERT [dbo].[Base_Geo] ([GeoId], [GeoNameFa], [GeoNameEn], [GeoType], [ParantId], [PL1], [PL2], [PL3], [PL4], [PL5], [GeoPathFa], [GeoPathEn]) VALUES (N'01', N'ایران', N'Iran', 1, NULL, NULL, NULL, NULL, NULL, NULL, N'ایران', NULL)
+GO
+INSERT [dbo].[Base_Geo] ([GeoId], [GeoNameFa], [GeoNameEn], [GeoType], [ParantId], [PL1], [PL2], [PL3], [PL4], [PL5], [GeoPathFa], [GeoPathEn]) VALUES (N'0101', N'آذربایجان شرقی', N'Az_Shargi', 2, N'01', N'01', NULL, NULL, NULL, NULL, N'ایران/آذربایجان شرقی', NULL)
+GO
+INSERT [dbo].[Base_Geo] ([GeoId], [GeoNameFa], [GeoNameEn], [GeoType], [ParantId], [PL1], [PL2], [PL3], [PL4], [PL5], [GeoPathFa], [GeoPathEn]) VALUES (N'010101', N'تبریز', N'Tabriz', 3, N'0101', N'01', N'0101', NULL, NULL, NULL, N'ایران/آذربایجان شرقی/تبریز', NULL)
+GO
+INSERT [dbo].[Base_Geo] ([GeoId], [GeoNameFa], [GeoNameEn], [GeoType], [ParantId], [PL1], [PL2], [PL3], [PL4], [PL5], [GeoPathFa], [GeoPathEn]) VALUES (N'01010101', N'بخش مرکزی', N'Central Part', 4, N'010101', N'01', N'0101', N'010101', NULL, NULL, N'ایران/آذربایجان شرقی/تبریز/بخش مرکزی', NULL)
+GO
+INSERT [dbo].[Base_Geo] ([GeoId], [GeoNameFa], [GeoNameEn], [GeoType], [ParantId], [PL1], [PL2], [PL3], [PL4], [PL5], [GeoPathFa], [GeoPathEn]) VALUES (N'010102', N'مراغه', N'Maragheh', 2, N'0101', N'01', NULL, NULL, NULL, NULL, N'ایران/آذربایجان شرقی/مراغه', NULL)
+GO
+INSERT [dbo].[Base_Geo] ([GeoId], [GeoNameFa], [GeoNameEn], [GeoType], [ParantId], [PL1], [PL2], [PL3], [PL4], [PL5], [GeoPathFa], [GeoPathEn]) VALUES (N'02', N'بریتانیا', N'UK', 1, NULL, NULL, NULL, NULL, NULL, NULL, N'بریتانیا', NULL)
+GO
+INSERT [dbo].[Base_Geo] ([GeoId], [GeoNameFa], [GeoNameEn], [GeoType], [ParantId], [PL1], [PL2], [PL3], [PL4], [PL5], [GeoPathFa], [GeoPathEn]) VALUES (N'0201', N'لندن', N'London', 2, N'02', N'02', NULL, NULL, NULL, NULL, N'بریتانیا/لندن', NULL)
+GO
+INSERT [dbo].[Base_Lookup] ([LookupId], [LookupTitle]) VALUES (10, N'نوع سازمان')
+GO
+INSERT [dbo].[Base_Lookup] ([LookupId], [LookupTitle]) VALUES (11, N'نوع استخدامی')
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1001, 10, N'ساختمان', N'Building', NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1002, 10, N'آموزشگاه', N'Amozeshgah', NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1003, 10, N'باشگاه', N'Club', NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1004, 10, N'موسسه آموزشی', N'Learning', NULL)
 GO
 SET IDENTITY_INSERT [dbo].[Buildings] ON 
 GO
@@ -1707,7 +1986,7 @@ SET IDENTITY_INSERT [dbo].[Buildings] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Organizations] ON 
 GO
-INSERT [dbo].[Organizations] ([OrgId], [OrgName], [OrgType], [GeoId], [OrgDesc], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (1, N'برج بوستان', 1, 2, N'برج بوستان سلحشوران', 1, 0, CAST(N'2026-10-12T19:44:54.423' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Organizations] ([OrgId], [OrgName], [OrgType], [GeoId], [OrgDesc], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (1, N'برج بوستان', 1001, N'010101', N'برج بوستان سلحشوران', 1, 0, CAST(N'2026-10-12T19:44:54.423' AS DateTime), NULL, NULL, NULL)
 GO
 SET IDENTITY_INSERT [dbo].[Organizations] OFF
 GO
@@ -1751,13 +2030,13 @@ SET IDENTITY_INSERT [dbo].[UserResidencies] OFF
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/21/2026 2:25:29 PM ******/
 ALTER TABLE [dbo].[App_RefreshTokens] ADD  CONSTRAINT [UQ_RefreshTokens_TokenHash] UNIQUE NONCLUSTERED 
 (
 	[TokenHash] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/21/2026 2:25:29 PM ******/
 ALTER TABLE [dbo].[App_RoleMenus] ADD  CONSTRAINT [UQ_RoleMenus_Role_Menu] UNIQUE NONCLUSTERED 
 (
 	[RoleId] ASC,
@@ -1766,19 +2045,19 @@ ALTER TABLE [dbo].[App_RoleMenus] ADD  CONSTRAINT [UQ_RoleMenus_Role_Menu] UNIQU
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/21/2026 2:25:29 PM ******/
 ALTER TABLE [dbo].[App_UserOtpRateLimits] ADD  CONSTRAINT [UQ_UserOtpRateLimits_Mobile] UNIQUE NONCLUSTERED 
 (
 	[Mobile] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/21/2026 2:25:29 PM ******/
 ALTER TABLE [dbo].[App_UserProfiles] ADD  CONSTRAINT [UQ_UserProfiles_UserId] UNIQUE NONCLUSTERED 
 (
 	[UserId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/21/2026 2:25:29 PM ******/
 ALTER TABLE [dbo].[App_UserRoles] ADD  CONSTRAINT [UQ_UserRoles_User_Role] UNIQUE NONCLUSTERED 
 (
 	[UserId] ASC,
@@ -1787,7 +2066,7 @@ ALTER TABLE [dbo].[App_UserRoles] ADD  CONSTRAINT [UQ_UserRoles_User_Role] UNIQU
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_Users_Email]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_Users_Email]    Script Date: 10/21/2026 2:25:29 PM ******/
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Email] UNIQUE NONCLUSTERED 
 (
 	[Email] ASC
@@ -1795,7 +2074,7 @@ ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Email] UNIQUE NONCLUSTER
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/21/2026 2:25:29 PM ******/
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_NationalId] UNIQUE NONCLUSTERED 
 (
 	[NationalId] ASC
@@ -1803,13 +2082,21 @@ ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_NationalId] UNIQUE NONCL
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_Users_Username]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  Index [UQ_Users_Username]    Script Date: 10/21/2026 2:25:29 PM ******/
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Username] UNIQUE NONCLUSTERED 
 (
 	[Username] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/12/2026 7:47:27 PM ******/
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UQ_App_UserSignupRateLimits_RateKey]    Script Date: 10/21/2026 2:25:29 PM ******/
+ALTER TABLE [dbo].[App_UserSignupRateLimits] ADD  CONSTRAINT [UQ_App_UserSignupRateLimits_RateKey] UNIQUE NONCLUSTERED 
+(
+	[RateKey] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/21/2026 2:25:29 PM ******/
 ALTER TABLE [dbo].[EmployeeTypeRoles] ADD  CONSTRAINT [UQ_EmployeeTypeRoles] UNIQUE NONCLUSTERED 
 (
 	[EmployeeTypeId] ASC,
@@ -1865,6 +2152,10 @@ GO
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [DF_Users_CreatedAt]  DEFAULT (getdate()) FOR [CreatedAt]
 GO
 ALTER TABLE [dbo].[App_UserSessions] ADD  CONSTRAINT [DF_UserSessions_CreatedAt]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[App_UserSignupPending] ADD  CONSTRAINT [DF_App_UserSignupPending_CreatedAt]  DEFAULT (sysdatetime()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[App_UserSignupRateLimits] ADD  CONSTRAINT [DF_App_UserSignupRateLimits_RequestCount]  DEFAULT ((0)) FOR [RequestCount]
 GO
 ALTER TABLE [dbo].[Buildings] ADD  CONSTRAINT [DF_Buildings_IsActive]  DEFAULT ((1)) FOR [IsActive]
 GO
@@ -1957,6 +2248,11 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[App_UserRoles] CHECK CONSTRAINT [FK_UserRoles_Users]
 GO
+ALTER TABLE [dbo].[App_Users]  WITH CHECK ADD  CONSTRAINT [FK_App_Users_Organizations] FOREIGN KEY([OrgId])
+REFERENCES [dbo].[Organizations] ([OrgId])
+GO
+ALTER TABLE [dbo].[App_Users] CHECK CONSTRAINT [FK_App_Users_Organizations]
+GO
 ALTER TABLE [dbo].[App_UserSessions]  WITH CHECK ADD  CONSTRAINT [FK_UserSessions_Roles] FOREIGN KEY([ActiveRoleId])
 REFERENCES [dbo].[App_Roles] ([RoleId])
 GO
@@ -1967,10 +2263,30 @@ REFERENCES [dbo].[App_Users] ([UserId])
 GO
 ALTER TABLE [dbo].[App_UserSessions] CHECK CONSTRAINT [FK_UserSessions_Users]
 GO
+ALTER TABLE [dbo].[App_UserSignupPending]  WITH CHECK ADD  CONSTRAINT [FK_App_UserSignupPending_Geo] FOREIGN KEY([GeoId])
+REFERENCES [dbo].[Base_Geo] ([GeoId])
+GO
+ALTER TABLE [dbo].[App_UserSignupPending] CHECK CONSTRAINT [FK_App_UserSignupPending_Geo]
+GO
+ALTER TABLE [dbo].[App_UserSignupPending]  WITH CHECK ADD  CONSTRAINT [FK_App_UserSignupPending_OrgType] FOREIGN KEY([OrgType])
+REFERENCES [dbo].[Base_LookupValues] ([LookupValueId])
+GO
+ALTER TABLE [dbo].[App_UserSignupPending] CHECK CONSTRAINT [FK_App_UserSignupPending_OrgType]
+GO
+ALTER TABLE [dbo].[App_UserSignupPending]  WITH CHECK ADD  CONSTRAINT [FK_App_UserSignupPending_Users] FOREIGN KEY([UserId])
+REFERENCES [dbo].[App_Users] ([UserId])
+GO
+ALTER TABLE [dbo].[App_UserSignupPending] CHECK CONSTRAINT [FK_App_UserSignupPending_Users]
+GO
 ALTER TABLE [dbo].[Base_Geo]  WITH CHECK ADD  CONSTRAINT [FK_Geo_Geo] FOREIGN KEY([ParantId])
 REFERENCES [dbo].[Base_Geo] ([GeoId])
 GO
 ALTER TABLE [dbo].[Base_Geo] CHECK CONSTRAINT [FK_Geo_Geo]
+GO
+ALTER TABLE [dbo].[Base_LookupValues]  WITH CHECK ADD  CONSTRAINT [FK_Base_LookupValues_Base_Lookup] FOREIGN KEY([LookupId])
+REFERENCES [dbo].[Base_Lookup] ([LookupId])
+GO
+ALTER TABLE [dbo].[Base_LookupValues] CHECK CONSTRAINT [FK_Base_LookupValues_Base_Lookup]
 GO
 ALTER TABLE [dbo].[Buildings]  WITH CHECK ADD  CONSTRAINT [FK_Buildings_Orgs] FOREIGN KEY([OrgId])
 REFERENCES [dbo].[Organizations] ([OrgId])
@@ -2022,6 +2338,11 @@ REFERENCES [dbo].[App_Roles] ([RoleId])
 GO
 ALTER TABLE [dbo].[EmployeeTypeRoles] CHECK CONSTRAINT [FK_EmployeeTypeRoles_Roles]
 GO
+ALTER TABLE [dbo].[Organizations]  WITH CHECK ADD  CONSTRAINT [FK_Organizations_Base_LookupValues] FOREIGN KEY([OrgType])
+REFERENCES [dbo].[Base_LookupValues] ([LookupValueId])
+GO
+ALTER TABLE [dbo].[Organizations] CHECK CONSTRAINT [FK_Organizations_Base_LookupValues]
+GO
 ALTER TABLE [dbo].[Organizations]  WITH CHECK ADD  CONSTRAINT [FK_Organizations_Geo] FOREIGN KEY([GeoId])
 REFERENCES [dbo].[Base_Geo] ([GeoId])
 GO
@@ -2058,7 +2379,7 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[UserResidencies] CHECK CONSTRAINT [FK_UserResidencies_Users]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2127,7 +2448,7 @@ BEGIN
         @LockedUntil AS LockedUntil;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2215,7 +2536,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2230,7 +2551,7 @@ BEGIN
     WHERE UsernameKey = @UsernameKey;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2253,7 +2574,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2305,7 +2626,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2357,7 +2678,7 @@ BEGIN
     ORDER BY CreatedAt DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2384,7 +2705,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2411,7 +2732,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2438,7 +2759,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2587,7 +2908,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2639,7 +2960,270 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_SuperAdminRegister]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[App_SuperAdminRegister]
+    @OrgName       NVARCHAR(200),
+    @OrgType       INT,
+    @GeoId         NVARCHAR(10),
+    @Mobile        NVARCHAR(30) = NULL,
+    @Username      NVARCHAR(100) = NULL,
+    @PasswordHash  NVARCHAR(500),
+    @FirstName     NVARCHAR(100) = NULL,
+    @LastName      NVARCHAR(100) = NULL,
+    @Email         NVARCHAR(150) = NULL,
+
+    @UserId        BIGINT OUTPUT,
+    @OrgId         BIGINT OUTPUT,
+    @ResultCode    INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    SET @UserId = NULL;
+    SET @OrgId = NULL;
+    SET @ResultCode = 500;
+    SET @ResultMessage = N'ثبت‌نام انجام نشد.';
+
+    /* اعتبارسنجی اولیه */
+    SET @OrgName = NULLIF(LTRIM(RTRIM(@OrgName)), N'');
+    SET @GeoId = NULLIF(LTRIM(RTRIM(@GeoId)), N'');
+    SET @Mobile = NULLIF(LTRIM(RTRIM(@Mobile)), N'');
+    SET @Username = NULLIF(LTRIM(RTRIM(@Username)), N'');
+    SET @Email = NULLIF(LTRIM(RTRIM(@Email)), N'');
+
+    IF @OrgName IS NULL
+       OR @GeoId IS NULL
+       OR NULLIF(LTRIM(RTRIM(@PasswordHash)), N'') IS NULL
+       OR (@Mobile IS NULL AND @Username IS NULL)
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage =
+            N'نام سازمان، موقعیت جغرافیایی، رمز عبور و موبایل یا نام کاربری الزامی است.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.Base_Geo
+        WHERE GeoId = @GeoId
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'موقعیت جغرافیایی انتخاب‌شده معتبر نیست.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.Base_LookupValues
+        WHERE LookupValueId = @OrgType
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'نوع سازمان معتبر نیست.';
+        RETURN;
+    END;
+
+    DECLARE @SuperAdminRoleId BIGINT;
+
+    SELECT @SuperAdminRoleId = RoleId
+    FROM dbo.App_Roles
+    WHERE RoleCode = N'SUPER_ADMIN';
+
+    IF @SuperAdminRoleId IS NULL
+    BEGIN
+        SET @ResultCode = 500;
+        SET @ResultMessage = N'نقش سوپر ادمین در سیستم تعریف نشده است.';
+        RETURN;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        /*
+          فقط زمانی اجازه ثبت‌نام اولیه بده که هنوز هیچ
+          کاربر فعال و حذف‌نشده‌ای با نقش SUPER_ADMIN وجود ندارد.
+          قفل‌ها برای جلوگیری از ثبت‌نام هم‌زمان اولیه هستند.
+        */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_UserRoles ur WITH (UPDLOCK, HOLDLOCK)
+            INNER JOIN dbo.App_Roles r
+                ON r.RoleId = ur.RoleId
+            INNER JOIN dbo.App_Users u
+                ON u.UserId = ur.UserId
+            WHERE r.RoleCode = N'SUPER_ADMIN'
+              AND ur.IsActive = 1
+              AND ISNULL(ur.IsDeleted, 0) = 0
+              AND (ur.ExpiresAt IS NULL OR ur.ExpiresAt > GETDATE())
+              AND u.IsActive = 1
+              AND ISNULL(u.IsDeleted, 0) = 0
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 403;
+            SET @ResultMessage =
+                N'ثبت‌نام اولیه غیرفعال است؛ سوپر ادمین از قبل وجود دارد.';
+            RETURN;
+        END;
+
+        /* بررسی یکتایی اطلاعات ورود */
+        IF @Username IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1 FROM dbo.App_Users
+               WHERE Username = @Username
+           )
+        BEGIN
+            THROW 51001, 'Username already exists.', 1;
+        END;
+
+        IF @Email IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1 FROM dbo.App_Users
+               WHERE Email = @Email
+           )
+        BEGIN
+            THROW 51002, 'Email already exists.', 1;
+        END;
+
+        IF @Mobile IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1 FROM dbo.App_Users
+               WHERE Mobile = @Mobile
+                 AND ISNULL(IsDeleted, 0) = 0
+           )
+        BEGIN
+            THROW 51003, 'Mobile already exists.', 1;
+        END;
+
+        /* ایجاد کاربر */
+        INSERT INTO dbo.App_Users
+        (
+            Username,
+            PasswordHash,
+            Email,
+            Mobile,
+            FirstName,
+            LastName,
+            Gender,
+            PhoneVerified,
+            IsActive,
+            IsDeleted,
+            CreatedAt
+        )
+        VALUES
+        (
+            @Username,
+            @PasswordHash,
+            @Email,
+            COALESCE(@Mobile, @Username),
+            COALESCE(NULLIF(LTRIM(RTRIM(@FirstName)), N''), @Username, @Mobile, N'Admin'),
+            COALESCE(NULLIF(LTRIM(RTRIM(@LastName)), N''), N''),
+            0,
+            0,
+            1,
+            0,
+            GETDATE()
+        );
+
+        SET @UserId = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        /* اختصاص نقش سوپر ادمین */
+        INSERT INTO dbo.App_UserRoles
+        (
+            UserId,
+            RoleId,
+            AssignedAt,
+            IsActive,
+            IsDeleted,
+            CreatedAt
+        )
+        VALUES
+        (
+            @UserId,
+            @SuperAdminRoleId,
+            GETDATE(),
+            1,
+            0,
+            GETDATE()
+        );
+
+        /* ایجاد سازمان */
+        INSERT INTO dbo.Organizations
+        (
+            OrgName,
+            OrgType,
+            GeoId,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UserCreater
+        )
+        VALUES
+        (
+            @OrgName,
+            @OrgType,
+            @GeoId,
+            1,
+            0,
+            GETDATE(),
+            TRY_CONVERT(INT, @UserId)
+        );
+
+        SET @OrgId = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        /* اتصال سازمان به همان سوپر ادمین */
+        UPDATE dbo.App_Users
+        SET OrgId = @OrgId,
+            UpdatedAt = GETDATE(),
+            UserUpdater = TRY_CONVERT(INT, @UserId)
+        WHERE UserId = @UserId;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'کاربر سوپر ادمین و سازمان با موفقیت ایجاد شدند.';
+
+        SELECT
+            @UserId AS UserId,
+            @OrgId AS OrgId,
+            @ResultCode AS ResultCode,
+            @ResultMessage AS ResultMessage;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+            ROLLBACK TRANSACTION;
+
+        SET @UserId = NULL;
+        SET @OrgId = NULL;
+
+        IF ERROR_NUMBER() BETWEEN 51001 AND 51003
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage =
+                N'نام کاربری، موبایل یا ایمیل قبلاً ثبت شده است.';
+        END
+        ELSE
+        BEGIN
+            SET @ResultCode = 500;
+            SET @ResultMessage = N'خطا در ایجاد کاربر و سازمان.';
+        END;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2764,7 +3348,7 @@ BEGIN
     OPTION (MAXRECURSION 100);
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2974,7 +3558,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3307,7 +3891,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3401,7 +3985,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3858,7 +4442,7 @@ BEGIN
 
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3916,7 +4500,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3978,7 +4562,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4040,7 +4624,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4076,7 +4660,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4115,7 +4699,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4165,7 +4749,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4216,7 +4800,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4345,7 +4929,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4372,7 +4956,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4482,7 +5066,7 @@ BEGIN
         m.SortOrder;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4947,11 +5531,12 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+
 CREATE PROCEDURE [dbo].[App_UsersSignup]
 (
     @Mobile             NVARCHAR(30),
@@ -4966,6 +5551,7 @@ CREATE PROCEDURE [dbo].[App_UsersSignup]
     @NationalId         NVARCHAR(10) = NULL,
     @BirthDate          DATETIME = NULL,
 
+    -- این پارامتر دیگر نباید برای تعیین نقش مدیریتی استفاده شود
     @RoleId             BIGINT = NULL,
 
     @RequestIp          NVARCHAR(50) = NULL,
@@ -4976,7 +5562,12 @@ CREATE PROCEDURE [dbo].[App_UsersSignup]
 
     @UserId             BIGINT OUTPUT,
     @OtpRequestId       BIGINT OUTPUT,
-    @OtpCode            VARCHAR(6) OUTPUT
+    @OtpCode            VARCHAR(6) OUTPUT,
+
+    -- اطلاعات سازمان برای تکمیل ثبت‌نام پس از تأیید OTP
+    @OrgName            NVARCHAR(200) = NULL,
+    @OrgType            INT = NULL,
+    @GeoId              NVARCHAR(10) = NULL
 )
 AS
 BEGIN
@@ -4994,17 +5585,15 @@ BEGIN
         @OtpExpiresAt DATETIME2(0),
         @NormalizedMobile NVARCHAR(30),
         @OtpCodeInt INT,
-        @ExistingUserId BIGINT,
-        @ExistingOtpRequestId BIGINT,
+        @ExistingUserId BIGINT = NULL,
         @LastOtpCreatedAt DATETIME2(0),
         @OtpCount15Min INT,
         @DailyOtpCount INT,
         @RateLimitId BIGINT;
 
     BEGIN TRY
-
         /* =========================================
-           Validation
+           اعتبارسنجی ورودی‌ها
         ========================================= */
 
         SET @NormalizedMobile =
@@ -5019,6 +5608,8 @@ BEGIN
         SET @Username = NULLIF(LTRIM(RTRIM(@Username)), N'');
         SET @Email = NULLIF(LTRIM(RTRIM(@Email)), N'');
         SET @NationalId = NULLIF(LTRIM(RTRIM(@NationalId)), N'');
+        SET @OrgName = NULLIF(LTRIM(RTRIM(@OrgName)), N'');
+        SET @GeoId = NULLIF(LTRIM(RTRIM(@GeoId)), N'');
 
         SET @FirstName =
             ISNULL(NULLIF(LTRIM(RTRIM(@FirstName)), N''), N'کاربر');
@@ -5026,34 +5617,61 @@ BEGIN
         SET @LastName =
             ISNULL(NULLIF(LTRIM(RTRIM(@LastName)), N''), N'جدید');
 
-
-        --IF @NormalizedMobile IS NULL
-        --   OR LEN(@NormalizedMobile) < 10
-        --BEGIN
-        --    SET @ResultCode = 400;
-        --    SET @ResultMessage = N'شماره موبایل معتبر نیست.';
-        --    RETURN;
-        --END;
-
-
-        /*
-            حداقل یکی از این دو روش باید وجود داشته باشد:
-            1- Username + Password
-            2- Mobile OTP
-        */
-
-        IF @Username IS NOT NULL
-           AND @PasswordHash IS NULL
+        IF @NormalizedMobile IS NULL
+           OR LEN(@NormalizedMobile) < 10
         BEGIN
             SET @ResultCode = 400;
-            SET @ResultMessage =
-                N'برای ثبت نام با نام کاربری، کلمه عبور الزامی است.';
+            SET @ResultMessage = N'شماره موبایل معتبر نیست.';
             RETURN;
         END;
 
+        IF @OrgName IS NULL OR @OrgType IS NULL OR @GeoId IS NULL
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage =
+                N'نام سازمان، نوع سازمان و موقعیت جغرافیایی الزامی است.';
+            RETURN;
+        END;
 
-        IF @Username IS NOT NULL
-           AND LEN(@Username) < 3
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Base_Geo
+            WHERE GeoId = @GeoId
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'موقعیت جغرافیایی معتبر نیست.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Base_LookupValues
+            WHERE LookupValueId = @OrgType
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'نوع سازمان معتبر نیست.';
+            RETURN;
+        END;
+
+        /*
+          نقش از سمت کلاینت پذیرفته نمی‌شود.
+          این مسیر فقط درخواست ثبت‌نام اولیه است.
+        */
+        SET @RoleId = NULL;
+
+        IF @Username IS NOT NULL AND @PasswordHash IS NULL
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage =
+                N'برای ثبت‌نام با نام کاربری، کلمه عبور الزامی است.';
+            RETURN;
+        END;
+
+        IF @Username IS NOT NULL AND LEN(@Username) < 3
         BEGIN
             SET @ResultCode = 400;
             SET @ResultMessage =
@@ -5061,126 +5679,108 @@ BEGIN
             RETURN;
         END;
 
-
-        /*
-            PasswordHash باید توسط API تولید شده باشد.
-            SQL نباید Password خام دریافت کند.
-        */
-
-        IF @Username IS NOT NULL
-           AND LEN(@PasswordHash) < 20
+        IF @Username IS NOT NULL AND LEN(@PasswordHash) < 20
         BEGIN
             SET @ResultCode = 400;
-            SET @ResultMessage =
-                N'PasswordHash معتبر نیست.';
+            SET @ResultMessage = N'PasswordHash معتبر نیست.';
             RETURN;
         END;
 
-
         /* =========================================
-           Username Duplicate
+           بررسی تکراری بودن اطلاعات
         ========================================= */
 
         IF @Username IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1
+               FROM dbo.App_Users
+               WHERE Username = @Username
+                 AND ISNULL(IsDeleted, 0) = 0
+           )
         BEGIN
-            SELECT TOP 1
-                @ExistingUserId = UserId
-            FROM dbo.App_Users
-            WHERE Username = @Username
-              AND ISNULL(IsDeleted, 0) = 0;
-
-            IF @ExistingUserId IS NOT NULL
-            BEGIN
-                SET @ResultCode = 409;
-                SET @ResultMessage =
-                    N'این نام کاربری قبلاً ثبت شده است.';
-                RETURN;
-            END;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این نام کاربری قبلاً ثبت شده است.';
+            RETURN;
         END;
-
-
-        /* =========================================
-           Email Duplicate
-        ========================================= */
 
         IF @Email IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1
+               FROM dbo.App_Users
+               WHERE Email = @Email
+                 AND ISNULL(IsDeleted, 0) = 0
+           )
         BEGIN
-            IF EXISTS
-            (
-                SELECT 1
-                FROM dbo.App_Users
-                WHERE Email = @Email
-                  AND ISNULL(IsDeleted, 0) = 0
-            )
-            BEGIN
-                SET @ResultCode = 409;
-                SET @ResultMessage =
-                    N'این ایمیل قبلاً ثبت شده است.';
-                RETURN;
-            END;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این ایمیل قبلاً ثبت شده است.';
+            RETURN;
         END;
-
-
-        /* =========================================
-           NationalId Duplicate
-        ========================================= */
 
         IF @NationalId IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1
+               FROM dbo.App_Users
+               WHERE NationalId = @NationalId
+                 AND ISNULL(IsDeleted, 0) = 0
+           )
         BEGIN
-            IF EXISTS
-            (
-                SELECT 1
-                FROM dbo.App_Users
-                WHERE NationalId = @NationalId
-                  AND ISNULL(IsDeleted, 0) = 0
-            )
-            BEGIN
-                SET @ResultCode = 409;
-                SET @ResultMessage =
-                    N'این کد ملی قبلاً ثبت شده است.';
-                RETURN;
-            END;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این کد ملی قبلاً ثبت شده است.';
+            RETURN;
         END;
 
+        /*
+          اگر موبایل قبلاً متعلق به کاربر فعال و تأییدشده باشد،
+          ثبت‌نام مجدد مجاز نیست.
+        */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_Users
+            WHERE Mobile = @NormalizedMobile
+              AND IsActive = 1
+              AND PhoneVerified = 1
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage =
+                N'این شماره موبایل قبلاً ثبت‌نام و تأیید شده است.';
+            RETURN;
+        END;
 
-        /* =========================================
-           User exists with this Mobile
-        ========================================= */
-
-        SELECT TOP 1
+        /*
+          از اتصال مجدد یک کاربر موجود به ثبت‌نام اولیه سازمان
+          جلوگیری می‌کنیم. کاربر موقت قدیمی باید فقط در صورتی
+          قابل استفاده باشد که هنوز OrgId نداشته باشد.
+        */
+        SELECT TOP (1)
             @ExistingUserId = UserId
         FROM dbo.App_Users
         WHERE Mobile = @NormalizedMobile
           AND ISNULL(IsDeleted, 0) = 0
         ORDER BY UserId DESC;
 
-
-        /*
-            اگر User فعال و تایید شده باشد،
-            نباید دوباره Signup انجام شود.
-        */
-
         IF @ExistingUserId IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1
+               FROM dbo.App_Users
+               WHERE UserId = @ExistingUserId
+                 AND OrgId IS NOT NULL
+           )
         BEGIN
-            IF EXISTS
-            (
-                SELECT 1
-                FROM dbo.App_Users
-                WHERE UserId = @ExistingUserId
-                  AND IsActive = 1
-                  AND PhoneVerified = 1
-            )
-            BEGIN
-                SET @ResultCode = 409;
-                SET @ResultMessage =
-                    N'این شماره موبایل قبلاً ثبت نام کرده است.';
-                RETURN;
-            END;
+            SET @ResultCode = 409;
+            SET @ResultMessage =
+                N'این کاربر قبلاً به یک سازمان متصل شده است.';
+            RETURN;
         END;
 
-
         /* =========================================
-           Rate Limit
+           محدودیت درخواست OTP
         ========================================= */
 
         SELECT
@@ -5189,9 +5789,6 @@ BEGIN
             @DailyOtpCount = DailyCount
         FROM dbo.App_UserOtpRateLimits
         WHERE Mobile = @NormalizedMobile;
-
-
-        /* اگر کمتر از 60 ثانیه گذشته باشد */
 
         IF @LastOtpCreatedAt IS NOT NULL
            AND DATEDIFF(SECOND, @LastOtpCreatedAt, @Now) < 60
@@ -5202,10 +5799,14 @@ BEGIN
             RETURN;
         END;
 
-
-        /* حداکثر 20 SMS در روز */
-
         IF ISNULL(@DailyOtpCount, 0) >= 20
+           AND EXISTS
+           (
+               SELECT 1
+               FROM dbo.App_UserOtpRateLimits
+               WHERE RateLimitId = @RateLimitId
+                 AND DailyDate = CONVERT(DATE, @Now)
+           )
         BEGIN
             SET @ResultCode = 429;
             SET @ResultMessage =
@@ -5213,17 +5814,10 @@ BEGIN
             RETURN;
         END;
 
-
-        /* =========================================
-           15 Minute Rate Limit
-        ========================================= */
-
-        SELECT
-            @OtpCount15Min = COUNT(*)
+        SELECT @OtpCount15Min = COUNT(*)
         FROM dbo.App_UserOtpRequests
         WHERE Mobile = @NormalizedMobile
           AND CreatedAt >= DATEADD(MINUTE, -15, @Now);
-
 
         IF @OtpCount15Min >= 5
         BEGIN
@@ -5233,32 +5827,24 @@ BEGIN
             RETURN;
         END;
 
-
         /* =========================================
-           Generate OTP
+           تولید OTP
         ========================================= */
 
-        SET @OtpCodeInt =
-            ABS(CHECKSUM(NEWID())) % 900000 + 100000;
-
+        SET @OtpCodeInt = ABS(CHECKSUM(NEWID())) % 900000 + 100000;
         SET @OtpCode =
-            RIGHT('000000' + CAST(@OtpCodeInt AS VARCHAR(6)), 6);
+            RIGHT('000000' + CONVERT(VARCHAR(6), @OtpCodeInt), 6);
 
-        SET @OtpExpiresAt =
-            DATEADD(MINUTE, 2, @Now);
-
+        SET @OtpExpiresAt = DATEADD(MINUTE, 2, @Now);
 
         BEGIN TRANSACTION;
 
-
         /* =========================================
-           اگر User موقت قبلاً وجود دارد
-           همان را استفاده می‌کنیم
+           ایجاد یا به‌روزرسانی کاربر موقت
         ========================================= */
 
         IF @ExistingUserId IS NULL
         BEGIN
-
             INSERT INTO dbo.App_Users
             (
                 Username,
@@ -5270,13 +5856,10 @@ BEGIN
                 NationalId,
                 Gender,
                 BirthDate,
-                AvatarUrl,
                 PhoneVerified,
-                LastLoginAt,
                 IsActive,
                 IsDeleted,
-                CreatedAt,
-                UserCreater
+                CreatedAt
             )
             VALUES
             (
@@ -5289,27 +5872,17 @@ BEGIN
                 @NationalId,
                 @Gender,
                 @BirthDate,
-                NULL,
-                0,
-                NULL,
                 0,
                 0,
-                GETDATE(),
-                NULL
+                0,
+                GETDATE()
             );
 
             SET @UserId = CONVERT(BIGINT, SCOPE_IDENTITY());
-
         END
         ELSE
         BEGIN
-
             SET @UserId = @ExistingUserId;
-
-            /*
-                اطلاعات Signup جدید روی User موقت
-                به‌روزرسانی می‌شود.
-            */
 
             UPDATE dbo.App_Users
             SET
@@ -5323,31 +5896,31 @@ BEGIN
                 BirthDate = @BirthDate,
                 PhoneVerified = 0,
                 IsActive = 0,
-                UpdatedAt = GETDATE(),
-                UserUpdater = NULL
-            WHERE UserId = @UserId;
-
+                UpdatedAt = GETDATE()
+            WHERE UserId = @UserId
+              AND OrgId IS NULL;
         END;
 
-
         /* =========================================
-           OTP قبلی را باطل کن
+           باطل کردن OTPهای قبلی تأییدنشده
         ========================================= */
 
         UPDATE dbo.App_UserOtpRequests
-        SET
-            IsBlocked = 1
+        SET IsBlocked = 1
         WHERE UserId = @UserId
           AND OtpPurpose = 1
           AND IsUsed = 0
           AND IsBlocked = 0;
 
+        /*
+          مهم:
+          در این نقطه باید مقدار OTP با قالبی ذخیره شود که
+          پروسیجر تأیید OTP فعلی تو انتظار دارد.
 
-        /* =========================================
-           ذخیره OTP Hash
-           
-           SHA2_512 => 64 bytes
-        ========================================= */
+          مقدار ثابت '1234' عمداً استفاده نشده است.
+          برای تعیین عبارت INSERT صحیح، نوع ستون OtpCode
+          و کد پروسیجر تأیید OTP لازم است.
+        */
 
         INSERT INTO dbo.App_UserOtpRequests
         (
@@ -5370,7 +5943,7 @@ BEGIN
             @UserId,
             @NormalizedMobile,
             1,
-            '1234',
+            @OtpCode, -- موقت؛ باید با قالب ذخیره‌سازی OTP فعلی هماهنگ شود
             @Now,
             @OtpExpiresAt,
             NULL,
@@ -5382,18 +5955,14 @@ BEGIN
             @UserAgent
         );
 
-
-        SET @OtpRequestId =
-            CONVERT(BIGINT, SCOPE_IDENTITY());
-
+        SET @OtpRequestId = CONVERT(BIGINT, SCOPE_IDENTITY());
 
         /* =========================================
-           Rate Limit Record
+           ثبت محدودیت ارسال
         ========================================= */
 
         IF @RateLimitId IS NULL
         BEGIN
-
             INSERT INTO dbo.App_UserOtpRateLimits
             (
                 Mobile,
@@ -5414,11 +5983,9 @@ BEGIN
                 NULL,
                 @Now
             );
-
         END
         ELSE
         BEGIN
-
             UPDATE dbo.App_UserOtpRateLimits
             SET
                 RequestCount =
@@ -5427,44 +5994,29 @@ BEGIN
                         THEN 1
                         ELSE RequestCount + 1
                     END,
-
                 WindowStart =
                     CASE
                         WHEN WindowStart < DATEADD(MINUTE, -15, @Now)
                         THEN @Now
                         ELSE WindowStart
                     END,
-
                 DailyCount =
                     CASE
                         WHEN DailyDate <> CONVERT(DATE, @Now)
                         THEN 1
                         ELSE DailyCount + 1
                     END,
-
-                DailyDate =
-                    CONVERT(DATE, @Now),
-
+                DailyDate = CONVERT(DATE, @Now),
                 LastRequestAt = @Now,
-
                 BlockedUntil = NULL
-
             WHERE RateLimitId = @RateLimitId;
-
         END;
-
 
         COMMIT TRANSACTION;
 
-
         SET @ResultCode = 200;
         SET @ResultMessage =
-            N'کد تایید با موفقیت ایجاد شد.';
-
-        /*
-            API باید @OtpCode را دریافت کند
-            و آن را از طریق SMS Provider ارسال کند.
-        */
+            N'درخواست ثبت‌نام ایجاد شد؛ برای تکمیل ثبت‌نام، OTP را تأیید کنید.';
 
         SELECT
             @UserId AS UserId,
@@ -5473,6 +6025,1314 @@ BEGIN
             @OtpExpiresAt AS OtpExpiresAt;
 
         RETURN;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage =
+            N'خطا در ایجاد ثبت‌نام: ' + ERROR_MESSAGE();
+
+        SET @UserId = NULL;
+        SET @OtpRequestId = NULL;
+        SET @OtpCode = NULL;
+
+        RETURN;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupStartOtp]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[App_UsersSignupStartOtp]
+(
+    @Mobile       NVARCHAR(30),
+    @OrgName      NVARCHAR(200),
+    @OrgType      INT,
+    @GeoId        NVARCHAR(10),
+    @RequestIp    NVARCHAR(50) = NULL,
+    @UserAgent    NVARCHAR(500) = NULL,
+
+    @ResultCode    INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT,
+    @UserId        BIGINT OUTPUT,
+    @OtpRequestId  BIGINT OUTPUT,
+    @OtpExpiresAt  DATETIME2(0) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    DECLARE @Now DATETIME2(0) = SYSDATETIME();
+    DECLARE @NormalizedMobile NVARCHAR(30);
+    DECLARE @NormalizedOrgName NVARCHAR(200);
+    DECLARE @OtpCode NVARCHAR(30) = N'1234';
+    DECLARE @RoleId BIGINT = 1;
+
+    SELECT
+        @ResultCode = 500,
+        @ResultMessage = N'خطای پیش‌بینی‌نشده.',
+        @UserId = NULL,
+        @OtpRequestId = NULL,
+        @OtpExpiresAt = NULL;
+
+    SET @NormalizedMobile = LTRIM(RTRIM(@Mobile));
+    SET @NormalizedMobile = REPLACE(@NormalizedMobile, N' ', N'');
+    SET @NormalizedMobile = REPLACE(@NormalizedMobile, N'-', N'');
+    SET @NormalizedMobile = REPLACE(@NormalizedMobile, N'(', N'');
+    SET @NormalizedMobile = REPLACE(@NormalizedMobile, N')', N'');
+
+    SET @NormalizedOrgName = LTRIM(RTRIM(@OrgName));
+
+    IF NULLIF(@NormalizedMobile, N'') IS NULL
+       OR LEN(@NormalizedMobile) < 10
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'شماره موبایل معتبر نیست.';
+        RETURN;
+    END;
+
+    IF NULLIF(@NormalizedOrgName, N'') IS NULL
+       OR @OrgType IS NULL
+       OR NULLIF(LTRIM(RTRIM(@GeoId)), N'') IS NULL
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'نام سازمان، نوع سازمان و موقعیت جغرافیایی الزامی هستند.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.Base_Geo
+        WHERE GeoId = @GeoId
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'موقعیت جغرافیایی معتبر نیست.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.Base_LookupValues
+        WHERE LookupValueId = @OrgType
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'نوع سازمان معتبر نیست.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.App_Roles
+        WHERE RoleId = @RoleId
+    )
+    BEGIN
+        SET @ResultCode = 500;
+        SET @ResultMessage = N'نقش مدیر ساختمان با شناسه 1 در دیتابیس وجود ندارد.';
+        RETURN;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        /* جلوگیری از ثبت سازمان تکراری */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.Organizations WITH (UPDLOCK, HOLDLOCK)
+            WHERE LTRIM(RTRIM(OrgName)) = @NormalizedOrgName
+              AND OrgType = @OrgType
+              AND GeoId = @GeoId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'سازمانی با این نام، نوع و موقعیت جغرافیایی قبلاً ثبت شده است.';
+            RETURN;
+        END;
+
+        /* شماره متعلق به حساب فعال و تأییدشده نباشد */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_Users WITH (UPDLOCK, HOLDLOCK)
+            WHERE Mobile = @NormalizedMobile
+              AND ISNULL(IsDeleted, 0) = 0
+              AND IsActive = 1
+              AND PhoneVerified = 1
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این شماره موبایل قبلاً ثبت و تأیید شده است.';
+            RETURN;
+        END;
+
+        /* محدودیت درخواست موبایل: یک درخواست در هر 60 ثانیه */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_UserOtpRateLimits WITH (UPDLOCK, HOLDLOCK)
+            WHERE Mobile = @NormalizedMobile
+              AND LastRequestAt > DATEADD(SECOND, -60, @Now)
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 429;
+            SET @ResultMessage = N'لطفاً قبل از درخواست مجدد کد تأیید، کمی صبر کنید.';
+            RETURN;
+        END;
+
+        /* محدودیت روزانه */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_UserOtpRateLimits WITH (UPDLOCK, HOLDLOCK)
+            WHERE Mobile = @NormalizedMobile
+              AND DailyDate = CONVERT(DATE, @Now)
+              AND DailyCount >= 20
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 429;
+            SET @ResultMessage = N'سقف درخواست روزانه کد تأیید برای این شماره تکمیل شده است.';
+            RETURN;
+        END;
+
+        /* حداکثر 5 درخواست در 15 دقیقه */
+        IF
+        (
+            SELECT COUNT_BIG(*)
+            FROM dbo.App_UserOtpRequests WITH (UPDLOCK, HOLDLOCK)
+            WHERE Mobile = @NormalizedMobile
+              AND OtpPurpose = 1
+              AND CreatedAt >= DATEADD(MINUTE, -15, @Now)
+        ) >= 5
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 429;
+            SET @ResultMessage = N'تعداد درخواست‌های کد تأیید بیش از حد مجاز است.';
+            RETURN;
+        END;
+
+        /* حساب موقت قبلی یا حساب جدید */
+        SELECT TOP (1) @UserId = UserId
+        FROM dbo.App_Users WITH (UPDLOCK, HOLDLOCK)
+        WHERE Mobile = @NormalizedMobile
+          AND ISNULL(IsDeleted, 0) = 0
+          AND NOT (IsActive = 1 AND PhoneVerified = 1)
+        ORDER BY UserId DESC;
+
+        IF @UserId IS NULL
+        BEGIN
+            INSERT INTO dbo.App_Users
+            (
+                Username, PasswordHash, Email, Mobile,
+                FirstName, LastName, Gender,
+                PhoneVerified, IsActive, IsDeleted, CreatedAt
+            )
+            VALUES
+            (
+                NULL, NULL, NULL, @NormalizedMobile,
+                NULL, NULL, 0,
+                0, 0, 0, GETDATE()
+            );
+
+            SET @UserId = CONVERT(BIGINT, SCOPE_IDENTITY());
+        END
+        ELSE
+        BEGIN
+            UPDATE dbo.App_Users
+            SET IsActive = 0,
+                PhoneVerified = 0,
+                UpdatedAt = GETDATE()
+            WHERE UserId = @UserId;
+
+            DELETE FROM dbo.App_UserSignupPending
+            WHERE UserId = @UserId;
+        END;
+
+        INSERT INTO dbo.App_UserSignupPending
+        (
+            UserId, OrgName, OrgType, GeoId
+        )
+        VALUES
+        (
+            @UserId, @NormalizedOrgName, @OrgType, @GeoId
+        );
+
+        /* کدهای قبلی مصرف‌نشده بی‌اعتبار شوند */
+        UPDATE dbo.App_UserOtpRequests
+        SET IsBlocked = 1
+        WHERE UserId = @UserId
+          AND OtpPurpose = 1
+          AND IsUsed = 0
+          AND IsBlocked = 0;
+
+        SET @OtpExpiresAt = DATEADD(MINUTE, 2, @Now);
+
+        INSERT INTO dbo.App_UserOtpRequests
+        (
+            UserId, Mobile, OtpCode, OtpPurpose,
+            CreatedAt, ExpiresAt, AttemptCount,
+            MaxAttempts, IsUsed, IsBlocked,
+            RequestIp, UserAgent
+        )
+        VALUES
+        (
+            @UserId, @NormalizedMobile, @OtpCode, 1,
+            @Now, @OtpExpiresAt, 0,
+            5, 0, 0, @RequestIp, @UserAgent
+        );
+
+        SET @OtpRequestId = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_UserOtpRateLimits WITH (UPDLOCK, HOLDLOCK)
+            WHERE Mobile = @NormalizedMobile
+        )
+        BEGIN
+            UPDATE dbo.App_UserOtpRateLimits
+            SET RequestCount =
+                    CASE
+                        WHEN WindowStart <= DATEADD(MINUTE, -15, @Now)
+                        THEN 1 ELSE RequestCount + 1
+                    END,
+                WindowStart =
+                    CASE
+                        WHEN WindowStart <= DATEADD(MINUTE, -15, @Now)
+                        THEN @Now ELSE WindowStart
+                    END,
+                DailyDate =
+                    CASE WHEN DailyDate <> CONVERT(DATE, @Now)
+                         THEN CONVERT(DATE, @Now) ELSE DailyDate END,
+                DailyCount =
+                    CASE WHEN DailyDate <> CONVERT(DATE, @Now)
+                         THEN 1 ELSE DailyCount + 1 END,
+                LastRequestAt = @Now,
+                BlockedUntil = NULL
+            WHERE Mobile = @NormalizedMobile;
+        END
+        ELSE
+        BEGIN
+            INSERT INTO dbo.App_UserOtpRateLimits
+            (
+                Mobile, WindowStart, RequestCount,
+                DailyDate, DailyCount, LastRequestAt
+            )
+            VALUES
+            (
+                @NormalizedMobile, @Now, 1,
+                CONVERT(DATE, @Now), 1, @Now
+            );
+        END;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'درخواست ثبت‌نام ایجاد شد. کد تأیید تا دو دقیقه معتبر است.';
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupVerifyOtp]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[App_UsersSignupVerifyOtp]
+(
+    @UserId         BIGINT,
+    @OtpRequestId   BIGINT,
+    @OtpCode        NVARCHAR(10),
+
+    @ResultCode     INT OUTPUT,
+    @ResultMessage  NVARCHAR(500) OUTPUT,
+    @OrgId          BIGINT OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    DECLARE @Now DATETIME2(0) = SYSDATETIME();
+    DECLARE @Mobile NVARCHAR(30);
+    DECLARE @StoredCode NVARCHAR(30);
+    DECLARE @ExpiresAt DATETIME2(0);
+    DECLARE @AttemptCount INT;
+    DECLARE @MaxAttempts INT;
+    DECLARE @IsUsed BIT;
+    DECLARE @IsBlocked BIT;
+    DECLARE @OrgName NVARCHAR(200);
+    DECLARE @OrgType INT;
+    DECLARE @GeoId NVARCHAR(10);
+    DECLARE @RoleId BIGINT = 1;
+    DECLARE @PhoneVerified BIT;
+    DECLARE @IsActive BIT;
+
+    SELECT
+        @ResultCode = 500,
+        @ResultMessage = N'خطای پیش‌بینی‌نشده.',
+        @OrgId = NULL;
+
+    IF @UserId IS NULL OR @OtpRequestId IS NULL
+       OR @OtpCode IS NULL OR LEN(@OtpCode) <> 4
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'اطلاعات تأیید کد معتبر نیست.';
+        RETURN;
+    END;
+
+    /* کد ثابت فقط برای توسعه */
+    IF @OtpCode <> N'1234'
+    BEGIN
+        /* این بررسی عمداً در ادامه هم انجام می‌شود؛
+           شمارش تلاش‌ها باید در برابر درخواست‌های هم‌زمان محافظت شود. */
+        SET @StoredCode = NULL;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        SELECT
+            @Mobile = O.Mobile,
+            @StoredCode = O.OtpCode,
+            @ExpiresAt = O.ExpiresAt,
+            @AttemptCount = O.AttemptCount,
+            @MaxAttempts = O.MaxAttempts,
+            @IsUsed = O.IsUsed,
+            @IsBlocked = O.IsBlocked
+        FROM dbo.App_UserOtpRequests O WITH (UPDLOCK, HOLDLOCK)
+        WHERE O.OtpRequestId = @OtpRequestId
+          AND O.UserId = @UserId
+          AND O.OtpPurpose = 1;
+
+        IF @Mobile IS NULL
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'درخواست کد تأیید پیدا نشد.';
+            RETURN;
+        END;
+
+        IF @IsUsed = 1
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این کد قبلاً استفاده شده است.';
+            RETURN;
+        END;
+
+        IF @IsBlocked = 1
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 429;
+            SET @ResultMessage = N'درخواست کد تأیید مسدود شده است.';
+            RETURN;
+        END;
+
+        IF @ExpiresAt <= @Now
+        BEGIN
+            UPDATE dbo.App_UserOtpRequests
+            SET IsBlocked = 1
+            WHERE OtpRequestId = @OtpRequestId;
+
+            COMMIT TRANSACTION;
+
+            SET @ResultCode = 410;
+            SET @ResultMessage = N'کد تأیید منقضی شده است؛ کد جدید درخواست کنید.';
+            RETURN;
+        END;
+
+        IF @AttemptCount >= @MaxAttempts
+        BEGIN
+            UPDATE dbo.App_UserOtpRequests
+            SET IsBlocked = 1
+            WHERE OtpRequestId = @OtpRequestId;
+
+            COMMIT TRANSACTION;
+
+            SET @ResultCode = 429;
+            SET @ResultMessage = N'تعداد تلاش‌های مجاز تمام شده است.';
+            RETURN;
+        END;
+
+        /* در محیط فعلی کد معتبر ثابت 1234 است. */
+        IF @OtpCode <> N'1234' OR @StoredCode <> N'1234'
+        BEGIN
+            UPDATE dbo.App_UserOtpRequests
+            SET AttemptCount = AttemptCount + 1,
+                IsBlocked =
+                    CASE WHEN AttemptCount + 1 >= MaxAttempts
+                         THEN 1 ELSE 0 END
+            WHERE OtpRequestId = @OtpRequestId;
+
+            COMMIT TRANSACTION;
+
+            SET @ResultCode = 401;
+            SET @ResultMessage = N'کد تأیید اشتباه است.';
+            RETURN;
+        END;
+
+        SELECT
+            @OrgName = OrgName,
+            @OrgType = OrgType,
+            @GeoId = GeoId
+        FROM dbo.App_UserSignupPending WITH (UPDLOCK, HOLDLOCK)
+        WHERE UserId = @UserId;
+
+        IF @OrgName IS NULL
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'اطلاعات موقت سازمان پیدا نشد؛ ثبت‌نام را دوباره شروع کنید.';
+            RETURN;
+        END;
+
+        SELECT
+            @PhoneVerified = PhoneVerified,
+            @IsActive = IsActive
+        FROM dbo.App_Users WITH (UPDLOCK, HOLDLOCK)
+        WHERE UserId = @UserId
+          AND Mobile = @Mobile
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        IF @PhoneVerified IS NULL
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'کاربر ثبت‌نام پیدا نشد.';
+            RETURN;
+        END;
+
+        IF @PhoneVerified = 1 AND @IsActive = 1
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این حساب قبلاً فعال شده است.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1 FROM dbo.App_Roles WHERE RoleId = @RoleId
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 500;
+            SET @ResultMessage = N'نقش مدیر ساختمان با شناسه 1 تعریف نشده است.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.Organizations WITH (UPDLOCK, HOLDLOCK)
+            WHERE LTRIM(RTRIM(OrgName)) = LTRIM(RTRIM(@OrgName))
+              AND OrgType = @OrgType
+              AND GeoId = @GeoId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'سازمانی با این نام، نوع و موقعیت جغرافیایی قبلاً ثبت شده است.';
+            RETURN;
+        END;
+
+        /* مصرف اتمیک OTP */
+        UPDATE dbo.App_UserOtpRequests
+        SET IsUsed = 1,
+            VerifiedAt = @Now
+        WHERE OtpRequestId = @OtpRequestId
+          AND UserId = @UserId
+          AND IsUsed = 0
+          AND IsBlocked = 0
+          AND ExpiresAt > @Now;
+
+        IF @@ROWCOUNT <> 1
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'درخواست تأیید قبلاً تغییر کرده است؛ دوباره تلاش کنید.';
+            RETURN;
+        END;
+
+        INSERT INTO dbo.Organizations
+        (
+            OrgName, OrgType, GeoId, OrgDesc,
+            IsActive, IsDeleted, CreatedAt, UserCreater
+        )
+        VALUES
+        (
+            LTRIM(RTRIM(@OrgName)), @OrgType, @GeoId, NULL,
+            1, 0, GETDATE(), NULL
+        );
+
+        SET @OrgId = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        UPDATE dbo.App_Users
+        SET OrgId = @OrgId,
+            PhoneVerified = 1,
+            IsActive = 1,
+            IsDeleted = 0,
+            UpdatedAt = GETDATE()
+        WHERE UserId = @UserId;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_UserRoles
+            WHERE UserId = @UserId
+              AND RoleId = @RoleId
+        )
+        BEGIN
+            INSERT INTO dbo.App_UserRoles
+            (
+                UserId, RoleId, AssignedAt, IsActive,
+                IsDeleted, CreatedAt, Notes
+            )
+            VALUES
+            (
+                @UserId, @RoleId, GETDATE(), 1,
+                0, GETDATE(), N'نقش مدیر ساختمان هنگام ثبت‌نام'
+            );
+        END
+        ELSE
+        BEGIN
+            UPDATE dbo.App_UserRoles
+            SET IsActive = 1,
+                IsDeleted = 0,
+                UpdatedAt = GETDATE(),
+                Notes = N'نقش مدیر ساختمان هنگام ثبت‌نام'
+            WHERE UserId = @UserId
+              AND RoleId = @RoleId;
+        END;
+
+        DELETE FROM dbo.App_UserSignupPending
+        WHERE UserId = @UserId;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'ثبت‌نام با موفقیت تکمیل شد.';
+
+        SELECT
+            U.UserId,
+            U.Username,
+            U.Mobile,
+            U.FirstName,
+            U.LastName,
+            U.OrgId,
+            O.OrgName,
+            O.OrgType,
+            O.GeoId,
+            @RoleId AS RoleId
+        FROM dbo.App_Users U
+        INNER JOIN dbo.Organizations O ON O.OrgId = U.OrgId
+        WHERE U.UserId = @UserId;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+        SET @OrgId = NULL;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupWithPassword]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[App_UsersSignupWithPassword]
+(
+    @Username       NVARCHAR(100),
+    @PasswordHash   NVARCHAR(500),
+    @OrgName        NVARCHAR(200),
+    @OrgType        INT,
+    @GeoId          NVARCHAR(10),
+    @RequestIp      NVARCHAR(50) = NULL,
+
+    @ResultCode     INT OUTPUT,
+    @ResultMessage  NVARCHAR(500) OUTPUT,
+    @UserId         BIGINT OUTPUT,
+    @OrgId          BIGINT OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    DECLARE @Now DATETIME2(0) = SYSDATETIME();
+    DECLARE @NormalizedUsername NVARCHAR(100);
+    DECLARE @NormalizedOrgName NVARCHAR(200);
+    DECLARE @RateKey NVARCHAR(200);
+    DECLARE @RoleId BIGINT = 1;
+    DECLARE @RequestCount INT;
+    DECLARE @WindowStart DATETIME2(0);
+    DECLARE @LastRequestAt DATETIME2(0);
+
+    SELECT
+        @ResultCode = 500,
+        @ResultMessage = N'خطای پیش‌بینی‌نشده.',
+        @UserId = NULL,
+        @OrgId = NULL;
+
+    SET @NormalizedUsername = LTRIM(RTRIM(@Username));
+    SET @NormalizedOrgName = LTRIM(RTRIM(@OrgName));
+    SET @RateKey = N'USERNAME:' + LOWER(@NormalizedUsername);
+
+    IF LEN(@NormalizedUsername) < 3
+       OR LEN(@NormalizedUsername) > 100
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'نام کاربری باید حداقل 3 کاراکتر داشته باشد.';
+        RETURN;
+    END;
+
+    IF NULLIF(@PasswordHash, N'') IS NULL
+       OR LEN(@PasswordHash) < 20
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'هش رمز عبور معتبر نیست.';
+        RETURN;
+    END;
+
+    IF NULLIF(@NormalizedOrgName, N'') IS NULL
+       OR @OrgType IS NULL
+       OR NULLIF(LTRIM(RTRIM(@GeoId)), N'') IS NULL
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'نام سازمان، نوع سازمان و موقعیت جغرافیایی الزامی هستند.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS (SELECT 1 FROM dbo.Base_Geo WHERE GeoId = @GeoId)
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'موقعیت جغرافیایی معتبر نیست.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.Base_LookupValues
+        WHERE LookupValueId = @OrgType
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'نوع سازمان معتبر نیست.';
+        RETURN;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        /* ثبت یا بررسی محدودیت درخواست‌ها */
+        SELECT
+            @RequestCount = RequestCount,
+            @WindowStart = WindowStart,
+            @LastRequestAt = LastRequestAt
+        FROM dbo.App_UserSignupRateLimits WITH (UPDLOCK, HOLDLOCK)
+        WHERE RateKey = @RateKey;
+
+        IF @LastRequestAt > DATEADD(SECOND, -10, @Now)
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 429;
+            SET @ResultMessage = N'لطفاً پیش از تلاش مجدد کمی صبر کنید.';
+            RETURN;
+        END;
+
+        IF @WindowStart IS NOT NULL
+           AND @WindowStart > DATEADD(MINUTE, -15, @Now)
+           AND @RequestCount >= 5
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 429;
+            SET @ResultMessage = N'تعداد درخواست‌های ثبت‌نام برای این نام کاربری بیش از حد مجاز است.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_Users WITH (UPDLOCK, HOLDLOCK)
+            WHERE Username = @NormalizedUsername
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این نام کاربری قبلاً استفاده شده است.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.Organizations WITH (UPDLOCK, HOLDLOCK)
+            WHERE LTRIM(RTRIM(OrgName)) = @NormalizedOrgName
+              AND OrgType = @OrgType
+              AND GeoId = @GeoId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'سازمانی با این نام، نوع و موقعیت جغرافیایی قبلاً ثبت شده است.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1 FROM dbo.App_Roles WHERE RoleId = @RoleId
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 500;
+            SET @ResultMessage = N'نقش مدیر ساختمان با شناسه 1 تعریف نشده است.';
+            RETURN;
+        END;
+
+        /* ایجاد کاربر */
+        INSERT INTO dbo.App_Users
+        (
+            Username, PasswordHash, Email, Mobile,
+            FirstName, LastName, Gender,
+            PhoneVerified, IsActive, IsDeleted,
+            CreatedAt
+        )
+        VALUES
+        (
+            @NormalizedUsername, @PasswordHash, NULL, NULL,
+            NULL, NULL, 0,
+            0, 1, 0,
+            GETDATE()
+        );
+
+        SET @UserId = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        /* ایجاد سازمان */
+        INSERT INTO dbo.Organizations
+        (
+            OrgName, OrgType, GeoId, OrgDesc,
+            IsActive, IsDeleted, CreatedAt, UserCreater
+        )
+        VALUES
+        (
+            @NormalizedOrgName, @OrgType, @GeoId, NULL,
+            1, 0, GETDATE(), NULL
+        );
+
+        SET @OrgId = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        UPDATE dbo.App_Users
+        SET OrgId = @OrgId
+        WHERE UserId = @UserId;
+
+        /* اختصاص نقش مدیر ساختمان */
+        INSERT INTO dbo.App_UserRoles
+        (
+            UserId, RoleId, AssignedAt, IsActive,
+            IsDeleted, CreatedAt, Notes
+        )
+        VALUES
+        (
+            @UserId, @RoleId, GETDATE(), 1,
+            0, GETDATE(), N'نقش مدیر ساختمان هنگام ثبت‌نام'
+        );
+
+        /* ذخیره شمارنده محدودیت درخواست */
+        IF @WindowStart IS NULL
+        BEGIN
+            INSERT INTO dbo.App_UserSignupRateLimits
+            (
+                RateKey, WindowStart, RequestCount, LastRequestAt
+            )
+            VALUES
+            (
+                @RateKey, @Now, 1, @Now
+            );
+        END
+        ELSE
+        BEGIN
+            UPDATE dbo.App_UserSignupRateLimits
+            SET RequestCount =
+                    CASE
+                        WHEN WindowStart <= DATEADD(MINUTE, -15, @Now)
+                        THEN 1 ELSE RequestCount + 1
+                    END,
+                WindowStart =
+                    CASE
+                        WHEN WindowStart <= DATEADD(MINUTE, -15, @Now)
+                        THEN @Now ELSE WindowStart
+                    END,
+                LastRequestAt = @Now
+            WHERE RateKey = @RateKey;
+        END;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'ثبت‌نام با موفقیت انجام شد.';
+
+        SELECT
+            U.UserId,
+            U.Username,
+            U.OrgId,
+            O.OrgName,
+            O.OrgType,
+            O.GeoId,
+            @RoleId AS RoleId
+        FROM dbo.App_Users U
+        INNER JOIN dbo.Organizations O ON O.OrgId = U.OrgId
+        WHERE U.UserId = @UserId;
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+        SET @UserId = NULL;
+        SET @OrgId = NULL;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[Base_Geo_GetById]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[Base_Geo_GetById]
+(
+    @GeoId          NVARCHAR(10),
+    @ResultCode     INT OUTPUT,
+    @ResultMessage  NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SET @ResultCode = 500;
+    SET @ResultMessage = N'خطای پیش‌بینی‌نشده.';
+
+    ---------------------------------------------------------
+    -- اعتبارسنجی GeoId
+    ---------------------------------------------------------
+    IF NULLIF(LTRIM(RTRIM(@GeoId)), N'') IS NULL
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'کد موقعیت جغرافیایی الزامی است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- بررسی وجود موقعیت جغرافیایی
+    ---------------------------------------------------------
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.Base_Geo
+        WHERE GeoId = LTRIM(RTRIM(@GeoId))
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'موقعیت جغرافیایی موردنظر یافت نشد.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- دریافت اطلاعات موقعیت جغرافیایی
+    ---------------------------------------------------------
+    SELECT
+        G.GeoId,
+        G.GeoNameFa,
+        G.GeoNameEn,
+        G.GeoType,
+        G.ParantId,
+        G.PL1,
+        G.PL2,
+        G.PL3,
+        G.PL4,
+        G.PL5,
+        G.GeoPathFa,
+        G.GeoPathEn
+    FROM dbo.Base_Geo AS G
+    WHERE G.GeoId = LTRIM(RTRIM(@GeoId));
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'اطلاعات موقعیت جغرافیایی با موفقیت دریافت شد.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[Base_GeoGetChildren]
+(
+    @GeoType       TINYINT,
+    @ParentGeoId   NVARCHAR(10) = NULL,
+    @Search        NVARCHAR(300) = NULL,
+
+    @ResultCode    INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        @ResultCode = 500,
+        @ResultMessage = N'خطای پیش‌بینی‌نشده.';
+
+    BEGIN TRY
+
+        ------------------------------------------------
+        -- 1. بررسی نوع موقعیت جغرافیایی
+        ------------------------------------------------
+        IF @GeoType NOT BETWEEN 1 AND 5
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage =
+                N'نوع موقعیت جغرافیایی باید بین 1 تا 5 باشد.';
+            RETURN;
+        END;
+
+        ------------------------------------------------
+        -- 2. کشور والد ندارد
+        ------------------------------------------------
+        IF @GeoType = 1
+        BEGIN
+            IF @ParentGeoId IS NOT NULL
+            BEGIN
+                SET @ResultCode = 400;
+                SET @ResultMessage =
+                    N'برای دریافت فهرست کشورها نباید والد ارسال شود.';
+                RETURN;
+            END;
+        END
+        ELSE
+        BEGIN
+            ------------------------------------------------
+            -- 3. سطوح 2 تا 5 باید والد معتبر داشته باشند
+            ------------------------------------------------
+            IF @ParentGeoId IS NULL
+               OR NOT EXISTS
+               (
+                   SELECT 1
+                   FROM dbo.Base_Geo
+                   WHERE GeoId = @ParentGeoId
+                     AND GeoType = @GeoType - 1
+               )
+            BEGIN
+                SET @ResultCode = 400;
+                SET @ResultMessage =
+                    N'موقعیت جغرافیایی والد معتبر نیست.';
+                RETURN;
+            END;
+        END;
+
+        ------------------------------------------------
+        -- 4. دریافت موارد سطح انتخاب‌شده
+        ------------------------------------------------
+        SELECT
+            G.GeoId,
+            G.GeoNameFa,
+            G.GeoNameEn,
+            G.GeoType,
+            G.ParantId,
+            G.PL1,
+            G.PL2,
+            G.PL3,
+            G.PL4,
+            G.PL5,
+            G.GeoPathFa,
+            G.GeoPathEn
+        FROM dbo.Base_Geo AS G
+        WHERE G.GeoType = @GeoType
+          AND
+          (
+              @GeoType = 1
+              OR G.ParantId = @ParentGeoId
+          )
+          AND
+          (
+              NULLIF(LTRIM(RTRIM(@Search)), N'') IS NULL
+              OR G.GeoNameFa LIKE N'%' + @Search + N'%'
+              OR G.GeoNameEn LIKE N'%' + @Search + N'%'
+              OR G.GeoId LIKE N'%' + @Search + N'%'
+          )
+        ORDER BY G.GeoNameFa;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'اطلاعات با موفقیت دریافت شد.';
+
+    END TRY
+    BEGIN CATCH
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = LEFT(ERROR_MESSAGE(), 500);
+
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[Buildings_BulkSave]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[Buildings_BulkSave]
+(
+    @Buildings       dbo.BuildingBulkType READONLY,
+    @CurrentUserId   BIGINT,
+    @ResultCode      INT OUTPUT,
+    @ResultMessage   NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    SET @ResultCode = 500;
+    SET @ResultMessage = N'خطای پیش‌بینی‌نشده در عملیات ساختمان‌ها.';
+
+    ---------------------------------------------------------
+    -- 1. بررسی ورودی
+    ---------------------------------------------------------
+    IF NOT EXISTS (SELECT 1 FROM @Buildings)
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'حداقل یک ساختمان باید ارسال شود.';
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Buildings
+        WHERE NULLIF(LTRIM(RTRIM(BuildingName)), N'') IS NULL
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'نام تمام ساختمان‌ها الزامی است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 2. جلوگیری از ارسال شناسه تکراری در یک درخواست
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT BuildingId
+        FROM @Buildings
+        WHERE BuildingId IS NOT NULL
+          AND BuildingId > 0
+        GROUP BY BuildingId
+        HAVING COUNT(*) > 1
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'شناسه یک ساختمان بیش از یک بار ارسال شده است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 3. بررسی سازمان‌ها
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Buildings B
+        WHERE B.OrgId IS NOT NULL
+          AND NOT EXISTS
+          (
+              SELECT 1
+              FROM dbo.Organizations O
+              WHERE O.OrgId = B.OrgId
+                AND ISNULL(O.IsDeleted, 0) = 0
+          )
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'یکی از سازمان‌های انتخاب‌شده وجود ندارد یا حذف شده است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 4. بررسی وجود ساختمان‌هایی که قرار است ویرایش شوند
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Buildings B
+        WHERE ISNULL(B.BuildingId, 0) > 0
+          AND NOT EXISTS
+          (
+              SELECT 1
+              FROM dbo.Buildings T
+              WHERE T.BuildingId = B.BuildingId
+                AND ISNULL(T.IsDeleted, 0) = 0
+          )
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'یکی از ساختمان‌های ارسالی برای ویرایش یافت نشد یا حذف شده است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 5. بررسی نام تکراری در خود درخواست
+    -- نام در محدوده هر سازمان باید یکتا باشد.
+    -- OrgId برابر NULL نیز به عنوان یک محدوده جداگانه بررسی می‌شود.
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Buildings A
+        INNER JOIN @Buildings B
+            ON LTRIM(RTRIM(A.BuildingName))
+             = LTRIM(RTRIM(B.BuildingName))
+           AND
+           (
+               A.OrgId = B.OrgId
+               OR (A.OrgId IS NULL AND B.OrgId IS NULL)
+           )
+           AND
+           (
+               ISNULL(A.BuildingId, 0) = 0
+               OR ISNULL(B.BuildingId, 0) = 0
+               OR A.BuildingId <> B.BuildingId
+           )
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        SET @ResultMessage = N'در اطلاعات ارسالی، نام تکراری برای یک سازمان وجود دارد.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 6. بررسی نام تکراری در اطلاعات فعلی جدول
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Buildings B
+        INNER JOIN dbo.Buildings T
+            ON LTRIM(RTRIM(T.BuildingName))
+             = LTRIM(RTRIM(B.BuildingName))
+           AND
+           (
+               T.OrgId = B.OrgId
+               OR (T.OrgId IS NULL AND B.OrgId IS NULL)
+           )
+           AND ISNULL(T.IsDeleted, 0) = 0
+           AND
+           (
+               ISNULL(B.BuildingId, 0) = 0
+               OR T.BuildingId <> B.BuildingId
+           )
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        SET @ResultMessage = N'ساختمانی با این نام قبلاً در همین سازمان ثبت شده است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 7. انجام ثبت و ویرایش در یک تراکنش
+    ---------------------------------------------------------
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        -----------------------------------------------------
+        -- 7.1 ویرایش ساختمان‌های موجود
+        -----------------------------------------------------
+        UPDATE T
+        SET
+            T.BuildingName =
+                LTRIM(RTRIM(B.BuildingName)),
+
+            T.BuildingAddress =
+                B.BuildingAddress,
+
+            T.BuildingDescription =
+                B.BuildingDescription,
+
+            T.IsActive =
+                ISNULL(B.IsActive, T.IsActive),
+
+            T.OrgId =
+                B.OrgId,
+
+            T.UpdatedAt =
+                GETDATE(),
+
+            T.UserUpdater =
+                TRY_CONVERT(INT, @CurrentUserId)
+
+        FROM dbo.Buildings T
+        INNER JOIN @Buildings B
+            ON T.BuildingId = B.BuildingId
+        WHERE ISNULL(B.BuildingId, 0) > 0
+          AND ISNULL(T.IsDeleted, 0) = 0;
+
+        -----------------------------------------------------
+        -- 7.2 ثبت ساختمان‌های جدید
+        -----------------------------------------------------
+        INSERT INTO dbo.Buildings
+        (
+            BuildingName,
+            BuildingAddress,
+            BuildingDescription,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UserCreater,
+            OrgId
+        )
+        SELECT
+            LTRIM(RTRIM(B.BuildingName)),
+            B.BuildingAddress,
+            B.BuildingDescription,
+            ISNULL(B.IsActive, 1),
+            0,
+            GETDATE(),
+            TRY_CONVERT(INT, @CurrentUserId),
+            B.OrgId
+        FROM @Buildings B
+        WHERE ISNULL(B.BuildingId, 0) = 0;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'عملیات ثبت و ویرایش ساختمان‌ها با موفقیت انجام شد.';
 
     END TRY
     BEGIN CATCH
@@ -5480,23 +7340,82 @@ BEGIN
         IF @@TRANCOUNT > 0
             ROLLBACK TRANSACTION;
 
-        SET @ResultCode = 500;
-        SET @ResultMessage =
-            N'خطا در ایجاد ثبت نام: '
-            + ERROR_MESSAGE();
+        SET @ResultCode = ERROR_NUMBER();
+        SET @ResultMessage = ERROR_MESSAGE();
 
-        SET @UserId = NULL;
-        SET @OtpRequestId = NULL;
-        SET @OtpCode = NULL;
-
-        RETURN;
-
-    END CATCH
+    END CATCH;
 END;
-
-
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[Buildings_GetByOrgId]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[Buildings_GetByOrgId]
+(
+    @OrgId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SET @ResultCode = 500;
+    SET @ResultMessage = N'خطای پیش‌بینی‌نشده.';
+
+    ---------------------------------------------------------
+    -- اعتبارسنجی OrgId
+    ---------------------------------------------------------
+    IF @OrgId IS NULL OR @OrgId <= 0
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'شناسه سازمان معتبر نیست.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- بررسی سازمان
+    ---------------------------------------------------------
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.Organizations
+        WHERE OrgId = @OrgId
+          AND ISNULL(IsDeleted, 0) = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'سازمان موردنظر یافت نشد یا حذف شده است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- دریافت ساختمان‌های سازمان
+    ---------------------------------------------------------
+    SELECT
+        BuildingId,
+        BuildingName,
+        BuildingAddress,
+        BuildingDescription,
+        IsActive,
+        IsDeleted,
+        CreatedAt,
+        UserCreater,
+        UpdatedAt,
+        UserUpdater,
+        OrgId
+    FROM dbo.Buildings
+    WHERE OrgId = @OrgId
+      AND ISNULL(IsDeleted, 0) = 0
+    ORDER BY BuildingId DESC;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'اطلاعات ساختمان‌های سازمان با موفقیت دریافت شد.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5615,7 +7534,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5706,7 +7625,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5836,7 +7755,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5949,7 +7868,1586 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeAssignmentsActive]
+(
+    @EmployeeAssignmentId BIGINT,
+    @IsActive BIT,
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        UPDATE dbo.EmployeeAssignments
+        SET
+            IsActive = @IsActive,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeAssignmentId = @EmployeeAssignmentId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        IF @@ROWCOUNT = 0
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'محل خدمت پیدا نشد.';
+            RETURN;
+        END;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'وضعیت محل خدمت تغییر کرد.';
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeAssignmentsAdd]
+(
+    @EmployeeId BIGINT,
+    @OrgId BIGINT,
+    @BuildingId BIGINT = NULL,
+    @SpaceId BIGINT = NULL,
+    @StartDate DATE,
+    @EndDate DATE = NULL,
+    @ShiftName NVARCHAR(100) = NULL,
+    @EmployeeAssignmentDesc NVARCHAR(1000) = NULL,
+    @UserCreater INT = NULL,
+    @EmployeeAssignmentId BIGINT OUTPUT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SET @EmployeeAssignmentId = NULL;
+
+    BEGIN TRY
+        IF @EndDate IS NOT NULL AND @EndDate < @StartDate
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'تاریخ پایان قبل از تاریخ شروع است.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Employees
+            WHERE EmployeeId = @EmployeeId
+              AND OrgId = @OrgId
+              AND IsActive = 1
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'کارمند فعال در سازمان انتخاب‌شده پیدا نشد.';
+            RETURN;
+        END;
+
+        IF @BuildingId IS NOT NULL
+           AND NOT EXISTS
+           (
+               SELECT 1
+               FROM dbo.Buildings
+               WHERE BuildingId = @BuildingId
+           )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'ساختمان پیدا نشد.';
+            RETURN;
+        END;
+
+        IF @SpaceId IS NOT NULL
+           AND NOT EXISTS
+           (
+               SELECT 1
+               FROM dbo.Spaces
+               WHERE SpaceId = @SpaceId
+                 AND (@BuildingId IS NULL OR BuildingId = @BuildingId)
+           )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'فضا متعلق به ساختمان انتخاب‌شده نیست.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.EmployeeAssignments
+            WHERE EmployeeId = @EmployeeId
+              AND OrgId = @OrgId
+              AND ISNULL(BuildingId, 0) = ISNULL(@BuildingId, 0)
+              AND ISNULL(SpaceId, 0) = ISNULL(@SpaceId, 0)
+              AND ISNULL(IsDeleted, 0) = 0
+              AND IsActive = 1
+              AND (@EndDate IS NULL OR StartDate <= @EndDate)
+              AND (EndDate IS NULL OR EndDate >= @StartDate)
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'محل خدمت مشابه با بازه زمانی هم‌پوشان وجود دارد.';
+            RETURN;
+        END;
+
+        INSERT INTO dbo.EmployeeAssignments
+        (
+            EmployeeId, OrgId, BuildingId, SpaceId,
+            StartDate, EndDate, ShiftName, IsActive,
+            IsDeleted, EmployeeAssignmentDesc, CreatedAt, UserCreater
+        )
+        VALUES
+        (
+            @EmployeeId, @OrgId, @BuildingId, @SpaceId,
+            @StartDate, @EndDate, @ShiftName, 1,
+            0, @EmployeeAssignmentDesc, GETDATE(), @UserCreater
+        );
+
+        SET @EmployeeAssignmentId = CONVERT(BIGINT, SCOPE_IDENTITY());
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'محل خدمت با موفقیت ثبت شد.';
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeAssignmentsDel]
+(
+    @EmployeeAssignmentId BIGINT,
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        UPDATE dbo.EmployeeAssignments
+        SET
+            IsActive = 0,
+            IsDeleted = 1,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeAssignmentId = @EmployeeAssignmentId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        IF @@ROWCOUNT = 0
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'محل خدمت پیدا نشد.';
+            RETURN;
+        END;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'محل خدمت حذف نرم شد.';
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeAssignmentsEdit]
+(
+    @EmployeeAssignmentId BIGINT,
+    @OrgId BIGINT,
+    @BuildingId BIGINT = NULL,
+    @SpaceId BIGINT = NULL,
+    @StartDate DATE,
+    @EndDate DATE = NULL,
+    @ShiftName NVARCHAR(100) = NULL,
+    @EmployeeAssignmentDesc NVARCHAR(1000) = NULL,
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        DECLARE @EmployeeId BIGINT;
+
+        SELECT @EmployeeId = EmployeeId
+        FROM dbo.EmployeeAssignments
+        WHERE EmployeeAssignmentId = @EmployeeAssignmentId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        IF @EmployeeId IS NULL
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'محل خدمت پیدا نشد.';
+            RETURN;
+        END;
+
+        IF @EndDate IS NOT NULL AND @EndDate < @StartDate
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'تاریخ پایان قبل از تاریخ شروع است.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Employees
+            WHERE EmployeeId = @EmployeeId
+              AND OrgId = @OrgId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'سازمان محل خدمت با سازمان کارمند مطابقت ندارد.';
+            RETURN;
+        END;
+
+        IF @SpaceId IS NOT NULL
+           AND NOT EXISTS
+           (
+               SELECT 1
+               FROM dbo.Spaces
+               WHERE SpaceId = @SpaceId
+                 AND (@BuildingId IS NULL OR BuildingId = @BuildingId)
+           )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'فضا متعلق به ساختمان انتخاب‌شده نیست.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.EmployeeAssignments
+            WHERE EmployeeId = @EmployeeId
+              AND OrgId = @OrgId
+              AND ISNULL(BuildingId, 0) = ISNULL(@BuildingId, 0)
+              AND ISNULL(SpaceId, 0) = ISNULL(@SpaceId, 0)
+              AND EmployeeAssignmentId <> @EmployeeAssignmentId
+              AND IsActive = 1
+              AND ISNULL(IsDeleted, 0) = 0
+              AND (@EndDate IS NULL OR StartDate <= @EndDate)
+              AND (EndDate IS NULL OR EndDate >= @StartDate)
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'محل خدمت مشابه با بازه زمانی هم‌پوشان وجود دارد.';
+            RETURN;
+        END;
+
+        UPDATE dbo.EmployeeAssignments
+        SET
+            OrgId = @OrgId,
+            BuildingId = @BuildingId,
+            SpaceId = @SpaceId,
+            StartDate = @StartDate,
+            EndDate = @EndDate,
+            ShiftName = @ShiftName,
+            EmployeeAssignmentDesc = @EmployeeAssignmentDesc,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeAssignmentId = @EmployeeAssignmentId;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'محل خدمت با موفقیت ویرایش شد.';
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeAssignmentsGet]
+(
+    @EmployeeId BIGINT = NULL,
+    @OrgId BIGINT = NULL,
+    @BuildingId BIGINT = NULL,
+    @IsActive BIT = NULL,
+    @PageNumber INT = 1,
+    @PageSize INT = 20
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @PageNumber < 1 SET @PageNumber = 1;
+    IF @PageSize < 1 SET @PageSize = 20;
+    IF @PageSize > 200 SET @PageSize = 200;
+
+    SELECT
+        ea.EmployeeAssignmentId,
+        ea.EmployeeId,
+        ea.OrgId,
+        ea.BuildingId,
+        ea.SpaceId,
+        ea.StartDate,
+        ea.EndDate,
+        ea.ShiftName,
+        ea.IsActive,
+        ea.EmployeeAssignmentDesc,
+        ea.CreatedAt,
+        ea.UpdatedAt
+    FROM dbo.EmployeeAssignments ea
+    WHERE ISNULL(ea.IsDeleted, 0) = 0
+      AND (@EmployeeId IS NULL OR ea.EmployeeId = @EmployeeId)
+      AND (@OrgId IS NULL OR ea.OrgId = @OrgId)
+      AND (@BuildingId IS NULL OR ea.BuildingId = @BuildingId)
+      AND (@IsActive IS NULL OR ea.IsActive = @IsActive)
+    ORDER BY ea.StartDate DESC, ea.EmployeeAssignmentId DESC
+    OFFSET (@PageNumber - 1) * @PageSize ROWS
+    FETCH NEXT @PageSize ROWS ONLY;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeAssignmentsGetById]
+(
+    @EmployeeAssignmentId BIGINT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT *
+    FROM dbo.EmployeeAssignments
+    WHERE EmployeeAssignmentId = @EmployeeAssignmentId
+      AND ISNULL(IsDeleted, 0) = 0;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeesActive]
+(
+    @EmployeeId BIGINT,
+    @IsActive BIT,
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Employees
+            WHERE EmployeeId = @EmployeeId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'کارمند پیدا نشد یا حذف شده است.';
+            RETURN;
+        END;
+
+        UPDATE dbo.Employees
+        SET
+            IsActive = @IsActive,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeId = @EmployeeId;
+
+        IF @IsActive = 0
+        BEGIN
+            UPDATE dbo.EmployeeAssignments
+            SET
+                IsActive = 0,
+                UpdatedAt = GETDATE(),
+                UserUpdater = @UserUpdater
+            WHERE EmployeeId = @EmployeeId
+              AND ISNULL(IsDeleted, 0) = 0;
+        END;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage =
+            CASE WHEN @IsActive = 1
+                THEN N'کارمند فعال شد.'
+                ELSE N'کارمند غیرفعال شد.'
+            END;
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[EmployeesAdd]
+(
+    -- اطلاعات حساب کاربری
+    @Username           NVARCHAR(100) = NULL,
+    @PasswordHash       NVARCHAR(500) = NULL,
+    @Email              NVARCHAR(150) = NULL,
+    @Mobile             NVARCHAR(30),
+    @FirstName          NVARCHAR(100),
+    @LastName           NVARCHAR(100),
+    @NationalId         NVARCHAR(10) = NULL,
+    @Gender             INT,
+    @BirthDate          DATETIME = NULL,
+    @AvatarUrl          NVARCHAR(500) = NULL,
+    @PhoneVerified      BIT = 0,
+    @UserIsActive       BIT = 1,
+
+    -- اطلاعات پرسنلی
+    @OrgId              BIGINT,
+    @EmployeeTypeId     INT,
+    @EmploymentType     TINYINT,
+    @HireDate           DATE = NULL,
+    @EndDate            DATE = NULL,
+    @BaseSalary         DECIMAL(18,2) = NULL,
+    @HourlyRate         DECIMAL(18,2) = NULL,
+    @BankName           NVARCHAR(100) = NULL,
+    @BankCardNumber     NVARCHAR(100) = NULL,
+    @BankAccountNumber  NVARCHAR(100) = NULL,
+    @ShebaNumber        NVARCHAR(50) = NULL,
+    @EmployeeIsActive   BIT = 1,
+    @EmployeesDesc      NVARCHAR(2000) = NULL,
+
+    -- اطلاعات ثبت‌کننده
+    @UserCreater        INT = NULL,
+
+    -- خروجی‌ها
+    @NewUserId          BIGINT OUTPUT,
+    @NewEmployeeId      BIGINT OUTPUT,
+    @ResultCode         INT OUTPUT,
+    @ResultMessage      NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    SELECT
+        @NewUserId = NULL,
+        @NewEmployeeId = NULL,
+        @ResultCode = 500,
+        @ResultMessage = N'خطای پیش‌بینی‌نشده رخ داد.';
+
+    BEGIN TRY
+
+        ----------------------------------------------------
+        -- 1. اعتبارسنجی ورودی‌های اجباری
+        ----------------------------------------------------
+        IF NULLIF(LTRIM(RTRIM(@Mobile)), N'') IS NULL
+           OR NULLIF(LTRIM(RTRIM(@FirstName)), N'') IS NULL
+           OR NULLIF(LTRIM(RTRIM(@LastName)), N'') IS NULL
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage =
+                N'موبایل، نام و نام خانوادگی الزامی هستند.';
+            RETURN;
+        END;
+
+        IF @Gender NOT IN (1, 2)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage =
+                N'مقدار جنسیت معتبر نیست. مقدار 1 برای مرد و 2 برای زن است.';
+            RETURN;
+        END;
+
+        IF @HireDate IS NOT NULL
+           AND @EndDate IS NOT NULL
+           AND @EndDate < @HireDate
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage =
+                N'تاریخ پایان استخدام نمی‌تواند قبل از تاریخ شروع باشد.';
+            RETURN;
+        END;
+
+        IF @BaseSalary < 0 OR @HourlyRate < 0
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage =
+                N'حقوق پایه و نرخ ساعتی نمی‌توانند منفی باشند.';
+            RETURN;
+        END;
+
+        ----------------------------------------------------
+        -- 2. بررسی سازمان
+        ----------------------------------------------------
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Organizations
+            WHERE OrgId = @OrgId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'سازمان انتخاب‌شده معتبر نیست.';
+            RETURN;
+        END;
+
+        ----------------------------------------------------
+        -- 3. بررسی نوع پرسنل
+        ----------------------------------------------------
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.EmployeeTypes
+            WHERE EmployeeTypeId = @EmployeeTypeId
+              AND IsActive = 1
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage =
+                N'نوع پرسنل انتخاب‌شده معتبر یا فعال نیست.';
+            RETURN;
+        END;
+
+        ----------------------------------------------------
+        -- 4. بررسی تکراری نبودن اطلاعات کاربر
+        ----------------------------------------------------
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_Users
+            WHERE Mobile = @Mobile
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage =
+                N'این شماره موبایل قبلاً ثبت شده است.';
+            RETURN;
+        END;
+
+        IF @Username IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1
+               FROM dbo.App_Users
+               WHERE Username = @Username
+                 AND ISNULL(IsDeleted, 0) = 0
+           )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage =
+                N'این نام کاربری قبلاً ثبت شده است.';
+            RETURN;
+        END;
+
+        IF @Email IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1
+               FROM dbo.App_Users
+               WHERE Email = @Email
+                 AND ISNULL(IsDeleted, 0) = 0
+           )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage =
+                N'این ایمیل قبلاً ثبت شده است.';
+            RETURN;
+        END;
+
+        IF @NationalId IS NOT NULL
+           AND EXISTS
+           (
+               SELECT 1
+               FROM dbo.App_Users
+               WHERE NationalId = @NationalId
+                 AND ISNULL(IsDeleted, 0) = 0
+           )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage =
+                N'این کد ملی قبلاً ثبت شده است.';
+            RETURN;
+        END;
+
+        ----------------------------------------------------
+        -- 5. ثبت حساب کاربری و اطلاعات پرسنلی
+        ----------------------------------------------------
+        BEGIN TRANSACTION;
+
+        INSERT INTO dbo.App_Users
+        (
+            Username,
+            PasswordHash,
+            Email,
+            Mobile,
+            FirstName,
+            LastName,
+            NationalId,
+            Gender,
+            BirthDate,
+            AvatarUrl,
+            PhoneVerified,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UserCreater
+        )
+        VALUES
+        (
+            NULLIF(LTRIM(RTRIM(@Username)), N''),
+            @PasswordHash,
+            NULLIF(LTRIM(RTRIM(@Email)), N''),
+            LTRIM(RTRIM(@Mobile)),
+            LTRIM(RTRIM(@FirstName)),
+            LTRIM(RTRIM(@LastName)),
+            NULLIF(LTRIM(RTRIM(@NationalId)), N''),
+            @Gender,
+            @BirthDate,
+            @AvatarUrl,
+            @PhoneVerified,
+            @UserIsActive,
+            0,
+            GETDATE(),
+            @UserCreater
+        );
+
+        SET @NewUserId = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        INSERT INTO dbo.Employees
+        (
+            UserId,
+            OrgId,
+            EmployeeTypeId,
+            EmploymentType,
+            HireDate,
+            EndDate,
+            BaseSalary,
+            HourlyRate,
+            BankName,
+            BankCardNumber,
+            BankAccountNumber,
+            ShebaNumber,
+            IsActive,
+            IsDeleted,
+            EmployeesDesc,
+            CreatedAt,
+            UserCreater
+        )
+        VALUES
+        (
+            @NewUserId,
+            @OrgId,
+            @EmployeeTypeId,
+            @EmploymentType,
+            @HireDate,
+            @EndDate,
+            @BaseSalary,
+            @HourlyRate,
+            @BankName,
+            @BankCardNumber,
+            @BankAccountNumber,
+            @ShebaNumber,
+            @EmployeeIsActive,
+            0,
+            @EmployeesDesc,
+            GETDATE(),
+            @UserCreater
+        );
+
+        SET @NewEmployeeId = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage =
+            N'حساب کاربری و اطلاعات پرسنلی با موفقیت ثبت شدند.';
+
+    END TRY
+    BEGIN CATCH
+
+        IF XACT_STATE() <> 0
+            ROLLBACK TRANSACTION;
+
+        SELECT
+            @NewUserId = NULL,
+            @NewEmployeeId = NULL,
+            @ResultCode = 500,
+            @ResultMessage = LEFT(ERROR_MESSAGE(), 500);
+
+        -- در صورت نیاز به ثبت خطا در جدول لاگ،
+        -- این قسمت را می‌توان توسعه داد.
+
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeesDel]
+(
+    @EmployeeId BIGINT,
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        DECLARE @UserId BIGINT;
+
+        SELECT @UserId = UserId
+        FROM dbo.Employees WITH (UPDLOCK, HOLDLOCK)
+        WHERE EmployeeId = @EmployeeId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        IF @UserId IS NULL
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'کارمند پیدا نشد.';
+            RETURN;
+        END;
+
+        UPDATE dbo.Employees
+        SET
+            IsActive = 0,
+            IsDeleted = 1,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeId = @EmployeeId;
+
+        UPDATE dbo.EmployeeAssignments
+        SET
+            IsActive = 0,
+            IsDeleted = 1,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeId = @EmployeeId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'کارمند و محل‌های خدمت فعال او حذف نرم شدند.';
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeesEdit]
+(
+    @EmployeeId BIGINT,
+    @OrgId BIGINT,
+    @EmployeeTypeId INT,
+    @EmploymentType TINYINT,
+
+    @HireDate DATE = NULL,
+    @EndDate DATE = NULL,
+    @BaseSalary DECIMAL(18,2) = NULL,
+    @HourlyRate DECIMAL(18,2) = NULL,
+    @BankName NVARCHAR(100) = NULL,
+    @BankCardNumber NVARCHAR(100) = NULL,
+    @BankAccountNumber NVARCHAR(100) = NULL,
+    @ShebaNumber NVARCHAR(50) = NULL,
+    @EmployeesDesc NVARCHAR(2000) = NULL,
+
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        IF @EmployeeId <= 0 OR @OrgId <= 0 OR @EmployeeTypeId <= 0
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'پارامترهای ارسالی معتبر نیستند.';
+            RETURN;
+        END;
+
+        IF @EndDate IS NOT NULL AND @HireDate IS NOT NULL
+           AND @EndDate < @HireDate
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'تاریخ پایان استخدام نمی‌تواند قبل از تاریخ شروع باشد.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Employees
+            WHERE EmployeeId = @EmployeeId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'کارمند پیدا نشد.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.EmployeeTypes
+            WHERE EmployeeTypeId = @EmployeeTypeId
+              AND IsActive = 1
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'نوع استخدام فعال پیدا نشد.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.Employees
+            WHERE OrgId = @OrgId
+              AND EmployeeId <> @EmployeeId
+              AND ISNULL(IsDeleted, 0) = 0
+              AND UserId =
+              (
+                  SELECT UserId
+                  FROM dbo.Employees
+                  WHERE EmployeeId = @EmployeeId
+              )
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این کارمند قبلاً در سازمان انتخاب‌شده ثبت شده است.';
+            RETURN;
+        END;
+
+        BEGIN TRANSACTION;
+
+        DECLARE @OldEmployeeTypeId INT;
+        DECLARE @UserId BIGINT;
+
+        SELECT
+            @OldEmployeeTypeId = EmployeeTypeId,
+            @UserId = UserId
+        FROM dbo.Employees WITH (UPDLOCK, HOLDLOCK)
+        WHERE EmployeeId = @EmployeeId;
+
+        UPDATE dbo.Employees
+        SET
+            OrgId = @OrgId,
+            EmployeeTypeId = @EmployeeTypeId,
+            EmploymentType = @EmploymentType,
+            HireDate = @HireDate,
+            EndDate = @EndDate,
+            BaseSalary = @BaseSalary,
+            HourlyRate = @HourlyRate,
+            BankName = @BankName,
+            BankCardNumber = @BankCardNumber,
+            BankAccountNumber = @BankAccountNumber,
+            ShebaNumber = @ShebaNumber,
+            EmployeesDesc = @EmployeesDesc,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeId = @EmployeeId;
+
+        --------------------------------------------------
+        -- If type changed, replace the roles that were
+        -- previously mapped to the old employee type.
+        --------------------------------------------------
+        IF @OldEmployeeTypeId <> @EmployeeTypeId
+        BEGIN
+            UPDATE ur
+            SET
+                IsActive = 0,
+                IsDeleted = 1,
+                UpdatedAt = GETDATE(),
+                UserUpdater = @UserUpdater
+            FROM dbo.App_UserRoles ur
+            INNER JOIN dbo.EmployeeTypeRoles oldMap
+                ON oldMap.RoleId = ur.RoleId
+            WHERE ur.UserId = @UserId
+              AND oldMap.EmployeeTypeId = @OldEmployeeTypeId
+              AND ISNULL(ur.IsDeleted, 0) = 0;
+
+            IF NOT EXISTS
+            (
+                SELECT 1
+                FROM dbo.EmployeeTypeRoles
+                WHERE EmployeeTypeId = @EmployeeTypeId
+                  AND IsActive = 1
+                  AND ISNULL(IsDeleted, 0) = 0
+            )
+            BEGIN
+                THROW 50001, N'برای نوع استخدام جدید نقشی تعریف نشده است.', 1;
+            END;
+
+            INSERT INTO dbo.App_UserRoles
+            (
+                UserId, RoleId, AssignedAt, ExpiresAt,
+                IsActive, IsDeleted, CreatedAt, UserCreater, Notes
+            )
+            SELECT
+                @UserId,
+                etr.RoleId,
+                GETDATE(),
+                NULL,
+                1,
+                0,
+                GETDATE(),
+                @UserUpdater,
+                N'نقش تخصیص‌یافته بر اساس تغییر نوع استخدام'
+            FROM dbo.EmployeeTypeRoles etr
+            WHERE etr.EmployeeTypeId = @EmployeeTypeId
+              AND etr.IsActive = 1
+              AND ISNULL(etr.IsDeleted, 0) = 0
+              AND NOT EXISTS
+              (
+                  SELECT 1
+                  FROM dbo.App_UserRoles ur
+                  WHERE ur.UserId = @UserId
+                    AND ur.RoleId = etr.RoleId
+                    AND ur.IsActive = 1
+                    AND ISNULL(ur.IsDeleted, 0) = 0
+              );
+        END;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'اطلاعات کارمند با موفقیت ویرایش شد.';
+    END TRY
+    BEGIN CATCH
+        IF XACT_STATE() <> 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeesGet]
+(
+    @Search NVARCHAR(200) = NULL,
+    @OrgId BIGINT = NULL,
+    @EmployeeTypeId INT = NULL,
+    @IsActive BIT = NULL,
+    @PageNumber INT = 1,
+    @PageSize INT = 20
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @PageNumber < 1 SET @PageNumber = 1;
+    IF @PageSize < 1 SET @PageSize = 20;
+    IF @PageSize > 200 SET @PageSize = 200;
+
+    SELECT
+        e.EmployeeId,
+        e.UserId,
+        e.OrgId,
+        o.OrgName,
+        e.EmployeeTypeId,
+        et.EmployeeTypeName,
+        e.EmploymentType,
+        e.HireDate,
+        e.EndDate,
+        e.BaseSalary,
+        e.HourlyRate,
+        e.BankName,
+        e.BankCardNumber,
+        e.BankAccountNumber,
+        e.ShebaNumber,
+        e.IsActive,
+        e.EmployeesDesc,
+        e.CreatedAt,
+        u.FirstName,
+        u.LastName,
+        u.Mobile
+    FROM dbo.Employees e
+    INNER JOIN dbo.Organizations o
+        ON o.OrgId = e.OrgId
+    INNER JOIN dbo.EmployeeTypes et
+        ON et.EmployeeTypeId = e.EmployeeTypeId
+    INNER JOIN dbo.App_Users u
+        ON u.UserId = e.UserId
+    WHERE ISNULL(e.IsDeleted, 0) = 0
+      AND (@OrgId IS NULL OR e.OrgId = @OrgId)
+      AND (@EmployeeTypeId IS NULL OR e.EmployeeTypeId = @EmployeeTypeId)
+      AND (@IsActive IS NULL OR e.IsActive = @IsActive)
+      AND
+      (
+          @Search IS NULL
+          OR u.FirstName LIKE N'%' + @Search + N'%'
+          OR u.LastName LIKE N'%' + @Search + N'%'
+          OR u.Mobile LIKE N'%' + @Search + N'%'
+      )
+    ORDER BY e.EmployeeId DESC
+    OFFSET (@PageNumber - 1) * @PageSize ROWS
+    FETCH NEXT @PageSize ROWS ONLY;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeesGetById]
+(
+    @EmployeeId BIGINT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        e.EmployeeId,
+        e.UserId,
+        e.OrgId,
+        o.OrgName,
+        e.EmployeeTypeId,
+        et.EmployeeTypeName,
+        et.EmployeeTypeDesc,
+        e.EmploymentType,
+        e.HireDate,
+        e.EndDate,
+        e.BaseSalary,
+        e.HourlyRate,
+        e.BankName,
+        e.BankCardNumber,
+        e.BankAccountNumber,
+        e.ShebaNumber,
+        e.IsActive,
+        e.EmployeesDesc,
+        e.CreatedAt,
+        e.UpdatedAt,
+        u.FirstName,
+        u.LastName,
+        u.Mobile
+    FROM dbo.Employees e
+    INNER JOIN dbo.Organizations o
+        ON o.OrgId = e.OrgId
+    INNER JOIN dbo.EmployeeTypes et
+        ON et.EmployeeTypeId = e.EmployeeTypeId
+    INNER JOIN dbo.App_Users u
+        ON u.UserId = e.UserId
+    WHERE e.EmployeeId = @EmployeeId
+      AND ISNULL(e.IsDeleted, 0) = 0;
+
+    SELECT
+        ea.EmployeeAssignmentId,
+        ea.EmployeeId,
+        ea.OrgId,
+        ea.BuildingId,
+        b.BuildingName,
+        ea.SpaceId,
+        ea.StartDate,
+        ea.EndDate,
+        ea.ShiftName,
+        ea.IsActive,
+        ea.EmployeeAssignmentDesc
+    FROM dbo.EmployeeAssignments ea
+    LEFT JOIN dbo.Buildings b
+        ON b.BuildingId = ea.BuildingId
+    WHERE ea.EmployeeId = @EmployeeId
+      AND ISNULL(ea.IsDeleted, 0) = 0
+    ORDER BY ea.StartDate DESC, ea.EmployeeAssignmentId DESC;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeTypeRolesAdd]
+(
+    @EmployeeTypeId INT,
+    @RoleId BIGINT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.EmployeeTypes
+            WHERE EmployeeTypeId = @EmployeeTypeId
+              AND IsActive = 1
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'نوع استخدام معتبر نیست.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.App_Roles
+            WHERE RoleId = @RoleId
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'نقش مورد نظر پیدا نشد.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.EmployeeTypeRoles
+            WHERE EmployeeTypeId = @EmployeeTypeId
+              AND RoleId = @RoleId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این نگاشت قبلاً ثبت شده است.';
+            RETURN;
+        END;
+
+        INSERT INTO dbo.EmployeeTypeRoles
+        (
+            EmployeeTypeId, RoleId, IsActive,
+            IsDeleted, CreatedAt, UserCreater
+        )
+        VALUES
+        (
+            @EmployeeTypeId, @RoleId, 1,
+            0, GETDATE(), @UserId
+        );
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'نگاشت نوع استخدام به نقش ثبت شد.';
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeTypeRolesGet]
+(
+    @EmployeeTypeId INT = NULL,
+    @RoleId BIGINT = NULL
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        etr.EmployeeTypeRoleId,
+        etr.EmployeeTypeId,
+        et.EmployeeTypeName,
+        etr.RoleId,
+        r.RoleName,
+        etr.IsActive,
+        etr.CreatedAt
+    FROM dbo.EmployeeTypeRoles etr
+    INNER JOIN dbo.EmployeeTypes et
+        ON et.EmployeeTypeId = etr.EmployeeTypeId
+    INNER JOIN dbo.App_Roles r
+        ON r.RoleId = etr.RoleId
+    WHERE ISNULL(etr.IsDeleted, 0) = 0
+      AND (@EmployeeTypeId IS NULL OR etr.EmployeeTypeId = @EmployeeTypeId)
+      AND (@RoleId IS NULL OR etr.RoleId = @RoleId)
+    ORDER BY et.EmployeeTypeName, r.RoleName;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeTypesActive]
+(
+    @EmployeeTypeId INT,
+    @IsActive BIT,
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        UPDATE dbo.EmployeeTypes
+        SET
+            IsActive = @IsActive,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeTypeId = @EmployeeTypeId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        IF @@ROWCOUNT = 0
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'نوع استخدام پیدا نشد.';
+            RETURN;
+        END;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'وضعیت نوع استخدام تغییر کرد.';
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeTypesAdd]
+(
+    @EmployeeTypeName NVARCHAR(100),
+    @EmployeeTypeDesc NVARCHAR(500) = NULL,
+    @UserCreater INT = NULL,
+    @EmployeeTypeId INT OUTPUT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SET @EmployeeTypeId = NULL;
+
+    BEGIN TRY
+        IF NULLIF(LTRIM(RTRIM(@EmployeeTypeName)), '') IS NULL
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'نام نوع استخدام الزامی است.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.EmployeeTypes
+            WHERE EmployeeTypeName = @EmployeeTypeName
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این نوع استخدام قبلاً ثبت شده است.';
+            RETURN;
+        END;
+
+        INSERT INTO dbo.EmployeeTypes
+        (
+            EmployeeTypeName,
+            EmployeeTypeDesc,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UserCreater
+        )
+        VALUES
+        (
+            @EmployeeTypeName,
+            @EmployeeTypeDesc,
+            1,
+            0,
+            GETDATE(),
+            @UserCreater
+        );
+
+        SET @EmployeeTypeId = CONVERT(INT, SCOPE_IDENTITY());
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'نوع استخدام ثبت شد.';
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeTypesDel]
+(
+    @EmployeeTypeId INT,
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.Employees
+            WHERE EmployeeTypeId = @EmployeeTypeId
+              AND IsActive = 1
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'این نوع استخدام به کارمند فعال متصل است و قابل حذف نیست.';
+            RETURN;
+        END;
+
+        UPDATE dbo.EmployeeTypes
+        SET
+            IsActive = 0,
+            IsDeleted = 1,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeTypeId = @EmployeeTypeId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        IF @@ROWCOUNT = 0
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'نوع استخدام پیدا نشد.';
+            RETURN;
+        END;
+
+        UPDATE dbo.EmployeeTypeRoles
+        SET
+            IsActive = 0,
+            IsDeleted = 1,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeTypeId = @EmployeeTypeId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'نوع استخدام حذف نرم شد.';
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeTypesEdit]
+(
+    @EmployeeTypeId INT,
+    @EmployeeTypeName NVARCHAR(100),
+    @EmployeeTypeDesc NVARCHAR(500) = NULL,
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF NULLIF(LTRIM(RTRIM(@EmployeeTypeName)), '') IS NULL
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'نام نوع استخدام الزامی است.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.EmployeeTypes
+            WHERE EmployeeTypeName = @EmployeeTypeName
+              AND EmployeeTypeId <> @EmployeeTypeId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'نوع استخدام دیگری با این نام وجود دارد.';
+            RETURN;
+        END;
+
+        UPDATE dbo.EmployeeTypes
+        SET
+            EmployeeTypeName = @EmployeeTypeName,
+            EmployeeTypeDesc = @EmployeeTypeDesc,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE EmployeeTypeId = @EmployeeTypeId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        IF @@ROWCOUNT = 0
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'نوع استخدام پیدا نشد.';
+            RETURN;
+        END;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'نوع استخدام ویرایش شد.';
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeTypesGet]
+(
+    @Search NVARCHAR(100) = NULL,
+    @IsActive BIT = NULL,
+    @PageNumber INT = 1,
+    @PageSize INT = 20
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @PageNumber < 1 SET @PageNumber = 1;
+    IF @PageSize < 1 SET @PageSize = 20;
+    IF @PageSize > 200 SET @PageSize = 200;
+
+    SELECT
+        EmployeeTypeId,
+        EmployeeTypeName,
+        EmployeeTypeDesc,
+        IsActive,
+        CreatedAt,
+        UpdatedAt
+    FROM dbo.EmployeeTypes
+    WHERE ISNULL(IsDeleted, 0) = 0
+      AND (@IsActive IS NULL OR IsActive = @IsActive)
+      AND
+      (
+          @Search IS NULL
+          OR EmployeeTypeName LIKE N'%' + @Search + N'%'
+          OR EmployeeTypeDesc LIKE N'%' + @Search + N'%'
+      )
+    ORDER BY EmployeeTypeName
+    OFFSET (@PageNumber - 1) * @PageSize ROWS
+    FETCH NEXT @PageSize ROWS ONLY;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EmployeeTypesGetById]
+(
+    @EmployeeTypeId INT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        EmployeeTypeId,
+        EmployeeTypeName,
+        EmployeeTypeDesc,
+        IsActive,
+        CreatedAt,
+        UserCreater,
+        UpdatedAt,
+        UserUpdater
+    FROM dbo.EmployeeTypes
+    WHERE EmployeeTypeId = @EmployeeTypeId
+      AND ISNULL(IsDeleted, 0) = 0;
+
+    SELECT
+        etr.EmployeeTypeRoleId,
+        etr.EmployeeTypeId,
+        etr.RoleId,
+        r.RoleName,
+        etr.IsActive
+    FROM dbo.EmployeeTypeRoles etr
+    INNER JOIN dbo.App_Roles r
+        ON r.RoleId = etr.RoleId
+    WHERE etr.EmployeeTypeId = @EmployeeTypeId
+      AND ISNULL(etr.IsDeleted, 0) = 0;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5961,7 +9459,7 @@ GO
 CREATE PROCEDURE [dbo].[OrganizationsAdd]
 (
     @OrgName       NVARCHAR(200),
-    @OrgType       TINYINT,
+    @OrgType       INT,
     @GeoId         BIGINT,
     @OrgDesc       NVARCHAR(1000) = NULL,
     @IsActive      BIT = 1,
@@ -6009,7 +9507,7 @@ BEGIN
         IF NOT EXISTS
         (
             SELECT 1
-            FROM dbo.Geo
+            FROM dbo.Base_Geo
             WHERE GeoId = @GeoId
         )
         BEGIN
@@ -6081,7 +9579,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6171,7 +9669,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6185,7 +9683,7 @@ CREATE PROCEDURE [dbo].[OrganizationsEdit]
 (
     @OrgId         BIGINT,
     @OrgName       NVARCHAR(200),
-    @OrgType       TINYINT,
+    @OrgType       INT,
     @GeoId         BIGINT,
     @OrgDesc       NVARCHAR(1000) = NULL,
     @IsActive      BIT = 1,
@@ -6316,7 +9814,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6330,7 +9828,7 @@ CREATE PROCEDURE [dbo].[OrganizationsGet]
 (
     @OrgId          BIGINT = NULL,
     @Search         NVARCHAR(200) = NULL,
-    @OrgType        TINYINT = NULL,
+    @OrgType        INT = NULL,
     @GeoId          BIGINT = NULL,
     @PageNumber     INT = 1,
     @PageSize       INT = 50,
@@ -6403,8 +9901,11 @@ BEGIN
         -- لیست سازمان‌ها
         ---------------------------------------------------------
         SELECT
-            O.*
-        FROM dbo.Organizations AS O
+            O.*,
+            LV.LookupValueTitleFr AS OrgTypeNameFr,
+            LV.LookupValueTitleEn AS OrgTypeNameEn
+        FROM dbo.Organizations AS O INNER JOIN
+             dbo.Base_LookupValues AS LV ON O.OrgType = LV.LookupValueId
         WHERE
             (
                 @IncludeDeleted = 1
@@ -6441,7 +9942,257 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[Units_BulkSave]    Script Date: 10/21/2026 2:25:29 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[Units_BulkSave]
+(
+    @Units          dbo.UnitBulkType READONLY,
+    @CurrentUserId  BIGINT,
+    @ResultCode     INT OUTPUT,
+    @ResultMessage  NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    SET @ResultCode = 500;
+    SET @ResultMessage = N'خطای پیش‌بینی‌نشده در عملیات واحدها.';
+
+    ---------------------------------------------------------
+    -- 1. بررسی خالی نبودن ورودی
+    ---------------------------------------------------------
+    IF NOT EXISTS (SELECT 1 FROM @Units)
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'حداقل یک واحد باید ارسال شود.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 2. اعتبارسنجی BuildingId
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Units
+        WHERE BuildingId IS NULL OR BuildingId <= 0
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'کد ساختمان معتبر نیست.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 3. اعتبارسنجی UnitNumber
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Units
+        WHERE NULLIF(LTRIM(RTRIM(UnitNumber)), N'') IS NULL
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'شماره یا نام واحد الزامی است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 4. جلوگیری از شناسه تکراری در یک درخواست
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT UnitId
+        FROM @Units
+        WHERE UnitId IS NOT NULL
+          AND UnitId > 0
+        GROUP BY UnitId
+        HAVING COUNT(*) > 1
+    )
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'شناسه یک واحد بیش از یک بار ارسال شده است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 5. بررسی ساختمان‌ها
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Units U
+        WHERE NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Buildings B
+            WHERE B.BuildingId = U.BuildingId
+              AND ISNULL(B.IsDeleted, 0) = 0
+              AND B.IsActive = 1
+        )
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage =
+            N'ساختمان انتخاب شده وجود ندارد، حذف شده یا غیرفعال است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 6. بررسی وجود واحدهای ارسالی برای ویرایش
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Units U
+        WHERE ISNULL(U.UnitId, 0) > 0
+          AND NOT EXISTS
+          (
+              SELECT 1
+              FROM dbo.Units T
+              WHERE T.UnitId = U.UnitId
+                AND ISNULL(T.IsDeleted, 0) = 0
+          )
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage =
+            N'یکی از واحدهای ارسالی برای ویرایش یافت نشد یا حذف شده است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 7. بررسی تکراری نبودن واحدها در خود درخواست
+    -- کلید: ساختمان + طبقه + شماره واحد
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT
+            BuildingId,
+            FloorNumber,
+            LTRIM(RTRIM(UnitNumber))
+        FROM @Units
+        GROUP BY
+            BuildingId,
+            FloorNumber,
+            LTRIM(RTRIM(UnitNumber))
+        HAVING COUNT(*) > 1
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        SET @ResultMessage =
+            N'در اطلاعات ارسالی، شماره واحد در یک ساختمان و طبقه تکراری است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 8. بررسی تکراری نبودن در جدول موجود
+    ---------------------------------------------------------
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Units U
+        INNER JOIN dbo.Units T
+            ON T.BuildingId = U.BuildingId
+           AND
+           (
+               T.FloorNumber = U.FloorNumber
+               OR (T.FloorNumber IS NULL AND U.FloorNumber IS NULL)
+           )
+           AND LTRIM(RTRIM(T.UnitNumber)) =
+               LTRIM(RTRIM(U.UnitNumber))
+           AND ISNULL(T.IsDeleted, 0) = 0
+           AND
+           (
+               ISNULL(U.UnitId, 0) = 0
+               OR T.UnitId <> U.UnitId
+           )
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        SET @ResultMessage =
+            N'در این طبقه از این ساختمان، واحدی با این شماره یا نام قبلاً ثبت شده است.';
+        RETURN;
+    END;
+
+    ---------------------------------------------------------
+    -- 9. ثبت و ویرایش اتمیک
+    ---------------------------------------------------------
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        -----------------------------------------------------
+        -- 9.1 ویرایش واحدهای موجود
+        -----------------------------------------------------
+        UPDATE T
+        SET
+            T.BuildingId = U.BuildingId,
+            T.UnitNumber = LTRIM(RTRIM(U.UnitNumber)),
+            T.FloorNumber = U.FloorNumber,
+            T.Area = U.Area,
+            T.Bedrooms = U.Bedrooms,
+            T.UnitDescription = U.UnitDescription,
+            T.IsActive = ISNULL(U.IsActive, T.IsActive),
+            T.UpdatedAt = GETDATE(),
+            T.UserUpdater = TRY_CONVERT(INT, @CurrentUserId)
+        FROM dbo.Units T
+        INNER JOIN @Units U
+            ON U.UnitId = T.UnitId
+        WHERE ISNULL(U.UnitId, 0) > 0
+          AND ISNULL(T.IsDeleted, 0) = 0;
+
+        -----------------------------------------------------
+        -- 9.2 ثبت واحدهای جدید
+        -----------------------------------------------------
+        INSERT INTO dbo.Units
+        (
+            BuildingId,
+            UnitNumber,
+            FloorNumber,
+            Area,
+            Bedrooms,
+            UnitDescription,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UserCreater
+        )
+        SELECT
+            U.BuildingId,
+            LTRIM(RTRIM(U.UnitNumber)),
+            U.FloorNumber,
+            U.Area,
+            U.Bedrooms,
+            U.UnitDescription,
+            ISNULL(U.IsActive, 1),
+            0,
+            GETDATE(),
+            TRY_CONVERT(INT, @CurrentUserId)
+        FROM @Units U
+        WHERE ISNULL(U.UnitId, 0) = 0;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage =
+            N'عملیات ثبت و ویرایش واحدها با موفقیت انجام شد.';
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = ERROR_NUMBER();
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6577,7 +10328,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6650,7 +10401,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6797,7 +10548,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/12/2026 7:47:27 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/21/2026 2:25:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7160,7 +10911,11 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ح�
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد موقعیت جغرافیایی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoId'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام موقعیت جغرافیایی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoName'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام فارسی موقعیت جغرافیایی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoNameFa'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام انگلیسی موقعیت جغرافیایی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoNameEn'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نوع موقعیت جغرافیایی(1:کشور | 2: استان | 3: شهرستان | 4: بخش | 5: شهر و روستا)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoType'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'والد موقعیت جغرافیایی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'ParantId'
 GO
@@ -7174,9 +10929,25 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'والد شه�
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'والد روستا' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'PL5'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'مسیبر موقعیت جغرافیایی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoPath'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'مسیبر موقعیت جغرافیایی به فارسی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoPathFa'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'مسیبر موقعیت جغرافیایی به انگلیسی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo', @level2type=N'COLUMN',@level2name=N'GeoPathEn'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'موقعیت جغرافیایی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Geo'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد نوع ها' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Lookup', @level2type=N'COLUMN',@level2name=N'LookupId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام نوع' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_Lookup', @level2type=N'COLUMN',@level2name=N'LookupTitle'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد زیر مجموعه نوع' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'LookupValueId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد نوع ها' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'LookupId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام فارسی زیر مجموعه نوع' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'LookupValueTitleFr'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام انگلیسی زیر مجموعه نوع' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'LookupValueTitleEn'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ترتیب نمایش' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Base_LookupValues', @level2type=N'COLUMN',@level2name=N'SortId'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'BuildingId'
 GO
@@ -7316,7 +11087,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد سازم�
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام سازمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organizations', @level2type=N'COLUMN',@level2name=N'OrgName'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نوع سازمان (1: ساختمان | 2: آموزشگاه | 3: باشگاه | 4: موسسه آموزشی | 5: مجتمع چندمنظوره | 99: سایر)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organizations', @level2type=N'COLUMN',@level2name=N'OrgType'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نوع سازمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organizations', @level2type=N'COLUMN',@level2name=N'OrgType'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد موقعیت جغرافیایی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Organizations', @level2type=N'COLUMN',@level2name=N'GeoId'
 GO

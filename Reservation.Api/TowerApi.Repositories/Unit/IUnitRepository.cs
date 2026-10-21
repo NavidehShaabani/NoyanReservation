@@ -28,5 +28,8 @@ namespace TowerApi.Repositories.Unit
         Task<(int ResultCode, string ResultMessage, List<UnitViewModel> Data)>
             GetListAsync(
                 UnitQueryRequest request);
+        Task<(int ResultCode, string? ResultMessage)> BulkSaveAsync(
+           IEnumerable<UnitBulkItem> units,
+           long currentUserId);
     }
 }

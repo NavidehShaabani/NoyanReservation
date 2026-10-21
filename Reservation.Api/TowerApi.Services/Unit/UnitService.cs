@@ -136,5 +136,26 @@ namespace TowerApi.Services.Unit
                 unitId,
                 userId);
         }
+        public async Task<UnitBulkServiceResult> BulkSaveAsync(
+            UnitBulkSaveRequest request,
+            long currentUserId)
+        {
+            var result = await _repository.BulkSaveAsync(
+                request.Units,
+                currentUserId);
+
+            return new UnitBulkServiceResult
+            {
+                Code = result.ResultCode,
+                MessageKey = result.ResultCode switch
+                {
+                    200 => "Units.BulkSaveSuccessfully",
+                    400 => "Units.InvalidData",
+                    404 => "Units.ReferenceNotFound",
+                    409 => "Units.Conflict",
+                    _ => "Common.SystemError"
+                }
+            };
+        }
     }
 }

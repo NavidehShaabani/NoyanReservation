@@ -92,5 +92,26 @@ namespace TowerApi.Services.Geo
                     new List<GeoItemResponse>());
             }
         }
+        public async Task<GeoResponseGetByIdResult> GetByIdAsync(string geoId)
+        {
+            var result = await _repository.GetByIdAsync(geoId);
+
+            return new GeoResponseGetByIdResult
+            {
+                Code = result.ResultCode,
+
+                MessageKey = result.ResultCode switch
+                {
+                    200 => "Geo.GetByIdSuccessfully",
+                    400 => "Geo.GeoIdRequired",
+                    404 => "Geo.NotFound",
+                    _ => "Common.SystemError"
+                },
+
+                Data = result.ResultCode == 200
+                    ? result.Data
+                    : null
+            };
+        }
     }
 }

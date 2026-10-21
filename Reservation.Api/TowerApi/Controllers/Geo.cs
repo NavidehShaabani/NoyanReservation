@@ -46,5 +46,28 @@ namespace TowerApi.Controllers
                     result.MessageKey,
                     result.Data));
         }
+        // GET: api/BaseGeo/{geoId}
+        [HttpGet("{geoId}")]
+        public async Task<IActionResult> GetById(string geoId)
+        {
+            var result = await _service.GetByIdAsync(geoId);
+
+            if (result.Code == 200)
+            {
+                return Ok(_responseFactory.Success(
+                    result.Code,
+                    result.MessageKey,
+                    result.Data));
+            }
+
+            var statusCode =
+                ApiResponseMessageMapper.GetHttpStatusCode(result.Code);
+
+            return StatusCode(
+                statusCode,
+                _responseFactory.Error(
+                    result.Code,
+                    result.MessageKey));
+        }
     }
 }

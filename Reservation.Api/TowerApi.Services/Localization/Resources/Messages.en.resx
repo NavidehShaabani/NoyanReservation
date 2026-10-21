@@ -195,6 +195,9 @@
   <data name="Common.SystemError2" xml:space="preserve">
     <value>A system error occurred</value>
   </data>
+  <data name="Common.SystemError3" xml:space="preserve">
+    <value>A system error occurred.</value>
+  </data>
   <data name="Common.TooManyRequests" xml:space="preserve">
     <value>Too many requests. Please try again later.</value>
   </data>
@@ -309,6 +312,12 @@
   <data name="EmployeeTypes.NotFound" xml:space="preserve">
     <value>The requested employee type was not found.</value>
   </data>
+  <data name="Geo.GeoIdRequired" xml:space="preserve">
+    <value>The geographical location ID is required.</value>
+  </data>
+  <data name="Geo.GetByIdSuccessfully" xml:space="preserve">
+    <value>Geographical location details were retrieved successfully.</value>
+  </data>
   <data name="Geo.GetChildrenSuccessfully" xml:space="preserve">
     <value>Geographic locations retrieved successfully.</value>
   </data>
@@ -320,6 +329,9 @@
   </data>
   <data name="Geo.NotFound" xml:space="preserve">
     <value>The requested geographic location was not found.</value>
+  </data>
+  <data name="Geo.NotFound1" xml:space="preserve">
+    <value>The specified geographical location was not found.</value>
   </data>
   <data name="Geo.ParentNotAllowedForCountries" xml:space="preserve">
     <value>A parent ID must not be provided when retrieving countries.</value>
@@ -377,5 +389,17 @@
   </data>
   <data name="Signup.UsernameConflict" xml:space="preserve">
     <value>This username is already in use.</value>
+  </data>
+  <data name="Units.BulkSaveSuccessfully" xml:space="preserve">
+    <value>Units were saved and updated successfully.</value>
+  </data>
+  <data name="Units.Conflict" xml:space="preserve">
+    <value>A unit with the same number already exists on this floor of the building.</value>
+  </data>
+  <data name="Units.InvalidData" xml:space="preserve">
+    <value>The submitted unit data is invalid.</value>
+  </data>
+  <data name="Units.ReferenceNotFound" xml:space="preserve">
+    <value>The selected building or one of the submitted units was not found, has been deleted, or is inactive.</value>
   </data>
 </root>

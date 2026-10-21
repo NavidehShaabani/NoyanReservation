@@ -32,5 +32,8 @@ namespace TowerApi.Services.Unit
             DeleteAsync(
                 long unitId,
                 int userId);
+        Task<UnitBulkServiceResult> BulkSaveAsync(
+            UnitBulkSaveRequest request,
+            long currentUserId);
     }
 }

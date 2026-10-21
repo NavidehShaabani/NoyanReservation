@@ -378,4 +378,28 @@
   <data name="Common.SystemError2" xml:space="preserve">
     <value>خطای سیستمی رخ داده است.</value>
   </data>
+  <data name="Common.SystemError3" xml:space="preserve">
+    <value>خطای سیستمی رخ داده است.</value>
+  </data>
+  <data name="Geo.GeoIdRequired" xml:space="preserve">
+    <value>کد موقعیت جغرافیایی الزامی است.</value>
+  </data>
+  <data name="Geo.GetByIdSuccessfully" xml:space="preserve">
+    <value>اطلاعات موقعیت جغرافیایی با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Geo.NotFound1" xml:space="preserve">
+    <value>موقعیت جغرافیایی موردنظر یافت نشد.</value>
+  </data>
+  <data name="Units.BulkSaveSuccessfully" xml:space="preserve">
+    <value>عملیات ثبت و ویرایش واحدها با موفقیت انجام شد.</value>
+  </data>
+  <data name="Units.Conflict" xml:space="preserve">
+    <value>شماره واحد در این ساختمان و طبقه قبلاً ثبت شده است.</value>
+  </data>
+  <data name="Units.InvalidData" xml:space="preserve">
+    <value>اطلاعات ارسالی واحدها معتبر نیست.</value>
+  </data>
+  <data name="Units.ReferenceNotFound" xml:space="preserve">
+    <value>ساختمان انتخاب‌شده یا یکی از واحدهای ارسالی یافت نشد، حذف شده یا غیرفعال است.</value>
+  </data>
 </root>

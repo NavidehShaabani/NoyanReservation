@@ -237,5 +237,89 @@ namespace TowerApi.Repositories.Unit
                 data
             );
         }
+        public async Task<(int ResultCode, string? ResultMessage)>
+           BulkSaveAsync(
+               IEnumerable<UnitBulkItem> units,
+               long currentUserId)
+        {
+            var table = new DataTable();
+
+            // ترتیب و نوع ستون‌ها باید با dbo.UnitBulkType یکسان باشد.
+            table.Columns.Add("UnitId", typeof(long));
+            table.Columns.Add("BuildingId", typeof(long));
+            table.Columns.Add("UnitNumber", typeof(string));
+            table.Columns.Add("FloorNumber", typeof(int));
+            table.Columns.Add("Area", typeof(decimal));
+            table.Columns.Add("Bedrooms", typeof(byte));
+            table.Columns.Add("UnitDescription", typeof(string));
+            table.Columns.Add("IsActive", typeof(bool));
+
+            foreach (var unit in units)
+            {
+                table.Rows.Add(
+                    unit.UnitId.HasValue
+                        ? unit.UnitId.Value
+                        : DBNull.Value,
+
+                    unit.BuildingId.HasValue
+                        ? unit.BuildingId.Value
+                        : DBNull.Value,
+
+                    (object?)unit.UnitNumber ?? DBNull.Value,
+
+                    unit.FloorNumber.HasValue
+                        ? unit.FloorNumber.Value
+                        : DBNull.Value,
+
+                    unit.Area.HasValue
+                        ? unit.Area.Value
+                        : DBNull.Value,
+
+                    unit.Bedrooms.HasValue
+                        ? unit.Bedrooms.Value
+                        : DBNull.Value,
+
+                    (object?)unit.UnitDescription ?? DBNull.Value,
+
+                    unit.IsActive.HasValue
+                        ? unit.IsActive.Value
+                        : DBNull.Value
+                );
+            }
+
+            var parameters = new DynamicParameters();
+
+            parameters.Add(
+                "@Units",
+                table.AsTableValuedParameter("dbo.UnitBulkType"));
+
+            parameters.Add(
+                "@CurrentUserId",
+                currentUserId,
+                DbType.Int64);
+
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
+            using var connection = _connectionFactory.CreateConnection();
+
+            await connection.ExecuteAsync(
+                "dbo.Units_BulkSave",
+                parameters,
+                commandType: CommandType.StoredProcedure);
+
+            return (
+                parameters.Get<int>("@ResultCode"),
+                parameters.Get<string?>("@ResultMessage")
+            );
+        }
     }
 }

@@ -74,5 +74,45 @@ namespace TowerApi.Repositories.Geo
                 resultMessage,
                 data);
         }
+        public async Task<(
+           int ResultCode,
+           string? ResultMessage,
+           GeoResponseGetById? Data
+       )> GetByIdAsync(string geoId)
+        {
+            var parameters = new DynamicParameters();
+
+            parameters.Add(
+                "@GeoId",
+                geoId,
+                DbType.String,
+                size: 10);
+
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
+            using var connection = _connectionFactory.CreateConnection();
+
+            var rows = await connection.QueryAsync<GeoResponseGetById>(
+                "dbo.Base_Geo_GetById",
+                parameters,
+                commandType: CommandType.StoredProcedure);
+
+            var data = rows.FirstOrDefault();
+
+            return (
+                parameters.Get<int>("@ResultCode"),
+                parameters.Get<string?>("@ResultMessage"),
+                data
+            );
+        }
     }
 }

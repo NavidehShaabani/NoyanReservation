@@ -10,5 +10,10 @@ namespace TowerApi.Repositories.Geo
             List<GeoItemResponse> Data
         )> GetChildrenAsync(
             GeoChildrenQueryRequest request);
+        Task<(
+            int ResultCode,
+            string? ResultMessage,
+            GeoResponseGetById? Data
+        )> GetByIdAsync(string geoId);
     }
 }

@@ -11,5 +11,6 @@ namespace TowerApi.Services.Geo
             List<GeoItemResponse> Data
         )> GetChildrenAsync(
             GeoChildrenQueryRequest request);
+        Task<GeoResponseGetByIdResult> GetByIdAsync(string geoId);
     }
 }
