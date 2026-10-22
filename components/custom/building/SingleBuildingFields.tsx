@@ -2,7 +2,24 @@ import { FieldGroup, FieldLabel, Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslations } from "next-intl";
-export default function SingleBuildingFields() {
+
+export type BuildingDraft = {
+  buildingId: number | null;
+  buildingName: string;
+  buildingAddress: string;
+  buildingDescription: string;
+  isActive: boolean;
+  orgId: number;
+};
+type buildingProps = {
+  building: BuildingDraft;
+  onBuildingChange: (value: BuildingDraft) => void;
+};
+
+export default function SingleBuildingFields({
+  building,
+  onBuildingChange,
+}: buildingProps) {
   const t = useTranslations("building");
   return (
     <div
@@ -12,11 +29,11 @@ export default function SingleBuildingFields() {
     >
       <div className="text-start pb-7">
         <h1 className="text-xl font-medium text-foreground">
-          {t("singleBuildingFormTitle")}
+          {t("singleBuildingTypeTitle")}
         </h1>
 
         <p className="mt-2 text-sm text-muted-foreground">
-          {t("singleBuildingFormDesc")}
+          {t("singleBuildingTypeDesc")}
         </p>
       </div>
 
@@ -31,11 +48,11 @@ export default function SingleBuildingFields() {
           <Input
             id="fieldgroup-buildingName"
             placeholder={t("buildingNamePlaceholder")}
-            //   value={buildingName}
+            value={building.buildingName}
             //   aria-invalid={submitted && !buildingName.trim()}
-            // onChange={(e) => {
-            // setbuildingName(e.target.value);
-            // }}
+            onChange={(e) => {
+              onBuildingChange({ ...building, buildingName: e.target.value });
+            }}
             //   className={`    ${submitted && !buildingName.trim() ? "border-destructive" : ""}
 
             className={`
@@ -50,7 +67,7 @@ export default function SingleBuildingFields() {
           />
         </Field>
 
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <Field>
             <FieldLabel
               htmlFor="fieldgroup-buildingAddress"
@@ -60,6 +77,13 @@ export default function SingleBuildingFields() {
             </FieldLabel>
             <Textarea
               id="buildingAddress"
+              value={building.buildingAddress}
+              onChange={(e) => {
+                onBuildingChange({
+                  ...building,
+                  buildingAddress: e.target.value,
+                });
+              }}
               placeholder={t("buildingAddressPlaceholder")}
               rows={2}
               className={`
@@ -85,6 +109,13 @@ export default function SingleBuildingFields() {
 
             <Textarea
               id="buildingDescription"
+              value={building.buildingDescription}
+              onChange={(e) => {
+                onBuildingChange({
+                  ...building,
+                  buildingDescription: e.target.value,
+                });
+              }}
               placeholder={t("buildingDescriptionPlaceholder")}
               rows={2}
               className={`

@@ -29,10 +29,10 @@ export type GeoSelection = {
   geoType: number;
 };
 type geoProps = {
-  geo: GeoSelection | null;
-  onGeoChange: (value: GeoSelection) => void;
+  geoId: string;
+  onGeoIdChange: (value: string) => void;
 };
-export default function Geo({ geo, onGeoChange }: geoProps) {
+export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
   const { token, isAuthReady } = useContext(AuthContext);
   const [countryId, setCountryId] = useState("");
   const [regionId, setRegionId] = useState("");
@@ -42,39 +42,88 @@ export default function Geo({ geo, onGeoChange }: geoProps) {
   const [countryList, setCountryList] = useState<GeoItem[]>([]);
   const [regionList, setRegionList] = useState<GeoItem[]>([]);
   const [cityList, setCityList] = useState<GeoItem[]>([]);
-
+  // const [currentGeo, setCurrentGeo] = useState<GeoSelection>({
+  //   geoId: "",
+  //   pL1: null,
+  //   pL2: null,
+  //   geoType: 0,
+  // });
   useEffect(() => {
-    async function getCountry() {
-      if (!isAuthReady || !token) return;
+    if (!isAuthReady || !token) return;
+
+    async function initializeGeo() {
       try {
-        const countryResponse = await fetch(
-          "http://10.208.8.91:5295/api/Geo/children?GeoType=1",
-          {
-            method: "GET",
-            credentials: "include",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          },
-        );
+        if (geoId) {
+          const geo = await getCurrentGeoInfo(geoId);
 
-        if (!countryResponse.ok) {
-          throw new Error(`Request failed: ${countryResponse.status}`);
-        }
-        const countryResponselist = await countryResponse.json();
-        setCountryList(countryResponselist.data);
-        if (locale === "fa") {
-          setCountryId("01");
+          await getCountryList();
 
-          handleCountryChange("01");
+          setCountryId(geo.pL1 ?? "");
+
+          await getRegionList(geo.pL1 ?? "");
+
+          setRegionId(geo.pL2 ?? "");
+
+          await getCityList(geo.pL2 ?? "");
+          setCityId(geoId);
+        } else {
+          await getCountryList();
         }
       } catch (error) {
-        console.error("Failed to load countries:", error);
+        console.error("Failed to initialize geo:", error);
       }
     }
 
-    getCountry();
-  }, [isAuthReady, token]);
+    initializeGeo();
+  }, [isAuthReady, token, geoId]);
+
+  async function getCurrentGeoInfo(geoId: string) {
+    const currentGeoResponse = await fetch(
+      `http://10.208.8.91:5295/api/Geo/${geoId}`,
+      {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    );
+    if (!currentGeoResponse.ok) {
+      throw new Error(`Request failed: ${currentGeoResponse.status}`);
+    }
+    const result = await currentGeoResponse.json();
+    return result.data;
+    //setCurrentGeo(currentGeoResponseJson.data);
+  }
+
+  async function getCountryList() {
+    try {
+      const countryResponse = await fetch(
+        "http://10.208.8.91:5295/api/Geo/children?GeoType=1",
+        {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
+
+      if (!countryResponse.ok) {
+        throw new Error(`Request failed: ${countryResponse.status}`);
+      }
+      const countryResponselist = await countryResponse.json();
+      setCountryList(countryResponselist.data);
+
+      // if (locale === "fa") {
+      //   setCountryId("01");
+
+      //   handleCountryChange("01");
+      // }
+    } catch (error) {
+      console.error("Failed to load countries:", error);
+    }
+  }
 
   async function getRegionList(value: string) {
     try {
@@ -159,12 +208,10 @@ export default function Geo({ geo, onGeoChange }: geoProps) {
 
     const selectedCity = cityList.find((city) => city.geoId === value);
     if (!selectedCity) return;
-    onGeoChange({
-      geoId: selectedCity.geoId,
-      pL1: selectedCity.pL1,
-      pL2: selectedCity.pL2,
-      geoType: selectedCity.geoType,
-    });
+    onGeoIdChange(selectedCity.geoId);
+    // pL1: selectedCity.pL1,
+    // pL2: selectedCity.pL2,
+    // geoType: selectedCity.geoType,
   };
   return (
     <div

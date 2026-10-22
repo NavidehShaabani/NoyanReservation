@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
 type BuildingFormProps = {
-  orgType: string;
-  onOrgTypeChange: (value: string) => void;
+  orgType: number;
+  onOrgTypeChange: (value: number) => void;
 };
 
 export default function BuildingForm({
@@ -40,7 +40,7 @@ export default function BuildingForm({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         <Card
           onClick={() => {
-            onOrgTypeChange("2");
+            onOrgTypeChange(1002);
           }}
           className={`
           
@@ -55,7 +55,7 @@ export default function BuildingForm({
                 shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]
                 hover:shadow-[8px_8px_16px_#d1cfcc,-8px_-8px_16px_#ffffff]
                 active:shadow-[inset_8px_8px_16px_#d1cfcc,inset_-8px_-8px_16px_#ffffff]
-          ${orgType === "2" ? "border-[1px] border-primary" : "border-[1px] border-transparent"}  
+          ${orgType === 1002 ? "border-[1px] border-primary" : "border-[1px] border-transparent"}  
                 min-h-36 
 
             `}
@@ -86,14 +86,14 @@ export default function BuildingForm({
           </CardHeader>
           <CardFooter className="shrink-0 items-center justify-center p-2 rounded-e-[10px]">
             <Check
-              className={`size-7  stroke-[3]   ${orgType === "2" ? "text-green-800" : "text-background"}  `}
+              className={`size-7  stroke-[3]   ${orgType === 1002 ? "text-green-800" : "text-background"}  `}
             />
           </CardFooter>
         </Card>
 
         <Card
           onClick={() => {
-            onOrgTypeChange("1");
+            onOrgTypeChange(1001);
           }}
           className={`
              
@@ -109,7 +109,7 @@ export default function BuildingForm({
                 shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]
                 hover:shadow-[8px_8px_16px_#d1cfcc,-8px_-8px_16px_#ffffff]
                 active:shadow-[inset_8px_8px_16px_#d1cfcc,inset_-8px_-8px_16px_#ffffff]
-                ${orgType === "1" ? "border-[1px] border-primary" : "border-[1px] border-transparent"}  
+                ${orgType === 1001 ? "border-[1px] border-primary" : "border-[1px] border-transparent"}  
                 
                 min-h-36 
 
@@ -141,7 +141,7 @@ export default function BuildingForm({
           </CardHeader>
           <CardFooter className="shrink-0 items-center justify-center p-2 rounded-e-[10px]">
             <Check
-              className={`size-7  stroke-[3]   ${orgType === "1" ? "text-green-800" : "text-background"}  `}
+              className={`size-7  stroke-[3]   ${orgType === 1001 ? "text-green-800" : "text-background"}  `}
             />
           </CardFooter>
         </Card>

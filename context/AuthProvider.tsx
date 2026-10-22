@@ -44,6 +44,7 @@ type User = {
   roles: Role[];
   activeRoleId: number | null;
   sessionId: string;
+  orgId: number;
 };
 type AuthContextType = {
   token: string | null;
@@ -103,7 +104,8 @@ export default function AuthProvider({
         }
 
         const userInfoData = await userInfoResponse.json();
-
+        console.log("userInfoData:", userInfoData);
+        console.log("userInfoData.user:", userInfoData.user);
         setToken(accessToken);
         setUser(userInfoData.user);
       } catch (error) {
