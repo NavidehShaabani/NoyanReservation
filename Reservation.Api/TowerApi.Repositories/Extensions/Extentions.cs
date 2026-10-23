@@ -13,6 +13,7 @@ using TowerApi.Repositories.Profile;
 using TowerApi.Repositories.RefreshTokens;
 using TowerApi.Repositories.SessionRepository;
 using TowerApi.Repositories.Signup;
+using TowerApi.Repositories.Spaces;
 using TowerApi.Repositories.Unit;
 
 namespace TowerApi.Repositories.Extensions
@@ -36,6 +37,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             _services.AddScoped<IEmployeeAssignmentRepository, EmployeeAssignmentRepository>();
             _services.AddScoped<ISignupRepository, SignupRepository>();
+            _services.AddScoped<ISpaceRepository, SpaceRepository>();
 
             return _services;
         }

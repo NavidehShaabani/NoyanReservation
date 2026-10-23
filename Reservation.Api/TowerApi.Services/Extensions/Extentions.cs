@@ -12,6 +12,7 @@ using TowerApi.Services.Organization;
 using TowerApi.Services.Profile;
 
 using TowerApi.Services.Signup;
+using TowerApi.Services.Spaces;
 using TowerApi.Services.Unit;
 
 namespace TowerApi.Services.Extensions
@@ -35,7 +36,8 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IEmployeeService, EmployeeService>();
             _services.AddScoped<IEmployeeAssignmentService, EmployeeAssignmentService>();
             _services.AddScoped<ISignupService, SignupService>();
-
+            _services.AddScoped<ISpaceService, SpaceService>();
+            
             return _services;
         }
     }
