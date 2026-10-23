@@ -16,7 +16,8 @@
     {
         public long EmployeeTypeRoleId { get; set; }
         public int EmployeeTypeId { get; set; }
-        public string? EmployeeTypeName { get; set; }
+        public string? EmployeeTypeNameFr { get; set; }
+        public string? EmployeeTypeNameEn { get; set; }
         public long RoleId { get; set; }
         public string? RoleName { get; set; }
         public bool IsActive { get; set; }

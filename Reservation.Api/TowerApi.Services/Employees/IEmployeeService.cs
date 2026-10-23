@@ -5,6 +5,7 @@ namespace TowerApi.Services.Employees
     public interface IEmployeeService
     {
         Task<IEnumerable<EmployeeItem>> GetAsync(EmployeeQuery request);
+        
         Task<EmployeeDetails?> GetByIdAsync(long employeeId);
 
         Task<(int Code, string MessageKey, object? Data)> AddAsync(

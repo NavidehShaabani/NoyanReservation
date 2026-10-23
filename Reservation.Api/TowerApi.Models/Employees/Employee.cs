@@ -71,7 +71,8 @@
         public long OrgId { get; set; }
         public string? OrgName { get; set; }
         public int EmployeeTypeId { get; set; }
-        public string? EmployeeTypeName { get; set; }
+        public string? EmployeeTypeNameFr { get; set; }
+        public string? EmployeeTypeNameEn { get; set; }
         public byte EmploymentType { get; set; }
         public DateTime? HireDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -106,7 +107,7 @@
 
     public class EmployeeDetails : EmployeeItem
     {
-        public string? EmployeeTypeDesc { get; set; }
+        //public string? EmployeeTypeDesc { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public List<EmployeeAssignmentSummary> Assignments { get; set; } = new();
     }
