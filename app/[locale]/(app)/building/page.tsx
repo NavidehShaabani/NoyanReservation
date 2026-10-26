@@ -146,7 +146,7 @@ export default function Building() {
    
           "
       >
-        <Card className="mt-5 flex w-full min-w-0 shrink-0 flex-col gap-2 bg-background pt-0 pb-0 shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]">
+        <Card className=" flex w-full min-w-0 shrink-0 flex-col gap-2 bg-background pt-0 pb-0 shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]">
           <CardHeader className="flex flex-row items-center justify-between gap-3 px-4 py-4 sm:px-6">
             <div className="flex min-w-0 items-center gap-3">
               <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -154,8 +154,10 @@ export default function Building() {
               </div>
 
               <div className="min-w-0">
-                <CardTitle className="text-base sm:text-lg">
-                  {t_building("building-info-title")}
+                <CardTitle className="text-base sm:text-lg break-words">
+                  {orgType === 1001
+                    ? t_building("building-info-title")
+                    : t_building("complex-info-title")}
                 </CardTitle>
               </div>
             </div>
@@ -171,28 +173,18 @@ export default function Building() {
           </CardHeader>
           <CardContent className="space-y-6 px-4 pb-5 sm:px-6">
             {/* موقعیت مکانی و نوع سازمان */}
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="min-w-0 space-y-1">
-                <p className="text-sm text-muted-foreground">
-                  {t_geo("geoFormTitle")}
-                </p>
-                <p className="break-words font-medium">
-                  {locale === "fa"
-                    ? currentGeo?.geoPathFa || currentGeo?.geoPathEn || "—"
-                    : currentGeo?.geoPathEn || "—"}
-                </p>
-              </div>
-
-              <div className="min-w-0 space-y-1">
-                <p className="text-sm text-muted-foreground">
-                  {t_building("building-type-form-title_2")}
-                </p>
-                <p className="font-medium">
-                  {orgType === 1001
-                    ? t_building("standalone-building")
-                    : t_building("residential-complex")}
-                </p>
-              </div>
+            <div className="flex flex-col  text-sm text-muted-foreground sm:flex-row sm:gap-2">
+              <p>
+                {orgType === 1001
+                  ? t_building("standalone-building")
+                  : t_building("residential-complex")}
+              </p>
+              .
+              <p className="break-words ">
+                {locale === "fa"
+                  ? currentGeo?.geoPathFa || currentGeo?.geoPathEn || "—"
+                  : currentGeo?.geoPathEn || "—"}
+              </p>
             </div>
 
             {/* اطلاعات ساختمان مستقل */}
@@ -200,30 +192,30 @@ export default function Building() {
               <div className="border-t pt-5">
                 <dl className="grid gap-5 sm:grid-cols-2">
                   <div className="min-w-0 space-y-1">
-                    <dt className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground">
                       {t_building("buildingName")}
-                    </dt>
-                    <dd className="break-words font-medium">
+                    </p>
+                    <p className="break-words font-medium">
                       {building.buildingName || "—"}
-                    </dd>
+                    </p>
                   </div>
 
                   <div className="min-w-0 space-y-1">
-                    <dt className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground">
                       {t_building("buildingAddress")}
-                    </dt>
-                    <dd className="break-words font-medium">
+                    </p>
+                    <p className="break-words font-medium">
                       {building.buildingAddress || "—"}
-                    </dd>
+                    </p>
                   </div>
 
                   <div className="min-w-0 space-y-1 sm:col-span-2">
-                    <dt className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground">
                       {t_building("buildingDescription")}
-                    </dt>
-                    <dd className="break-words whitespace-pre-wrap">
+                    </p>
+                    <p className="break-words whitespace-pre-wrap">
                       {building.buildingDescription || "—"}
-                    </dd>
+                    </p>
                   </div>
                 </dl>
               </div>
@@ -231,79 +223,77 @@ export default function Building() {
 
             {/* اطلاعات مجتمع */}
             {orgType === 1002 && (
-              <div className="space-y-5 border-t pt-5">
-                <dl className="grid gap-5 sm:grid-cols-2">
-                  <div className="min-w-0 space-y-1">
-                    <dt className="text-sm text-muted-foreground">
-                      {t_building("residentialComplexName")}
-                    </dt>
-                    <dd className="break-words font-medium">
-                      {complex.orgName || "—"}
-                    </dd>
-                  </div>
+              <div className="border-t pt-5">
+                <div className="space-y-2">
+                  <h2 className="text-lg font-semibold">
+                    {complex.orgName || "—"}
+                  </h2>
 
-                  <div className="min-w-0 space-y-1 sm:col-span-2">
-                    <dt className="text-sm text-muted-foreground">
-                      {t_building("residentialComplexDescription")}
-                    </dt>
-                    <dd className="break-words whitespace-pre-wrap">
-                      {complex.orgDesc || "—"}
-                    </dd>
-                  </div>
-                </dl>
-
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between gap-3">
-                    <h3 className="font-semibold">
-                      {t_building("residentialComplexBuildingListTitle")}
-                    </h3>
-                    <span className="text-sm text-muted-foreground">
-                      {complex.buildings.length}
-                    </span>
-                  </div>
-
-                  <div className="space-y-3">
-                    {complex.buildings.map((item) => (
-                      <div
-                        key={item.clientId}
-                        className="min-w-0 rounded-xl border bg-muted/20 p-4"
-                      >
-                        <dl className="grid gap-4 sm:grid-cols-2">
-                          <div className="min-w-0 space-y-1">
-                            <dt className="text-sm text-muted-foreground">
-                              {t_building("buildingName")}
-                            </dt>
-                            <dd className="break-words font-medium">
-                              {item.buildingName || "—"}
-                            </dd>
-                          </div>
-
-                          <div className="min-w-0 space-y-1">
-                            <dt className="text-sm text-muted-foreground">
-                              {t_building("buildingAddress")}
-                            </dt>
-                            <dd className="break-words">
-                              {item.buildingAddress || "—"}
-                            </dd>
-                          </div>
-
-                          <div className="min-w-0 space-y-1 sm:col-span-2">
-                            <dt className="text-sm text-muted-foreground">
-                              {t_building("buildingDescription")}
-                            </dt>
-                            <dd className="break-words whitespace-pre-wrap">
-                              {item.buildingDescription || "—"}
-                            </dd>
-                          </div>
-                        </dl>
-                      </div>
-                    ))}
-                  </div>
+                  <p className="whitespace-pre-wrap break-words text-sm text-muted-foreground">
+                    {complex.orgDesc || "—"}
+                  </p>
                 </div>
               </div>
             )}
           </CardContent>
         </Card>
+
+        {orgType === 1002 && (
+          <Card className=" flex w-full min-w-0 shrink-0 flex-col gap-2 bg-background pt-0 pb-0 shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]">
+            <CardContent className="space-y-6 px-4 py-5 sm:px-6">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="font-medium">
+                    {t_building("residentialComplexBuildingListTitle")}
+                  </h3>
+                  <span className="text-sm text-muted-foreground">
+                    {t_building("residentialComplexBuildingCount")} :{" "}
+                    {complex.buildings.length}
+                  </span>
+                </div>
+
+                <div className="space-y-3">
+                  {complex.buildings.map((item) => (
+                    <div
+                      key={item.clientId}
+                      className="  rounded-[10px] bg-background p-4
+  shadow-[inset_3px_3px_7px_#d6d4d1,inset_-3px_-3px_7px_#ffffff] "
+                    >
+                      <dl className="grid gap-4 sm:grid-cols-2">
+                        <div className="min-w-0 space-y-1">
+                          <p className="text-sm text-muted-foreground">
+                            {t_building("buildingName")}
+                          </p>
+                          <p className="break-words font-medium">
+                            {item.buildingName || "—"}
+                          </p>
+                        </div>
+
+                        <div className="min-w-0 space-y-1">
+                          <p className="text-sm text-muted-foreground">
+                            {t_building("buildingAddress")}
+                          </p>
+                          <p className="break-words">
+                            {item.buildingAddress || "—"}
+                          </p>
+                        </div>
+
+                        <div className="min-w-0 space-y-1 sm:col-span-2">
+                          <p className="text-sm text-muted-foreground">
+                            {t_building("buildingDescription")}
+                          </p>
+                          <p className="break-words whitespace-pre-wrap">
+                            {item.buildingDescription || "—"}
+                          </p>
+                        </div>
+                      </dl>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
       </div>
     </div>
   );

@@ -1,17 +1,19 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
+import { useTranslations } from "next-intl";
 import { createClientId } from "@/lib/create-client-id";
 import { AuthContext } from "@/context/AuthProvider";
 import BuildingType from "@/components/custom/building/BuildingForm";
 import GeoSelector from "@/components/custom/GeoSelector";
 import SingleBuildingFields from "@/components/custom/building/SingleBuildingFields";
 import ResidentialComplexFields from "@/components/custom/building/ResidentialComplexFields";
-
+import { Button } from "@/components/ui/button";
 import type { BuildingDraft } from "@/components/custom/building/SingleBuildingFields";
 import type { ComplexDraft } from "@/components/custom/building/ResidentialComplexFields";
 import type { ComplexBuildingDraft } from "@/components/custom/building/ResidentialComplexFields";
 export default function Building() {
   const { token, isAuthReady, user } = useContext(AuthContext);
+  const t_building = useTranslations("building");
   const [orgType, setOrgType] = useState(1001);
   const [geoId, setGeoId] = useState("");
   const [building, setBuilding] = useState<BuildingDraft>({
@@ -106,6 +108,73 @@ export default function Building() {
     console.log("complex updated:", complex);
   }, [complex]);
 
+  const hanleSaveData = async () => {
+    try {
+      const isEditingOrg = complex.orgId > 0;
+
+      const orgResponse = await fetch(
+        isEditingOrg
+          ? `http://10.208.8.91:5295/api/Organizations/${complex.orgId}`
+          : "http://10.208.8.91:5295/api/Organizations",
+        {
+          method: isEditingOrg ? "PUT" : "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          credentials: "include",
+          body: JSON.stringify({
+            orgName: complex.orgName,
+            orgDesc: complex.orgDesc,
+            orgType,
+            isActive: complex.isActive,
+            geoId,
+          }),
+        },
+      );
+      console.log("Organization response:", orgResponse.status);
+      if (!orgResponse.ok) {
+        const errorBody = await orgResponse.text();
+        throw new Error(`Request failed: ${orgResponse.status} - ${errorBody}`);
+      }
+
+      const buildingsToSave = orgType === 1001 ? [building] : complex.buildings;
+
+      const buildingsPayload = buildingsToSave.map((item) => ({
+        buildingId: item.buildingId ?? 0,
+        buildingName: item.buildingName,
+        buildingAddress: item.buildingAddress,
+        buildingDescription: item.buildingDescription,
+        isActive: true,
+        orgId: complex.orgId,
+      }));
+
+      const buildingsResponse = await fetch(
+        "http://10.208.8.91:5295/api/Buildings/BulkSave",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          credentials: "include",
+          body: JSON.stringify({
+            buildings: buildingsPayload,
+          }),
+        },
+      );
+      console.log("Buildings response:", buildingsResponse.status);
+      if (!buildingsResponse.ok) {
+        const errorBody = await buildingsResponse.text();
+        throw new Error(
+          `Request failed: ${buildingsResponse.status} - ${errorBody}`,
+        );
+      }
+    } catch (error) {
+      console.error("Failed to save organization or buildings:", error);
+    }
+  };
+
   return (
     <div
       className="
@@ -133,6 +202,10 @@ export default function Building() {
             onComplexChange={setComplex}
           />
         )}
+
+        <Button className="px-2" onClick={hanleSaveData}>
+          {t_building("save")}
+        </Button>
       </div>
     </div>
   );

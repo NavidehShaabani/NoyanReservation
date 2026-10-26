@@ -23,6 +23,7 @@
   },
   "building": {
     "building-info-title": "اطلاعات ساختمان",
+    "complex-info-title": "اطلاعات مجتمع",
     "residential-complex": "مجتمع مسکونی",
     "standalone-building": "ساختمان مستقل",
     "residential-complex_desc": "مجتمع مسکونی شامل چند برج یا آپارتمان",
@@ -32,6 +33,7 @@
     "building-type-form-desc": "نوع ملک مسکونی‌ را که می‌خواهید مدیریت کنید، انتخاب کنید",
     "select": "انتخاب",
     "edit": "ویرایش",
+    "save": "ثبت اطلاعات",
     "buildingName": "نام ساختمان",
     "buildingAddress": "آدرس ساختمان",
     "buildingDescription": "توضیحات",
@@ -47,6 +49,7 @@
     "residentialComplexNamePlaceholder": "نام مجتمع را وارد کنید",
     "residentialComplexDescriptionPlaceholder": "توضیحات را وارد کنید",
     "residentialComplexBuildingListTitle": "ساختمان های مجتمع",
+    "residentialComplexBuildingCount": "تعداد ساختمان",
     "residentialComplexBuildingListDesc": " ساختمان ثبت شده است",
     "residentialComplexNewBuildingButton": "افزودن ساختمان",
     "residentialComplexSaveBuildingButton": "ثبت ساختمان",
@@ -65,5 +68,27 @@
     "countrySelectPlaceholder": "کشور را انتخاب کنید",
     "regionSelectPlaceholder": "استان را انتخاب کنید",
     "citySelectPlaceholder": "شهر را انتخاب کنید"
+  },
+  "schedule": {
+    "title": "زمان‌بندی و رزرو",
+    "description": "برنامه کلاس‌ها و رزرو فضاهای مجموعه را مدیریت کنید",
+    "spaceFilter": "فضای قابل رزرو",
+    "allSpaces": "همه فضاها",
+    "previous": "بازه قبلی",
+    "next": "بازه بعدی",
+    "today": "امروز",
+    "weekView": "هفته",
+    "monthView": "ماه",
+    "listView": "فهرست",
+    "days": {
+      "sun": "یکشنبه",
+      "mon": "دوشنبه",
+      "tue": "سه‌شنبه",
+      "wed": "چهارشنبه",
+      "thu": "پنجشنبه",
+      "fri": "جمعه",
+      "sat": "شنبه"
+    },
+    "dateRange": "{start} تا {end}"
   }
 }

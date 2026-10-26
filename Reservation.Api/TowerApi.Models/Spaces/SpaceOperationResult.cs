@@ -1,4 +1,4 @@
-﻿us
+﻿
 namespace TowerApi.Models.Spaces
 {
     public sealed class SpaceOperationResult<T>

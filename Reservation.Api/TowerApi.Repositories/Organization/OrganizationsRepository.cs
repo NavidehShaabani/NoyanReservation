@@ -41,7 +41,7 @@ namespace TowerApi.Repositories.Organization
             parameters.Add(
                 "@GeoId",
                 request.GeoId,
-                DbType.Int64);
+                DbType.String);
 
             parameters.Add(
                 "@OrgDesc",
@@ -120,7 +120,7 @@ namespace TowerApi.Repositories.Organization
             parameters.Add(
                 "@GeoId",
                 request.GeoId,
-                DbType.Int64);
+                DbType.String);
 
             parameters.Add(
                 "@OrgDesc",
@@ -295,7 +295,7 @@ namespace TowerApi.Repositories.Organization
             parameters.Add(
                 "@GeoId",
                 request.GeoId,
-                DbType.Int64);
+                DbType.String);
 
             parameters.Add(
                 "@PageNumber",

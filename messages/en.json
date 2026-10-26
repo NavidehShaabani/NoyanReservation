@@ -23,6 +23,7 @@
   },
   "building": {
     "building-info-title": "Building Info",
+    "complex-info-title": "Residential Complex Info",
     "residential-complex": "Residential Complex",
     "standalone-building": "Standalone Building",
     "residential-complex_desc": "A residential complex consisting of multiple buildings or apartment blocks",
@@ -32,6 +33,7 @@
     "building-type-form-desc": "Choose the type of residential property you want to manage",
     "select": "select",
     "edit": "Edit",
+    "save": "Save data",
     "buildingName": "Building Name",
     "buildingAddress": "Building Address",
     "buildingDescription": "Description",
@@ -47,6 +49,7 @@
     "residentialComplexNamePlaceholder": "Enter the complex name",
     "residentialComplexDescriptionPlaceholder": "Enter a description",
     "residentialComplexBuildingListTitle": "Complex Buildings",
+    "residentialComplexBuildingCount": "Buildings count",
     "residentialComplexBuildingListDesc": " buildings registered",
     "residentialComplexNewBuildingButton": "Add Building",
     "residentialComplexSaveBuildingButton": "Seve Building",
@@ -65,5 +68,27 @@
     "countrySelectPlaceholder": "select the country",
     "regionSelectPlaceholder": "select the region",
     "citySelectPlaceholder": "select the city"
+  },
+  "schedule": {
+    "title": "Schedule & Bookings",
+    "description": "Manage classes and space bookings",
+    "spaceFilter": "Reservable space",
+    "allSpaces": "All spaces",
+    "previous": "Previous period",
+    "next": "Next period",
+    "today": "Today",
+    "weekView": "Week",
+    "monthView": "Month",
+    "listView": "List",
+    "days": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    },
+    "dateRange": "{start} – {end}"
   }
 }
