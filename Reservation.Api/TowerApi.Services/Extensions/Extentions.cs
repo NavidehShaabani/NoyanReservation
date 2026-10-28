@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Auth;
+using TowerApi.Services.BaseLookupValues;
 using TowerApi.Services.Building;
 using TowerApi.Services.EmployeeAssignments;
 using TowerApi.Services.Employees;
@@ -22,7 +23,6 @@ namespace TowerApi.Services.Extensions
         public static IServiceCollection ServiceExtention(this IServiceCollection _services)
         {
             _services.AddScoped<IAuthService, AuthService>();
-            //_services.AddScoped<RefreshTokenService>();
             _services.AddScoped<IJwtService, JwtService>();
             _services.AddScoped<IProfileService,ProfileService>();
             _services.AddScoped<IBuildingService, BuildingService>();
@@ -37,6 +37,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IEmployeeAssignmentService, EmployeeAssignmentService>();
             _services.AddScoped<ISignupService, SignupService>();
             _services.AddScoped<ISpaceService, SpaceService>();
+            _services.AddScoped<IBaseLookupValueService,BaseLookupValueService>();
             
             return _services;
         }

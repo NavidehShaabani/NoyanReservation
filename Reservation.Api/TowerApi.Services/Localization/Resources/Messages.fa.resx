@@ -402,4 +402,19 @@
   <data name="Units.ReferenceNotFound" xml:space="preserve">
     <value>ساختمان انتخاب‌شده یا یکی از واحدهای ارسالی یافت نشد، حذف شده یا غیرفعال است.</value>
   </data>
+  <data name="Common.GetSuccessfully1" xml:space="preserve">
+    <value>اطلاعات با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Common.InvalidRequest1" xml:space="preserve">
+    <value>درخواست نامعتبر است.</value>
+  </data>
+  <data name="Common.NotFound1" xml:space="preserve">
+    <value>اطلاعات درخواستی یافت نشد.</value>
+  </data>
+  <data name="Common.Unauthorized1" xml:space="preserve">
+    <value>احراز هویت الزامی است.</value>
+  </data>
+  <data name="Common.UnexpectedError" xml:space="preserve">
+    <value>خطای پیش‌بینی‌نشده‌ای رخ داد.</value>
+  </data>
 </root>
