@@ -170,6 +170,44 @@ export default function Building() {
           `Request failed: ${buildingsResponse.status} - ${errorBody}`,
         );
       }
+
+      const getAfterSaveBuildingsResponse = await fetch(
+        `http://10.208.8.91:5295/api/Buildings/by-org/${complex.orgId}`,
+        {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
+
+      if (!getAfterSaveBuildingsResponse.ok) {
+        throw new Error(
+          `Failed to reload buildings: ${getAfterSaveBuildingsResponse.status}`,
+        );
+      }
+
+      const getAfterSaveBuildingsData =
+        await getAfterSaveBuildingsResponse.json();
+
+      const savedBuildings: ComplexBuildingDraft[] =
+        getAfterSaveBuildingsData.data.map((item: BuildingDraft) => ({
+          buildingId: item.buildingId,
+          buildingName: item.buildingName,
+          buildingAddress: item.buildingAddress,
+          buildingDescription: item.buildingDescription,
+          clientId: createClientId(),
+        }));
+
+      setComplex((prev) => ({
+        ...prev,
+        buildings: savedBuildings,
+      }));
+
+      if (orgType === 1001 && savedBuildings.length > 0) {
+        setBuilding(savedBuildings[0]);
+      }
     } catch (error) {
       console.error("Failed to save organization or buildings:", error);
     }

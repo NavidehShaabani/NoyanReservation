@@ -89,6 +89,8 @@
       "fri": "Friday",
       "sat": "Saturday"
     },
-    "dateRange": "{start} – {end}"
+    "dateRange": "{start} – {end}",
+    "selectDate": "Select date",
+    "noBookings": "No bookings scheduled"
   }
 }

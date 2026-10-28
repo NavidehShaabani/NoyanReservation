@@ -89,6 +89,8 @@
       "fri": "جمعه",
       "sat": "شنبه"
     },
-    "dateRange": "{start} تا {end}"
+    "dateRange": "{start} تا {end}",
+    "selectDate": "انتخاب تاریخ",
+    "noBookings": "رزروی ثبت نشده است"
   }
 }

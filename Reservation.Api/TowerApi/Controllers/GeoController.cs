@@ -9,7 +9,7 @@ namespace TowerApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class GeoController : ControllerBase
     {
         private readonly IGeoService _service;
@@ -48,6 +48,7 @@ namespace TowerApi.Controllers
         }
         // GET: api/BaseGeo/{geoId}
         [HttpGet("{geoId}")]
+        [Authorize]
         public async Task<IActionResult> GetById(string geoId)
         {
             var result = await _service.GetByIdAsync(geoId);
