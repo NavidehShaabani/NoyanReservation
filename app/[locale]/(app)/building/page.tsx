@@ -11,6 +11,8 @@ import type { ComplexBuildingDraft } from "@/components/custom/building/Resident
 import { useLocale } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
+import PageCard from "@/components/custom/PageCard";
+import PageHeader from "@/components/custom/PageHeader";
 export type CurrentGeoInfo = {
   geoId: string;
   geoPathFa: string | null;
@@ -138,17 +140,13 @@ export default function Building() {
             mx-2 md:ms-0 mb-2 flex min-h-0 flex-1 flex-col
         "
     >
-      <div
-        className="
-           flex min-h-0 w-full max-w-10xl flex-1 flex-col
-  overflow-y-auto page-scrollbar rounded-[10px] bg-background
-  p-8 shadow-[16px_16px_32px_rgba(209,207,204,0.55)] md:p-12 gap-y-4
-   
-          "
-      >
-        <Card className=" flex w-full min-w-0 shrink-0 flex-col gap-2 bg-background pt-0 pb-0 shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]">
+      <PageCard contentClassName="gap-y-4 p-8 md:p-12">
+        <Card
+          className=" flex w-full min-w-0 shrink-0 flex-col gap-2 bg-background pt-0 pb-0 
+        neumorphic-raised"
+        >
           <CardHeader className="flex flex-row items-center justify-between gap-3 px-4 py-4 sm:px-6">
-            <div className="flex min-w-0 items-center gap-3">
+            {/* <div className="flex min-w-0 items-center gap-3">
               <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <Building2 className="size-5" />
               </div>
@@ -160,7 +158,17 @@ export default function Building() {
                     : t_building("complex-info-title")}
                 </CardTitle>
               </div>
-            </div>
+            </div> */}
+
+            <PageHeader
+              title={
+                orgType === 1001
+                  ? t_building("building-info-title")
+                  : t_building("complex-info-title")
+              }
+              icon={<Building2 className="size-5" />}
+              className="mb-4 "
+            />
 
             <Button
               onClick={() => router.push(`/${locale}/building/edit`)}
@@ -239,7 +247,10 @@ export default function Building() {
         </Card>
 
         {orgType === 1002 && (
-          <Card className=" flex w-full min-w-0 shrink-0 flex-col gap-2 bg-background pt-0 pb-0 shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]">
+          <Card
+            className=" flex w-full min-w-0 shrink-0 flex-col gap-2 bg-background pt-0 pb-0 
+          neumorphic-raised"
+          >
             <CardContent className="space-y-6 px-4 py-5 sm:px-6">
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-3">
@@ -257,7 +268,7 @@ export default function Building() {
                     <div
                       key={item.clientId}
                       className="  rounded-[10px] bg-background p-4
-  shadow-[inset_3px_3px_7px_#d6d4d1,inset_-3px_-3px_7px_#ffffff] "
+  neumorphic-list-item "
                     >
                       <dl className="grid gap-4 sm:grid-cols-2">
                         <div className="min-w-0 space-y-1">
@@ -294,7 +305,7 @@ export default function Building() {
             </CardContent>
           </Card>
         )}
-      </div>
+      </PageCard>
     </div>
   );
 }

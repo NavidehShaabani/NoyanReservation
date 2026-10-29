@@ -11,7 +11,7 @@ import {
 import { useTranslations } from "next-intl";
 import { AuthContext } from "@/context/AuthProvider";
 import { useLocale } from "next-intl";
-
+import InsetPanel from "@/components/custom/InsetPanel";
 type GeoItem = {
   geoId: string;
   geoNameFa: string | null;
@@ -214,11 +214,7 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
     // geoType: selectedCity.geoType,
   };
   return (
-    <div
-      className="   rounded-[10px]
-            bg-background
-              shadow-[inset_5px_5px_11px_#d6d4d1,inset_-5px_-5px_11px_#ffffff] p-4 sm:p-6 md:p-10"
-    >
+    <InsetPanel className="p-4 sm:p-6 md:p-10">
       <div className="text-start pb-7">
         <h1 className="text-xl font-medium text-foreground">
           {t("geoFormTitle")}
@@ -247,7 +243,7 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
               border-none
               rounded-[7px]  
               bg-surface
-              shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
+              neumorphic-field
               focus-visible:ring-1
               focus-visible:ring-primary/30  
                                 `}
@@ -279,7 +275,7 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
               border-none
               rounded-[7px]  
               bg-surface
-              shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
+              neumorphic-field
               focus-visible:ring-1
               focus-visible:ring-primary/30  
                                 `}
@@ -312,7 +308,7 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
               border-none
               rounded-[7px]  
               bg-surface
-              shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
+             neumorphic-field
               focus-visible:ring-1
               focus-visible:ring-primary/30  
                                 `}
@@ -330,6 +326,6 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
           </Field>
         </FieldGroup>
       </div>
-    </div>
+    </InsetPanel>
   );
 }

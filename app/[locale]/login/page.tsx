@@ -154,13 +154,6 @@ pb-[10vh]
 
 
                                 
-       border-none
-      rounded-[7px]  
-    bg-surface
-   shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
- 
-   focus-visible:ring-1
-   focus-visible:ring-primary/30  
 
 
                                 `}
@@ -185,12 +178,7 @@ pb-[10vh]
                                 
                                 
                                 
-       border-none
-      rounded-[7px]  
-    bg-surface
-   shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
-   focus-visible:ring-1
-   focus-visible:ring-primary/30       
+    
                                 
                                 
                                 `}
@@ -202,25 +190,16 @@ pb-[10vh]
                   </div>
                   <Button
                     className="
-    w-full
-    rounded-[7px]
-
-    bg-surface
-    text-[hsl(90_10%_20%)]
-
-    shadow-[5px_5px_10px_#d3d1ce,-5px_-5px_10px_#ffffff]
-
-    hover:bg-surface
-    hover:text-foreground
-    hover:shadow-[6px_6px_12px_#d0cecb,-6px_-6px_12px_#ffffff]
-
-    active:bg-surface
-    active:text-foreground
-    active:shadow-[inset_4px_4px_8px_#d3d1ce,inset_-4px_-4px_8px_#ffffff]
-
-    transition-all
-    duration-150
-  "
+  w-full
+  rounded-[7px]
+  bg-primary
+  text-primary-foreground
+  shadow-sm
+  hover:bg-primary/90
+  active:bg-primary/80
+  transition-colors
+  duration-150
+"
                     type="submit"
                   >
                     {t("submit")}

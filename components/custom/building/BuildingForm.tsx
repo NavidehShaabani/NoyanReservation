@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import InsetPanel from "@/components/custom/InsetPanel";
 type BuildingFormProps = {
   orgType: number;
   onOrgTypeChange: (value: number) => void;
@@ -23,11 +24,7 @@ export default function BuildingForm({
   const t = useTranslations("building");
 
   return (
-    <div
-      className="   rounded-[10px]
-            bg-background
-              shadow-[inset_5px_5px_11px_#d6d4d1,inset_-5px_-5px_11px_#ffffff] p-10"
-    >
+    <InsetPanel className="p-10">
       <div className="text-start pb-7">
         <h1 className="text-xl font-medium text-foreground">
           {t("building-type-form-title")}
@@ -52,7 +49,7 @@ export default function BuildingForm({
                 flex flex-row items-stretch gap-0
                 w-full min-w-0 overflow-hidden
                 bg-background
-                shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]
+                neumorphic-raised
                 hover:shadow-[8px_8px_16px_#d1cfcc,-8px_-8px_16px_#ffffff]
                 active:shadow-[inset_8px_8px_16px_#d1cfcc,inset_-8px_-8px_16px_#ffffff]
           ${orgType === 1002 ? "border-[1px] border-primary" : "border-[1px] border-transparent"}  
@@ -106,7 +103,7 @@ export default function BuildingForm({
                 flex flex-row items-stretch gap-0
                 w-full min-w-0 overflow-hidden
                 bg-background
-                shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]
+                neumorphic-raised
                 hover:shadow-[8px_8px_16px_#d1cfcc,-8px_-8px_16px_#ffffff]
                 active:shadow-[inset_8px_8px_16px_#d1cfcc,inset_-8px_-8px_16px_#ffffff]
                 ${orgType === 1001 ? "border-[1px] border-primary" : "border-[1px] border-transparent"}  
@@ -146,6 +143,6 @@ export default function BuildingForm({
           </CardFooter>
         </Card>
       </div>
-    </div>
+    </InsetPanel>
   );
 }

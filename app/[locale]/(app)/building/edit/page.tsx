@@ -11,6 +11,9 @@ import { Button } from "@/components/ui/button";
 import type { BuildingDraft } from "@/components/custom/building/SingleBuildingFields";
 import type { ComplexDraft } from "@/components/custom/building/ResidentialComplexFields";
 import type { ComplexBuildingDraft } from "@/components/custom/building/ResidentialComplexFields";
+import PageCard from "@/components/custom/PageCard";
+import PageHeader from "@/components/custom/PageHeader";
+import { Building2, Pencil } from "lucide-react";
 export default function Building() {
   const { token, isAuthReady, user } = useContext(AuthContext);
   const t_building = useTranslations("building");
@@ -219,13 +222,22 @@ export default function Building() {
             mx-2 md:ms-0 mb-2 flex min-h-0 flex-1 flex-col
         "
     >
-      <div
-        className="
-           flex min-h-0 w-full max-w-10xl flex-1 flex-col
-  overflow-y-auto page-scrollbar rounded-[10px] bg-background
-  p-8 shadow-[16px_16px_32px_rgba(209,207,204,0.55)] md:p-12 gap-y-4
-          "
-      >
+      <PageCard contentClassName="gap-y-4 p-8 md:p-12">
+        <PageHeader
+          title={
+            orgType === 1001
+              ? t_building("singleBuildingTypeTitle")
+              : t_building("residentialComplexFormTitle")
+          }
+          description={
+            orgType === 1001
+              ? t_building("singleBuildingTypeDesc")
+              : t_building("residentialComplexFormDesc")
+          }
+          icon={<Building2 className="size-5" />}
+          className="mb-4 "
+        />
+
         <GeoSelector geoId={geoId} onGeoIdChange={setGeoId} />
         <BuildingType orgType={orgType} onOrgTypeChange={setOrgType} />
         {orgType === 1001 && (
@@ -244,7 +256,7 @@ export default function Building() {
         <Button className="px-2" onClick={hanleSaveData}>
           {t_building("save")}
         </Button>
-      </div>
+      </PageCard>
     </div>
   );
 }
