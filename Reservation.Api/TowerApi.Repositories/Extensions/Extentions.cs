@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using TowerApi.Repositories.Auth;
 using TowerApi.Repositories.BaseLookupValues;
+using TowerApi.Repositories.Booking;
+using TowerApi.Repositories.Booking.SpaceBooking;
 using TowerApi.Repositories.Building;
 using TowerApi.Repositories.DataBase;
 using TowerApi.Repositories.EmployeeAssignments;
@@ -40,7 +42,9 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<ISignupRepository, SignupRepository>();
             _services.AddScoped<ISpaceRepository, SpaceRepository>();
             _services.AddScoped<IBaseLookupValueRepository,BaseLookupValueRepository>();
-
+            _services.AddScoped<ISpaceBookingRepository,SpaceBookingRepository>();
+            _services.AddScoped<IBookingParticipantRepository,BookingParticipantRepository>();
+            
             return _services;
         }
     }

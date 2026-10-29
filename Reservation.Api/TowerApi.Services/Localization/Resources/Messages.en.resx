@@ -138,6 +138,30 @@
   <data name="Auth.UserNotFoundAfterLogin" xml:space="preserve">
     <value>User information was not received after login.</value>
   </data>
+  <data name="Booking.Participant.InvalidRequest" xml:space="preserve">
+    <value>The participant information is invalid.</value>
+  </data>
+  <data name="Booking.Space.ApprovedSuccessfully" xml:space="preserve">
+    <value>Booking approved successfully.</value>
+  </data>
+  <data name="Booking.Space.CancelledSuccessfully" xml:space="preserve">
+    <value>Booking cancelled successfully.</value>
+  </data>
+  <data name="Booking.Space.ConflictFound" xml:space="preserve">
+    <value>A booking conflict exists in the selected time range.</value>
+  </data>
+  <data name="Booking.Space.InvalidRequest" xml:space="preserve">
+    <value>The booking request or parameters are invalid.</value>
+  </data>
+  <data name="Booking.Space.InvalidStatusForApproval" xml:space="preserve">
+    <value>The current booking status does not allow approval.</value>
+  </data>
+  <data name="Booking.Space.InvalidTimeRange" xml:space="preserve">
+    <value>The booking time range is invalid.</value>
+  </data>
+  <data name="Booking.Space.NoConflict" xml:space="preserve">
+    <value>No booking conflict exists in the selected time range.</value>
+  </data>
   <data name="Buildings.BulkSaveSuccessfully" xml:space="preserve">
     <value>Buildings were saved and updated successfully.</value>
   </data>
@@ -174,17 +198,11 @@
   <data name="Common.GetSuccessfully" xml:space="preserve">
     <value>Information retrieved successfully.</value>
   </data>
-  <data name="Common.GetSuccessfully1" xml:space="preserve">
-    <value>Data retrieved successfully.</value>
-  </data>
   <data name="Common.Gone" xml:space="preserve">
     <value>The requested information is no longer available.</value>
   </data>
   <data name="Common.InvalidRequest" xml:space="preserve">
     <value>The submitted information is invalid.</value>
-  </data>
-  <data name="Common.InvalidRequest1" xml:space="preserve">
-    <value>The request is invalid.</value>
   </data>
   <data name="Common.InvalidUserId" xml:space="preserve">
     <value>The user ID is invalid.</value>
@@ -192,19 +210,7 @@
   <data name="Common.NotFound" xml:space="preserve">
     <value>The requested information was not found.</value>
   </data>
-  <data name="Common.NotFound1" xml:space="preserve">
-    <value>The requested resource was not found.</value>
-  </data>
   <data name="Common.SystemError" xml:space="preserve">
-    <value>A system error occurred.</value>
-  </data>
-  <data name="Common.SystemError1" xml:space="preserve">
-    <value>An internal system error occurred. Please try again later.</value>
-  </data>
-  <data name="Common.SystemError2" xml:space="preserve">
-    <value>A system error occurred</value>
-  </data>
-  <data name="Common.SystemError3" xml:space="preserve">
     <value>A system error occurred.</value>
   </data>
   <data name="Common.TooManyRequests" xml:space="preserve">
@@ -212,9 +218,6 @@
   </data>
   <data name="Common.Unauthorized" xml:space="preserve">
     <value>User is not authenticated.</value>
-  </data>
-  <data name="Common.Unauthorized1" xml:space="preserve">
-    <value>Authentication is required.</value>
   </data>
   <data name="Common.UnexpectedError" xml:space="preserve">
     <value>An unexpected error occurred.</value>
@@ -344,9 +347,6 @@
   </data>
   <data name="Geo.NotFound" xml:space="preserve">
     <value>The requested geographic location was not found.</value>
-  </data>
-  <data name="Geo.NotFound1" xml:space="preserve">
-    <value>The specified geographical location was not found.</value>
   </data>
   <data name="Geo.ParentNotAllowedForCountries" xml:space="preserve">
     <value>A parent ID must not be provided when retrieving countries.</value>

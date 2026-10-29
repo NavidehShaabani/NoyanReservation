@@ -2,6 +2,8 @@
 using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Auth;
 using TowerApi.Services.BaseLookupValues;
+using TowerApi.Services.Booking;
+using TowerApi.Services.Booking.SpaceBooking;
 using TowerApi.Services.Building;
 using TowerApi.Services.EmployeeAssignments;
 using TowerApi.Services.Employees;
@@ -38,6 +40,8 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<ISignupService, SignupService>();
             _services.AddScoped<ISpaceService, SpaceService>();
             _services.AddScoped<IBaseLookupValueService,BaseLookupValueService>();
+            _services.AddScoped<ISpaceBookingService,SpaceBookingService>();
+            _services.AddScoped<IBookingParticipantService,BookingParticipantService>();
             
             return _services;
         }

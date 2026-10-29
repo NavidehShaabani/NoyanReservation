@@ -168,9 +168,6 @@
   <data name="Common.SystemError" xml:space="preserve">
     <value>خطایی در سیستم رخ داده است.</value>
   </data>
-  <data name="Common.SystemError1" xml:space="preserve">
-    <value>خطای داخلی سیستم</value>
-  </data>
   <data name="Common.Unauthorized" xml:space="preserve">
     <value>کاربر احراز هویت نشده است.</value>
   </data>
@@ -375,20 +372,11 @@
   <data name="Buildings.ReferenceNotFound" xml:space="preserve">
     <value>یکی از سازمان‌ها یا ساختمان‌های ارسالی یافت نشد یا حذف شده است.</value>
   </data>
-  <data name="Common.SystemError2" xml:space="preserve">
-    <value>خطای سیستمی رخ داده است.</value>
-  </data>
-  <data name="Common.SystemError3" xml:space="preserve">
-    <value>خطای سیستمی رخ داده است.</value>
-  </data>
   <data name="Geo.GeoIdRequired" xml:space="preserve">
     <value>کد موقعیت جغرافیایی الزامی است.</value>
   </data>
   <data name="Geo.GetByIdSuccessfully" xml:space="preserve">
     <value>اطلاعات موقعیت جغرافیایی با موفقیت دریافت شد.</value>
-  </data>
-  <data name="Geo.NotFound1" xml:space="preserve">
-    <value>موقعیت جغرافیایی موردنظر یافت نشد.</value>
   </data>
   <data name="Units.BulkSaveSuccessfully" xml:space="preserve">
     <value>عملیات ثبت و ویرایش واحدها با موفقیت انجام شد.</value>
@@ -402,19 +390,31 @@
   <data name="Units.ReferenceNotFound" xml:space="preserve">
     <value>ساختمان انتخاب‌شده یا یکی از واحدهای ارسالی یافت نشد، حذف شده یا غیرفعال است.</value>
   </data>
-  <data name="Common.GetSuccessfully1" xml:space="preserve">
-    <value>اطلاعات با موفقیت دریافت شد.</value>
-  </data>
-  <data name="Common.InvalidRequest1" xml:space="preserve">
-    <value>درخواست نامعتبر است.</value>
-  </data>
-  <data name="Common.NotFound1" xml:space="preserve">
-    <value>اطلاعات درخواستی یافت نشد.</value>
-  </data>
-  <data name="Common.Unauthorized1" xml:space="preserve">
-    <value>احراز هویت الزامی است.</value>
-  </data>
   <data name="Common.UnexpectedError" xml:space="preserve">
     <value>خطای پیش‌بینی‌نشده‌ای رخ داد.</value>
+  </data>
+  <data name="Booking.Participant.InvalidRequest" xml:space="preserve">
+    <value>اطلاعات شرکت‌کننده معتبر نیست.</value>
+  </data>
+  <data name="Booking.Space.ApprovedSuccessfully" xml:space="preserve">
+    <value>رزرو با موفقیت تأیید شد.</value>
+  </data>
+  <data name="Booking.Space.CancelledSuccessfully" xml:space="preserve">
+    <value>رزرو با موفقیت لغو شد.</value>
+  </data>
+  <data name="Booking.Space.ConflictFound" xml:space="preserve">
+    <value>در بازه زمانی انتخاب‌شده تداخل رزرو وجود دارد.</value>
+  </data>
+  <data name="Booking.Space.InvalidRequest" xml:space="preserve">
+    <value>اطلاعات یا پارامترهای رزرو معتبر نیستند.</value>
+  </data>
+  <data name="Booking.Space.InvalidStatusForApproval" xml:space="preserve">
+    <value>وضعیت فعلی رزرو برای تأیید معتبر نیست.</value>
+  </data>
+  <data name="Booking.Space.InvalidTimeRange" xml:space="preserve">
+    <value>بازه زمانی رزرو معتبر نیست.</value>
+  </data>
+  <data name="Booking.Space.NoConflict" xml:space="preserve">
+    <value>در بازه زمانی انتخاب‌شده تداخلی وجود ندارد.</value>
   </data>
 </root>
