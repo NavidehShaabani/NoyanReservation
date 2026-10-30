@@ -585,6 +585,42 @@
   <data name="Common.InvalidId" xml:space="preserve">
     <value>شناسه واردشده معتبر نیست.</value>
   </data>
+  <data name="Participant.DeleteSuccessfully" xml:space="preserve">
+    <value>شرکت‌کننده با موفقیت حذف شد.</value>
+  </data>
+  <data name="Participant.EmailTooLong" xml:space="preserve">
+    <value>ایمیل نباید بیشتر از ۲۵۴ کاراکتر باشد.</value>
+  </data>
+  <data name="Participant.FullNameRequired" xml:space="preserve">
+    <value>نام و نام خانوادگی الزامی است.</value>
+  </data>
+  <data name="Participant.FullNameTooLong" xml:space="preserve">
+    <value>نام و نام خانوادگی نباید بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="Participant.GetSuccessfully" xml:space="preserve">
+    <value>دریافت اطلاعات شرکت‌کنندگان با موفقیت انجام شد.</value>
+  </data>
+  <data name="Participant.HasClassEnrollment" xml:space="preserve">
+    <value>این شرکت‌کننده سابقه ثبت‌نام در کلاس دارد و حذف آن امکان‌پذیر نیست.</value>
+  </data>
+  <data name="Participant.InvalidId" xml:space="preserve">
+    <value>شناسه شرکت‌کننده معتبر نیست.</value>
+  </data>
+  <data name="Participant.InvalidUserId" xml:space="preserve">
+    <value>شناسه کاربر معتبر نیست.</value>
+  </data>
+  <data name="Participant.MobileTooLong" xml:space="preserve">
+    <value>شماره موبایل نباید بیشتر از ۲۰ کاراکتر باشد.</value>
+  </data>
+  <data name="Participant.NotFound" xml:space="preserve">
+    <value>شرکت‌کننده یافت نشد یا قبلاً حذف شده است.</value>
+  </data>
+  <data name="Participant.SaveSuccessfully" xml:space="preserve">
+    <value>اطلاعات شرکت‌کننده با موفقیت ذخیره شد.</value>
+  </data>
+  <data name="Participant.UsedInHallRental" xml:space="preserve">
+    <value>این شرکت‌کننده در اطلاعات اجاره سالن استفاده شده و حذف آن امکان‌پذیر نیست.</value>
+  </data>
   <data name="SpaceAmenity.Delete.ConstraintError" xml:space="preserve">
     <value>امکان حذف این مورد به دلیل وابستگی اطلاعات دیگر وجود ندارد.</value>
   </data>

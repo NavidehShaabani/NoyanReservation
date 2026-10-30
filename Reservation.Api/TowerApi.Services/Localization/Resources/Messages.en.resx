@@ -522,6 +522,42 @@
   <data name="Geo.ParentRequired" xml:space="preserve">
     <value>A parent ID is required for this geographic level.</value>
   </data>
+  <data name="Participant.DeleteSuccessfully" xml:space="preserve">
+    <value>Participant deleted successfully.</value>
+  </data>
+  <data name="Participant.EmailTooLong" xml:space="preserve">
+    <value>Email cannot exceed 254 characters.</value>
+  </data>
+  <data name="Participant.FullNameRequired" xml:space="preserve">
+    <value>Full name is required.</value>
+  </data>
+  <data name="Participant.FullNameTooLong" xml:space="preserve">
+    <value>Full name cannot exceed 200 characters.</value>
+  </data>
+  <data name="Participant.GetSuccessfully" xml:space="preserve">
+    <value>Participants retrieved successfully.</value>
+  </data>
+  <data name="Participant.HasClassEnrollment" xml:space="preserve">
+    <value>This participant has class enrollment history and cannot be deleted.</value>
+  </data>
+  <data name="Participant.InvalidId" xml:space="preserve">
+    <value>Participant ID is invalid.</value>
+  </data>
+  <data name="Participant.InvalidUserId" xml:space="preserve">
+    <value>User ID is invalid.</value>
+  </data>
+  <data name="Participant.MobileTooLong" xml:space="preserve">
+    <value>Mobile number cannot exceed 20 characters.</value>
+  </data>
+  <data name="Participant.NotFound" xml:space="preserve">
+    <value>Participant was not found or has already been deleted.</value>
+  </data>
+  <data name="Participant.SaveSuccessfully" xml:space="preserve">
+    <value>Participant saved successfully.</value>
+  </data>
+  <data name="Participant.UsedInHallRental" xml:space="preserve">
+    <value>This participant is used in hall rental details and cannot be deleted.</value>
+  </data>
   <data name="Signup.AlreadyActivated" xml:space="preserve">
     <value>This account has already been activated.</value>
   </data>

@@ -6,6 +6,7 @@ using TowerApi.Repositories.Booking.ClassSeries;
 using TowerApi.Repositories.Booking.ClassSession;
 using TowerApi.Repositories.Booking.Equipment;
 using TowerApi.Repositories.Booking.HallRentalDetails;
+using TowerApi.Repositories.Booking.Participant;
 using TowerApi.Repositories.Booking.RentalParticipants;
 using TowerApi.Repositories.Booking.ReservationEquipment;
 using TowerApi.Repositories.Booking.SpaceAmenities;
@@ -58,6 +59,10 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<ISpaceAmenityRepository, SpaceAmenityRepository>();
             _services.AddScoped<IClassSeriesRepository, ClassSeriesRepository>();
             _services.AddScoped<IClassSessionRepository, ClassSessionRepository>();
+            _services.AddScoped<IParticipantRepository, ParticipantRepository>();
+
+
+
             return _services;
         }
     }

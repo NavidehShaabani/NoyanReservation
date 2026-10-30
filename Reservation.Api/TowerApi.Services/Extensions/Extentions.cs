@@ -7,6 +7,7 @@ using TowerApi.Services.Booking.ClassSeries;
 using TowerApi.Services.Booking.ClassSession;
 using TowerApi.Services.Booking.Equipment;
 using TowerApi.Services.Booking.HallRentalDetails;
+using TowerApi.Services.Booking.Participant;
 using TowerApi.Services.Booking.RentalParticipants;
 using TowerApi.Services.Booking.ReservationEquipment;
 using TowerApi.Services.Booking.SpaceAmenities;
@@ -55,6 +56,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<ISpaceAmenityService, SpaceAmenityService>();
             _services.AddScoped<IClassSeriesService, ClassSeriesService>();
             _services.AddScoped<IClassSessionService, ClassSessionService>();
+            _services.AddScoped<IParticipantService, ParticipantService>();
 
             return _services;
         }

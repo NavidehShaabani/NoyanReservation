@@ -9,7 +9,37 @@ get by id
 get 
 insert , update bulke
 active 
-delete */
+delete 
+-===
+۱. EnrollmentClass
+اولویت اول
+
+ثبت‌نام کلاس، وضعیت ثبت‌نام، پرداخت و ارتباط با جلسه و شرکت‌کننده.
+
+۲. EnrollmentWaitlist
+
+مدیریت صف انتظار و انتقال افراد به ثبت‌نام.
+
+۳. ReservationPolicy
+
+تنظیم سیاست‌های رزرو، تأیید اجاره و محدودیت‌ها.
+
+۴. PricingRules
+
+قوانین محاسبه هزینه رزرو.
+
+۵. CommissionPlans و CommissionTiers
+
+مدیریت طرح‌ها و پلکان کمیسیون.
+
+۶. FinancialTransactions
+
+ثبت و پیگیری تراکنش‌های مالی.
+
+۷. Settlements
+
+مدیریت تسویه‌حساب‌ها.
+*/
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
