@@ -270,6 +270,51 @@
   <data name="Buildings.ReferenceNotFound" xml:space="preserve">
     <value>One of the specified organizations or buildings was not found or has been deleted.</value>
   </data>
+  <data name="ClassSeries.CoachRequired" xml:space="preserve">
+    <value>Select an internal coach or provide an external coach name.</value>
+  </data>
+  <data name="ClassSeries.Delete.Success" xml:space="preserve">
+    <value>Class series deleted successfully.</value>
+  </data>
+  <data name="ClassSeries.DescriptionMaxLength" xml:space="preserve">
+    <value>Description cannot exceed 1000 characters.</value>
+  </data>
+  <data name="ClassSeries.ExternalCoachMobileMaxLength" xml:space="preserve">
+    <value>External coach mobile number cannot exceed 20 characters.</value>
+  </data>
+  <data name="ClassSeries.ExternalCoachNameMaxLength" xml:space="preserve">
+    <value>External coach name cannot exceed 200 characters.</value>
+  </data>
+  <data name="ClassSeries.GetActiveList.Success" xml:space="preserve">
+    <value>Active class series retrieved successfully.</value>
+  </data>
+  <data name="ClassSeries.GetById.Success" xml:space="preserve">
+    <value>Class series details retrieved successfully.</value>
+  </data>
+  <data name="ClassSeries.HasSessions" xml:space="preserve">
+    <value>This class series has sessions and cannot be deleted.</value>
+  </data>
+  <data name="ClassSeries.InvalidCapacity" xml:space="preserve">
+    <value>Class capacity must be greater than zero.</value>
+  </data>
+  <data name="ClassSeries.InvalidReference" xml:space="preserve">
+    <value>The selected organization or coach is invalid.</value>
+  </data>
+  <data name="ClassSeries.InvalidRegistrationDates" xml:space="preserve">
+    <value>Registration end date cannot be earlier than the start date.</value>
+  </data>
+  <data name="ClassSeries.NameMaxLength" xml:space="preserve">
+    <value>Class name cannot exceed 200 characters.</value>
+  </data>
+  <data name="ClassSeries.NameRequired" xml:space="preserve">
+    <value>Class name is required.</value>
+  </data>
+  <data name="ClassSeries.NotFound" xml:space="preserve">
+    <value>The requested class series was not found or has already been deleted.</value>
+  </data>
+  <data name="ClassSeries.Save.Success" xml:space="preserve">
+    <value>Class series saved successfully.</value>
+  </data>
   <data name="Common.Conflict" xml:space="preserve">
     <value>The requested operation conflicts with existing information.</value>
   </data>

@@ -507,6 +507,51 @@
   <data name="Booking.Equipment.NotFound" xml:space="preserve">
     <value>تجهیز موردنظر یافت نشد.</value>
   </data>
+  <data name="ClassSeries.CoachRequired" xml:space="preserve">
+    <value>انتخاب مربی داخلی یا وارد کردن نام مربی خارج از مجموعه الزامی است.</value>
+  </data>
+  <data name="ClassSeries.Delete.Success" xml:space="preserve">
+    <value>سری کلاس با موفقیت حذف شد.</value>
+  </data>
+  <data name="ClassSeries.DescriptionMaxLength" xml:space="preserve">
+    <value>طول توضیحات نمی‌تواند بیشتر از ۱۰۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="ClassSeries.ExternalCoachMobileMaxLength" xml:space="preserve">
+    <value>شماره موبایل مربی نمی‌تواند بیشتر از ۲۰ کاراکتر باشد.</value>
+  </data>
+  <data name="ClassSeries.ExternalCoachNameMaxLength" xml:space="preserve">
+    <value>نام مربی خارج از مجموعه نمی‌تواند بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="ClassSeries.GetActiveList.Success" xml:space="preserve">
+    <value>فهرست سری کلاس‌های فعال دریافت شد.</value>
+  </data>
+  <data name="ClassSeries.GetById.Success" xml:space="preserve">
+    <value>اطلاعات سری کلاس با موفقیت دریافت شد.</value>
+  </data>
+  <data name="ClassSeries.HasSessions" xml:space="preserve">
+    <value>برای این سری کلاس جلسه ثبت شده است و امکان حذف آن وجود ندارد.</value>
+  </data>
+  <data name="ClassSeries.InvalidCapacity" xml:space="preserve">
+    <value>ظرفیت کلاس باید بیشتر از صفر باشد.</value>
+  </data>
+  <data name="ClassSeries.InvalidReference" xml:space="preserve">
+    <value>سازمان یا مربی انتخاب‌شده معتبر نیست.</value>
+  </data>
+  <data name="ClassSeries.InvalidRegistrationDates" xml:space="preserve">
+    <value>تاریخ پایان ثبت‌نام نمی‌تواند قبل از تاریخ شروع باشد.</value>
+  </data>
+  <data name="ClassSeries.NameMaxLength" xml:space="preserve">
+    <value>طول نام کلاس نمی‌تواند بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="ClassSeries.NameRequired" xml:space="preserve">
+    <value>نام کلاس الزامی است.</value>
+  </data>
+  <data name="ClassSeries.NotFound" xml:space="preserve">
+    <value>سری کلاس موردنظر یافت نشد یا قبلاً حذف شده است.</value>
+  </data>
+  <data name="ClassSeries.Save.Success" xml:space="preserve">
+    <value>سری کلاس با موفقیت ذخیره شد.</value>
+  </data>
   <data name="Common.InternalServerError" xml:space="preserve">
     <value>خطای داخلی سرور رخ داده است.</value>
   </data>
