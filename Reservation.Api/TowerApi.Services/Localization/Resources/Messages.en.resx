@@ -315,6 +315,33 @@
   <data name="ClassSeries.Save.Success" xml:space="preserve">
     <value>Class series saved successfully.</value>
   </data>
+  <data name="ClassSession.BookingAlreadyHasSession" xml:space="preserve">
+    <value>A session has already been registered for this booking.</value>
+  </data>
+  <data name="ClassSession.DeleteSuccessfully" xml:space="preserve">
+    <value>Class session deleted successfully.</value>
+  </data>
+  <data name="ClassSession.GetSuccessfully" xml:space="preserve">
+    <value>Class sessions retrieved successfully.</value>
+  </data>
+  <data name="ClassSession.HasActiveEnrollments" xml:space="preserve">
+    <value>This session has active enrollments and cannot be deleted.</value>
+  </data>
+  <data name="ClassSession.InvalidId" xml:space="preserve">
+    <value>The class session ID is invalid.</value>
+  </data>
+  <data name="ClassSession.InvalidReference" xml:space="preserve">
+    <value>The class series ID or booking ID is invalid.</value>
+  </data>
+  <data name="ClassSession.NotFound" xml:space="preserve">
+    <value>Class session was not found or has already been deleted.</value>
+  </data>
+  <data name="ClassSession.SaveSuccessfully" xml:space="preserve">
+    <value>Class session saved successfully.</value>
+  </data>
+  <data name="ClassSession.TitleTooLong" xml:space="preserve">
+    <value>The session title cannot exceed 200 characters.</value>
+  </data>
   <data name="Common.Conflict" xml:space="preserve">
     <value>The requested operation conflicts with existing information.</value>
   </data>

@@ -552,6 +552,33 @@
   <data name="ClassSeries.Save.Success" xml:space="preserve">
     <value>سری کلاس با موفقیت ذخیره شد.</value>
   </data>
+  <data name="ClassSession.BookingAlreadyHasSession" xml:space="preserve">
+    <value>برای این رزرو قبلاً جلسه‌ای ثبت شده است.</value>
+  </data>
+  <data name="ClassSession.DeleteSuccessfully" xml:space="preserve">
+    <value>جلسه کلاس با موفقیت حذف شد.</value>
+  </data>
+  <data name="ClassSession.GetSuccessfully" xml:space="preserve">
+    <value>دریافت اطلاعات جلسات با موفقیت انجام شد.</value>
+  </data>
+  <data name="ClassSession.HasActiveEnrollments" xml:space="preserve">
+    <value>برای این جلسه ثبت‌نام فعال وجود دارد؛ حذف امکان‌پذیر نیست.</value>
+  </data>
+  <data name="ClassSession.InvalidId" xml:space="preserve">
+    <value>شناسه جلسه معتبر نیست.</value>
+  </data>
+  <data name="ClassSession.InvalidReference" xml:space="preserve">
+    <value>شناسه سری کلاس یا رزرو معتبر نیست.</value>
+  </data>
+  <data name="ClassSession.NotFound" xml:space="preserve">
+    <value>جلسه کلاس یافت نشد یا قبلاً حذف شده است.</value>
+  </data>
+  <data name="ClassSession.SaveSuccessfully" xml:space="preserve">
+    <value>اطلاعات جلسه کلاس با موفقیت ذخیره شد.</value>
+  </data>
+  <data name="ClassSession.TitleTooLong" xml:space="preserve">
+    <value>عنوان جلسه نباید بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
   <data name="Common.InternalServerError" xml:space="preserve">
     <value>خطای داخلی سرور رخ داده است.</value>
   </data>
