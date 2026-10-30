@@ -138,6 +138,30 @@
   <data name="Auth.UserNotFoundAfterLogin" xml:space="preserve">
     <value>User information was not received after login.</value>
   </data>
+  <data name="Booking.Equipment.GetListSuccessfully" xml:space="preserve">
+    <value>Equipment list retrieved successfully.</value>
+  </data>
+  <data name="Booking.Equipment.GetSuccessfully" xml:space="preserve">
+    <value>Equipment information retrieved successfully.</value>
+  </data>
+  <data name="Booking.Equipment.InvalidQuantity" xml:space="preserve">
+    <value>Equipment total quantity or available quantity is invalid.</value>
+  </data>
+  <data name="Booking.Equipment.InvalidReference" xml:space="preserve">
+    <value>The selected organization, building, default space, or operator is invalid.</value>
+  </data>
+  <data name="Booking.Equipment.InvalidRequest" xml:space="preserve">
+    <value>Invalid equipment information.</value>
+  </data>
+  <data name="Booking.Equipment.InvalidTextLength" xml:space="preserve">
+    <value>Equipment name, code, or description exceeds the allowed length.</value>
+  </data>
+  <data name="Booking.Equipment.NameRequired" xml:space="preserve">
+    <value>Equipment name is required.</value>
+  </data>
+  <data name="Booking.Equipment.NotFound" xml:space="preserve">
+    <value>The requested equipment was not found.</value>
+  </data>
   <data name="Booking.HallRental.InvalidAmountOrCount" xml:space="preserve">
     <value>The entered amount or attendee count is invalid.</value>
   </data>

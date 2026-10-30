@@ -483,4 +483,28 @@
   <data name="Booking.ReservationEquipment.NotFound" xml:space="preserve">
     <value>تخصیص تجهیزات موردنظر یافت نشد.</value>
   </data>
+  <data name="Booking.Equipment.GetListSuccessfully" xml:space="preserve">
+    <value>فهرست تجهیزات با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Booking.Equipment.GetSuccessfully" xml:space="preserve">
+    <value>اطلاعات تجهیز با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Booking.Equipment.InvalidQuantity" xml:space="preserve">
+    <value>تعداد کل یا موجودی قابل استفاده تجهیز نامعتبر است.</value>
+  </data>
+  <data name="Booking.Equipment.InvalidReference" xml:space="preserve">
+    <value>سازمان، ساختمان، فضای پیش‌فرض یا مسئول انتخاب‌شده معتبر نیست.</value>
+  </data>
+  <data name="Booking.Equipment.InvalidRequest" xml:space="preserve">
+    <value>اطلاعات تجهیز نامعتبر است.</value>
+  </data>
+  <data name="Booking.Equipment.InvalidTextLength" xml:space="preserve">
+    <value>طول نام، کد یا توضیحات تجهیز از حد مجاز بیشتر است.</value>
+  </data>
+  <data name="Booking.Equipment.NameRequired" xml:space="preserve">
+    <value>وارد کردن نام تجهیز الزامی است.</value>
+  </data>
+  <data name="Booking.Equipment.NotFound" xml:space="preserve">
+    <value>تجهیز موردنظر یافت نشد.</value>
+  </data>
 </root>

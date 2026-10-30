@@ -3,6 +3,7 @@ using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Auth;
 using TowerApi.Services.BaseLookupValues;
 using TowerApi.Services.Booking.BookingParticipant;
+using TowerApi.Services.Booking.Equipment;
 using TowerApi.Services.Booking.HallRentalDetails;
 using TowerApi.Services.Booking.RentalParticipants;
 using TowerApi.Services.Booking.ReservationEquipment;
@@ -47,7 +48,8 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IHallRentalDetailsService,HallRentalDetailsService>();
             _services.AddScoped<IRentalParticipantsService, RentalParticipantsService>();
             _services.AddScoped<IReservationEquipmentService,ReservationEquipmentService>();
-            
+            _services.AddScoped<IEquipmentService, EquipmentService>();
+
             return _services;
         }
     }
