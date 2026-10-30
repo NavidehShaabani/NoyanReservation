@@ -2,7 +2,7 @@ import { FieldGroup, FieldLabel, Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslations } from "next-intl";
-
+import InsetPanel from "@/components/custom/InsetPanel";
 export type BuildingDraft = {
   buildingId: number | null;
   buildingName: string;
@@ -22,11 +22,7 @@ export default function SingleBuildingFields({
 }: buildingProps) {
   const t = useTranslations("building");
   return (
-    <div
-      className="   rounded-[10px]
-            bg-background
-              shadow-[inset_5px_5px_11px_#d6d4d1,inset_-5px_-5px_11px_#ffffff] p-10"
-    >
+    <InsetPanel className="p-10">
       <div className="text-start pb-7">
         <h1 className="text-xl font-medium text-foreground">
           {t("singleBuildingTypeTitle")}
@@ -54,16 +50,6 @@ export default function SingleBuildingFields({
               onBuildingChange({ ...building, buildingName: e.target.value });
             }}
             //   className={`    ${submitted && !buildingName.trim() ? "border-destructive" : ""}
-
-            className={`
-                        
-              border-none
-              rounded-[7px]  
-              bg-surface
-              shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
-              focus-visible:ring-1
-              focus-visible:ring-primary/30  
-                                `}
           />
         </Field>
 
@@ -91,7 +77,7 @@ export default function SingleBuildingFields({
               border-none
               rounded-[7px]  
               bg-surface
-              shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
+             neumorphic-field
               focus-visible:ring-1
               focus-visible:ring-primary/30 
               resize-none 
@@ -123,7 +109,7 @@ export default function SingleBuildingFields({
               border-none
               rounded-[7px]  
               bg-surface
-              shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
+              neumorphic-field
               focus-visible:ring-1
               focus-visible:ring-primary/30 
               resize-none 
@@ -132,6 +118,6 @@ export default function SingleBuildingFields({
           </Field>
         </div>
       </FieldGroup>
-    </div>
+    </InsetPanel>
   );
 }

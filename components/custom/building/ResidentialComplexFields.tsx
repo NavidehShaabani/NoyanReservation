@@ -39,6 +39,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import type { BuildingDraft } from "./SingleBuildingFields";
+import InsetPanel from "@/components/custom/InsetPanel";
 export type ComplexBuildingDraft = BuildingDraft & {
   clientId: string;
 };
@@ -117,11 +118,7 @@ export default function ResidentialComplexFields({
   };
 
   return (
-    <div
-      className="   rounded-[10px]
-            bg-background
-              shadow-[inset_5px_5px_11px_#d6d4d1,inset_-5px_-5px_11px_#ffffff] p-10   "
-    >
+    <InsetPanel className="p-10">
       <div className="text-start pb-7">
         <h1 className="text-xl font-medium text-foreground">
           {t("residentialComplexFormTitle")}
@@ -147,15 +144,6 @@ export default function ResidentialComplexFields({
             onChange={(e) => {
               onComplexChange({ ...complex, orgName: e.target.value });
             }}
-            className={`
-                        
-              border-none
-              rounded-[7px]  
-              bg-surface
-              shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
-              focus-visible:ring-1
-              focus-visible:ring-primary/30  
-                                `}
           />
         </Field>
 
@@ -205,7 +193,7 @@ export default function ResidentialComplexFields({
                 overflow-hidden
 
                 bg-background
-                shadow-[12px_12px_24px_#d1cfcc,-12px_-12px_24px_#ffffff]
+                neumorphic-raised
                 min-h-36 
 
             `}
@@ -341,6 +329,6 @@ export default function ResidentialComplexFields({
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </div>
+    </InsetPanel>
   );
 }

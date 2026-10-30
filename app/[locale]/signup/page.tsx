@@ -14,52 +14,39 @@ import {
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-
+import LogoHeader from "@/components/custom/LogoHeader";
+import PageCard from "@/components/custom/PageCard";
+import InsetPanel from "@/components/custom/InsetPanel";
+import BackgroundShell from "@/components/custom/BackgroundShell";
+import PageHeader from "@/components/custom/PageHeader";
+import { UserRoundPlus } from "lucide-react";
 export default function Signup() {
-  const t = useTranslations("login");
-  const t_header = useTranslations("header");
+  const t_login = useTranslations("login");
+  const t = useTranslations("signup");
   const [geoId, setGeoId] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [submitted, setSubmitted] = useState(false);
   return (
-    <div
-      className="h-dvh overflow-hidden bg-contain bg-no-repeat bg-top md:bg-cover md:bg-center"
-      style={{ backgroundImage: "url('/images/main_pic.jpg')" }}
+    <BackgroundShell
+      className="h-dvh overflow-hidden"
+      overlayClassName="flex h-full flex-col overflow-hidden pt-2 "
     >
-      <div className="flex h-full overflow-hidden bg-white/20 backdrop-blur-xl backdrop-saturate-150">
-        <div
-          className="
-            m-2 md:m-10 md:mx-20  flex min-h-0 flex-1 flex-col
-        "
-        >
-          <div
-            className="
-           flex min-h-0 w-full max-w-10xl flex-1 flex-col
-  overflow-y-auto page-scrollbar rounded-[10px] bg-background
-  p-8 shadow-[16px_16px_32px_rgba(209,207,204,0.55)] md:p-12 gap-y-4
-   
-          "
-          >
-            <div
-              className="w-16 h-16 shrink-0 bg-primary"
-              style={{
-                maskImage: "url('/images/NOYAN.svg')",
-                maskRepeat: "no-repeat",
-                maskPosition: "center",
-                maskSize: "contain",
-              }}
+      <div className="mx-2 flex min-h-0 flex-1 flex-col md:mx-20">
+        <div className="shrink-0">
+          <LogoHeader />
+        </div>
+        <div className="my-2 flex min-h-0 flex-1 flex-col md:mt-4">
+          <PageCard contentClassName="gap-y-4 p-8 md:p-12">
+            <PageHeader
+              title={t("title")}
+              description={t("description")}
+              icon={<UserRoundPlus className="size-5" />}
+              className="mb-4 "
             />
-            <div className="text-sm text-muted-foreground mb-4">
-              {t_header("headerDescription")}
-            </div>
 
             <div className="flex flex-row justify-between gap-4 ">
-              <div
-                className="   rounded-[10px]
-            bg-background
-              shadow-[inset_5px_5px_11px_#d6d4d1,inset_-5px_-5px_11px_#ffffff] p-4 sm:p-6 md:p-10"
-              >
+              <InsetPanel className="p-4 sm:p-6 md:p-10">
                 <FieldGroup className="gap-2">
                   {/* <Field data-invalid={submitted && !username.trim()}> */}
                   <Field>
@@ -67,31 +54,22 @@ export default function Signup() {
                       htmlFor="fieldgroup-username"
                       className="text-foreground"
                     >
-                      {t("username")}
+                      {t_login("username")}
                     </FieldLabel>
                     <Input
                       id="fieldgroup-username"
-                      placeholder={t("username")}
+                      placeholder={t_login("username")}
                       value={username}
                       aria-invalid={submitted && !username.trim()}
                       onChange={(e) => {
                         setUsername(e.target.value);
                       }}
-                      className={`    ${submitted && !username.trim() ? "border-destructive" : ""} 
-                                
-
-
-                                
-       border-none
-      rounded-[7px]  
-    bg-surface
-   shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
- 
-   focus-visible:ring-1
-   focus-visible:ring-primary/30  
-
-
-                                `}
+                      className={`    
+                        ${
+                          submitted && !username.trim()
+                            ? "border-destructive"
+                            : ""
+                        }  `}
                     />
                   </Field>
                 </FieldGroup>
@@ -131,12 +109,8 @@ export default function Signup() {
                     </Field>
                   </FieldLabel>
                 </RadioGroup>
-              </div>
-              <div
-                className=" flex-1   rounded-[10px]
-            bg-background
-              shadow-[inset_5px_5px_11px_#d6d4d1,inset_-5px_-5px_11px_#ffffff] p-4 sm:p-6 md:p-10"
-              >
+              </InsetPanel>
+              <InsetPanel className="p-4 sm:p-6 md:p-10">
                 <FieldGroup className="gap-2">
                   {/* <Field data-invalid={submitted && !username.trim()}> */}
                   <Field>
@@ -144,11 +118,11 @@ export default function Signup() {
                       htmlFor="fieldgroup-username"
                       className="text-foreground"
                     >
-                      {t("username")}
+                      {t_login("username")}
                     </FieldLabel>
                     <Input
                       id="fieldgroup-username"
-                      placeholder={t("username")}
+                      placeholder={t_login("username")}
                       value={username}
                       aria-invalid={submitted && !username.trim()}
                       onChange={(e) => {
@@ -156,19 +130,7 @@ export default function Signup() {
                       }}
                       className={`    ${submitted && !username.trim() ? "border-destructive" : ""} 
                                 
-
-
-                                
-       border-none
-      rounded-[7px]  
-    bg-surface
-   shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
- 
-   focus-visible:ring-1
-   focus-visible:ring-primary/30  
-
-
-                                `}
+ `}
                     />
                   </Field>
                   {/* <Field data-invalid={submitted && !password.trim()}> */}
@@ -177,25 +139,18 @@ export default function Signup() {
                       htmlFor="fieldgroup-password"
                       className="text-foreground"
                     >
-                      {t("password")}
+                      {t_login("password")}
                     </FieldLabel>
                     <Input
                       id="fieldgroup-password"
-                      placeholder={t("password")}
+                      placeholder={t_login("password")}
                       type="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       className={`
                             md:bg-transparent" ${submitted && !password.trim() ? "border-destructive" : ""}
                                 
-                                
-                                
-       border-none
-      rounded-[7px]  
-    bg-surface
-   shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
-   focus-visible:ring-1
-   focus-visible:ring-primary/30       
+     
                                 
                                 
                                 `}
@@ -208,11 +163,11 @@ export default function Signup() {
                       htmlFor="fieldgroup-password"
                       className="text-foreground"
                     >
-                      {t("password")}
+                      {t_login("password")}
                     </FieldLabel>
                     <Input
                       id="fieldgroup-password"
-                      placeholder={t("password")}
+                      placeholder={t_login("password")}
                       type="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
@@ -221,12 +176,7 @@ export default function Signup() {
                                 
                                 
                                 
-       border-none
-      rounded-[7px]  
-    bg-surface
-   shadow-[inset_5px_5px_6px_#e4e2df,inset_-5px_-5px_6px_#ffffff] 
-   focus-visible:ring-1
-   focus-visible:ring-primary/30       
+  
                                 
                                 
                                 `}
@@ -235,13 +185,13 @@ export default function Signup() {
 
                   {/* </Field> */}
                 </FieldGroup>
-              </div>
+              </InsetPanel>
             </div>
 
             <GeoSelector geoId={geoId} onGeoIdChange={setGeoId} />
-          </div>
+          </PageCard>
         </div>
       </div>
-    </div>
+    </BackgroundShell>
   );
 }

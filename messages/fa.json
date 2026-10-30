@@ -17,9 +17,18 @@
   "header": {
     "headerDescription": "سامانه رزرو و مدیریت امکانات مجموعه"
   },
+
+  "signup": {
+    "title": "ایجاد حساب کاربری",
+    "description": "برای شروع، حساب کاربری خود را ایجاد کنید."
+  },
+
   "select-role": {
-    "pageTitle": "می خواهید با کدام نقش وارد شوید؟",
-    "buttonTitle": "انتخاب"
+    "pageTitle": "انتخاب نقش",
+    "pageTitleDesc": "می خواهید با کدام نقش وارد شوید؟",
+    "buttonTitle": "انتخاب",
+    "selecroletError": "انتخاب نقش انجام نشد. لطفاً دوباره تلاش کنید",
+    "selecroletError2": "ارتباط با سرور برقرار نشد. لطفاً دوباره تلاش کنید"
   },
   "building": {
     "building-info-title": "اطلاعات ساختمان",
@@ -41,9 +50,9 @@
     "buildingAddressPlaceholder": "آدرس ساختمان را وارد کنید",
     "buildingDescriptionPlaceholder": "توضیحات را وارد کنید",
     "singleBuildingTypeTitle": "مشخصات ساختمان",
-    "singleBuildingTypeDesc": "نام، آدرس و سایر اطلاعات ساختمان خود را وارد کنید",
+    "singleBuildingTypeDesc": " اطلاعات ساختمان خود را وارد کنید",
     "residentialComplexFormTitle": "مشخصات مجتمع",
-    "residentialComplexFormDesc": "نام و توضیحات مجتمع مسکونی خود را وارد کنید",
+    "residentialComplexFormDesc": " اطلاعات  مجتمع مسکونی خود را وارد کنید",
     "residentialComplexName": "نام مجتمع",
     "residentialComplexDescription": "توضیحات",
     "residentialComplexNamePlaceholder": "نام مجتمع را وارد کنید",

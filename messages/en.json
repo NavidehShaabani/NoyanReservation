@@ -17,9 +17,18 @@
   "header": {
     "headerDescription": "Reservation and facility management system"
   },
+
+  "signup": {
+    "title": "Create Your Account",
+    "description": "Create an account to get started."
+  },
+
   "select-role": {
-    "pageTitle": "Which role would you like to sign in as?",
-    "buttonTitle": "select"
+    "pageTitle": "Select Role",
+    "pageTitleDesc": "Which role would you like to sign in as?",
+    "buttonTitle": "select",
+    "selecroletError": "Failed to select a role. Please try again.",
+    "selectRoleError2": "Could not connect to the server. Please try again."
   },
   "building": {
     "building-info-title": "Building Info",
@@ -41,9 +50,9 @@
     "buildingAddressPlaceholder": "Enter the building address",
     "buildingDescriptionPlaceholder": "Enter a description",
     "singleBuildingTypeTitle": "Building Details",
-    "singleBuildingTypeDesc": "Enter the name, address, and other details of your building",
+    "singleBuildingTypeDesc": "Enter your building information.",
     "residentialComplexFormTitle": "Residential Complex Details",
-    "residentialComplexFormDesc": "Enter the name and description of your building",
+    "residentialComplexFormDesc": "Enter your residential complex information.",
     "residentialComplexName": "Complex Name",
     "residentialComplexDescription": "Description",
     "residentialComplexNamePlaceholder": "Enter the complex name",

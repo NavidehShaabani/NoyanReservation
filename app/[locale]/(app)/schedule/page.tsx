@@ -42,7 +42,8 @@ import {
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { PersianCalendar } from "@/components/ui/persian-calendar";
-
+import PageCard from "@/components/custom/PageCard";
+import PageHeader from "@/components/custom/PageHeader";
 type CalendarView = "week" | "month" | "list";
 
 function changeDate(
@@ -161,20 +162,13 @@ export default function SchedulePage() {
 
   return (
     <div className="mx-2 mb-2 flex min-h-0 flex-1 flex-col md:ms-0">
-      <div className="flex min-h-0 w-full max-w-10xl flex-1 flex-col gap-y-5 overflow-y-auto page-scrollbar rounded-[10px] bg-background p-5 shadow-[16px_16px_32px_rgba(209,207,204,0.55)] md:p-8">
+      <PageCard contentClassName="gap-y-5 p-5 md:p-8">
         {/* Page heading */}
-        <div className="flex items-center gap-3">
-          <div className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-            <CalendarDays className="size-5" />
-          </div>
-
-          <div>
-            <h1 className="text-2xl font-semibold">{t("title")}</h1>
-            <p className="mt-1 text-sm text-muted-foreground">
-              {t("description")}
-            </p>
-          </div>
-        </div>
+        <PageHeader
+          title={t("title")}
+          description={t("description")}
+          icon={<CalendarDays className="size-5" />}
+        />
 
         {/* Calendar toolbar */}
         <div className="flex flex-col gap-4 rounded-xl border border-border/60 bg-background/70 p-4">
@@ -582,7 +576,7 @@ export default function SchedulePage() {
             )}
           </div>
         )}
-      </div>
+      </PageCard>
     </div>
   );
 }

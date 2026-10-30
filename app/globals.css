@@ -131,3 +131,19 @@
   background: rgba(80, 80, 80, 0.7);
   background-clip: padding-box;
 }
+
+.neumorphic-field {
+  box-shadow:
+    inset 5px 5px 6px #e4e2df,
+    inset -5px -5px 6px #ffffff;
+}
+.neumorphic-list-item {
+  box-shadow:
+    inset 3px 3px 7px #d6d4d1,
+    inset -3px -3px 7px #ffffff;
+}
+.neumorphic-raised {
+  box-shadow:
+    12px 12px 24px #d1cfcc,
+    -12px -12px 24px #ffffff;
+}
