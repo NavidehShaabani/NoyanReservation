@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
 
-namespace TowerApi.Models.Booking
+namespace TowerApi.Models.Booking.BookingParticipant
 {
     public sealed class BookingParticipantSaveRequest
     {

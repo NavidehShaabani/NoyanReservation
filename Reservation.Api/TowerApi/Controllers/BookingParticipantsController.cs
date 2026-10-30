@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TowerApi.Models.Booking;
+using TowerApi.Models.Booking.BookingParticipant;
 using TowerApi.Services;
 using TowerApi.Services.ApiResponses;
-using TowerApi.Services.Booking;
+using TowerApi.Services.Booking.BookingParticipant;
 using TowerApi.Services.Helper;
 
 namespace TowerApi.Controllers

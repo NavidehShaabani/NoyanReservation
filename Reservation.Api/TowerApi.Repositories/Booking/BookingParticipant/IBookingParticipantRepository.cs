@@ -1,6 +1,6 @@
-﻿using TowerApi.Models.Booking;
+﻿using TowerApi.Models.Booking.BookingParticipant;
 
-namespace TowerApi.Repositories.Booking
+namespace TowerApi.Repositories.Booking.BookingParticipant
 {
     public interface IBookingParticipantRepository
     {

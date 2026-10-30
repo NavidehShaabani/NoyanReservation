@@ -1,10 +1,10 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using Dapper;
-using TowerApi.Models.Booking;
+using TowerApi.Models.Booking.BookingParticipant;
 using TowerApi.Repositories.DataBase;
 
-namespace TowerApi.Repositories.Booking
+namespace TowerApi.Repositories.Booking.BookingParticipant
 {
     public sealed class BookingParticipantRepository
      : IBookingParticipantRepository

@@ -2,7 +2,8 @@
 using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Auth;
 using TowerApi.Services.BaseLookupValues;
-using TowerApi.Services.Booking;
+using TowerApi.Services.Booking.BookingParticipant;
+using TowerApi.Services.Booking.HallRentalDetails;
 using TowerApi.Services.Booking.SpaceBooking;
 using TowerApi.Services.Building;
 using TowerApi.Services.EmployeeAssignments;
@@ -13,7 +14,6 @@ using TowerApi.Services.Geo;
 using TowerApi.Services.Localization;
 using TowerApi.Services.Organization;
 using TowerApi.Services.Profile;
-
 using TowerApi.Services.Signup;
 using TowerApi.Services.Spaces;
 using TowerApi.Services.Unit;
@@ -42,7 +42,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IBaseLookupValueService,BaseLookupValueService>();
             _services.AddScoped<ISpaceBookingService,SpaceBookingService>();
             _services.AddScoped<IBookingParticipantService,BookingParticipantService>();
-            
+            _services.AddScoped<IHallRentalDetailsService,HallRentalDetailsService>();
             return _services;
         }
     }

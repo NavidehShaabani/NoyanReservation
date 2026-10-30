@@ -1,7 +1,7 @@
-﻿using TowerApi.Models.Booking;
-using TowerApi.Repositories.Booking;
+﻿using TowerApi.Models.Booking.BookingParticipant;
+using TowerApi.Repositories.Booking.BookingParticipant;
 
-namespace TowerApi.Services.Booking
+namespace TowerApi.Services.Booking.BookingParticipant
 {
     public sealed class BookingParticipantService : IBookingParticipantService
     {

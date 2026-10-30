@@ -138,6 +138,18 @@
   <data name="Auth.UserNotFoundAfterLogin" xml:space="preserve">
     <value>User information was not received after login.</value>
   </data>
+  <data name="Booking.HallRental.InvalidAmountOrCount" xml:space="preserve">
+    <value>The entered amount or attendee count is invalid.</value>
+  </data>
+  <data name="Booking.HallRental.InvalidDateRange" xml:space="preserve">
+    <value>The specified date range is invalid.</value>
+  </data>
+  <data name="Booking.HallRental.InvalidReference" xml:space="preserve">
+    <value>The booking or participant reference is invalid.</value>
+  </data>
+  <data name="Booking.HallRental.InvalidRequest" xml:space="preserve">
+    <value>The hall rental information is invalid.</value>
+  </data>
   <data name="Booking.Participant.InvalidRequest" xml:space="preserve">
     <value>The participant information is invalid.</value>
   </data>
@@ -209,6 +221,9 @@
   </data>
   <data name="Common.NotFound" xml:space="preserve">
     <value>The requested information was not found.</value>
+  </data>
+  <data name="Common.SavedSuccessfully" xml:space="preserve">
+    <value>Information saved successfully.</value>
   </data>
   <data name="Common.SystemError" xml:space="preserve">
     <value>A system error occurred.</value>

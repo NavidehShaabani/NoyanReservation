@@ -417,4 +417,19 @@
   <data name="Booking.Space.NoConflict" xml:space="preserve">
     <value>در بازه زمانی انتخاب‌شده تداخلی وجود ندارد.</value>
   </data>
+  <data name="Booking.HallRental.InvalidAmountOrCount" xml:space="preserve">
+    <value>مبلغ یا تعداد افراد واردشده معتبر نیست.</value>
+  </data>
+  <data name="Booking.HallRental.InvalidDateRange" xml:space="preserve">
+    <value>بازه تاریخ واردشده معتبر نیست.</value>
+  </data>
+  <data name="Booking.HallRental.InvalidReference" xml:space="preserve">
+    <value>شناسه رزرو یا شرکت‌کننده معتبر نیست.</value>
+  </data>
+  <data name="Booking.HallRental.InvalidRequest" xml:space="preserve">
+    <value>اطلاعات اجاره سالن معتبر نیست.</value>
+  </data>
+  <data name="Common.SavedSuccessfully" xml:space="preserve">
+    <value>اطلاعات با موفقیت ذخیره شد.</value>
+  </data>
 </root>

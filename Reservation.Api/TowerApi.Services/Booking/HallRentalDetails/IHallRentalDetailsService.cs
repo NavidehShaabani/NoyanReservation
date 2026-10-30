@@ -1,32 +1,31 @@
 ﻿
-using TowerApi.Models.Booking;
-namespace TowerApi.Services.Booking
+using TowerApi.Models.Booking.HallRentalDetails;
+
+namespace TowerApi.Services.Booking.HallRentalDetails
 {
-    public interface IBookingParticipantService
+    public interface IHallRentalDetailsService
     {
         Task<(
             int ResultCode,
             string ResultMessage,
             object? Data
-        )> GetByIdAsync(long participantId);
+        )> GetByIdAsync(long bookingId);
 
         Task<(
             int ResultCode,
             string ResultMessage,
             object? Data
-        )> GetActiveListAsync(byte? participantType, long? userId);
+        )> GetListAsync(HallRentalDetailsQueryRequest request);
 
         Task<(
             int ResultCode,
             string ResultMessage,
             object? Data
         )> SaveAsync(
-            BookingParticipantSaveRequest request,
-            long? ownerUserId,
-            long? auditUserId);
+            HallRentalDetailsSaveRequest request,
+            long? userId);
 
         Task<(int ResultCode, string ResultMessage)> DeleteAsync(
-            long participantId,
-            long? auditUserId);
+            long bookingId);
     }
 }
