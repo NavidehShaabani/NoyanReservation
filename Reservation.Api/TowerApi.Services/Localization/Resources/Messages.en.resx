@@ -153,6 +153,27 @@
   <data name="Booking.Participant.InvalidRequest" xml:space="preserve">
     <value>The participant information is invalid.</value>
   </data>
+  <data name="Booking.RentalParticipant.DuplicateParticipant" xml:space="preserve">
+    <value>This participant has already been added to this booking.</value>
+  </data>
+  <data name="Booking.RentalParticipant.GetListSuccessfully" xml:space="preserve">
+    <value>Rental participants retrieved successfully.</value>
+  </data>
+  <data name="Booking.RentalParticipant.GetSuccessfully" xml:space="preserve">
+    <value>Rental participant information retrieved successfully.</value>
+  </data>
+  <data name="Booking.RentalParticipant.InvalidReference" xml:space="preserve">
+    <value>The selected booking or participant is invalid.</value>
+  </data>
+  <data name="Booking.RentalParticipant.InvalidRequest" xml:space="preserve">
+    <value>Invalid rental participant information.</value>
+  </data>
+  <data name="Booking.RentalParticipant.InvalidTextLength" xml:space="preserve">
+    <value>Persian or English notes must not exceed 500 characters.</value>
+  </data>
+  <data name="Booking.RentalParticipant.NotFound" xml:space="preserve">
+    <value>The requested rental participant was not found.</value>
+  </data>
   <data name="Booking.Space.ApprovedSuccessfully" xml:space="preserve">
     <value>Booking approved successfully.</value>
   </data>

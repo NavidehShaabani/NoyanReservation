@@ -432,4 +432,25 @@
   <data name="Common.SavedSuccessfully" xml:space="preserve">
     <value>اطلاعات با موفقیت ذخیره شد.</value>
   </data>
+  <data name="Booking.RentalParticipant.DuplicateParticipant" xml:space="preserve">
+    <value>این شخص قبلاً به این رزرو اضافه شده است.</value>
+  </data>
+  <data name="Booking.RentalParticipant.GetListSuccessfully" xml:space="preserve">
+    <value>فهرست همراهان رزرو با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Booking.RentalParticipant.GetSuccessfully" xml:space="preserve">
+    <value>اطلاعات همراه رزرو با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Booking.RentalParticipant.InvalidReference" xml:space="preserve">
+    <value>رزرو یا شخص انتخاب‌شده معتبر نیست.</value>
+  </data>
+  <data name="Booking.RentalParticipant.InvalidRequest" xml:space="preserve">
+    <value>اطلاعات همراه رزرو نامعتبر است.</value>
+  </data>
+  <data name="Booking.RentalParticipant.InvalidTextLength" xml:space="preserve">
+    <value>طول یادداشت فارسی یا انگلیسی نباید بیشتر از ۵۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="Booking.RentalParticipant.NotFound" xml:space="preserve">
+    <value>همراه رزرو موردنظر یافت نشد.</value>
+  </data>
 </root>
