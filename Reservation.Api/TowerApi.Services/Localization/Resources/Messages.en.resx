@@ -288,6 +288,12 @@
   <data name="Common.Gone" xml:space="preserve">
     <value>The requested information is no longer available.</value>
   </data>
+  <data name="Common.InternalServerError" xml:space="preserve">
+    <value>An internal server error occurred.</value>
+  </data>
+  <data name="Common.InvalidId" xml:space="preserve">
+    <value>The specified ID is invalid.</value>
+  </data>
   <data name="Common.InvalidRequest" xml:space="preserve">
     <value>The submitted information is invalid.</value>
   </data>
@@ -494,6 +500,36 @@
   </data>
   <data name="Signup.UsernameConflict" xml:space="preserve">
     <value>This username is already in use.</value>
+  </data>
+  <data name="SpaceAmenity.Delete.ConstraintError" xml:space="preserve">
+    <value>This amenity cannot be deleted because it is referenced by other data.</value>
+  </data>
+  <data name="SpaceAmenity.Delete.Success" xml:space="preserve">
+    <value>Space amenity deleted successfully.</value>
+  </data>
+  <data name="SpaceAmenity.DescriptionMaxLength" xml:space="preserve">
+    <value>Description cannot exceed 1000 characters.</value>
+  </data>
+  <data name="SpaceAmenity.GetById.Success" xml:space="preserve">
+    <value>Amenity details retrieved successfully.</value>
+  </data>
+  <data name="SpaceAmenity.GetList.Success" xml:space="preserve">
+    <value>Amenities retrieved successfully.</value>
+  </data>
+  <data name="SpaceAmenity.InvalidSpace" xml:space="preserve">
+    <value>The selected space is invalid.</value>
+  </data>
+  <data name="SpaceAmenity.NameMaxLength" xml:space="preserve">
+    <value>Amenity name cannot exceed 200 characters.</value>
+  </data>
+  <data name="SpaceAmenity.NameRequired" xml:space="preserve">
+    <value>Amenity name is required.</value>
+  </data>
+  <data name="SpaceAmenity.NotFound" xml:space="preserve">
+    <value>The requested amenity was not found.</value>
+  </data>
+  <data name="SpaceAmenity.Save.Success" xml:space="preserve">
+    <value>Space amenity saved successfully.</value>
   </data>
   <data name="Units.BulkSaveSuccessfully" xml:space="preserve">
     <value>Units were saved and updated successfully.</value>

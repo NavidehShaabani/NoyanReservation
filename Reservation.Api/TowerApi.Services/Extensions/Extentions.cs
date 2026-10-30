@@ -7,6 +7,7 @@ using TowerApi.Services.Booking.Equipment;
 using TowerApi.Services.Booking.HallRentalDetails;
 using TowerApi.Services.Booking.RentalParticipants;
 using TowerApi.Services.Booking.ReservationEquipment;
+using TowerApi.Services.Booking.SpaceAmenities;
 using TowerApi.Services.Booking.SpaceBooking;
 using TowerApi.Services.Building;
 using TowerApi.Services.EmployeeAssignments;
@@ -49,6 +50,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IRentalParticipantsService, RentalParticipantsService>();
             _services.AddScoped<IReservationEquipmentService,ReservationEquipmentService>();
             _services.AddScoped<IEquipmentService, EquipmentService>();
+            _services.AddScoped<ISpaceAmenityService, SpaceAmenityService>();
 
             return _services;
         }

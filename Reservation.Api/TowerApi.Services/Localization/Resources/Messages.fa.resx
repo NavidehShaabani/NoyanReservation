@@ -507,4 +507,40 @@
   <data name="Booking.Equipment.NotFound" xml:space="preserve">
     <value>تجهیز موردنظر یافت نشد.</value>
   </data>
+  <data name="Common.InternalServerError" xml:space="preserve">
+    <value>خطای داخلی سرور رخ داده است.</value>
+  </data>
+  <data name="Common.InvalidId" xml:space="preserve">
+    <value>شناسه واردشده معتبر نیست.</value>
+  </data>
+  <data name="SpaceAmenity.Delete.ConstraintError" xml:space="preserve">
+    <value>امکان حذف این مورد به دلیل وابستگی اطلاعات دیگر وجود ندارد.</value>
+  </data>
+  <data name="SpaceAmenity.Delete.Success" xml:space="preserve">
+    <value>امکان فضا با موفقیت حذف شد.</value>
+  </data>
+  <data name="SpaceAmenity.DescriptionMaxLength" xml:space="preserve">
+    <value>طول توضیحات نمی‌تواند بیشتر از ۱۰۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="SpaceAmenity.GetById.Success" xml:space="preserve">
+    <value>اطلاعات امکان با موفقیت دریافت شد.</value>
+  </data>
+  <data name="SpaceAmenity.GetList.Success" xml:space="preserve">
+    <value>فهرست امکانات با موفقیت دریافت شد.</value>
+  </data>
+  <data name="SpaceAmenity.InvalidSpace" xml:space="preserve">
+    <value>فضای انتخاب‌شده معتبر نیست.</value>
+  </data>
+  <data name="SpaceAmenity.NameMaxLength" xml:space="preserve">
+    <value>طول نام امکان نمی‌تواند بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="SpaceAmenity.NameRequired" xml:space="preserve">
+    <value>نام امکان الزامی است.</value>
+  </data>
+  <data name="SpaceAmenity.NotFound" xml:space="preserve">
+    <value>امکان موردنظر یافت نشد.</value>
+  </data>
+  <data name="SpaceAmenity.Save.Success" xml:space="preserve">
+    <value>امکان فضا با موفقیت ذخیره شد.</value>
+  </data>
 </root>
