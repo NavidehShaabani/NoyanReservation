@@ -4,6 +4,7 @@ using TowerApi.Repositories.BaseLookupValues;
 using TowerApi.Repositories.Booking.BookingParticipant;
 using TowerApi.Repositories.Booking.HallRentalDetails;
 using TowerApi.Repositories.Booking.RentalParticipants;
+using TowerApi.Repositories.Booking.ReservationEquipment;
 using TowerApi.Repositories.Booking.SpaceBooking;
 using TowerApi.Repositories.Building;
 using TowerApi.Repositories.DataBase;
@@ -48,6 +49,8 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IBookingParticipantRepository,BookingParticipantRepository>();
             _services.AddScoped<IHallRentalDetailsRepository,HallRentalDetailsRepository>();
             _services.AddScoped<IRentalParticipantsRepository, RentalParticipantsRepository>();
+            _services.AddScoped<IReservationEquipmentRepository,ReservationEquipmentRepository>();
+
             return _services;
         }
     }

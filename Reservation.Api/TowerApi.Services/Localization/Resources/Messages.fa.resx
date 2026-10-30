@@ -453,4 +453,34 @@
   <data name="Booking.RentalParticipant.NotFound" xml:space="preserve">
     <value>همراه رزرو موردنظر یافت نشد.</value>
   </data>
+  <data name="Booking.ReservationEquipment.DuplicateEquipment" xml:space="preserve">
+    <value>این تجهیز قبلاً به این رزرو تخصیص داده شده است.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.GetListSuccessfully" xml:space="preserve">
+    <value>فهرست تجهیزات تخصیص‌یافته با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.GetSuccessfully" xml:space="preserve">
+    <value>اطلاعات تجهیز تخصیص‌یافته با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InsufficientOrInactive" xml:space="preserve">
+    <value>موجودی تجهیز کافی نیست یا تجهیز غیرفعال است.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InsufficientStock" xml:space="preserve">
+    <value>موجودی تجهیز برای این تغییر کافی نیست.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InvalidQuantity" xml:space="preserve">
+    <value>تعداد تجهیزات باید بیشتر از صفر باشد.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InvalidReference" xml:space="preserve">
+    <value>رزرو یا تجهیز انتخاب‌شده معتبر نیست.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InvalidRequest" xml:space="preserve">
+    <value>اطلاعات تخصیص تجهیزات به رزرو نامعتبر است.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InvalidTextLength" xml:space="preserve">
+    <value>طول یادداشت فارسی یا انگلیسی نباید بیشتر از ۵۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.NotFound" xml:space="preserve">
+    <value>تخصیص تجهیزات موردنظر یافت نشد.</value>
+  </data>
 </root>

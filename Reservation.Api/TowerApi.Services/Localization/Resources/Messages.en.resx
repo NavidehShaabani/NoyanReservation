@@ -174,6 +174,36 @@
   <data name="Booking.RentalParticipant.NotFound" xml:space="preserve">
     <value>The requested rental participant was not found.</value>
   </data>
+  <data name="Booking.ReservationEquipment.DuplicateEquipment" xml:space="preserve">
+    <value>This equipment has already been assigned to this booking.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.GetListSuccessfully" xml:space="preserve">
+    <value>Allocated equipment list retrieved successfully.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.GetSuccessfully" xml:space="preserve">
+    <value>Allocated equipment information retrieved successfully.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InsufficientOrInactive" xml:space="preserve">
+    <value>Equipment stock is insufficient or the equipment is inactive.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InsufficientStock" xml:space="preserve">
+    <value>There is not enough equipment stock for this change.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InvalidQuantity" xml:space="preserve">
+    <value>Equipment quantity must be greater than zero.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InvalidReference" xml:space="preserve">
+    <value>The selected booking or equipment is invalid.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InvalidRequest" xml:space="preserve">
+    <value>Invalid reservation equipment information.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.InvalidTextLength" xml:space="preserve">
+    <value>Persian or English notes must not exceed 500 characters.</value>
+  </data>
+  <data name="Booking.ReservationEquipment.NotFound" xml:space="preserve">
+    <value>The requested equipment allocation was not found.</value>
+  </data>
   <data name="Booking.Space.ApprovedSuccessfully" xml:space="preserve">
     <value>Booking approved successfully.</value>
   </data>
