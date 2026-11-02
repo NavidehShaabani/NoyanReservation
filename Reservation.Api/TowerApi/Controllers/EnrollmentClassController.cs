@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TowerApi.Models.Enrollment;
+using TowerApi.Models.Enrollment.EnrollmentClass;
 using TowerApi.Services;
 using TowerApi.Services.ApiResponses;
-using TowerApi.Services.Enrollment;
+using TowerApi.Services.Enrollment.EnrollmentClass;
 using TowerApi.Services.Helper;
 
 namespace TowerApi.Controllers

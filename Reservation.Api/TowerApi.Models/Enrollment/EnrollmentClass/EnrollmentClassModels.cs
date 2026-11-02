@@ -1,4 +1,4 @@
-﻿namespace TowerApi.Models.Enrollment
+﻿namespace TowerApi.Models.Enrollment.EnrollmentClass
 {
     public class EnrollmentClassItem
     {

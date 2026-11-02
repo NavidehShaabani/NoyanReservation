@@ -696,4 +696,31 @@
   <data name="EnrollmentClass.SessionNotFound" xml:space="preserve">
     <value>جلسه موردنظر پیدا نشد یا ظرفیت آن قابل بررسی نیست.</value>
   </data>
+  <data name="EnrollmentWaitlist.AlreadyEnrolled" xml:space="preserve">
+    <value>این شرکت‌کننده قبلاً در این جلسه ثبت‌نام فعال دارد.</value>
+  </data>
+  <data name="EnrollmentWaitlist.AlreadyInWaitlist" xml:space="preserve">
+    <value>این شرکت‌کننده قبلاً در لیست انتظار این جلسه قرار دارد.</value>
+  </data>
+  <data name="EnrollmentWaitlist.GetSuccessfully" xml:space="preserve">
+    <value>اطلاعات لیست انتظار با موفقیت دریافت شد.</value>
+  </data>
+  <data name="EnrollmentWaitlist.InvalidData" xml:space="preserve">
+    <value>اطلاعات وارد شده برای لیست انتظار معتبر نیست.</value>
+  </data>
+  <data name="EnrollmentWaitlist.InvalidDateRange" xml:space="preserve">
+    <value>تاریخ انقضا نمی‌تواند قبل از تاریخ پیشنهاد باشد.</value>
+  </data>
+  <data name="EnrollmentWaitlist.InvalidUser" xml:space="preserve">
+    <value>شناسه کاربر معتبر نیست.</value>
+  </data>
+  <data name="EnrollmentWaitlist.JoinedSuccessfully" xml:space="preserve">
+    <value>شرکت‌کننده با موفقیت به لیست انتظار اضافه شد.</value>
+  </data>
+  <data name="EnrollmentWaitlist.NotFound" xml:space="preserve">
+    <value>موردی از لیست انتظار پیدا نشد.</value>
+  </data>
+  <data name="EnrollmentWaitlist.StatusUpdatedSuccessfully" xml:space="preserve">
+    <value>وضعیت عضو لیست انتظار با موفقیت تغییر کرد.</value>
+  </data>
 </root>

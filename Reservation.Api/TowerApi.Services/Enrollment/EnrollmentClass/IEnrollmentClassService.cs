@@ -1,7 +1,7 @@
-﻿using TowerApi.Models.Enrollment;
+﻿using TowerApi.Models.Enrollment.EnrollmentClass;
 
 
-namespace TowerApi.Services.Enrollment
+namespace TowerApi.Services.Enrollment.EnrollmentClass
 {
     public interface IEnrollmentClassService
     {

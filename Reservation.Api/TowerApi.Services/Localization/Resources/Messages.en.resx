@@ -543,6 +543,33 @@
   <data name="EnrollmentClass.SessionNotFound" xml:space="preserve">
     <value>The requested session was not found or its capacity cannot be checked.</value>
   </data>
+  <data name="EnrollmentWaitlist.AlreadyEnrolled" xml:space="preserve">
+    <value>This participant already has an active enrollment in this session.</value>
+  </data>
+  <data name="EnrollmentWaitlist.AlreadyInWaitlist" xml:space="preserve">
+    <value>This participant is already on the waitlist for this session.</value>
+  </data>
+  <data name="EnrollmentWaitlist.GetSuccessfully" xml:space="preserve">
+    <value>Waitlist information was retrieved successfully.</value>
+  </data>
+  <data name="EnrollmentWaitlist.InvalidData" xml:space="preserve">
+    <value>The supplied waitlist data is invalid.</value>
+  </data>
+  <data name="EnrollmentWaitlist.InvalidDateRange" xml:space="preserve">
+    <value>The expiration date cannot be earlier than the offer date.</value>
+  </data>
+  <data name="EnrollmentWaitlist.InvalidUser" xml:space="preserve">
+    <value>The user ID is invalid.</value>
+  </data>
+  <data name="EnrollmentWaitlist.JoinedSuccessfully" xml:space="preserve">
+    <value>The participant was successfully added to the waitlist.</value>
+  </data>
+  <data name="EnrollmentWaitlist.NotFound" xml:space="preserve">
+    <value>The waitlist entry was not found.</value>
+  </data>
+  <data name="EnrollmentWaitlist.StatusUpdatedSuccessfully" xml:space="preserve">
+    <value>The waitlist entry status was successfully updated.</value>
+  </data>
   <data name="Geo.GeoIdRequired" xml:space="preserve">
     <value>The geographical location ID is required.</value>
   </data>

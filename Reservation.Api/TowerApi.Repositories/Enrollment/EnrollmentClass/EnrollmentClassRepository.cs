@@ -1,9 +1,10 @@
 ﻿using System.Data;
 using Dapper;
-using TowerApi.Models.Enrollment;
+
+using TowerApi.Models.Enrollment.EnrollmentClass;
 using TowerApi.Repositories.DataBase;
 
-namespace TowerApi.Repositories.Enrollment
+namespace TowerApi.Repositories.Enrollment.EnrollmentClass
 {
     public class EnrollmentClassRepository : IEnrollmentClassRepository
     {

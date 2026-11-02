@@ -1,8 +1,8 @@
 ﻿using System.Data.SqlClient;
-using TowerApi.Models.Enrollment;
-using TowerApi.Repositories.Enrollment;
+using TowerApi.Models.Enrollment.EnrollmentClass;
+using TowerApi.Repositories.Enrollment.EnrollmentClass;
 
-namespace TowerApi.Services.Enrollment
+namespace TowerApi.Services.Enrollment.EnrollmentClass
 {
     public class EnrollmentClassService : IEnrollmentClassService
     {

@@ -17,7 +17,8 @@ using TowerApi.Repositories.EmployeeAssignments;
 using TowerApi.Repositories.Employees;
 using TowerApi.Repositories.EmployeeTypeRoles;
 using TowerApi.Repositories.EmployeeTypes;
-using TowerApi.Repositories.Enrollment;
+using TowerApi.Repositories.Enrollment.EnrollmentClass;
+using TowerApi.Repositories.Enrollment.EnrollmentWaitlist;
 using TowerApi.Repositories.Geo;
 using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.Organization;
@@ -62,7 +63,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IClassSessionRepository, ClassSessionRepository>();
             _services.AddScoped<IParticipantRepository, ParticipantRepository>();
             _services.AddScoped<IEnrollmentClassRepository,EnrollmentClassRepository>();
-
+            _services.AddScoped<IEnrollmentWaitlistRepository,EnrollmentWaitlistRepository>();
 
             return _services;
         }
