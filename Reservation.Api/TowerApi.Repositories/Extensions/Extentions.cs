@@ -22,6 +22,7 @@ using TowerApi.Repositories.Enrollment.EnrollmentWaitlist;
 using TowerApi.Repositories.Geo;
 using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.Organization;
+using TowerApi.Repositories.Pricing.PricingRule;
 using TowerApi.Repositories.Profile;
 using TowerApi.Repositories.RefreshTokens;
 using TowerApi.Repositories.SessionRepository;
@@ -64,7 +65,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IParticipantRepository, ParticipantRepository>();
             _services.AddScoped<IEnrollmentClassRepository,EnrollmentClassRepository>();
             _services.AddScoped<IEnrollmentWaitlistRepository,EnrollmentWaitlistRepository>();
-
+            _services.AddScoped<IPricingRuleRepository,PricingRuleRepository>();
             return _services;
         }
     }

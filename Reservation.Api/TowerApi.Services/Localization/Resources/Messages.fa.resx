@@ -723,4 +723,49 @@
   <data name="EnrollmentWaitlist.StatusUpdatedSuccessfully" xml:space="preserve">
     <value>وضعیت عضو لیست انتظار با موفقیت تغییر کرد.</value>
   </data>
+  <data name="PricingRule.CalculatedSuccessfully" xml:space="preserve">
+    <value>مبلغ با موفقیت محاسبه شد.</value>
+  </data>
+  <data name="PricingRule.CalculationParametersIncomplete" xml:space="preserve">
+    <value>پارامترهای لازم برای محاسبه مبلغ کامل نیستند.</value>
+  </data>
+  <data name="PricingRule.CreatedSuccessfully" xml:space="preserve">
+    <value>قانون قیمت‌گذاری با موفقیت ایجاد شد.</value>
+  </data>
+  <data name="PricingRule.DeletedSuccessfully" xml:space="preserve">
+    <value>قانون قیمت‌گذاری با موفقیت حذف شد.</value>
+  </data>
+  <data name="PricingRule.GetSuccessfully" xml:space="preserve">
+    <value>اطلاعات قوانین قیمت‌گذاری با موفقیت دریافت شد.</value>
+  </data>
+  <data name="PricingRule.InvalidAmount" xml:space="preserve">
+    <value>مبلغ قانون قیمت‌گذاری نمی‌تواند منفی باشد.</value>
+  </data>
+  <data name="PricingRule.InvalidCalculationData" xml:space="preserve">
+    <value>اطلاعات ارسالی برای محاسبه مبلغ معتبر نیست.</value>
+  </data>
+  <data name="PricingRule.InvalidData" xml:space="preserve">
+    <value>اطلاعات واردشده برای قانون قیمت‌گذاری معتبر نیست.</value>
+  </data>
+  <data name="PricingRule.InvalidId" xml:space="preserve">
+    <value>شناسه قانون قیمت‌گذاری معتبر نیست.</value>
+  </data>
+  <data name="PricingRule.InvalidParticipantRange" xml:space="preserve">
+    <value>بازه تعداد شرکت‌کنندگان نامعتبر است.</value>
+  </data>
+  <data name="PricingRule.InvalidUser" xml:space="preserve">
+    <value>شناسه کاربر معتبر نیست.</value>
+  </data>
+  <data name="PricingRule.InvalidValidityPeriod" xml:space="preserve">
+    <value>بازه اعتبار قانون قیمت‌گذاری نامعتبر است.</value>
+  </data>
+  <data name="PricingRule.NotFound" xml:space="preserve">
+    <value>قانون قیمت‌گذاری پیدا نشد.</value>
+  </data>
+  <data name="PricingRule.UpdatedSuccessfully" xml:space="preserve">
+    <value>قانون قیمت‌گذاری با موفقیت ویرایش شد.</value>
+  </data>
+  <data name="PricingRule.ValidRuleNotFound" xml:space="preserve">
+    <value>قانون قیمت‌گذاری فعال و معتبری پیدا نشد.</value>
+  </data>
 </root>

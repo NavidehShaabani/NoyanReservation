@@ -630,6 +630,51 @@
   <data name="Participant.UsedInHallRental" xml:space="preserve">
     <value>This participant is used in hall rental details and cannot be deleted.</value>
   </data>
+  <data name="PricingRule.CalculatedSuccessfully" xml:space="preserve">
+    <value>The amount was calculated successfully</value>
+  </data>
+  <data name="PricingRule.CalculationParametersIncomplete" xml:space="preserve">
+    <value>The required parameters for price calculation are incomplete.</value>
+  </data>
+  <data name="PricingRule.CreatedSuccessfully" xml:space="preserve">
+    <value>The pricing rule was created successfully.</value>
+  </data>
+  <data name="PricingRule.DeletedSuccessfully" xml:space="preserve">
+    <value>The pricing rule was deleted successfully.</value>
+  </data>
+  <data name="PricingRule.GetSuccessfully" xml:space="preserve">
+    <value>Pricing rule information was retrieved successfully.</value>
+  </data>
+  <data name="PricingRule.InvalidAmount" xml:space="preserve">
+    <value>The pricing rule amount cannot be negative.</value>
+  </data>
+  <data name="PricingRule.InvalidCalculationData" xml:space="preserve">
+    <value>The supplied calculation data is invalid.</value>
+  </data>
+  <data name="PricingRule.InvalidData" xml:space="preserve">
+    <value>The supplied pricing rule data is invalid.</value>
+  </data>
+  <data name="PricingRule.InvalidId" xml:space="preserve">
+    <value>The pricing rule ID is invalid.</value>
+  </data>
+  <data name="PricingRule.InvalidParticipantRange" xml:space="preserve">
+    <value>The participant count range is invalid.</value>
+  </data>
+  <data name="PricingRule.InvalidUser" xml:space="preserve">
+    <value>The user ID is invalid.</value>
+  </data>
+  <data name="PricingRule.InvalidValidityPeriod" xml:space="preserve">
+    <value>The pricing rule validity period is invalid.</value>
+  </data>
+  <data name="PricingRule.NotFound" xml:space="preserve">
+    <value>The pricing rule was not found.</value>
+  </data>
+  <data name="PricingRule.UpdatedSuccessfully" xml:space="preserve">
+    <value>The pricing rule was updated successfully.</value>
+  </data>
+  <data name="PricingRule.ValidRuleNotFound" xml:space="preserve">
+    <value>No active and valid pricing rule was found.</value>
+  </data>
   <data name="Signup.AlreadyActivated" xml:space="preserve">
     <value>This account has already been activated.</value>
   </data>

@@ -22,6 +22,7 @@ using TowerApi.Services.Enrollment.EnrollmentWaitlist;
 using TowerApi.Services.Geo;
 using TowerApi.Services.Localization;
 using TowerApi.Services.Organization;
+using TowerApi.Services.Pricing.PricingRule;
 using TowerApi.Services.Profile;
 using TowerApi.Services.Signup;
 using TowerApi.Services.Spaces;
@@ -61,6 +62,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IParticipantService, ParticipantService>();
             _services.AddScoped<IEnrollmentClassService,EnrollmentClassService>();
             _services.AddScoped<IEnrollmentWaitlistService,EnrollmentWaitlistService>();
+            _services.AddScoped<IPricingRuleService,PricingRuleService>();
 
             return _services;
         }
