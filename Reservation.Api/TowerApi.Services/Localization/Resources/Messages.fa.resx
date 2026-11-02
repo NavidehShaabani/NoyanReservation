@@ -651,4 +651,49 @@
   <data name="SpaceAmenity.Save.Success" xml:space="preserve">
     <value>امکان فضا با موفقیت ذخیره شد.</value>
   </data>
+  <data name="EnrollmentClass.AlreadyRegistered" xml:space="preserve">
+    <value>این شرکت‌کننده قبلاً در این جلسه ثبت‌نام فعال دارد.</value>
+  </data>
+  <data name="EnrollmentClass.CancelledSuccessfully" xml:space="preserve">
+    <value>ثبت‌نام با موفقیت لغو شد.</value>
+  </data>
+  <data name="EnrollmentClass.CapacityCheckedSuccessfully" xml:space="preserve">
+    <value>ظرفیت جلسه با موفقیت بررسی شد.</value>
+  </data>
+  <data name="EnrollmentClass.CapacityFull" xml:space="preserve">
+    <value>ظرفیت کلاس تکمیل شده است.</value>
+  </data>
+  <data name="EnrollmentClass.GetSuccessfully" xml:space="preserve">
+    <value>اطلاعات ثبت‌نام با موفقیت دریافت شد.</value>
+  </data>
+  <data name="EnrollmentClass.InvalidAmount" xml:space="preserve">
+    <value>مبالغ ثبت‌نام نامعتبر است.</value>
+  </data>
+  <data name="EnrollmentClass.InvalidData" xml:space="preserve">
+    <value>اطلاعات ارسال‌شده برای ثبت‌نام نامعتبر است.</value>
+  </data>
+  <data name="EnrollmentClass.InvalidDiscount" xml:space="preserve">
+    <value>مبلغ تخفیف نمی‌تواند بیشتر از مبلغ پایه باشد.</value>
+  </data>
+  <data name="EnrollmentClass.InvalidUser" xml:space="preserve">
+    <value>شناسه کاربر جاری معتبر نیست.</value>
+  </data>
+  <data name="EnrollmentClass.NotFound" xml:space="preserve">
+    <value>ثبت‌نام موردنظر پیدا نشد.</value>
+  </data>
+  <data name="EnrollmentClass.NotFoundOrInactive" xml:space="preserve">
+    <value>ثبت‌نام فعال موردنظر پیدا نشد یا قبلاً لغو شده است.</value>
+  </data>
+  <data name="EnrollmentClass.PaymentStatusUpdatedSuccessfully" xml:space="preserve">
+    <value>وضعیت پرداخت با موفقیت به‌روزرسانی شد.</value>
+  </data>
+  <data name="EnrollmentClass.RegisteredSuccessfully" xml:space="preserve">
+    <value>ثبت‌نام با موفقیت انجام شد.</value>
+  </data>
+  <data name="EnrollmentClass.RegistrationClosed" xml:space="preserve">
+    <value>جلسه فعال نیست یا ثبت‌نام آن باز نیست.</value>
+  </data>
+  <data name="EnrollmentClass.SessionNotFound" xml:space="preserve">
+    <value>جلسه موردنظر پیدا نشد یا ظرفیت آن قابل بررسی نیست.</value>
+  </data>
 </root>

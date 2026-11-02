@@ -17,6 +17,7 @@ using TowerApi.Services.EmployeeAssignments;
 using TowerApi.Services.Employees;
 using TowerApi.Services.EmployeeTypeRoles;
 using TowerApi.Services.EmployeeTypes;
+using TowerApi.Services.Enrollment;
 using TowerApi.Services.Geo;
 using TowerApi.Services.Localization;
 using TowerApi.Services.Organization;
@@ -57,7 +58,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IClassSeriesService, ClassSeriesService>();
             _services.AddScoped<IClassSessionService, ClassSessionService>();
             _services.AddScoped<IParticipantService, ParticipantService>();
-
+            _services.AddScoped<IEnrollmentClassService,EnrollmentClassService>();
             return _services;
         }
     }
