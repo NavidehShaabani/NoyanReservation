@@ -45,9 +45,18 @@ export default function AppSidebar() {
       <Sidebar side={locale === "fa" ? "right" : "left"} variant="floating">
         <SidebarHeader className="md:hidden border-b">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-0">
               <div
-                className="w-10 h-10 shrink-0 bg-primary"
+                className="w-12 md:w-10 h-8 bg-primary mr-2 mb-2"
+                style={{
+                  maskImage: "url('/images/NOYAN-logot.svg')",
+                  maskRepeat: "no-repeat",
+                  maskPosition: "center",
+                  maskSize: "contain",
+                }}
+              />
+              <div
+                className="w-14 h-14 shrink-0 bg-primary"
                 style={{
                   maskImage: "url('/images/NOYAN.svg')",
                   maskRepeat: "no-repeat",
@@ -55,8 +64,6 @@ export default function AppSidebar() {
                   maskSize: "contain",
                 }}
               />
-
-              <span className="text-sm font-medium">Noyan Reservation</span>
             </div>
 
             <button

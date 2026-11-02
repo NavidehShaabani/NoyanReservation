@@ -4,11 +4,13 @@
     "username": "Username",
     "password": "Password",
     "submit": "Login",
+    "registrationSuccessTitle": "Registration successful",
+    "registrationSuccessMessage": "Your account has been created successfully. You can now log in.",
     "error": "Error",
     "errors": {
-      "usernameRequired": "Username is required.",
-      "passwordRequired": "password is required.",
-      "bothRequired": "Username and password are required."
+      "usernameRequired": "Please enter your username.",
+      "passwordRequired": "Please enter your password.",
+      "bothRequired": "Please enter your username and password."
     }
   },
   "footer": {
@@ -20,7 +22,26 @@
 
   "signup": {
     "title": "Create Your Account",
-    "description": "Create an account to get started."
+    "description": "Create an account to get started.",
+    "accountInformation": "Account Information",
+    "organizationInformation": "Organization Information",
+    "organizationType": "Organization Type",
+    "organizationName": "Organization Name",
+    "confirmPassword": "Confirm Password",
+    "save": "Save data",
+    "error": "Error",
+    "errors": {
+      "usernameRequired": "Please enter a username.",
+      "passwordRequired": "Please enter a password.",
+      "confirmPasswordRequired": "Please confirm your password.",
+      "organizationNameRequired": "Please enter the organization name.",
+      "orgTypeRequired": "Please select an organization type.",
+      "geoIdRequired": "Please select the organization's location.",
+      "passwordAndConfirmAreDifferent": "Passwords do not match.",
+      "signupFailed": "Registration failed. Please try again.",
+      "passwordLength": "Password must be between 8 and 100 characters.",
+      "usernameLength": "Username must be between 3 and 100 characters."
+    }
   },
 
   "select-role": {

@@ -12,15 +12,15 @@ import {
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import InsetPanel from "@/components/custom/InsetPanel";
-type BuildingFormProps = {
+type BuildingTypeProps = {
   orgType: number;
   onOrgTypeChange: (value: number) => void;
 };
 
-export default function BuildingForm({
+export default function BuildingType({
   orgType,
   onOrgTypeChange,
-}: BuildingFormProps) {
+}: BuildingTypeProps) {
   const t = useTranslations("building");
 
   return (

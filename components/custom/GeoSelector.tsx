@@ -49,7 +49,7 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
   //   geoType: 0,
   // });
   useEffect(() => {
-    if (!isAuthReady || !token) return;
+    // if (!isAuthReady || !token) return;
 
     async function initializeGeo() {
       try {
@@ -75,7 +75,8 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
     }
 
     initializeGeo();
-  }, [isAuthReady, token, geoId]);
+  }, [geoId]);
+  // }, [isAuthReady, token, geoId]);
 
   async function getCurrentGeoInfo(geoId: string) {
     const currentGeoResponse = await fetch(

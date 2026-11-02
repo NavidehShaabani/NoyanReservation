@@ -10,12 +10,14 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { AlertCircleIcon } from "lucide-react";
+import { AlertCircleIcon, CircleCheck } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AuthContext } from "@/context/AuthProvider";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 export default function Login() {
+  const searchParams = useSearchParams();
   const t = useTranslations("login");
+  const isRegistered = searchParams.get("registered") === "true";
   const tFooter = useTranslations("footer");
   const locale = useLocale();
   const [username, setUsername] = useState("");
@@ -92,7 +94,16 @@ export default function Login() {
           <div className="w-full md:w-2/3 h-full bg-card grid grid-rows-11 px-0 md:px-[10%] py-0 md:py-[1%]">
             <div className="row-span-2  bg-backgroundlogin md:bg-card flex justify-center items-center md:justify-start  ">
               <div
-                className="w-48 md:w-20 h-20 bg-primary"
+                className="w-20 md:w-10 h-12 bg-primary mr-2 mb-2"
+                style={{
+                  maskImage: "url('/images/NOYAN-logot.svg')",
+                  maskRepeat: "no-repeat",
+                  maskPosition: "center",
+                  maskSize: "contain",
+                }}
+              />
+              <div
+                className="w-40 md:w-20 h-16 bg-primary"
                 style={{
                   maskImage: "url('/images/NOYAN.svg')",
                   maskRepeat: "no-repeat",
@@ -132,12 +143,22 @@ pb-[10vh]
   md:backdrop-blur-none
 "
               >
-                <FieldGroup className="gap-2">
+                {isRegistered && (
+                  <Alert className="neumorphic-alert-successful mb-2">
+                    <CircleCheck />
+                    <AlertTitle>{t("registrationSuccessTitle")}</AlertTitle>
+                    <AlertDescription>
+                      {t("registrationSuccessMessage")}
+                    </AlertDescription>
+                  </Alert>
+                )}
+
+                <FieldGroup className="gap-4">
                   {/* <Field data-invalid={submitted && !username.trim()}> */}
-                  <Field>
+                  <Field className="gap-0.5">
                     <FieldLabel
                       htmlFor="fieldgroup-username"
-                      className="text-foreground"
+                      className="text-foreground "
                     >
                       {t("username")}
                     </FieldLabel>
@@ -160,7 +181,7 @@ pb-[10vh]
                     />
                   </Field>
                   {/* <Field data-invalid={submitted && !password.trim()}> */}
-                  <Field>
+                  <Field className="gap-0.5">
                     <FieldLabel
                       htmlFor="fieldgroup-password"
                       className="text-foreground"
@@ -188,41 +209,14 @@ pb-[10vh]
                   <div className="min-h-4">
                     {/* فضای معادل error برای Button */}
                   </div>
-                  <Button
-                    className="
-  w-full
-  rounded-[7px]
-  bg-primary
-  text-primary-foreground
-  shadow-sm
-  hover:bg-primary/90
-  active:bg-primary/80
-  transition-colors
-  duration-150
-"
-                    type="submit"
-                  >
+                  <Button className="primary-action" type="submit">
                     {t("submit")}
                   </Button>
                   {/* </Field> */}
                 </FieldGroup>
                 <div className="mt-3  min-h-0">
                   {error && (
-                    <Alert
-                      variant="destructive"
-                      className="w-full 
-                    
-                   
-      
-        rounded-[7px]
-        border-none
-        bg-surface
-        text-destructive
-        shadow-[inset_3px_3px_5px_#e4e2df,inset_-3px_-3px_5px_#ffffff]
-      
-                    
-                    "
-                    >
+                    <Alert variant="destructive" className="neumorphic-alert ">
                       <AlertCircleIcon />
                       <AlertTitle>{t("error")}</AlertTitle>
                       <AlertDescription>
@@ -243,7 +237,7 @@ pb-[10vh]
 
           <div
             className="hidden md:block bg-center  w-1/3 bg-cover "
-            style={{ backgroundImage: "url('/images/main_pic.jpg')" }}
+            style={{ backgroundImage: "url('/images/login.jpg')" }}
           ></div>
         </div>
         <div className="hidden md:block absolute bottom-2 text-center w-full">

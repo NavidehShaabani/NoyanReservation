@@ -4,11 +4,13 @@
     "username": "نام کاربری",
     "password": "رمز عبور",
     "submit": "ورود",
+    "registrationSuccessTitle": "ثبت نام موفق",
+    "registrationSuccessMessage": "ثبت‌ نام شما با موفقیت انجام شد. اکنون وارد حساب کاربری خود شوید.",
     "error": "خطا",
     "errors": {
-      "usernameRequired": "نام کاربری الزامی است.",
-      "passwordRequired": "رمز عبور الزامی است.",
-      "bothRequired": "نام کاربری و رمز عبور الزامی هستند."
+      "usernameRequired": "لطفاً نام کاربری را وارد کنید.",
+      "passwordRequired": "لطفاً رمز عبور را وارد کنید.",
+      "bothRequired": "لطفا نام کاربری و رمز عبور را وارد کنید."
     }
   },
   "footer": {
@@ -20,7 +22,26 @@
 
   "signup": {
     "title": "ایجاد حساب کاربری",
-    "description": "برای شروع، حساب کاربری خود را ایجاد کنید."
+    "description": "برای شروع، حساب کاربری خود را ایجاد کنید.",
+    "accountInformation": "اطلاعات حساب کاربری",
+    "organizationInformation": "اطلاعات مجموعه",
+    "organizationType": "نوع مجموعه",
+    "organizationName": "نام مجموعه",
+    "confirmPassword": "تکرار رمز عبور",
+    "save": "ثبت اطلاعات",
+    "error": "خطا",
+    "errors": {
+      "usernameRequired": "لطفاً نام کاربری را وارد کنید.",
+      "passwordRequired": "لطفاً رمز عبور را وارد کنید.",
+      "confirmPasswordRequired": "لطفاً تکرار رمز عبور را وارد کنید.",
+      "organizationNameRequired": "لطفاً نام مجموعه را وارد کنید.",
+      "orgTypeRequired": "لطفاً نوع مجموعه را انتخاب کنید.",
+      "geoIdRequired": "لطفاً موقعیت مکانی مجموعه را انتخاب کنید.",
+      "passwordAndConfirmAreDifferent": "رمز عبور و تکرار آن یکسان نیستند.",
+      "signupFailed": "ثبت‌نام انجام نشد. لطفاً دوباره تلاش کنید.",
+      "passwordLength": "رمز عبور باید حداقل ۸ و حداکثر ۱۰۰ کاراکتر باشد.",
+      "usernameLength": "نام کاربری باید حداقل ۳ و حداکثر ۱۰۰ کاراکتر باشد."
+    }
   },
 
   "select-role": {
