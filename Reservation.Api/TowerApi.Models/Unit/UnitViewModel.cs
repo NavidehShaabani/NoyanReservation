@@ -1,10 +1,13 @@
-﻿namespace TowerApi.Models.Unit
+﻿
+namespace TowerApi.Models.Unit
 {
     public class UnitViewModel
     {
         public long UnitId { get; set; }
 
         public long BuildingId { get; set; }
+
+        public long? BuildingFloorId { get; set; }
 
         public string UnitNumber { get; set; } = string.Empty;
 

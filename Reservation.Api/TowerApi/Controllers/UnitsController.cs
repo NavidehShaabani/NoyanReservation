@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.Unit;
-using TowerApi.Repositories.Unit;
 using TowerApi.Services;
 using TowerApi.Services.ApiResponses;
 using TowerApi.Services.Helper;
@@ -12,13 +11,13 @@ namespace TowerApi.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
-    public class UnitsController : ControllerBase
+    public class UnitController : ControllerBase
     {
         private readonly IUnitService _service;
         private readonly ICurrentUser _currentUser;
         private readonly IApiResponseFactory _responseFactory;
 
-        public UnitsController(
+        public UnitController(
             IUnitService service,
             ICurrentUser currentUser,
             IApiResponseFactory responseFactory)
@@ -32,219 +31,129 @@ namespace TowerApi.Controllers
         public async Task<IActionResult> GetList(
             [FromQuery] UnitQueryRequest request)
         {
-            var result =
-                await _service.GetListAsync(request);
+            var result = await _service.GetListAsync(request);
 
-            if (result.ResultCode == 200)
-            {
-                return Ok(
-                    _responseFactory.Success(
-                        200,
-                        "Common.GetSuccessfully",
-                        result.Data));
-            }
-
-            return StatusCode(
-                ApiResponseMessageMapper.GetHttpStatusCode(
-                    result.ResultCode),
-                _responseFactory.Error(
-                    result.ResultCode,
-                    ApiResponseMessageMapper.GetMessageKey(
-                        result.ResultCode)));
+            return CreateResponse(
+                result.ResultCode, result.MessageKey, result.Data);
         }
 
-        [HttpGet("{unitId:long}")]
+        [HttpGet("{id:long}")]
         public async Task<IActionResult> GetById(
-            long unitId,
+            long id,
             [FromQuery] bool includeDeleted = false)
         {
-            var result =
-                await _service.GetByIdAsync(
-                    unitId,
-                    includeDeleted);
+            var result = await _service.GetByIdAsync(id, includeDeleted);
 
-            if (result.ResultCode == 200)
-            {
-                return Ok(
-                    _responseFactory.Success(
-                        200,
-                        "Common.GetSuccessfully",
-                        result.Data));
-            }
-
-            return StatusCode(
-                ApiResponseMessageMapper.GetHttpStatusCode(
-                    result.ResultCode),
-                _responseFactory.Error(
-                    result.ResultCode,
-                    ApiResponseMessageMapper.GetMessageKey(
-                        result.ResultCode)));
+            return CreateResponse(
+                result.ResultCode, result.MessageKey, result.Data);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(
+        public async Task<IActionResult> Add(
             [FromBody] UnitCreateRequest request)
         {
-            var userId = _currentUser.UserId;
+            if (!TryGetCurrentUserId(out var userId, out var error))
+                return error!;
 
-            if (!userId.HasValue)
-            {
-                return Unauthorized(
-                    _responseFactory.Error(
-                        401,
-                        "Common.Unauthorized"));
-            }
+            var result = await _service.AddAsync(request, userId);
 
-            if (userId.Value > int.MaxValue)
-            {
-                return BadRequest(
-                    _responseFactory.Error(
-                        400,
-                        "Common.InvalidUserId"));
-            }
-
-            var result =
-                await _service.AddAsync(
-                    request,
-                    (int)userId.Value);
-
-            if (result.ResultCode == 200)
-            {
-                return Ok(
-                    _responseFactory.Success(
-                        200,
-                        "Common.CreatedSuccessfully",
-                        result.Data));
-            }
-
-            return StatusCode(
-                ApiResponseMessageMapper.GetHttpStatusCode(
-                    result.ResultCode),
-                _responseFactory.Error(
-                    result.ResultCode,
-                    ApiResponseMessageMapper.GetMessageKey(
-                        result.ResultCode)));
+            return CreateResponse(
+                result.ResultCode, result.MessageKey, result.Data);
         }
 
-        [HttpPut("{unitId:long}")]
-        public async Task<IActionResult> Update(
-            long unitId,
+        [HttpPut("{id:long}")]
+        public async Task<IActionResult> Edit(
+            long id,
             [FromBody] UnitUpdateRequest request)
         {
-            var userId = _currentUser.UserId;
+            if (!TryGetCurrentUserId(out var userId, out var error))
+                return error!;
 
-            if (!userId.HasValue)
-            {
-                return Unauthorized(
-                    _responseFactory.Error(
-                        401,
-                        "Common.Unauthorized"));
-            }
+            var result = await _service.EditAsync(id, request, userId);
 
-            if (userId.Value > int.MaxValue)
-            {
-                return BadRequest(
-                    _responseFactory.Error(
-                        400,
-                        "Common.InvalidUserId"));
-            }
-
-            var result =
-                await _service.EditAsync(
-                    unitId,
-                    request,
-                    (int)userId.Value);
-
-            if (result.ResultCode == 200)
-            {
-                return Ok(
-                    _responseFactory.Success(
-                        200,
-                        "Common.UpdatedSuccessfully",
-                        result.Data));
-            }
-
-            return StatusCode(
-                ApiResponseMessageMapper.GetHttpStatusCode(
-                    result.ResultCode),
-                _responseFactory.Error(
-                    result.ResultCode,
-                    ApiResponseMessageMapper.GetMessageKey(
-                        result.ResultCode)));
+            return CreateResponse(
+                result.ResultCode, result.MessageKey, result.Data);
         }
 
-        [HttpDelete("{unitId:long}")]
-        public async Task<IActionResult> Delete(
-            long unitId)
+        [HttpDelete("{id:long}")]
+        public async Task<IActionResult> Delete(long id)
         {
-            var userId = _currentUser.UserId;
+            if (!TryGetCurrentUserId(out var userId, out var error))
+                return error!;
 
-            if (!userId.HasValue)
-            {
-                return Unauthorized(
-                    _responseFactory.Error(
-                        401,
-                        "Common.Unauthorized"));
-            }
+            var result = await _service.DeleteAsync(id, userId);
 
-            if (userId.Value > int.MaxValue)
-            {
-                return BadRequest(
-                    _responseFactory.Error(
-                        400,
-                        "Common.InvalidUserId"));
-            }
-
-            var result =
-                await _service.DeleteAsync(
-                    unitId,
-                    (int)userId.Value);
-
-            if (result.ResultCode == 200)
-            {
-                return Ok(
-                    _responseFactory.Success<object>(
-                        200,
-                        "Common.DeletedSuccessfully"));
-            }
-
-            return StatusCode(
-                ApiResponseMessageMapper.GetHttpStatusCode(
-                    result.ResultCode),
-                _responseFactory.Error(
-                    result.ResultCode,
-                    ApiResponseMessageMapper.GetMessageKey(
-                        result.ResultCode)));
+            return CreateResponse(
+                result.ResultCode, result.MessageKey, null);
         }
-        // POST: api/UnitsBulk/save
-        [HttpPost("BulkSave")]
+
+        [HttpPost("bulk-save")]
         public async Task<IActionResult> BulkSave(
             [FromBody] UnitBulkSaveRequest request)
         {
-            if (!_currentUser.UserId.HasValue)
-                return Unauthorized();
+            var currentUserId = _currentUser.UserId;
 
-            var result = await _service.BulkSaveAsync(
-                request,
-                _currentUser.UserId.Value);
-
-            if (result.Code == 200)
+            if (!currentUserId.HasValue ||
+                currentUserId.Value <= 0 ||
+                currentUserId.Value > int.MaxValue)
             {
-                return Ok(_responseFactory.Success(
-                    result.Code,
-                    result.MessageKey,
-                    (object?)null));
+                return CreateResponse(
+                    400, "Common.InvalidUserId", null);
             }
 
-            var statusCode =
-                ApiResponseMessageMapper.GetHttpStatusCode(result.Code);
+            var result = await _service.BulkSaveAsync(
+                request, currentUserId.Value);
 
-            return StatusCode(
-                statusCode,
-                _responseFactory.Error(
-                    result.Code,
-                    result.MessageKey));
+            return CreateResponse(
+                result.Code, result.MessageKey, null);
+        }
+
+        private bool TryGetCurrentUserId(
+            out int userId,
+            out IActionResult? error)
+        {
+            userId = 0;
+            error = null;
+
+            var currentUserId = _currentUser.UserId;
+
+            if (!currentUserId.HasValue ||
+                currentUserId.Value <= 0 ||
+                currentUserId.Value > int.MaxValue)
+            {
+                error = CreateResponse(
+                    400, "Common.InvalidUserId", null);
+
+                return false;
+            }
+
+            userId = (int)currentUserId.Value;
+            return true;
+        }
+
+        private IActionResult CreateResponse(
+            int resultCode,
+            string? messageKey,
+            object? data)
+        {
+            var key = string.IsNullOrWhiteSpace(messageKey)
+                ? ApiResponseMessageMapper.GetMessageKey(resultCode)
+                : messageKey;
+
+            var statusCode =
+                ApiResponseMessageMapper.GetHttpStatusCode(resultCode);
+
+            if (resultCode >= 200 && resultCode < 300)
+            {
+                var response = _responseFactory.Success(
+                    resultCode, key, data);
+
+                return StatusCode(statusCode, response);
+            }
+
+            var errorResponse = _responseFactory.Error(resultCode, key);
+
+            return StatusCode(statusCode, errorResponse);
         }
     }
-
 }

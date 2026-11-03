@@ -948,16 +948,76 @@
   <data name="SpaceAmenity.Save.Success" xml:space="preserve">
     <value>Space amenity saved successfully.</value>
   </data>
+  <data name="Units.BuildingNotFound" xml:space="preserve">
+    <value>The requested building was not found.</value>
+  </data>
   <data name="Units.BulkSaveSuccessfully" xml:space="preserve">
     <value>Units were saved and updated successfully.</value>
   </data>
   <data name="Units.Conflict" xml:space="preserve">
     <value>A unit with the same number already exists on this floor of the building.</value>
   </data>
+  <data name="Units.CreatedSuccessfully" xml:space="preserve">
+    <value>The unit was created successfully.</value>
+  </data>
+  <data name="Units.DeletedSuccessfully" xml:space="preserve">
+    <value>The unit was deleted successfully.</value>
+  </data>
+  <data name="Units.DuplicateIds" xml:space="preserve">
+    <value>Duplicate IDs were found in the submitted data.</value>
+  </data>
+  <data name="Units.DuplicateUnitNumber" xml:space="preserve">
+    <value>This unit number already exists in the building or floor.</value>
+  </data>
+  <data name="Units.FloorCapacityExceeded" xml:space="preserve">
+    <value>The floor's maximum unit capacity has been reached.</value>
+  </data>
+  <data name="Units.FloorInactive" xml:space="preserve">
+    <value>The selected floor is inactive.</value>
+  </data>
+  <data name="Units.FloorNotFound" xml:space="preserve">
+    <value>The requested floor was not found or does not belong to the selected building.</value>
+  </data>
+  <data name="Units.InvalidArea" xml:space="preserve">
+    <value>The unit area cannot be negative.</value>
+  </data>
+  <data name="Units.InvalidBuildingConfiguration" xml:space="preserve">
+    <value>The building's unit numbering configuration is invalid.</value>
+  </data>
+  <data name="Units.InvalidBuildingFloorId" xml:space="preserve">
+    <value>The floor ID is invalid.</value>
+  </data>
+  <data name="Units.InvalidBuildingId" xml:space="preserve">
+    <value>The building ID is invalid.</value>
+  </data>
+  <data name="Units.InvalidBulkData" xml:space="preserve">
+    <value>The submitted bulk data is invalid.</value>
+  </data>
   <data name="Units.InvalidData" xml:space="preserve">
     <value>The submitted unit data is invalid.</value>
   </data>
+  <data name="Units.InvalidDescription" xml:space="preserve">
+    <value>The unit description must not exceed 2000 characters.</value>
+  </data>
+  <data name="Units.InvalidFloorNumber" xml:space="preserve">
+    <value>The floor number does not match the selected floor.</value>
+  </data>
+  <data name="Units.InvalidQueryRequest" xml:space="preserve">
+    <value>The query or pagination parameters are invalid.</value>
+  </data>
+  <data name="Units.InvalidUnitId" xml:space="preserve">
+    <value>The unit ID is invalid.</value>
+  </data>
+  <data name="Units.InvalidUnitNumber" xml:space="preserve">
+    <value>The unit number is required and must not exceed 100 characters.</value>
+  </data>
+  <data name="Units.NotFound" xml:space="preserve">
+    <value>The requested unit was not found.</value>
+  </data>
   <data name="Units.ReferenceNotFound" xml:space="preserve">
     <value>The selected building or one of the submitted units was not found, has been deleted, or is inactive.</value>
+  </data>
+  <data name="Units.UpdatedSuccessfully" xml:space="preserve">
+    <value>The unit was updated successfully.</value>
   </data>
 </root>

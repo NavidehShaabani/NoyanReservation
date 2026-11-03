@@ -960,4 +960,64 @@
   <data name="BuildingFloorStaircases.UpdatedSuccessfully" xml:space="preserve">
     <value>ارتباط طبقه و راه‌پله با موفقیت ویرایش شد.</value>
   </data>
+  <data name="Units.BuildingNotFound" xml:space="preserve">
+    <value>ساختمان موردنظر یافت نشد.</value>
+  </data>
+  <data name="Units.CreatedSuccessfully" xml:space="preserve">
+    <value>واحد با موفقیت ثبت شد.</value>
+  </data>
+  <data name="Units.DeletedSuccessfully" xml:space="preserve">
+    <value>واحد با موفقیت حذف شد.</value>
+  </data>
+  <data name="Units.DuplicateIds" xml:space="preserve">
+    <value>شناسه تکراری در اطلاعات ارسالی وجود دارد.</value>
+  </data>
+  <data name="Units.DuplicateUnitNumber" xml:space="preserve">
+    <value>شماره واحد در این ساختمان یا طبقه قبلاً ثبت شده است.</value>
+  </data>
+  <data name="Units.FloorCapacityExceeded" xml:space="preserve">
+    <value>ظرفیت مجاز طبقه تکمیل شده است.</value>
+  </data>
+  <data name="Units.FloorInactive" xml:space="preserve">
+    <value>طبقه انتخاب‌شده غیرفعال است.</value>
+  </data>
+  <data name="Units.FloorNotFound" xml:space="preserve">
+    <value>طبقه موردنظر یافت نشد یا به ساختمان انتخاب‌شده تعلق ندارد.</value>
+  </data>
+  <data name="Units.InvalidArea" xml:space="preserve">
+    <value>مساحت واحد نمی‌تواند منفی باشد.</value>
+  </data>
+  <data name="Units.InvalidBuildingConfiguration" xml:space="preserve">
+    <value>تنظیمات شماره‌گذاری واحدهای ساختمان معتبر نیست.</value>
+  </data>
+  <data name="Units.InvalidBuildingFloorId" xml:space="preserve">
+    <value>شناسه طبقه نامعتبر است.</value>
+  </data>
+  <data name="Units.InvalidBuildingId" xml:space="preserve">
+    <value>شناسه ساختمان نامعتبر است.</value>
+  </data>
+  <data name="Units.InvalidBulkData" xml:space="preserve">
+    <value>اطلاعات ارسالی برای ثبت گروهی نامعتبر است.</value>
+  </data>
+  <data name="Units.InvalidDescription" xml:space="preserve">
+    <value>توضیحات واحد نباید بیشتر از ۲۰۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="Units.InvalidFloorNumber" xml:space="preserve">
+    <value>شماره طبقه با اطلاعات طبقه انتخاب‌شده مطابقت ندارد.</value>
+  </data>
+  <data name="Units.InvalidQueryRequest" xml:space="preserve">
+    <value>اطلاعات فیلتر یا صفحه‌بندی نامعتبر است.</value>
+  </data>
+  <data name="Units.InvalidUnitId" xml:space="preserve">
+    <value>شناسه واحد نامعتبر است.</value>
+  </data>
+  <data name="Units.InvalidUnitNumber" xml:space="preserve">
+    <value>شماره واحد الزامی است و نباید بیشتر از ۱۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="Units.NotFound" xml:space="preserve">
+    <value>واحد موردنظر یافت نشد.</value>
+  </data>
+  <data name="Units.UpdatedSuccessfully" xml:space="preserve">
+    <value>اطلاعات واحد با موفقیت ویرایش شد.</value>
+  </data>
 </root>
