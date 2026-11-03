@@ -65,7 +65,16 @@ export default function Header() {
       "
     >
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1">
+          <div
+            className="w-20 md:w-10 h-10 bg-primary  mb-2"
+            style={{
+              maskImage: "url('/images/NOYAN-logot.svg')",
+              maskRepeat: "no-repeat",
+              maskPosition: "center",
+              maskSize: "contain",
+            }}
+          />
           <div
             className="w-16 h-16 shrink-0 bg-primary"
             style={{
@@ -76,7 +85,7 @@ export default function Header() {
             }}
           />
 
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-muted-foreground ms-3">
             {t("headerDescription")}
           </div>
         </div>

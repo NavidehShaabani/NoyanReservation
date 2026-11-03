@@ -6,6 +6,7 @@ type PageHeaderProps = {
   description?: string;
   icon?: ReactNode;
   className?: string;
+  size?: "default" | "sm";
 };
 
 export default function PageHeader({
@@ -13,20 +14,48 @@ export default function PageHeader({
   description,
   icon,
   className,
+  size = "default",
 }: PageHeaderProps) {
+  const isSmall = size === "sm";
+
   return (
-    <div className={cn("flex items-center gap-3", className)}>
+    <div
+      className={cn(
+        "flex items-center",
+        isSmall ? "gap-2" : "gap-3",
+        className,
+      )}
+    >
       {icon && (
-        <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+        <div
+          className={cn(
+            "shrink-0 flex items-center justify-center rounded-xl bg-primary/10 text-primary",
+            isSmall ? "size-9" : "size-11",
+          )}
+        >
           {icon}
         </div>
       )}
 
       <div className="min-w-0">
-        <h1 className="text-2xl font-semibold text-foreground">{title}</h1>
+        <h1
+          className={cn(
+            "font-semibold text-foreground",
+            isSmall ? "text-lg" : "text-2xl",
+          )}
+        >
+          {title}
+        </h1>
 
         {description && (
-          <p className="mt-1 text-sm text-muted-foreground">{description}</p>
+          <p
+            className={cn(
+              "mt-1 text-muted-foreground",
+              isSmall ? "text-xs" : "text-sm",
+            )}
+          >
+            {description}
+          </p>
         )}
       </div>
     </div>

@@ -53,6 +53,9 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --brand-accent: 17 45% 57%;
+    --brand-accent-foreground: 0 0% 100%;
   }
   .dark {
     --background: 210 25% 92%;
@@ -142,8 +145,55 @@
     inset 3px 3px 7px #d6d4d1,
     inset -3px -3px 7px #ffffff;
 }
-.neumorphic-raised {
+/* .neumorphic-raised {
   box-shadow:
     12px 12px 24px #d1cfcc,
     -12px -12px 24px #ffffff;
+} */
+
+.neumorphic-raised {
+  box-shadow:
+    6px 6px 14px #c9cabf,
+    -6px -6px 14px #ffffff;
+}
+
+.primary-action {
+  width: 100%;
+  border-radius: 7px;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+  transition: background-color 150ms ease;
+}
+
+.primary-action:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.primary-action:active {
+  background-color: hsl(var(--primary) / 0.8);
+}
+
+.neumorphic-alert {
+  width: 100%;
+  border-radius: 7px;
+  border: none;
+  background-color: hsl(var(--background));
+  color: hsl(var(--destructive));
+  box-shadow:
+    /* 8px 8px 10px #e4e2df,
+    -1px -1px 4px #ffffff; */
+    3px 3px 5px #e4e2df,
+    -3px -3px 5px #ffffff;
+}
+
+.neumorphic-alert-successful {
+  width: 100%;
+  border-radius: 7px;
+  border: none;
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--card-foreground));
+  box-shadow:
+    4px 4px 6px #e4e2df,
+    -1px -1px 4px #ffffff;
 }

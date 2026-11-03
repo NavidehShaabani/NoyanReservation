@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { useTranslations } from "next-intl";
 import { createClientId } from "@/lib/create-client-id";
 import { AuthContext } from "@/context/AuthProvider";
-import BuildingType from "@/components/custom/building/BuildingForm";
+import BuildingType from "@/components/custom/building/BuildingType";
 import GeoSelector from "@/components/custom/GeoSelector";
 import SingleBuildingFields from "@/components/custom/building/SingleBuildingFields";
 import ResidentialComplexFields from "@/components/custom/building/ResidentialComplexFields";
