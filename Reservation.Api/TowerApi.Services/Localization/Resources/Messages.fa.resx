@@ -855,4 +855,58 @@
   <data name="BuildingFloors.ReferenceNotFound" xml:space="preserve">
     <value>ساختمان یا رکورد مرجع موردنظر یافت نشد.</value>
   </data>
+  <data name="BuildingStaircases.BulkSaveSuccessfully" xml:space="preserve">
+    <value>اطلاعات راه‌پله‌ها با موفقیت ذخیره شد.</value>
+  </data>
+  <data name="BuildingStaircases.Conflict" xml:space="preserve">
+    <value>امکان انجام عملیات به دلیل تداخل اطلاعات وجود ندارد.</value>
+  </data>
+  <data name="BuildingStaircases.CreatedSuccessfully" xml:space="preserve">
+    <value>راه‌پله با موفقیت ثبت شد.</value>
+  </data>
+  <data name="BuildingStaircases.DeletedSuccessfully" xml:space="preserve">
+    <value>راه‌پله با موفقیت حذف شد.</value>
+  </data>
+  <data name="BuildingStaircases.DuplicateCodes" xml:space="preserve">
+    <value>کد راه‌پله در اطلاعات ارسالی تکراری است.</value>
+  </data>
+  <data name="BuildingStaircases.DuplicateIds" xml:space="preserve">
+    <value>شناسه تکراری در اطلاعات ارسالی وجود دارد.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidBuildingId" xml:space="preserve">
+    <value>شناسه ساختمان نامعتبر است.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidBuildingStaircaseId" xml:space="preserve">
+    <value>شناسه راه‌پله نامعتبر است.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidBulkData" xml:space="preserve">
+    <value>اطلاعات ارسالی برای ثبت گروهی نامعتبر است.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidDescription" xml:space="preserve">
+    <value>توضیحات نباید بیشتر از ۱۰۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidDisplayOrder" xml:space="preserve">
+    <value>ترتیب نمایش باید بزرگ‌تر از صفر باشد.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidQueryRequest" xml:space="preserve">
+    <value>اطلاعات فیلتر یا صفحه‌بندی نامعتبر است.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidStaircaseCode" xml:space="preserve">
+    <value>کد راه‌پله الزامی است و نباید بیشتر از ۶۰ کاراکتر باشد.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidStaircaseName" xml:space="preserve">
+    <value>نام راه‌پله الزامی است و نباید بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidStaircaseNameEn" xml:space="preserve">
+    <value>نام انگلیسی راه‌پله نباید بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidStaircaseType" xml:space="preserve">
+    <value>نوع راه‌پله نامعتبر است.</value>
+  </data>
+  <data name="BuildingStaircases.NotFound" xml:space="preserve">
+    <value>راه‌پله موردنظر یافت نشد.</value>
+  </data>
+  <data name="BuildingStaircases.UpdatedSuccessfully" xml:space="preserve">
+    <value>اطلاعات راه‌پله با موفقیت ویرایش شد.</value>
+  </data>
 </root>

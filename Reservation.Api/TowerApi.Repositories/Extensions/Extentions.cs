@@ -14,6 +14,7 @@ using TowerApi.Repositories.Booking.SpaceBooking;
 using TowerApi.Repositories.Building;
 using TowerApi.Repositories.BuildingConfiguration;
 using TowerApi.Repositories.BuildingFloor;
+using TowerApi.Repositories.BuildingStaircase;
 using TowerApi.Repositories.DataBase;
 using TowerApi.Repositories.EmployeeAssignments;
 using TowerApi.Repositories.Employees;
@@ -70,8 +71,8 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IPricingRuleRepository,PricingRuleRepository>();
             _services.AddScoped<IBuildingConfigurationRepository,BuildingConfigurationRepository>();
             _services.AddScoped<IBuildingFloorRepository,BuildingFloorRepository>();
-
-
+            _services.AddScoped<IBuildingStaircaseRepository,BuildingStaircaseRepository>();
+            
             return _services;
         }
     }

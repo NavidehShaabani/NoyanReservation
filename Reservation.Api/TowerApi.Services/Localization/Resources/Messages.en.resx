@@ -354,6 +354,60 @@
   <data name="Buildings.ReferenceNotFound" xml:space="preserve">
     <value>One of the specified organizations or buildings was not found or has been deleted.</value>
   </data>
+  <data name="BuildingStaircases.BulkSaveSuccessfully" xml:space="preserve">
+    <value>The staircases were saved successfully.</value>
+  </data>
+  <data name="BuildingStaircases.Conflict" xml:space="preserve">
+    <value>The operation cannot be completed due to a data conflict.</value>
+  </data>
+  <data name="BuildingStaircases.CreatedSuccessfully" xml:space="preserve">
+    <value>The staircase was created successfully.</value>
+  </data>
+  <data name="BuildingStaircases.DeletedSuccessfully" xml:space="preserve">
+    <value>The staircase was deleted successfully.</value>
+  </data>
+  <data name="BuildingStaircases.DuplicateCodes" xml:space="preserve">
+    <value>Duplicate staircase codes were found in the submitted data.</value>
+  </data>
+  <data name="BuildingStaircases.DuplicateIds" xml:space="preserve">
+    <value>Duplicate IDs were found in the submitted data.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidBuildingId" xml:space="preserve">
+    <value>The building ID is invalid.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidBuildingStaircaseId" xml:space="preserve">
+    <value>The staircase ID is invalid.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidBulkData" xml:space="preserve">
+    <value>The submitted bulk data is invalid.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidDescription" xml:space="preserve">
+    <value>The description must not exceed 1000 characters.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidDisplayOrder" xml:space="preserve">
+    <value>The display order must be greater than zero.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidQueryRequest" xml:space="preserve">
+    <value>The query or pagination parameters are invalid.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidStaircaseCode" xml:space="preserve">
+    <value>The staircase code is required and must not exceed 60 characters.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidStaircaseName" xml:space="preserve">
+    <value>The staircase name is required and must not exceed 200 characters.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidStaircaseNameEn" xml:space="preserve">
+    <value>The English staircase name must not exceed 200 characters.</value>
+  </data>
+  <data name="BuildingStaircases.InvalidStaircaseType" xml:space="preserve">
+    <value>The staircase type is invalid.</value>
+  </data>
+  <data name="BuildingStaircases.NotFound" xml:space="preserve">
+    <value>The requested staircase was not found.</value>
+  </data>
+  <data name="BuildingStaircases.UpdatedSuccessfully" xml:space="preserve">
+    <value>The staircase was updated successfully.</value>
+  </data>
   <data name="ClassSeries.CoachRequired" xml:space="preserve">
     <value>Select an internal coach or provide an external coach name.</value>
   </data>
