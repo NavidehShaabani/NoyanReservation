@@ -36,13 +36,11 @@ namespace TowerApi.Models.BuildingConfiguration
         [Range(1, int.MaxValue)]
         public int DefaultUnitsPerFloor { get; set; } = 1;
 
-        [Range(1, 5)]
-        public byte FloorNamingType { get; set; } = 1;
+        public int FloorNamingType { get; set; } 
 
         public int FloorNumberStart { get; set; } = 1;
 
-        [Range(1, 5)]
-        public byte UnitNamingType { get; set; } = 1;
+        public int UnitNamingType { get; set; } 
 
         [Required]
         [StringLength(100)]

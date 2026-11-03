@@ -22,8 +22,7 @@ namespace TowerApi.Models.BuildingStaircase
         [StringLength(200)]
         public string? StaircaseNameEn { get; set; }
 
-        [Range(1, 5)]
-        public byte StaircaseType { get; set; } = 1;
+        public int StaircaseType { get; set; }
 
         public bool IsEmergency { get; set; }
 

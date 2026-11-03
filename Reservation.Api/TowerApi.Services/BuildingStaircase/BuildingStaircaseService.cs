@@ -21,9 +21,7 @@ namespace TowerApi.Services.BuildingStaircase
                 request.PageNumber < 1 ||
                 request.PageSize < 1 ||
                 request.PageSize > 500 ||
-                (request.BuildingId.HasValue && request.BuildingId.Value <= 0) ||
-                (request.StaircaseType.HasValue &&
-                 (request.StaircaseType.Value < 1 || request.StaircaseType.Value > 5)))
+                (request.BuildingId.HasValue && request.BuildingId.Value <= 0))
             {
                 return (400, "BuildingStaircases.InvalidQueryRequest", null);
             }
@@ -226,9 +224,6 @@ namespace TowerApi.Services.BuildingStaircase
 
             if (item.StaircaseNameEn?.Length > 200)
                 return "BuildingStaircases.InvalidStaircaseNameEn";
-
-            if (item.StaircaseType < 1 || item.StaircaseType > 5)
-                return "BuildingStaircases.InvalidStaircaseType";
 
             if (item.Description?.Length > 1000)
                 return "BuildingStaircases.InvalidDescription";

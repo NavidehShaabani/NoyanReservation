@@ -199,9 +199,9 @@ namespace TowerApi.Repositories.BuildingConfiguration
             table.Columns.Add("StaircaseCount", typeof(int));
             table.Columns.Add("ElevatorCount", typeof(int));
             table.Columns.Add("DefaultUnitsPerFloor", typeof(int));
-            table.Columns.Add("FloorNamingType", typeof(byte));
+            table.Columns.Add("FloorNamingType", typeof(int));
             table.Columns.Add("FloorNumberStart", typeof(int));
-            table.Columns.Add("UnitNamingType", typeof(byte));
+            table.Columns.Add("UnitNamingType", typeof(int));
             table.Columns.Add("UnitNumberPattern", typeof(string));
             table.Columns.Add("UnitLetterStart", typeof(string));
             table.Columns.Add("UnitLetterEnd", typeof(string));

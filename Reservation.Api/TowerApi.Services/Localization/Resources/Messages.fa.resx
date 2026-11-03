@@ -1020,4 +1020,70 @@
   <data name="Units.UpdatedSuccessfully" xml:space="preserve">
     <value>اطلاعات واحد با موفقیت ویرایش شد.</value>
   </data>
+  <data name="UnitStaircases.BulkSaveSuccessfully" xml:space="preserve">
+    <value>ارتباط‌های واحدها با موفقیت ذخیره شدند.</value>
+  </data>
+  <data name="UnitStaircases.CreatedSuccessfully" xml:space="preserve">
+    <value>ارتباط واحد و راه‌پله با موفقیت ثبت شد.</value>
+  </data>
+  <data name="UnitStaircases.DeletedSuccessfully" xml:space="preserve">
+    <value>ارتباط واحد و راه‌پله با موفقیت غیرفعال شد.</value>
+  </data>
+  <data name="UnitStaircases.DuplicateIds" xml:space="preserve">
+    <value>شناسه تکراری در اطلاعات ارسالی وجود دارد.</value>
+  </data>
+  <data name="UnitStaircases.DuplicateRelation" xml:space="preserve">
+    <value>این ارتباط قبلاً ثبت شده است.</value>
+  </data>
+  <data name="UnitStaircases.FloorMismatch" xml:space="preserve">
+    <value>طبقه انتخاب‌شده با طبقه واحد مطابقت ندارد.</value>
+  </data>
+  <data name="UnitStaircases.FloorNotFound" xml:space="preserve">
+    <value>طبقه موردنظر یافت نشد.</value>
+  </data>
+  <data name="UnitStaircases.FloorStaircaseNotAssigned" xml:space="preserve">
+    <value>این راه‌پله برای طبقه انتخاب‌شده تعریف نشده است.</value>
+  </data>
+  <data name="UnitStaircases.InvalidBuildingFloorId" xml:space="preserve">
+    <value>شناسه طبقه نامعتبر است.</value>
+  </data>
+  <data name="UnitStaircases.InvalidBuildingStaircaseId" xml:space="preserve">
+    <value>شناسه راه‌پله نامعتبر است.</value>
+  </data>
+  <data name="UnitStaircases.InvalidBulkData" xml:space="preserve">
+    <value>اطلاعات ارسالی برای ثبت گروهی نامعتبر است.</value>
+  </data>
+  <data name="UnitStaircases.InvalidId" xml:space="preserve">
+    <value>شناسه ارتباط واحد و راه‌پله نامعتبر است.</value>
+  </data>
+  <data name="UnitStaircases.InvalidQueryRequest" xml:space="preserve">
+    <value>اطلاعات فیلتر یا صفحه‌بندی نامعتبر است.</value>
+  </data>
+  <data name="UnitStaircases.InvalidUnitId" xml:space="preserve">
+    <value>شناسه واحد نامعتبر است.</value>
+  </data>
+  <data name="UnitStaircases.MultiplePrimaryForUnit" xml:space="preserve">
+    <value>هر واحد فقط می‌تواند یک راه‌پله اصلی فعال داشته باشد.</value>
+  </data>
+  <data name="UnitStaircases.NotFound" xml:space="preserve">
+    <value>ارتباط موردنظر یافت نشد.</value>
+  </data>
+  <data name="UnitStaircases.PrimaryAlreadyExists" xml:space="preserve">
+    <value>برای این واحد قبلاً یک راه‌پله اصلی فعال تعریف شده است.</value>
+  </data>
+  <data name="UnitStaircases.StaircaseInactive" xml:space="preserve">
+    <value>راه‌پله غیرفعال یا حذف شده است.</value>
+  </data>
+  <data name="UnitStaircases.StaircaseNotFound" xml:space="preserve">
+    <value>راه‌پله موردنظر یافت نشد.</value>
+  </data>
+  <data name="UnitStaircases.UnitInactive" xml:space="preserve">
+    <value>واحد غیرفعال یا حذف شده است.</value>
+  </data>
+  <data name="UnitStaircases.UnitNotFound" xml:space="preserve">
+    <value>واحد موردنظر یافت نشد.</value>
+  </data>
+  <data name="UnitStaircases.UpdatedSuccessfully" xml:space="preserve">
+    <value>ارتباط واحد و راه‌پله با موفقیت ویرایش شد.</value>
+  </data>
 </root>

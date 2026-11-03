@@ -33,6 +33,7 @@ using TowerApi.Repositories.SessionRepository;
 using TowerApi.Repositories.Signup;
 using TowerApi.Repositories.Spaces;
 using TowerApi.Repositories.Unit;
+using TowerApi.Repositories.UnitStaircase;
 
 namespace TowerApi.Repositories.Extensions
 {
@@ -74,6 +75,8 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IBuildingFloorRepository,BuildingFloorRepository>();
             _services.AddScoped<IBuildingStaircaseRepository,BuildingStaircaseRepository>();
             _services.AddScoped<IBuildingFloorStaircaseRepository,BuildingFloorStaircaseRepository>();
+            _services.AddScoped<IUnitStaircaseRepository,UnitStaircaseRepository>();
+
             return _services;
         }
     }

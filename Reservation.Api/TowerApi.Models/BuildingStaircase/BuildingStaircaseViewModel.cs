@@ -13,7 +13,7 @@ namespace TowerApi.Models.BuildingStaircase
 
         public string? StaircaseNameEn { get; set; }
 
-        public byte StaircaseType { get; set; }
+        public int StaircaseType { get; set; }
 
         public bool IsEmergency { get; set; }
 

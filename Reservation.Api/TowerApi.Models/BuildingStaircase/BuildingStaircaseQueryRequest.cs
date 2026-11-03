@@ -10,8 +10,7 @@ namespace TowerApi.Models.BuildingStaircase
 
         public string? Search { get; set; }
 
-        [Range(1, 5)]
-        public byte? StaircaseType { get; set; }
+        public int StaircaseType { get; set; }
 
         public bool? IsEmergency { get; set; }
 

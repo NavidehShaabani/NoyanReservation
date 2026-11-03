@@ -19,11 +19,11 @@ namespace TowerApi.Models.BuildingConfiguration
 
         public int DefaultUnitsPerFloor { get; set; }
 
-        public byte FloorNamingType { get; set; }
+        public int FloorNamingType { get; set; }
 
         public int FloorNumberStart { get; set; }
 
-        public byte UnitNamingType { get; set; }
+        public int UnitNamingType { get; set; }
 
         public string UnitNumberPattern { get; set; } = string.Empty;
 

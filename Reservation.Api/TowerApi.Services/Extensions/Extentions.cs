@@ -31,6 +31,7 @@ using TowerApi.Services.Profile;
 using TowerApi.Services.Signup;
 using TowerApi.Services.Spaces;
 using TowerApi.Services.Unit;
+using TowerApi.Services.UnitStaircase;
 
 namespace TowerApi.Services.Extensions
 {
@@ -71,6 +72,8 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IBuildingFloorService,BuildingFloorService>();
             _services.AddScoped<IBuildingStaircaseService,BuildingStaircaseService>();
             _services.AddScoped<IBuildingFloorStaircaseService,BuildingFloorStaircaseService>();
+            _services.AddScoped<IUnitStaircaseService,UnitStaircaseService>();
+
             return _services;
         }
     }

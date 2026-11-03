@@ -1020,4 +1020,70 @@
   <data name="Units.UpdatedSuccessfully" xml:space="preserve">
     <value>The unit was updated successfully.</value>
   </data>
+  <data name="UnitStaircases.BulkSaveSuccessfully" xml:space="preserve">
+    <value>The unit-staircase relations were saved successfully.</value>
+  </data>
+  <data name="UnitStaircases.CreatedSuccessfully" xml:space="preserve">
+    <value>The unit-staircase relation was created successfully.</value>
+  </data>
+  <data name="UnitStaircases.DeletedSuccessfully" xml:space="preserve">
+    <value>The unit-staircase relation was deactivated successfully.</value>
+  </data>
+  <data name="UnitStaircases.DuplicateIds" xml:space="preserve">
+    <value>Duplicate IDs were found in the submitted data.</value>
+  </data>
+  <data name="UnitStaircases.DuplicateRelation" xml:space="preserve">
+    <value>This relation already exists.</value>
+  </data>
+  <data name="UnitStaircases.FloorMismatch" xml:space="preserve">
+    <value>The selected floor does not match the unit's floor.</value>
+  </data>
+  <data name="UnitStaircases.FloorNotFound" xml:space="preserve">
+    <value>The requested floor was not found.</value>
+  </data>
+  <data name="UnitStaircases.FloorStaircaseNotAssigned" xml:space="preserve">
+    <value>This staircase is not assigned to the selected floor.</value>
+  </data>
+  <data name="UnitStaircases.InvalidBuildingFloorId" xml:space="preserve">
+    <value>The floor ID is invalid.</value>
+  </data>
+  <data name="UnitStaircases.InvalidBuildingStaircaseId" xml:space="preserve">
+    <value>The staircase ID is invalid.</value>
+  </data>
+  <data name="UnitStaircases.InvalidBulkData" xml:space="preserve">
+    <value>The submitted bulk data is invalid.</value>
+  </data>
+  <data name="UnitStaircases.InvalidId" xml:space="preserve">
+    <value>The unit-staircase relation ID is invalid.</value>
+  </data>
+  <data name="UnitStaircases.InvalidQueryRequest" xml:space="preserve">
+    <value>The query or pagination parameters are invalid.</value>
+  </data>
+  <data name="UnitStaircases.InvalidUnitId" xml:space="preserve">
+    <value>The unit ID is invalid.</value>
+  </data>
+  <data name="UnitStaircases.MultiplePrimaryForUnit" xml:space="preserve">
+    <value>A unit can have only one active primary staircase.</value>
+  </data>
+  <data name="UnitStaircases.NotFound" xml:space="preserve">
+    <value>The requested relation was not found.</value>
+  </data>
+  <data name="UnitStaircases.PrimaryAlreadyExists" xml:space="preserve">
+    <value>An active primary staircase is already assigned to this unit.</value>
+  </data>
+  <data name="UnitStaircases.StaircaseInactive" xml:space="preserve">
+    <value>The staircase is inactive or deleted.</value>
+  </data>
+  <data name="UnitStaircases.StaircaseNotFound" xml:space="preserve">
+    <value>The requested staircase was not found.</value>
+  </data>
+  <data name="UnitStaircases.UnitInactive" xml:space="preserve">
+    <value>The unit is inactive or deleted.</value>
+  </data>
+  <data name="UnitStaircases.UnitNotFound" xml:space="preserve">
+    <value>The requested unit was not found.</value>
+  </data>
+  <data name="UnitStaircases.UpdatedSuccessfully" xml:space="preserve">
+    <value>The unit-staircase relation was updated successfully.</value>
+  </data>
 </root>

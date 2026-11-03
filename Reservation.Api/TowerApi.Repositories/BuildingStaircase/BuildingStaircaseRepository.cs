@@ -88,7 +88,7 @@ namespace TowerApi.Repositories.BuildingStaircase
             parameters.Add("@BuildingStaircaseId", buildingStaircaseId, DbType.Int64);
             parameters.Add("@BuildingId", null, DbType.Int64);
             parameters.Add("@Search", null, DbType.String);
-            parameters.Add("@StaircaseType", null, DbType.Byte);
+            parameters.Add("@StaircaseType", null, DbType.Int32);
             parameters.Add("@IsEmergency", null, DbType.Boolean);
             parameters.Add("@IsActive", null, DbType.Boolean);
             parameters.Add("@IncludeDeleted", includeDeleted, DbType.Boolean);
@@ -119,7 +119,7 @@ namespace TowerApi.Repositories.BuildingStaircase
             parameters.Add("@BuildingStaircaseId", null, DbType.Int64);
             parameters.Add("@BuildingId", request.BuildingId, DbType.Int64);
             parameters.Add("@Search", request.Search, DbType.String);
-            parameters.Add("@StaircaseType", request.StaircaseType, DbType.Byte);
+            parameters.Add("@StaircaseType", request.StaircaseType, DbType.Int32);
             parameters.Add("@IsEmergency", request.IsEmergency, DbType.Boolean);
             parameters.Add("@IsActive", request.IsActive, DbType.Boolean);
             parameters.Add("@IncludeDeleted", request.IncludeDeleted, DbType.Boolean);
@@ -177,7 +177,7 @@ namespace TowerApi.Repositories.BuildingStaircase
             parameters.Add("@StaircaseCode", request.StaircaseCode, DbType.String, size: 60);
             parameters.Add("@StaircaseName", request.StaircaseName, DbType.String, size: 200);
             parameters.Add("@StaircaseNameEn", request.StaircaseNameEn, DbType.String, size: 200);
-            parameters.Add("@StaircaseType", request.StaircaseType, DbType.Byte);
+            parameters.Add("@StaircaseType", request.StaircaseType, DbType.Int32);
             parameters.Add("@IsEmergency", request.IsEmergency, DbType.Boolean);
             parameters.Add("@Description", request.Description, DbType.String, size: 1000);
             parameters.Add("@DisplayOrder", request.DisplayOrder, DbType.Int32);
@@ -205,7 +205,7 @@ namespace TowerApi.Repositories.BuildingStaircase
             table.Columns.Add("StaircaseCode", typeof(string));
             table.Columns.Add("StaircaseName", typeof(string));
             table.Columns.Add("StaircaseNameEn", typeof(string));
-            table.Columns.Add("StaircaseType", typeof(byte));
+            table.Columns.Add("StaircaseType", typeof(int));
             table.Columns.Add("IsEmergency", typeof(bool));
             table.Columns.Add("Description", typeof(string));
             table.Columns.Add("DisplayOrder", typeof(int));
