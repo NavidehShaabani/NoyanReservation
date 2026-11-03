@@ -333,6 +333,57 @@
   <data name="BuildingFloors.ReferenceNotFound" xml:space="preserve">
     <value>The specified building or reference record was not found.</value>
   </data>
+  <data name="BuildingFloorStaircases.BuildingNotFound" xml:space="preserve">
+    <value>The requested building was not found.</value>
+  </data>
+  <data name="BuildingFloorStaircases.BulkSaveSuccessfully" xml:space="preserve">
+    <value>The floor-staircase mappings were saved successfully.</value>
+  </data>
+  <data name="BuildingFloorStaircases.Conflict" xml:space="preserve">
+    <value>This mapping already exists or conflicts with existing data.</value>
+  </data>
+  <data name="BuildingFloorStaircases.CreatedSuccessfully" xml:space="preserve">
+    <value>The floor-staircase mapping was created successfully.</value>
+  </data>
+  <data name="BuildingFloorStaircases.DeletedSuccessfully" xml:space="preserve">
+    <value>The floor-staircase mapping was deactivated successfully.</value>
+  </data>
+  <data name="BuildingFloorStaircases.DuplicateIds" xml:space="preserve">
+    <value>Duplicate IDs were found in the submitted data.</value>
+  </data>
+  <data name="BuildingFloorStaircases.DuplicateMappings" xml:space="preserve">
+    <value>Duplicate floor-staircase mappings were found in the submitted data.</value>
+  </data>
+  <data name="BuildingFloorStaircases.FloorNotFound" xml:space="preserve">
+    <value>The requested floor was not found or is inactive.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidBuildingFloorId" xml:space="preserve">
+    <value>The floor ID is invalid.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidBuildingId" xml:space="preserve">
+    <value>The building ID is invalid.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidBuildingStaircaseId" xml:space="preserve">
+    <value>The staircase ID is invalid.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidBulkData" xml:space="preserve">
+    <value>The submitted bulk data is invalid.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidId" xml:space="preserve">
+    <value>The floor-staircase mapping ID is invalid.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidQueryRequest" xml:space="preserve">
+    <value>The query or pagination parameters are invalid.</value>
+  </data>
+  <data name="BuildingFloorStaircases.NotFound" xml:space="preserve">
+    <value>The requested floor-staircase mapping was not found.</value>
+  </data>
+  <data name="BuildingFloorStaircases.StaircaseNotFound" xml:space="preserve">
+    <value>The requested staircase was not found, is inactive, or has been deleted.</value>
+  </data>
+  <data name="BuildingFloorStaircases.UpdatedSuccessfully" xml:space="preserve">
+    <value>The floor-staircase mapping was updated successfully.</value>
+  </data>
   <data name="Buildings.BulkSaveSuccessfully" xml:space="preserve">
     <value>Buildings were saved and updated successfully.</value>
   </data>

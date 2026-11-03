@@ -15,6 +15,7 @@ using TowerApi.Services.Booking.SpaceBooking;
 using TowerApi.Services.Building;
 using TowerApi.Services.BuildingConfiguration;
 using TowerApi.Services.BuildingFloor;
+using TowerApi.Services.BuildingFloorStaircase;
 using TowerApi.Services.BuildingStaircase;
 using TowerApi.Services.EmployeeAssignments;
 using TowerApi.Services.Employees;
@@ -69,7 +70,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IBuildingConfigurationService,BuildingConfigurationService>();
             _services.AddScoped<IBuildingFloorService,BuildingFloorService>();
             _services.AddScoped<IBuildingStaircaseService,BuildingStaircaseService>();
-
+            _services.AddScoped<IBuildingFloorStaircaseService,BuildingFloorStaircaseService>();
             return _services;
         }
     }

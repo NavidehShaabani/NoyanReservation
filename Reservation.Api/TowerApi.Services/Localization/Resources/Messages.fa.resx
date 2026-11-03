@@ -909,4 +909,55 @@
   <data name="BuildingStaircases.UpdatedSuccessfully" xml:space="preserve">
     <value>اطلاعات راه‌پله با موفقیت ویرایش شد.</value>
   </data>
+  <data name="BuildingFloorStaircases.BuildingNotFound" xml:space="preserve">
+    <value>ساختمان موردنظر یافت نشد.</value>
+  </data>
+  <data name="BuildingFloorStaircases.BulkSaveSuccessfully" xml:space="preserve">
+    <value>ارتباط‌های طبقات و راه‌پله‌ها با موفقیت ذخیره شدند.</value>
+  </data>
+  <data name="BuildingFloorStaircases.Conflict" xml:space="preserve">
+    <value>این ارتباط قبلاً ثبت شده یا با اطلاعات موجود تداخل دارد.</value>
+  </data>
+  <data name="BuildingFloorStaircases.CreatedSuccessfully" xml:space="preserve">
+    <value>ارتباط طبقه و راه‌پله با موفقیت ثبت شد.</value>
+  </data>
+  <data name="BuildingFloorStaircases.DeletedSuccessfully" xml:space="preserve">
+    <value>ارتباط طبقه و راه‌پله با موفقیت غیرفعال شد.</value>
+  </data>
+  <data name="BuildingFloorStaircases.DuplicateIds" xml:space="preserve">
+    <value>شناسه تکراری در اطلاعات ارسالی وجود دارد.</value>
+  </data>
+  <data name="BuildingFloorStaircases.DuplicateMappings" xml:space="preserve">
+    <value>ارتباط تکراری بین طبقه و راه‌پله در اطلاعات ارسالی وجود دارد.</value>
+  </data>
+  <data name="BuildingFloorStaircases.FloorNotFound" xml:space="preserve">
+    <value>طبقه موردنظر یافت نشد یا غیرفعال است.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidBuildingFloorId" xml:space="preserve">
+    <value>شناسه طبقه نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidBuildingId" xml:space="preserve">
+    <value>شناسه ساختمان نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidBuildingStaircaseId" xml:space="preserve">
+    <value>شناسه راه‌پله نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidBulkData" xml:space="preserve">
+    <value>اطلاعات ارسالی برای ثبت گروهی نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidId" xml:space="preserve">
+    <value>شناسه ارتباط طبقه و راه‌پله نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloorStaircases.InvalidQueryRequest" xml:space="preserve">
+    <value>اطلاعات فیلتر یا صفحه‌بندی نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloorStaircases.NotFound" xml:space="preserve">
+    <value>ارتباط موردنظر بین طبقه و راه‌پله یافت نشد.</value>
+  </data>
+  <data name="BuildingFloorStaircases.StaircaseNotFound" xml:space="preserve">
+    <value>راه‌پله موردنظر یافت نشد یا غیرفعال و حذف‌شده است.</value>
+  </data>
+  <data name="BuildingFloorStaircases.UpdatedSuccessfully" xml:space="preserve">
+    <value>ارتباط طبقه و راه‌پله با موفقیت ویرایش شد.</value>
+  </data>
 </root>
