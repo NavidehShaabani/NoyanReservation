@@ -297,6 +297,42 @@
   <data name="BuildingConfigurations.InvalidUnitNumberPattern" xml:space="preserve">
     <value>The unit numbering pattern is invalid.</value>
   </data>
+  <data name="BuildingFloors.BulkSaveSuccessfully" xml:space="preserve">
+    <value>Building floors were saved successfully.</value>
+  </data>
+  <data name="BuildingFloors.Conflict" xml:space="preserve">
+    <value>The operation cannot be completed because of conflicting data or active units on the floor.</value>
+  </data>
+  <data name="BuildingFloors.DuplicateItems" xml:space="preserve">
+    <value>Duplicate items were found in the request.</value>
+  </data>
+  <data name="BuildingFloors.InvalidBuildingFloorId" xml:space="preserve">
+    <value>The building floor ID is invalid.</value>
+  </data>
+  <data name="BuildingFloors.InvalidBuildingId" xml:space="preserve">
+    <value>The building ID is invalid.</value>
+  </data>
+  <data name="BuildingFloors.InvalidData" xml:space="preserve">
+    <value>The submitted bulk data is invalid.</value>
+  </data>
+  <data name="BuildingFloors.InvalidFloorCode" xml:space="preserve">
+    <value>The floor code is invalid or missing.</value>
+  </data>
+  <data name="BuildingFloors.InvalidFloorName" xml:space="preserve">
+    <value>The floor name is invalid or missing.</value>
+  </data>
+  <data name="BuildingFloors.InvalidFloorNameEn" xml:space="preserve">
+    <value>The English floor name cannot exceed 200 characters.</value>
+  </data>
+  <data name="BuildingFloors.InvalidMaxUnits" xml:space="preserve">
+    <value>The floor capacity must be at least one unit.</value>
+  </data>
+  <data name="BuildingFloors.InvalidQueryRequest" xml:space="preserve">
+    <value>The building floor query request is invalid.</value>
+  </data>
+  <data name="BuildingFloors.ReferenceNotFound" xml:space="preserve">
+    <value>The specified building or reference record was not found.</value>
+  </data>
   <data name="Buildings.BulkSaveSuccessfully" xml:space="preserve">
     <value>Buildings were saved and updated successfully.</value>
   </data>

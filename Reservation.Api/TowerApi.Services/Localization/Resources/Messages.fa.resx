@@ -819,4 +819,40 @@
   <data name="Common.InvalidPaginationParameters" xml:space="preserve">
     <value>مقادیر صفحه‌بندی نامعتبر است.</value>
   </data>
+  <data name="BuildingFloors.BulkSaveSuccessfully" xml:space="preserve">
+    <value>اطلاعات طبقات با موفقیت ذخیره شد.</value>
+  </data>
+  <data name="BuildingFloors.Conflict" xml:space="preserve">
+    <value>به دلیل وجود تداخل اطلاعات یا واحد فعال روی طبقه، عملیات امکان‌پذیر نیست.</value>
+  </data>
+  <data name="BuildingFloors.DuplicateItems" xml:space="preserve">
+    <value>اطلاعات تکراری در درخواست وجود دارد.</value>
+  </data>
+  <data name="BuildingFloors.InvalidBuildingFloorId" xml:space="preserve">
+    <value>شناسه طبقه نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloors.InvalidBuildingId" xml:space="preserve">
+    <value>شناسه ساختمان نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloors.InvalidData" xml:space="preserve">
+    <value>اطلاعات ارسالی برای ذخیره گروهی نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloors.InvalidFloorCode" xml:space="preserve">
+    <value>کد طبقه نامعتبر است یا وارد نشده است.</value>
+  </data>
+  <data name="BuildingFloors.InvalidFloorName" xml:space="preserve">
+    <value>نام طبقه نامعتبر است یا وارد نشده است.</value>
+  </data>
+  <data name="BuildingFloors.InvalidFloorNameEn" xml:space="preserve">
+    <value>نام انگلیسی طبقه نمی‌تواند بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="BuildingFloors.InvalidMaxUnits" xml:space="preserve">
+    <value>ظرفیت طبقه باید حداقل یک واحد باشد.</value>
+  </data>
+  <data name="BuildingFloors.InvalidQueryRequest" xml:space="preserve">
+    <value>درخواست جستجوی طبقات نامعتبر است.</value>
+  </data>
+  <data name="BuildingFloors.ReferenceNotFound" xml:space="preserve">
+    <value>ساختمان یا رکورد مرجع موردنظر یافت نشد.</value>
+  </data>
 </root>
