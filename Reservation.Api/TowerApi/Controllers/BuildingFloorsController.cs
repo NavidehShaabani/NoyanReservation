@@ -129,7 +129,8 @@ namespace TowerApi.Controllers
             {
                 return Ok(_responseFactory.Success(
                     result.ResultCode,
-                    "Common.DeletedSuccessfully"));
+                    "Common.DeletedSuccessfully",
+                    (object?)null));
             }
 
             return CreateErrorResponse(
@@ -166,7 +167,8 @@ namespace TowerApi.Controllers
                     result.Code,
                     _responseFactory.Success(
                         result.Code,
-                        result.MessageKey));
+                        result.MessageKey,
+                        (object?)null));
             }
 
             return CreateErrorResponse(

@@ -1,11 +1,11 @@
-﻿
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TowerApi.Models.BuildingStaircase;
 using TowerApi.Services;
 using TowerApi.Services.ApiResponses;
+using TowerApi.Services.BuildingStaircase;
 using TowerApi.Services.Helper;
-using TowerApi.Services.Interfaces;
+
 
 namespace TowerApi.Controllers
 {

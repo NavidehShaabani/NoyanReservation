@@ -5,5 +5,8 @@
     <EmbeddedResource Update="Localization\Resources\Messages.en.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Resources\Messages.fa.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

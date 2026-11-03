@@ -1,7 +1,5 @@
-﻿
-using TowerApi.Models.BuildingStaircase;
+﻿using TowerApi.Models.BuildingStaircase;
 using TowerApi.Repositories.BuildingStaircase;
-using TowerApi.Services.Interfaces;
 
 namespace TowerApi.Services.BuildingStaircase
 {
