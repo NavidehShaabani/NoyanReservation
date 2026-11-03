@@ -768,4 +768,55 @@
   <data name="PricingRule.ValidRuleNotFound" xml:space="preserve">
     <value>قانون قیمت‌گذاری فعال و معتبری پیدا نشد.</value>
   </data>
+  <data name="BuildingConfigurations.BuildingNotFound" xml:space="preserve">
+    <value>ساختمان موردنظر یافت نشد.</value>
+  </data>
+  <data name="BuildingConfigurations.BulkSaveSuccessfully" xml:space="preserve">
+    <value>اطلاعات تنظیمات ساختمان با موفقیت ذخیره شد.</value>
+  </data>
+  <data name="BuildingConfigurations.Conflict" xml:space="preserve">
+    <value>به دلیل وجود مغایرت یا تداخل اطلاعات، عملیات انجام نشد.</value>
+  </data>
+  <data name="BuildingConfigurations.DuplicateItems" xml:space="preserve">
+    <value>اطلاعات تکراری در درخواست وجود دارد.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidAboveGroundFloorCount" xml:space="preserve">
+    <value>تعداد طبقات بالای همکف نمی‌تواند منفی باشد.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidBasementFloorCount" xml:space="preserve">
+    <value>تعداد طبقات زیرزمین نمی‌تواند منفی باشد.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidBuildingId" xml:space="preserve">
+    <value>شناسه ساختمان نامعتبر است.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidConfigurationId" xml:space="preserve">
+    <value>شناسه تنظیمات ساختمان نامعتبر است.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidData" xml:space="preserve">
+    <value>اطلاعات ارسالی برای ذخیره‌سازی گروهی نامعتبر است.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidDefaultUnitsPerFloor" xml:space="preserve">
+    <value>تعداد پیش‌فرض واحدها در هر طبقه باید حداقل یک باشد.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidElevatorCount" xml:space="preserve">
+    <value>تعداد آسانسورها نمی‌تواند منفی باشد.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidGroundFloorCount" xml:space="preserve">
+    <value>تعداد طبقات همکف نامعتبر است.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidQueryRequest" xml:space="preserve">
+    <value>درخواست جستجوی اطلاعات تنظیمات ساختمان نامعتبر است.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidStaircaseCount" xml:space="preserve">
+    <value>تعداد راه‌پله‌ها نمی‌تواند منفی باشد.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidUnitLetter" xml:space="preserve">
+    <value>حرف شروع یا پایان شماره‌گذاری واحدها نامعتبر است.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidUnitNumberPattern" xml:space="preserve">
+    <value>الگوی شماره‌گذاری واحدها نامعتبر است.</value>
+  </data>
+  <data name="Common.InvalidPaginationParameters" xml:space="preserve">
+    <value>مقادیر صفحه‌بندی نامعتبر است.</value>
+  </data>
 </root>

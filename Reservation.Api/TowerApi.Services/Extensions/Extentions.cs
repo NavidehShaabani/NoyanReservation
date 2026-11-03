@@ -13,6 +13,7 @@ using TowerApi.Services.Booking.ReservationEquipment;
 using TowerApi.Services.Booking.SpaceAmenities;
 using TowerApi.Services.Booking.SpaceBooking;
 using TowerApi.Services.Building;
+using TowerApi.Services.BuildingConfiguration;
 using TowerApi.Services.EmployeeAssignments;
 using TowerApi.Services.Employees;
 using TowerApi.Services.EmployeeTypeRoles;
@@ -63,6 +64,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IEnrollmentClassService,EnrollmentClassService>();
             _services.AddScoped<IEnrollmentWaitlistService,EnrollmentWaitlistService>();
             _services.AddScoped<IPricingRuleService,PricingRuleService>();
+            _services.AddScoped<IBuildingConfigurationService,BuildingConfigurationService>();
 
             return _services;
         }

@@ -12,6 +12,7 @@ using TowerApi.Repositories.Booking.ReservationEquipment;
 using TowerApi.Repositories.Booking.SpaceAmenities;
 using TowerApi.Repositories.Booking.SpaceBooking;
 using TowerApi.Repositories.Building;
+using TowerApi.Repositories.BuildingConfiguration;
 using TowerApi.Repositories.DataBase;
 using TowerApi.Repositories.EmployeeAssignments;
 using TowerApi.Repositories.Employees;
@@ -66,6 +67,8 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IEnrollmentClassRepository,EnrollmentClassRepository>();
             _services.AddScoped<IEnrollmentWaitlistRepository,EnrollmentWaitlistRepository>();
             _services.AddScoped<IPricingRuleRepository,PricingRuleRepository>();
+            _services.AddScoped<IBuildingConfigurationRepository,BuildingConfigurationRepository>();
+
             return _services;
         }
     }

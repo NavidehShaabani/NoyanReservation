@@ -1,4 +1,33 @@
-﻿//حتما یادت هست که کنترلرهای مربوط unit و Building و organazation  یادت هست الان می خوام ادامه بدم کنترلر نویسی رو میخوام با همون شرایط قبل و تمام مواردی که قبلاً تو طراحی استفاده کردیدم از مورد چندزبانه بودن که طراحی کردیم بحث repasitory , service, model و تمام موارد فوق پروسیجر زیر رو برام کنترلر کنی
+﻿/*
+الان انتظار دارم برای تمام پروسیجر هایی که تعرف کردی مثل  Building و organazation  اگر یادت هست کنترلر نویسی بکن با همون شرایط قبل و تمام مواردی که قبلاً تو طراحی استفاده کردیدم از مورد چندزبانه بودن که طراحی کردیم بحث repasitory , service, model و تمام موارد. اگر نیاز هست هم برات نمونه بفرستم که به مشکل نخوری و بتونی به راحتی طراحی رو انجام بدی این رو در نظر بگیر که شرایط من برای طراحی کنترلر به صورت نمونه زیر هست
+```
+TowerApi.Models
+└── Units
+    └── UnitsModels.cs
+
+TowerApi.Repositories
+└── Units
+    ├── IUnitsRepository.cs
+    └── UnitsRepository.cs
+
+TowerApi.Services
+└── Units
+    ├── IUnitsService.cs
+    └── UnitsService.cs
+
+TowerApi
+└── Controllers
+    └── UnitsController.cs
+```
+Modelها
+Repository Interface
+Repository Implementation
+Service Interface
+Service Implementation
+Controller
+ثبت وابستگی‌ها در Extension
+ترجمه پیام‌ها به فارسی و انگلیسی
+*/
 /*اگر جدول جدول space  به صورت زیر باشه و ما بخوایم برای اون insert , update , delete ,get  , get by id , active  رو بنویسیم همچنین ورودی های درج و بروزرسانی رو به صورت BULK از فرانت بگیرم یعنی با استفاده از User-defined Table Type بگیرم و تو یک پروسیجر هم ویارایش و هم ثبت کنم الان جدول رو برات می فرستم و الان نیاز دام که هم پروسیجر مربوط رو برام بنویسی و User-defined Table Type  رو برام آماده کنی همچنین می خوام برای type space  از جدول  look up استفاده کنی و تمام شرایط موجود در جدول space  رو بررسی کنی 
 همچنین نام و توضیحات رو به صورت فقط فارسی تو space گذاشتم می خوام دوتا ستون دیگه هم اضافه کنی که اونا رو هم به صورت انگلیسی بیارم تو آپدیت و اضافه کنم.
 همچنین یه پروسیچر get , get by id برایlook up می خوام 
@@ -39,6 +68,14 @@ delete
 ۷. Settlements
 
 مدیریت تسویه‌حساب‌ها.
+--================================
+ترتیب پیاده‌سازی را این‌طور پیش می‌برم:
+1. BuildingConfigurations
+2. BuildingFloors
+3. BuildingStaircases
+4. BuildingFloorStaircases
+5. Units و اصلاح نسخه فعلی
+6. UnitStaircases
 */
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;

@@ -249,6 +249,54 @@
   <data name="Booking.Space.NoConflict" xml:space="preserve">
     <value>No booking conflict exists in the selected time range.</value>
   </data>
+  <data name="BuildingConfigurations.BuildingNotFound" xml:space="preserve">
+    <value>The specified building was not found.</value>
+  </data>
+  <data name="BuildingConfigurations.BulkSaveSuccessfully" xml:space="preserve">
+    <value>Building configuration data was saved successfully.</value>
+  </data>
+  <data name="BuildingConfigurations.Conflict" xml:space="preserve">
+    <value>The operation could not be completed due to a data conflict.</value>
+  </data>
+  <data name="BuildingConfigurations.DuplicateItems" xml:space="preserve">
+    <value>Duplicate items were found in the request.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidAboveGroundFloorCount" xml:space="preserve">
+    <value>The above-ground floor count cannot be negative.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidBasementFloorCount" xml:space="preserve">
+    <value>The basement floor count cannot be negative.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidBuildingId" xml:space="preserve">
+    <value>The building ID is invalid.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidConfigurationId" xml:space="preserve">
+    <value>The building configuration ID is invalid.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidData" xml:space="preserve">
+    <value>The submitted bulk data is invalid.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidDefaultUnitsPerFloor" xml:space="preserve">
+    <value>The default number of units per floor must be at least one.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidElevatorCount" xml:space="preserve">
+    <value>The elevator count cannot be negative.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidGroundFloorCount" xml:space="preserve">
+    <value>The ground floor count is invalid.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidQueryRequest" xml:space="preserve">
+    <value>The building configuration query request is invalid.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidStaircaseCount" xml:space="preserve">
+    <value>The staircase count cannot be negative.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidUnitLetter" xml:space="preserve">
+    <value>The unit numbering start or end letter is invalid.</value>
+  </data>
+  <data name="BuildingConfigurations.InvalidUnitNumberPattern" xml:space="preserve">
+    <value>The unit numbering pattern is invalid.</value>
+  </data>
   <data name="Buildings.BulkSaveSuccessfully" xml:space="preserve">
     <value>Buildings were saved and updated successfully.</value>
   </data>
@@ -365,6 +413,9 @@
   </data>
   <data name="Common.InvalidId" xml:space="preserve">
     <value>The specified ID is invalid.</value>
+  </data>
+  <data name="Common.InvalidPaginationParameters" xml:space="preserve">
+    <value>The pagination parameters are invalid.</value>
   </data>
   <data name="Common.InvalidRequest" xml:space="preserve">
     <value>The submitted information is invalid.</value>
