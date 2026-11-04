@@ -27,6 +27,7 @@ using TowerApi.Repositories.Geo;
 using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.Organization;
 using TowerApi.Repositories.Pricing.CommissionPlan;
+using TowerApi.Repositories.Pricing.CommissionTier;
 using TowerApi.Repositories.Pricing.PricingRule;
 using TowerApi.Repositories.Profile;
 using TowerApi.Repositories.RefreshTokens;
@@ -78,7 +79,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IBuildingFloorStaircaseRepository,BuildingFloorStaircaseRepository>();
             _services.AddScoped<IUnitStaircaseRepository,UnitStaircaseRepository>();
             _services.AddScoped<ICommissionPlanRepository, CommissionPlanRepository>();
-
+            _services.AddScoped<ICommissionTierRepository,CommissionTierRepository>();
             return _services;
         }
     }

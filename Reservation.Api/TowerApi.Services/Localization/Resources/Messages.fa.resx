@@ -1122,4 +1122,28 @@
   <data name="CommissionPlan.UnsupportedMethod" xml:space="preserve">
     <value>روش محاسبه کارمزد پشتیبانی نمی‌شود.</value>
   </data>
+  <data name="CommissionTier.Deleted" xml:space="preserve">
+    <value>پلکان کارمزد با موفقیت حذف شد.</value>
+  </data>
+  <data name="CommissionTier.DuplicateOrder" xml:space="preserve">
+    <value>شماره ترتیب این پلکان قبلاً برای همین طرح کارمزد ثبت شده است.</value>
+  </data>
+  <data name="CommissionTier.InvalidAmount" xml:space="preserve">
+    <value>مقدار درصد یا مبلغ پلکان کارمزد نامعتبر است.</value>
+  </data>
+  <data name="CommissionTier.InvalidId" xml:space="preserve">
+    <value>شناسه پلکان کارمزد نامعتبر است.</value>
+  </data>
+  <data name="CommissionTier.InvalidPlanId" xml:space="preserve">
+    <value>شناسه طرح کارمزد نامعتبر است.</value>
+  </data>
+  <data name="CommissionTier.InvalidRange" xml:space="preserve">
+    <value>بازه تعداد شرکت‌کنندگان در پلکان کارمزد نامعتبر است.</value>
+  </data>
+  <data name="CommissionTier.NotFound" xml:space="preserve">
+    <value>پلکان کارمزد پیدا نشد.</value>
+  </data>
+  <data name="CommissionTier.Saved" xml:space="preserve">
+    <value>پلکان کارمزد با موفقیت ذخیره شد.</value>
+  </data>
 </root>

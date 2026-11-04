@@ -27,6 +27,7 @@ using TowerApi.Services.Geo;
 using TowerApi.Services.Localization;
 using TowerApi.Services.Organization;
 using TowerApi.Services.Pricing.CommissionPlan;
+using TowerApi.Services.Pricing.CommissionTier;
 using TowerApi.Services.Pricing.PricingRule;
 using TowerApi.Services.Profile;
 using TowerApi.Services.Signup;
@@ -75,6 +76,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IBuildingFloorStaircaseService,BuildingFloorStaircaseService>();
             _services.AddScoped<IUnitStaircaseService,UnitStaircaseService>();
             _services.AddScoped<ICommissionPlanService, CommissionPlanService>();
+            _services.AddScoped<ICommissionTierService,CommissionTierService>();
 
             return _services;
         }

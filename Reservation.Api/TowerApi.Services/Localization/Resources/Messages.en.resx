@@ -567,6 +567,30 @@
   <data name="CommissionPlan.UnsupportedMethod" xml:space="preserve">
     <value>The commission calculation method is not supported.</value>
   </data>
+  <data name="CommissionTier.Deleted" xml:space="preserve">
+    <value>The commission tier was deleted successfully.</value>
+  </data>
+  <data name="CommissionTier.DuplicateOrder" xml:space="preserve">
+    <value>This tier order already exists for the specified commission plan.</value>
+  </data>
+  <data name="CommissionTier.InvalidAmount" xml:space="preserve">
+    <value>The commission tier percentage or amount is invalid.</value>
+  </data>
+  <data name="CommissionTier.InvalidId" xml:space="preserve">
+    <value>The commission tier ID is invalid.</value>
+  </data>
+  <data name="CommissionTier.InvalidPlanId" xml:space="preserve">
+    <value>The commission plan ID is invalid.</value>
+  </data>
+  <data name="CommissionTier.InvalidRange" xml:space="preserve">
+    <value>The participant count range for this commission tier is invalid.</value>
+  </data>
+  <data name="CommissionTier.NotFound" xml:space="preserve">
+    <value>The commission tier was not found.</value>
+  </data>
+  <data name="CommissionTier.Saved" xml:space="preserve">
+    <value>The commission tier was saved successfully.</value>
+  </data>
   <data name="Common.Conflict" xml:space="preserve">
     <value>The requested operation conflicts with existing information.</value>
   </data>
