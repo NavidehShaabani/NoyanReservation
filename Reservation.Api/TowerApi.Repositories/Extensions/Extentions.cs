@@ -28,7 +28,9 @@ using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.Organization;
 using TowerApi.Repositories.Pricing.CommissionPlan;
 using TowerApi.Repositories.Pricing.CommissionTier;
+using TowerApi.Repositories.Pricing.FinancialTransaction;
 using TowerApi.Repositories.Pricing.PricingRule;
+using TowerApi.Repositories.Pricing.Settlements;
 using TowerApi.Repositories.Profile;
 using TowerApi.Repositories.RefreshTokens;
 using TowerApi.Repositories.SessionRepository;
@@ -80,6 +82,9 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IUnitStaircaseRepository,UnitStaircaseRepository>();
             _services.AddScoped<ICommissionPlanRepository, CommissionPlanRepository>();
             _services.AddScoped<ICommissionTierRepository,CommissionTierRepository>();
+            _services.AddScoped<IFinancialTransactionRepository, FinancialTransactionRepository>();
+            _services.AddScoped<ISettlementRepository, SettlementRepository>();
+
             return _services;
         }
     }

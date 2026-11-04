@@ -822,6 +822,51 @@
   <data name="EnrollmentWaitlist.StatusUpdatedSuccessfully" xml:space="preserve">
     <value>The waitlist entry status was successfully updated.</value>
   </data>
+  <data name="FinancialTransaction.Created" xml:space="preserve">
+    <value>The financial transaction was created successfully.</value>
+  </data>
+  <data name="FinancialTransaction.ExactlyOneReferenceRequired" xml:space="preserve">
+    <value>Exactly one of Booking ID or Enrollment ID must be specified.</value>
+  </data>
+  <data name="FinancialTransaction.ExternalReferenceTooLong" xml:space="preserve">
+    <value>The external reference must not exceed 200 characters.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidAmount" xml:space="preserve">
+    <value>The transaction amount must be greater than zero.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidCurrencyCode" xml:space="preserve">
+    <value>The currency code must contain exactly three characters.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidId" xml:space="preserve">
+    <value>The financial transaction ID is invalid.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidParticipantId" xml:space="preserve">
+    <value>The participant ID is invalid.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidReference" xml:space="preserve">
+    <value>The transaction reference ID is invalid.</value>
+  </data>
+  <data name="FinancialTransaction.ListRetrieved" xml:space="preserve">
+    <value>The financial transaction list was retrieved successfully.</value>
+  </data>
+  <data name="FinancialTransaction.NotesTooLong" xml:space="preserve">
+    <value>Notes must not exceed 1000 characters.</value>
+  </data>
+  <data name="FinancialTransaction.NotFound" xml:space="preserve">
+    <value>The requested financial transaction was not found.</value>
+  </data>
+  <data name="FinancialTransaction.Retrieved" xml:space="preserve">
+    <value>The financial transaction was retrieved successfully.</value>
+  </data>
+  <data name="FinancialTransaction.SaveFailed" xml:space="preserve">
+    <value>The financial transaction could not be saved.</value>
+  </data>
+  <data name="FinancialTransaction.StatusUpdated" xml:space="preserve">
+    <value>The financial transaction status was updated successfully.</value>
+  </data>
+  <data name="FinancialTransaction.Updated" xml:space="preserve">
+    <value>The financial transaction was updated successfully.</value>
+  </data>
   <data name="Geo.GeoIdRequired" xml:space="preserve">
     <value>The geographical location ID is required.</value>
   </data>
@@ -926,6 +971,51 @@
   </data>
   <data name="PricingRule.ValidRuleNotFound" xml:space="preserve">
     <value>No active and valid pricing rule was found.</value>
+  </data>
+  <data name="Settlement.Created" xml:space="preserve">
+    <value>The settlement was created successfully.</value>
+  </data>
+  <data name="Settlement.InvalidId" xml:space="preserve">
+    <value>The settlement ID is invalid.</value>
+  </data>
+  <data name="Settlement.InvalidNetAmount" xml:space="preserve">
+    <value>Net amount must equal gross amount minus commission amount.</value>
+  </data>
+  <data name="Settlement.InvalidOrgId" xml:space="preserve">
+    <value>The organization ID is invalid.</value>
+  </data>
+  <data name="Settlement.InvalidRelatedId" xml:space="preserve">
+    <value>One of the related settlement IDs is invalid.</value>
+  </data>
+  <data name="Settlement.ListRetrieved" xml:space="preserve">
+    <value>The settlement list was retrieved successfully.</value>
+  </data>
+  <data name="Settlement.NegativeAmount" xml:space="preserve">
+    <value>Settlement amounts cannot be negative.</value>
+  </data>
+  <data name="Settlement.NotesTooLong" xml:space="preserve">
+    <value>Notes must not exceed 1000 characters.</value>
+  </data>
+  <data name="Settlement.NotFound" xml:space="preserve">
+    <value>The requested settlement was not found.</value>
+  </data>
+  <data name="Settlement.RecipientNameTooLong" xml:space="preserve">
+    <value>The external recipient name must not exceed 200 characters.</value>
+  </data>
+  <data name="Settlement.RecipientRequired" xml:space="preserve">
+    <value>A settlement recipient must be specified.</value>
+  </data>
+  <data name="Settlement.Retrieved" xml:space="preserve">
+    <value>The settlement was retrieved successfully.</value>
+  </data>
+  <data name="Settlement.SaveFailed" xml:space="preserve">
+    <value>The settlement could not be saved.</value>
+  </data>
+  <data name="Settlement.StatusUpdated" xml:space="preserve">
+    <value>The settlement status was updated successfully.</value>
+  </data>
+  <data name="Settlement.Updated" xml:space="preserve">
+    <value>The settlement was updated successfully.</value>
   </data>
   <data name="Signup.AlreadyActivated" xml:space="preserve">
     <value>This account has already been activated.</value>

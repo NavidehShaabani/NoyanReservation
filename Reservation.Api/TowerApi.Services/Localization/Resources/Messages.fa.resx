@@ -1146,4 +1146,94 @@
   <data name="CommissionTier.Saved" xml:space="preserve">
     <value>پلکان کارمزد با موفقیت ذخیره شد.</value>
   </data>
+  <data name="FinancialTransaction.Created" xml:space="preserve">
+    <value>تراکنش مالی با موفقیت ثبت شد.</value>
+  </data>
+  <data name="FinancialTransaction.ExactlyOneReferenceRequired" xml:space="preserve">
+    <value>باید دقیقاً یکی از شناسه‌های رزرو یا ثبت‌نام مشخص شود.</value>
+  </data>
+  <data name="FinancialTransaction.ExternalReferenceTooLong" xml:space="preserve">
+    <value>شماره مرجع خارجی نباید بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidAmount" xml:space="preserve">
+    <value>مبلغ تراکنش باید بیشتر از صفر باشد.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidCurrencyCode" xml:space="preserve">
+    <value>کد ارز باید دقیقاً سه کاراکتر باشد.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidId" xml:space="preserve">
+    <value>شناسه تراکنش مالی معتبر نیست.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidParticipantId" xml:space="preserve">
+    <value>شناسه شرکت‌کننده معتبر نیست.</value>
+  </data>
+  <data name="FinancialTransaction.InvalidReference" xml:space="preserve">
+    <value>شناسه مرجع تراکنش معتبر نیست.</value>
+  </data>
+  <data name="FinancialTransaction.ListRetrieved" xml:space="preserve">
+    <value>فهرست تراکنش‌های مالی با موفقیت دریافت شد.</value>
+  </data>
+  <data name="FinancialTransaction.NotesTooLong" xml:space="preserve">
+    <value>توضیحات نباید بیشتر از ۱۰۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="FinancialTransaction.NotFound" xml:space="preserve">
+    <value>تراکنش مالی موردنظر پیدا نشد.</value>
+  </data>
+  <data name="FinancialTransaction.Retrieved" xml:space="preserve">
+    <value>اطلاعات تراکنش مالی با موفقیت دریافت شد.</value>
+  </data>
+  <data name="FinancialTransaction.SaveFailed" xml:space="preserve">
+    <value>ثبت یا ویرایش تراکنش مالی انجام نشد.</value>
+  </data>
+  <data name="FinancialTransaction.StatusUpdated" xml:space="preserve">
+    <value>وضعیت تراکنش مالی با موفقیت تغییر کرد.</value>
+  </data>
+  <data name="FinancialTransaction.Updated" xml:space="preserve">
+    <value>تراکنش مالی با موفقیت ویرایش شد.</value>
+  </data>
+  <data name="Settlement.Created" xml:space="preserve">
+    <value>تسویه با موفقیت ثبت شد.</value>
+  </data>
+  <data name="Settlement.InvalidId" xml:space="preserve">
+    <value>شناسه تسویه معتبر نیست.</value>
+  </data>
+  <data name="Settlement.InvalidNetAmount" xml:space="preserve">
+    <value>مبلغ خالص باید برابر مبلغ ناخالص منهای کارمزد باشد.</value>
+  </data>
+  <data name="Settlement.InvalidOrgId" xml:space="preserve">
+    <value>شناسه سازمان معتبر نیست.</value>
+  </data>
+  <data name="Settlement.InvalidRelatedId" xml:space="preserve">
+    <value>یکی از شناسه‌های مرتبط با تسویه معتبر نیست.</value>
+  </data>
+  <data name="Settlement.ListRetrieved" xml:space="preserve">
+    <value>فهرست تسویه‌ها با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Settlement.NegativeAmount" xml:space="preserve">
+    <value>مبالغ تسویه نمی‌توانند منفی باشند.</value>
+  </data>
+  <data name="Settlement.NotesTooLong" xml:space="preserve">
+    <value>توضیحات نباید بیشتر از ۱۰۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="Settlement.NotFound" xml:space="preserve">
+    <value>رکورد تسویه موردنظر پیدا نشد.</value>
+  </data>
+  <data name="Settlement.RecipientNameTooLong" xml:space="preserve">
+    <value>نام گیرنده خارجی نباید بیشتر از ۲۰۰ کاراکتر باشد.</value>
+  </data>
+  <data name="Settlement.RecipientRequired" xml:space="preserve">
+    <value>گیرنده تسویه باید مشخص شود.</value>
+  </data>
+  <data name="Settlement.Retrieved" xml:space="preserve">
+    <value>اطلاعات تسویه با موفقیت دریافت شد.</value>
+  </data>
+  <data name="Settlement.SaveFailed" xml:space="preserve">
+    <value>ثبت یا ویرایش تسویه انجام نشد.</value>
+  </data>
+  <data name="Settlement.StatusUpdated" xml:space="preserve">
+    <value>وضعیت تسویه با موفقیت تغییر کرد.</value>
+  </data>
+  <data name="Settlement.Updated" xml:space="preserve">
+    <value>تسویه با موفقیت ویرایش شد.</value>
+  </data>
 </root>
