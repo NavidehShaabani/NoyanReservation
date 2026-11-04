@@ -531,6 +531,42 @@
   <data name="ClassSession.TitleTooLong" xml:space="preserve">
     <value>The session title cannot exceed 200 characters.</value>
   </data>
+  <data name="CommissionPlan.ActivePlanNotFound" xml:space="preserve">
+    <value>No active and valid commission plan was found.</value>
+  </data>
+  <data name="CommissionPlan.Calculated" xml:space="preserve">
+    <value>The commission was calculated successfully.</value>
+  </data>
+  <data name="CommissionPlan.Deleted" xml:space="preserve">
+    <value>The commission plan was deleted successfully.</value>
+  </data>
+  <data name="CommissionPlan.InvalidAmount" xml:space="preserve">
+    <value>The commission amount is invalid.</value>
+  </data>
+  <data name="CommissionPlan.InvalidCalculationInput" xml:space="preserve">
+    <value>The participant count or commission base amount is invalid.</value>
+  </data>
+  <data name="CommissionPlan.InvalidDateRange" xml:space="preserve">
+    <value>The commission plan validity period is invalid.</value>
+  </data>
+  <data name="CommissionPlan.InvalidId" xml:space="preserve">
+    <value>The commission plan ID is invalid.</value>
+  </data>
+  <data name="CommissionPlan.InvalidInput" xml:space="preserve">
+    <value>The commission plan input is invalid.</value>
+  </data>
+  <data name="CommissionPlan.NotFound" xml:space="preserve">
+    <value>The commission plan was not found.</value>
+  </data>
+  <data name="CommissionPlan.Saved" xml:space="preserve">
+    <value>The commission plan was saved successfully.</value>
+  </data>
+  <data name="CommissionPlan.TierNotFound" xml:space="preserve">
+    <value>No commission tier matches the participant count.</value>
+  </data>
+  <data name="CommissionPlan.UnsupportedMethod" xml:space="preserve">
+    <value>The commission calculation method is not supported.</value>
+  </data>
   <data name="Common.Conflict" xml:space="preserve">
     <value>The requested operation conflicts with existing information.</value>
   </data>

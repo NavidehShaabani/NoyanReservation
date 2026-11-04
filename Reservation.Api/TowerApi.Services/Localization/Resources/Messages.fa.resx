@@ -1086,4 +1086,40 @@
   <data name="UnitStaircases.UpdatedSuccessfully" xml:space="preserve">
     <value>ارتباط واحد و راه‌پله با موفقیت ویرایش شد.</value>
   </data>
+  <data name="CommissionPlan.ActivePlanNotFound" xml:space="preserve">
+    <value>طرح کارمزد فعال و معتبر پیدا نشد.</value>
+  </data>
+  <data name="CommissionPlan.Calculated" xml:space="preserve">
+    <value>کارمزد با موفقیت محاسبه شد.</value>
+  </data>
+  <data name="CommissionPlan.Deleted" xml:space="preserve">
+    <value>طرح کارمزد با موفقیت حذف شد.</value>
+  </data>
+  <data name="CommissionPlan.InvalidAmount" xml:space="preserve">
+    <value>مقدار کارمزد نامعتبر است.</value>
+  </data>
+  <data name="CommissionPlan.InvalidCalculationInput" xml:space="preserve">
+    <value>تعداد شرکت‌کنندگان یا مبلغ مبنای محاسبه نامعتبر است.</value>
+  </data>
+  <data name="CommissionPlan.InvalidDateRange" xml:space="preserve">
+    <value>بازه اعتبار طرح کارمزد نامعتبر است.</value>
+  </data>
+  <data name="CommissionPlan.InvalidId" xml:space="preserve">
+    <value>شناسه طرح کارمزد نامعتبر است.</value>
+  </data>
+  <data name="CommissionPlan.InvalidInput" xml:space="preserve">
+    <value>اطلاعات ورودی طرح کارمزد نامعتبر است.</value>
+  </data>
+  <data name="CommissionPlan.NotFound" xml:space="preserve">
+    <value>طرح کارمزد پیدا نشد.</value>
+  </data>
+  <data name="CommissionPlan.Saved" xml:space="preserve">
+    <value>طرح کارمزد با موفقیت ذخیره شد.</value>
+  </data>
+  <data name="CommissionPlan.TierNotFound" xml:space="preserve">
+    <value>پلکان متناسب با تعداد شرکت‌کنندگان پیدا نشد.</value>
+  </data>
+  <data name="CommissionPlan.UnsupportedMethod" xml:space="preserve">
+    <value>روش محاسبه کارمزد پشتیبانی نمی‌شود.</value>
+  </data>
 </root>

@@ -26,6 +26,7 @@ using TowerApi.Repositories.Enrollment.EnrollmentWaitlist;
 using TowerApi.Repositories.Geo;
 using TowerApi.Repositories.LoginAttempt;
 using TowerApi.Repositories.Organization;
+using TowerApi.Repositories.Pricing.CommissionPlan;
 using TowerApi.Repositories.Pricing.PricingRule;
 using TowerApi.Repositories.Profile;
 using TowerApi.Repositories.RefreshTokens;
@@ -76,6 +77,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IBuildingStaircaseRepository,BuildingStaircaseRepository>();
             _services.AddScoped<IBuildingFloorStaircaseRepository,BuildingFloorStaircaseRepository>();
             _services.AddScoped<IUnitStaircaseRepository,UnitStaircaseRepository>();
+            _services.AddScoped<ICommissionPlanRepository, CommissionPlanRepository>();
 
             return _services;
         }
