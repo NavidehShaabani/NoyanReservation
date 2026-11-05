@@ -1311,4 +1311,25 @@
   <data name="User.Invalid" xml:space="preserve">
     <value>شناسه کاربر معتبر نیست.</value>
   </data>
+  <data name="BuildingFloorElevator.DuplicateId" xml:space="preserve">
+    <value>شناسه ارتباط در اطلاعات ارسالی تکراری است.</value>
+  </data>
+  <data name="BuildingFloorElevator.DuplicateRelation" xml:space="preserve">
+    <value>ارتباط این آسانسور با این طبقه در اطلاعات ارسالی تکراری است.</value>
+  </data>
+  <data name="BuildingFloorElevator.EmptyBulkItems" xml:space="preserve">
+    <value>لیست ارتباط‌های طبقه و آسانسور برای ذخیره گروهی خالی است.</value>
+  </data>
+  <data name="BuildingFloorElevator.InvalidElevatorId" xml:space="preserve">
+    <value>شناسه آسانسور معتبر نیست.</value>
+  </data>
+  <data name="BuildingFloorElevator.InvalidFloorId" xml:space="preserve">
+    <value>شناسه طبقه معتبر نیست.</value>
+  </data>
+  <data name="BuildingFloorElevator.InvalidId" xml:space="preserve">
+    <value>شناسه ارتباط طبقه و آسانسور معتبر نیست.</value>
+  </data>
+  <data name="BuildingFloorElevator.InvalidRelation" xml:space="preserve">
+    <value>اطلاعات ارتباط طبقه و آسانسور معتبر نیست.</value>
+  </data>
 </root>

@@ -363,6 +363,27 @@
   <data name="BuildingElevator.NotFound" xml:space="preserve">
     <value>The requested elevator was not found.</value>
   </data>
+  <data name="BuildingFloorElevator.DuplicateId" xml:space="preserve">
+    <value>A relation ID is duplicated in the submitted data.</value>
+  </data>
+  <data name="BuildingFloorElevator.DuplicateRelation" xml:space="preserve">
+    <value>The relation between this elevator and floor is duplicated in the submitted data.</value>
+  </data>
+  <data name="BuildingFloorElevator.EmptyBulkItems" xml:space="preserve">
+    <value>The floor-elevator relation list for bulk save is empty</value>
+  </data>
+  <data name="BuildingFloorElevator.InvalidElevatorId" xml:space="preserve">
+    <value>The building elevator ID is invalid.</value>
+  </data>
+  <data name="BuildingFloorElevator.InvalidFloorId" xml:space="preserve">
+    <value>The building floor ID is invalid.</value>
+  </data>
+  <data name="BuildingFloorElevator.InvalidId" xml:space="preserve">
+    <value>The floor-elevator relation ID is invalid.</value>
+  </data>
+  <data name="BuildingFloorElevator.InvalidRelation" xml:space="preserve">
+    <value>The floor-elevator relation data is invalid.</value>
+  </data>
   <data name="BuildingFloors.BulkSaveSuccessfully" xml:space="preserve">
     <value>Building floors were saved successfully.</value>
   </data>

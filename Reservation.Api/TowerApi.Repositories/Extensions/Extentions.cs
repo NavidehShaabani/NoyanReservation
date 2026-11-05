@@ -15,6 +15,7 @@ using TowerApi.Repositories.Building;
 using TowerApi.Repositories.BuildingConfiguration;
 using TowerApi.Repositories.BuildingElevators;
 using TowerApi.Repositories.BuildingFloor;
+using TowerApi.Repositories.BuildingFloorElevator;
 using TowerApi.Repositories.BuildingFloorStaircase;
 using TowerApi.Repositories.BuildingStaircase;
 using TowerApi.Repositories.DataBase;
@@ -86,6 +87,8 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IFinancialTransactionRepository, FinancialTransactionRepository>();
             _services.AddScoped<ISettlementRepository, SettlementRepository>();
             _services.AddScoped<IBuildingElevatorRepository,BuildingElevatorRepository>();
+            _services.AddScoped<IBuildingFloorElevatorRepository,BuildingFloorElevatorRepository>();
+
             return _services;
         }
     }
