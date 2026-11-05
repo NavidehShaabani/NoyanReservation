@@ -13,6 +13,7 @@ using TowerApi.Repositories.Booking.SpaceAmenities;
 using TowerApi.Repositories.Booking.SpaceBooking;
 using TowerApi.Repositories.Building;
 using TowerApi.Repositories.BuildingConfiguration;
+using TowerApi.Repositories.BuildingElevators;
 using TowerApi.Repositories.BuildingFloor;
 using TowerApi.Repositories.BuildingFloorStaircase;
 using TowerApi.Repositories.BuildingStaircase;
@@ -84,7 +85,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<ICommissionTierRepository,CommissionTierRepository>();
             _services.AddScoped<IFinancialTransactionRepository, FinancialTransactionRepository>();
             _services.AddScoped<ISettlementRepository, SettlementRepository>();
-
+            _services.AddScoped<IBuildingElevatorRepository,BuildingElevatorRepository>();
             return _services;
         }
     }

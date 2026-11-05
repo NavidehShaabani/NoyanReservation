@@ -249,6 +249,9 @@
   <data name="Booking.Space.NoConflict" xml:space="preserve">
     <value>No booking conflict exists in the selected time range.</value>
   </data>
+  <data name="Building.InvalidId" xml:space="preserve">
+    <value>Invalid building ID.</value>
+  </data>
   <data name="BuildingConfigurations.BuildingNotFound" xml:space="preserve">
     <value>The specified building was not found.</value>
   </data>
@@ -296,6 +299,69 @@
   </data>
   <data name="BuildingConfigurations.InvalidUnitNumberPattern" xml:space="preserve">
     <value>The unit numbering pattern is invalid.</value>
+  </data>
+  <data name="BuildingElevator.AddSuccess" xml:space="preserve">
+    <value>Elevator created successfully.</value>
+  </data>
+  <data name="BuildingElevator.BulkEmpty" xml:space="preserve">
+    <value>The elevator list for bulk save is empty.</value>
+  </data>
+  <data name="BuildingElevator.BulkSaveSuccess" xml:space="preserve">
+    <value>Elevators saved successfully.</value>
+  </data>
+  <data name="BuildingElevator.DeleteSuccess" xml:space="preserve">
+    <value>Elevator deleted successfully.</value>
+  </data>
+  <data name="BuildingElevator.DuplicateCode" xml:space="preserve">
+    <value>This elevator code already exists in the building.</value>
+  </data>
+  <data name="BuildingElevator.DuplicateCodeInRequest" xml:space="preserve">
+    <value>Duplicate elevator codes were found in the request.</value>
+  </data>
+  <data name="BuildingElevator.DuplicateIdInRequest" xml:space="preserve">
+    <value>Duplicate elevator IDs were found in the request.</value>
+  </data>
+  <data name="BuildingElevator.EditSuccess" xml:space="preserve">
+    <value>Elevator updated successfully.</value>
+  </data>
+  <data name="BuildingElevator.HasDependencies" xml:space="preserve">
+    <value>The elevator cannot be deleted because it has floor or staircase associations.</value>
+  </data>
+  <data name="BuildingElevator.InvalidCapacity" xml:space="preserve">
+    <value>Elevator capacity must be greater than zero.</value>
+  </data>
+  <data name="BuildingElevator.InvalidCode" xml:space="preserve">
+    <value>Elevator code is required and cannot exceed 60 characters.</value>
+  </data>
+  <data name="BuildingElevator.InvalidDescription" xml:space="preserve">
+    <value>Elevator description cannot exceed 1000 characters.</value>
+  </data>
+  <data name="BuildingElevator.InvalidDisplayOrder" xml:space="preserve">
+    <value>Display order must be greater than zero.</value>
+  </data>
+  <data name="BuildingElevator.InvalidEnglishName" xml:space="preserve">
+    <value>English elevator name cannot exceed 200 characters.</value>
+  </data>
+  <data name="BuildingElevator.InvalidId" xml:space="preserve">
+    <value>Invalid elevator ID.</value>
+  </data>
+  <data name="BuildingElevator.InvalidMaxWeight" xml:space="preserve">
+    <value>Maximum weight must be greater than zero.</value>
+  </data>
+  <data name="BuildingElevator.InvalidName" xml:space="preserve">
+    <value>Elevator name is required and cannot exceed 200 characters.</value>
+  </data>
+  <data name="BuildingElevator.InvalidSearch" xml:space="preserve">
+    <value>Invalid search text.</value>
+  </data>
+  <data name="BuildingElevator.InvalidType" xml:space="preserve">
+    <value>Invalid elevator type.</value>
+  </data>
+  <data name="BuildingElevator.ListSuccess" xml:space="preserve">
+    <value>Elevators retrieved successfully.</value>
+  </data>
+  <data name="BuildingElevator.NotFound" xml:space="preserve">
+    <value>The requested elevator was not found.</value>
   </data>
   <data name="BuildingFloors.BulkSaveSuccessfully" xml:space="preserve">
     <value>Building floors were saved successfully.</value>
@@ -591,6 +657,9 @@
   <data name="CommissionTier.Saved" xml:space="preserve">
     <value>The commission tier was saved successfully.</value>
   </data>
+  <data name="Common.BulkLimitExceeded" xml:space="preserve">
+    <value>The number of submitted records exceeds the allowed limit.</value>
+  </data>
   <data name="Common.Conflict" xml:space="preserve">
     <value>The requested operation conflicts with existing information.</value>
   </data>
@@ -614,6 +683,9 @@
   </data>
   <data name="Common.InvalidId" xml:space="preserve">
     <value>The specified ID is invalid.</value>
+  </data>
+  <data name="Common.InvalidPagination" xml:space="preserve">
+    <value>Invalid pagination parameters.</value>
   </data>
   <data name="Common.InvalidPaginationParameters" xml:space="preserve">
     <value>The pagination parameters are invalid.</value>
@@ -1235,5 +1307,8 @@
   </data>
   <data name="UnitStaircases.UpdatedSuccessfully" xml:space="preserve">
     <value>The unit-staircase relation was updated successfully.</value>
+  </data>
+  <data name="User.Invalid" xml:space="preserve">
+    <value>Invalid user ID.</value>
   </data>
 </root>

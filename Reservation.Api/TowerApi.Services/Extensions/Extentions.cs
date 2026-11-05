@@ -14,6 +14,7 @@ using TowerApi.Services.Booking.SpaceAmenities;
 using TowerApi.Services.Booking.SpaceBooking;
 using TowerApi.Services.Building;
 using TowerApi.Services.BuildingConfiguration;
+using TowerApi.Services.BuildingElevators;
 using TowerApi.Services.BuildingFloor;
 using TowerApi.Services.BuildingFloorStaircase;
 using TowerApi.Services.BuildingStaircase;
@@ -81,7 +82,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<ICommissionTierService,CommissionTierService>();
             _services.AddScoped<IFinancialTransactionService, FinancialTransactionService>();
             _services.AddScoped<ISettlementService, SettlementService>();
-
+            _services.AddScoped<IBuildingElevatorService,BuildingElevatorService>();
             return _services;
         }
     }

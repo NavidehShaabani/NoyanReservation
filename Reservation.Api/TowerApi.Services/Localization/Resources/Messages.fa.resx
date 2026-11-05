@@ -1236,4 +1236,79 @@
   <data name="Settlement.Updated" xml:space="preserve">
     <value>تسویه با موفقیت ویرایش شد.</value>
   </data>
+  <data name="Building.InvalidId" xml:space="preserve">
+    <value>شناسه ساختمان معتبر نیست.</value>
+  </data>
+  <data name="BuildingElevator.AddSuccess" xml:space="preserve">
+    <value>آسانسور با موفقیت ثبت شد.</value>
+  </data>
+  <data name="BuildingElevator.BulkEmpty" xml:space="preserve">
+    <value>فهرست آسانسورها برای ثبت گروهی خالی است.</value>
+  </data>
+  <data name="BuildingElevator.BulkSaveSuccess" xml:space="preserve">
+    <value>اطلاعات آسانسورها با موفقیت ثبت یا به‌روزرسانی شد.</value>
+  </data>
+  <data name="BuildingElevator.DeleteSuccess" xml:space="preserve">
+    <value>آسانسور با موفقیت حذف شد.</value>
+  </data>
+  <data name="BuildingElevator.DuplicateCode" xml:space="preserve">
+    <value>این کد آسانسور قبلاً در ساختمان ثبت شده است.</value>
+  </data>
+  <data name="BuildingElevator.DuplicateCodeInRequest" xml:space="preserve">
+    <value>در اطلاعات ارسالی، کد آسانسور تکراری وجود دارد.</value>
+  </data>
+  <data name="BuildingElevator.DuplicateIdInRequest" xml:space="preserve">
+    <value>در اطلاعات ارسالی، شناسه آسانسور تکراری وجود دارد.</value>
+  </data>
+  <data name="BuildingElevator.EditSuccess" xml:space="preserve">
+    <value>اطلاعات آسانسور با موفقیت ویرایش شد.</value>
+  </data>
+  <data name="BuildingElevator.HasDependencies" xml:space="preserve">
+    <value>به دلیل وجود ارتباط با طبقات یا راه‌پله‌ها، امکان حذف آسانسور وجود ندارد.</value>
+  </data>
+  <data name="BuildingElevator.InvalidCapacity" xml:space="preserve">
+    <value>ظرفیت آسانسور باید بیشتر از صفر باشد.</value>
+  </data>
+  <data name="BuildingElevator.InvalidCode" xml:space="preserve">
+    <value>کد آسانسور الزامی است و حداکثر ۶۰ کاراکتر می‌تواند باشد.</value>
+  </data>
+  <data name="BuildingElevator.InvalidDescription" xml:space="preserve">
+    <value>توضیحات آسانسور حداکثر ۱۰۰۰ کاراکتر می‌تواند باشد.</value>
+  </data>
+  <data name="BuildingElevator.InvalidDisplayOrder" xml:space="preserve">
+    <value>ترتیب نمایش باید بیشتر از صفر باشد.</value>
+  </data>
+  <data name="BuildingElevator.InvalidEnglishName" xml:space="preserve">
+    <value>نام انگلیسی آسانسور حداکثر ۲۰۰ کاراکتر می‌تواند باشد.</value>
+  </data>
+  <data name="BuildingElevator.InvalidId" xml:space="preserve">
+    <value>شناسه آسانسور معتبر نیست.</value>
+  </data>
+  <data name="BuildingElevator.InvalidMaxWeight" xml:space="preserve">
+    <value>حداکثر وزن باید بیشتر از صفر باشد.</value>
+  </data>
+  <data name="BuildingElevator.InvalidName" xml:space="preserve">
+    <value>نام آسانسور الزامی است و حداکثر ۲۰۰ کاراکتر می‌تواند باشد.</value>
+  </data>
+  <data name="BuildingElevator.InvalidSearch" xml:space="preserve">
+    <value>عبارت جستجو معتبر نیست.</value>
+  </data>
+  <data name="BuildingElevator.InvalidType" xml:space="preserve">
+    <value>نوع آسانسور معتبر نیست.</value>
+  </data>
+  <data name="BuildingElevator.ListSuccess" xml:space="preserve">
+    <value>اطلاعات آسانسورها با موفقیت دریافت شد.</value>
+  </data>
+  <data name="BuildingElevator.NotFound" xml:space="preserve">
+    <value>آسانسور موردنظر پیدا نشد.</value>
+  </data>
+  <data name="Common.BulkLimitExceeded" xml:space="preserve">
+    <value>تعداد رکوردهای ارسالی از حد مجاز بیشتر است.</value>
+  </data>
+  <data name="Common.InvalidPagination" xml:space="preserve">
+    <value>اطلاعات صفحه‌بندی معتبر نیست.</value>
+  </data>
+  <data name="User.Invalid" xml:space="preserve">
+    <value>شناسه کاربر معتبر نیست.</value>
+  </data>
 </root>
