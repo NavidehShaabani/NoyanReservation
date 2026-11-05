@@ -11,13 +11,15 @@ namespace TowerApi.Models.BuildingElevators
 
         public string? ElevatorNameEn { get; set; }
 
-        // 1: Passenger
-        // 2: Freight
-        // 3: Car
-        // 4: Service
-        // 5: Stretcher
-        // 6: Firefighter
-        // 7: Other
+        /// <summary>
+        /// 1: Passenger
+        /// 2: Freight
+        /// 3: Car
+        /// 4: Service
+        /// 5: Stretcher
+        /// 6: Firefighter
+        /// 7: Other
+        /// </summary>
         public byte ElevatorType { get; set; } = 1;
 
         public int? Capacity { get; set; }
@@ -39,7 +41,7 @@ namespace TowerApi.Models.BuildingElevators
     }
     public class BuildingElevatorQueryRequest
     {
-        public long? BuildingId { get; set; }
+        public long BuildingId { get; set; }
 
         public string? Search { get; set; }
 
@@ -51,7 +53,7 @@ namespace TowerApi.Models.BuildingElevators
 
         public bool? IsActive { get; set; }
 
-        public bool IncludeDeleted { get; set; } = false;
+        public bool IncludeDeleted { get; set; }
 
         public int PageNumber { get; set; } = 1;
 
@@ -87,11 +89,11 @@ namespace TowerApi.Models.BuildingElevators
 
         public bool IsDeleted { get; set; }
 
-        public DateTime? CreatedAt { get; set; }
-
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         public int? UserCreater { get; set; }
+
+        public DateTime? UpdatedAt { get; set; }
 
         public int? UserUpdater { get; set; }
     }
@@ -123,16 +125,12 @@ namespace TowerApi.Models.BuildingElevators
 
         public bool IsActive { get; set; } = true;
     }
-
     public class BuildingElevatorBulkSaveRequest
     {
         public List<BuildingElevatorBulkItem> Items { get; set; } = new();
     }
-
-    public class BuildingElevatorBulkServiceResult
+    public class BuildingElevatorActiveRequest
     {
-        public int Code { get; set; }
-
-        public string MessageKey { get; set; } = string.Empty;
+        public bool IsActive { get; set; }
     }
 }
