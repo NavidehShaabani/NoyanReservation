@@ -492,6 +492,27 @@
   <data name="Buildings.ReferenceNotFound" xml:space="preserve">
     <value>One of the specified organizations or buildings was not found or has been deleted.</value>
   </data>
+  <data name="BuildingStaircaseElevator.DuplicateId" xml:space="preserve">
+    <value>A relation ID is duplicated in the submitted data.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.DuplicateRelation" xml:space="preserve">
+    <value>The relation between this staircase and elevator is duplicated in the submitted data.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.EmptyBulkItems" xml:space="preserve">
+    <value>The staircase-elevator relation list for bulk save is empty</value>
+  </data>
+  <data name="BuildingStaircaseElevator.InvalidElevatorId" xml:space="preserve">
+    <value>The elevator ID is invalid.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.InvalidId" xml:space="preserve">
+    <value>The staircase-elevator relation ID is invalid.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.InvalidRelation" xml:space="preserve">
+    <value>The staircase-elevator relation data is invalid.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.InvalidStaircaseId" xml:space="preserve">
+    <value>The staircase ID is invalid.</value>
+  </data>
   <data name="BuildingStaircases.BulkSaveSuccessfully" xml:space="preserve">
     <value>The staircases were saved successfully.</value>
   </data>

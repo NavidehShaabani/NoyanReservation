@@ -1332,4 +1332,25 @@
   <data name="BuildingFloorElevator.InvalidRelation" xml:space="preserve">
     <value>اطلاعات ارتباط طبقه و آسانسور معتبر نیست.</value>
   </data>
+  <data name="BuildingStaircaseElevator.DuplicateId" xml:space="preserve">
+    <value>شناسه ارتباط در اطلاعات ارسالی تکراری است.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.DuplicateRelation" xml:space="preserve">
+    <value>ارتباط این راه‌پله با این آسانسور در اطلاعات ارسالی تکراری است.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.EmptyBulkItems" xml:space="preserve">
+    <value>لیست ارتباط‌های راه‌پله و آسانسور برای ذخیره گروهی خالی است.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.InvalidElevatorId" xml:space="preserve">
+    <value>شناسه آسانسور معتبر نیست.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.InvalidId" xml:space="preserve">
+    <value>شناسه ارتباط راه‌پله و آسانسور معتبر نیست.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.InvalidRelation" xml:space="preserve">
+    <value>اطلاعات ارتباط راه‌پله و آسانسور معتبر نیست.</value>
+  </data>
+  <data name="BuildingStaircaseElevator.InvalidStaircaseId" xml:space="preserve">
+    <value>شناسه راه‌پله معتبر نیست.</value>
+  </data>
 </root>

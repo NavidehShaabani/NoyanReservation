@@ -26,6 +26,24 @@ EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UserResidencies', @level2type=N'COLUMN',@level2name=N'UserResidencyId'
 GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'IsPrimary'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'BuildingFloorId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'UnitId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'UnitStaircaseId'
+GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Units', @level2type=N'COLUMN',@level2name=N'UserUpdater'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Units', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
@@ -272,6 +290,54 @@ EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EmployeeAssignments', @level2type=N'COLUMN',@level2name=N'EmployeeAssignmentId'
 GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'UserUpdater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'IsDeleted'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'DisplayOrder'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'Description'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'IsEmergency'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'StaircaseType'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'StaircaseNameEn'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'StaircaseName'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'StaircaseCode'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'BuildingElevatorId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseElevatorId'
+GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'OrgId'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'UserUpdater'
@@ -293,6 +359,150 @@ GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'BuildingName'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'BuildingFloorId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'BuildingFloorStaircaseId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'UserUpdater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'MaxUnits'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'FloorNameEn'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'FloorName'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'FloorCode'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'FloorNumber'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'BuildingFloorId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'BuildingElevatorId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'BuildingFloorId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'BuildingFloorElevatorId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'UserUpdater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'IsDeleted'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'DisplayOrder'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'Description'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'IsEmergency'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'IsService'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'MaxWeight'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'Capacity'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'ElevatorType'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'ElevatorNameEn'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'ElevatorName'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'ElevatorCode'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'BuildingElevatorId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UserUpdater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'IsDeleted'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'AllowExceedFloorCapacity'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'ResetUnitNumberPerFloor'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'IsUnitNumberUnique'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UnitLetterEnd'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UnitLetterStart'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UnitNumberPattern'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UnitNamingType'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'FloorNumberStart'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'FloorNamingType'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'DefaultUnitsPerFloor'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'ElevatorCount'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'StaircaseCount'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'AboveGroundFloorCount'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'GroundFloorCount'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'BasementFloorCount'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'BuildingConfigurationId'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Booking_SpaceAmenities'
 GO
@@ -644,463 +854,658 @@ EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA'
 GO
 EXEC sys.sp_dropextendedproperty @name=N'MS_Description' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'App_Menus', @level2type=N'COLUMN',@level2name=N'MenuId'
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[UnitStaircases_Update]
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_SetActive]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[UnitStaircases_SetActive]
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_Insert]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[UnitStaircases_Insert]
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[UnitStaircases_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[UnitStaircases_Get]
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[UnitStaircases_Delete]
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[UnitStaircases_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[UnitsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[UnitsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[UnitsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[UnitsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[Units_BulkSave]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Units_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[Units_Update]
+GO
+/****** Object:  StoredProcedure [dbo].[Units_SetActive]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[Units_SetActive]
+GO
+/****** Object:  StoredProcedure [dbo].[Units_Insert]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[Units_Insert]
+GO
+/****** Object:  StoredProcedure [dbo].[Units_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[Units_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[Units_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[Units_Get]
+GO
+/****** Object:  StoredProcedure [dbo].[Units_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[Units_Delete]
+GO
+/****** Object:  StoredProcedure [dbo].[Units_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Units_BulkSave]
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_Update]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Spaces_Update]
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_SetActive]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_SetActive]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Spaces_SetActive]
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_Insert]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_Insert]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Spaces_Insert]
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Spaces_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_Get]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Spaces_Get]
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Spaces_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_BulkSave]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Spaces_BulkSave]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_SetStatus]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_SetStatus]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_Settlements_SetStatus]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_Settlements_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_Settlements_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_Settlements_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_Rules_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_Rules_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_Rules_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_Rules_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_CalculateAmount]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_CalculateAmount]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_Rules_CalculateAmount]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_SetStatus]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_SetStatus]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_FinancialTransactions_SetStatus]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_FinancialTransactions_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_FinancialTransactions_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_FinancialTransactions_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_CommissionTiers_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_CommissionTiers_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_CommissionTiers_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_CommissionTiers_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_CommissionPlans_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_CommissionPlans_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_CommissionPlans_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_CommissionPlans_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Calculate]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Calculate]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Pricing_CommissionPlans_Calculate]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[OrganizationsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_UpdateStatus]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_UpdateStatus]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Waitlist_UpdateStatus]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_Join]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_Join]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Waitlist_Join]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Waitlist_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Waitlist_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_SetPaymentStatus]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_SetPaymentStatus]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Class_SetPaymentStatus]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_Register]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_Register]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Class_Register]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Class_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Class_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_CheckCapacity]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_CheckCapacity]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Class_CheckCapacity]
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_Cancel]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_Cancel]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Enrollment_Class_Cancel]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesGetById]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesGet]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesDel]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypesActive]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypeRolesGet]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeTypeRolesAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeesGetById]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeesGet]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeesEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeesDel]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeesAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeesActive]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsGetById]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[EmployeeAssignmentsActive]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircases_Update]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_SetActive]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircases_SetActive]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_Insert]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircases_Insert]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircases_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircases_Get]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircases_Delete]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircases_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircaseElevators_Update]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircaseElevators_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircaseElevators_Get]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircaseElevators_Delete]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircaseElevators_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_Active]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingStaircaseElevators_Active]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[BuildingsGet]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[BuildingsEdit]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[BuildingsDel]
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[BuildingsAdd]
 GO
-/****** Object:  StoredProcedure [dbo].[Buildings_GetByOrgId]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Buildings_GetByOrgId]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Buildings_GetByOrgId]
 GO
-/****** Object:  StoredProcedure [dbo].[Buildings_BulkSave]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Buildings_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Buildings_BulkSave]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorStaircases_Update]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_SetActive]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorStaircases_SetActive]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_Insert]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorStaircases_Insert]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorStaircases_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorStaircases_Get]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorStaircases_Delete]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorStaircases_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloors_Update]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_SetActive]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloors_SetActive]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_Insert]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloors_Insert]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloors_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloors_Get]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloors_Delete]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloors_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorElevators_Update]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Insert]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorElevators_Insert]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorElevators_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorElevators_Get]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorElevators_Delete]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorElevators_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Active]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingFloorElevators_Active]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevatorsGet]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevatorsGet]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevatorsEdit]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevatorsEdit]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevatorsDel]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevatorsDel]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevatorsAdd]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevatorsAdd]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevators_Update]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Insert]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevators_Insert]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevators_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevators_Get]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevators_Delete]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevators_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Active]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingElevators_Active]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_Update]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingConfigurations_Update]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_Insert]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingConfigurations_Insert]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingConfigurations_GetById]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingConfigurations_Get]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingConfigurations_Delete]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_BulkSave]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingConfigurations_BulkSave]
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_BulkInsert]    Script Date: 11/5/2026 8:12:25 PM ******/
+DROP PROCEDURE [dbo].[BuildingConfigurations_BulkInsert]
+GO
+/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_SpaceAmenities_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_SpaceAmenities_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_SpaceAmenities_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_SpaceAmenities_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Space_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Space_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Space_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Space_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_CheckConflict]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_CheckConflict]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Space_CheckConflict]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_Cancel]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_Cancel]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Space_Cancel]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_Approve]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_Approve]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Space_Approve]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ReservationEquipment_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ReservationEquipment_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ReservationEquipment_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ReservationEquipment_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_RentalParticipants_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_RentalParticipants_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_RentalParticipants_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_RentalParticipants_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participants_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participants_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Participants_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participants_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participants_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Participants_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participant_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participant_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Participant_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participant_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participant_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Participant_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participant_GetActiveList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participant_GetActiveList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Participant_GetActiveList]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participant_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participant_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Participant_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_HallRentalDetails_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_HallRentalDetails_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_HallRentalDetails_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_HallRentalDetails_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Equipment_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Equipment_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Equipment_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Equipment_GetList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Equipment_GetList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Equipment_GetList]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Equipment_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Equipment_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Equipment_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Equipment_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Equipment_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_Equipment_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSessions_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSessions_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSessions_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSessions_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSessions_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSessions_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSession_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSession_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_GetActiveList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_GetActiveList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSession_GetActiveList]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSession_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_Save]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_Save]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSeries_Save]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSeries_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_GetActiveList]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_GetActiveList]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSeries_GetActiveList]
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_Delete]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_Delete]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Booking_ClassSeries_Delete]
 GO
-/****** Object:  StoredProcedure [dbo].[Base_LookupValues_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_LookupValues_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Base_LookupValues_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[Base_LookupValues_Get]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_LookupValues_Get]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Base_LookupValues_Get]
 GO
-/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Base_GeoGetChildren]
 GO
-/****** Object:  StoredProcedure [dbo].[Base_Geo_GetById]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_Geo_GetById]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[Base_Geo_GetById]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignupWithPassword]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupWithPassword]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UsersSignupWithPassword]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignupVerifyOtp]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupVerifyOtp]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UsersSignupVerifyOtp]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignupStartOtp]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupStartOtp]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UsersSignupStartOtp]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UsersSignup]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UsersOtpVerify]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UsersLoginGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionUpdateLastSeen]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionSetActiveRole]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionRevokeAll]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionRevoke]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionGetActive]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionCreate]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionClearActiveRole]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserSessionAuthorizationGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UsersCompleteProfile]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserProfilesGet]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserLogin]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserGetForSession]
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_UserGetForRefresh]
 GO
-/****** Object:  StoredProcedure [dbo].[App_SuperAdminRegister]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_SuperAdminRegister]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_SuperAdminRegister]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenSave]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRotate]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRevokeSession]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRevokeAll]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenRevoke]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenGetActiveSessions]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenGetActive]
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_RefreshTokenCleanupExpired]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_LoginAttemptReset]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_LoginAttemptFail]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/29/2026 8:34:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 11/5/2026 8:12:25 PM ******/
 DROP PROCEDURE [dbo].[App_LoginAttemptCheck]
 GO
 ALTER TABLE [dbo].[Pricing_Settlements] DROP CONSTRAINT [CK_Pricing_Settlements_Status]
@@ -1167,6 +1572,30 @@ ALTER TABLE [dbo].[Enrollment_Class] DROP CONSTRAINT [CK_Enrollment_Class_Attend
 GO
 ALTER TABLE [dbo].[Enrollment_Class] DROP CONSTRAINT [CK_Enrollment_Class_Amounts]
 GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [CK_BuildingStaircases_Type]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [CK_BuildingStaircases_DisplayOrder]
+GO
+ALTER TABLE [dbo].[BuildingFloors] DROP CONSTRAINT [CK_BuildingFloors_MaxUnits]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [CK_BuildingElevators_MaxWeight]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [CK_BuildingElevators_ElevatorType]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [CK_BuildingElevators_Capacity]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [CK_BuildingConfigurations_Units]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [CK_BuildingConfigurations_UnitNaming]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [CK_BuildingConfigurations_Staircases]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [CK_BuildingConfigurations_Floors]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [CK_BuildingConfigurations_FloorNaming]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [CK_BuildingConfigurations_Elevators]
+GO
 ALTER TABLE [dbo].[Booking_Space] DROP CONSTRAINT [CK_Booking_Space_Type]
 GO
 ALTER TABLE [dbo].[Booking_Space] DROP CONSTRAINT [CK_Booking_Space_Time]
@@ -1201,7 +1630,13 @@ ALTER TABLE [dbo].[UserResidencies] DROP CONSTRAINT [FK_UserResidencies_Users]
 GO
 ALTER TABLE [dbo].[UserResidencies] DROP CONSTRAINT [FK_UserResidencies_Units]
 GO
+ALTER TABLE [dbo].[UnitStaircases] DROP CONSTRAINT [FK_UnitStaircases_Units]
+GO
+ALTER TABLE [dbo].[UnitStaircases] DROP CONSTRAINT [FK_UnitStaircases_FloorStaircases]
+GO
 ALTER TABLE [dbo].[Units] DROP CONSTRAINT [FK_Units_Buildings]
+GO
+ALTER TABLE [dbo].[Units] DROP CONSTRAINT [FK_Units_BuildingFloors_Building]
 GO
 ALTER TABLE [dbo].[Spaces] DROP CONSTRAINT [FK_Spaces_Orgs]
 GO
@@ -1279,7 +1714,35 @@ ALTER TABLE [dbo].[EmployeeAssignments] DROP CONSTRAINT [FK_EmployeeAssignments_
 GO
 ALTER TABLE [dbo].[EmployeeAssignments] DROP CONSTRAINT [FK_EmployeeAssignments_Buildings]
 GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [FK_BuildingStaircases_Buildings]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [FK_BuildingStaircases_Base_LookupValues]
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators] DROP CONSTRAINT [FK_BuildingStaircaseElevators_Staircases]
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators] DROP CONSTRAINT [FK_BuildingStaircaseElevators_Elevators]
+GO
 ALTER TABLE [dbo].[Buildings] DROP CONSTRAINT [FK_Buildings_Orgs]
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases] DROP CONSTRAINT [FK_BuildingFloorStaircases_Staircases]
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases] DROP CONSTRAINT [FK_BuildingFloorStaircases_Floors]
+GO
+ALTER TABLE [dbo].[BuildingFloors] DROP CONSTRAINT [FK_BuildingFloors_Buildings]
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators] DROP CONSTRAINT [FK_BuildingFloorElevators_Floors]
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators] DROP CONSTRAINT [FK_BuildingFloorElevators_Elevators]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [FK_BuildingElevators_Buildings]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [FK_BuildingElevators_Base_LookupValues]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [FK_BuildingConfigurations_Buildings]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [FK_BuildingConfigurations_Base_LookupValues1]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [FK_BuildingConfigurations_Base_LookupValues]
 GO
 ALTER TABLE [dbo].[Booking_SpaceAmenities] DROP CONSTRAINT [FK_Booking_SpaceAmenities_Space]
 GO
@@ -1360,6 +1823,12 @@ GO
 ALTER TABLE [dbo].[UserResidencies] DROP CONSTRAINT [DF_UserResidencies_CreatedAt]
 GO
 ALTER TABLE [dbo].[UserResidencies] DROP CONSTRAINT [DF_UserResidencies_IsActive]
+GO
+ALTER TABLE [dbo].[UnitStaircases] DROP CONSTRAINT [DF_UnitStaircases_CreatedAt]
+GO
+ALTER TABLE [dbo].[UnitStaircases] DROP CONSTRAINT [DF_UnitStaircases_IsActive]
+GO
+ALTER TABLE [dbo].[UnitStaircases] DROP CONSTRAINT [DF_UnitStaircases_IsPrimary]
 GO
 ALTER TABLE [dbo].[Units] DROP CONSTRAINT [DF_Units_CreatedAt]
 GO
@@ -1455,9 +1924,85 @@ ALTER TABLE [dbo].[EmployeeAssignments] DROP CONSTRAINT [DF_EmployeeAssignments_
 GO
 ALTER TABLE [dbo].[EmployeeAssignments] DROP CONSTRAINT [DF_EmployeeAssignments_IsActive]
 GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [DF_BuildingStaircases_CreatedAt]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [DF_BuildingStaircases_IsDeleted]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [DF_BuildingStaircases_IsActive]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [DF_BuildingStaircases_DisplayOrder]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [DF_BuildingStaircases_Emergency]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [DF_BuildingStaircases_Type]
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators] DROP CONSTRAINT [DF_BuildingStaircaseElevators_CreatedAt_1]
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators] DROP CONSTRAINT [DF_BuildingStaircaseElevators_IsActive_1]
+GO
 ALTER TABLE [dbo].[Buildings] DROP CONSTRAINT [DF_Buildings_CreatedAt]
 GO
 ALTER TABLE [dbo].[Buildings] DROP CONSTRAINT [DF_Buildings_IsActive]
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases] DROP CONSTRAINT [DF_BuildingFloorStaircases_CreatedAt_1]
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases] DROP CONSTRAINT [DF_BuildingFloorStaircases_IsActive]
+GO
+ALTER TABLE [dbo].[BuildingFloors] DROP CONSTRAINT [DF_BuildingFloors_CreatedAt_1]
+GO
+ALTER TABLE [dbo].[BuildingFloors] DROP CONSTRAINT [DF_BuildingFloors_IsActive]
+GO
+ALTER TABLE [dbo].[BuildingFloors] DROP CONSTRAINT [DF_BuildingFloors_MaxUnits]
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators] DROP CONSTRAINT [DF_BuildingFloorElevators_CreatedAt_1]
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators] DROP CONSTRAINT [DF_BuildingFloorElevators_IsActive_1]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [DF_BuildingElevators_CreatedAt_1]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [DF_BuildingElevators_IsDeleted_1]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [DF_BuildingElevators_IsActive_1]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [DF_BuildingElevators_DisplayOrder]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [DF_BuildingElevators_IsEmergency]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [DF_BuildingElevators_IsService]
+GO
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [DF_BuildingElevators_ElevatorType]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_CreatedAt_1]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_IsDeleted]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_IsActive]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Exceed]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Reset]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Unique]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Pattern]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_UnitNaming]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_FloorStart]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_FloorNaming]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Units]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Elevator]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Staircase]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Above]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Ground]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [DF_BuildingConfigurations_Basement]
 GO
 ALTER TABLE [dbo].[Booking_SpaceAmenities] DROP CONSTRAINT [DF_Booking_SpaceAmenities_CreatedAt]
 GO
@@ -1567,261 +2112,371 @@ ALTER TABLE [dbo].[App_LoginAttempts] DROP CONSTRAINT [DF_LoginAttempts_LastAtte
 GO
 ALTER TABLE [dbo].[App_LoginAttempts] DROP CONSTRAINT [DF_LoginAttempts_FailedCount]
 GO
-/****** Object:  Index [IX_Pricing_Rules_Lookup]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UX_UnitStaircases_Primary]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP INDEX [UX_UnitStaircases_Primary] ON [dbo].[UnitStaircases]
+GO
+/****** Object:  Index [UQ_UnitStaircases_Unit_Staircase]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[UnitStaircases] DROP CONSTRAINT [UQ_UnitStaircases_Unit_Staircase]
+GO
+/****** Object:  Index [UQ_Units_UnitId_BuildingFloor]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[Units] DROP CONSTRAINT [UQ_Units_UnitId_BuildingFloor]
+GO
+/****** Object:  Index [IX_Pricing_Rules_Lookup]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP INDEX [IX_Pricing_Rules_Lookup] ON [dbo].[Pricing_Rules]
 GO
-/****** Object:  Index [IX_Pricing_FinancialTransactions_Enrollment]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [IX_Pricing_FinancialTransactions_Enrollment]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP INDEX [IX_Pricing_FinancialTransactions_Enrollment] ON [dbo].[Pricing_FinancialTransactions]
 GO
-/****** Object:  Index [IX_Pricing_FinancialTransactions_Booking]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [IX_Pricing_FinancialTransactions_Booking]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP INDEX [IX_Pricing_FinancialTransactions_Booking] ON [dbo].[Pricing_FinancialTransactions]
 GO
-/****** Object:  Index [UQ_Pricing_CommissionTiers_Order]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Pricing_CommissionTiers_Order]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[Pricing_CommissionTiers] DROP CONSTRAINT [UQ_Pricing_CommissionTiers_Order]
 GO
-/****** Object:  Index [UQ_Enrollment_Waitlist_Queue]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Enrollment_Waitlist_Queue]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[Enrollment_Waitlist] DROP CONSTRAINT [UQ_Enrollment_Waitlist_Queue]
 GO
-/****** Object:  Index [UQ_Enrollment_Waitlist_Participant]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Enrollment_Waitlist_Participant]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[Enrollment_Waitlist] DROP CONSTRAINT [UQ_Enrollment_Waitlist_Participant]
 GO
-/****** Object:  Index [IX_Enrollment_Class_Session_Status]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [IX_Enrollment_Class_Session_Status]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP INDEX [IX_Enrollment_Class_Session_Status] ON [dbo].[Enrollment_Class]
 GO
-/****** Object:  Index [UQ_Enrollment_Class_SessionParticipant]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Enrollment_Class_SessionParticipant]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[Enrollment_Class] DROP CONSTRAINT [UQ_Enrollment_Class_SessionParticipant]
 GO
-/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[EmployeeTypeRoles] DROP CONSTRAINT [UQ_EmployeeTypeRoles]
 GO
-/****** Object:  Index [IX_Booking_Space_Space_Time]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_BuildingStaircases_Id_Building]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [UQ_BuildingStaircases_Id_Building]
+GO
+/****** Object:  Index [UQ_BuildingStaircases_Code]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingStaircases] DROP CONSTRAINT [UQ_BuildingStaircases_Code]
+GO
+/****** Object:  Index [UQ_BuildingStaircaseElevators_Relation]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingStaircaseElevators] DROP CONSTRAINT [UQ_BuildingStaircaseElevators_Relation]
+GO
+/****** Object:  Index [UQ_BuildingFloorStaircases_Floor_Staircase]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingFloorStaircases] DROP CONSTRAINT [UQ_BuildingFloorStaircases_Floor_Staircase]
+GO
+/****** Object:  Index [UQ_BuildingFloors_Id_Building]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingFloors] DROP CONSTRAINT [UQ_BuildingFloors_Id_Building]
+GO
+/****** Object:  Index [UQ_BuildingFloors_Building_FloorNumber]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingFloors] DROP CONSTRAINT [UQ_BuildingFloors_Building_FloorNumber]
+GO
+/****** Object:  Index [UQ_BuildingFloors_Building_FloorCode]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingFloors] DROP CONSTRAINT [UQ_BuildingFloors_Building_FloorCode]
+GO
+/****** Object:  Index [IX_BuildingFloorElevators_Building_Elevator]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP INDEX [IX_BuildingFloorElevators_Building_Elevator] ON [dbo].[BuildingFloorElevators]
+GO
+/****** Object:  Index [UQ_BuildingFloorElevators_Floor_Elevator]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingFloorElevators] DROP CONSTRAINT [UQ_BuildingFloorElevators_Floor_Elevator]
+GO
+/****** Object:  Index [UX_BuildingElevators_Code]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP INDEX [UX_BuildingElevators_Code] ON [dbo].[BuildingElevators]
+GO
+/****** Object:  Index [UX_BuildingElevators_Building_Code]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP INDEX [UX_BuildingElevators_Building_Code] ON [dbo].[BuildingElevators]
+GO
+/****** Object:  Index [UQ_BuildingElevators_Id_Building]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingElevators] DROP CONSTRAINT [UQ_BuildingElevators_Id_Building]
+GO
+/****** Object:  Index [UQ_BuildingConfigurations_Building]    Script Date: 11/5/2026 8:12:26 PM ******/
+ALTER TABLE [dbo].[BuildingConfigurations] DROP CONSTRAINT [UQ_BuildingConfigurations_Building]
+GO
+/****** Object:  Index [IX_Booking_Space_Space_Time]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP INDEX [IX_Booking_Space_Space_Time] ON [dbo].[Booking_Space]
 GO
-/****** Object:  Index [UQ_Booking_ReservationEquipment]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Booking_ReservationEquipment]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[Booking_ReservationEquipment] DROP CONSTRAINT [UQ_Booking_ReservationEquipment]
 GO
-/****** Object:  Index [UQ_Booking_RentalParticipants]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Booking_RentalParticipants]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[Booking_RentalParticipants] DROP CONSTRAINT [UQ_Booking_RentalParticipants]
 GO
-/****** Object:  Index [UX_Booking_Participants_UserId]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UX_Booking_Participants_UserId]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP INDEX [UX_Booking_Participants_UserId] ON [dbo].[Booking_Participants]
 GO
-/****** Object:  Index [IX_Booking_ClassSessions_Series]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [IX_Booking_ClassSessions_Series]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP INDEX [IX_Booking_ClassSessions_Series] ON [dbo].[Booking_ClassSessions]
 GO
-/****** Object:  Index [UQ_Booking_ClassSessions_Booking]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Booking_ClassSessions_Booking]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[Booking_ClassSessions] DROP CONSTRAINT [UQ_Booking_ClassSessions_Booking]
 GO
-/****** Object:  Index [UQ_App_UserSignupRateLimits_RateKey]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_App_UserSignupRateLimits_RateKey]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[App_UserSignupRateLimits] DROP CONSTRAINT [UQ_App_UserSignupRateLimits_RateKey]
 GO
-/****** Object:  Index [UQ_Users_Username]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Users_Username]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [UQ_Users_Username]
 GO
-/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Users_NationalId]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [UQ_Users_NationalId]
 GO
-/****** Object:  Index [UQ_Users_Email]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_Users_Email]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[App_Users] DROP CONSTRAINT [UQ_Users_Email]
 GO
-/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[App_UserRoles] DROP CONSTRAINT [UQ_UserRoles_User_Role]
 GO
-/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[App_UserProfiles] DROP CONSTRAINT [UQ_UserProfiles_UserId]
 GO
-/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[App_UserOtpRateLimits] DROP CONSTRAINT [UQ_UserOtpRateLimits_Mobile]
 GO
-/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[App_RoleMenus] DROP CONSTRAINT [UQ_RoleMenus_Role_Menu]
 GO
-/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 11/5/2026 8:12:26 PM ******/
 ALTER TABLE [dbo].[App_RefreshTokens] DROP CONSTRAINT [UQ_RefreshTokens_TokenHash]
 GO
-/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[UserResidencies]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UserResidencies]') AND type in (N'U'))
 DROP TABLE [dbo].[UserResidencies]
 GO
-/****** Object:  Table [dbo].[Units]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[UnitStaircases]    Script Date: 11/5/2026 8:12:26 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UnitStaircases]') AND type in (N'U'))
+DROP TABLE [dbo].[UnitStaircases]
+GO
+/****** Object:  Table [dbo].[Units]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Units]') AND type in (N'U'))
 DROP TABLE [dbo].[Units]
 GO
-/****** Object:  Table [dbo].[Spaces]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Spaces]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Spaces]') AND type in (N'U'))
 DROP TABLE [dbo].[Spaces]
 GO
-/****** Object:  Table [dbo].[Pricing_Settlements]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Pricing_Settlements]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Pricing_Settlements]') AND type in (N'U'))
 DROP TABLE [dbo].[Pricing_Settlements]
 GO
-/****** Object:  Table [dbo].[Pricing_Rules]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Pricing_Rules]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Pricing_Rules]') AND type in (N'U'))
 DROP TABLE [dbo].[Pricing_Rules]
 GO
-/****** Object:  Table [dbo].[Pricing_FinancialTransactions]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Pricing_FinancialTransactions]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Pricing_FinancialTransactions]') AND type in (N'U'))
 DROP TABLE [dbo].[Pricing_FinancialTransactions]
 GO
-/****** Object:  Table [dbo].[Pricing_CommissionTiers]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Pricing_CommissionTiers]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Pricing_CommissionTiers]') AND type in (N'U'))
 DROP TABLE [dbo].[Pricing_CommissionTiers]
 GO
-/****** Object:  Table [dbo].[Pricing_CommissionPlans]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Pricing_CommissionPlans]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Pricing_CommissionPlans]') AND type in (N'U'))
 DROP TABLE [dbo].[Pricing_CommissionPlans]
 GO
-/****** Object:  Table [dbo].[Policy_Reservation]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Policy_Reservation]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Policy_Reservation]') AND type in (N'U'))
 DROP TABLE [dbo].[Policy_Reservation]
 GO
-/****** Object:  Table [dbo].[Organizations]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Organizations]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Organizations]') AND type in (N'U'))
 DROP TABLE [dbo].[Organizations]
 GO
-/****** Object:  Table [dbo].[Enrollment_Waitlist]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Enrollment_Waitlist]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Enrollment_Waitlist]') AND type in (N'U'))
 DROP TABLE [dbo].[Enrollment_Waitlist]
 GO
-/****** Object:  Table [dbo].[Enrollment_Class]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Enrollment_Class]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Enrollment_Class]') AND type in (N'U'))
 DROP TABLE [dbo].[Enrollment_Class]
 GO
-/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmployeeTypes]') AND type in (N'U'))
 DROP TABLE [dbo].[EmployeeTypes]
 GO
-/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmployeeTypeRoles]') AND type in (N'U'))
 DROP TABLE [dbo].[EmployeeTypeRoles]
 GO
-/****** Object:  Table [dbo].[Employees]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Employees]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Employees]') AND type in (N'U'))
 DROP TABLE [dbo].[Employees]
 GO
-/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[EmployeeAssignments]') AND type in (N'U'))
 DROP TABLE [dbo].[EmployeeAssignments]
 GO
-/****** Object:  Table [dbo].[Buildings]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[BuildingStaircases]    Script Date: 11/5/2026 8:12:26 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BuildingStaircases]') AND type in (N'U'))
+DROP TABLE [dbo].[BuildingStaircases]
+GO
+/****** Object:  Table [dbo].[BuildingStaircaseElevators]    Script Date: 11/5/2026 8:12:26 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BuildingStaircaseElevators]') AND type in (N'U'))
+DROP TABLE [dbo].[BuildingStaircaseElevators]
+GO
+/****** Object:  Table [dbo].[Buildings]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Buildings]') AND type in (N'U'))
 DROP TABLE [dbo].[Buildings]
 GO
-/****** Object:  Table [dbo].[Booking_SpaceAmenities]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[BuildingFloorStaircases]    Script Date: 11/5/2026 8:12:26 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BuildingFloorStaircases]') AND type in (N'U'))
+DROP TABLE [dbo].[BuildingFloorStaircases]
+GO
+/****** Object:  Table [dbo].[BuildingFloors]    Script Date: 11/5/2026 8:12:26 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BuildingFloors]') AND type in (N'U'))
+DROP TABLE [dbo].[BuildingFloors]
+GO
+/****** Object:  Table [dbo].[BuildingFloorElevators]    Script Date: 11/5/2026 8:12:26 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BuildingFloorElevators]') AND type in (N'U'))
+DROP TABLE [dbo].[BuildingFloorElevators]
+GO
+/****** Object:  Table [dbo].[BuildingElevators]    Script Date: 11/5/2026 8:12:26 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BuildingElevators]') AND type in (N'U'))
+DROP TABLE [dbo].[BuildingElevators]
+GO
+/****** Object:  Table [dbo].[BuildingConfigurations]    Script Date: 11/5/2026 8:12:26 PM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BuildingConfigurations]') AND type in (N'U'))
+DROP TABLE [dbo].[BuildingConfigurations]
+GO
+/****** Object:  Table [dbo].[Booking_SpaceAmenities]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Booking_SpaceAmenities]') AND type in (N'U'))
 DROP TABLE [dbo].[Booking_SpaceAmenities]
 GO
-/****** Object:  Table [dbo].[Booking_Space]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Booking_Space]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Booking_Space]') AND type in (N'U'))
 DROP TABLE [dbo].[Booking_Space]
 GO
-/****** Object:  Table [dbo].[Booking_ReservationEquipment]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Booking_ReservationEquipment]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Booking_ReservationEquipment]') AND type in (N'U'))
 DROP TABLE [dbo].[Booking_ReservationEquipment]
 GO
-/****** Object:  Table [dbo].[Booking_RentalParticipants]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Booking_RentalParticipants]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Booking_RentalParticipants]') AND type in (N'U'))
 DROP TABLE [dbo].[Booking_RentalParticipants]
 GO
-/****** Object:  Table [dbo].[Booking_Participants]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Booking_Participants]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Booking_Participants]') AND type in (N'U'))
 DROP TABLE [dbo].[Booking_Participants]
 GO
-/****** Object:  Table [dbo].[Booking_HallRentalDetails]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Booking_HallRentalDetails]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Booking_HallRentalDetails]') AND type in (N'U'))
 DROP TABLE [dbo].[Booking_HallRentalDetails]
 GO
-/****** Object:  Table [dbo].[Booking_Equipment]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Booking_Equipment]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Booking_Equipment]') AND type in (N'U'))
 DROP TABLE [dbo].[Booking_Equipment]
 GO
-/****** Object:  Table [dbo].[Booking_ClassSessions]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Booking_ClassSessions]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Booking_ClassSessions]') AND type in (N'U'))
 DROP TABLE [dbo].[Booking_ClassSessions]
 GO
-/****** Object:  Table [dbo].[Booking_ClassSeries]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Booking_ClassSeries]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Booking_ClassSeries]') AND type in (N'U'))
 DROP TABLE [dbo].[Booking_ClassSeries]
 GO
-/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Base_LookupValues]') AND type in (N'U'))
 DROP TABLE [dbo].[Base_LookupValues]
 GO
-/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Base_Lookup]') AND type in (N'U'))
 DROP TABLE [dbo].[Base_Lookup]
 GO
-/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[Base_Geo]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Base_Geo]') AND type in (N'U'))
 DROP TABLE [dbo].[Base_Geo]
 GO
-/****** Object:  Table [dbo].[App_UserSignupRateLimits]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_UserSignupRateLimits]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserSignupRateLimits]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserSignupRateLimits]
 GO
-/****** Object:  Table [dbo].[App_UserSignupPending]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_UserSignupPending]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserSignupPending]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserSignupPending]
 GO
-/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserSessions]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserSessions]
 GO
-/****** Object:  Table [dbo].[App_Users]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_Users]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_Users]') AND type in (N'U'))
 DROP TABLE [dbo].[App_Users]
 GO
-/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserRoles]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserRoles]
 GO
-/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserProfiles]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserProfiles]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserOtpRequests]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserOtpRequests]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_UserOtpRateLimits]') AND type in (N'U'))
 DROP TABLE [dbo].[App_UserOtpRateLimits]
 GO
-/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_Roles]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_Roles]') AND type in (N'U'))
 DROP TABLE [dbo].[App_Roles]
 GO
-/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_RoleMenus]') AND type in (N'U'))
 DROP TABLE [dbo].[App_RoleMenus]
 GO
-/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_RefreshTokens]') AND type in (N'U'))
 DROP TABLE [dbo].[App_RefreshTokens]
 GO
-/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_Menus]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_Menus]') AND type in (N'U'))
 DROP TABLE [dbo].[App_Menus]
 GO
-/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 11/5/2026 8:12:26 PM ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[App_LoginAttempts]') AND type in (N'U'))
 DROP TABLE [dbo].[App_LoginAttempts]
 GO
-/****** Object:  UserDefinedTableType [dbo].[UnitBulkType]    Script Date: 10/29/2026 8:34:27 PM ******/
-DROP TYPE [dbo].[UnitBulkType]
+/****** Object:  UserDefinedTableType [dbo].[UnitStaircaseBulkSaveType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[UnitStaircaseBulkSaveType]
 GO
-/****** Object:  UserDefinedTableType [dbo].[SpaceBulkType]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  UserDefinedTableType [dbo].[UnitBulkSaveType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[UnitBulkSaveType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[SpaceBulkType]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP TYPE [dbo].[SpaceBulkType]
 GO
-/****** Object:  UserDefinedTableType [dbo].[BuildingBulkType]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  UserDefinedTableType [dbo].[BuildingStaircaseElevatorBulkType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[BuildingStaircaseElevatorBulkType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingStaircaseBulkSaveType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[BuildingStaircaseBulkSaveType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingFloorStaircaseBulkSaveType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[BuildingFloorStaircaseBulkSaveType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingFloorElevatorBulkType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[BuildingFloorElevatorBulkType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingFloorBulkSaveType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[BuildingFloorBulkSaveType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingElevatorBulkType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[BuildingElevatorBulkType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingConfigurationBulkUpdateType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[BuildingConfigurationBulkUpdateType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingConfigurationBulkType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[BuildingConfigurationBulkType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingConfigurationBulkSaveType]    Script Date: 11/5/2026 8:12:26 PM ******/
+DROP TYPE [dbo].[BuildingConfigurationBulkSaveType]
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingBulkType]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP TYPE [dbo].[BuildingBulkType]
 GO
 USE [master]
 GO
-/****** Object:  Database [Tower]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Database [Tower]    Script Date: 11/5/2026 8:12:26 PM ******/
 DROP DATABASE [Tower]
 GO
-/****** Object:  Database [Tower]    Script Date: 10/29/2026 8:34:27 PM ******/
+/****** Object:  Database [Tower]    Script Date: 11/5/2026 8:12:26 PM ******/
 CREATE DATABASE [Tower]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -1905,7 +2560,7 @@ ALTER DATABASE [Tower] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POL
 GO
 USE [Tower]
 GO
-/****** Object:  UserDefinedTableType [dbo].[BuildingBulkType]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  UserDefinedTableType [dbo].[BuildingBulkType]    Script Date: 11/5/2026 8:12:27 PM ******/
 CREATE TYPE [dbo].[BuildingBulkType] AS TABLE(
 	[BuildingId] [bigint] NULL,
 	[BuildingName] [nvarchar](150) NULL,
@@ -1915,7 +2570,142 @@ CREATE TYPE [dbo].[BuildingBulkType] AS TABLE(
 	[OrgId] [bigint] NULL
 )
 GO
-/****** Object:  UserDefinedTableType [dbo].[SpaceBulkType]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  UserDefinedTableType [dbo].[BuildingConfigurationBulkSaveType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[BuildingConfigurationBulkSaveType] AS TABLE(
+	[BuildingConfigurationId] [bigint] NOT NULL DEFAULT ((0)),
+	[BuildingId] [bigint] NOT NULL,
+	[BasementFloorCount] [int] NOT NULL,
+	[GroundFloorCount] [int] NOT NULL,
+	[AboveGroundFloorCount] [int] NOT NULL,
+	[StaircaseCount] [int] NOT NULL,
+	[ElevatorCount] [int] NOT NULL,
+	[DefaultUnitsPerFloor] [int] NOT NULL,
+	[FloorNamingType] [tinyint] NOT NULL,
+	[FloorNumberStart] [int] NOT NULL,
+	[UnitNamingType] [tinyint] NOT NULL,
+	[UnitNumberPattern] [nvarchar](100) NOT NULL,
+	[UnitLetterStart] [char](1) NULL,
+	[UnitLetterEnd] [char](1) NULL,
+	[IsUnitNumberUnique] [bit] NOT NULL,
+	[ResetUnitNumberPerFloor] [bit] NOT NULL,
+	[AllowExceedFloorCapacity] [bit] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingConfigurationBulkType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[BuildingConfigurationBulkType] AS TABLE(
+	[BuildingId] [bigint] NOT NULL,
+	[BasementFloorCount] [int] NOT NULL,
+	[GroundFloorCount] [int] NOT NULL,
+	[AboveGroundFloorCount] [int] NOT NULL,
+	[StaircaseCount] [int] NOT NULL,
+	[ElevatorCount] [int] NOT NULL,
+	[DefaultUnitsPerFloor] [int] NOT NULL,
+	[FloorNamingType] [tinyint] NOT NULL,
+	[FloorNumberStart] [int] NOT NULL,
+	[UnitNamingType] [tinyint] NOT NULL,
+	[UnitNumberPattern] [nvarchar](100) NOT NULL,
+	[UnitLetterStart] [char](1) NULL,
+	[UnitLetterEnd] [char](1) NULL,
+	[IsUnitNumberUnique] [bit] NOT NULL,
+	[ResetUnitNumberPerFloor] [bit] NOT NULL,
+	[AllowExceedFloorCapacity] [bit] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingConfigurationBulkUpdateType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[BuildingConfigurationBulkUpdateType] AS TABLE(
+	[BuildingConfigurationId] [bigint] NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[BasementFloorCount] [int] NOT NULL,
+	[GroundFloorCount] [int] NOT NULL,
+	[AboveGroundFloorCount] [int] NOT NULL,
+	[StaircaseCount] [int] NOT NULL,
+	[ElevatorCount] [int] NOT NULL,
+	[DefaultUnitsPerFloor] [int] NOT NULL,
+	[FloorNamingType] [tinyint] NOT NULL,
+	[FloorNumberStart] [int] NOT NULL,
+	[UnitNamingType] [tinyint] NOT NULL,
+	[UnitNumberPattern] [nvarchar](100) NOT NULL,
+	[UnitLetterStart] [char](1) NULL,
+	[UnitLetterEnd] [char](1) NULL,
+	[IsUnitNumberUnique] [bit] NOT NULL,
+	[ResetUnitNumberPerFloor] [bit] NOT NULL,
+	[AllowExceedFloorCapacity] [bit] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingElevatorBulkType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[BuildingElevatorBulkType] AS TABLE(
+	[BuildingElevatorId] [bigint] NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[ElevatorCode] [nvarchar](60) NOT NULL,
+	[ElevatorName] [nvarchar](200) NOT NULL,
+	[ElevatorNameEn] [nvarchar](200) NULL,
+	[ElevatorType] [tinyint] NOT NULL,
+	[Capacity] [int] NULL,
+	[MaxWeight] [decimal](10, 2) NULL,
+	[IsService] [bit] NOT NULL,
+	[IsEmergency] [bit] NOT NULL,
+	[Description] [nvarchar](1000) NULL,
+	[DisplayOrder] [int] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingFloorBulkSaveType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[BuildingFloorBulkSaveType] AS TABLE(
+	[BuildingFloorId] [bigint] NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[FloorNumber] [int] NOT NULL,
+	[FloorCode] [nvarchar](40) NOT NULL,
+	[FloorName] [nvarchar](200) NOT NULL,
+	[FloorNameEn] [nvarchar](200) NULL,
+	[MaxUnits] [int] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingFloorElevatorBulkType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[BuildingFloorElevatorBulkType] AS TABLE(
+	[BuildingFloorElevatorId] [bigint] NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[BuildingFloorId] [bigint] NOT NULL,
+	[BuildingElevatorId] [bigint] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingFloorStaircaseBulkSaveType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[BuildingFloorStaircaseBulkSaveType] AS TABLE(
+	[BuildingFloorStaircaseId] [bigint] NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[BuildingFloorId] [bigint] NOT NULL,
+	[BuildingStaircaseId] [bigint] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingStaircaseBulkSaveType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[BuildingStaircaseBulkSaveType] AS TABLE(
+	[BuildingStaircaseId] [bigint] NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[StaircaseCode] [nvarchar](60) NOT NULL,
+	[StaircaseName] [nvarchar](200) NOT NULL,
+	[StaircaseNameEn] [nvarchar](200) NULL,
+	[StaircaseType] [tinyint] NOT NULL,
+	[IsEmergency] [bit] NOT NULL,
+	[Description] [nvarchar](1000) NULL,
+	[DisplayOrder] [int] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[BuildingStaircaseElevatorBulkType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[BuildingStaircaseElevatorBulkType] AS TABLE(
+	[BuildingStaircaseElevatorId] [bigint] NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[BuildingStaircaseId] [bigint] NOT NULL,
+	[BuildingElevatorId] [bigint] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  UserDefinedTableType [dbo].[SpaceBulkType]    Script Date: 11/5/2026 8:12:27 PM ******/
 CREATE TYPE [dbo].[SpaceBulkType] AS TABLE(
 	[SpaceId] [bigint] NULL,
 	[OrgId] [bigint] NULL,
@@ -1932,19 +2722,29 @@ CREATE TYPE [dbo].[SpaceBulkType] AS TABLE(
 	[IsActive] [bit] NULL
 )
 GO
-/****** Object:  UserDefinedTableType [dbo].[UnitBulkType]    Script Date: 10/29/2026 8:34:28 PM ******/
-CREATE TYPE [dbo].[UnitBulkType] AS TABLE(
-	[UnitId] [bigint] NULL,
-	[BuildingId] [bigint] NULL,
-	[UnitNumber] [nvarchar](50) NULL,
-	[FloorNumber] [int] NULL,
+/****** Object:  UserDefinedTableType [dbo].[UnitBulkSaveType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[UnitBulkSaveType] AS TABLE(
+	[UnitId] [bigint] NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[BuildingFloorId] [bigint] NULL,
+	[UnitNumber] [nvarchar](100) NOT NULL,
 	[Area] [decimal](10, 2) NULL,
 	[Bedrooms] [tinyint] NULL,
-	[UnitDescription] [nvarchar](1000) NULL,
-	[IsActive] [bit] NULL
+	[UnitDescription] [nvarchar](2000) NULL,
+	[IsActive] [bit] NOT NULL
 )
 GO
-/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  UserDefinedTableType [dbo].[UnitStaircaseBulkSaveType]    Script Date: 11/5/2026 8:12:27 PM ******/
+CREATE TYPE [dbo].[UnitStaircaseBulkSaveType] AS TABLE(
+	[UnitStaircaseId] [bigint] NOT NULL,
+	[UnitId] [bigint] NOT NULL,
+	[BuildingFloorId] [bigint] NOT NULL,
+	[BuildingStaircaseId] [bigint] NOT NULL,
+	[IsPrimary] [bit] NOT NULL,
+	[IsActive] [bit] NOT NULL
+)
+GO
+/****** Object:  Table [dbo].[App_LoginAttempts]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1960,7 +2760,7 @@ CREATE TABLE [dbo].[App_LoginAttempts](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_Menus]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_Menus]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1990,7 +2790,7 @@ CREATE TABLE [dbo].[App_Menus](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_RefreshTokens]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2013,7 +2813,7 @@ CREATE TABLE [dbo].[App_RefreshTokens](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_RoleMenus]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2035,7 +2835,7 @@ CREATE TABLE [dbo].[App_RoleMenus](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_Roles]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_Roles]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2055,7 +2855,7 @@ CREATE TABLE [dbo].[App_Roles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRateLimits]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2075,7 +2875,7 @@ CREATE TABLE [dbo].[App_UserOtpRateLimits](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_UserOtpRequests]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2101,7 +2901,7 @@ CREATE TABLE [dbo].[App_UserOtpRequests](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_UserProfiles]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2128,7 +2928,7 @@ CREATE TABLE [dbo].[App_UserProfiles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_UserRoles]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2152,7 +2952,7 @@ CREATE TABLE [dbo].[App_UserRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_Users]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_Users]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2184,7 +2984,7 @@ CREATE TABLE [dbo].[App_Users](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_UserSessions]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2205,7 +3005,7 @@ CREATE TABLE [dbo].[App_UserSessions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserSignupPending]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_UserSignupPending]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2222,7 +3022,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[App_UserSignupRateLimits]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[App_UserSignupRateLimits]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2239,7 +3039,7 @@ CREATE TABLE [dbo].[App_UserSignupRateLimits](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Base_Geo]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Base_Geo]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2263,7 +3063,7 @@ CREATE TABLE [dbo].[Base_Geo](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Base_Lookup]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2277,7 +3077,7 @@ CREATE TABLE [dbo].[Base_Lookup](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Base_LookupValues]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2294,7 +3094,7 @@ CREATE TABLE [dbo].[Base_LookupValues](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Booking_ClassSeries]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Booking_ClassSeries]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2325,7 +3125,7 @@ CREATE TABLE [dbo].[Booking_ClassSeries](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Booking_ClassSessions]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Booking_ClassSessions]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2349,7 +3149,7 @@ CREATE TABLE [dbo].[Booking_ClassSessions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Booking_Equipment]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Booking_Equipment]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2380,7 +3180,7 @@ CREATE TABLE [dbo].[Booking_Equipment](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Booking_HallRentalDetails]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Booking_HallRentalDetails]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2408,7 +3208,7 @@ CREATE TABLE [dbo].[Booking_HallRentalDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Booking_Participants]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Booking_Participants]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2432,7 +3232,7 @@ CREATE TABLE [dbo].[Booking_Participants](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Booking_RentalParticipants]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Booking_RentalParticipants]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2454,7 +3254,7 @@ CREATE TABLE [dbo].[Booking_RentalParticipants](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Booking_ReservationEquipment]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Booking_ReservationEquipment]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2476,7 +3276,7 @@ CREATE TABLE [dbo].[Booking_ReservationEquipment](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Booking_Space]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Booking_Space]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2507,7 +3307,7 @@ CREATE TABLE [dbo].[Booking_Space](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Booking_SpaceAmenities]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Booking_SpaceAmenities]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2530,7 +3330,134 @@ CREATE TABLE [dbo].[Booking_SpaceAmenities](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Buildings]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[BuildingConfigurations]    Script Date: 11/5/2026 8:12:27 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BuildingConfigurations](
+	[BuildingConfigurationId] [bigint] IDENTITY(1,1) NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[BasementFloorCount] [int] NOT NULL,
+	[GroundFloorCount] [int] NOT NULL,
+	[AboveGroundFloorCount] [int] NOT NULL,
+	[StaircaseCount] [int] NOT NULL,
+	[ElevatorCount] [int] NOT NULL,
+	[DefaultUnitsPerFloor] [int] NOT NULL,
+	[FloorNamingType] [int] NOT NULL,
+	[FloorNumberStart] [int] NOT NULL,
+	[UnitNamingType] [int] NOT NULL,
+	[UnitNumberPattern] [nvarchar](100) NOT NULL,
+	[UnitLetterStart] [nchar](10) NULL,
+	[UnitLetterEnd] [nchar](10) NULL,
+	[IsUnitNumberUnique] [bit] NOT NULL,
+	[ResetUnitNumberPerFloor] [bit] NOT NULL,
+	[AllowExceedFloorCapacity] [bit] NOT NULL,
+	[IsActive] [bit] NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[CreatedAt] [datetime] NOT NULL,
+	[UserCreater] [int] NULL,
+	[UpdatedAt] [datetime] NULL,
+	[UserUpdater] [int] NULL,
+ CONSTRAINT [PK_BuildingConfigurations] PRIMARY KEY CLUSTERED 
+(
+	[BuildingConfigurationId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[BuildingElevators]    Script Date: 11/5/2026 8:12:27 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BuildingElevators](
+	[BuildingElevatorId] [bigint] IDENTITY(1,1) NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[ElevatorCode] [nvarchar](60) NOT NULL,
+	[ElevatorName] [nvarchar](200) NOT NULL,
+	[ElevatorNameEn] [nvarchar](200) NULL,
+	[ElevatorType] [int] NOT NULL,
+	[Capacity] [int] NULL,
+	[MaxWeight] [decimal](10, 2) NULL,
+	[IsService] [bit] NOT NULL,
+	[IsEmergency] [bit] NOT NULL,
+	[Description] [nvarchar](1000) NULL,
+	[DisplayOrder] [int] NOT NULL,
+	[IsActive] [bit] NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[CreatedAt] [datetime] NOT NULL,
+	[UserCreater] [int] NULL,
+	[UpdatedAt] [datetime] NULL,
+	[UserUpdater] [int] NULL,
+ CONSTRAINT [PK_BuildingElevators] PRIMARY KEY CLUSTERED 
+(
+	[BuildingElevatorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[BuildingFloorElevators]    Script Date: 11/5/2026 8:12:27 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BuildingFloorElevators](
+	[BuildingFloorElevatorId] [bigint] IDENTITY(1,1) NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[BuildingFloorId] [bigint] NOT NULL,
+	[BuildingElevatorId] [bigint] NOT NULL,
+	[UserCreater] [int] NULL,
+	[IsActive] [bit] NOT NULL,
+	[CreatedAt] [datetime] NOT NULL,
+ CONSTRAINT [PK_BuildingFloorElevators] PRIMARY KEY CLUSTERED 
+(
+	[BuildingFloorElevatorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[BuildingFloors]    Script Date: 11/5/2026 8:12:27 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BuildingFloors](
+	[BuildingFloorId] [bigint] IDENTITY(1,1) NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[FloorNumber] [int] NOT NULL,
+	[FloorCode] [nvarchar](20) NOT NULL,
+	[FloorName] [nvarchar](100) NOT NULL,
+	[FloorNameEn] [nvarchar](100) NULL,
+	[MaxUnits] [int] NOT NULL,
+	[IsActive] [bit] NOT NULL,
+	[CreatedAt] [datetime] NOT NULL,
+	[UserCreater] [int] NULL,
+	[UpdatedAt] [datetime] NULL,
+	[UserUpdater] [int] NULL,
+ CONSTRAINT [PK_BuildingFloors] PRIMARY KEY CLUSTERED 
+(
+	[BuildingFloorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[BuildingFloorStaircases]    Script Date: 11/5/2026 8:12:27 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BuildingFloorStaircases](
+	[BuildingFloorStaircaseId] [bigint] IDENTITY(1,1) NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[BuildingFloorId] [bigint] NOT NULL,
+	[BuildingStaircaseId] [bigint] NOT NULL,
+	[IsActive] [bit] NOT NULL,
+	[CreatedAt] [datetime] NOT NULL,
+	[UserCreater] [int] NULL,
+ CONSTRAINT [PK_BuildingFloorStaircases] PRIMARY KEY CLUSTERED 
+(
+	[BuildingFloorStaircaseId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Buildings]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2553,7 +3480,53 @@ CREATE TABLE [dbo].[Buildings](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[BuildingStaircaseElevators]    Script Date: 11/5/2026 8:12:27 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BuildingStaircaseElevators](
+	[BuildingStaircaseElevatorId] [bigint] IDENTITY(1,1) NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[BuildingStaircaseId] [bigint] NOT NULL,
+	[BuildingElevatorId] [bigint] NOT NULL,
+	[UserCreater] [int] NULL,
+	[IsActive] [bit] NOT NULL,
+	[CreatedAt] [datetime] NOT NULL,
+ CONSTRAINT [PK_BuildingStaircaseElevators] PRIMARY KEY CLUSTERED 
+(
+	[BuildingStaircaseElevatorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[BuildingStaircases]    Script Date: 11/5/2026 8:12:27 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BuildingStaircases](
+	[BuildingStaircaseId] [bigint] IDENTITY(1,1) NOT NULL,
+	[BuildingId] [bigint] NOT NULL,
+	[StaircaseCode] [nvarchar](30) NOT NULL,
+	[StaircaseName] [nvarchar](100) NOT NULL,
+	[StaircaseNameEn] [nvarchar](100) NULL,
+	[StaircaseType] [int] NOT NULL,
+	[IsEmergency] [bit] NOT NULL,
+	[Description] [nvarchar](500) NULL,
+	[DisplayOrder] [int] NOT NULL,
+	[IsActive] [bit] NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[CreatedAt] [datetime] NOT NULL,
+	[UserCreater] [int] NULL,
+	[UpdatedAt] [datetime] NULL,
+	[UserUpdater] [int] NULL,
+ CONSTRAINT [PK_BuildingStaircases] PRIMARY KEY CLUSTERED 
+(
+	[BuildingStaircaseId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[EmployeeAssignments]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2580,7 +3553,7 @@ CREATE TABLE [dbo].[EmployeeAssignments](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Employees]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Employees]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2612,7 +3585,7 @@ CREATE TABLE [dbo].[Employees](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypeRoles]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2633,7 +3606,7 @@ CREATE TABLE [dbo].[EmployeeTypeRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[EmployeeTypes]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2654,7 +3627,7 @@ CREATE TABLE [dbo].[EmployeeTypes](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Enrollment_Class]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Enrollment_Class]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2685,7 +3658,7 @@ CREATE TABLE [dbo].[Enrollment_Class](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Enrollment_Waitlist]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Enrollment_Waitlist]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2709,7 +3682,7 @@ CREATE TABLE [dbo].[Enrollment_Waitlist](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Organizations]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Organizations]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2732,7 +3705,7 @@ CREATE TABLE [dbo].[Organizations](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Policy_Reservation]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Policy_Reservation]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2762,7 +3735,7 @@ CREATE TABLE [dbo].[Policy_Reservation](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Pricing_CommissionPlans]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Pricing_CommissionPlans]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2791,7 +3764,7 @@ CREATE TABLE [dbo].[Pricing_CommissionPlans](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Pricing_CommissionTiers]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Pricing_CommissionTiers]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2814,7 +3787,7 @@ CREATE TABLE [dbo].[Pricing_CommissionTiers](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Pricing_FinancialTransactions]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Pricing_FinancialTransactions]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2843,7 +3816,7 @@ CREATE TABLE [dbo].[Pricing_FinancialTransactions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Pricing_Rules]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Pricing_Rules]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2878,7 +3851,7 @@ CREATE TABLE [dbo].[Pricing_Rules](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Pricing_Settlements]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Pricing_Settlements]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2909,7 +3882,7 @@ CREATE TABLE [dbo].[Pricing_Settlements](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Spaces]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Spaces]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2939,7 +3912,7 @@ CREATE TABLE [dbo].[Spaces](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Units]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[Units]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2958,13 +3931,34 @@ CREATE TABLE [dbo].[Units](
 	[UserCreater] [int] NULL,
 	[UpdatedAt] [datetime] NULL,
 	[UserUpdater] [int] NULL,
+	[BuildingFloorId] [bigint] NULL,
  CONSTRAINT [PK_Units] PRIMARY KEY CLUSTERED 
 (
 	[UnitId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UserResidencies]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Table [dbo].[UnitStaircases]    Script Date: 11/5/2026 8:12:27 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UnitStaircases](
+	[UnitStaircaseId] [bigint] IDENTITY(1,1) NOT NULL,
+	[UnitId] [bigint] NOT NULL,
+	[BuildingFloorId] [bigint] NOT NULL,
+	[BuildingStaircaseId] [bigint] NOT NULL,
+	[IsPrimary] [bit] NOT NULL,
+	[IsActive] [bit] NOT NULL,
+	[CreatedAt] [datetime] NOT NULL,
+	[UserCreater] [int] NULL,
+ CONSTRAINT [PK_UnitStaircases] PRIMARY KEY CLUSTERED 
+(
+	[UnitStaircaseId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[UserResidencies]    Script Date: 11/5/2026 8:12:27 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -3485,6 +4479,14 @@ INSERT [dbo].[Base_Lookup] ([LookupId], [LookupTitle]) VALUES (11, N'نوع اس
 GO
 INSERT [dbo].[Base_Lookup] ([LookupId], [LookupTitle]) VALUES (12, N'نوع مکان ورزشی')
 GO
+INSERT [dbo].[Base_Lookup] ([LookupId], [LookupTitle]) VALUES (13, N'نوع راه پله')
+GO
+INSERT [dbo].[Base_Lookup] ([LookupId], [LookupTitle]) VALUES (14, N'نوع نام‌گذاری واحد')
+GO
+INSERT [dbo].[Base_Lookup] ([LookupId], [LookupTitle]) VALUES (15, N'نوع نام‌گذاری طبقه')
+GO
+INSERT [dbo].[Base_Lookup] ([LookupId], [LookupTitle]) VALUES (16, N'نوع آسانسور')
+GO
 INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1001, 10, N'ساختمان', N'Standalone Building', NULL)
 GO
 INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1002, 10, N'مجتمع مسکونی', N'Residential Complex', NULL)
@@ -3505,6 +4507,52 @@ INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitle
 GO
 INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1105, 11, N'پروژه‌ای', N'Project', NULL)
 GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1201, 12, N'عمومی', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1202, 12, N'باشگاه', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1203, 12, N'سالن اجتماعات', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1204, 12, N'مغازه', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1205, 12, N'کلاس', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1206, 12, N'سالن ورزشی', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1207, 12, N'دفتر', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1208, 12, N'انبار', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1209, 12, N'پارکینگ', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1210, 12, N'سایر', N'Other', NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1301, 13, N'اصلی', N'Main', NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1302, 13, N'اضطراری', N'Emergency', NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1303, 13, N'خدماتی', N'Service', NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1304, 13, N'فرار', N'Escape', NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1305, 13, N'سایر', N'Other', NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1401, 14, N'با حروف انگلیسی', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1402, 14, N'با حروف فارسی', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1403, 14, N'با عدد', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1501, 15, N'با عدد', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1502, 15, N'با حروف انگلیسی', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1503, 15, N'با حروف فارسی', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1601, 16, N'نفر بر', NULL, NULL)
+GO
+INSERT [dbo].[Base_LookupValues] ([LookupValueId], [LookupId], [LookupValueTitleFr], [LookupValueTitleEn], [SortId]) VALUES (1602, 16, N'باری', NULL, NULL)
+GO
 SET IDENTITY_INSERT [dbo].[Buildings] ON 
 GO
 INSERT [dbo].[Buildings] ([BuildingId], [BuildingName], [BuildingAddress], [BuildingDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [OrgId]) VALUES (1, N'برج بوستان', N'تهران، منطقه ۱، خیابان نمونه، پلاک ۱۰۰', N'برج مسکونی بوستان با امکانات رفاهی و باشگاه ورزشی اختصاصی', 1, 0, CAST(N'2026-09-01T17:22:05.297' AS DateTime), NULL, CAST(N'2026-10-25T21:27:25.027' AS DateTime), 1, 1)
@@ -3523,25 +4571,25 @@ SET IDENTITY_INSERT [dbo].[Organizations] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Units] ON 
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (1, 1, N'101', 1, CAST(145.50 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه اول - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (1, 1, N'101', 1, CAST(145.50 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه اول - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (2, 1, N'102', 1, CAST(120.00 AS Decimal(10, 2)), 2, N'واحد مسکونی طبقه اول - دو خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (2, 1, N'102', 1, CAST(120.00 AS Decimal(10, 2)), 2, N'واحد مسکونی طبقه اول - دو خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (3, 1, N'201', 2, CAST(165.75 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه دوم - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (3, 1, N'201', 2, CAST(165.75 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه دوم - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (4, 1, N'202', 2, CAST(135.00 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه دوم - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (4, 1, N'202', 2, CAST(135.00 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه دوم - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (5, 1, N'301', 3, CAST(180.25 AS Decimal(10, 2)), 4, N'واحد مسکونی طبقه سوم - چهار خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (5, 1, N'301', 3, CAST(180.25 AS Decimal(10, 2)), 4, N'واحد مسکونی طبقه سوم - چهار خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (6, 1, N'302', 3, CAST(150.00 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه سوم - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (6, 1, N'302', 3, CAST(150.00 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه سوم - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (7, 1, N'401', 4, CAST(210.00 AS Decimal(10, 2)), 4, N'واحد ویژه طبقه چهارم - چهار خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (7, 1, N'401', 4, CAST(210.00 AS Decimal(10, 2)), 4, N'واحد ویژه طبقه چهارم - چهار خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (8, 1, N'402', 4, CAST(175.00 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه چهارم - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (8, 1, N'402', 4, CAST(175.00 AS Decimal(10, 2)), 3, N'واحد مسکونی طبقه چهارم - سه خوابه', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (9, 1, N'501', 5, CAST(250.00 AS Decimal(10, 2)), 4, N'پنت هاوس طبقه پنجم', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (9, 1, N'501', 5, CAST(250.00 AS Decimal(10, 2)), 4, N'پنت هاوس طبقه پنجم', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater]) VALUES (10, 1, N'502', 5, CAST(220.00 AS Decimal(10, 2)), 4, N'پنت هاوس طبقه پنجم', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL)
+INSERT [dbo].[Units] ([UnitId], [BuildingId], [UnitNumber], [FloorNumber], [Area], [Bedrooms], [UnitDescription], [IsActive], [IsDeleted], [CreatedAt], [UserCreater], [UpdatedAt], [UserUpdater], [BuildingFloorId]) VALUES (10, 1, N'502', 5, CAST(220.00 AS Decimal(10, 2)), 4, N'پنت هاوس طبقه پنجم', 1, NULL, CAST(N'2026-09-01T17:22:05.320' AS DateTime), NULL, NULL, NULL, NULL)
 GO
 SET IDENTITY_INSERT [dbo].[Units] OFF
 GO
@@ -3561,13 +4609,13 @@ SET IDENTITY_INSERT [dbo].[UserResidencies] OFF
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_RefreshTokens_TokenHash]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[App_RefreshTokens] ADD  CONSTRAINT [UQ_RefreshTokens_TokenHash] UNIQUE NONCLUSTERED 
 (
 	[TokenHash] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_RoleMenus_Role_Menu]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[App_RoleMenus] ADD  CONSTRAINT [UQ_RoleMenus_Role_Menu] UNIQUE NONCLUSTERED 
 (
 	[RoleId] ASC,
@@ -3576,19 +4624,19 @@ ALTER TABLE [dbo].[App_RoleMenus] ADD  CONSTRAINT [UQ_RoleMenus_Role_Menu] UNIQU
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_UserOtpRateLimits_Mobile]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[App_UserOtpRateLimits] ADD  CONSTRAINT [UQ_UserOtpRateLimits_Mobile] UNIQUE NONCLUSTERED 
 (
 	[Mobile] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_UserProfiles_UserId]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[App_UserProfiles] ADD  CONSTRAINT [UQ_UserProfiles_UserId] UNIQUE NONCLUSTERED 
 (
 	[UserId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_UserRoles_User_Role]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[App_UserRoles] ADD  CONSTRAINT [UQ_UserRoles_User_Role] UNIQUE NONCLUSTERED 
 (
 	[UserId] ASC,
@@ -3597,7 +4645,7 @@ ALTER TABLE [dbo].[App_UserRoles] ADD  CONSTRAINT [UQ_UserRoles_User_Role] UNIQU
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_Users_Email]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Users_Email]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Email] UNIQUE NONCLUSTERED 
 (
 	[Email] ASC
@@ -3605,7 +4653,7 @@ ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Email] UNIQUE NONCLUSTER
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_Users_NationalId]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Users_NationalId]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_NationalId] UNIQUE NONCLUSTERED 
 (
 	[NationalId] ASC
@@ -3613,7 +4661,7 @@ ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_NationalId] UNIQUE NONCL
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_Users_Username]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Users_Username]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Username] UNIQUE NONCLUSTERED 
 (
 	[Username] ASC
@@ -3621,19 +4669,19 @@ ALTER TABLE [dbo].[App_Users] ADD  CONSTRAINT [UQ_Users_Username] UNIQUE NONCLUS
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ_App_UserSignupRateLimits_RateKey]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_App_UserSignupRateLimits_RateKey]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[App_UserSignupRateLimits] ADD  CONSTRAINT [UQ_App_UserSignupRateLimits_RateKey] UNIQUE NONCLUSTERED 
 (
 	[RateKey] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_Booking_ClassSessions_Booking]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Booking_ClassSessions_Booking]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[Booking_ClassSessions] ADD  CONSTRAINT [UQ_Booking_ClassSessions_Booking] UNIQUE NONCLUSTERED 
 (
 	[BookingId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Booking_ClassSessions_Series]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [IX_Booking_ClassSessions_Series]    Script Date: 11/5/2026 8:12:28 PM ******/
 CREATE NONCLUSTERED INDEX [IX_Booking_ClassSessions_Series] ON [dbo].[Booking_ClassSessions]
 (
 	[ClassSeriesId] ASC,
@@ -3641,7 +4689,7 @@ CREATE NONCLUSTERED INDEX [IX_Booking_ClassSessions_Series] ON [dbo].[Booking_Cl
 	[IsActive] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UX_Booking_Participants_UserId]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UX_Booking_Participants_UserId]    Script Date: 11/5/2026 8:12:28 PM ******/
 CREATE UNIQUE NONCLUSTERED INDEX [UX_Booking_Participants_UserId] ON [dbo].[Booking_Participants]
 (
 	[UserId] ASC
@@ -3649,21 +4697,21 @@ CREATE UNIQUE NONCLUSTERED INDEX [UX_Booking_Participants_UserId] ON [dbo].[Book
 WHERE ([UserId] IS NOT NULL)
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_Booking_RentalParticipants]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Booking_RentalParticipants]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[Booking_RentalParticipants] ADD  CONSTRAINT [UQ_Booking_RentalParticipants] UNIQUE NONCLUSTERED 
 (
 	[BookingId] ASC,
 	[ParticipantId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_Booking_ReservationEquipment]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Booking_ReservationEquipment]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[Booking_ReservationEquipment] ADD  CONSTRAINT [UQ_Booking_ReservationEquipment] UNIQUE NONCLUSTERED 
 (
 	[BookingId] ASC,
 	[EquipmentId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Booking_Space_Space_Time]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [IX_Booking_Space_Space_Time]    Script Date: 11/5/2026 8:12:28 PM ******/
 CREATE NONCLUSTERED INDEX [IX_Booking_Space_Space_Time] ON [dbo].[Booking_Space]
 (
 	[SpaceId] ASC,
@@ -3674,21 +4722,123 @@ INCLUDE([BookingStatus],[BookingType])
 WHERE ([IsDeleted]=(0))
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_BuildingConfigurations_Building]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [UQ_BuildingConfigurations_Building] UNIQUE NONCLUSTERED 
+(
+	[BuildingId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_BuildingElevators_Id_Building]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingElevators] ADD  CONSTRAINT [UQ_BuildingElevators_Id_Building] UNIQUE NONCLUSTERED 
+(
+	[BuildingElevatorId] ASC,
+	[BuildingId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UX_BuildingElevators_Building_Code]    Script Date: 11/5/2026 8:12:28 PM ******/
+CREATE UNIQUE NONCLUSTERED INDEX [UX_BuildingElevators_Building_Code] ON [dbo].[BuildingElevators]
+(
+	[BuildingId] ASC,
+	[ElevatorCode] ASC
+)
+WHERE ([IsDeleted]=(0))
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UX_BuildingElevators_Code]    Script Date: 11/5/2026 8:12:28 PM ******/
+CREATE UNIQUE NONCLUSTERED INDEX [UX_BuildingElevators_Code] ON [dbo].[BuildingElevators]
+(
+	[BuildingId] ASC,
+	[ElevatorCode] ASC
+)
+WHERE ([IsDeleted]=(0))
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_BuildingFloorElevators_Floor_Elevator]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingFloorElevators] ADD  CONSTRAINT [UQ_BuildingFloorElevators_Floor_Elevator] UNIQUE NONCLUSTERED 
+(
+	[BuildingFloorId] ASC,
+	[BuildingElevatorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_BuildingFloorElevators_Building_Elevator]    Script Date: 11/5/2026 8:12:28 PM ******/
+CREATE NONCLUSTERED INDEX [IX_BuildingFloorElevators_Building_Elevator] ON [dbo].[BuildingFloorElevators]
+(
+	[BuildingId] ASC,
+	[BuildingElevatorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UQ_BuildingFloors_Building_FloorCode]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingFloors] ADD  CONSTRAINT [UQ_BuildingFloors_Building_FloorCode] UNIQUE NONCLUSTERED 
+(
+	[BuildingId] ASC,
+	[FloorCode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_BuildingFloors_Building_FloorNumber]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingFloors] ADD  CONSTRAINT [UQ_BuildingFloors_Building_FloorNumber] UNIQUE NONCLUSTERED 
+(
+	[BuildingId] ASC,
+	[FloorNumber] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_BuildingFloors_Id_Building]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingFloors] ADD  CONSTRAINT [UQ_BuildingFloors_Id_Building] UNIQUE NONCLUSTERED 
+(
+	[BuildingFloorId] ASC,
+	[BuildingId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_BuildingFloorStaircases_Floor_Staircase]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingFloorStaircases] ADD  CONSTRAINT [UQ_BuildingFloorStaircases_Floor_Staircase] UNIQUE NONCLUSTERED 
+(
+	[BuildingFloorId] ASC,
+	[BuildingStaircaseId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_BuildingStaircaseElevators_Relation]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingStaircaseElevators] ADD  CONSTRAINT [UQ_BuildingStaircaseElevators_Relation] UNIQUE NONCLUSTERED 
+(
+	[BuildingStaircaseId] ASC,
+	[BuildingElevatorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UQ_BuildingStaircases_Code]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingStaircases] ADD  CONSTRAINT [UQ_BuildingStaircases_Code] UNIQUE NONCLUSTERED 
+(
+	[BuildingId] ASC,
+	[StaircaseCode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_BuildingStaircases_Id_Building]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[BuildingStaircases] ADD  CONSTRAINT [UQ_BuildingStaircases_Id_Building] UNIQUE NONCLUSTERED 
+(
+	[BuildingStaircaseId] ASC,
+	[BuildingId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_EmployeeTypeRoles]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[EmployeeTypeRoles] ADD  CONSTRAINT [UQ_EmployeeTypeRoles] UNIQUE NONCLUSTERED 
 (
 	[EmployeeTypeId] ASC,
 	[RoleId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_Enrollment_Class_SessionParticipant]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Enrollment_Class_SessionParticipant]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[Enrollment_Class] ADD  CONSTRAINT [UQ_Enrollment_Class_SessionParticipant] UNIQUE NONCLUSTERED 
 (
 	[ClassSessionId] ASC,
 	[ParticipantId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Enrollment_Class_Session_Status]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [IX_Enrollment_Class_Session_Status]    Script Date: 11/5/2026 8:12:28 PM ******/
 CREATE NONCLUSTERED INDEX [IX_Enrollment_Class_Session_Status] ON [dbo].[Enrollment_Class]
 (
 	[ClassSessionId] ASC,
@@ -3696,28 +4846,28 @@ CREATE NONCLUSTERED INDEX [IX_Enrollment_Class_Session_Status] ON [dbo].[Enrollm
 	[PaymentStatus] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_Enrollment_Waitlist_Participant]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Enrollment_Waitlist_Participant]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[Enrollment_Waitlist] ADD  CONSTRAINT [UQ_Enrollment_Waitlist_Participant] UNIQUE NONCLUSTERED 
 (
 	[ClassSessionId] ASC,
 	[ParticipantId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_Enrollment_Waitlist_Queue]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Enrollment_Waitlist_Queue]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[Enrollment_Waitlist] ADD  CONSTRAINT [UQ_Enrollment_Waitlist_Queue] UNIQUE NONCLUSTERED 
 (
 	[ClassSessionId] ASC,
 	[QueueNumber] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [UQ_Pricing_CommissionTiers_Order]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [UQ_Pricing_CommissionTiers_Order]    Script Date: 11/5/2026 8:12:28 PM ******/
 ALTER TABLE [dbo].[Pricing_CommissionTiers] ADD  CONSTRAINT [UQ_Pricing_CommissionTiers_Order] UNIQUE NONCLUSTERED 
 (
 	[CommissionPlanId] ASC,
 	[TierOrder] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Pricing_FinancialTransactions_Booking]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [IX_Pricing_FinancialTransactions_Booking]    Script Date: 11/5/2026 8:12:28 PM ******/
 CREATE NONCLUSTERED INDEX [IX_Pricing_FinancialTransactions_Booking] ON [dbo].[Pricing_FinancialTransactions]
 (
 	[BookingId] ASC,
@@ -3726,7 +4876,7 @@ CREATE NONCLUSTERED INDEX [IX_Pricing_FinancialTransactions_Booking] ON [dbo].[P
 WHERE ([BookingId] IS NOT NULL)
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Pricing_FinancialTransactions_Enrollment]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [IX_Pricing_FinancialTransactions_Enrollment]    Script Date: 11/5/2026 8:12:28 PM ******/
 CREATE NONCLUSTERED INDEX [IX_Pricing_FinancialTransactions_Enrollment] ON [dbo].[Pricing_FinancialTransactions]
 (
 	[EnrollmentId] ASC,
@@ -3735,7 +4885,7 @@ CREATE NONCLUSTERED INDEX [IX_Pricing_FinancialTransactions_Enrollment] ON [dbo]
 WHERE ([EnrollmentId] IS NOT NULL)
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Pricing_Rules_Lookup]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  Index [IX_Pricing_Rules_Lookup]    Script Date: 11/5/2026 8:12:28 PM ******/
 CREATE NONCLUSTERED INDEX [IX_Pricing_Rules_Lookup] ON [dbo].[Pricing_Rules]
 (
 	[OrgId] ASC,
@@ -3745,6 +4895,28 @@ CREATE NONCLUSTERED INDEX [IX_Pricing_Rules_Lookup] ON [dbo].[Pricing_Rules]
 	[IsDeleted] ASC,
 	[ValidFrom] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_Units_UnitId_BuildingFloor]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[Units] ADD  CONSTRAINT [UQ_Units_UnitId_BuildingFloor] UNIQUE NONCLUSTERED 
+(
+	[UnitId] ASC,
+	[BuildingFloorId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UQ_UnitStaircases_Unit_Staircase]    Script Date: 11/5/2026 8:12:28 PM ******/
+ALTER TABLE [dbo].[UnitStaircases] ADD  CONSTRAINT [UQ_UnitStaircases_Unit_Staircase] UNIQUE NONCLUSTERED 
+(
+	[UnitId] ASC,
+	[BuildingStaircaseId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [UX_UnitStaircases_Primary]    Script Date: 11/5/2026 8:12:28 PM ******/
+CREATE UNIQUE NONCLUSTERED INDEX [UX_UnitStaircases_Primary] ON [dbo].[UnitStaircases]
+(
+	[UnitId] ASC
+)
+WHERE ([IsPrimary]=(1) AND [IsActive]=(1))
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[App_LoginAttempts] ADD  CONSTRAINT [DF_LoginAttempts_FailedCount]  DEFAULT ((0)) FOR [FailedCount]
 GO
@@ -3854,9 +5026,85 @@ ALTER TABLE [dbo].[Booking_SpaceAmenities] ADD  CONSTRAINT [DF_Booking_SpaceAmen
 GO
 ALTER TABLE [dbo].[Booking_SpaceAmenities] ADD  CONSTRAINT [DF_Booking_SpaceAmenities_CreatedAt]  DEFAULT (getdate()) FOR [CreatedAt]
 GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Basement]  DEFAULT ((0)) FOR [BasementFloorCount]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Ground]  DEFAULT ((1)) FOR [GroundFloorCount]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Above]  DEFAULT ((0)) FOR [AboveGroundFloorCount]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Staircase]  DEFAULT ((1)) FOR [StaircaseCount]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Elevator]  DEFAULT ((0)) FOR [ElevatorCount]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Units]  DEFAULT ((1)) FOR [DefaultUnitsPerFloor]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_FloorNaming]  DEFAULT ((1)) FOR [FloorNamingType]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_FloorStart]  DEFAULT ((1)) FOR [FloorNumberStart]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_UnitNaming]  DEFAULT ((1)) FOR [UnitNamingType]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Pattern]  DEFAULT (N'{FLOOR}{UNIT}') FOR [UnitNumberPattern]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Unique]  DEFAULT ((1)) FOR [IsUnitNumberUnique]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Reset]  DEFAULT ((1)) FOR [ResetUnitNumberPerFloor]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_Exceed]  DEFAULT ((0)) FOR [AllowExceedFloorCapacity]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] ADD  CONSTRAINT [DF_BuildingConfigurations_CreatedAt_1]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[BuildingElevators] ADD  CONSTRAINT [DF_BuildingElevators_ElevatorType]  DEFAULT ((1)) FOR [ElevatorType]
+GO
+ALTER TABLE [dbo].[BuildingElevators] ADD  CONSTRAINT [DF_BuildingElevators_IsService]  DEFAULT ((0)) FOR [IsService]
+GO
+ALTER TABLE [dbo].[BuildingElevators] ADD  CONSTRAINT [DF_BuildingElevators_IsEmergency]  DEFAULT ((0)) FOR [IsEmergency]
+GO
+ALTER TABLE [dbo].[BuildingElevators] ADD  CONSTRAINT [DF_BuildingElevators_DisplayOrder]  DEFAULT ((1)) FOR [DisplayOrder]
+GO
+ALTER TABLE [dbo].[BuildingElevators] ADD  CONSTRAINT [DF_BuildingElevators_IsActive_1]  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[BuildingElevators] ADD  CONSTRAINT [DF_BuildingElevators_IsDeleted_1]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+ALTER TABLE [dbo].[BuildingElevators] ADD  CONSTRAINT [DF_BuildingElevators_CreatedAt_1]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators] ADD  CONSTRAINT [DF_BuildingFloorElevators_IsActive_1]  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators] ADD  CONSTRAINT [DF_BuildingFloorElevators_CreatedAt_1]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[BuildingFloors] ADD  CONSTRAINT [DF_BuildingFloors_MaxUnits]  DEFAULT ((1)) FOR [MaxUnits]
+GO
+ALTER TABLE [dbo].[BuildingFloors] ADD  CONSTRAINT [DF_BuildingFloors_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[BuildingFloors] ADD  CONSTRAINT [DF_BuildingFloors_CreatedAt_1]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases] ADD  CONSTRAINT [DF_BuildingFloorStaircases_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases] ADD  CONSTRAINT [DF_BuildingFloorStaircases_CreatedAt_1]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
 ALTER TABLE [dbo].[Buildings] ADD  CONSTRAINT [DF_Buildings_IsActive]  DEFAULT ((1)) FOR [IsActive]
 GO
 ALTER TABLE [dbo].[Buildings] ADD  CONSTRAINT [DF_Buildings_CreatedAt]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators] ADD  CONSTRAINT [DF_BuildingStaircaseElevators_IsActive_1]  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators] ADD  CONSTRAINT [DF_BuildingStaircaseElevators_CreatedAt_1]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] ADD  CONSTRAINT [DF_BuildingStaircases_Type]  DEFAULT ((1301)) FOR [StaircaseType]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] ADD  CONSTRAINT [DF_BuildingStaircases_Emergency]  DEFAULT ((0)) FOR [IsEmergency]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] ADD  CONSTRAINT [DF_BuildingStaircases_DisplayOrder]  DEFAULT ((1)) FOR [DisplayOrder]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] ADD  CONSTRAINT [DF_BuildingStaircases_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] ADD  CONSTRAINT [DF_BuildingStaircases_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+ALTER TABLE [dbo].[BuildingStaircases] ADD  CONSTRAINT [DF_BuildingStaircases_CreatedAt]  DEFAULT (getdate()) FOR [CreatedAt]
 GO
 ALTER TABLE [dbo].[EmployeeAssignments] ADD  CONSTRAINT [DF_EmployeeAssignments_IsActive]  DEFAULT ((1)) FOR [IsActive]
 GO
@@ -3951,6 +5199,12 @@ GO
 ALTER TABLE [dbo].[Units] ADD  CONSTRAINT [DF_Units_IsActive]  DEFAULT ((1)) FOR [IsActive]
 GO
 ALTER TABLE [dbo].[Units] ADD  CONSTRAINT [DF_Units_CreatedAt]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[UnitStaircases] ADD  CONSTRAINT [DF_UnitStaircases_IsPrimary]  DEFAULT ((0)) FOR [IsPrimary]
+GO
+ALTER TABLE [dbo].[UnitStaircases] ADD  CONSTRAINT [DF_UnitStaircases_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[UnitStaircases] ADD  CONSTRAINT [DF_UnitStaircases_CreatedAt]  DEFAULT (getdate()) FOR [CreatedAt]
 GO
 ALTER TABLE [dbo].[UserResidencies] ADD  CONSTRAINT [DF_UserResidencies_IsActive]  DEFAULT ((1)) FOR [IsActive]
 GO
@@ -4152,10 +5406,80 @@ REFERENCES [dbo].[Spaces] ([SpaceId])
 GO
 ALTER TABLE [dbo].[Booking_SpaceAmenities] CHECK CONSTRAINT [FK_Booking_SpaceAmenities_Space]
 GO
+ALTER TABLE [dbo].[BuildingConfigurations]  WITH CHECK ADD  CONSTRAINT [FK_BuildingConfigurations_Base_LookupValues] FOREIGN KEY([FloorNamingType])
+REFERENCES [dbo].[Base_LookupValues] ([LookupValueId])
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] CHECK CONSTRAINT [FK_BuildingConfigurations_Base_LookupValues]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations]  WITH CHECK ADD  CONSTRAINT [FK_BuildingConfigurations_Base_LookupValues1] FOREIGN KEY([UnitNamingType])
+REFERENCES [dbo].[Base_LookupValues] ([LookupValueId])
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] CHECK CONSTRAINT [FK_BuildingConfigurations_Base_LookupValues1]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations]  WITH CHECK ADD  CONSTRAINT [FK_BuildingConfigurations_Buildings] FOREIGN KEY([BuildingId])
+REFERENCES [dbo].[Buildings] ([BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] CHECK CONSTRAINT [FK_BuildingConfigurations_Buildings]
+GO
+ALTER TABLE [dbo].[BuildingElevators]  WITH CHECK ADD  CONSTRAINT [FK_BuildingElevators_Base_LookupValues] FOREIGN KEY([ElevatorType])
+REFERENCES [dbo].[Base_LookupValues] ([LookupValueId])
+GO
+ALTER TABLE [dbo].[BuildingElevators] CHECK CONSTRAINT [FK_BuildingElevators_Base_LookupValues]
+GO
+ALTER TABLE [dbo].[BuildingElevators]  WITH CHECK ADD  CONSTRAINT [FK_BuildingElevators_Buildings] FOREIGN KEY([BuildingId])
+REFERENCES [dbo].[Buildings] ([BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingElevators] CHECK CONSTRAINT [FK_BuildingElevators_Buildings]
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators]  WITH CHECK ADD  CONSTRAINT [FK_BuildingFloorElevators_Elevators] FOREIGN KEY([BuildingElevatorId], [BuildingId])
+REFERENCES [dbo].[BuildingElevators] ([BuildingElevatorId], [BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators] CHECK CONSTRAINT [FK_BuildingFloorElevators_Elevators]
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators]  WITH CHECK ADD  CONSTRAINT [FK_BuildingFloorElevators_Floors] FOREIGN KEY([BuildingFloorId], [BuildingId])
+REFERENCES [dbo].[BuildingFloors] ([BuildingFloorId], [BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingFloorElevators] CHECK CONSTRAINT [FK_BuildingFloorElevators_Floors]
+GO
+ALTER TABLE [dbo].[BuildingFloors]  WITH CHECK ADD  CONSTRAINT [FK_BuildingFloors_Buildings] FOREIGN KEY([BuildingId])
+REFERENCES [dbo].[Buildings] ([BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingFloors] CHECK CONSTRAINT [FK_BuildingFloors_Buildings]
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases]  WITH CHECK ADD  CONSTRAINT [FK_BuildingFloorStaircases_Floors] FOREIGN KEY([BuildingFloorId], [BuildingId])
+REFERENCES [dbo].[BuildingFloors] ([BuildingFloorId], [BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases] CHECK CONSTRAINT [FK_BuildingFloorStaircases_Floors]
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases]  WITH CHECK ADD  CONSTRAINT [FK_BuildingFloorStaircases_Staircases] FOREIGN KEY([BuildingStaircaseId], [BuildingId])
+REFERENCES [dbo].[BuildingStaircases] ([BuildingStaircaseId], [BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingFloorStaircases] CHECK CONSTRAINT [FK_BuildingFloorStaircases_Staircases]
+GO
 ALTER TABLE [dbo].[Buildings]  WITH CHECK ADD  CONSTRAINT [FK_Buildings_Orgs] FOREIGN KEY([OrgId])
 REFERENCES [dbo].[Organizations] ([OrgId])
 GO
 ALTER TABLE [dbo].[Buildings] CHECK CONSTRAINT [FK_Buildings_Orgs]
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators]  WITH CHECK ADD  CONSTRAINT [FK_BuildingStaircaseElevators_Elevators] FOREIGN KEY([BuildingElevatorId], [BuildingId])
+REFERENCES [dbo].[BuildingElevators] ([BuildingElevatorId], [BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators] CHECK CONSTRAINT [FK_BuildingStaircaseElevators_Elevators]
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators]  WITH CHECK ADD  CONSTRAINT [FK_BuildingStaircaseElevators_Staircases] FOREIGN KEY([BuildingStaircaseId], [BuildingId])
+REFERENCES [dbo].[BuildingStaircases] ([BuildingStaircaseId], [BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingStaircaseElevators] CHECK CONSTRAINT [FK_BuildingStaircaseElevators_Staircases]
+GO
+ALTER TABLE [dbo].[BuildingStaircases]  WITH CHECK ADD  CONSTRAINT [FK_BuildingStaircases_Base_LookupValues] FOREIGN KEY([StaircaseType])
+REFERENCES [dbo].[Base_LookupValues] ([LookupValueId])
+GO
+ALTER TABLE [dbo].[BuildingStaircases] CHECK CONSTRAINT [FK_BuildingStaircases_Base_LookupValues]
+GO
+ALTER TABLE [dbo].[BuildingStaircases]  WITH CHECK ADD  CONSTRAINT [FK_BuildingStaircases_Buildings] FOREIGN KEY([BuildingId])
+REFERENCES [dbo].[Buildings] ([BuildingId])
+GO
+ALTER TABLE [dbo].[BuildingStaircases] CHECK CONSTRAINT [FK_BuildingStaircases_Buildings]
 GO
 ALTER TABLE [dbo].[EmployeeAssignments]  WITH CHECK ADD  CONSTRAINT [FK_EmployeeAssignments_Buildings] FOREIGN KEY([BuildingId])
 REFERENCES [dbo].[Buildings] ([BuildingId])
@@ -4347,10 +5671,25 @@ REFERENCES [dbo].[Organizations] ([OrgId])
 GO
 ALTER TABLE [dbo].[Spaces] CHECK CONSTRAINT [FK_Spaces_Orgs]
 GO
+ALTER TABLE [dbo].[Units]  WITH CHECK ADD  CONSTRAINT [FK_Units_BuildingFloors_Building] FOREIGN KEY([BuildingFloorId], [BuildingId])
+REFERENCES [dbo].[BuildingFloors] ([BuildingFloorId], [BuildingId])
+GO
+ALTER TABLE [dbo].[Units] CHECK CONSTRAINT [FK_Units_BuildingFloors_Building]
+GO
 ALTER TABLE [dbo].[Units]  WITH CHECK ADD  CONSTRAINT [FK_Units_Buildings] FOREIGN KEY([BuildingId])
 REFERENCES [dbo].[Buildings] ([BuildingId])
 GO
 ALTER TABLE [dbo].[Units] CHECK CONSTRAINT [FK_Units_Buildings]
+GO
+ALTER TABLE [dbo].[UnitStaircases]  WITH CHECK ADD  CONSTRAINT [FK_UnitStaircases_FloorStaircases] FOREIGN KEY([BuildingFloorId], [BuildingStaircaseId])
+REFERENCES [dbo].[BuildingFloorStaircases] ([BuildingFloorId], [BuildingStaircaseId])
+GO
+ALTER TABLE [dbo].[UnitStaircases] CHECK CONSTRAINT [FK_UnitStaircases_FloorStaircases]
+GO
+ALTER TABLE [dbo].[UnitStaircases]  WITH CHECK ADD  CONSTRAINT [FK_UnitStaircases_Units] FOREIGN KEY([UnitId], [BuildingFloorId])
+REFERENCES [dbo].[Units] ([UnitId], [BuildingFloorId])
+GO
+ALTER TABLE [dbo].[UnitStaircases] CHECK CONSTRAINT [FK_UnitStaircases_Units]
 GO
 ALTER TABLE [dbo].[UserResidencies]  WITH CHECK ADD  CONSTRAINT [FK_UserResidencies_Units] FOREIGN KEY([UnitId])
 REFERENCES [dbo].[Units] ([UnitId])
@@ -4422,6 +5761,54 @@ GO
 ALTER TABLE [dbo].[Booking_Space]  WITH CHECK ADD  CONSTRAINT [CK_Booking_Space_Type] CHECK  (([BookingType]=(2) OR [BookingType]=(1)))
 GO
 ALTER TABLE [dbo].[Booking_Space] CHECK CONSTRAINT [CK_Booking_Space_Type]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations]  WITH CHECK ADD  CONSTRAINT [CK_BuildingConfigurations_Elevators] CHECK  (([ElevatorCount]>=(0)))
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] CHECK CONSTRAINT [CK_BuildingConfigurations_Elevators]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations]  WITH CHECK ADD  CONSTRAINT [CK_BuildingConfigurations_FloorNaming] CHECK  (([FloorNamingType]=(3) OR [FloorNamingType]=(2) OR [FloorNamingType]=(1)))
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] CHECK CONSTRAINT [CK_BuildingConfigurations_FloorNaming]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations]  WITH CHECK ADD  CONSTRAINT [CK_BuildingConfigurations_Floors] CHECK  (([BasementFloorCount]>=(0) AND [GroundFloorCount]>=(0) AND [AboveGroundFloorCount]>=(0)))
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] CHECK CONSTRAINT [CK_BuildingConfigurations_Floors]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations]  WITH CHECK ADD  CONSTRAINT [CK_BuildingConfigurations_Staircases] CHECK  (([StaircaseCount]>=(0)))
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] CHECK CONSTRAINT [CK_BuildingConfigurations_Staircases]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations]  WITH CHECK ADD  CONSTRAINT [CK_BuildingConfigurations_UnitNaming] CHECK  (([UnitNamingType]=(3) OR [UnitNamingType]=(2) OR [UnitNamingType]=(1)))
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] CHECK CONSTRAINT [CK_BuildingConfigurations_UnitNaming]
+GO
+ALTER TABLE [dbo].[BuildingConfigurations]  WITH CHECK ADD  CONSTRAINT [CK_BuildingConfigurations_Units] CHECK  (([DefaultUnitsPerFloor]>=(0)))
+GO
+ALTER TABLE [dbo].[BuildingConfigurations] CHECK CONSTRAINT [CK_BuildingConfigurations_Units]
+GO
+ALTER TABLE [dbo].[BuildingElevators]  WITH CHECK ADD  CONSTRAINT [CK_BuildingElevators_Capacity] CHECK  (([Capacity] IS NULL OR [Capacity]>(0)))
+GO
+ALTER TABLE [dbo].[BuildingElevators] CHECK CONSTRAINT [CK_BuildingElevators_Capacity]
+GO
+ALTER TABLE [dbo].[BuildingElevators]  WITH CHECK ADD  CONSTRAINT [CK_BuildingElevators_ElevatorType] CHECK  (([ElevatorType]>=(1) AND [ElevatorType]<=(7)))
+GO
+ALTER TABLE [dbo].[BuildingElevators] CHECK CONSTRAINT [CK_BuildingElevators_ElevatorType]
+GO
+ALTER TABLE [dbo].[BuildingElevators]  WITH CHECK ADD  CONSTRAINT [CK_BuildingElevators_MaxWeight] CHECK  (([MaxWeight] IS NULL OR [MaxWeight]>(0)))
+GO
+ALTER TABLE [dbo].[BuildingElevators] CHECK CONSTRAINT [CK_BuildingElevators_MaxWeight]
+GO
+ALTER TABLE [dbo].[BuildingFloors]  WITH CHECK ADD  CONSTRAINT [CK_BuildingFloors_MaxUnits] CHECK  (([MaxUnits]>=(0)))
+GO
+ALTER TABLE [dbo].[BuildingFloors] CHECK CONSTRAINT [CK_BuildingFloors_MaxUnits]
+GO
+ALTER TABLE [dbo].[BuildingStaircases]  WITH CHECK ADD  CONSTRAINT [CK_BuildingStaircases_DisplayOrder] CHECK  (([DisplayOrder]>(0)))
+GO
+ALTER TABLE [dbo].[BuildingStaircases] CHECK CONSTRAINT [CK_BuildingStaircases_DisplayOrder]
+GO
+ALTER TABLE [dbo].[BuildingStaircases]  WITH CHECK ADD  CONSTRAINT [CK_BuildingStaircases_Type] CHECK  (([StaircaseType]>=(1) AND [StaircaseType]<=(5)))
+GO
+ALTER TABLE [dbo].[BuildingStaircases] CHECK CONSTRAINT [CK_BuildingStaircases_Type]
 GO
 ALTER TABLE [dbo].[Enrollment_Class]  WITH CHECK ADD  CONSTRAINT [CK_Enrollment_Class_Amounts] CHECK  (([BaseAmount]>=(0) AND [DiscountAmount]>=(0) AND [FinalAmount]>=(0) AND [DiscountAmount]<=[BaseAmount]))
 GO
@@ -4551,7 +5938,7 @@ ALTER TABLE [dbo].[Pricing_Settlements]  WITH CHECK ADD  CONSTRAINT [CK_Pricing_
 GO
 ALTER TABLE [dbo].[Pricing_Settlements] CHECK CONSTRAINT [CK_Pricing_Settlements_Status]
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptCheck]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4620,7 +6007,7 @@ BEGIN
         @LockedUntil AS LockedUntil;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptFail]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4708,7 +6095,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_LoginAttemptReset]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4723,7 +6110,7 @@ BEGIN
     WHERE UsernameKey = @UsernameKey;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenCleanupExpired]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4746,7 +6133,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActive]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4798,7 +6185,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenGetActiveSessions]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4850,7 +6237,7 @@ BEGIN
     ORDER BY CreatedAt DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevoke]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4877,7 +6264,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeAll]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4904,7 +6291,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRevokeSession]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -4931,7 +6318,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenRotate]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5080,7 +6467,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_RefreshTokenSave]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5132,7 +6519,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_SuperAdminRegister]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_SuperAdminRegister]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5395,7 +6782,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForRefresh]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5520,7 +6907,7 @@ BEGIN
     OPTION (MAXRECURSION 100);
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserGetForSession]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -5730,7 +7117,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserLogin]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6064,7 +7451,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserProfilesGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6158,7 +7545,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersCompleteProfile]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6615,7 +8002,7 @@ BEGIN
 
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionAuthorizationGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6673,7 +8060,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionClearActiveRole]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6735,7 +8122,7 @@ BEGIN
     END CATCH
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionCreate]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6797,7 +8184,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6833,7 +8220,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionGetActive]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6872,7 +8259,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevoke]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6922,7 +8309,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionRevokeAll]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -6973,7 +8360,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionSetActiveRole]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7102,7 +8489,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UserSessionUpdateLastSeen]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7129,7 +8516,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersLoginGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7239,7 +8626,7 @@ BEGIN
         m.SortOrder;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersOtpVerify]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -7704,7 +9091,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignup]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8215,7 +9602,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignupStartOtp]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupStartOtp]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8526,7 +9913,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignupVerifyOtp]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupVerifyOtp]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -8833,7 +10220,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[App_UsersSignupWithPassword]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[App_UsersSignupWithPassword]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9094,7 +10481,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Base_Geo_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_Geo_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9161,7 +10548,7 @@ BEGIN
     SET @ResultMessage = N'اطلاعات موقعیت جغرافیایی با موفقیت دریافت شد.';
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_GeoGetChildren]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9275,7 +10662,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Base_LookupValues_Get]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_LookupValues_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9291,7 +10678,7 @@ BEGIN
     ORDER BY LookupValueId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Base_LookupValues_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Base_LookupValues_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9329,7 +10716,7 @@ BEGIN
     SET @ResultMessage = N'مقدار پایه با موفقیت دریافت شد.';
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9365,7 +10752,7 @@ BEGIN
         THROW 50005, N'سری کلاس یافت نشد یا قبلاً حذف شده است.', 1;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_GetActiveList]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_GetActiveList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9385,7 +10772,7 @@ BEGIN
     ORDER BY ClassName;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9404,7 +10791,7 @@ BEGIN
       AND ISNULL(IsDeleted, 0) = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_Save]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSeries_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9495,7 +10882,7 @@ BEGIN
     EXEC dbo.Booking_ClassSeries_GetById @ClassSeriesId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9520,7 +10907,7 @@ BEGIN
         THROW 50021, N'جلسه کلاس یافت نشد یا قبلاً حذف شده است.', 1;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_GetActiveList]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_GetActiveList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9540,7 +10927,7 @@ BEGIN
     ORDER BY ClassSessionId DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9558,7 +10945,7 @@ BEGIN
       AND IsDeleted = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_Save]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSession_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9621,7 +11008,7 @@ BEGIN
     EXEC dbo.Booking_ClassSession_GetById @ClassSessionId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSessions_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSessions_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9657,7 +11044,7 @@ BEGIN
         THROW 50106, N'جلسه یافت نشد یا قبلاً حذف شده است.', 1;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ClassSessions_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ClassSessions_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9682,7 +11069,7 @@ BEGIN
       AND ISNULL(C.IsDeleted, 0) = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Equipment_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Equipment_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9703,7 +11090,7 @@ BEGIN
         THROW 51312, N'تجهیزات پیدا نشد.', 1;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Equipment_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Equipment_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9719,7 +11106,7 @@ BEGIN
     WHERE EquipmentId = @EquipmentId AND IsDeleted = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Equipment_GetList]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Equipment_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9743,7 +11130,7 @@ BEGIN
     ORDER BY EquipmentName;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Equipment_Save]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Equipment_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9822,7 +11209,7 @@ BEGIN
     EXEC dbo.Booking_Equipment_GetById @EquipmentId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9838,7 +11225,7 @@ BEGIN
     WHERE BookingId = @BookingId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9858,7 +11245,7 @@ BEGIN
       AND b.IsDeleted = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_GetList]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9885,7 +11272,7 @@ BEGIN
     ORDER BY b.StartAt DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_Save]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_HallRentalDetails_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9958,7 +11345,7 @@ BEGIN
     EXEC dbo.Booking_HallRentalDetails_GetById @BookingId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participant_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participant_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -9983,7 +11370,7 @@ BEGIN
         THROW 50031, N'شرکت‌کننده یافت نشد یا قبلاً حذف شده است.', 1;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participant_GetActiveList]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participant_GetActiveList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10005,7 +11392,7 @@ BEGIN
     ORDER BY FullName;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participant_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participant_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10023,7 +11410,7 @@ BEGIN
       AND ISNULL(IsDeleted, 0) = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participant_Save]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participant_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10087,7 +11474,7 @@ BEGIN
     EXEC dbo.Booking_Participant_GetById @ParticipantId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participants_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participants_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10130,7 +11517,7 @@ BEGIN
         THROW 50205, N'شرکت‌کننده یافت نشد یا قبلاً حذف شده است.', 1;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Participants_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Participants_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10149,7 +11536,7 @@ BEGIN
       AND ISNULL(IsDeleted, 0) = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10165,7 +11552,7 @@ BEGIN
     WHERE RentalParticipantId = @RentalParticipantId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10184,7 +11571,7 @@ BEGIN
     WHERE rp.RentalParticipantId = @RentalParticipantId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_GetList]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10206,7 +11593,7 @@ BEGIN
     ORDER BY rp.RentalParticipantId DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_Save]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_RentalParticipants_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10259,7 +11646,7 @@ BEGIN
     EXEC dbo.Booking_RentalParticipants_GetById @RentalParticipantId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10296,7 +11683,7 @@ BEGIN
     COMMIT;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10313,7 +11700,7 @@ BEGIN
     WHERE re.ReservationEquipmentId = @ReservationEquipmentId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_GetList]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10333,7 +11720,7 @@ BEGIN
     ORDER BY re.ReservationEquipmentId DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_Save]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_ReservationEquipment_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10464,7 +11851,7 @@ BEGIN
     EXEC dbo.Booking_ReservationEquipment_GetById @ReservationEquipmentId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_Approve]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_Approve]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10541,7 +11928,7 @@ BEGIN
     EXEC dbo.Booking_Space_GetById @BookingId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_Cancel]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_Cancel]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10568,7 +11955,7 @@ BEGIN
     EXEC dbo.Booking_Space_GetById @BookingId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_CheckConflict]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_CheckConflict]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10608,7 +11995,7 @@ BEGIN
     AS BIT) AS HasConflict;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10632,7 +12019,7 @@ BEGIN
         THROW 50003, N'رزرو موردنظر یافت نشد یا قبلاً حذف شده است.', 1;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10656,7 +12043,7 @@ BEGIN
       AND ISNULL(b.IsDeleted, 0) = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_GetList]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10697,7 +12084,7 @@ BEGIN
     ORDER BY b.StartAt DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_Space_Save]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_Space_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10780,7 +12167,7 @@ BEGIN
     EXEC dbo.Booking_Space_GetById @BookingId = @BookingId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_Delete]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10795,7 +12182,7 @@ BEGIN
     WHERE SpaceAmenityId = @SpaceAmenityId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_GetById]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10811,7 +12198,7 @@ BEGIN
     WHERE SpaceAmenityId = @SpaceAmenityId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_GetList]    Script Date: 10/29/2026 8:34:28 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10830,7 +12217,7 @@ BEGIN
     ORDER BY AmenityName;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_Save]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Booking_SpaceAmenities_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10885,7 +12272,3208 @@ BEGIN
     EXEC dbo.Booking_SpaceAmenities_GetById @SpaceAmenityId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Buildings_BulkSave]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_BulkInsert]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingConfigurations_BulkInsert]
+(
+    @Items dbo.BuildingConfigurationBulkType READONLY,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF NOT EXISTS (SELECT 1 FROM @Items)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'No records supplied.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items
+            WHERE BuildingId <= 0
+               OR BasementFloorCount < 0
+               OR GroundFloorCount < 0
+               OR AboveGroundFloorCount < 0
+               OR StaircaseCount < 0
+               OR ElevatorCount < 0
+               OR DefaultUnitsPerFloor < 0
+               OR FloorNamingType NOT IN (1,2,3)
+               OR UnitNamingType NOT IN (1,2,3)
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid bulk configuration data.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.Buildings b
+                ON b.BuildingId = i.BuildingId
+               AND ISNULL(b.IsDeleted,0) = 0
+            WHERE b.BuildingId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'One or more buildings were not found.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT BuildingId
+            FROM @Items
+            GROUP BY BuildingId
+            HAVING COUNT(*) > 1
+        )
+        OR EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            INNER JOIN dbo.BuildingConfigurations c
+                ON c.BuildingId = i.BuildingId
+               AND c.IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Duplicate building configuration.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        INSERT INTO dbo.BuildingConfigurations
+        (
+            BuildingId,
+            BasementFloorCount,
+            GroundFloorCount,
+            AboveGroundFloorCount,
+            StaircaseCount,
+            ElevatorCount,
+            DefaultUnitsPerFloor,
+            FloorNamingType,
+            FloorNumberStart,
+            UnitNamingType,
+            UnitNumberPattern,
+            UnitLetterStart,
+            UnitLetterEnd,
+            IsUnitNumberUnique,
+            ResetUnitNumberPerFloor,
+            AllowExceedFloorCapacity,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UserCreater
+        )
+        SELECT
+            BuildingId,
+            BasementFloorCount,
+            GroundFloorCount,
+            AboveGroundFloorCount,
+            StaircaseCount,
+            ElevatorCount,
+            DefaultUnitsPerFloor,
+            FloorNamingType,
+            FloorNumberStart,
+            UnitNamingType,
+            UnitNumberPattern,
+            UnitLetterStart,
+            UnitLetterEnd,
+            IsUnitNumberUnique,
+            ResetUnitNumberPerFloor,
+            AllowExceedFloorCapacity,
+            IsActive,
+            0,
+            GETDATE(),
+            @UserId
+        FROM @Items;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 201;
+        SET @ResultMessage = N'Configurations inserted successfully.';
+
+        SELECT *
+        FROM dbo.BuildingConfigurations
+        WHERE UserCreater = @UserId
+          AND CreatedAt >= DATEADD(MINUTE,-1,GETDATE())
+        ORDER BY BuildingConfigurationId DESC;
+
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingConfigurations_BulkSave]
+(
+    @Items dbo.BuildingConfigurationBulkSaveType READONLY,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        /* Empty input */
+        IF NOT EXISTS (SELECT 1 FROM @Items)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'No records supplied.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        /* Validate values */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items
+            WHERE BuildingId <= 0
+               OR BasementFloorCount < 0
+               OR GroundFloorCount < 0
+               OR AboveGroundFloorCount < 0
+               OR StaircaseCount < 0
+               OR ElevatorCount < 0
+               OR DefaultUnitsPerFloor < 0
+               OR FloorNamingType NOT IN (1,2,3)
+               OR UnitNamingType NOT IN (1,2,3)
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid configuration data.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        /* Duplicate building IDs in new records */
+        IF EXISTS
+        (
+            SELECT BuildingId
+            FROM @Items
+            WHERE BuildingConfigurationId = 0
+            GROUP BY BuildingId
+            HAVING COUNT(*) > 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Duplicate building configuration in request.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        /* Duplicate configuration IDs */
+        IF EXISTS
+        (
+            SELECT BuildingConfigurationId
+            FROM @Items
+            WHERE BuildingConfigurationId > 0
+            GROUP BY BuildingConfigurationId
+            HAVING COUNT(*) > 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Duplicate configuration IDs in request.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        /* Validate buildings */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.Buildings b
+                ON b.BuildingId = i.BuildingId
+               AND ISNULL(b.IsDeleted,0) = 0
+            WHERE b.BuildingId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'One or more buildings were not found.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        /* Validate existing configuration IDs and ownership */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.BuildingConfigurations c
+                ON c.BuildingConfigurationId = i.BuildingConfigurationId
+               AND c.BuildingId = i.BuildingId
+               AND c.IsDeleted = 0
+            WHERE i.BuildingConfigurationId > 0
+              AND c.BuildingConfigurationId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'One or more configurations were not found.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        /* Prevent another configuration for the same building */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            INNER JOIN dbo.BuildingConfigurations c
+                ON c.BuildingId = i.BuildingId
+               AND c.IsDeleted = 0
+            WHERE i.BuildingConfigurationId = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Configuration already exists for one or more buildings.';
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
+
+        /* Update existing records */
+        UPDATE c
+        SET
+            c.BasementFloorCount = i.BasementFloorCount,
+            c.GroundFloorCount = i.GroundFloorCount,
+            c.AboveGroundFloorCount = i.AboveGroundFloorCount,
+            c.StaircaseCount = i.StaircaseCount,
+            c.ElevatorCount = i.ElevatorCount,
+            c.DefaultUnitsPerFloor = i.DefaultUnitsPerFloor,
+            c.FloorNamingType = i.FloorNamingType,
+            c.FloorNumberStart = i.FloorNumberStart,
+            c.UnitNamingType = i.UnitNamingType,
+            c.UnitNumberPattern = i.UnitNumberPattern,
+            c.UnitLetterStart = i.UnitLetterStart,
+            c.UnitLetterEnd = i.UnitLetterEnd,
+            c.IsUnitNumberUnique = i.IsUnitNumberUnique,
+            c.ResetUnitNumberPerFloor = i.ResetUnitNumberPerFloor,
+            c.AllowExceedFloorCapacity = i.AllowExceedFloorCapacity,
+            c.IsActive = i.IsActive,
+            c.UpdatedAt = GETDATE(),
+            c.UserUpdater = @UserId
+        FROM dbo.BuildingConfigurations c
+        INNER JOIN @Items i
+            ON c.BuildingConfigurationId = i.BuildingConfigurationId
+        WHERE i.BuildingConfigurationId > 0
+          AND c.IsDeleted = 0;
+
+        /* Insert new records */
+        INSERT INTO dbo.BuildingConfigurations
+        (
+            BuildingId,
+            BasementFloorCount,
+            GroundFloorCount,
+            AboveGroundFloorCount,
+            StaircaseCount,
+            ElevatorCount,
+            DefaultUnitsPerFloor,
+            FloorNamingType,
+            FloorNumberStart,
+            UnitNamingType,
+            UnitNumberPattern,
+            UnitLetterStart,
+            UnitLetterEnd,
+            IsUnitNumberUnique,
+            ResetUnitNumberPerFloor,
+            AllowExceedFloorCapacity,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UserCreater
+        )
+        SELECT
+            i.BuildingId,
+            i.BasementFloorCount,
+            i.GroundFloorCount,
+            i.AboveGroundFloorCount,
+            i.StaircaseCount,
+            i.ElevatorCount,
+            i.DefaultUnitsPerFloor,
+            i.FloorNamingType,
+            i.FloorNumberStart,
+            i.UnitNamingType,
+            i.UnitNumberPattern,
+            i.UnitLetterStart,
+            i.UnitLetterEnd,
+            i.IsUnitNumberUnique,
+            i.ResetUnitNumberPerFloor,
+            i.AllowExceedFloorCapacity,
+            i.IsActive,
+            0,
+            GETDATE(),
+            @UserId
+        FROM @Items i
+        WHERE i.BuildingConfigurationId = 0;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Bulk save completed successfully.';
+
+        SELECT *
+        FROM dbo.BuildingConfigurations
+        WHERE IsDeleted = 0
+          AND
+          (
+              BuildingConfigurationId IN
+              (
+                  SELECT BuildingConfigurationId
+                  FROM @Items
+                  WHERE BuildingConfigurationId > 0
+              )
+              OR BuildingId IN
+              (
+                  SELECT BuildingId
+                  FROM @Items
+                  WHERE BuildingConfigurationId = 0
+              )
+          )
+        ORDER BY BuildingConfigurationId;
+
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingConfigurations_Delete]
+(
+    @BuildingConfigurationId BIGINT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @BuildingConfigurationId <= 0
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'Invalid configuration ID.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.BuildingConfigurations
+        WHERE BuildingConfigurationId = @BuildingConfigurationId
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Configuration not found.';
+        RETURN;
+    END;
+
+    UPDATE dbo.BuildingConfigurations
+    SET
+        IsDeleted = 1,
+        IsActive = 0,
+        UpdatedAt = GETDATE(),
+        UserUpdater = @UserId
+    WHERE BuildingConfigurationId = @BuildingConfigurationId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Configuration deleted successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingConfigurations_Get]
+(
+    @BuildingId BIGINT = NULL,
+    @IsActive BIT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT *
+    FROM dbo.BuildingConfigurations
+    WHERE IsDeleted = 0
+      AND (@BuildingId IS NULL OR BuildingId = @BuildingId)
+      AND (@IsActive IS NULL OR IsActive = @IsActive)
+    ORDER BY BuildingConfigurationId DESC;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Configurations retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingConfigurations_GetById]
+(
+    @BuildingConfigurationId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @BuildingConfigurationId <= 0
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'Invalid configuration ID.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.BuildingConfigurations
+        WHERE BuildingConfigurationId = @BuildingConfigurationId
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Configuration not found.';
+        RETURN;
+    END;
+
+    SELECT *
+    FROM dbo.BuildingConfigurations
+    WHERE BuildingConfigurationId = @BuildingConfigurationId
+      AND IsDeleted = 0;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Configuration retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_Insert]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingConfigurations_Insert]
+(
+    @BuildingId BIGINT,
+    @BasementFloorCount INT = 0,
+    @GroundFloorCount INT = 1,
+    @AboveGroundFloorCount INT = 0,
+    @StaircaseCount INT = 1,
+    @ElevatorCount INT = 0,
+    @DefaultUnitsPerFloor INT = 1,
+    @FloorNamingType TINYINT = 1,
+    @FloorNumberStart INT = 1,
+    @UnitNamingType TINYINT = 1,
+    @UnitNumberPattern NVARCHAR(100) = N'{FLOOR}{UNIT}',
+    @UnitLetterStart CHAR(1) = NULL,
+    @UnitLetterEnd CHAR(1) = NULL,
+    @IsUnitNumberUnique BIT = 1,
+    @ResetUnitNumberPerFloor BIT = 1,
+    @AllowExceedFloorCapacity BIT = 0,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+
+        IF @BuildingId <= 0
+           OR @BasementFloorCount < 0
+           OR @GroundFloorCount < 0
+           OR @AboveGroundFloorCount < 0
+           OR @StaircaseCount < 0
+           OR @ElevatorCount < 0
+           OR @DefaultUnitsPerFloor < 0
+           OR @FloorNamingType NOT IN (1,2,3)
+           OR @UnitNamingType NOT IN (1,2,3)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid configuration data.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Buildings
+            WHERE BuildingId = @BuildingId
+              AND ISNULL(IsDeleted,0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Building not found.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingConfigurations
+            WHERE BuildingId = @BuildingId
+              AND IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Configuration already exists.';
+            RETURN;
+        END;
+
+        INSERT INTO dbo.BuildingConfigurations
+        (
+            BuildingId,
+            BasementFloorCount,
+            GroundFloorCount,
+            AboveGroundFloorCount,
+            StaircaseCount,
+            ElevatorCount,
+            DefaultUnitsPerFloor,
+            FloorNamingType,
+            FloorNumberStart,
+            UnitNamingType,
+            UnitNumberPattern,
+            UnitLetterStart,
+            UnitLetterEnd,
+            IsUnitNumberUnique,
+            ResetUnitNumberPerFloor,
+            AllowExceedFloorCapacity,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UserCreater
+        )
+        VALUES
+        (
+            @BuildingId,
+            @BasementFloorCount,
+            @GroundFloorCount,
+            @AboveGroundFloorCount,
+            @StaircaseCount,
+            @ElevatorCount,
+            @DefaultUnitsPerFloor,
+            @FloorNamingType,
+            @FloorNumberStart,
+            @UnitNamingType,
+            @UnitNumberPattern,
+            @UnitLetterStart,
+            @UnitLetterEnd,
+            @IsUnitNumberUnique,
+            @ResetUnitNumberPerFloor,
+            @AllowExceedFloorCapacity,
+            1,
+            0,
+            GETDATE(),
+            @UserId
+        );
+
+        DECLARE @NewId BIGINT = SCOPE_IDENTITY();
+
+        SET @ResultCode = 201;
+        SET @ResultMessage = N'Configuration created successfully.';
+
+        SELECT *
+        FROM dbo.BuildingConfigurations
+        WHERE BuildingConfigurationId = @NewId;
+
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingConfigurations_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingConfigurations_Update]
+(
+    @BuildingConfigurationId BIGINT,
+    @BasementFloorCount INT,
+    @GroundFloorCount INT,
+    @AboveGroundFloorCount INT,
+    @StaircaseCount INT,
+    @ElevatorCount INT,
+    @DefaultUnitsPerFloor INT,
+    @FloorNamingType TINYINT,
+    @FloorNumberStart INT,
+    @UnitNamingType TINYINT,
+    @UnitNumberPattern NVARCHAR(100),
+    @UnitLetterStart CHAR(1) = NULL,
+    @UnitLetterEnd CHAR(1) = NULL,
+    @IsUnitNumberUnique BIT,
+    @ResetUnitNumberPerFloor BIT,
+    @AllowExceedFloorCapacity BIT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+
+        IF @BuildingConfigurationId <= 0
+           OR @BasementFloorCount < 0
+           OR @GroundFloorCount < 0
+           OR @AboveGroundFloorCount < 0
+           OR @StaircaseCount < 0
+           OR @ElevatorCount < 0
+           OR @DefaultUnitsPerFloor < 0
+           OR @FloorNamingType NOT IN (1,2,3)
+           OR @UnitNamingType NOT IN (1,2,3)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid configuration data.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingConfigurations
+            WHERE BuildingConfigurationId = @BuildingConfigurationId
+              AND IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Configuration not found.';
+            RETURN;
+        END;
+
+        UPDATE dbo.BuildingConfigurations
+        SET
+            BasementFloorCount = @BasementFloorCount,
+            GroundFloorCount = @GroundFloorCount,
+            AboveGroundFloorCount = @AboveGroundFloorCount,
+            StaircaseCount = @StaircaseCount,
+            ElevatorCount = @ElevatorCount,
+            DefaultUnitsPerFloor = @DefaultUnitsPerFloor,
+            FloorNamingType = @FloorNamingType,
+            FloorNumberStart = @FloorNumberStart,
+            UnitNamingType = @UnitNamingType,
+            UnitNumberPattern = @UnitNumberPattern,
+            UnitLetterStart = @UnitLetterStart,
+            UnitLetterEnd = @UnitLetterEnd,
+            IsUnitNumberUnique = @IsUnitNumberUnique,
+            ResetUnitNumberPerFloor = @ResetUnitNumberPerFloor,
+            AllowExceedFloorCapacity = @AllowExceedFloorCapacity,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        WHERE BuildingConfigurationId = @BuildingConfigurationId;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Configuration updated successfully.';
+
+        SELECT *
+        FROM dbo.BuildingConfigurations
+        WHERE BuildingConfigurationId = @BuildingConfigurationId;
+
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Active]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevators_Active]
+    @BuildingElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @IsActive BIT,
+    @UserId INT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND BuildingId = @BuildingId
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        UPDATE dbo.BuildingElevators
+        SET IsActive = @IsActive,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND BuildingId = @BuildingId
+          AND IsDeleted = 0;
+
+        IF @IsActive = 0
+        BEGIN
+            UPDATE dbo.BuildingFloorElevators
+            SET IsActive = 0
+            WHERE BuildingElevatorId = @BuildingElevatorId;
+
+            UPDATE dbo.BuildingStaircaseElevators
+            SET IsActive = 0
+            WHERE BuildingElevatorId = @BuildingElevatorId;
+        END;
+
+        COMMIT TRANSACTION;
+        SET @ResultCode = 200;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
+        SET @ResultCode = 500;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevators_BulkSave]
+    @Items dbo.BuildingElevatorBulkType READONLY,
+    @CurrentUserId INT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    SET @ResultCode = 400;
+
+    IF NOT EXISTS (SELECT 1 FROM @Items)
+        RETURN;
+
+    IF EXISTS
+    (
+        SELECT BuildingId, ElevatorCode
+        FROM @Items
+        GROUP BY BuildingId, ElevatorCode
+        HAVING COUNT(*) > 1
+    )
+        RETURN;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Items i
+        LEFT JOIN dbo.Buildings b ON b.BuildingId = i.BuildingId
+        WHERE b.BuildingId IS NULL
+           OR NULLIF(LTRIM(RTRIM(i.ElevatorCode)), '') IS NULL
+           OR NULLIF(LTRIM(RTRIM(i.ElevatorName)), '') IS NULL
+           OR i.ElevatorType NOT BETWEEN 1 AND 7
+           OR (i.Capacity IS NOT NULL AND i.Capacity <= 0)
+           OR (i.MaxWeight IS NOT NULL AND i.MaxWeight <= 0)
+           OR i.DisplayOrder <= 0
+    )
+        RETURN;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Items i
+        JOIN dbo.BuildingElevators e
+          ON e.BuildingId = i.BuildingId
+         AND e.ElevatorCode = i.ElevatorCode
+         AND e.IsDeleted = 0
+         AND ISNULL(i.BuildingElevatorId, 0) <> e.BuildingElevatorId
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Items i
+        WHERE ISNULL(i.BuildingElevatorId, 0) > 0
+          AND NOT EXISTS
+          (
+              SELECT 1 FROM dbo.BuildingElevators e
+              WHERE e.BuildingElevatorId = i.BuildingElevatorId
+                AND e.BuildingId = i.BuildingId
+                AND e.IsDeleted = 0
+          )
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        UPDATE e
+        SET e.ElevatorCode = i.ElevatorCode,
+            e.ElevatorName = i.ElevatorName,
+            e.ElevatorNameEn = i.ElevatorNameEn,
+            e.ElevatorType = i.ElevatorType,
+            e.Capacity = i.Capacity,
+            e.MaxWeight = i.MaxWeight,
+            e.IsService = i.IsService,
+            e.IsEmergency = i.IsEmergency,
+            e.Description = i.Description,
+            e.DisplayOrder = i.DisplayOrder,
+            e.IsActive = i.IsActive,
+            e.UpdatedAt = GETDATE(),
+            e.UserUpdater = @CurrentUserId
+        FROM dbo.BuildingElevators e
+        JOIN @Items i ON i.BuildingElevatorId = e.BuildingElevatorId
+        WHERE ISNULL(i.BuildingElevatorId, 0) > 0;
+
+        INSERT INTO dbo.BuildingElevators
+        (
+            BuildingId, ElevatorCode, ElevatorName, ElevatorNameEn,
+            ElevatorType, Capacity, MaxWeight, IsService, IsEmergency,
+            Description, DisplayOrder, IsActive, IsDeleted,
+            CreatedAt, UserCreater
+        )
+        SELECT
+            BuildingId, ElevatorCode, ElevatorName, ElevatorNameEn,
+            ElevatorType, Capacity, MaxWeight, IsService, IsEmergency,
+            Description, DisplayOrder, IsActive, 0,
+            GETDATE(), @CurrentUserId
+        FROM @Items
+        WHERE ISNULL(BuildingElevatorId, 0) = 0;
+
+        UPDATE fe
+        SET fe.IsActive = 0
+        FROM dbo.BuildingFloorElevators fe
+        JOIN @Items i ON i.BuildingElevatorId = fe.BuildingElevatorId
+        WHERE i.IsActive = 0;
+
+        UPDATE se
+        SET se.IsActive = 0
+        FROM dbo.BuildingStaircaseElevators se
+        JOIN @Items i ON i.BuildingElevatorId = se.BuildingElevatorId
+        WHERE i.IsActive = 0;
+
+        COMMIT TRANSACTION;
+        SET @ResultCode = 200;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
+        SET @ResultCode = 500;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevators_Delete]
+    @BuildingElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @UserId INT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND BuildingId = @BuildingId
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        UPDATE dbo.BuildingElevators
+        SET IsDeleted = 1,
+            IsActive = 0,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND BuildingId = @BuildingId;
+
+        UPDATE dbo.BuildingFloorElevators
+        SET IsActive = 0
+        WHERE BuildingElevatorId = @BuildingElevatorId;
+
+        UPDATE dbo.BuildingStaircaseElevators
+        SET IsActive = 0
+        WHERE BuildingElevatorId = @BuildingElevatorId;
+
+        COMMIT TRANSACTION;
+        SET @ResultCode = 200;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
+        SET @ResultCode = 500;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevators_Get]
+    @BuildingId BIGINT,
+    @Search NVARCHAR(200) = NULL,
+    @ElevatorType TINYINT = NULL,
+    @IsService BIT = NULL,
+    @IsEmergency BIT = NULL,
+    @IsActive BIT = NULL,
+    @IncludeDeleted BIT = 0,
+    @PageNumber INT = 1,
+    @PageSize INT = 50,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @BuildingId <= 0 OR @PageNumber < 1
+       OR @PageSize < 1 OR @PageSize > 500
+    BEGIN
+        SET @ResultCode = 400;
+        RETURN;
+    END;
+
+    SELECT *
+    FROM dbo.BuildingElevators
+    WHERE BuildingId = @BuildingId
+      AND (@IncludeDeleted = 1 OR IsDeleted = 0)
+      AND (@ElevatorType IS NULL OR ElevatorType = @ElevatorType)
+      AND (@IsService IS NULL OR IsService = @IsService)
+      AND (@IsEmergency IS NULL OR IsEmergency = @IsEmergency)
+      AND (@IsActive IS NULL OR IsActive = @IsActive)
+      AND
+      (
+          @Search IS NULL
+          OR ElevatorCode LIKE N'%' + @Search + N'%'
+          OR ElevatorName LIKE N'%' + @Search + N'%'
+          OR ElevatorNameEn LIKE N'%' + @Search + N'%'
+      )
+    ORDER BY DisplayOrder, BuildingElevatorId
+    OFFSET (@PageNumber - 1) * @PageSize ROWS
+    FETCH NEXT @PageSize ROWS ONLY;
+
+    SET @ResultCode = 200;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevators_GetById]
+    @BuildingElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT *
+    FROM dbo.BuildingElevators
+    WHERE BuildingElevatorId = @BuildingElevatorId
+      AND BuildingId = @BuildingId
+      AND IsDeleted = 0;
+
+    IF @@ROWCOUNT = 0
+        SET @ResultCode = 404;
+    ELSE
+        SET @ResultCode = 200;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Insert]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevators_Insert]
+    @BuildingId BIGINT,
+    @ElevatorCode NVARCHAR(60),
+    @ElevatorName NVARCHAR(200),
+    @ElevatorNameEn NVARCHAR(200) = NULL,
+    @ElevatorType TINYINT = 1,
+    @Capacity INT = NULL,
+    @MaxWeight DECIMAL(10,2) = NULL,
+    @IsService BIT = 0,
+    @IsEmergency BIT = 0,
+    @Description NVARCHAR(1000) = NULL,
+    @DisplayOrder INT = 1,
+    @IsActive BIT = 1,
+    @UserId INT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    SET @ResultCode = 400;
+
+    IF @BuildingId <= 0 OR NULLIF(LTRIM(RTRIM(@ElevatorCode)), '') IS NULL
+       OR NULLIF(LTRIM(RTRIM(@ElevatorName)), '') IS NULL
+       OR @ElevatorType NOT BETWEEN 1 AND 7
+       OR (@Capacity IS NOT NULL AND @Capacity <= 0)
+       OR (@MaxWeight IS NOT NULL AND @MaxWeight <= 0)
+       OR @DisplayOrder <= 0
+        RETURN;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.Buildings
+        WHERE BuildingId = @BuildingId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingElevators
+        WHERE BuildingId = @BuildingId
+          AND ElevatorCode = @ElevatorCode
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    INSERT INTO dbo.BuildingElevators
+    (
+        BuildingId, ElevatorCode, ElevatorName, ElevatorNameEn,
+        ElevatorType, Capacity, MaxWeight, IsService, IsEmergency,
+        Description, DisplayOrder, IsActive, IsDeleted,
+        CreatedAt, UserCreater
+    )
+    VALUES
+    (
+        @BuildingId, @ElevatorCode, @ElevatorName, @ElevatorNameEn,
+        @ElevatorType, @Capacity, @MaxWeight, @IsService, @IsEmergency,
+        @Description, @DisplayOrder, @IsActive, 0,
+        GETDATE(), @UserId
+    );
+
+    SET @ResultCode = 200;
+
+    SELECT *
+    FROM dbo.BuildingElevators
+    WHERE BuildingElevatorId = SCOPE_IDENTITY();
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevators_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevators_Update]
+    @BuildingElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @ElevatorCode NVARCHAR(60),
+    @ElevatorName NVARCHAR(200),
+    @ElevatorNameEn NVARCHAR(200) = NULL,
+    @ElevatorType TINYINT = 1,
+    @Capacity INT = NULL,
+    @MaxWeight DECIMAL(10,2) = NULL,
+    @IsService BIT = 0,
+    @IsEmergency BIT = 0,
+    @Description NVARCHAR(1000) = NULL,
+    @DisplayOrder INT = 1,
+    @IsActive BIT = 1,
+    @UserId INT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    SET @ResultCode = 400;
+
+    IF @BuildingElevatorId <= 0 OR @BuildingId <= 0
+       OR NULLIF(LTRIM(RTRIM(@ElevatorCode)), '') IS NULL
+       OR NULLIF(LTRIM(RTRIM(@ElevatorName)), '') IS NULL
+       OR @ElevatorType NOT BETWEEN 1 AND 7
+       OR (@Capacity IS NOT NULL AND @Capacity <= 0)
+       OR (@MaxWeight IS NOT NULL AND @MaxWeight <= 0)
+       OR @DisplayOrder <= 0
+        RETURN;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND BuildingId = @BuildingId
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingElevators
+        WHERE BuildingId = @BuildingId
+          AND ElevatorCode = @ElevatorCode
+          AND BuildingElevatorId <> @BuildingElevatorId
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        UPDATE dbo.BuildingElevators
+        SET ElevatorCode = @ElevatorCode,
+            ElevatorName = @ElevatorName,
+            ElevatorNameEn = @ElevatorNameEn,
+            ElevatorType = @ElevatorType,
+            Capacity = @Capacity,
+            MaxWeight = @MaxWeight,
+            IsService = @IsService,
+            IsEmergency = @IsEmergency,
+            Description = @Description,
+            DisplayOrder = @DisplayOrder,
+            IsActive = @IsActive,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND BuildingId = @BuildingId
+          AND IsDeleted = 0;
+
+        IF @IsActive = 0
+        BEGIN
+            UPDATE dbo.BuildingFloorElevators
+            SET IsActive = 0
+            WHERE BuildingElevatorId = @BuildingElevatorId;
+
+            UPDATE dbo.BuildingStaircaseElevators
+            SET IsActive = 0
+            WHERE BuildingElevatorId = @BuildingElevatorId;
+        END;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+
+        SELECT *
+        FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @BuildingElevatorId;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
+        SET @ResultCode = 500;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevatorsAdd]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevatorsAdd]
+    @BuildingId BIGINT,
+    @ElevatorCode NVARCHAR(60),
+    @ElevatorName NVARCHAR(200),
+    @ElevatorNameEn NVARCHAR(200) = NULL,
+    @ElevatorType TINYINT = 1,
+    @Capacity INT = NULL,
+    @MaxWeight DECIMAL(10,2) = NULL,
+    @IsService BIT = 0,
+    @IsEmergency BIT = 0,
+    @Description NVARCHAR(1000) = NULL,
+    @DisplayOrder INT = 1,
+    @IsActive BIT = 1,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Buildings
+            WHERE BuildingId = @BuildingId
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Building.InvalidId';
+            RETURN;
+        END;
+
+        IF NULLIF(LTRIM(RTRIM(@ElevatorCode)), N'') IS NULL
+           OR NULLIF(LTRIM(RTRIM(@ElevatorName)), N'') IS NULL
+           OR @ElevatorType NOT BETWEEN 1 AND 7
+           OR @DisplayOrder <= 0
+           OR (@Capacity IS NOT NULL AND @Capacity <= 0)
+           OR (@MaxWeight IS NOT NULL AND @MaxWeight <= 0)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'BuildingElevator.InvalidData';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingElevators
+            WHERE BuildingId = @BuildingId
+              AND ElevatorCode = @ElevatorCode
+              AND IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'BuildingElevator.DuplicateCode';
+            RETURN;
+        END;
+
+        INSERT INTO dbo.BuildingElevators
+        (
+            BuildingId, ElevatorCode, ElevatorName, ElevatorNameEn,
+            ElevatorType, Capacity, MaxWeight, IsService, IsEmergency,
+            Description, DisplayOrder, IsActive, IsDeleted,
+            CreatedAt, UserCreater
+        )
+        VALUES
+        (
+            @BuildingId, LTRIM(RTRIM(@ElevatorCode)),
+            LTRIM(RTRIM(@ElevatorName)), @ElevatorNameEn,
+            @ElevatorType, @Capacity, @MaxWeight, @IsService, @IsEmergency,
+            @Description, @DisplayOrder, @IsActive, 0,
+            GETDATE(), @UserId
+        );
+
+        DECLARE @NewId BIGINT = SCOPE_IDENTITY();
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'BuildingElevator.AddSuccess';
+
+        SELECT
+            BuildingElevatorId,
+            BuildingId,
+            ElevatorCode,
+            ElevatorName,
+            ElevatorNameEn,
+            ElevatorType,
+            Capacity,
+            MaxWeight,
+            IsService,
+            IsEmergency,
+            Description,
+            DisplayOrder,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UpdatedAt,
+            UserCreater,
+            UserUpdater
+        FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @NewId;
+    END TRY
+    BEGIN CATCH
+        IF ERROR_NUMBER() IN (2601, 2627)
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'BuildingElevator.DuplicateCode';
+            RETURN;
+        END;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = N'Common.InternalError';
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevatorsDel]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevatorsDel]
+    @BuildingElevatorId BIGINT,
+    @UserUpdater INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingElevators WITH (UPDLOCK, HOLDLOCK)
+            WHERE BuildingElevatorId = @BuildingElevatorId
+              AND IsDeleted = 0
+        )
+        BEGIN
+            ROLLBACK TRANSACTION;
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'BuildingElevator.NotFound';
+            RETURN;
+        END;
+
+        UPDATE dbo.BuildingElevators
+        SET
+            IsDeleted = 1,
+            IsActive = 0,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserUpdater
+        WHERE BuildingElevatorId = @BuildingElevatorId;
+
+        UPDATE dbo.BuildingFloorElevators
+        SET IsActive = 0
+        WHERE BuildingElevatorId = @BuildingElevatorId;
+
+        UPDATE dbo.BuildingStaircaseElevators
+        SET IsActive = 0
+        WHERE BuildingElevatorId = @BuildingElevatorId;
+
+        COMMIT TRANSACTION;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'BuildingElevator.DeleteSuccess';
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = N'Common.InternalError';
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevatorsEdit]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevatorsEdit]
+    @BuildingElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @ElevatorCode NVARCHAR(60),
+    @ElevatorName NVARCHAR(200),
+    @ElevatorNameEn NVARCHAR(200) = NULL,
+    @ElevatorType TINYINT = 1,
+    @Capacity INT = NULL,
+    @MaxWeight DECIMAL(10,2) = NULL,
+    @IsService BIT = 0,
+    @IsEmergency BIT = 0,
+    @Description NVARCHAR(1000) = NULL,
+    @DisplayOrder INT = 1,
+    @IsActive BIT = 1,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingElevators
+            WHERE BuildingElevatorId = @BuildingElevatorId
+              AND IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'BuildingElevator.NotFound';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.Buildings
+            WHERE BuildingId = @BuildingId
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Building.InvalidId';
+            RETURN;
+        END;
+
+        IF NULLIF(LTRIM(RTRIM(@ElevatorCode)), N'') IS NULL
+           OR NULLIF(LTRIM(RTRIM(@ElevatorName)), N'') IS NULL
+           OR @ElevatorType NOT BETWEEN 1 AND 7
+           OR @DisplayOrder <= 0
+           OR (@Capacity IS NOT NULL AND @Capacity <= 0)
+           OR (@MaxWeight IS NOT NULL AND @MaxWeight <= 0)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'BuildingElevator.InvalidData';
+            RETURN;
+        END;
+
+        DECLARE @OldBuildingId BIGINT;
+
+        SELECT @OldBuildingId = BuildingId
+        FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @BuildingElevatorId;
+
+        IF @OldBuildingId <> @BuildingId
+           AND
+           (
+               EXISTS
+               (
+                   SELECT 1
+                   FROM dbo.BuildingFloorElevators
+                   WHERE BuildingElevatorId = @BuildingElevatorId
+               )
+               OR EXISTS
+               (
+                   SELECT 1
+                   FROM dbo.BuildingStaircaseElevators
+                   WHERE BuildingElevatorId = @BuildingElevatorId
+               )
+           )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'BuildingElevator.CannotChangeBuilding';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingElevators
+            WHERE BuildingId = @BuildingId
+              AND ElevatorCode = @ElevatorCode
+              AND BuildingElevatorId <> @BuildingElevatorId
+              AND IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'BuildingElevator.DuplicateCode';
+            RETURN;
+        END;
+
+        UPDATE dbo.BuildingElevators
+        SET
+            BuildingId = @BuildingId,
+            ElevatorCode = LTRIM(RTRIM(@ElevatorCode)),
+            ElevatorName = LTRIM(RTRIM(@ElevatorName)),
+            ElevatorNameEn = @ElevatorNameEn,
+            ElevatorType = @ElevatorType,
+            Capacity = @Capacity,
+            MaxWeight = @MaxWeight,
+            IsService = @IsService,
+            IsEmergency = @IsEmergency,
+            Description = @Description,
+            DisplayOrder = @DisplayOrder,
+            IsActive = @IsActive,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND IsDeleted = 0;
+
+        -- اگر آسانسور غیرفعال شد، تمام ارتباط‌های آن نیز غیرفعال شوند.
+        IF @IsActive = 0
+        BEGIN
+            UPDATE dbo.BuildingFloorElevators
+            SET IsActive = 0
+            WHERE BuildingElevatorId = @BuildingElevatorId;
+
+            UPDATE dbo.BuildingStaircaseElevators
+            SET IsActive = 0
+            WHERE BuildingElevatorId = @BuildingElevatorId;
+        END;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'BuildingElevator.EditSuccess';
+
+        SELECT
+            BuildingElevatorId,
+            BuildingId,
+            ElevatorCode,
+            ElevatorName,
+            ElevatorNameEn,
+            ElevatorType,
+            Capacity,
+            MaxWeight,
+            IsService,
+            IsEmergency,
+            Description,
+            DisplayOrder,
+            IsActive,
+            IsDeleted,
+            CreatedAt,
+            UpdatedAt,
+            UserCreater,
+            UserUpdater
+        FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @BuildingElevatorId;
+    END TRY
+    BEGIN CATCH
+        IF ERROR_NUMBER() IN (2601, 2627)
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'BuildingElevator.DuplicateCode';
+            RETURN;
+        END;
+
+        SET @ResultCode = 500;
+        SET @ResultMessage = N'Common.InternalError';
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingElevatorsGet]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingElevatorsGet]
+    @BuildingElevatorId BIGINT = NULL,
+    @BuildingId BIGINT = NULL,
+    @Search NVARCHAR(200) = NULL,
+    @ElevatorType TINYINT = NULL,
+    @IsService BIT = NULL,
+    @IsEmergency BIT = NULL,
+    @IsActive BIT = NULL,
+    @IncludeDeleted BIT = 0,
+    @PageNumber INT = 1,
+    @PageSize INT = 50,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF @PageNumber < 1 OR @PageSize < 1 OR @PageSize > 200
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Common.InvalidPagination';
+            RETURN;
+        END;
+
+        IF @BuildingElevatorId IS NOT NULL
+           AND @BuildingElevatorId <= 0
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'BuildingElevator.InvalidId';
+            RETURN;
+        END;
+
+        SET @Search = NULLIF(LTRIM(RTRIM(@Search)), N'');
+
+        IF @BuildingElevatorId IS NOT NULL
+           AND NOT EXISTS
+           (
+               SELECT 1
+               FROM dbo.BuildingElevators
+               WHERE BuildingElevatorId = @BuildingElevatorId
+                 AND (@IncludeDeleted = 1 OR IsDeleted = 0)
+           )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'BuildingElevator.NotFound';
+            RETURN;
+        END;
+
+        SET @ResultCode = 200;
+
+        SET @ResultMessage =
+            CASE
+                WHEN @BuildingElevatorId IS NOT NULL
+                    THEN N'BuildingElevator.GetSuccess'
+                ELSE N'BuildingElevator.ListSuccess'
+            END;
+
+        SELECT
+            e.BuildingElevatorId,
+            e.BuildingId,
+            e.ElevatorCode,
+            e.ElevatorName,
+            e.ElevatorNameEn,
+            e.ElevatorType,
+            e.Capacity,
+            e.MaxWeight,
+            e.IsService,
+            e.IsEmergency,
+            e.Description,
+            e.DisplayOrder,
+            e.IsActive,
+            e.IsDeleted,
+            e.CreatedAt,
+            e.UpdatedAt,
+            e.UserCreater,
+            e.UserUpdater
+        FROM dbo.BuildingElevators AS e
+        WHERE
+            (@BuildingElevatorId IS NULL
+                OR e.BuildingElevatorId = @BuildingElevatorId)
+            AND (@BuildingId IS NULL OR e.BuildingId = @BuildingId)
+            AND
+            (
+                @IncludeDeleted = 1
+                OR e.IsDeleted = 0
+            )
+            AND (@ElevatorType IS NULL OR e.ElevatorType = @ElevatorType)
+            AND (@IsService IS NULL OR e.IsService = @IsService)
+            AND (@IsEmergency IS NULL OR e.IsEmergency = @IsEmergency)
+            AND (@IsActive IS NULL OR e.IsActive = @IsActive)
+            AND
+            (
+                @Search IS NULL
+                OR e.ElevatorCode LIKE N'%' + @Search + N'%'
+                OR e.ElevatorName LIKE N'%' + @Search + N'%'
+                OR e.ElevatorNameEn LIKE N'%' + @Search + N'%'
+            )
+        ORDER BY e.DisplayOrder, e.BuildingElevatorId
+        OFFSET
+            CASE
+                WHEN @BuildingElevatorId IS NOT NULL THEN 0
+                ELSE (@PageNumber - 1) * @PageSize
+            END ROWS
+        FETCH NEXT
+            CASE
+                WHEN @BuildingElevatorId IS NOT NULL THEN 1
+                ELSE @PageSize
+            END ROWS ONLY;
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = N'Common.InternalError';
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Active]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorElevators_Active]
+    @BuildingFloorElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @IsActive BIT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingFloorElevators
+        WHERE BuildingFloorElevatorId = @BuildingFloorElevatorId
+          AND BuildingId = @BuildingId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF @IsActive = 1
+       AND
+       (
+           NOT EXISTS
+           (
+               SELECT 1
+               FROM dbo.BuildingFloorElevators fe
+               INNER JOIN dbo.BuildingFloors f
+                   ON f.BuildingFloorId = fe.BuildingFloorId
+                  AND f.BuildingId = fe.BuildingId
+               WHERE fe.BuildingFloorElevatorId = @BuildingFloorElevatorId
+                 AND f.IsActive = 1
+           )
+           OR NOT EXISTS
+           (
+               SELECT 1
+               FROM dbo.BuildingFloorElevators fe
+               INNER JOIN dbo.BuildingElevators e
+                   ON e.BuildingElevatorId = fe.BuildingElevatorId
+                  AND e.BuildingId = fe.BuildingId
+               WHERE fe.BuildingFloorElevatorId = @BuildingFloorElevatorId
+                 AND e.IsActive = 1
+                 AND e.IsDeleted = 0
+           )
+       )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    UPDATE dbo.BuildingFloorElevators
+    SET IsActive = @IsActive
+    WHERE BuildingFloorElevatorId = @BuildingFloorElevatorId
+      AND BuildingId = @BuildingId;
+
+    SET @ResultCode = 200;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorElevators_BulkSave]
+    @Items dbo.BuildingFloorElevatorBulkType READONLY,
+    @CurrentUserId INT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    SET @ResultCode = 400;
+
+    IF NOT EXISTS (SELECT 1 FROM @Items)
+        RETURN;
+
+    IF EXISTS
+    (
+        SELECT BuildingFloorId, BuildingElevatorId
+        FROM @Items
+        GROUP BY BuildingFloorId, BuildingElevatorId
+        HAVING COUNT(*) > 1
+    )
+        RETURN;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Items i
+        WHERE NOT EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingFloors f
+            WHERE f.BuildingFloorId = i.BuildingFloorId
+              AND f.BuildingId = i.BuildingId
+        )
+        OR NOT EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingElevators e
+            WHERE e.BuildingElevatorId = i.BuildingElevatorId
+              AND e.BuildingId = i.BuildingId
+              AND e.IsDeleted = 0
+        )
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Items i
+        JOIN dbo.BuildingFloorElevators fe
+          ON fe.BuildingFloorId = i.BuildingFloorId
+         AND fe.BuildingElevatorId = i.BuildingElevatorId
+        WHERE ISNULL(i.BuildingFloorElevatorId, 0) <> fe.BuildingFloorElevatorId
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Items i
+        WHERE ISNULL(i.BuildingFloorElevatorId, 0) > 0
+          AND NOT EXISTS
+          (
+              SELECT 1 FROM dbo.BuildingFloorElevators fe
+              WHERE fe.BuildingFloorElevatorId = i.BuildingFloorElevatorId
+                AND fe.BuildingId = i.BuildingId
+          )
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        UPDATE fe
+        SET fe.BuildingFloorId = i.BuildingFloorId,
+            fe.BuildingElevatorId = i.BuildingElevatorId,
+            fe.IsActive = i.IsActive
+        FROM dbo.BuildingFloorElevators fe
+        INNER JOIN @Items i
+            ON i.BuildingFloorElevatorId = fe.BuildingFloorElevatorId
+        WHERE ISNULL(i.BuildingFloorElevatorId, 0) > 0;
+
+        INSERT INTO dbo.BuildingFloorElevators
+        (
+            BuildingId, BuildingFloorId, BuildingElevatorId,
+            IsActive, CreatedAt, UserCreater
+        )
+        SELECT
+            i.BuildingId, i.BuildingFloorId, i.BuildingElevatorId,
+            i.IsActive, GETDATE(), @CurrentUserId
+        FROM @Items i
+        WHERE ISNULL(i.BuildingFloorElevatorId, 0) = 0;
+
+        COMMIT TRANSACTION;
+        SET @ResultCode = 200;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
+        SET @ResultCode = 500;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorElevators_Delete]
+    @BuildingFloorElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM dbo.BuildingFloorElevators
+    WHERE BuildingFloorElevatorId = @BuildingFloorElevatorId
+      AND BuildingId = @BuildingId;
+
+    SET @ResultCode =
+        CASE WHEN @@ROWCOUNT = 0 THEN 404 ELSE 200 END;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorElevators_Get]
+    @BuildingId BIGINT,
+    @BuildingFloorId BIGINT = NULL,
+    @BuildingElevatorId BIGINT = NULL,
+    @IsActive BIT = NULL,
+    @PageNumber INT = 1,
+    @PageSize INT = 50,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @BuildingId <= 0 OR @PageNumber < 1
+       OR @PageSize < 1 OR @PageSize > 500
+    BEGIN
+        SET @ResultCode = 400;
+        RETURN;
+    END;
+
+    SELECT
+        fe.*,
+        f.FloorNumber,
+        f.FloorCode,
+        f.FloorName,
+        e.ElevatorCode,
+        e.ElevatorName,
+        e.ElevatorType
+    FROM dbo.BuildingFloorElevators fe
+    INNER JOIN dbo.BuildingFloors f
+        ON f.BuildingFloorId = fe.BuildingFloorId
+       AND f.BuildingId = fe.BuildingId
+    INNER JOIN dbo.BuildingElevators e
+        ON e.BuildingElevatorId = fe.BuildingElevatorId
+       AND e.BuildingId = fe.BuildingId
+    WHERE fe.BuildingId = @BuildingId
+      AND (@BuildingFloorId IS NULL OR fe.BuildingFloorId = @BuildingFloorId)
+      AND (@BuildingElevatorId IS NULL OR fe.BuildingElevatorId = @BuildingElevatorId)
+      AND (@IsActive IS NULL OR fe.IsActive = @IsActive)
+    ORDER BY f.FloorNumber, e.DisplayOrder, e.BuildingElevatorId
+    OFFSET (@PageNumber - 1) * @PageSize ROWS
+    FETCH NEXT @PageSize ROWS ONLY;
+
+    SET @ResultCode = 200;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorElevators_GetById]
+    @BuildingFloorElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT *
+    FROM dbo.BuildingFloorElevators
+    WHERE BuildingFloorElevatorId = @BuildingFloorElevatorId
+      AND BuildingId = @BuildingId;
+
+    SET @ResultCode =
+        CASE WHEN @@ROWCOUNT = 0 THEN 404 ELSE 200 END;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Insert]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorElevators_Insert]
+    @BuildingId BIGINT,
+    @BuildingFloorId BIGINT,
+    @BuildingElevatorId BIGINT,
+    @IsActive BIT = 1,
+    @UserId INT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SET @ResultCode = 400;
+
+    IF @BuildingId <= 0 OR @BuildingFloorId <= 0
+       OR @BuildingElevatorId <= 0
+        RETURN;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingFloors
+        WHERE BuildingFloorId = @BuildingFloorId
+          AND BuildingId = @BuildingId
+          AND IsActive = 1
+    )
+    OR NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND BuildingId = @BuildingId
+          AND IsActive = 1
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingFloorElevators
+        WHERE BuildingFloorId = @BuildingFloorId
+          AND BuildingElevatorId = @BuildingElevatorId
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    INSERT INTO dbo.BuildingFloorElevators
+    (
+        BuildingId, BuildingFloorId, BuildingElevatorId,
+        IsActive, CreatedAt, UserCreater
+    )
+    VALUES
+    (
+        @BuildingId, @BuildingFloorId, @BuildingElevatorId,
+        @IsActive, GETDATE(), @UserId
+    );
+
+    SET @ResultCode = 200;
+
+    SELECT *
+    FROM dbo.BuildingFloorElevators
+    WHERE BuildingFloorElevatorId = SCOPE_IDENTITY();
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorElevators_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorElevators_Update]
+    @BuildingFloorElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @BuildingFloorId BIGINT,
+    @BuildingElevatorId BIGINT,
+    @IsActive BIT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SET @ResultCode = 400;
+
+    IF @BuildingFloorElevatorId <= 0 OR @BuildingId <= 0
+       OR @BuildingFloorId <= 0 OR @BuildingElevatorId <= 0
+        RETURN;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingFloorElevators
+        WHERE BuildingFloorElevatorId = @BuildingFloorElevatorId
+          AND BuildingId = @BuildingId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingFloors
+        WHERE BuildingFloorId = @BuildingFloorId
+          AND BuildingId = @BuildingId
+    )
+    OR NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND BuildingId = @BuildingId
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingFloorElevators
+        WHERE BuildingFloorId = @BuildingFloorId
+          AND BuildingElevatorId = @BuildingElevatorId
+          AND BuildingFloorElevatorId <> @BuildingFloorElevatorId
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    UPDATE dbo.BuildingFloorElevators
+    SET BuildingFloorId = @BuildingFloorId,
+        BuildingElevatorId = @BuildingElevatorId,
+        IsActive = @IsActive
+    WHERE BuildingFloorElevatorId = @BuildingFloorElevatorId
+      AND BuildingId = @BuildingId;
+
+    SET @ResultCode = 200;
+
+    SELECT *
+    FROM dbo.BuildingFloorElevators
+    WHERE BuildingFloorElevatorId = @BuildingFloorElevatorId;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloors_BulkSave]
+(
+    @Items dbo.BuildingFloorBulkSaveType READONLY,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF NOT EXISTS (SELECT 1 FROM @Items)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'No records supplied.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM @Items
+            WHERE BuildingId <= 0
+               OR MaxUnits <= 0
+               OR NULLIF(LTRIM(RTRIM(FloorCode)), N'') IS NULL
+               OR NULLIF(LTRIM(RTRIM(FloorName)), N'') IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid floor data.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items
+            GROUP BY BuildingId, FloorNumber
+            HAVING COUNT(*) > 1
+        )
+        OR EXISTS
+        (
+            SELECT 1
+            FROM @Items
+            GROUP BY BuildingId, FloorCode
+            HAVING COUNT(*) > 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Duplicate floor number or code in request.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.Buildings b
+              ON b.BuildingId = i.BuildingId
+             AND ISNULL(b.IsDeleted, 0) = 0
+            WHERE b.BuildingId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'One or more buildings were not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.BuildingFloors f
+              ON f.BuildingFloorId = i.BuildingFloorId
+             AND f.BuildingId = i.BuildingId
+            WHERE i.BuildingFloorId > 0
+              AND f.BuildingFloorId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'One or more floors were not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            INNER JOIN dbo.BuildingFloors f
+              ON f.BuildingId = i.BuildingId
+             AND f.BuildingFloorId <> i.BuildingFloorId
+             AND (f.FloorNumber = i.FloorNumber OR f.FloorCode = i.FloorCode)
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Floor number or code already exists.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        UPDATE f
+        SET FloorNumber = i.FloorNumber,
+            FloorCode = i.FloorCode,
+            FloorName = i.FloorName,
+            FloorNameEn = i.FloorNameEn,
+            MaxUnits = i.MaxUnits,
+            IsActive = i.IsActive,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        FROM dbo.BuildingFloors f
+        INNER JOIN @Items i
+          ON i.BuildingFloorId = f.BuildingFloorId
+         AND i.BuildingId = f.BuildingId
+        WHERE i.BuildingFloorId > 0;
+
+        INSERT INTO dbo.BuildingFloors
+        (
+            BuildingId, FloorNumber, FloorCode,
+            FloorName, FloorNameEn, MaxUnits,
+            IsActive, CreatedAt, UserCreater
+        )
+        SELECT
+            i.BuildingId, i.FloorNumber, i.FloorCode,
+            i.FloorName, i.FloorNameEn, i.MaxUnits,
+            i.IsActive, GETDATE(), @UserId
+        FROM @Items i
+        WHERE i.BuildingFloorId = 0;
+
+        COMMIT;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Floors saved successfully.';
+
+        SELECT f.*
+        FROM dbo.BuildingFloors f
+        INNER JOIN @Items i
+          ON (i.BuildingFloorId > 0 AND f.BuildingFloorId = i.BuildingFloorId)
+          OR (i.BuildingFloorId = 0
+              AND f.BuildingId = i.BuildingId
+              AND f.FloorNumber = i.FloorNumber);
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloors_Delete]
+(
+    @BuildingFloorId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF NOT EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingFloors
+            WHERE BuildingFloorId = @BuildingFloorId
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Floor not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM dbo.Units
+            WHERE BuildingFloorId = @BuildingFloorId
+        )
+        OR EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingFloorStaircases
+            WHERE BuildingFloorId = @BuildingFloorId
+        )
+        OR EXISTS
+        (
+            SELECT 1 FROM dbo.UnitStaircases
+            WHERE BuildingFloorId = @BuildingFloorId
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Floor has dependent records.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        DELETE FROM dbo.BuildingFloors
+        WHERE BuildingFloorId = @BuildingFloorId;
+
+        COMMIT;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Floor deleted successfully.';
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloors_Get]
+(
+    @BuildingId BIGINT = NULL,
+    @IsActive BIT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        f.*,
+        (SELECT COUNT_BIG(*)
+         FROM dbo.Units u
+         WHERE u.BuildingFloorId = f.BuildingFloorId
+           AND ISNULL(u.IsDeleted, 0) = 0) AS UnitCount
+    FROM dbo.BuildingFloors f
+    WHERE (@BuildingId IS NULL OR f.BuildingId = @BuildingId)
+      AND (@IsActive IS NULL OR f.IsActive = @IsActive)
+    ORDER BY f.BuildingId, f.FloorNumber;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Floors retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloors_GetById]
+(
+    @BuildingFloorId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @BuildingFloorId <= 0
+    BEGIN
+        SET @ResultCode = 400;
+        SET @ResultMessage = N'Invalid floor ID.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingFloors
+        WHERE BuildingFloorId = @BuildingFloorId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Floor not found.';
+        RETURN;
+    END;
+
+    SELECT
+        f.*,
+        (SELECT COUNT_BIG(*)
+         FROM dbo.Units u
+         WHERE u.BuildingFloorId = f.BuildingFloorId
+           AND ISNULL(u.IsDeleted, 0) = 0) AS UnitCount
+    FROM dbo.BuildingFloors f
+    WHERE f.BuildingFloorId = @BuildingFloorId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Floor retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_Insert]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloors_Insert]
+(
+    @BuildingId BIGINT,
+    @FloorNumber INT,
+    @FloorCode NVARCHAR(40),
+    @FloorName NVARCHAR(200),
+    @FloorNameEn NVARCHAR(200) = NULL,
+    @MaxUnits INT = 1,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF @BuildingId <= 0 OR @MaxUnits <= 0
+           OR NULLIF(LTRIM(RTRIM(@FloorCode)), N'') IS NULL
+           OR NULLIF(LTRIM(RTRIM(@FloorName)), N'') IS NULL
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid floor data.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1 FROM dbo.Buildings
+            WHERE BuildingId = @BuildingId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Building not found.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingFloors
+            WHERE BuildingId = @BuildingId
+              AND (FloorNumber = @FloorNumber OR FloorCode = @FloorCode)
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Floor number or code already exists.';
+            RETURN;
+        END;
+
+        INSERT INTO dbo.BuildingFloors
+        (
+            BuildingId, FloorNumber, FloorCode,
+            FloorName, FloorNameEn, MaxUnits,
+            IsActive, CreatedAt, UserCreater
+        )
+        VALUES
+        (
+            @BuildingId, @FloorNumber, @FloorCode,
+            @FloorName, @FloorNameEn, @MaxUnits,
+            1, GETDATE(), @UserId
+        );
+
+        DECLARE @NewId BIGINT = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        SET @ResultCode = 201;
+        SET @ResultMessage = N'Floor created successfully.';
+
+        SELECT *
+        FROM dbo.BuildingFloors
+        WHERE BuildingFloorId = @NewId;
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_SetActive]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloors_SetActive]
+(
+    @BuildingFloorId BIGINT,
+    @IsActive BIT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingFloors
+        WHERE BuildingFloorId = @BuildingFloorId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Floor not found.';
+        RETURN;
+    END;
+
+    IF @IsActive = 0 AND EXISTS
+    (
+        SELECT 1 FROM dbo.Units
+        WHERE BuildingFloorId = @BuildingFloorId
+          AND ISNULL(IsDeleted, 0) = 0
+          AND IsActive = 1
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        SET @ResultMessage = N'Floor has active units.';
+        RETURN;
+    END;
+
+    UPDATE dbo.BuildingFloors
+    SET IsActive = @IsActive,
+        UpdatedAt = GETDATE(),
+        UserUpdater = @UserId
+    WHERE BuildingFloorId = @BuildingFloorId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Floor status updated successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloors_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloors_Update]
+(
+    @BuildingFloorId BIGINT,
+    @FloorNumber INT,
+    @FloorCode NVARCHAR(40),
+    @FloorName NVARCHAR(200),
+    @FloorNameEn NVARCHAR(200) = NULL,
+    @MaxUnits INT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF @BuildingFloorId <= 0 OR @MaxUnits <= 0
+           OR NULLIF(LTRIM(RTRIM(@FloorCode)), N'') IS NULL
+           OR NULLIF(LTRIM(RTRIM(@FloorName)), N'') IS NULL
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid floor data.';
+            RETURN;
+        END;
+
+        DECLARE @BuildingId BIGINT;
+
+        SELECT @BuildingId = BuildingId
+        FROM dbo.BuildingFloors
+        WHERE BuildingFloorId = @BuildingFloorId;
+
+        IF @BuildingId IS NULL
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Floor not found.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingFloors
+            WHERE BuildingId = @BuildingId
+              AND BuildingFloorId <> @BuildingFloorId
+              AND (FloorNumber = @FloorNumber OR FloorCode = @FloorCode)
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Floor number or code already exists.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM dbo.Units
+            WHERE BuildingFloorId = @BuildingFloorId
+              AND ISNULL(IsDeleted, 0) = 0
+            GROUP BY BuildingFloorId
+            HAVING COUNT_BIG(*) > @MaxUnits
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'New capacity is lower than the existing unit count.';
+            RETURN;
+        END;
+
+        UPDATE dbo.BuildingFloors
+        SET FloorNumber = @FloorNumber,
+            FloorCode = @FloorCode,
+            FloorName = @FloorName,
+            FloorNameEn = @FloorNameEn,
+            MaxUnits = @MaxUnits,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        WHERE BuildingFloorId = @BuildingFloorId;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Floor updated successfully.';
+
+        SELECT *
+        FROM dbo.BuildingFloors
+        WHERE BuildingFloorId = @BuildingFloorId;
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorStaircases_BulkSave]
+(
+    @Items dbo.BuildingFloorStaircaseBulkSaveType READONLY,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF NOT EXISTS (SELECT 1 FROM @Items)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'No records supplied.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT BuildingFloorId, BuildingStaircaseId
+            FROM @Items
+            GROUP BY BuildingFloorId, BuildingStaircaseId
+            HAVING COUNT(*) > 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Duplicate relationship in request.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.BuildingFloors f
+                ON f.BuildingFloorId = i.BuildingFloorId
+               AND f.BuildingId = i.BuildingId
+            LEFT JOIN dbo.BuildingStaircases s
+                ON s.BuildingStaircaseId = i.BuildingStaircaseId
+               AND s.BuildingId = i.BuildingId
+               AND s.IsDeleted = 0
+            WHERE f.BuildingFloorId IS NULL
+               OR s.BuildingStaircaseId IS NULL
+               OR f.IsActive = 0
+               OR s.IsActive = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Invalid floor or staircase relationship.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.BuildingFloorStaircases fs
+              ON fs.BuildingFloorStaircaseId = i.BuildingFloorStaircaseId
+             AND fs.BuildingId = i.BuildingId
+            WHERE i.BuildingFloorStaircaseId > 0
+              AND fs.BuildingFloorStaircaseId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Relationship not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            INNER JOIN dbo.BuildingFloorStaircases fs
+              ON fs.BuildingFloorId = i.BuildingFloorId
+             AND fs.BuildingStaircaseId = i.BuildingStaircaseId
+             AND fs.BuildingFloorStaircaseId <> i.BuildingFloorStaircaseId
+            WHERE i.BuildingFloorStaircaseId = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Relationship already exists.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        UPDATE fs
+        SET BuildingFloorId = i.BuildingFloorId,
+            BuildingStaircaseId = i.BuildingStaircaseId,
+            IsActive = i.IsActive
+        FROM dbo.BuildingFloorStaircases fs
+        INNER JOIN @Items i
+            ON i.BuildingFloorStaircaseId = fs.BuildingFloorStaircaseId
+           AND i.BuildingId = fs.BuildingId
+        WHERE i.BuildingFloorStaircaseId > 0;
+
+        INSERT INTO dbo.BuildingFloorStaircases
+        (
+            BuildingId, BuildingFloorId, BuildingStaircaseId,
+            IsActive, CreatedAt, UserCreater
+        )
+        SELECT
+            BuildingId, BuildingFloorId, BuildingStaircaseId,
+            IsActive, GETDATE(), @UserId
+        FROM @Items
+        WHERE BuildingFloorStaircaseId = 0;
+
+        COMMIT;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Floor staircase relationships saved successfully.';
+
+        SELECT fs.*
+        FROM dbo.BuildingFloorStaircases fs
+        INNER JOIN @Items i
+          ON (i.BuildingFloorStaircaseId > 0
+              AND fs.BuildingFloorStaircaseId = i.BuildingFloorStaircaseId)
+          OR (i.BuildingFloorStaircaseId = 0
+              AND fs.BuildingFloorId = i.BuildingFloorId
+              AND fs.BuildingStaircaseId = i.BuildingStaircaseId);
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[BuildingFloorStaircases_Delete]
+(
+    @BuildingFloorStaircaseId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF NOT EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingFloorStaircases
+            WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Relationship not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM dbo.UnitStaircases
+            WHERE BuildingFloorId =
+            (
+                SELECT BuildingFloorId
+                FROM dbo.BuildingFloorStaircases
+                WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId
+            )
+            AND BuildingStaircaseId =
+            (
+                SELECT BuildingStaircaseId
+                FROM dbo.BuildingFloorStaircases
+                WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId
+            )
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Relationship is used by units.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        DELETE FROM dbo.BuildingFloorStaircases
+        WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId;
+
+        COMMIT;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Relationship deleted successfully.';
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[BuildingFloorStaircases_Get]
+(
+    @BuildingId BIGINT = NULL,
+    @BuildingFloorId BIGINT = NULL,
+    @BuildingStaircaseId BIGINT = NULL,
+    @IsActive BIT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        fs.*,
+        f.FloorNumber,
+        f.FloorName,
+        s.StaircaseCode,
+        s.StaircaseName,
+        s.StaircaseType
+    FROM dbo.BuildingFloorStaircases fs
+    INNER JOIN dbo.BuildingFloors f
+        ON f.BuildingFloorId = fs.BuildingFloorId
+    INNER JOIN dbo.BuildingStaircases s
+        ON s.BuildingStaircaseId = fs.BuildingStaircaseId
+    WHERE (@BuildingId IS NULL OR fs.BuildingId = @BuildingId)
+      AND (@BuildingFloorId IS NULL OR fs.BuildingFloorId = @BuildingFloorId)
+      AND (@BuildingStaircaseId IS NULL OR fs.BuildingStaircaseId = @BuildingStaircaseId)
+      AND (@IsActive IS NULL OR fs.IsActive = @IsActive)
+    ORDER BY f.FloorNumber, s.DisplayOrder;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Relationships retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorStaircases_GetById]
+(
+    @BuildingFloorStaircaseId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        fs.*,
+        f.FloorNumber,
+        f.FloorName,
+        s.StaircaseCode,
+        s.StaircaseName,
+        s.StaircaseType
+    FROM dbo.BuildingFloorStaircases fs
+    INNER JOIN dbo.BuildingFloors f
+        ON f.BuildingFloorId = fs.BuildingFloorId
+    INNER JOIN dbo.BuildingStaircases s
+        ON s.BuildingStaircaseId = fs.BuildingStaircaseId
+    WHERE fs.BuildingFloorStaircaseId = @BuildingFloorStaircaseId;
+
+    IF @@ROWCOUNT = 0
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Relationship not found.';
+        RETURN;
+    END;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Relationship retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_Insert]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorStaircases_Insert]
+(
+    @BuildingId BIGINT,
+    @BuildingFloorId BIGINT,
+    @BuildingStaircaseId BIGINT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF @BuildingId <= 0 OR @BuildingFloorId <= 0
+           OR @BuildingStaircaseId <= 0
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid relationship data.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingFloors f
+            INNER JOIN dbo.BuildingStaircases s
+                ON s.BuildingId = f.BuildingId
+            WHERE f.BuildingFloorId = @BuildingFloorId
+              AND s.BuildingStaircaseId = @BuildingStaircaseId
+              AND f.BuildingId = @BuildingId
+              AND f.IsActive = 1
+              AND s.IsActive = 1
+              AND s.IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Floor and staircase are invalid or inactive.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingFloorStaircases
+            WHERE BuildingFloorId = @BuildingFloorId
+              AND BuildingStaircaseId = @BuildingStaircaseId
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Relationship already exists.';
+            RETURN;
+        END;
+
+        INSERT INTO dbo.BuildingFloorStaircases
+        (
+            BuildingId, BuildingFloorId, BuildingStaircaseId,
+            IsActive, CreatedAt, UserCreater
+        )
+        VALUES
+        (
+            @BuildingId, @BuildingFloorId, @BuildingStaircaseId,
+            1, GETDATE(), @UserId
+        );
+
+        DECLARE @NewId BIGINT = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        SET @ResultCode = 201;
+        SET @ResultMessage = N'Floor staircase relationship created successfully.';
+
+        SELECT *
+        FROM dbo.BuildingFloorStaircases
+        WHERE BuildingFloorStaircaseId = @NewId;
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_SetActive]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorStaircases_SetActive]
+(
+    @BuildingFloorStaircaseId BIGINT,
+    @IsActive BIT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingFloorStaircases
+        WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Relationship not found.';
+        RETURN;
+    END;
+
+    IF @IsActive = 0 AND EXISTS
+    (
+        SELECT 1
+        FROM dbo.UnitStaircases us
+        WHERE us.BuildingFloorId =
+        (
+            SELECT BuildingFloorId
+            FROM dbo.BuildingFloorStaircases
+            WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId
+        )
+        AND us.BuildingStaircaseId =
+        (
+            SELECT BuildingStaircaseId
+            FROM dbo.BuildingFloorStaircases
+            WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId
+        )
+        AND us.IsActive = 1
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        SET @ResultMessage = N'Relationship is used by active units.';
+        RETURN;
+    END;
+
+    UPDATE dbo.BuildingFloorStaircases
+    SET IsActive = @IsActive
+    WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Relationship status updated successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingFloorStaircases_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingFloorStaircases_Update]
+(
+    @BuildingFloorStaircaseId BIGINT,
+    @BuildingFloorId BIGINT,
+    @BuildingStaircaseId BIGINT,
+    @IsActive BIT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @BuildingId BIGINT;
+
+    SELECT @BuildingId = BuildingId
+    FROM dbo.BuildingFloorStaircases
+    WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId;
+
+    IF @BuildingId IS NULL
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Relationship not found.';
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM dbo.BuildingFloors f
+        INNER JOIN dbo.BuildingStaircases s
+            ON s.BuildingId = f.BuildingId
+        WHERE f.BuildingFloorId = @BuildingFloorId
+          AND s.BuildingStaircaseId = @BuildingStaircaseId
+          AND f.BuildingId = @BuildingId
+          AND s.IsDeleted = 0
+          AND f.IsActive = 1
+          AND s.IsActive = 1
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        SET @ResultMessage = N'Invalid floor or staircase.';
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM dbo.BuildingFloorStaircases
+        WHERE BuildingFloorId = @BuildingFloorId
+          AND BuildingStaircaseId = @BuildingStaircaseId
+          AND BuildingFloorStaircaseId <> @BuildingFloorStaircaseId
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        SET @ResultMessage = N'Relationship already exists.';
+        RETURN;
+    END;
+
+    UPDATE dbo.BuildingFloorStaircases
+    SET BuildingFloorId = @BuildingFloorId,
+        BuildingStaircaseId = @BuildingStaircaseId,
+        IsActive = @IsActive
+    WHERE BuildingFloorStaircaseId = @BuildingFloorStaircaseId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Relationship updated successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[Buildings_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11129,7 +15717,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Buildings_GetByOrgId]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Buildings_GetByOrgId]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11198,7 +15786,7 @@ BEGIN
     SET @ResultMessage = N'اطلاعات ساختمان‌های سازمان با موفقیت دریافت شد.';
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsAdd]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11317,7 +15905,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsDel]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11408,7 +15996,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsEdit]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11538,7 +16126,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingsGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11651,7 +16239,891 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_Active]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircaseElevators_Active]
+    @BuildingStaircaseElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @IsActive BIT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingStaircaseElevators
+        WHERE BuildingStaircaseElevatorId = @BuildingStaircaseElevatorId
+          AND BuildingId = @BuildingId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF @IsActive = 1
+       AND NOT EXISTS
+       (
+           SELECT 1
+           FROM dbo.BuildingStaircaseElevators se
+           INNER JOIN dbo.BuildingStaircases s
+               ON s.BuildingStaircaseId = se.BuildingStaircaseId
+              AND s.BuildingId = se.BuildingId
+           INNER JOIN dbo.BuildingElevators e
+               ON e.BuildingElevatorId = se.BuildingElevatorId
+              AND e.BuildingId = se.BuildingId
+           WHERE se.BuildingStaircaseElevatorId = @BuildingStaircaseElevatorId
+             AND s.IsActive = 1
+             AND e.IsActive = 1
+             AND e.IsDeleted = 0
+       )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    UPDATE dbo.BuildingStaircaseElevators
+    SET IsActive = @IsActive
+    WHERE BuildingStaircaseElevatorId = @BuildingStaircaseElevatorId
+      AND BuildingId = @BuildingId;
+
+    SET @ResultCode = 200;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircaseElevators_BulkSave]
+    @Items dbo.BuildingStaircaseElevatorBulkType READONLY,
+    @CurrentUserId INT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    SET @ResultCode = 400;
+
+    IF NOT EXISTS (SELECT 1 FROM @Items)
+        RETURN;
+
+    IF EXISTS
+    (
+        SELECT BuildingStaircaseId, BuildingElevatorId
+        FROM @Items
+        GROUP BY BuildingStaircaseId, BuildingElevatorId
+        HAVING COUNT(*) > 1
+    )
+        RETURN;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Items i
+        WHERE NOT EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingStaircases s
+            WHERE s.BuildingStaircaseId = i.BuildingStaircaseId
+              AND s.BuildingId = i.BuildingId
+              AND s.IsDeleted = 0
+        )
+        OR NOT EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingElevators e
+            WHERE e.BuildingElevatorId = i.BuildingElevatorId
+              AND e.BuildingId = i.BuildingId
+              AND e.IsDeleted = 0
+        )
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Items i
+        JOIN dbo.BuildingStaircaseElevators se
+          ON se.BuildingStaircaseId = i.BuildingStaircaseId
+         AND se.BuildingElevatorId = i.BuildingElevatorId
+        WHERE ISNULL(i.BuildingStaircaseElevatorId, 0)
+              <> se.BuildingStaircaseElevatorId
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM @Items i
+        WHERE ISNULL(i.BuildingStaircaseElevatorId, 0) > 0
+          AND NOT EXISTS
+          (
+              SELECT 1 FROM dbo.BuildingStaircaseElevators se
+              WHERE se.BuildingStaircaseElevatorId =
+                    i.BuildingStaircaseElevatorId
+                AND se.BuildingId = i.BuildingId
+          )
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        UPDATE se
+        SET se.BuildingStaircaseId = i.BuildingStaircaseId,
+            se.BuildingElevatorId = i.BuildingElevatorId,
+            se.IsActive = i.IsActive
+        FROM dbo.BuildingStaircaseElevators se
+        INNER JOIN @Items i
+            ON i.BuildingStaircaseElevatorId =
+               se.BuildingStaircaseElevatorId
+        WHERE ISNULL(i.BuildingStaircaseElevatorId, 0) > 0;
+
+        INSERT INTO dbo.BuildingStaircaseElevators
+        (
+            BuildingId, BuildingStaircaseId, BuildingElevatorId,
+            IsActive, CreatedAt, UserCreater
+        )
+        SELECT
+            i.BuildingId, i.BuildingStaircaseId, i.BuildingElevatorId,
+            i.IsActive, GETDATE(), @CurrentUserId
+        FROM @Items i
+        WHERE ISNULL(i.BuildingStaircaseElevatorId, 0) = 0;
+
+        COMMIT TRANSACTION;
+        SET @ResultCode = 200;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
+        SET @ResultCode = 500;
+    END CATCH;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircaseElevators_Delete]
+    @BuildingStaircaseElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM dbo.BuildingStaircaseElevators
+    WHERE BuildingStaircaseElevatorId = @BuildingStaircaseElevatorId
+      AND BuildingId = @BuildingId;
+
+    SET @ResultCode =
+        CASE WHEN @@ROWCOUNT = 0 THEN 404 ELSE 200 END;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircaseElevators_Get]
+    @BuildingId BIGINT,
+    @BuildingStaircaseId BIGINT = NULL,
+    @BuildingElevatorId BIGINT = NULL,
+    @IsActive BIT = NULL,
+    @PageNumber INT = 1,
+    @PageSize INT = 50,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @BuildingId <= 0 OR @PageNumber < 1
+       OR @PageSize < 1 OR @PageSize > 500
+    BEGIN
+        SET @ResultCode = 400;
+        RETURN;
+    END;
+
+    SELECT
+        se.*,
+        s.StaircaseCode,
+        s.StaircaseName,
+        e.ElevatorCode,
+        e.ElevatorName,
+        e.ElevatorType
+    FROM dbo.BuildingStaircaseElevators se
+    INNER JOIN dbo.BuildingStaircases s
+        ON s.BuildingStaircaseId = se.BuildingStaircaseId
+       AND s.BuildingId = se.BuildingId
+    INNER JOIN dbo.BuildingElevators e
+        ON e.BuildingElevatorId = se.BuildingElevatorId
+       AND e.BuildingId = se.BuildingId
+    WHERE se.BuildingId = @BuildingId
+      AND (@BuildingStaircaseId IS NULL
+           OR se.BuildingStaircaseId = @BuildingStaircaseId)
+      AND (@BuildingElevatorId IS NULL
+           OR se.BuildingElevatorId = @BuildingElevatorId)
+      AND (@IsActive IS NULL OR se.IsActive = @IsActive)
+    ORDER BY s.DisplayOrder, e.DisplayOrder
+    OFFSET (@PageNumber - 1) * @PageSize ROWS
+    FETCH NEXT @PageSize ROWS ONLY;
+
+    SET @ResultCode = 200;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircaseElevators_GetById]
+    @BuildingStaircaseElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT *
+    FROM dbo.BuildingStaircaseElevators
+    WHERE BuildingStaircaseElevatorId = @BuildingStaircaseElevatorId
+      AND BuildingId = @BuildingId;
+
+    SET @ResultCode =
+        CASE WHEN @@ROWCOUNT = 0 THEN 404 ELSE 200 END;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircaseElevators_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircaseElevators_Update]
+    @BuildingStaircaseElevatorId BIGINT,
+    @BuildingId BIGINT,
+    @BuildingStaircaseId BIGINT,
+    @BuildingElevatorId BIGINT,
+    @IsActive BIT,
+    @ResultCode INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SET @ResultCode = 400;
+
+    IF @BuildingStaircaseElevatorId <= 0 OR @BuildingId <= 0
+       OR @BuildingStaircaseId <= 0 OR @BuildingElevatorId <= 0
+        RETURN;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingStaircaseElevators
+        WHERE BuildingStaircaseElevatorId = @BuildingStaircaseElevatorId
+          AND BuildingId = @BuildingId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingStaircases
+        WHERE BuildingStaircaseId = @BuildingStaircaseId
+          AND BuildingId = @BuildingId
+          AND IsDeleted = 0
+    )
+    OR NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingElevators
+        WHERE BuildingElevatorId = @BuildingElevatorId
+          AND BuildingId = @BuildingId
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        RETURN;
+    END;
+
+    IF EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingStaircaseElevators
+        WHERE BuildingStaircaseId = @BuildingStaircaseId
+          AND BuildingElevatorId = @BuildingElevatorId
+          AND BuildingStaircaseElevatorId <> @BuildingStaircaseElevatorId
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        RETURN;
+    END;
+
+    UPDATE dbo.BuildingStaircaseElevators
+    SET BuildingStaircaseId = @BuildingStaircaseId,
+        BuildingElevatorId = @BuildingElevatorId,
+        IsActive = @IsActive
+    WHERE BuildingStaircaseElevatorId = @BuildingStaircaseElevatorId
+      AND BuildingId = @BuildingId;
+
+    SET @ResultCode = 200;
+
+    SELECT *
+    FROM dbo.BuildingStaircaseElevators
+    WHERE BuildingStaircaseElevatorId = @BuildingStaircaseElevatorId;
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircases_BulkSave]
+(
+    @Items dbo.BuildingStaircaseBulkSaveType READONLY,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF NOT EXISTS (SELECT 1 FROM @Items)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'No records supplied.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM @Items
+            WHERE BuildingId <= 0
+               OR StaircaseType NOT BETWEEN 1 AND 5
+               OR DisplayOrder <= 0
+               OR NULLIF(LTRIM(RTRIM(StaircaseCode)), N'') IS NULL
+               OR NULLIF(LTRIM(RTRIM(StaircaseName)), N'') IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid staircase data.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT BuildingId, StaircaseCode
+            FROM @Items
+            GROUP BY BuildingId, StaircaseCode
+            HAVING COUNT(*) > 1
+        )
+        OR EXISTS
+        (
+            SELECT BuildingStaircaseId
+            FROM @Items
+            WHERE BuildingStaircaseId > 0
+            GROUP BY BuildingStaircaseId
+            HAVING COUNT(*) > 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Duplicate staircase data in request.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.Buildings b
+              ON b.BuildingId = i.BuildingId
+             AND ISNULL(b.IsDeleted, 0) = 0
+            WHERE b.BuildingId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Building not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.BuildingStaircases s
+              ON s.BuildingStaircaseId = i.BuildingStaircaseId
+             AND s.BuildingId = i.BuildingId
+             AND s.IsDeleted = 0
+            WHERE i.BuildingStaircaseId > 0
+              AND s.BuildingStaircaseId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Staircase not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            INNER JOIN dbo.BuildingStaircases s
+              ON s.BuildingId = i.BuildingId
+             AND s.StaircaseCode = i.StaircaseCode
+             AND s.BuildingStaircaseId <> i.BuildingStaircaseId
+             AND s.IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Staircase code already exists.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        UPDATE s
+        SET StaircaseCode = i.StaircaseCode,
+            StaircaseName = i.StaircaseName,
+            StaircaseNameEn = i.StaircaseNameEn,
+            StaircaseType = i.StaircaseType,
+            IsEmergency = i.IsEmergency,
+            Description = i.Description,
+            DisplayOrder = i.DisplayOrder,
+            IsActive = i.IsActive,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        FROM dbo.BuildingStaircases s
+        INNER JOIN @Items i
+          ON i.BuildingStaircaseId = s.BuildingStaircaseId
+         AND i.BuildingId = s.BuildingId
+        WHERE i.BuildingStaircaseId > 0;
+
+        INSERT INTO dbo.BuildingStaircases
+        (
+            BuildingId, StaircaseCode, StaircaseName,
+            StaircaseNameEn, StaircaseType, IsEmergency,
+            Description, DisplayOrder, IsActive, IsDeleted,
+            CreatedAt, UserCreater
+        )
+        SELECT
+            BuildingId, StaircaseCode, StaircaseName,
+            StaircaseNameEn, StaircaseType, IsEmergency,
+            Description, DisplayOrder, IsActive, 0,
+            GETDATE(), @UserId
+        FROM @Items
+        WHERE BuildingStaircaseId = 0;
+
+        COMMIT;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Staircases saved successfully.';
+
+        SELECT s.*
+        FROM dbo.BuildingStaircases s
+        INNER JOIN @Items i
+          ON (i.BuildingStaircaseId > 0
+              AND s.BuildingStaircaseId = i.BuildingStaircaseId)
+          OR (i.BuildingStaircaseId = 0
+              AND s.BuildingId = i.BuildingId
+              AND s.StaircaseCode = i.StaircaseCode);
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[BuildingStaircases_Delete]
+(
+    @BuildingStaircaseId BIGINT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF NOT EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingStaircases
+            WHERE BuildingStaircaseId = @BuildingStaircaseId
+              AND IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Staircase not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM dbo.UnitStaircases
+            WHERE BuildingStaircaseId = @BuildingStaircaseId
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Staircase has unit assignments.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingFloorStaircases
+            WHERE BuildingStaircaseId = @BuildingStaircaseId
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Staircase is assigned to floors.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        UPDATE dbo.BuildingStaircases
+        SET IsDeleted = 1,
+            IsActive = 0,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        WHERE BuildingStaircaseId = @BuildingStaircaseId;
+
+        COMMIT;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Staircase deleted successfully.';
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[BuildingStaircases_Get]
+(
+    @BuildingId BIGINT = NULL,
+    @IsActive BIT = NULL,
+    @StaircaseType TINYINT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT *
+    FROM dbo.BuildingStaircases
+    WHERE IsDeleted = 0
+      AND (@BuildingId IS NULL OR BuildingId = @BuildingId)
+      AND (@IsActive IS NULL OR IsActive = @IsActive)
+      AND (@StaircaseType IS NULL OR StaircaseType = @StaircaseType)
+    ORDER BY BuildingId, DisplayOrder, BuildingStaircaseId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Staircases retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircases_GetById]
+(
+    @BuildingStaircaseId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT *
+    FROM dbo.BuildingStaircases
+    WHERE BuildingStaircaseId = @BuildingStaircaseId
+      AND IsDeleted = 0;
+
+    IF @@ROWCOUNT = 0
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Staircase not found.';
+        RETURN;
+    END;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Staircase retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_Insert]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircases_Insert]
+(
+    @BuildingId BIGINT,
+    @StaircaseCode NVARCHAR(60),
+    @StaircaseName NVARCHAR(200),
+    @StaircaseNameEn NVARCHAR(200) = NULL,
+    @StaircaseType TINYINT = 1,
+    @IsEmergency BIT = 0,
+    @Description NVARCHAR(1000) = NULL,
+    @DisplayOrder INT = 1,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF @BuildingId <= 0
+           OR @StaircaseType NOT BETWEEN 1 AND 5
+           OR @DisplayOrder <= 0
+           OR NULLIF(LTRIM(RTRIM(@StaircaseCode)), N'') IS NULL
+           OR NULLIF(LTRIM(RTRIM(@StaircaseName)), N'') IS NULL
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid staircase data.';
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1 FROM dbo.Buildings
+            WHERE BuildingId = @BuildingId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Building not found.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingStaircases
+            WHERE BuildingId = @BuildingId
+              AND StaircaseCode = @StaircaseCode
+              AND IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Staircase code already exists.';
+            RETURN;
+        END;
+
+        INSERT INTO dbo.BuildingStaircases
+        (
+            BuildingId, StaircaseCode, StaircaseName,
+            StaircaseNameEn, StaircaseType, IsEmergency,
+            Description, DisplayOrder, IsActive, IsDeleted,
+            CreatedAt, UserCreater
+        )
+        VALUES
+        (
+            @BuildingId, @StaircaseCode, @StaircaseName,
+            @StaircaseNameEn, @StaircaseType, @IsEmergency,
+            @Description, @DisplayOrder, 1, 0,
+            GETDATE(), @UserId
+        );
+
+        DECLARE @NewId BIGINT = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        SET @ResultCode = 201;
+        SET @ResultMessage = N'Staircase created successfully.';
+
+        SELECT *
+        FROM dbo.BuildingStaircases
+        WHERE BuildingStaircaseId = @NewId;
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_SetActive]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircases_SetActive]
+(
+    @BuildingStaircaseId BIGINT,
+    @IsActive BIT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.BuildingStaircases
+        WHERE BuildingStaircaseId = @BuildingStaircaseId
+          AND IsDeleted = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Staircase not found.';
+        RETURN;
+    END;
+
+    IF @IsActive = 0 AND EXISTS
+    (
+        SELECT 1
+        FROM dbo.UnitStaircases us
+        INNER JOIN dbo.Units u ON u.UnitId = us.UnitId
+        WHERE us.BuildingStaircaseId = @BuildingStaircaseId
+          AND us.IsActive = 1
+          AND ISNULL(u.IsDeleted, 0) = 0
+          AND u.IsActive = 1
+    )
+    BEGIN
+        SET @ResultCode = 409;
+        SET @ResultMessage = N'Staircase is assigned to active units.';
+        RETURN;
+    END;
+
+    UPDATE dbo.BuildingStaircases
+    SET IsActive = @IsActive,
+        UpdatedAt = GETDATE(),
+        UserUpdater = @UserId
+    WHERE BuildingStaircaseId = @BuildingStaircaseId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Staircase status updated successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[BuildingStaircases_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[BuildingStaircases_Update]
+(
+    @BuildingStaircaseId BIGINT,
+    @StaircaseCode NVARCHAR(60),
+    @StaircaseName NVARCHAR(200),
+    @StaircaseNameEn NVARCHAR(200) = NULL,
+    @StaircaseType TINYINT,
+    @IsEmergency BIT,
+    @Description NVARCHAR(1000) = NULL,
+    @DisplayOrder INT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        IF @BuildingStaircaseId <= 0
+           OR @StaircaseType NOT BETWEEN 1 AND 5
+           OR @DisplayOrder <= 0
+           OR NULLIF(LTRIM(RTRIM(@StaircaseCode)), N'') IS NULL
+           OR NULLIF(LTRIM(RTRIM(@StaircaseName)), N'') IS NULL
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid staircase data.';
+            RETURN;
+        END;
+
+        DECLARE @BuildingId BIGINT;
+
+        SELECT @BuildingId = BuildingId
+        FROM dbo.BuildingStaircases
+        WHERE BuildingStaircaseId = @BuildingStaircaseId
+          AND IsDeleted = 0;
+
+        IF @BuildingId IS NULL
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Staircase not found.';
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM dbo.BuildingStaircases
+            WHERE BuildingId = @BuildingId
+              AND StaircaseCode = @StaircaseCode
+              AND BuildingStaircaseId <> @BuildingStaircaseId
+              AND IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Staircase code already exists.';
+            RETURN;
+        END;
+
+        UPDATE dbo.BuildingStaircases
+        SET StaircaseCode = @StaircaseCode,
+            StaircaseName = @StaircaseName,
+            StaircaseNameEn = @StaircaseNameEn,
+            StaircaseType = @StaircaseType,
+            IsEmergency = @IsEmergency,
+            Description = @Description,
+            DisplayOrder = @DisplayOrder,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        WHERE BuildingStaircaseId = @BuildingStaircaseId;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Staircase updated successfully.';
+
+        SELECT *
+        FROM dbo.BuildingStaircases
+        WHERE BuildingStaircaseId = @BuildingStaircaseId;
+    END TRY
+    BEGIN CATCH
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsActive]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11693,7 +17165,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsAdd]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11811,7 +17283,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsDel]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11853,7 +17325,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsEdit]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11968,7 +17440,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12014,7 +17486,7 @@ BEGIN
     FETCH NEXT @PageSize ROWS ONLY;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeAssignmentsGetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12033,7 +17505,7 @@ BEGIN
       AND ISNULL(IsDeleted, 0) = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesActive]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12095,7 +17567,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesAdd]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12398,7 +17870,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesDel]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12463,7 +17935,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesEdit]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12659,7 +18131,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12727,7 +18199,7 @@ BEGIN
     FETCH NEXT @PageSize ROWS ONLY;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeesGetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12794,7 +18266,7 @@ BEGIN
     ORDER BY ea.StartDate DESC, ea.EmployeeAssignmentId DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesAdd]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12870,7 +18342,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypeRolesGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12904,7 +18376,7 @@ BEGIN
     ORDER BY et.LookupValueTitleFr,LookupValueTitleEn, r.RoleName;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesActive]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12946,7 +18418,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesAdd]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13016,7 +18488,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesDel]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13081,7 +18553,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesEdit]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13146,7 +18618,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13187,7 +18659,7 @@ BEGIN
     FETCH NEXT @PageSize ROWS ONLY;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[EmployeeTypesGetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13226,7 +18698,7 @@ BEGIN
       AND ISNULL(etr.IsDeleted, 0) = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_Cancel]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_Cancel]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13257,7 +18729,7 @@ BEGIN
     EXEC dbo.Enrollment_Class_GetById @EnrollmentId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_CheckCapacity]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_CheckCapacity]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13293,7 +18765,7 @@ BEGIN
     GROUP BY s.ClassSessionId, cs.Capacity;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_GetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13315,7 +18787,7 @@ BEGIN
     WHERE e.EnrollmentId = @EnrollmentId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_GetList]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13344,7 +18816,7 @@ BEGIN
     ORDER BY e.RegisteredAt DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_Register]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_Register]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13440,7 +18912,7 @@ BEGIN
     EXEC dbo.Enrollment_Class_GetById @EnrollmentId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Class_SetPaymentStatus]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Class_SetPaymentStatus]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13466,7 +18938,7 @@ BEGIN
     EXEC dbo.Enrollment_Class_GetById @EnrollmentId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_GetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13488,7 +18960,7 @@ BEGIN
     WHERE w.WaitlistId = @WaitlistId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_GetList]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13512,7 +18984,7 @@ BEGIN
     ORDER BY w.ClassSessionId, w.QueueNumber;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_Join]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_Join]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13578,7 +19050,7 @@ BEGIN
     EXEC dbo.Enrollment_Waitlist_GetById @WaitlistId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_UpdateStatus]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Enrollment_Waitlist_UpdateStatus]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13612,7 +19084,7 @@ BEGIN
     EXEC dbo.Enrollment_Waitlist_GetById @WaitlistId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsAdd]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13745,7 +19217,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsDel]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13835,7 +19307,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsEdit]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -13980,7 +19452,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[OrganizationsGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14108,7 +19580,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Calculate]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Calculate]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14200,7 +19672,7 @@ BEGIN
         @CommissionBaseAmount - @CommissionAmount AS NetAmount;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Delete]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14221,7 +19693,7 @@ BEGIN
         THROW 51213, N'طرح کارمزد پیدا نشد.', 1;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_GetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14237,7 +19709,7 @@ BEGIN
     WHERE CommissionPlanId = @CommissionPlanId AND IsDeleted = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_GetList]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14260,7 +19732,7 @@ BEGIN
     ORDER BY ValidFrom DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Save]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionPlans_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14326,7 +19798,7 @@ BEGIN
     EXEC dbo.Pricing_CommissionPlans_GetById @CommissionPlanId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_Delete]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14341,7 +19813,7 @@ BEGIN
     WHERE CommissionTierId = @CommissionTierId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_GetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14357,7 +19829,7 @@ BEGIN
     WHERE CommissionTierId = @CommissionTierId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_GetList]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14374,7 +19846,7 @@ BEGIN
     ORDER BY TierOrder;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_Save]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_CommissionTiers_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14437,7 +19909,7 @@ BEGIN
     EXEC dbo.Pricing_CommissionTiers_GetById @CommissionTierId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_GetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14453,7 +19925,7 @@ BEGIN
     WHERE FinancialTransactionId = @FinancialTransactionId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_GetList]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14482,7 +19954,7 @@ BEGIN
     ORDER BY TransactionAt DESC, FinancialTransactionId DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_Save]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14559,7 +20031,7 @@ BEGIN
     EXEC dbo.Pricing_FinancialTransactions_GetById @FinancialTransactionId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_SetStatus]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_FinancialTransactions_SetStatus]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14587,7 +20059,7 @@ BEGIN
     EXEC dbo.Pricing_FinancialTransactions_GetById @FinancialTransactionId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_CalculateAmount]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_CalculateAmount]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14673,7 +20145,7 @@ BEGIN
         @CurrencyCode AS CurrencyCode;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_Delete]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14695,7 +20167,7 @@ BEGIN
         THROW 51205, N'قانون قیمت‌گذاری پیدا نشد.', 1;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_GetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14711,7 +20183,7 @@ BEGIN
     WHERE PricingRuleId = @PricingRuleId AND IsDeleted = 0;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_GetList]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14744,7 +20216,7 @@ BEGIN
     ORDER BY Priority DESC, ValidFrom DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Rules_Save]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Rules_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14837,7 +20309,7 @@ BEGIN
     EXEC dbo.Pricing_Rules_GetById @PricingRuleId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_GetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14853,7 +20325,7 @@ BEGIN
     WHERE SettlementId = @SettlementId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_GetList]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_GetList]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14882,7 +20354,7 @@ BEGIN
     ORDER BY CreatedAt DESC;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_Save]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_Save]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14967,7 +20439,7 @@ BEGIN
     EXEC dbo.Pricing_Settlements_GetById @SettlementId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_SetStatus]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Pricing_Settlements_SetStatus]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -14995,7 +20467,7 @@ BEGIN
     EXEC dbo.Pricing_Settlements_GetById @SettlementId;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_BulkSave]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15241,7 +20713,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_Delete]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15311,7 +20783,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_Get]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15361,7 +20833,7 @@ BEGIN
     SET @ResultMessage = N'فهرست فضاها دریافت شد.';
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_GetById]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15418,7 +20890,7 @@ BEGIN
     SET @ResultMessage = N'اطلاعات فضا دریافت شد.';
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_Insert]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_Insert]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15568,7 +21040,7 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_SetActive]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_SetActive]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15617,7 +21089,7 @@ BEGIN
         END;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Spaces_Update]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Spaces_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15779,257 +21251,759 @@ BEGIN
     END CATCH;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[Units_BulkSave]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Units_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE   PROCEDURE [dbo].[Units_BulkSave]
 (
-    @Units          dbo.UnitBulkType READONLY,
-    @CurrentUserId  BIGINT,
-    @ResultCode     INT OUTPUT,
-    @ResultMessage  NVARCHAR(500) OUTPUT
+    @Items dbo.UnitBulkSaveType READONLY,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
 )
 AS
 BEGIN
     SET NOCOUNT ON;
     SET XACT_ABORT ON;
 
-    SET @ResultCode = 500;
-    SET @ResultMessage = N'خطای پیش‌بینی‌نشده در عملیات واحدها.';
-
-    ---------------------------------------------------------
-    -- 1. بررسی خالی نبودن ورودی
-    ---------------------------------------------------------
-    IF NOT EXISTS (SELECT 1 FROM @Units)
-    BEGIN
-        SET @ResultCode = 400;
-        SET @ResultMessage = N'حداقل یک واحد باید ارسال شود.';
-        RETURN;
-    END;
-
-    ---------------------------------------------------------
-    -- 2. اعتبارسنجی BuildingId
-    ---------------------------------------------------------
-    IF EXISTS
-    (
-        SELECT 1
-        FROM @Units
-        WHERE BuildingId IS NULL OR BuildingId <= 0
-    )
-    BEGIN
-        SET @ResultCode = 400;
-        SET @ResultMessage = N'کد ساختمان معتبر نیست.';
-        RETURN;
-    END;
-
-    ---------------------------------------------------------
-    -- 3. اعتبارسنجی UnitNumber
-    ---------------------------------------------------------
-    IF EXISTS
-    (
-        SELECT 1
-        FROM @Units
-        WHERE NULLIF(LTRIM(RTRIM(UnitNumber)), N'') IS NULL
-    )
-    BEGIN
-        SET @ResultCode = 400;
-        SET @ResultMessage = N'شماره یا نام واحد الزامی است.';
-        RETURN;
-    END;
-
-    ---------------------------------------------------------
-    -- 4. جلوگیری از شناسه تکراری در یک درخواست
-    ---------------------------------------------------------
-    IF EXISTS
-    (
-        SELECT UnitId
-        FROM @Units
-        WHERE UnitId IS NOT NULL
-          AND UnitId > 0
-        GROUP BY UnitId
-        HAVING COUNT(*) > 1
-    )
-    BEGIN
-        SET @ResultCode = 400;
-        SET @ResultMessage = N'شناسه یک واحد بیش از یک بار ارسال شده است.';
-        RETURN;
-    END;
-
-    ---------------------------------------------------------
-    -- 5. بررسی ساختمان‌ها
-    ---------------------------------------------------------
-    IF EXISTS
-    (
-        SELECT 1
-        FROM @Units U
-        WHERE NOT EXISTS
-        (
-            SELECT 1
-            FROM dbo.Buildings B
-            WHERE B.BuildingId = U.BuildingId
-              AND ISNULL(B.IsDeleted, 0) = 0
-              AND B.IsActive = 1
-        )
-    )
-    BEGIN
-        SET @ResultCode = 404;
-        SET @ResultMessage =
-            N'ساختمان انتخاب شده وجود ندارد، حذف شده یا غیرفعال است.';
-        RETURN;
-    END;
-
-    ---------------------------------------------------------
-    -- 6. بررسی وجود واحدهای ارسالی برای ویرایش
-    ---------------------------------------------------------
-    IF EXISTS
-    (
-        SELECT 1
-        FROM @Units U
-        WHERE ISNULL(U.UnitId, 0) > 0
-          AND NOT EXISTS
-          (
-              SELECT 1
-              FROM dbo.Units T
-              WHERE T.UnitId = U.UnitId
-                AND ISNULL(T.IsDeleted, 0) = 0
-          )
-    )
-    BEGIN
-        SET @ResultCode = 404;
-        SET @ResultMessage =
-            N'یکی از واحدهای ارسالی برای ویرایش یافت نشد یا حذف شده است.';
-        RETURN;
-    END;
-
-    ---------------------------------------------------------
-    -- 7. بررسی تکراری نبودن واحدها در خود درخواست
-    -- کلید: ساختمان + طبقه + شماره واحد
-    ---------------------------------------------------------
-    IF EXISTS
-    (
-        SELECT
-            BuildingId,
-            FloorNumber,
-            LTRIM(RTRIM(UnitNumber))
-        FROM @Units
-        GROUP BY
-            BuildingId,
-            FloorNumber,
-            LTRIM(RTRIM(UnitNumber))
-        HAVING COUNT(*) > 1
-    )
-    BEGIN
-        SET @ResultCode = 409;
-        SET @ResultMessage =
-            N'در اطلاعات ارسالی، شماره واحد در یک ساختمان و طبقه تکراری است.';
-        RETURN;
-    END;
-
-    ---------------------------------------------------------
-    -- 8. بررسی تکراری نبودن در جدول موجود
-    ---------------------------------------------------------
-    IF EXISTS
-    (
-        SELECT 1
-        FROM @Units U
-        INNER JOIN dbo.Units T
-            ON T.BuildingId = U.BuildingId
-           AND
-           (
-               T.FloorNumber = U.FloorNumber
-               OR (T.FloorNumber IS NULL AND U.FloorNumber IS NULL)
-           )
-           AND LTRIM(RTRIM(T.UnitNumber)) =
-               LTRIM(RTRIM(U.UnitNumber))
-           AND ISNULL(T.IsDeleted, 0) = 0
-           AND
-           (
-               ISNULL(U.UnitId, 0) = 0
-               OR T.UnitId <> U.UnitId
-           )
-    )
-    BEGIN
-        SET @ResultCode = 409;
-        SET @ResultMessage =
-            N'در این طبقه از این ساختمان، واحدی با این شماره یا نام قبلاً ثبت شده است.';
-        RETURN;
-    END;
-
-    ---------------------------------------------------------
-    -- 9. ثبت و ویرایش اتمیک
-    ---------------------------------------------------------
     BEGIN TRY
         BEGIN TRANSACTION;
 
-        -----------------------------------------------------
-        -- 9.1 ویرایش واحدهای موجود
-        -----------------------------------------------------
-        UPDATE T
-        SET
-            T.BuildingId = U.BuildingId,
-            T.UnitNumber = LTRIM(RTRIM(U.UnitNumber)),
-            T.FloorNumber = U.FloorNumber,
-            T.Area = U.Area,
-            T.Bedrooms = U.Bedrooms,
-            T.UnitDescription = U.UnitDescription,
-            T.IsActive = ISNULL(U.IsActive, T.IsActive),
-            T.UpdatedAt = GETDATE(),
-            T.UserUpdater = TRY_CONVERT(INT, @CurrentUserId)
-        FROM dbo.Units T
-        INNER JOIN @Units U
-            ON U.UnitId = T.UnitId
-        WHERE ISNULL(U.UnitId, 0) > 0
-          AND ISNULL(T.IsDeleted, 0) = 0;
+        IF NOT EXISTS (SELECT 1 FROM @Items)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'No records supplied.';
+            ROLLBACK;
+            RETURN;
+        END;
 
-        -----------------------------------------------------
-        -- 9.2 ثبت واحدهای جدید
-        -----------------------------------------------------
+        IF EXISTS
+        (
+            SELECT 1 FROM @Items
+            WHERE BuildingId <= 0
+               OR NULLIF(LTRIM(RTRIM(UnitNumber)), N'') IS NULL
+               OR (Area IS NOT NULL AND Area <= 0)
+        )
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid unit data.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT UnitId
+            FROM @Items
+            WHERE UnitId > 0
+            GROUP BY UnitId
+            HAVING COUNT(*) > 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Duplicate unit IDs in request.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.Buildings b
+              ON b.BuildingId = i.BuildingId
+             AND ISNULL(b.IsDeleted, 0) = 0
+            WHERE b.BuildingId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'One or more buildings were not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.Units u
+              ON u.UnitId = i.UnitId
+             AND u.BuildingId = i.BuildingId
+             AND ISNULL(u.IsDeleted, 0) = 0
+            WHERE i.UnitId > 0
+              AND u.UnitId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'One or more units were not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.BuildingFloors f
+              ON f.BuildingFloorId = i.BuildingFloorId
+             AND f.BuildingId = i.BuildingId
+             AND f.IsActive = 1
+            WHERE i.BuildingFloorId IS NOT NULL
+              AND f.BuildingFloorId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'One or more floors are invalid or inactive.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        /* Duplicate unit numbers in incoming batch.
+           Uses the configuration's uniqueness scope. */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items a
+            INNER JOIN @Items b
+              ON a.BuildingId = b.BuildingId
+             AND a.UnitNumber = b.UnitNumber
+             AND a.UnitId < b.UnitId
+            LEFT JOIN dbo.BuildingConfigurations c
+              ON c.BuildingId = a.BuildingId
+             AND c.IsDeleted = 0
+             AND c.IsActive = 1
+            WHERE ISNULL(c.IsUnitNumberUnique, 1) = 1
+              AND
+              (
+                  ISNULL(c.ResetUnitNumberPerFloor, 1) = 0
+                  OR ISNULL(a.BuildingFloorId, -1) = ISNULL(b.BuildingFloorId, -1)
+              )
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Duplicate unit numbers in request.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        /* Existing duplicate unit numbers */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            INNER JOIN dbo.Units u
+              ON u.BuildingId = i.BuildingId
+             AND u.UnitNumber = i.UnitNumber
+             AND u.UnitId <> i.UnitId
+             AND ISNULL(u.IsDeleted, 0) = 0
+            LEFT JOIN dbo.BuildingConfigurations c
+              ON c.BuildingId = i.BuildingId
+             AND c.IsDeleted = 0
+             AND c.IsActive = 1
+            WHERE ISNULL(c.IsUnitNumberUnique, 1) = 1
+              AND
+              (
+                  ISNULL(c.ResetUnitNumberPerFloor, 1) = 0
+                  OR ISNULL(u.BuildingFloorId, -1) = ISNULL(i.BuildingFloorId, -1)
+              )
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'One or more unit numbers already exist.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        /* Validate capacity including all rows being saved */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM
+            (
+                SELECT BuildingFloorId,
+                       COUNT_BIG(*) AS IncomingCount
+                FROM @Items
+                WHERE BuildingFloorId IS NOT NULL
+                GROUP BY BuildingFloorId
+            ) x
+            INNER JOIN dbo.BuildingFloors f
+              ON f.BuildingFloorId = x.BuildingFloorId
+            LEFT JOIN dbo.BuildingConfigurations c
+              ON c.BuildingId = f.BuildingId
+             AND c.IsDeleted = 0
+             AND c.IsActive = 1
+            WHERE ISNULL(c.AllowExceedFloorCapacity, 0) = 0
+              AND
+              (
+                  SELECT COUNT_BIG(*)
+                  FROM dbo.Units u
+                  WHERE u.BuildingFloorId = x.BuildingFloorId
+                    AND ISNULL(u.IsDeleted, 0) = 0
+                    AND NOT EXISTS
+                    (
+                        SELECT 1
+                        FROM @Items incoming
+                        WHERE incoming.UnitId = u.UnitId
+                    )
+              ) + x.IncomingCount > f.MaxUnits
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'One or more floor capacities would be exceeded.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        /* Units with staircase assignments cannot be moved to another floor
+           without updating their staircase assignments first. */
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            INNER JOIN dbo.Units u
+              ON u.UnitId = i.UnitId
+            WHERE i.UnitId > 0
+              AND ISNULL(u.BuildingFloorId, -1) <> ISNULL(i.BuildingFloorId, -1)
+              AND EXISTS
+              (
+                  SELECT 1 FROM dbo.UnitStaircases us
+                  WHERE us.UnitId = u.UnitId
+              )
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Cannot move a unit with staircase assignments.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        UPDATE u
+        SET BuildingFloorId = i.BuildingFloorId,
+            FloorNumber = f.FloorNumber,
+            UnitNumber = i.UnitNumber,
+            Area = i.Area,
+            Bedrooms = i.Bedrooms,
+            UnitDescription = i.UnitDescription,
+            IsActive = i.IsActive,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        FROM dbo.Units u
+        INNER JOIN @Items i ON i.UnitId = u.UnitId
+        LEFT JOIN dbo.BuildingFloors f
+          ON f.BuildingFloorId = i.BuildingFloorId
+        WHERE i.UnitId > 0;
+
         INSERT INTO dbo.Units
         (
-            BuildingId,
-            UnitNumber,
-            FloorNumber,
-            Area,
-            Bedrooms,
-            UnitDescription,
-            IsActive,
-            IsDeleted,
-            CreatedAt,
-            UserCreater
+            BuildingId, UnitNumber, FloorNumber,
+            Area, Bedrooms, UnitDescription,
+            IsActive, IsDeleted, CreatedAt, UserCreater,
+            BuildingFloorId
         )
         SELECT
-            U.BuildingId,
-            LTRIM(RTRIM(U.UnitNumber)),
-            U.FloorNumber,
-            U.Area,
-            U.Bedrooms,
-            U.UnitDescription,
-            ISNULL(U.IsActive, 1),
+            i.BuildingId,
+            i.UnitNumber,
+            f.FloorNumber,
+            i.Area,
+            i.Bedrooms,
+            i.UnitDescription,
+            i.IsActive,
             0,
             GETDATE(),
-            TRY_CONVERT(INT, @CurrentUserId)
-        FROM @Units U
-        WHERE ISNULL(U.UnitId, 0) = 0;
+            @UserId,
+            i.BuildingFloorId
+        FROM @Items i
+        LEFT JOIN dbo.BuildingFloors f
+          ON f.BuildingFloorId = i.BuildingFloorId
+        WHERE i.UnitId = 0;
 
-        COMMIT TRANSACTION;
+        COMMIT;
 
         SET @ResultCode = 200;
-        SET @ResultMessage =
-            N'عملیات ثبت و ویرایش واحدها با موفقیت انجام شد.';
+        SET @ResultMessage = N'Units saved successfully.';
+
+        SELECT u.*
+        FROM dbo.Units u
+        INNER JOIN @Items i
+          ON (i.UnitId > 0 AND u.UnitId = i.UnitId)
+          OR (i.UnitId = 0
+              AND u.BuildingId = i.BuildingId
+              AND u.UnitNumber = i.UnitNumber
+              AND ISNULL(u.BuildingFloorId, -1) = ISNULL(i.BuildingFloorId, -1));
     END TRY
     BEGIN CATCH
-        IF @@TRANCOUNT > 0
-            ROLLBACK TRANSACTION;
-
-        SET @ResultCode = ERROR_NUMBER();
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
         SET @ResultMessage = ERROR_MESSAGE();
-    END CATCH;
+    END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[Units_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[Units_Delete]
+(
+    @UnitId BIGINT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.Units
+        WHERE UnitId = @UnitId
+          AND ISNULL(IsDeleted, 0) = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Unit not found.';
+        RETURN;
+    END;
+
+    UPDATE dbo.Units
+    SET IsDeleted = 1,
+        IsActive = 0,
+        UpdatedAt = GETDATE(),
+        UserUpdater = @UserId
+    WHERE UnitId = @UnitId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Unit deleted successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[Units_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[Units_Get]
+(
+    @BuildingId BIGINT = NULL,
+    @BuildingFloorId BIGINT = NULL,
+    @FloorNumber INT = NULL,
+    @IsActive BIT = NULL,
+    @UnitNumber NVARCHAR(100) = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        u.*,
+        f.FloorCode,
+        f.FloorName,
+        f.FloorNameEn
+    FROM dbo.Units u
+    LEFT JOIN dbo.BuildingFloors f
+        ON f.BuildingFloorId = u.BuildingFloorId
+    WHERE ISNULL(u.IsDeleted, 0) = 0
+      AND (@BuildingId IS NULL OR u.BuildingId = @BuildingId)
+      AND (@BuildingFloorId IS NULL OR u.BuildingFloorId = @BuildingFloorId)
+      AND (@FloorNumber IS NULL OR u.FloorNumber = @FloorNumber)
+      AND (@IsActive IS NULL OR u.IsActive = @IsActive)
+      AND (@UnitNumber IS NULL OR u.UnitNumber LIKE N'%' + @UnitNumber + N'%')
+    ORDER BY u.BuildingId, u.FloorNumber, u.UnitNumber;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Units retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[Units_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[Units_GetById]
+(
+    @UnitId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        u.*,
+        f.FloorCode,
+        f.FloorName,
+        f.FloorNameEn
+    FROM dbo.Units u
+    LEFT JOIN dbo.BuildingFloors f
+        ON f.BuildingFloorId = u.BuildingFloorId
+    WHERE u.UnitId = @UnitId
+      AND ISNULL(u.IsDeleted, 0) = 0;
+
+    IF @@ROWCOUNT = 0
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Unit not found.';
+        RETURN;
+    END;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Unit retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[Units_Insert]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[Units_Insert]
+(
+    @BuildingId BIGINT,
+    @BuildingFloorId BIGINT = NULL,
+    @UnitNumber NVARCHAR(100),
+    @Area DECIMAL(10,2) = NULL,
+    @Bedrooms TINYINT = NULL,
+    @UnitDescription NVARCHAR(2000) = NULL,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF @BuildingId <= 0
+           OR NULLIF(LTRIM(RTRIM(@UnitNumber)), N'') IS NULL
+           OR (@Area IS NOT NULL AND @Area <= 0)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid unit data.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1 FROM dbo.Buildings
+            WHERE BuildingId = @BuildingId
+              AND ISNULL(IsDeleted, 0) = 0
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Building not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        DECLARE @FloorNumber INT = NULL;
+        DECLARE @MaxUnits INT = NULL;
+        DECLARE @AllowExceed BIT = 0;
+        DECLARE @IsUnique BIT = 1;
+        DECLARE @ResetPerFloor BIT = 1;
+
+        IF @BuildingFloorId IS NOT NULL
+        BEGIN
+            SELECT @FloorNumber = FloorNumber,
+                   @MaxUnits = MaxUnits
+            FROM dbo.BuildingFloors
+            WHERE BuildingFloorId = @BuildingFloorId
+              AND BuildingId = @BuildingId
+              AND IsActive = 1;
+
+            IF @FloorNumber IS NULL
+            BEGIN
+                SET @ResultCode = 404;
+                SET @ResultMessage = N'Active floor not found for this building.';
+                ROLLBACK;
+                RETURN;
+            END;
+        END;
+
+        SELECT TOP (1)
+            @AllowExceed = AllowExceedFloorCapacity,
+            @IsUnique = IsUnitNumberUnique,
+            @ResetPerFloor = ResetUnitNumberPerFloor
+        FROM dbo.BuildingConfigurations
+        WHERE BuildingId = @BuildingId
+          AND IsDeleted = 0
+          AND IsActive = 1;
+
+        IF @IsUnique = 1 AND EXISTS
+        (
+            SELECT 1 FROM dbo.Units
+            WHERE BuildingId = @BuildingId
+              AND UnitNumber = @UnitNumber
+              AND ISNULL(IsDeleted, 0) = 0
+              AND
+              (
+                  @ResetPerFloor = 0
+                  OR BuildingFloorId = @BuildingFloorId
+              )
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Unit number already exists.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF @BuildingFloorId IS NOT NULL
+           AND @AllowExceed = 0
+           AND
+           (
+               SELECT COUNT_BIG(*)
+               FROM dbo.Units
+               WHERE BuildingFloorId = @BuildingFloorId
+                 AND ISNULL(IsDeleted, 0) = 0
+           ) >= @MaxUnits
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Floor capacity exceeded.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        INSERT INTO dbo.Units
+        (
+            BuildingId, UnitNumber, FloorNumber,
+            Area, Bedrooms, UnitDescription,
+            IsActive, IsDeleted, CreatedAt, UserCreater,
+            BuildingFloorId
+        )
+        VALUES
+        (
+            @BuildingId, @UnitNumber, @FloorNumber,
+            @Area, @Bedrooms, @UnitDescription,
+            1, 0, GETDATE(), @UserId,
+            @BuildingFloorId
+        );
+
+        DECLARE @NewId BIGINT = CONVERT(BIGINT, SCOPE_IDENTITY());
+
+        COMMIT;
+
+        SET @ResultCode = 201;
+        SET @ResultMessage = N'Unit created successfully.';
+
+        SELECT *
+        FROM dbo.Units
+        WHERE UnitId = @NewId;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[Units_SetActive]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[Units_SetActive]
+(
+    @UnitId BIGINT,
+    @IsActive BIT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.Units
+        WHERE UnitId = @UnitId
+          AND ISNULL(IsDeleted, 0) = 0
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Unit not found.';
+        RETURN;
+    END;
+
+    UPDATE dbo.Units
+    SET IsActive = @IsActive,
+        UpdatedAt = GETDATE(),
+        UserUpdater = @UserId
+    WHERE UnitId = @UnitId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Unit status updated successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[Units_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[Units_Update]
+(
+    @UnitId BIGINT,
+    @BuildingFloorId BIGINT = NULL,
+    @UnitNumber NVARCHAR(100),
+    @Area DECIMAL(10,2) = NULL,
+    @Bedrooms TINYINT = NULL,
+    @UnitDescription NVARCHAR(2000) = NULL,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        DECLARE @BuildingId BIGINT;
+
+        SELECT @BuildingId = BuildingId
+        FROM dbo.Units WITH (UPDLOCK, HOLDLOCK)
+        WHERE UnitId = @UnitId
+          AND ISNULL(IsDeleted, 0) = 0;
+
+        IF @BuildingId IS NULL
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Unit not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF NULLIF(LTRIM(RTRIM(@UnitNumber)), N'') IS NULL
+           OR (@Area IS NOT NULL AND @Area <= 0)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'Invalid unit data.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        DECLARE @FloorNumber INT = NULL;
+        DECLARE @MaxUnits INT = NULL;
+        DECLARE @AllowExceed BIT = 0;
+        DECLARE @IsUnique BIT = 1;
+        DECLARE @ResetPerFloor BIT = 1;
+
+        IF @BuildingFloorId IS NOT NULL
+        BEGIN
+            SELECT @FloorNumber = FloorNumber,
+                   @MaxUnits = MaxUnits
+            FROM dbo.BuildingFloors
+            WHERE BuildingFloorId = @BuildingFloorId
+              AND BuildingId = @BuildingId
+              AND IsActive = 1;
+
+            IF @FloorNumber IS NULL
+            BEGIN
+                SET @ResultCode = 404;
+                SET @ResultMessage = N'Active floor not found.';
+                ROLLBACK;
+                RETURN;
+            END;
+        END;
+
+        SELECT TOP (1)
+            @AllowExceed = AllowExceedFloorCapacity,
+            @IsUnique = IsUnitNumberUnique,
+            @ResetPerFloor = ResetUnitNumberPerFloor
+        FROM dbo.BuildingConfigurations
+        WHERE BuildingId = @BuildingId
+          AND IsDeleted = 0
+          AND IsActive = 1;
+
+        IF @IsUnique = 1 AND EXISTS
+        (
+            SELECT 1 FROM dbo.Units
+            WHERE BuildingId = @BuildingId
+              AND UnitId <> @UnitId
+              AND UnitNumber = @UnitNumber
+              AND ISNULL(IsDeleted, 0) = 0
+              AND
+              (
+                  @ResetPerFloor = 0
+                  OR BuildingFloorId = @BuildingFloorId
+              )
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Unit number already exists.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF @BuildingFloorId IS NOT NULL
+           AND @AllowExceed = 0
+           AND
+           (
+               SELECT COUNT_BIG(*)
+               FROM dbo.Units
+               WHERE BuildingFloorId = @BuildingFloorId
+                 AND ISNULL(IsDeleted, 0) = 0
+                 AND UnitId <> @UnitId
+           ) >= @MaxUnits
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Floor capacity exceeded.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF @BuildingFloorId IS NULL AND EXISTS
+        (
+            SELECT 1 FROM dbo.UnitStaircases
+            WHERE UnitId = @UnitId
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Unit has staircase assignments; floor cannot be removed.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        UPDATE dbo.Units
+        SET BuildingFloorId = @BuildingFloorId,
+            FloorNumber = @FloorNumber,
+            UnitNumber = @UnitNumber,
+            Area = @Area,
+            Bedrooms = @Bedrooms,
+            UnitDescription = @UnitDescription,
+            UpdatedAt = GETDATE(),
+            UserUpdater = @UserId
+        WHERE UnitId = @UnitId;
+
+        COMMIT;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Unit updated successfully.';
+
+        SELECT *
+        FROM dbo.Units
+        WHERE UnitId = @UnitId;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[UnitsAdd]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16165,7 +22139,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsDel]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16238,7 +22212,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsEdit]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16385,7 +22359,7 @@ BEGIN
     END CATCH
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 10/29/2026 8:34:29 PM ******/
+/****** Object:  StoredProcedure [dbo].[UnitsGet]    Script Date: 11/5/2026 8:12:28 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16507,6 +22481,530 @@ BEGIN
         SET @ResultCode = ERROR_NUMBER();
         SET @ResultMessage = ERROR_MESSAGE();
 
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_BulkSave]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[UnitStaircases_BulkSave]
+(
+    @Items dbo.UnitStaircaseBulkSaveType READONLY,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        IF NOT EXISTS (SELECT 1 FROM @Items)
+        BEGIN
+            SET @ResultCode = 400;
+            SET @ResultMessage = N'No records supplied.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT UnitId, BuildingStaircaseId
+            FROM @Items
+            GROUP BY UnitId, BuildingStaircaseId
+            HAVING COUNT(*) > 1
+        )
+        OR EXISTS
+        (
+            SELECT UnitStaircaseId
+            FROM @Items
+            WHERE UnitStaircaseId > 0
+            GROUP BY UnitStaircaseId
+            HAVING COUNT(*) > 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Duplicate unit staircase data.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.Units u
+              ON u.UnitId = i.UnitId
+             AND u.BuildingFloorId = i.BuildingFloorId
+             AND ISNULL(u.IsDeleted, 0) = 0
+             AND u.IsActive = 1
+            LEFT JOIN dbo.BuildingFloorStaircases fs
+              ON fs.BuildingFloorId = i.BuildingFloorId
+             AND fs.BuildingStaircaseId = i.BuildingStaircaseId
+             AND fs.IsActive = 1
+            LEFT JOIN dbo.BuildingStaircases s
+              ON s.BuildingStaircaseId = i.BuildingStaircaseId
+             AND s.IsActive = 1
+             AND s.IsDeleted = 0
+            WHERE u.UnitId IS NULL
+               OR fs.BuildingFloorId IS NULL
+               OR s.BuildingStaircaseId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Invalid unit, floor or staircase relationship.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT UnitId
+            FROM @Items
+            WHERE IsPrimary = 1 AND IsActive = 1
+            GROUP BY UnitId
+            HAVING COUNT(*) > 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Only one primary staircase is allowed per unit.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            INNER JOIN dbo.UnitStaircases us
+              ON us.UnitId = i.UnitId
+             AND us.IsPrimary = 1
+             AND us.IsActive = 1
+             AND us.UnitStaircaseId <> i.UnitStaircaseId
+            WHERE i.IsPrimary = 1
+              AND i.IsActive = 1
+              AND NOT EXISTS
+              (
+                  SELECT 1
+                  FROM @Items otherItem
+                  WHERE otherItem.UnitStaircaseId = us.UnitStaircaseId
+                    AND (otherItem.IsPrimary = 0 OR otherItem.IsActive = 0)
+              )
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Unit already has another active primary staircase.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1
+            FROM @Items i
+            LEFT JOIN dbo.UnitStaircases us
+              ON us.UnitStaircaseId = i.UnitStaircaseId
+             AND us.UnitId = i.UnitId
+            WHERE i.UnitStaircaseId > 0
+              AND us.UnitStaircaseId IS NULL
+        )
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Unit staircase relationship not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        UPDATE us
+        SET IsPrimary = i.IsPrimary,
+            IsActive = i.IsActive
+        FROM dbo.UnitStaircases us
+        INNER JOIN @Items i
+          ON i.UnitStaircaseId = us.UnitStaircaseId
+        WHERE i.UnitStaircaseId > 0;
+
+        INSERT INTO dbo.UnitStaircases
+        (
+            UnitId, BuildingFloorId, BuildingStaircaseId,
+            IsPrimary, IsActive, CreatedAt, UserCreater
+        )
+        SELECT
+            UnitId, BuildingFloorId, BuildingStaircaseId,
+            IsPrimary, IsActive, GETDATE(), @UserId
+        FROM @Items
+        WHERE UnitStaircaseId = 0;
+
+        COMMIT;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Unit staircase relationships saved successfully.';
+
+        SELECT us.*
+        FROM dbo.UnitStaircases us
+        INNER JOIN @Items i
+          ON (i.UnitStaircaseId > 0
+              AND us.UnitStaircaseId = i.UnitStaircaseId)
+          OR (i.UnitStaircaseId = 0
+              AND us.UnitId = i.UnitId
+              AND us.BuildingStaircaseId = i.BuildingStaircaseId);
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_Delete]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[UnitStaircases_Delete]
+(
+    @UnitStaircaseId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.UnitStaircases
+        WHERE UnitStaircaseId = @UnitStaircaseId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Unit staircase relationship not found.';
+        RETURN;
+    END;
+
+    DELETE FROM dbo.UnitStaircases
+    WHERE UnitStaircaseId = @UnitStaircaseId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Unit staircase relationship deleted successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_Get]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE   PROCEDURE [dbo].[UnitStaircases_Get]
+(
+    @UnitId BIGINT = NULL,
+    @BuildingFloorId BIGINT = NULL,
+    @BuildingStaircaseId BIGINT = NULL,
+    @IsActive BIT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        us.*,
+        u.UnitNumber,
+        s.StaircaseCode,
+        s.StaircaseName,
+        s.StaircaseType
+    FROM dbo.UnitStaircases us
+    INNER JOIN dbo.Units u ON u.UnitId = us.UnitId
+    INNER JOIN dbo.BuildingStaircases s
+        ON s.BuildingStaircaseId = us.BuildingStaircaseId
+    WHERE ISNULL(u.IsDeleted, 0) = 0
+      AND (@UnitId IS NULL OR us.UnitId = @UnitId)
+      AND (@BuildingFloorId IS NULL OR us.BuildingFloorId = @BuildingFloorId)
+      AND (@BuildingStaircaseId IS NULL OR us.BuildingStaircaseId = @BuildingStaircaseId)
+      AND (@IsActive IS NULL OR us.IsActive = @IsActive)
+    ORDER BY us.UnitId, us.IsPrimary DESC;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Unit staircase relationships retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_GetById]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[UnitStaircases_GetById]
+(
+    @UnitStaircaseId BIGINT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        us.*,
+        u.UnitNumber,
+        s.StaircaseCode,
+        s.StaircaseName,
+        s.StaircaseType
+    FROM dbo.UnitStaircases us
+    INNER JOIN dbo.Units u ON u.UnitId = us.UnitId
+    INNER JOIN dbo.BuildingStaircases s
+        ON s.BuildingStaircaseId = us.BuildingStaircaseId
+    WHERE us.UnitStaircaseId = @UnitStaircaseId
+      AND ISNULL(u.IsDeleted, 0) = 0;
+
+    IF @@ROWCOUNT = 0
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Unit staircase relationship not found.';
+        RETURN;
+    END;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Unit staircase retrieved successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_Insert]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[UnitStaircases_Insert]
+(
+    @UnitId BIGINT,
+    @BuildingStaircaseId BIGINT,
+    @IsPrimary BIT = 0,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        DECLARE @BuildingFloorId BIGINT;
+
+        SELECT @BuildingFloorId = BuildingFloorId
+        FROM dbo.Units
+        WHERE UnitId = @UnitId
+          AND ISNULL(IsDeleted, 0) = 0
+          AND IsActive = 1;
+
+        IF @BuildingFloorId IS NULL
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Active unit with assigned floor not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingFloorStaircases fs
+            INNER JOIN dbo.BuildingStaircases s
+              ON s.BuildingStaircaseId = fs.BuildingStaircaseId
+            WHERE fs.BuildingFloorId = @BuildingFloorId
+              AND fs.BuildingStaircaseId = @BuildingStaircaseId
+              AND fs.IsActive = 1
+              AND s.IsActive = 1
+              AND s.IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Staircase is not available on unit floor.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF EXISTS
+        (
+            SELECT 1 FROM dbo.UnitStaircases
+            WHERE UnitId = @UnitId
+              AND BuildingStaircaseId = @BuildingStaircaseId
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Staircase is already assigned to unit.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF @IsPrimary = 1 AND EXISTS
+        (
+            SELECT 1 FROM dbo.UnitStaircases
+            WHERE UnitId = @UnitId
+              AND IsPrimary = 1
+              AND IsActive = 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Unit already has an active primary staircase.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        INSERT INTO dbo.UnitStaircases
+        (
+            UnitId, BuildingFloorId, BuildingStaircaseId,
+            IsPrimary, IsActive, CreatedAt, UserCreater
+        )
+        VALUES
+        (
+            @UnitId, @BuildingFloorId, @BuildingStaircaseId,
+            @IsPrimary, 1, GETDATE(), @UserId
+        );
+
+        COMMIT;
+
+        SET @ResultCode = 201;
+        SET @ResultMessage = N'Unit staircase assigned successfully.';
+
+        SELECT *
+        FROM dbo.UnitStaircases
+        WHERE UnitId = @UnitId
+          AND BuildingStaircaseId = @BuildingStaircaseId;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
+    END CATCH
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_SetActive]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[UnitStaircases_SetActive]
+(
+    @UnitStaircaseId BIGINT,
+    @IsActive BIT,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF NOT EXISTS
+    (
+        SELECT 1 FROM dbo.UnitStaircases
+        WHERE UnitStaircaseId = @UnitStaircaseId
+    )
+    BEGIN
+        SET @ResultCode = 404;
+        SET @ResultMessage = N'Unit staircase relationship not found.';
+        RETURN;
+    END;
+
+    UPDATE dbo.UnitStaircases
+    SET IsActive = @IsActive
+    WHERE UnitStaircaseId = @UnitStaircaseId;
+
+    SET @ResultCode = 200;
+    SET @ResultMessage = N'Unit staircase status updated successfully.';
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[UnitStaircases_Update]    Script Date: 11/5/2026 8:12:28 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE   PROCEDURE [dbo].[UnitStaircases_Update]
+(
+    @UnitStaircaseId BIGINT,
+    @IsPrimary BIT,
+    @IsActive BIT,
+    @UserId INT = NULL,
+    @ResultCode INT OUTPUT,
+    @ResultMessage NVARCHAR(500) OUTPUT
+)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        DECLARE @UnitId BIGINT, @FloorId BIGINT, @StaircaseId BIGINT;
+
+        SELECT
+            @UnitId = UnitId,
+            @FloorId = BuildingFloorId,
+            @StaircaseId = BuildingStaircaseId
+        FROM dbo.UnitStaircases WITH (UPDLOCK, HOLDLOCK)
+        WHERE UnitStaircaseId = @UnitStaircaseId;
+
+        IF @UnitId IS NULL
+        BEGIN
+            SET @ResultCode = 404;
+            SET @ResultMessage = N'Unit staircase relationship not found.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF @IsActive = 1 AND NOT EXISTS
+        (
+            SELECT 1
+            FROM dbo.BuildingFloorStaircases fs
+            INNER JOIN dbo.BuildingStaircases s
+                ON s.BuildingStaircaseId = fs.BuildingStaircaseId
+            WHERE fs.BuildingFloorId = @FloorId
+              AND fs.BuildingStaircaseId = @StaircaseId
+              AND fs.IsActive = 1
+              AND s.IsActive = 1
+              AND s.IsDeleted = 0
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Staircase is not available on unit floor.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        IF @IsPrimary = 1 AND @IsActive = 1 AND EXISTS
+        (
+            SELECT 1 FROM dbo.UnitStaircases
+            WHERE UnitId = @UnitId
+              AND UnitStaircaseId <> @UnitStaircaseId
+              AND IsPrimary = 1
+              AND IsActive = 1
+        )
+        BEGIN
+            SET @ResultCode = 409;
+            SET @ResultMessage = N'Unit already has an active primary staircase.';
+            ROLLBACK;
+            RETURN;
+        END;
+
+        UPDATE dbo.UnitStaircases
+        SET IsPrimary = @IsPrimary,
+            IsActive = @IsActive
+        WHERE UnitStaircaseId = @UnitStaircaseId;
+
+        COMMIT;
+
+        SET @ResultCode = 200;
+        SET @ResultMessage = N'Unit staircase updated successfully.';
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        SET @ResultCode = 500;
+        SET @ResultMessage = ERROR_MESSAGE();
     END CATCH
 END;
 GO
@@ -16860,6 +23358,150 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'هسته مش�
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'امکانات ثابت هر فضا مانند سیستم صوتی، نورپردازی و پروژکتور' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Booking_SpaceAmenities'
 GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد پیکربندی ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'BuildingConfigurationId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تعداد طبقات زیرزمین' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'BasementFloorCount'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تعداد طبقات همکف' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'GroundFloorCount'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تعداد طبقات' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'AboveGroundFloorCount'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تعداد راه پله' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'StaircaseCount'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تعداد آسانسور' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'ElevatorCount'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'واحدهای پیش‌فرض در هر طبقه' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'DefaultUnitsPerFloor'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نوع نام‌گذاری طبقه' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'FloorNamingType'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'شماره طبقه شروع' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'FloorNumberStart'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نوع نام‌گذاری واحد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UnitNamingType'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'الگوی شماره واحد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UnitNumberPattern'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'شروع واحد با حرف' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UnitLetterStart'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'پایان واحد با حرف' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UnitLetterEnd'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'آیا شماره واحد یکتا است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'IsUnitNumberUnique'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'بازنشانی شماره واحد در هر طبقه (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'ResetUnitNumberPerFloor'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'اجازه تجاوز از ظرفیت طبقه (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'AllowExceedFloorCapacity'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'فعال است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'حذف شدهاست (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'IsDeleted'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ایجاد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ایجاد کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ بروزرسانی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'بروزرسان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations', @level2type=N'COLUMN',@level2name=N'UserUpdater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'پیکربندی ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingConfigurations'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد آسانسور ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'BuildingElevatorId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد آسانسور' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'ElevatorCode'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام آسانسور' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'ElevatorName'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام انگلیسی آسانسور' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'ElevatorNameEn'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نوع آسانسور(1601: نفر بر | 1602: بار بری)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'ElevatorType'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ظرفیت آسانسور' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'Capacity'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'بیشترین وزن' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'MaxWeight'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'سرویس شده است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'IsService'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'اضطراری است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'IsEmergency'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'توضیحات' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'Description'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ترتیب نمایش' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'DisplayOrder'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'فعال است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'حذف شدهاست (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'IsDeleted'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ایجاد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ایجاد کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ بروزرسانی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'بروزرسان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators', @level2type=N'COLUMN',@level2name=N'UserUpdater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N' آسانسور ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingElevators'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد آسانسور مخصوص هر طبقه ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'BuildingFloorElevatorId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد طبقه ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'BuildingFloorId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد آسانسور ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'BuildingElevatorId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ایجاد کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'فعال است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ایجاد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'سانسور مخصوص هر طبقه ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorElevators'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد طبقه ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'BuildingFloorId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تعداد طبقه' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'FloorNumber'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد طبقه' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'FloorCode'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام طبقه' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'FloorName'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام انگلیسی طبقه' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'FloorNameEn'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'بیشترین تعداد واحد در طبقه' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'MaxUnits'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'فعال است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ایجاد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ایجاد کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ بروزرسانی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'بروزرسان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors', @level2type=N'COLUMN',@level2name=N'UserUpdater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'طبقه ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloors'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کدطبقه و راه‌پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'BuildingFloorStaircaseId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد طبقه ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'BuildingFloorId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد راه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'فعال است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ایجاد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ایجاد کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'طبقه و راه‌پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingFloorStaircases'
+GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'BuildingId'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'BuildingName'
@@ -16881,6 +23523,54 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کاربر ویرایش کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'UserUpdater'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد سازمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Buildings', @level2type=N'COLUMN',@level2name=N'OrgId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد آسانسور هر راه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseElevatorId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد راه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد آسانسور ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'BuildingElevatorId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ایجاد کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'فعال است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ایجاد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N' آسانسور هر راه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircaseElevators'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد راه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'BuildingId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد زاه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'StaircaseCode'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام فارسی راه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'StaircaseName'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نام انگلیسی راه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'StaircaseNameEn'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نوع راه پله' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'StaircaseType'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'اضطراری است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'IsEmergency'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'توضیحات راه پله' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'Description'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'نحوه نمایش' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'DisplayOrder'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'فعال است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'حذف شدهاست (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'IsDeleted'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ایجاد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ایجاد کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ بروزرسانی' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'بروزرسان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases', @level2type=N'COLUMN',@level2name=N'UserUpdater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'راه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BuildingStaircases'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد محل خدمت پرسنل' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'EmployeeAssignments', @level2type=N'COLUMN',@level2name=N'EmployeeAssignmentId'
 GO
@@ -17127,6 +23817,24 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ویرایش' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Units', @level2type=N'COLUMN',@level2name=N'UpdatedAt'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کاربر ویرایش کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Units', @level2type=N'COLUMN',@level2name=N'UserUpdater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد راه‌پله واحد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'UnitStaircaseId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد واحد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'UnitId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد طبقه ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'BuildingFloorId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد راه پله ساختمان' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'BuildingStaircaseId'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'راه پله اصلی است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'IsPrimary'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'فعال است (0: خیر | 1: بله)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'IsActive'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'تاریخ ایجاد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'CreatedAt'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ایجاد کننده' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases', @level2type=N'COLUMN',@level2name=N'UserCreater'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'راه‌پله واحد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UnitStaircases'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'کد کاربر واحد' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'UserResidencies', @level2type=N'COLUMN',@level2name=N'UserResidencyId'
 GO

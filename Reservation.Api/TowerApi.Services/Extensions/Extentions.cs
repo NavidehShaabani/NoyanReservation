@@ -19,6 +19,7 @@ using TowerApi.Services.BuildingFloor;
 using TowerApi.Services.BuildingFloorElevator;
 using TowerApi.Services.BuildingFloorStaircase;
 using TowerApi.Services.BuildingStaircase;
+using TowerApi.Services.BuildingStaircaseElevators;
 using TowerApi.Services.EmployeeAssignments;
 using TowerApi.Services.Employees;
 using TowerApi.Services.EmployeeTypeRoles;
@@ -85,7 +86,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<ISettlementService, SettlementService>();
             _services.AddScoped<IBuildingElevatorService,BuildingElevatorService>();
             _services.AddScoped<IBuildingFloorElevatorService,BuildingFloorElevatorService>();
-
+            _services.AddScoped<IBuildingStaircaseElevatorService,BuildingStaircaseElevatorService>();
             return _services;
         }
     }
