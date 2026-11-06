@@ -93,11 +93,11 @@ namespace TowerApi.Services.BuildingElevators
             if (request.PageNumber <= 0 || request.PageSize <= 0 || request.PageSize > 500)
                 return (InvalidInputCode, "Common.InvalidInput", null);
 
-            if (request.ElevatorType.HasValue &&
-                (request.ElevatorType.Value < 1 || request.ElevatorType.Value > 7))
-            {
-                return (InvalidInputCode, "BuildingElevator.InvalidType", null);
-            }
+            //if (request.ElevatorType.HasValue &&
+            //    (request.ElevatorType.Value < 1 || request.ElevatorType.Value > 7))
+            //{
+            //    return (InvalidInputCode, "BuildingElevator.InvalidType", null);
+            //}
 
             var result = await _repository.GetListAsync(request);
 
@@ -234,8 +234,8 @@ namespace TowerApi.Services.BuildingElevators
             if (request.ElevatorNameEn?.Length > 200)
                 return "BuildingElevator.InvalidName";
 
-            if (request.ElevatorType < 1 || request.ElevatorType > 7)
-                return "BuildingElevator.InvalidType";
+            //if (request.ElevatorType < 1 || request.ElevatorType > 7)
+            //    return "BuildingElevator.InvalidType";
 
             if (request.Capacity.HasValue && request.Capacity.Value <= 0)
                 return "BuildingElevator.InvalidCapacity";

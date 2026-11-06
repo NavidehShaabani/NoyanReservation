@@ -64,7 +64,7 @@ namespace TowerApi.Models.BuildingFloorElevator
 
         public string? ElevatorNameEn { get; set; }
 
-        public byte? ElevatorType { get; set; }
+        public int? ElevatorType { get; set; }
     }
     public class BuildingFloorElevatorBulkItem
     {

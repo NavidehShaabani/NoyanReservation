@@ -241,7 +241,7 @@ namespace TowerApi.Repositories.BuildingElevators
             table.Columns.Add("ElevatorCode", typeof(string));
             table.Columns.Add("ElevatorName", typeof(string));
             table.Columns.Add("ElevatorNameEn", typeof(string));
-            table.Columns.Add("ElevatorType", typeof(byte));
+            table.Columns.Add("ElevatorType", typeof(int));
             table.Columns.Add("Capacity", typeof(int));
             table.Columns.Add("MaxWeight", typeof(decimal));
             table.Columns.Add("IsService", typeof(bool));

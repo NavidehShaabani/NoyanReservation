@@ -20,7 +20,7 @@ namespace TowerApi.Models.BuildingElevators
         /// 6: Firefighter
         /// 7: Other
         /// </summary>
-        public byte ElevatorType { get; set; } = 1;
+        public int ElevatorType { get; set; };
 
         public int? Capacity { get; set; }
 
@@ -45,7 +45,7 @@ namespace TowerApi.Models.BuildingElevators
 
         public string? Search { get; set; }
 
-        public byte? ElevatorType { get; set; }
+        public int? ElevatorType { get; set; }
 
         public bool? IsService { get; set; }
 
@@ -71,7 +71,7 @@ namespace TowerApi.Models.BuildingElevators
 
         public string? ElevatorNameEn { get; set; }
 
-        public byte ElevatorType { get; set; }
+        public int ElevatorType { get; set; }
 
         public int? Capacity { get; set; }
 
@@ -109,7 +109,7 @@ namespace TowerApi.Models.BuildingElevators
 
         public string? ElevatorNameEn { get; set; }
 
-        public byte ElevatorType { get; set; } = 1;
+        public int ElevatorType { get; set; };
 
         public int? Capacity { get; set; }
 

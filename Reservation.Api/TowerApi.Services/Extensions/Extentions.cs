@@ -87,6 +87,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IBuildingElevatorService,BuildingElevatorService>();
             _services.AddScoped<IBuildingFloorElevatorService,BuildingFloorElevatorService>();
             _services.AddScoped<IBuildingStaircaseElevatorService,BuildingStaircaseElevatorService>();
+            
             return _services;
         }
     }
