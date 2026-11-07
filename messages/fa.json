@@ -29,6 +29,7 @@
     "organizationName": "نام مجموعه",
     "confirmPassword": "تکرار رمز عبور",
     "save": "ثبت اطلاعات",
+    "submitting": "در حال ثبت...",
     "error": "خطا",
     "errors": {
       "usernameRequired": "لطفاً نام کاربری را وارد کنید.",
@@ -42,6 +43,37 @@
       "passwordLength": "رمز عبور باید حداقل ۸ و حداکثر ۱۰۰ کاراکتر باشد.",
       "usernameLength": "نام کاربری باید حداقل ۳ و حداکثر ۱۰۰ کاراکتر باشد."
     }
+  },
+
+  "profile": {
+    "title": "پروفایل من",
+    "description": "اطلاعات شخصی خود را مشاهده و تکمیل کنید.",
+    "firstName": "نام",
+    "lastName": "نام خانوادگی",
+    "email": "آدرس ایمیل",
+    "nationalId": "کد ملی",
+    "gender": "جنسیت",
+    "birthDate": "تاریخ تولد",
+    "avatarUrl": "تصویر پروفایل",
+    "fatherName": "نام پدر",
+    "birthPlace": "محل تولد",
+    "landlinePhone": "تلفن ثابت",
+    "userPostalCode": "کد پستی",
+    "userAddress": "آدرس محل سکونت",
+    "emergencyContactName": "نام شخص تماس اضطراری",
+    "emergencyContactMobile": "شماره موبایل تماس اضطراری",
+    "emergencyContactRelation": "نسبت با شخص تماس اضطراری",
+    "profileNotes": "توضیحات تکمیلی",
+    "unitId": "واحد",
+    "relationshipType": "نوع ارتباط با واحد",
+    "startDate": "تاریخ شروع سکونت",
+    "endDate": "تاریخ پایان سکونت",
+    "residencyNotes": "توضیحات مربوط به سکونت",
+    "personalInfo": "اطلاعات شخصی",
+    "contactInfo": "اطلاعات تماس",
+    "emergencyContact": "اطلاعات تماس اضطراری",
+    "residencyInfo": "اطلاعات سکونت",
+    "submit": "ذخیره تغییرات"
   },
 
   "select-role": {

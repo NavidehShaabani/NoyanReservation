@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
+import { apiUrl } from "@/lib/api/config";
 import { Building2, Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { createClientId } from "@/lib/create-client-id";
@@ -49,7 +50,7 @@ export default function Building() {
       try {
         const orgId: number = user?.orgId ?? 0;
         const orgResponse = await fetch(
-          `http://10.208.8.91:5295/api/Organizations?orgId=${orgId}`,
+          apiUrl(`/api/Organizations?orgId=${orgId}`),
           {
             method: "GET",
             credentials: "include",
@@ -76,7 +77,7 @@ export default function Building() {
         setOrgType(orgData.orgType);
         await getCurrentGeoInfo(orgData.geoId);
         const buildingResponse = await fetch(
-          `http://10.208.8.91:5295/api/Buildings/by-org/${orgId}`,
+          apiUrl(`/api/Buildings/by-org/${orgId}`),
           {
             method: "GET",
             credentials: "include",
@@ -116,16 +117,13 @@ export default function Building() {
   }, [isAuthReady, token]);
 
   async function getCurrentGeoInfo(geoId: string) {
-    const currentGeoResponse = await fetch(
-      `http://10.208.8.91:5295/api/Geo/${geoId}`,
-      {
-        method: "GET",
-        credentials: "include",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+    const currentGeoResponse = await fetch(apiUrl(`/api/Geo/${geoId}`), {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    );
+    });
     if (!currentGeoResponse.ok) {
       throw new Error(`Request failed: ${currentGeoResponse.status}`);
     }

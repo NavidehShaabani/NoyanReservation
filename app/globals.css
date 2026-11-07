@@ -197,3 +197,26 @@
     4px 4px 6px #e4e2df,
     -1px -1px 4px #ffffff;
 }
+/* ///// date picker///// */
+.rdp-dropdown_root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rdp-dropdown_root select {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rdp-dropdown_root > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  pointer-events: none;
+}

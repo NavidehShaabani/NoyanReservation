@@ -1,47 +1,6 @@
-// import { useTranslations } from "next-intl";
-
-// export default function Header() {
-//   const t = useTranslations("header");
-
-//   return (
-//     <header
-//       className="
-//         max-w-6xl
-//         mx-auto
-//         px-4
-//         py-4
-
-//         bg-white/25
-//         backdrop-blur-xl
-//         backdrop-saturate-150
-
-//         border
-//         border-white/40
-
-//         rounded-2xl
-//       "
-//     >
-//       <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:gap-3">
-//         <div
-//           className="w-16 h-16 shrink-0 bg-primary"
-//           style={{
-//             maskImage: "url('/images/NOYAN.svg')",
-//             maskRepeat: "no-repeat",
-//             maskPosition: "center",
-//             maskSize: "contain",
-//           }}
-//         />
-
-//         <div className="text-sm text-muted-foreground">
-//           {t("headerDescription")}
-//         </div>
-//       </div>
-//     </header>
-//   );
-// }
-
 import { useTranslations } from "next-intl";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import UserMenu from "./UserMenu";
 export default function Header() {
   const t = useTranslations("header");
 
@@ -92,6 +51,9 @@ export default function Header() {
 
         <div className="md:hidden">
           <SidebarTrigger />
+        </div>
+        <div>
+          <UserMenu />
         </div>
       </div>
     </header>

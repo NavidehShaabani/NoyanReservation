@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { apiUrl } from "@/lib/api/config";
 import InsetPanel from "./InsetPanel";
 import { useTranslations, useLocale } from "next-intl";
 import {
@@ -27,14 +28,11 @@ export default function OrganType() {
   useEffect(() => {
     async function getOrganType() {
       try {
-        const organTypeResponse = await fetch(
-          "http://10.208.8.91:5295/api/BaseLookupValues",
-          {
-            method: "GET",
-            credentials: "include",
-            headers: {},
-          },
-        );
+        const organTypeResponse = await fetch(apiUrl("/api/BaseLookupValues"), {
+          method: "GET",
+          credentials: "include",
+          headers: {},
+        });
         if (!organTypeResponse.ok) {
           const errorBody = await organTypeResponse.text();
           throw new Error(

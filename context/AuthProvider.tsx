@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useState, useEffect } from "react";
-
+import { apiUrl } from "@/lib/api/config";
 export type localizedText = {
   en: string | null;
   fa: string | null;
@@ -74,15 +74,12 @@ export default function AuthProvider({
   useEffect(() => {
     async function callRefresh() {
       try {
-        const refreshResponse = await fetch(
-          "http://10.208.8.91:5295/api/Auth/refresh",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            credentials: "include",
-            body: "",
-          },
-        );
+        const refreshResponse = await fetch(apiUrl("/api/Auth/refresh"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: "",
+        });
 
         if (!refreshResponse.ok) {
           return;
@@ -90,15 +87,12 @@ export default function AuthProvider({
 
         const refreshData = await refreshResponse.json();
         const accessToken = refreshData.accessToken;
-        const userInfoResponse = await fetch(
-          "http://10.208.8.91:5295/api/Auth/GetUserInfo",
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-            },
+        const userInfoResponse = await fetch(apiUrl("/api/Auth/GetUserInfo"), {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
           },
-        );
+        });
         if (!userInfoResponse.ok) {
           return;
         }

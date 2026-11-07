@@ -1,6 +1,8 @@
 "use client";
 import { useState, type SyntheticEvent, useContext } from "react";
+import { apiUrl } from "@/lib/api/config";
 import { useTranslations, useLocale } from "next-intl";
+
 import {
   Field,
   FieldDescription,
@@ -48,7 +50,7 @@ export default function Login() {
 
     try {
       console.log("LOGIN START");
-      const response = await fetch("http://10.208.8.91:5295/api/Auth/login", {
+      const response = await fetch(apiUrl("/api/Auth/login"), {
         method: "POST",
         credentials: "include",
         headers: {

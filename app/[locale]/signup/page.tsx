@@ -1,8 +1,10 @@
 "use client";
 import { useState, type SyntheticEvent } from "react";
+import { apiUrl } from "@/lib/api/config";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import GeoSelector from "@/components/custom/GeoSelector";
+import { LoaderCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
 // import OrganType from "@/components/custom/OrganType";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -108,22 +110,19 @@ export default function Signup() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        "http://10.208.8.91:5295/api/Signup/password",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            username: username.trim(),
-            password,
-            orgName: orgName.trim(),
-            orgType,
-            geoId,
-          }),
+      const response = await fetch(apiUrl("/api/Signup/password"), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify({
+          username: username.trim(),
+          password,
+          orgName: orgName.trim(),
+          orgType,
+          geoId,
+        }),
+      });
 
       if (!response.ok) {
         const errorBody = await response.text();
@@ -162,7 +161,6 @@ export default function Signup() {
                 icon={<UserRoundPlus className="size-5" />}
                 className="mb-4 "
               />
-
               <div className="flex flex-col md:flex-row  gap-4  ">
                 <InsetPanel className="p-4 sm:p-5 md:p-6 w-full md:w-2/3 flex flex-col gap-4">
                   <PageHeader
@@ -300,13 +298,26 @@ export default function Signup() {
                   )}
                 </InsetPanel>
               </div>
-
               <Button
                 className="primary-action"
                 type="submit"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "در حال ثبت..." : t("save")}
+                {isSubmitting ? (
+                  <>
+                    <LoaderCircle className="size-4 animate-spin" />
+                    {t("submitting")}
+                  </>
+                ) : (
+                  t("save")
+                )}
+              </Button>{" "}
+              <Button
+                className="primary-action"
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? t("submitting") : t("save")}
               </Button>
             </form>
           </PageCard>
