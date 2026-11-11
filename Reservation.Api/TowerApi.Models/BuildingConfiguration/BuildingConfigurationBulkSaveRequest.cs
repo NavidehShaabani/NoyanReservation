@@ -42,9 +42,7 @@ namespace TowerApi.Models.BuildingConfiguration
 
         public int UnitNamingType { get; set; } 
 
-        [Required]
-        [StringLength(100)]
-        public string UnitNumberPattern { get; set; } = "{FLOOR}{UNIT}";
+        public int UnitNumberPattern { get; set; }
 
         [StringLength(1)]
         public string? UnitLetterStart { get; set; }

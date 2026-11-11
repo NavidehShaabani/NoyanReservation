@@ -283,12 +283,12 @@ namespace TowerApi.Services.BuildingConfiguration
                 messageKey =
                     "BuildingConfigurations.InvalidDefaultUnitsPerFloor";
             }
-            else if (string.IsNullOrWhiteSpace(request.UnitNumberPattern) ||
-                     request.UnitNumberPattern.Length > 100)
-            {
-                messageKey =
-                    "BuildingConfigurations.InvalidUnitNumberPattern";
-            }
+            //else if (string.IsNullOrWhiteSpace(request.UnitNumberPattern) ||
+            //         request.UnitNumberPattern.Length > 100)
+            //{
+            //    messageKey =
+            //        "BuildingConfigurations.InvalidUnitNumberPattern";
+            //}
             else if (request.UnitLetterStart?.Length > 1 ||
                      request.UnitLetterEnd?.Length > 1)
             {
@@ -326,9 +326,9 @@ namespace TowerApi.Services.BuildingConfiguration
             else if (request.DefaultUnitsPerFloor < 1)
                 messageKey = "BuildingConfigurations.InvalidDefaultUnitsPerFloor";
 
-            else if (string.IsNullOrWhiteSpace(request.UnitNumberPattern) ||
-                     request.UnitNumberPattern.Length > 100)
-                messageKey = "BuildingConfigurations.InvalidUnitNumberPattern";
+            //else if (string.IsNullOrWhiteSpace(request.UnitNumberPattern) ||
+            //         request.UnitNumberPattern.Length > 100)
+            //    messageKey = "BuildingConfigurations.InvalidUnitNumberPattern";
 
             else if (request.UnitLetterStart?.Length > 1 ||
                      request.UnitLetterEnd?.Length > 1)

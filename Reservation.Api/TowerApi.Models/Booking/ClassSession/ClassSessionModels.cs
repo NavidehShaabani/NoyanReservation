@@ -31,4 +31,8 @@
         public byte SessionStatus { get; set; } = 1;
         public bool IsActive { get; set; } = true;
     }
+    public class ClassSessionSaveResult
+    {
+        public long ClassSessionId { get; set; }
+    }
 }

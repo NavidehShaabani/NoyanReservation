@@ -20,7 +20,7 @@ namespace TowerApi.Models.BuildingElevators
         /// 6: Firefighter
         /// 7: Other
         /// </summary>
-        public int ElevatorType { get; set; };
+        public int ElevatorType { get; set; }
 
         public int? Capacity { get; set; }
 
@@ -109,7 +109,7 @@ namespace TowerApi.Models.BuildingElevators
 
         public string? ElevatorNameEn { get; set; }
 
-        public int ElevatorType { get; set; };
+        public int ElevatorType { get; set; }
 
         public int? Capacity { get; set; }
 

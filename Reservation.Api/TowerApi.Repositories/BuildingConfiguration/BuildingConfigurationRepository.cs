@@ -202,7 +202,7 @@ namespace TowerApi.Repositories.BuildingConfiguration
             table.Columns.Add("FloorNamingType", typeof(int));
             table.Columns.Add("FloorNumberStart", typeof(int));
             table.Columns.Add("UnitNamingType", typeof(int));
-            table.Columns.Add("UnitNumberPattern", typeof(string));
+            table.Columns.Add("UnitNumberPattern", typeof(int));
             table.Columns.Add("UnitLetterStart", typeof(string));
             table.Columns.Add("UnitLetterEnd", typeof(string));
             table.Columns.Add("IsUnitNumberUnique", typeof(bool));
