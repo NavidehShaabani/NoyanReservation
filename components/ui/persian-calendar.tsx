@@ -16,6 +16,9 @@ export function PersianCalendar({ selected, onSelect }: PersianCalendarProps) {
       onSelect={onSelect}
       locale={faIR}
       dateLib={dateLib}
+      captionLayout="dropdown"
+      startMonth={new Date(1900, 0)}
+      endMonth={new Date(2100, 11)}
       navLayout="around"
       dir="rtl"
       showOutsideDays

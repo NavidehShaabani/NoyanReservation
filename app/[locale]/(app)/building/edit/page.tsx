@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
+import { apiUrl } from "@/lib/api/config";
 import { useTranslations } from "next-intl";
 import { createClientId } from "@/lib/create-client-id";
 import { AuthContext } from "@/context/AuthProvider";
@@ -42,7 +43,7 @@ export default function Building() {
         console.log("user in Building:", user);
         const orgId: number = user?.orgId ?? 0;
         const orgResponse = await fetch(
-          `http://10.208.8.91:5295/api/Organizations?orgId=${orgId}`,
+          apiUrl(`/api/Organizations?orgId=${orgId}`),
           {
             method: "GET",
             credentials: "include",
@@ -68,7 +69,7 @@ export default function Building() {
         setOrgType(orgData.orgType);
         setGeoId(orgData.geoId);
         const buildingResponse = await fetch(
-          `http://10.208.8.91:5295/api/Buildings/by-org/${orgId}`,
+          apiUrl(`/api/Buildings/by-org/${orgId}`),
           {
             method: "GET",
             credentials: "include",
@@ -117,8 +118,8 @@ export default function Building() {
 
       const orgResponse = await fetch(
         isEditingOrg
-          ? `http://10.208.8.91:5295/api/Organizations/${complex.orgId}`
-          : "http://10.208.8.91:5295/api/Organizations",
+          ? apiUrl(`/api/Organizations/${complex.orgId}`)
+          : apiUrl("/api/Organizations"),
         {
           method: isEditingOrg ? "PUT" : "POST",
           headers: {
@@ -152,20 +153,17 @@ export default function Building() {
         orgId: complex.orgId,
       }));
 
-      const buildingsResponse = await fetch(
-        "http://10.208.8.91:5295/api/Buildings/BulkSave",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          credentials: "include",
-          body: JSON.stringify({
-            buildings: buildingsPayload,
-          }),
+      const buildingsResponse = await fetch(apiUrl("/api/Buildings/BulkSave"), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
-      );
+        credentials: "include",
+        body: JSON.stringify({
+          buildings: buildingsPayload,
+        }),
+      });
       console.log("Buildings response:", buildingsResponse.status);
       if (!buildingsResponse.ok) {
         const errorBody = await buildingsResponse.text();
@@ -175,7 +173,7 @@ export default function Building() {
       }
 
       const getAfterSaveBuildingsResponse = await fetch(
-        `http://10.208.8.91:5295/api/Buildings/by-org/${complex.orgId}`,
+        apiUrl(`/api/Buildings/by-org/${complex.orgId}`),
         {
           method: "GET",
           credentials: "include",

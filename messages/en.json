@@ -29,6 +29,7 @@
     "organizationName": "Organization Name",
     "confirmPassword": "Confirm Password",
     "save": "Save data",
+    "submitting": "Saving...",
     "error": "Error",
     "errors": {
       "usernameRequired": "Please enter a username.",
@@ -42,6 +43,37 @@
       "passwordLength": "Password must be between 8 and 100 characters.",
       "usernameLength": "Username must be between 3 and 100 characters."
     }
+  },
+
+  "profile": {
+    "title": "My Profile",
+    "description": "View and complete your personal information.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "nationalId": "National ID",
+    "gender": "Gender",
+    "birthDate": "Date of Birth",
+    "avatarUrl": "Profile Picture",
+    "fatherName": "Father's Name",
+    "birthPlace": "Place of Birth",
+    "landlinePhone": "Landline Phone",
+    "userPostalCode": "Postal Code",
+    "userAddress": "Residential Address",
+    "emergencyContactName": "Emergency Contact Name",
+    "emergencyContactMobile": "Emergency Contact Mobile",
+    "emergencyContactRelation": "Relationship to Emergency Contact",
+    "profileNotes": "Additional Information",
+    "unitId": "Unit",
+    "relationshipType": "Relationship to Unit",
+    "startDate": "Residency Start Date",
+    "endDate": "Residency End Date",
+    "residencyNotes": "Residency Notes",
+    "personalInfo": "Personal Information",
+    "contactInfo": "Contact Information",
+    "emergencyContact": "Emergency Contact",
+    "residencyInfo": "Residency Information",
+    "submit": "Save Changes"
   },
 
   "select-role": {

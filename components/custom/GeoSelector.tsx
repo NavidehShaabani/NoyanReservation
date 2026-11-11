@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
+import { apiUrl } from "@/lib/api/config";
 import { FieldGroup, FieldLabel, Field } from "../ui/field";
 import {
   Select,
@@ -79,16 +80,13 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
   // }, [isAuthReady, token, geoId]);
 
   async function getCurrentGeoInfo(geoId: string) {
-    const currentGeoResponse = await fetch(
-      `http://10.208.8.91:5295/api/Geo/${geoId}`,
-      {
-        method: "GET",
-        credentials: "include",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+    const currentGeoResponse = await fetch(apiUrl(`/api/Geo/${geoId}`), {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    );
+    });
     if (!currentGeoResponse.ok) {
       throw new Error(`Request failed: ${currentGeoResponse.status}`);
     }
@@ -100,7 +98,7 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
   async function getCountryList() {
     try {
       const countryResponse = await fetch(
-        "http://10.208.8.91:5295/api/Geo/children?GeoType=1",
+        apiUrl("/api/Geo/children?GeoType=1"),
         {
           method: "GET",
           credentials: "include",
@@ -129,7 +127,9 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
   async function getRegionList(value: string) {
     try {
       const regionResponse = await fetch(
-        `http://10.208.8.91:5295/api/Geo/children?GeoType=2&ParentGeoId=${encodeURIComponent(value)}`,
+        apiUrl(
+          `/api/Geo/children?GeoType=2&ParentGeoId=${encodeURIComponent(value)}`,
+        ),
         {
           method: "GET",
           credentials: "include",
@@ -168,7 +168,9 @@ export default function GeoSelector({ geoId, onGeoIdChange }: geoProps) {
   async function getCityList(value: string) {
     try {
       const cityResponse = await fetch(
-        `http://10.208.8.91:5295/api/Geo/children?GeoType=3&ParentGeoId=${encodeURIComponent(value)}`,
+        apiUrl(
+          `/api/Geo/children?GeoType=3&ParentGeoId=${encodeURIComponent(value)}`,
+        ),
         {
           method: "GET",
           credentials: "include",

@@ -9,6 +9,7 @@ import BackgroundShell from "@/components/custom/BackgroundShell";
 import PageCard from "@/components/custom/PageCard";
 import { UsersRound } from "lucide-react";
 import PageHeader from "@/components/custom/PageHeader";
+import { apiUrl } from "@/lib/api/config";
 export default function SelectRole() {
   const { user, token, setToken, setUser } = useContext(AuthContext);
   const locale = useLocale() as keyof localizedText;
@@ -22,20 +23,17 @@ export default function SelectRole() {
     setIsSelecting(true);
 
     try {
-      const response = await fetch(
-        "http://10.208.8.91:5295/api/Auth/SelectRole",
-        {
-          method: "POST",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            roleId,
-          }),
+      const response = await fetch(apiUrl("/api/Auth/SelectRole"), {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
-      );
+        body: JSON.stringify({
+          roleId,
+        }),
+      });
       if (!response.ok) {
         setError(t("selecroletError"));
         return;
