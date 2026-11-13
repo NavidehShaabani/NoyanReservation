@@ -20,6 +20,18 @@
     "headerDescription": "Reservation and facility management system"
   },
 
+  "common": {
+    "error": {
+      "loadTitle": "Unable to load information",
+      "loadDescription": "Please check your connection and try again.",
+      "retry": "Try again"
+    }
+  },
+
+  "auth": {
+    "waiting": "Preparing your workspace..."
+  },
+
   "signup": {
     "title": "Create Your Account",
     "description": "Create an account to get started.",
@@ -119,7 +131,30 @@
     "residentialComplexDelBuildingdesc1": "Are you sure you want to delete the building",
     "residentialComplexDelBuildingdesc2": "? This action cannot be undone.",
     "residentialComplexDelBuildingButton": "Delete Building",
-    "residentialComplexCancelButton": "Cancel"
+    "residentialComplexCancelButton": "Cancel",
+    "setupGuide": {
+      "title": "Start Here to Set Up Your Building",
+      "description": "Complete the following steps to prepare your building for management and service delivery.",
+      "steps": {
+        "basicInfo": {
+          "title": "Basic Building Information",
+          "description": "Building name, address, and identification details",
+          "hasInformation": "Information available",
+          "noInformation": "No information provided"
+        },
+        "physicalStructure": {
+          "title": "Physical Building Structure",
+          "description": "Define buildings, floors, staircases, and units."
+        },
+        "reservableSpaces": {
+          "title": "Reservable Spaces",
+          "description": "Define halls, parking spaces, and other facilities available for booking or rental."
+        }
+      },
+      "actions": {
+        "manage": "Manage & Complete"
+      }
+    }
   },
   "geo": {
     "geoFormTitle": "Location",

@@ -20,6 +20,17 @@
     "headerDescription": "سامانه رزرو و مدیریت امکانات مجموعه"
   },
 
+  "common": {
+    "error": {
+      "loadTitle": "دریافت اطلاعات با مشکل مواجه شد",
+      "loadDescription": "لطفاً اتصال خود را بررسی کنید و دوباره تلاش کنید.",
+      "retry": "تلاش مجدد"
+    }
+  },
+
+  "auth": {
+    "waiting": "در حال آماده‌سازی محیط کاربری..."
+  },
   "signup": {
     "title": "ایجاد حساب کاربری",
     "description": "برای شروع، حساب کاربری خود را ایجاد کنید.",
@@ -119,7 +130,30 @@
     "residentialComplexDelBuildingdesc1": "  آیا مطمئن هستید که می‌خواهید ساختمان . ",
     "residentialComplexDelBuildingdesc2": "   را حذف کنید؟ این عملیات قابل بازگشت نیست. ",
     "residentialComplexDelBuildingButton": "  حذف ساختمان",
-    "residentialComplexCancelButton": "انصراف"
+    "residentialComplexCancelButton": "انصراف",
+    "setupGuide": {
+      "title": "برای آماده‌سازی ساختمان از اینجا شروع کنید",
+      "description": "مراحل زیر را به‌ترتیب تکمیل کنید تا ساختمان برای مدیریت و ارائه خدمات آماده شود.",
+      "steps": {
+        "basicInfo": {
+          "title": "مشخصات پایه ساختمان",
+          "description": "نام، نشانی و اطلاعات شناسنامه‌ای ساختمان",
+          "hasInformation": "دارای اطلاعات",
+          "noInformation": "بدون اطلاعات"
+        },
+        "physicalStructure": {
+          "title": "ساختار فیزیکی ساختمان",
+          "description": "ساختمان‌ها، طبقات، راه‌پله‌ها و واحدها را تعریف کنید."
+        },
+        "reservableSpaces": {
+          "title": "فضاهای قابل رزرو",
+          "description": "سالن‌ها، پارکینگ‌ها و سایر امکانات قابل اجاره یا رزرو را معرفی کنید."
+        }
+      },
+      "actions": {
+        "manage": "مدیریت و تکمیل"
+      }
+    }
   },
   "geo": {
     "geoFormTitle": "موقعیت مکانی",
