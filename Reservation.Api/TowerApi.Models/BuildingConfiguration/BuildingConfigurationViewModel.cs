@@ -25,7 +25,7 @@ namespace TowerApi.Models.BuildingConfiguration
 
         public int UnitNamingType { get; set; }
 
-        public string UnitNumberPattern { get; set; } = string.Empty;
+        public int UnitNumberPattern { get; set; }
 
         public string? UnitLetterStart { get; set; }
 
