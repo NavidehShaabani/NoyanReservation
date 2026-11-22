@@ -20,7 +20,7 @@ import { AuthContext } from "@/context/AuthProvider";
 import { useTranslations } from "next-intl";
 import type { BuildingDraft } from "@/components/custom/building/SingleBuildingFields";
 import type { ComplexDraft } from "@/components/custom/building/ResidentialComplexFields";
-import type { ComplexBuildingDraft } from "@/components/custom/building/ResidentialComplexFields";
+// import type { ComplexBuildingDraft } from "@/components/custom/building/ResidentialComplexFields";
 import { useLocale } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
@@ -174,13 +174,14 @@ export default function Building() {
       }
       const buildingResponselist = await buildingResponse.json();
 
-      const buildings: ComplexBuildingDraft[] = buildingResponselist.data.map(
+      // const buildings: ComplexBuildingDraft[] = buildingResponselist.data.map(
+      const buildings: BuildingDraft[] = buildingResponselist.data.map(
         (item: BuildingDraft) => ({
           buildingId: item.buildingId,
           buildingName: item.buildingName,
           buildingAddress: item.buildingAddress,
           buildingDescription: item.buildingDescription,
-          clientId: createClientId(),
+          // clientId: createClientId(),
         }),
       );
 
@@ -323,7 +324,8 @@ export default function Building() {
                   {complex.buildings.map((item) => (
                     <Badge
                       className="bg-[hsl(var(--brand-accent))] "
-                      key={item.clientId}
+                      //  key={item.clientId}
+                      key={item.buildingId}
                       // className="rounded-md bg-background px-3 py-1.5 text-sm font-medium shadow-sm"
                     >
                       {item.buildingName || "—"}
@@ -350,8 +352,8 @@ export default function Building() {
           </div>
         </RaisedPanel>
 
-        <Card className="neumorphic-raised">
-          <CardContent className="space-y-4 p-5 sm:p-6">
+        <Card className="neumorphic-raised mt-2">
+          <CardContent className="space-y-4 p-3 sm:p-6 sm:pt-2 ">
             {/* عنوان راهنما */}
             <div className="mb-5 space-y-1">
               <h3 className="text-base font-semibold">
@@ -369,19 +371,15 @@ export default function Building() {
                     title: t_setupGuide("steps.basicInfo.title"),
                     description: t_setupGuide("steps.basicInfo.description"),
                     icon: <FileText className="size-5 text-primary" />,
-                    content: (
-                      <div className="flex flex-wrap items-center justify-end ">
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          onClick={() =>
-                            router.push(`/${locale}/building/edit`)
-                          }
-                        >
-                          <Pencil className="size-3.5" />
-                          {t_setupGuide("actions.manage")}
-                        </Button>
-                      </div>
+                    action: (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => router.push(`/${locale}/building/edit`)}
+                      >
+                        <Pencil className="size-3.5" />
+                        {t_setupGuide("actions.manage")}
+                      </Button>
                     ),
                   },
                   {
@@ -390,19 +388,17 @@ export default function Building() {
                       "steps.physicalStructure.description",
                     ),
                     icon: <Layers3 className="size-5 text-primary" />,
-                    content: (
-                      <div className="flex flex-wrap items-center justify-end ">
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          onClick={() =>
-                            router.push(`/${locale}/building/edit`)
-                          }
-                        >
-                          <Pencil className="size-3.5" />
-                          {t_setupGuide("actions.manage")}
-                        </Button>
-                      </div>
+                    action: (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() =>
+                          router.push(`/${locale}/building/structure`)
+                        }
+                      >
+                        <Pencil className="size-3.5" />
+                        {t_setupGuide("actions.manage")}
+                      </Button>
                     ),
                   },
                   {
@@ -411,19 +407,15 @@ export default function Building() {
                       "steps.reservableSpaces.description",
                     ),
                     icon: <CalendarCheck className="size-5 text-primary" />,
-                    content: (
-                      <div className="flex flex-wrap items-center justify-end ">
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          onClick={() =>
-                            router.push(`/${locale}/building/edit`)
-                          }
-                        >
-                          <Pencil className="size-3.5" />
-                          {t_setupGuide("actions.manage")}
-                        </Button>
-                      </div>
+                    action: (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => router.push(`/${locale}/building/edit`)}
+                      >
+                        <Pencil className="size-3.5" />
+                        {t_setupGuide("actions.manage")}
+                      </Button>
                     ),
                   },
                 ]}

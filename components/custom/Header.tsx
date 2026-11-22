@@ -8,8 +8,8 @@ export default function Header() {
     <header
       className="
       
-        px-4
-        py-2
+        px-4  
+        py-1
         mx-2 md:ms-0
 
         my-2

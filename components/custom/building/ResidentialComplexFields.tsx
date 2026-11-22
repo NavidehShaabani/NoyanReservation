@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FieldGroup, FieldLabel, Field } from "@/components/ui/field";
-import { createClientId } from "@/lib/create-client-id";
+// import { createClientId } from "@/lib/create-client-id";
 import { Plus } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,26 +11,24 @@ import SingleBuildingFields from "./SingleBuildingFields";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
-  SheetClose,
+  //SheetClose,
   SheetContent,
   SheetDescription,
-  SheetFooter,
+  //SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
+  //SheetTrigger,
 } from "@/components/ui/sheet";
 import {
   Card,
   CardAction,
   CardDescription,
   CardContent,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -40,85 +38,92 @@ import {
 } from "@/components/ui/alert-dialog";
 import type { BuildingDraft } from "./SingleBuildingFields";
 import InsetPanel from "@/components/custom/InsetPanel";
-export type ComplexBuildingDraft = BuildingDraft & {
-  clientId: string;
-};
+// export type ComplexBuildingDraft = BuildingDraft & {
+//   clientId: string;
+// };
 export type ComplexDraft = {
   orgName: string;
   orgDesc: string;
   orgId: number;
   orgType: number;
   isActive: boolean;
-  buildings: ComplexBuildingDraft[];
+  buildings: BuildingDraft[];
+  //buildings: ComplexBuildingDraft[];
 };
 type ComplexProps = {
   complex: ComplexDraft;
   onComplexChange: (value: ComplexDraft) => void;
+  onSaveBuilding: (building: BuildingDraft) => Promise<void>;
+  onDeleteBuilding: (building: BuildingDraft) => Promise<void>;
 };
 
 export default function ResidentialComplexFields({
   complex,
   onComplexChange,
+  onSaveBuilding,
+  onDeleteBuilding,
 }: ComplexProps) {
   const t = useTranslations("building");
 
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const [selectedBuilding, setSelectedBuilding] =
-    useState<ComplexBuildingDraft | null>(null);
-  const [editingBuilding, setEditingBuilding] =
-    useState<ComplexBuildingDraft | null>(null);
+    useState<BuildingDraft | null>(null);
+  const [editingBuilding, setEditingBuilding] = useState<BuildingDraft | null>(
+    null,
+  );
   const [buildingToDelete, setBuildingToDelete] =
-    useState<ComplexBuildingDraft | null>(null);
+    useState<BuildingDraft | null>(null);
 
-  function handleAddEditBuilding() {
+  async function handleAddEditBuilding() {
     if (editingBuilding === null) return;
 
-    if (selectedBuilding === null) {
-      onComplexChange({
-        ...complex,
-        buildings: [...complex.buildings, editingBuilding],
-      });
-    } else {
-      onComplexChange({
-        ...complex,
-        buildings: complex.buildings.map((building) =>
-          building.clientId === editingBuilding.clientId
-            ? editingBuilding
-            : building,
-        ),
-      });
-    }
+    await onSaveBuilding(editingBuilding);
 
+    // if (selectedBuilding === null) {
+    //   onComplexChange({
+    //     ...complex,
+    //     buildings: [...complex.buildings, editingBuilding],
+    //   });
+    // } else {
+    //   onComplexChange({
+    //     ...complex,
+    //     buildings: complex.buildings.map((building) =>
+    //       building.clientId === editingBuilding.clientId
+    //         ? editingBuilding
+    //         : building,
+    //     ),
+    //   });
+    // }
     setIsSheetOpen(false);
     setSelectedBuilding(null);
     setEditingBuilding(null);
   }
-  function handleConfirmDelete() {
+  async function handleConfirmDelete() {
     if (!buildingToDelete) return;
-
-    onComplexChange({
-      ...complex,
-      buildings: complex.buildings.filter(
-        (building) => building.clientId !== buildingToDelete.clientId,
-      ),
-    });
-
+    await onDeleteBuilding(buildingToDelete);
+    // onComplexChange({
+    //   ...complex,
+    //   buildings: complex.buildings.filter(
+    //     (building) => building.clientId !== buildingToDelete.clientId,
+    //   ),
+    // });
     setBuildingToDelete(null);
   }
   const handleBuildingChange = (updatedBuilding: BuildingDraft) => {
-    setEditingBuilding((prev) => {
-      if (!prev) return null;
+    setEditingBuilding(updatedBuilding);
 
-      return {
-        ...updatedBuilding,
-        clientId: prev.clientId,
-      };
-    });
+    // setEditingBuilding((prev) => {
+    //   if (!prev) return null;
+    //   return {
+    //     ...updatedBuilding,
+    //     clientId: prev.clientId,
+    //   };
+    // });
   };
 
   return (
-    <InsetPanel className="p-10">
+    <InsetPanel className="p-4 sm:p-6 md:p-6">
       <div className="text-start pb-7">
         <h1 className="text-xl font-medium text-foreground">
           {t("residentialComplexFormTitle")}
@@ -198,7 +203,7 @@ export default function ResidentialComplexFields({
 
             `}
       >
-        <CardHeader className="min-w-0 flex-1 gap-1 px-3 py-3 sm:px-4">
+        <CardHeader className="min-w-0 flex-1 gap-1 px-3 py-3 sm:px-4 sm:pt-6">
           <CardTitle>{t("residentialComplexBuildingListTitle")}</CardTitle>
           <CardDescription className="line-clamp-3">
             {t("residentialComplexBuildingListDesc")}
@@ -210,7 +215,7 @@ export default function ResidentialComplexFields({
               onClick={() => {
                 setSelectedBuilding(null);
                 setEditingBuilding({
-                  clientId: createClientId(),
+                  // clientId: createClientId(),
                   buildingId: null,
                   buildingName: "",
                   buildingAddress: "",
@@ -228,7 +233,7 @@ export default function ResidentialComplexFields({
         </CardHeader>
         <CardContent className="flex flex-col">
           {complex.buildings.map((building, index) => (
-            <div key={building.clientId}>
+            <div key={building.buildingId}>
               <div className="flex items-center gap-3 py-3">
                 <Building className="size-5 shrink-0" />
 
@@ -320,12 +325,13 @@ export default function ResidentialComplexFields({
               {t("residentialComplexCancelButton")}
             </AlertDialogCancel>
 
-            <AlertDialogAction
+            <Button
+              type="button"
               onClick={handleConfirmDelete}
               className="bg-destructive text-white hover:bg-destructive/90"
             >
               {t("residentialComplexDelBuildingButton")}
-            </AlertDialogAction>
+            </Button>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

@@ -96,6 +96,7 @@
     "selectRoleError2": "Could not connect to the server. Please try again."
   },
   "building": {
+    "backToBuildings": "Building Management",
     "building-info-title": "Building Info",
     "complex-info-title": "Residential Complex Info",
     "residential-complex": "Residential Complex",
@@ -132,6 +133,11 @@
     "residentialComplexDelBuildingdesc2": "? This action cannot be undone.",
     "residentialComplexDelBuildingButton": "Delete Building",
     "residentialComplexCancelButton": "Cancel",
+    "error": "Error",
+    "errors": {
+      "AddEditBuildingFailed": "An error occurred while creating or updating the building.",
+      "DeleteBuildingFailed": "An error occurred while deleteing the building."
+    },
     "setupGuide": {
       "title": "Start Here to Set Up Your Building",
       "description": "Complete the following steps to prepare your building for management and service delivery.",
@@ -153,6 +159,39 @@
       },
       "actions": {
         "manage": "Manage & Complete"
+      }
+    }
+  },
+  "buildingStructure": {
+    "title": "Physical Building Structure",
+    "description": "Steps for defining and completing building components",
+
+    "physicalStructureGuide": {
+      "title": "Complete the Building's Physical Structure",
+      "description": "Complete the following steps in order to prepare the building's physical structure for management.",
+      "steps": {
+        "floors": {
+          "title": "Floors",
+          "description": "Define the number of floors and customize their names."
+        },
+        "staircases": {
+          "title": "Staircases",
+          "description": "Define the building's staircases and specify which floors each one serves."
+        },
+        "elevators": {
+          "title": "Elevators",
+          "description": "Define the building's elevators and specify which floors each one serves."
+        },
+        "units": {
+          "title": "Units",
+          "description": "Create the building units and assign them to their respective floors."
+        }
+      },
+      "actions": {
+        "manage": "Manage",
+        "next": "Next",
+        "previous": "Previous",
+        "backToStructure": "Back to Building Structure"
       }
     }
   },

@@ -6,16 +6,17 @@ import { createClientId } from "@/lib/create-client-id";
 import InsetPanel from "@/components/custom/InsetPanel";
 import { AuthContext } from "@/context/AuthProvider";
 // import BuildingType from "@/components/custom/building/BuildingType";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import GeoSelector from "@/components/custom/GeoSelector";
 import SingleBuildingFields from "@/components/custom/building/SingleBuildingFields";
 import ResidentialComplexFields from "@/components/custom/building/ResidentialComplexFields";
 import { Button } from "@/components/ui/button";
 import type { BuildingDraft } from "@/components/custom/building/SingleBuildingFields";
 import type { ComplexDraft } from "@/components/custom/building/ResidentialComplexFields";
-import type { ComplexBuildingDraft } from "@/components/custom/building/ResidentialComplexFields";
+//import type { ComplexBuildingDraft } from "@/components/custom/building/ResidentialComplexFields";
 import PageCard from "@/components/custom/PageCard";
 import PageHeader from "@/components/custom/PageHeader";
-import { Building2, Pencil } from "lucide-react";
+import { Building2, Pencil, AlertCircleIcon } from "lucide-react";
 import ErrorState from "@/components/custom/feedback/ErrorState";
 
 function SkeletonBox({ className = "" }) {
@@ -145,6 +146,7 @@ export default function Building() {
   const [orgType, setOrgType] = useState(1001);
   const [geoId, setGeoId] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [building, setBuilding] = useState<BuildingDraft>({
     buildingId: null,
@@ -168,7 +170,7 @@ export default function Building() {
     if (!isAuthReady || !token) return;
 
     setIsLoading(true);
-    setError(null);
+    setLoadError(null);
     try {
       console.log("user in Building:", user);
       const orgId: number = user?.orgId ?? 0;
@@ -213,13 +215,13 @@ export default function Building() {
       }
       const buildingResponselist = await buildingResponse.json();
 
-      const buildings: ComplexBuildingDraft[] = buildingResponselist.data.map(
+      const buildings: BuildingDraft[] = buildingResponselist.data.map(
         (item: BuildingDraft) => ({
           buildingId: item.buildingId,
           buildingName: item.buildingName,
           buildingAddress: item.buildingAddress,
           buildingDescription: item.buildingDescription,
-          clientId: createClientId(),
+          //clientId: createClientId(),
         }),
       );
 
@@ -233,7 +235,7 @@ export default function Building() {
       }
     } catch (error) {
       console.error("Failed to load building data:", error);
-      setError(error instanceof Error ? error.message : "UNKNOWN_ERROR");
+      setLoadError(error instanceof Error ? error.message : "UNKNOWN_ERROR");
     } finally {
       setIsLoading(false);
     }
@@ -247,7 +249,66 @@ export default function Building() {
     console.log("complex updated:", complex);
   }, [complex]);
 
+  function mapBuildingResponse(data: any): BuildingDraft {
+    return {
+      buildingId: data.buildingId,
+      buildingName: data.buildingName,
+      buildingAddress: data.buildingAddress,
+      buildingDescription: data.buildingDescription,
+      isActive: data.isActive,
+      orgId: complex.orgId,
+    };
+  }
+
+  const AddEditBuilding = async (buildingData: BuildingDraft) => {
+    try {
+      const addEditResponse = await fetch(
+        buildingData.buildingId
+          ? apiUrl(`/api/Buildings/${buildingData.buildingId}`)
+          : apiUrl(`/api/Buildings`),
+        {
+          method: buildingData.buildingId ? "PUT" : "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            buildingName: buildingData.buildingName,
+            buildingAddress: buildingData.buildingAddress,
+            buildingDescription: buildingData.buildingDescription,
+            isActive: buildingData.isActive,
+            orgId: user?.orgId,
+          }),
+        },
+      );
+
+      if (!addEditResponse.ok) {
+        const errorBody = await addEditResponse.text();
+
+        console.error(
+          "Add Edit Building Error:",
+          addEditResponse.status,
+          errorBody,
+        );
+
+        setError("AddEditBuildingFailed");
+        return null;
+      }
+
+      const addEditRet = await addEditResponse.json();
+
+      return mapBuildingResponse(addEditRet.data);
+    } catch (error) {
+      console.error("Add Edit Building Error:", error);
+      setError("AddEditBuildingFailed");
+      return null;
+    }
+  };
+
   const hanleSaveData = async () => {
+    setError(null);
+
     try {
       const isEditingOrg = complex.orgId > 0;
 
@@ -271,46 +332,68 @@ export default function Building() {
           }),
         },
       );
+
       console.log("Organization response:", orgResponse.status);
+
       if (!orgResponse.ok) {
         const errorBody = await orgResponse.text();
         throw new Error(`Request failed: ${orgResponse.status} - ${errorBody}`);
       }
 
-      const buildingsToSave = orgType === 1001 ? [building] : complex.buildings;
+      // ذخیره ساختمان فقط برای سازمان تک‌ساختمانی
+      if (orgType === 1001) {
+        const savedBuilding = await AddEditBuilding(building);
 
-      const buildingsPayload = buildingsToSave.map((item) => ({
-        buildingId: item.buildingId ?? 0,
-        buildingName: item.buildingName,
-        buildingAddress: item.buildingAddress,
-        buildingDescription: item.buildingDescription,
-        isActive: true,
-        orgId: complex.orgId,
-      }));
+        if (!savedBuilding) {
+          throw new Error("AddEditBuildingFailed");
+        }
 
-      const buildingsResponse = await fetch(apiUrl("/api/Buildings/BulkSave"), {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        credentials: "include",
-        body: JSON.stringify({
-          buildings: buildingsPayload,
-        }),
-      });
-      console.log("Buildings response:", buildingsResponse.status);
-      if (!buildingsResponse.ok) {
-        const errorBody = await buildingsResponse.text();
-        throw new Error(
-          `Request failed: ${buildingsResponse.status} - ${errorBody}`,
-        );
+        setBuilding(savedBuilding);
       }
+    } catch (error) {
+      console.error("Failed to save organization or building:", error);
+      setError(
+        error instanceof Error ? error.message : "SaveOrganizationFailed",
+      );
+    }
+  };
 
-      const getAfterSaveBuildingsResponse = await fetch(
-        apiUrl(`/api/Buildings/by-org/${complex.orgId}`),
+  const handleSaveBuilding = async (buildingData: BuildingDraft) => {
+    setError(null);
+
+    const savedBuilding = await AddEditBuilding(buildingData);
+
+    if (!savedBuilding) {
+      throw new Error("AddEditBuildingFailed");
+    }
+
+    if (buildingData.buildingId) {
+      // ویرایش ساختمان موجود
+      setComplex((prev) => ({
+        ...prev,
+        buildings: prev.buildings.map((item) =>
+          item.buildingId === savedBuilding.buildingId ? savedBuilding : item,
+        ),
+      }));
+    } else {
+      // اضافه کردن ساختمان جدید
+      setComplex((prev) => ({
+        ...prev,
+        buildings: [...prev.buildings, savedBuilding],
+      }));
+    }
+  };
+
+  const handleDeleteBuilding = async (buildingData: BuildingDraft) => {
+    if (!buildingData.buildingId) return;
+
+    setError(null);
+
+    try {
+      const response = await fetch(
+        apiUrl(`/api/Buildings/${buildingData.buildingId}`),
         {
-          method: "GET",
+          method: "DELETE",
           credentials: "include",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -318,34 +401,24 @@ export default function Building() {
         },
       );
 
-      if (!getAfterSaveBuildingsResponse.ok) {
-        throw new Error(
-          `Failed to reload buildings: ${getAfterSaveBuildingsResponse.status}`,
-        );
+      if (!response.ok) {
+        const errorBody = await response.text();
+        console.error("Delete Building Error:", response.status, errorBody);
+
+        setError("DeleteBuildingFailed");
+        throw new Error("DeleteBuildingFailed");
       }
-
-      const getAfterSaveBuildingsData =
-        await getAfterSaveBuildingsResponse.json();
-
-      const savedBuildings: ComplexBuildingDraft[] =
-        getAfterSaveBuildingsData.data.map((item: BuildingDraft) => ({
-          buildingId: item.buildingId,
-          buildingName: item.buildingName,
-          buildingAddress: item.buildingAddress,
-          buildingDescription: item.buildingDescription,
-          clientId: createClientId(),
-        }));
 
       setComplex((prev) => ({
         ...prev,
-        buildings: savedBuildings,
+        buildings: prev.buildings.filter(
+          (item) => item.buildingId !== buildingData.buildingId,
+        ),
       }));
-
-      if (orgType === 1001 && savedBuildings.length > 0) {
-        setBuilding(savedBuildings[0]);
-      }
     } catch (error) {
-      console.error("Failed to save organization or buildings:", error);
+      console.error("Delete Building Error:", error);
+      setError("DeleteBuildingFailed");
+      throw error;
     }
   };
 
@@ -353,7 +426,7 @@ export default function Building() {
     return <BuildingSkeleton />;
   }
 
-  if (error) {
+  if (loadError) {
     return (
       <ErrorState
         title={t_common("error.loadTitle")}
@@ -383,6 +456,8 @@ export default function Building() {
               : t_building("residentialComplexFormDesc")
           }
           icon={<Building2 className="size-5" />}
+          backHref="/building"
+          backLabel={t_building("backToBuildings")}
           className="mb-4 "
         />
 
@@ -398,12 +473,25 @@ export default function Building() {
           <ResidentialComplexFields
             complex={complex}
             onComplexChange={setComplex}
+            onSaveBuilding={handleSaveBuilding}
+            onDeleteBuilding={handleDeleteBuilding}
           />
         )}
 
         <Button className="px-2" onClick={hanleSaveData}>
           {t_building("save")}
         </Button>
+
+        {error && (
+          <Alert
+            variant="destructive"
+            className="neumorphic-alert mt-2 md:mt-8 "
+          >
+            <AlertCircleIcon />
+            <AlertTitle>{t_building("error")}</AlertTitle>
+            <AlertDescription>{t_building(`errors.${error}`)}</AlertDescription>
+          </Alert>
+        )}
       </PageCard>
     </div>
   );

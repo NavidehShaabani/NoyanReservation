@@ -5,6 +5,7 @@ type Step = {
   description?: string;
   icon?: ReactNode;
   content?: ReactNode;
+  action?: ReactNode;
 };
 
 type VerticalStepperProps = {
@@ -29,18 +30,26 @@ export default function VerticalStepper({ steps }: VerticalStepperProps) {
 
           {/* محتوای مرحله */}
           <div className="min-w-0 flex-1 pb-6">
-            <div className="flex min-h-8 items-center gap-2">
-              {step.icon}
-              <h4 className="text-sm font-semibold">{step.title}</h4>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              {/* عنوان و توضیحات */}
+              <div className="min-w-0">
+                <div className="flex min-h-8 items-center gap-2">
+                  {step.icon}
+                  <h4 className="text-sm font-semibold">{step.title}</h4>
+                </div>
+
+                {step.description && (
+                  <p className="mt-1 text-xs leading-6 text-muted-foreground">
+                    {step.description}
+                  </p>
+                )}
+              </div>
+
+              {/* دکمه */}
+              {step.action && <div className="shrink-0">{step.action}</div>}
             </div>
 
-            {step.description && (
-              <p className="mt-1 text-xs leading-6 text-muted-foreground">
-                {step.description}
-              </p>
-            )}
-
-            {step.content && <div className="mt-3">{step.content}</div>}
+            {step.content && <div className="mt-1">{step.content}</div>}
 
             {index < steps.length - 1 && (
               <div className="mt-5 border-b border-border/70" />

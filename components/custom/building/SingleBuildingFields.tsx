@@ -22,7 +22,7 @@ export default function SingleBuildingFields({
 }: buildingProps) {
   const t = useTranslations("building");
   return (
-    <InsetPanel className="p-10">
+    <InsetPanel className="p-4 sm:p-6 md:p-6">
       <div className="text-start pb-7">
         <h1 className="text-xl font-medium text-foreground">
           {t("singleBuildingTypeTitle")}

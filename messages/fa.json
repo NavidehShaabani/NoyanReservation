@@ -95,6 +95,7 @@
     "selecroletError2": "ارتباط با سرور برقرار نشد. لطفاً دوباره تلاش کنید"
   },
   "building": {
+    "backToBuildings": "مدیریت ساختمان‌ها",
     "building-info-title": "اطلاعات ساختمان",
     "complex-info-title": "اطلاعات مجتمع",
     "residential-complex": "مجتمع مسکونی",
@@ -131,6 +132,13 @@
     "residentialComplexDelBuildingdesc2": "   را حذف کنید؟ این عملیات قابل بازگشت نیست. ",
     "residentialComplexDelBuildingButton": "  حذف ساختمان",
     "residentialComplexCancelButton": "انصراف",
+
+    "error": "خطا",
+    "errors": {
+      "AddEditBuildingFailed": "ثبت و ویرایش ساختمان با خطا مواجه شد",
+      "DeleteBuildingFailed": "حذف ساختمان با خطا مواجه شد"
+    },
+
     "setupGuide": {
       "title": "برای آماده‌سازی ساختمان از اینجا شروع کنید",
       "description": "مراحل زیر را به‌ترتیب تکمیل کنید تا ساختمان برای مدیریت و ارائه خدمات آماده شود.",
@@ -152,6 +160,39 @@
       },
       "actions": {
         "manage": "مدیریت و تکمیل"
+      }
+    }
+  },
+  "buildingStructure": {
+    "title": "ساختار فیزیکی ساختمان",
+    "description": "مراحل تعریف و تکمیل اجزای ساختمان",
+
+    "physicalStructureGuide": {
+      "title": "ساختار فیزیکی ساختمان را تکمیل کنید",
+      "description": "مراحل زیر را به‌ترتیب انجام دهید تا ساختار فیزیکی ساختمان برای مدیریت آماده شود.",
+      "steps": {
+        "floors": {
+          "title": "طبقات",
+          "description": "تعداد طبقات را مشخص کنید و نام آن‌ها را تعریف کنید."
+        },
+        "staircases": {
+          "title": "راه‌پله‌ها",
+          "description": "راه‌پله‌های ساختمان را تعریف کنید و طبقات تحت پوشش هرکدام را مشخص کنید."
+        },
+        "elevators": {
+          "title": "آسانسورها",
+          "description": "آسانسورهای ساختمان را تعریف کنید و طبقات تحت پوشش هرکدام را مشخص کنید."
+        },
+        "units": {
+          "title": "واحدها",
+          "description": "واحدهای ساختمان را ایجاد کنید و آن‌ها را به طبقات مربوط اختصاص دهید."
+        }
+      },
+      "actions": {
+        "manage": "مدیریت و تکمیل",
+        "next": "مرحله بعد",
+        "previous": "مرحله قبل",
+        "backToStructure": "بازگشت به ساختار ساختمان"
       }
     }
   },
