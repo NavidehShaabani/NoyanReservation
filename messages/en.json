@@ -20,6 +20,18 @@
     "headerDescription": "Reservation and facility management system"
   },
 
+  "common": {
+    "error": {
+      "loadTitle": "Unable to load information",
+      "loadDescription": "Please check your connection and try again.",
+      "retry": "Try again"
+    }
+  },
+
+  "auth": {
+    "waiting": "Preparing your workspace..."
+  },
+
   "signup": {
     "title": "Create Your Account",
     "description": "Create an account to get started.",
@@ -84,6 +96,7 @@
     "selectRoleError2": "Could not connect to the server. Please try again."
   },
   "building": {
+    "backToBuildings": "Building Management",
     "building-info-title": "Building Info",
     "complex-info-title": "Residential Complex Info",
     "residential-complex": "Residential Complex",
@@ -119,7 +132,68 @@
     "residentialComplexDelBuildingdesc1": "Are you sure you want to delete the building",
     "residentialComplexDelBuildingdesc2": "? This action cannot be undone.",
     "residentialComplexDelBuildingButton": "Delete Building",
-    "residentialComplexCancelButton": "Cancel"
+    "residentialComplexCancelButton": "Cancel",
+    "error": "Error",
+    "errors": {
+      "AddEditBuildingFailed": "An error occurred while creating or updating the building.",
+      "DeleteBuildingFailed": "An error occurred while deleteing the building."
+    },
+    "setupGuide": {
+      "title": "Start Here to Set Up Your Building",
+      "description": "Complete the following steps to prepare your building for management and service delivery.",
+      "steps": {
+        "basicInfo": {
+          "title": "Basic Building Information",
+          "description": "Building name, address, and identification details",
+          "hasInformation": "Information available",
+          "noInformation": "No information provided"
+        },
+        "physicalStructure": {
+          "title": "Physical Building Structure",
+          "description": "Define buildings, floors, staircases, and units."
+        },
+        "reservableSpaces": {
+          "title": "Reservable Spaces",
+          "description": "Define halls, parking spaces, and other facilities available for booking or rental."
+        }
+      },
+      "actions": {
+        "manage": "Manage & Complete"
+      }
+    }
+  },
+  "buildingStructure": {
+    "title": "Physical Building Structure",
+    "description": "Steps for defining and completing building components",
+
+    "physicalStructureGuide": {
+      "title": "Complete the Building's Physical Structure",
+      "description": "Complete the following steps in order to prepare the building's physical structure for management.",
+      "steps": {
+        "floors": {
+          "title": "Floors",
+          "description": "Define the number of floors and customize their names."
+        },
+        "staircases": {
+          "title": "Staircases",
+          "description": "Define the building's staircases and specify which floors each one serves."
+        },
+        "elevators": {
+          "title": "Elevators",
+          "description": "Define the building's elevators and specify which floors each one serves."
+        },
+        "units": {
+          "title": "Units",
+          "description": "Create the building units and assign them to their respective floors."
+        }
+      },
+      "actions": {
+        "manage": "Manage",
+        "next": "Next",
+        "previous": "Previous",
+        "backToStructure": "Back to Building Structure"
+      }
+    }
   },
   "geo": {
     "geoFormTitle": "Location",

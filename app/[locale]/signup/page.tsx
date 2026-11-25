@@ -8,16 +8,8 @@ import { LoaderCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
 // import OrganType from "@/components/custom/OrganType";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import {
-  Field,
-  FieldDescription,
-  FieldContent,
-  FieldTitle,
-  FieldError,
-  FieldGroup,
-  FieldLabel,
-} from "@/components/ui/field";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import LogoHeader from "@/components/custom/LogoHeader";
@@ -52,7 +44,6 @@ export default function Signup() {
     | "passwordRequired"
     | "confirmPasswordRequired"
     | "organizationNameRequired"
-    | "orgTypeRequired"
     | "geoIdRequired"
     | "passwordAndConfirmAreDifferent"
     | "passwordLength"
@@ -62,6 +53,7 @@ export default function Signup() {
   >("");
 
   const submit = async (e: SyntheticEvent<HTMLFormElement>) => {
+    if (isSubmitting) return;
     e.preventDefault();
     setSubmitted(true);
     setError("");
@@ -102,7 +94,7 @@ export default function Signup() {
       return;
     }
 
-    if (username.length < 3 || username.length > 100) {
+    if (username.trim().length < 3 || username.trim().length > 100) {
       setError("usernameLength");
       return;
     }
@@ -311,13 +303,6 @@ export default function Signup() {
                 ) : (
                   t("save")
                 )}
-              </Button>{" "}
-              <Button
-                className="primary-action"
-                type="submit"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? t("submitting") : t("save")}
               </Button>
             </form>
           </PageCard>
