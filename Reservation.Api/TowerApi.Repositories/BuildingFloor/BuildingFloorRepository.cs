@@ -1,240 +1,202 @@
-﻿
-using System.Data;
+﻿using System.Data;
 using Dapper;
 using TowerApi.Models.BuildingFloor;
 using TowerApi.Repositories.DataBase;
 
 namespace TowerApi.Repositories.BuildingFloor
 {
-    public class BuildingFloorRepository : IBuildingFloorRepository
+    public class BuildingFloorsRepository : IBuildingFloorsRepository
     {
         private readonly IDbConnectionFactory _connectionFactory;
 
-        public BuildingFloorRepository(
+        public BuildingFloorsRepository(
             IDbConnectionFactory connectionFactory)
         {
             _connectionFactory = connectionFactory;
         }
 
+        private static DynamicParameters CreateOutputParameters()
+        {
+            var parameters = new DynamicParameters();
+
+            parameters.Add(
+                "@ResultCode",
+                dbType: DbType.Int32,
+                direction: ParameterDirection.Output);
+
+            parameters.Add(
+                "@ResultMessage",
+                dbType: DbType.String,
+                size: 500,
+                direction: ParameterDirection.Output);
+
+            return parameters;
+        }
+
+        private static (int Code, string? Message) ReadOutput(
+            DynamicParameters parameters)
+        {
+            return (
+                parameters.Get<int>("@ResultCode"),
+                parameters.Get<string?>("@ResultMessage")
+            );
+        }
+
         public async Task<(
             int ResultCode,
-            string ResultMessage,
-            BuildingFloorViewModel? Data)>
-            AddAsync(
-                BuildingFloorCreateRequest request,
-                int? userCreater)
+            string? ResultMessage,
+            IReadOnlyList<BuildingFloorModel> Data
+        )> Get(long? buildingId, bool? isActive)
         {
             using var connection = _connectionFactory.CreateConnection();
 
-            var parameters = new DynamicParameters();
+            var parameters = CreateOutputParameters();
+
+            parameters.Add("@BuildingId", buildingId);
+            parameters.Add("@IsActive", isActive);
+
+            var rows = (await connection.QueryAsync<BuildingFloorModel>(
+                "BuildingFloors_Get",
+                parameters,
+                commandType: CommandType.StoredProcedure
+            )).ToList();
+
+            var output = ReadOutput(parameters);
+
+            return (output.Code, output.Message, rows);
+        }
+
+        public async Task<(
+            int ResultCode,
+            string? ResultMessage,
+            BuildingFloorModel? Data
+        )> GetById(long buildingFloorId)
+        {
+            using var connection = _connectionFactory.CreateConnection();
+
+            var parameters = CreateOutputParameters();
+
+            parameters.Add("@BuildingFloorId", buildingFloorId);
+
+            var rows = (await connection.QueryAsync<BuildingFloorModel>(
+                "BuildingFloors_GetById",
+                parameters,
+                commandType: CommandType.StoredProcedure
+            )).ToList();
+
+            var output = ReadOutput(parameters);
+
+            return (output.Code, output.Message, rows.FirstOrDefault());
+        }
+
+        public async Task<(
+            int ResultCode,
+            string? ResultMessage,
+            BuildingFloorModel? Data
+        )> Insert(
+            BuildingFloorInsertRequest request,
+            int userId)
+        {
+            using var connection = _connectionFactory.CreateConnection();
+
+            var parameters = CreateOutputParameters();
 
             parameters.Add("@BuildingId", request.BuildingId);
+            parameters.Add("@FloorNumber", request.FloorNumber);
+            parameters.Add("@FloorType", request.FloorType);
+            parameters.Add("@FloorCode", request.FloorCode);
+            parameters.Add("@FloorName", request.FloorName);
+            parameters.Add("@FloorNameEn", request.FloorNameEn);
+            parameters.Add("@MaxUnits", request.MaxUnits);
+            parameters.Add("@UserId", userId);
+
+            var rows = (await connection.QueryAsync<BuildingFloorModel>(
+                "BuildingFloors_Insert",
+                parameters,
+                commandType: CommandType.StoredProcedure
+            )).ToList();
+
+            var output = ReadOutput(parameters);
+
+            return (output.Code, output.Message, rows.FirstOrDefault());
+        }
+
+        public async Task<(
+            int ResultCode,
+            string? ResultMessage,
+            BuildingFloorModel? Data
+        )> Update(
+            long buildingFloorId,
+            BuildingFloorUpdateRequest request,
+            int userId)
+        {
+            using var connection = _connectionFactory.CreateConnection();
+
+            var parameters = CreateOutputParameters();
+
+            parameters.Add("@BuildingFloorId", buildingFloorId);
+            parameters.Add("@FloorType", request.FloorType);
             parameters.Add("@FloorNumber", request.FloorNumber);
             parameters.Add("@FloorCode", request.FloorCode);
             parameters.Add("@FloorName", request.FloorName);
             parameters.Add("@FloorNameEn", request.FloorNameEn);
             parameters.Add("@MaxUnits", request.MaxUnits);
-            parameters.Add("@IsActive", request.IsActive);
-            parameters.Add("@UserCreater", userCreater);
+            parameters.Add("@UserId", userId);
 
-            parameters.Add(
-                "@ResultCode",
-                dbType: DbType.Int32,
-                direction: ParameterDirection.Output);
-
-            parameters.Add(
-                "@ResultMessage",
-                dbType: DbType.String,
-                size: 500,
-                direction: ParameterDirection.Output);
-
-            var data = await connection.QueryFirstOrDefaultAsync<BuildingFloorViewModel>(
-                "dbo.BuildingFloorsAdd",
+            var rows = (await connection.QueryAsync<BuildingFloorModel>(
+                "BuildingFloors_Update",
                 parameters,
-                commandType: CommandType.StoredProcedure);
+                commandType: CommandType.StoredProcedure
+            )).ToList();
 
-            return (
-                parameters.Get<int>("@ResultCode"),
-                parameters.Get<string>("@ResultMessage") ?? string.Empty,
-                data
-            );
+            var output = ReadOutput(parameters);
+
+            return (output.Code, output.Message, rows.FirstOrDefault());
         }
 
         public async Task<(
             int ResultCode,
-            string ResultMessage,
-            BuildingFloorViewModel? Data)>
-            EditAsync(
-                long buildingFloorId,
-                BuildingFloorUpdateRequest request,
-                int? userUpdater)
+            string? ResultMessage,
+            IReadOnlyList<BuildingFloorModel> Data
+        )> BulkSave(
+            BuildingFloorBulkSaveRequest request,
+            int userId)
         {
             using var connection = _connectionFactory.CreateConnection();
 
-            var parameters = new DynamicParameters();
+            var parameters = CreateOutputParameters();
 
-            parameters.Add("@BuildingFloorId", buildingFloorId);
-            parameters.Add("@BuildingId", request.BuildingId);
-            parameters.Add("@FloorNumber", request.FloorNumber);
-            parameters.Add("@FloorCode", request.FloorCode);
-            parameters.Add("@FloorName", request.FloorName);
-            parameters.Add("@FloorNameEn", request.FloorNameEn);
-            parameters.Add("@MaxUnits", request.MaxUnits);
-            parameters.Add("@IsActive", request.IsActive);
-            parameters.Add("@UserUpdater", userUpdater);
+            var table = CreateBulkSaveDataTable(request.Items);
 
             parameters.Add(
-                "@ResultCode",
-                dbType: DbType.Int32,
-                direction: ParameterDirection.Output);
+                "@Items",
+                table.AsTableValuedParameter(
+                    "dbo.BuildingFloorBulkSaveType"));
 
-            parameters.Add(
-                "@ResultMessage",
-                dbType: DbType.String,
-                size: 500,
-                direction: ParameterDirection.Output);
+            parameters.Add("@UserId", userId);
 
-            var data = await connection.QueryFirstOrDefaultAsync<BuildingFloorViewModel>(
-                "dbo.BuildingFloorsEdit",
+            var rows = (await connection.QueryAsync<BuildingFloorModel>(
+                "BuildingFloors_BulkSave",
                 parameters,
-                commandType: CommandType.StoredProcedure);
+                commandType: CommandType.StoredProcedure
+            )).ToList();
 
-            return (
-                parameters.Get<int>("@ResultCode"),
-                parameters.Get<string>("@ResultMessage") ?? string.Empty,
-                data
-            );
+            var output = ReadOutput(parameters);
+
+            return (output.Code, output.Message, rows);
         }
 
-        public async Task<(int ResultCode, string ResultMessage)>
-            DeleteAsync(
-                long buildingFloorId,
-                int? userUpdater)
+        private static DataTable CreateBulkSaveDataTable(
+            IEnumerable<BuildingFloorBulkSaveItem> items)
         {
-            using var connection = _connectionFactory.CreateConnection();
-
-            var parameters = new DynamicParameters();
-
-            parameters.Add("@BuildingFloorId", buildingFloorId);
-            parameters.Add("@UserUpdater", userUpdater);
-
-            parameters.Add(
-                "@ResultCode",
-                dbType: DbType.Int32,
-                direction: ParameterDirection.Output);
-
-            parameters.Add(
-                "@ResultMessage",
-                dbType: DbType.String,
-                size: 500,
-                direction: ParameterDirection.Output);
-
-            await connection.ExecuteAsync(
-                "dbo.BuildingFloorsDel",
-                parameters,
-                commandType: CommandType.StoredProcedure);
-
-            return (
-                parameters.Get<int>("@ResultCode"),
-                parameters.Get<string>("@ResultMessage") ?? string.Empty
-            );
-        }
-
-        public async Task<(
-            int ResultCode,
-            string ResultMessage,
-            BuildingFloorViewModel? Data)>
-            GetByIdAsync(long buildingFloorId)
-        {
-            using var connection = _connectionFactory.CreateConnection();
-
-            var parameters = new DynamicParameters();
-
-            parameters.Add("@BuildingFloorId", buildingFloorId);
-            parameters.Add("@BuildingId", null);
-            parameters.Add("@FloorNumber", null);
-            parameters.Add("@Search", null);
-            parameters.Add("@IsActive", null);
-            parameters.Add("@PageNumber", 1);
-            parameters.Add("@PageSize", 1);
-
-            parameters.Add(
-                "@ResultCode",
-                dbType: DbType.Int32,
-                direction: ParameterDirection.Output);
-
-            parameters.Add(
-                "@ResultMessage",
-                dbType: DbType.String,
-                size: 500,
-                direction: ParameterDirection.Output);
-
-            var data = await connection.QueryFirstOrDefaultAsync<BuildingFloorViewModel>(
-                "dbo.BuildingFloorsGet",
-                parameters,
-                commandType: CommandType.StoredProcedure);
-
-            return (
-                parameters.Get<int>("@ResultCode"),
-                parameters.Get<string>("@ResultMessage") ?? string.Empty,
-                data
-            );
-        }
-
-        public async Task<(
-            int ResultCode,
-            string ResultMessage,
-            List<BuildingFloorViewModel> Data)>
-            GetListAsync(BuildingFloorQueryRequest request)
-        {
-            using var connection = _connectionFactory.CreateConnection();
-
-            var parameters = new DynamicParameters();
-
-            parameters.Add("@BuildingFloorId", null);
-            parameters.Add("@BuildingId", request.BuildingId);
-            parameters.Add("@FloorNumber", request.FloorNumber);
-            parameters.Add("@Search", request.Search);
-            parameters.Add("@IsActive", request.IsActive);
-            parameters.Add("@PageNumber", request.PageNumber);
-            parameters.Add("@PageSize", request.PageSize);
-
-            parameters.Add(
-                "@ResultCode",
-                dbType: DbType.Int32,
-                direction: ParameterDirection.Output);
-
-            parameters.Add(
-                "@ResultMessage",
-                dbType: DbType.String,
-                size: 500,
-                direction: ParameterDirection.Output);
-
-            var data = (await connection.QueryAsync<BuildingFloorViewModel>(
-                "dbo.BuildingFloorsGet",
-                parameters,
-                commandType: CommandType.StoredProcedure)).ToList();
-
-            return (
-                parameters.Get<int>("@ResultCode"),
-                parameters.Get<string>("@ResultMessage") ?? string.Empty,
-                data
-            );
-        }
-
-        public async Task<(int ResultCode, string? ResultMessage)>
-            BulkSaveAsync(
-                IEnumerable<BuildingFloorBulkItem> items,
-                long currentUserId)
-        {
-            using var connection = _connectionFactory.CreateConnection();
-
             var table = new DataTable();
 
+            // نوع و ترتیب ستون‌ها باید با CREATE TYPE واقعی دیتابیس تطبیق داده شود.
             table.Columns.Add("BuildingFloorId", typeof(long));
             table.Columns.Add("BuildingId", typeof(long));
             table.Columns.Add("FloorNumber", typeof(int));
             table.Columns.Add("FloorCode", typeof(string));
+            table.Columns.Add("FloorType", typeof(int));
             table.Columns.Add("FloorName", typeof(string));
             table.Columns.Add("FloorNameEn", typeof(string));
             table.Columns.Add("MaxUnits", typeof(int));
@@ -243,49 +205,70 @@ namespace TowerApi.Repositories.BuildingFloor
             foreach (var item in items)
             {
                 table.Rows.Add(
-                    item.BuildingFloorId.HasValue &&
-                    item.BuildingFloorId.Value > 0
-                        ? item.BuildingFloorId.Value
-                        : DBNull.Value,
-
+                    item.BuildingFloorId,
                     item.BuildingId,
                     item.FloorNumber,
                     item.FloorCode,
+                    item.FloorType,
                     item.FloorName,
-                    (object?)item.FloorNameEn ?? DBNull.Value,
+                    item.FloorNameEn is null
+                        ? DBNull.Value
+                        : item.FloorNameEn,
                     item.MaxUnits,
-                    item.IsActive ?? true
+                    item.IsActive
                 );
             }
 
-            var parameters = new DynamicParameters();
+            return table;
+        }
 
-            parameters.Add(
-                "@Items",
-                table.AsTableValuedParameter("dbo.BuildingFloorBulkSaveType"));
+        public async Task<(
+            int ResultCode,
+            string? ResultMessage
+        )> Delete(long buildingFloorId)
+        {
+            using var connection = _connectionFactory.CreateConnection();
 
-            parameters.Add("@CurrentUserId", currentUserId);
+            var parameters = CreateOutputParameters();
 
-            parameters.Add(
-                "@ResultCode",
-                dbType: DbType.Int32,
-                direction: ParameterDirection.Output);
-
-            parameters.Add(
-                "@ResultMessage",
-                dbType: DbType.String,
-                size: 500,
-                direction: ParameterDirection.Output);
+            parameters.Add("@BuildingFloorId", buildingFloorId);
 
             await connection.ExecuteAsync(
-                "dbo.BuildingFloors_BulkSave",
+                "BuildingFloors_Delete",
                 parameters,
-                commandType: CommandType.StoredProcedure);
-
-            return (
-                parameters.Get<int>("@ResultCode"),
-                parameters.Get<string>("@ResultMessage")
+                commandType: CommandType.StoredProcedure
             );
+
+            var output = ReadOutput(parameters);
+
+            return (output.Code, output.Message);
+        }
+
+        public async Task<(
+            int ResultCode,
+            string? ResultMessage
+        )> SetActive(
+            long buildingFloorId,
+            bool isActive,
+            int userId)
+        {
+            using var connection = _connectionFactory.CreateConnection();
+
+            var parameters = CreateOutputParameters();
+
+            parameters.Add("@BuildingFloorId", buildingFloorId);
+            parameters.Add("@IsActive", isActive);
+            parameters.Add("@UserId", userId);
+
+            await connection.ExecuteAsync(
+                "BuildingFloors_SetActive",
+                parameters,
+                commandType: CommandType.StoredProcedure
+            );
+
+            var output = ReadOutput(parameters);
+
+            return (output.Code, output.Message);
         }
     }
 }

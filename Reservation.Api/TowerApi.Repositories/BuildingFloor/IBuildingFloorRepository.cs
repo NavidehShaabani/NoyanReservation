@@ -3,45 +3,59 @@ using TowerApi.Models.BuildingFloor;
 
 namespace TowerApi.Repositories.BuildingFloor
 {
-    public interface IBuildingFloorRepository
+
+    public interface IBuildingFloorsRepository
     {
         Task<(
             int ResultCode,
-            string ResultMessage,
-            BuildingFloorViewModel? Data)>
-            AddAsync(
-                BuildingFloorCreateRequest request,
-                int? userCreater);
+            string? ResultMessage,
+            IReadOnlyList<BuildingFloorModel> Data
+        )> Get(
+            long? buildingId,
+            bool? isActive);
 
         Task<(
             int ResultCode,
-            string ResultMessage,
-            BuildingFloorViewModel? Data)>
-            EditAsync(
-                long buildingFloorId,
-                BuildingFloorUpdateRequest request,
-                int? userUpdater);
-
-        Task<(int ResultCode, string ResultMessage)>
-            DeleteAsync(
-                long buildingFloorId,
-                int? userUpdater);
+            string? ResultMessage,
+            BuildingFloorModel? Data
+        )> GetById(long buildingFloorId);
 
         Task<(
             int ResultCode,
-            string ResultMessage,
-            BuildingFloorViewModel? Data)>
-            GetByIdAsync(long buildingFloorId);
+            string? ResultMessage,
+            BuildingFloorModel? Data
+        )> Insert(
+            BuildingFloorInsertRequest request,
+            int userId);
 
         Task<(
             int ResultCode,
-            string ResultMessage,
-            List<BuildingFloorViewModel> Data)>
-            GetListAsync(BuildingFloorQueryRequest request);
+            string? ResultMessage,
+            BuildingFloorModel? Data
+        )> Update(
+            long buildingFloorId,
+            BuildingFloorUpdateRequest request,
+            int userId);
 
-        Task<(int ResultCode, string? ResultMessage)>
-            BulkSaveAsync(
-                IEnumerable<BuildingFloorBulkItem> items,
-                long currentUserId);
+        Task<(
+            int ResultCode,
+            string? ResultMessage,
+            IReadOnlyList<BuildingFloorModel> Data
+        )> BulkSave(
+            BuildingFloorBulkSaveRequest request,
+            int userId);
+
+        Task<(
+            int ResultCode,
+            string? ResultMessage
+        )> Delete(long buildingFloorId);
+
+        Task<(
+            int ResultCode,
+            string? ResultMessage
+        )> SetActive(
+            long buildingFloorId,
+            bool isActive,
+            int userId);
     }
 }

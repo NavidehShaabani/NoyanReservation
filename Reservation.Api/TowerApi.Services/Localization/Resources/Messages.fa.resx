@@ -819,42 +819,6 @@
   <data name="Common.InvalidPaginationParameters" xml:space="preserve">
     <value>مقادیر صفحه‌بندی نامعتبر است.</value>
   </data>
-  <data name="BuildingFloors.BulkSaveSuccessfully" xml:space="preserve">
-    <value>اطلاعات طبقات با موفقیت ذخیره شد.</value>
-  </data>
-  <data name="BuildingFloors.Conflict" xml:space="preserve">
-    <value>به دلیل وجود تداخل اطلاعات یا واحد فعال روی طبقه، عملیات امکان‌پذیر نیست.</value>
-  </data>
-  <data name="BuildingFloors.DuplicateItems" xml:space="preserve">
-    <value>اطلاعات تکراری در درخواست وجود دارد.</value>
-  </data>
-  <data name="BuildingFloors.InvalidBuildingFloorId" xml:space="preserve">
-    <value>شناسه طبقه نامعتبر است.</value>
-  </data>
-  <data name="BuildingFloors.InvalidBuildingId" xml:space="preserve">
-    <value>شناسه ساختمان نامعتبر است.</value>
-  </data>
-  <data name="BuildingFloors.InvalidData" xml:space="preserve">
-    <value>اطلاعات ارسالی برای ذخیره گروهی نامعتبر است.</value>
-  </data>
-  <data name="BuildingFloors.InvalidFloorCode" xml:space="preserve">
-    <value>کد طبقه نامعتبر است یا وارد نشده است.</value>
-  </data>
-  <data name="BuildingFloors.InvalidFloorName" xml:space="preserve">
-    <value>نام طبقه نامعتبر است یا وارد نشده است.</value>
-  </data>
-  <data name="BuildingFloors.InvalidFloorNameEn" xml:space="preserve">
-    <value>نام انگلیسی طبقه نمی‌تواند بیشتر از ۲۰۰ کاراکتر باشد.</value>
-  </data>
-  <data name="BuildingFloors.InvalidMaxUnits" xml:space="preserve">
-    <value>ظرفیت طبقه باید حداقل یک واحد باشد.</value>
-  </data>
-  <data name="BuildingFloors.InvalidQueryRequest" xml:space="preserve">
-    <value>درخواست جستجوی طبقات نامعتبر است.</value>
-  </data>
-  <data name="BuildingFloors.ReferenceNotFound" xml:space="preserve">
-    <value>ساختمان یا رکورد مرجع موردنظر یافت نشد.</value>
-  </data>
   <data name="BuildingStaircases.BulkSaveSuccessfully" xml:space="preserve">
     <value>اطلاعات راه‌پله‌ها با موفقیت ذخیره شد.</value>
   </data>
@@ -1352,5 +1316,59 @@
   </data>
   <data name="BuildingStaircaseElevator.InvalidStaircaseId" xml:space="preserve">
     <value>شناسه راه‌پله معتبر نیست.</value>
+  </data>
+  <data name="BuildingFloors.BuildingNotFound" xml:space="preserve">
+    <value>ساختمان مورد نظر یافت نشد.</value>
+  </data>
+  <data name="BuildingFloors.BulkSaveSuccess" xml:space="preserve">
+    <value>اطلاعات طبقات با موفقیت ذخیره شد.</value>
+  </data>
+  <data name="BuildingFloors.CapacityTooLow" xml:space="preserve">
+    <value>ظرفیت جدید از تعداد واحدهای ثبت‌شده کمتر است.</value>
+  </data>
+  <data name="BuildingFloors.Conflict" xml:space="preserve">
+    <value>عملیات به دلیل وجود اطلاعات مرتبط امکان‌پذیر نیست.</value>
+  </data>
+  <data name="BuildingFloors.DeleteSuccess" xml:space="preserve">
+    <value>طبقه با موفقیت حذف شد.</value>
+  </data>
+  <data name="BuildingFloors.DuplicateFloor" xml:space="preserve">
+    <value>شماره یا کد این طبقه قبلاً در ساختمان ثبت شده است.</value>
+  </data>
+  <data name="BuildingFloors.DuplicateInRequest" xml:space="preserve">
+    <value>شماره یا کد طبقه در اطلاعات ارسالی تکراری است.</value>
+  </data>
+  <data name="BuildingFloors.GetSuccess" xml:space="preserve">
+    <value>اطلاعات طبقات با موفقیت دریافت شد.</value>
+  </data>
+  <data name="BuildingFloors.HasActiveUnits" xml:space="preserve">
+    <value>به دلیل وجود واحد فعال در این طبقه، امکان غیرفعال‌سازی وجود ندارد.</value>
+  </data>
+  <data name="BuildingFloors.HasDependencies" xml:space="preserve">
+    <value>این طبقه دارای اطلاعات وابسته است و امکان حذف آن وجود ندارد.</value>
+  </data>
+  <data name="BuildingFloors.InsertSuccess" xml:space="preserve">
+    <value>طبقه با موفقیت ثبت شد.</value>
+  </data>
+  <data name="BuildingFloors.InvalidBuildingId" xml:space="preserve">
+    <value>شناسه ساختمان معتبر نیست.</value>
+  </data>
+  <data name="BuildingFloors.InvalidData" xml:space="preserve">
+    <value>اطلاعات طبقه معتبر نیست.</value>
+  </data>
+  <data name="BuildingFloors.InvalidId" xml:space="preserve">
+    <value>شناسه طبقه معتبر نیست.</value>
+  </data>
+  <data name="BuildingFloors.ItemsRequired" xml:space="preserve">
+    <value>حداقل یک طبقه باید ارسال شود.</value>
+  </data>
+  <data name="BuildingFloors.NotFound" xml:space="preserve">
+    <value>طبقه مورد نظر یافت نشد.</value>
+  </data>
+  <data name="BuildingFloors.SetActiveSuccess" xml:space="preserve">
+    <value>وضعیت فعالیت طبقه با موفقیت تغییر کرد.</value>
+  </data>
+  <data name="BuildingFloors.UpdateSuccess" xml:space="preserve">
+    <value>اطلاعات طبقه با موفقیت ویرایش شد.</value>
   </data>
 </root>

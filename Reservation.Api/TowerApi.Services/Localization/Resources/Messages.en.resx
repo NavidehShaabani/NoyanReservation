@@ -384,41 +384,59 @@
   <data name="BuildingFloorElevator.InvalidRelation" xml:space="preserve">
     <value>The floor-elevator relation data is invalid.</value>
   </data>
-  <data name="BuildingFloors.BulkSaveSuccessfully" xml:space="preserve">
-    <value>Building floors were saved successfully.</value>
+  <data name="BuildingFloors.BuildingNotFound" xml:space="preserve">
+    <value>The requested building was not found.</value>
+  </data>
+  <data name="BuildingFloors.BulkSaveSuccess" xml:space="preserve">
+    <value>The floors were saved successfully.</value>
+  </data>
+  <data name="BuildingFloors.CapacityTooLow" xml:space="preserve">
+    <value>The new capacity is lower than the number of existing units.</value>
   </data>
   <data name="BuildingFloors.Conflict" xml:space="preserve">
-    <value>The operation cannot be completed because of conflicting data or active units on the floor.</value>
+    <value>The operation cannot be completed because related records exist.</value>
   </data>
-  <data name="BuildingFloors.DuplicateItems" xml:space="preserve">
-    <value>Duplicate items were found in the request.</value>
+  <data name="BuildingFloors.DeleteSuccess" xml:space="preserve">
+    <value>The floor was deleted successfully.</value>
   </data>
-  <data name="BuildingFloors.InvalidBuildingFloorId" xml:space="preserve">
-    <value>The building floor ID is invalid.</value>
+  <data name="BuildingFloors.DuplicateFloor" xml:space="preserve">
+    <value>A floor with this number or code already exists in the building.</value>
+  </data>
+  <data name="BuildingFloors.DuplicateInRequest" xml:space="preserve">
+    <value>Duplicate floor number or code exists in the submitted items.</value>
+  </data>
+  <data name="BuildingFloors.GetSuccess" xml:space="preserve">
+    <value>The floor information was retrieved successfully.</value>
+  </data>
+  <data name="BuildingFloors.HasActiveUnits" xml:space="preserve">
+    <value>This floor cannot be deactivated because it contains active units.</value>
+  </data>
+  <data name="BuildingFloors.HasDependencies" xml:space="preserve">
+    <value>This floor has dependent records and cannot be deleted.</value>
+  </data>
+  <data name="BuildingFloors.InsertSuccess" xml:space="preserve">
+    <value>The floor was created successfully.</value>
   </data>
   <data name="BuildingFloors.InvalidBuildingId" xml:space="preserve">
     <value>The building ID is invalid.</value>
   </data>
   <data name="BuildingFloors.InvalidData" xml:space="preserve">
-    <value>The submitted bulk data is invalid.</value>
+    <value>The floor information is invalid.</value>
   </data>
-  <data name="BuildingFloors.InvalidFloorCode" xml:space="preserve">
-    <value>The floor code is invalid or missing.</value>
+  <data name="BuildingFloors.InvalidId" xml:space="preserve">
+    <value>The floor ID is invalid.</value>
   </data>
-  <data name="BuildingFloors.InvalidFloorName" xml:space="preserve">
-    <value>The floor name is invalid or missing.</value>
+  <data name="BuildingFloors.ItemsRequired" xml:space="preserve">
+    <value>At least one floor must be provided.</value>
   </data>
-  <data name="BuildingFloors.InvalidFloorNameEn" xml:space="preserve">
-    <value>The English floor name cannot exceed 200 characters.</value>
+  <data name="BuildingFloors.NotFound" xml:space="preserve">
+    <value>The requested floor was not found.</value>
   </data>
-  <data name="BuildingFloors.InvalidMaxUnits" xml:space="preserve">
-    <value>The floor capacity must be at least one unit.</value>
+  <data name="BuildingFloors.SetActiveSuccess" xml:space="preserve">
+    <value>The floor status was updated successfully.</value>
   </data>
-  <data name="BuildingFloors.InvalidQueryRequest" xml:space="preserve">
-    <value>The building floor query request is invalid.</value>
-  </data>
-  <data name="BuildingFloors.ReferenceNotFound" xml:space="preserve">
-    <value>The specified building or reference record was not found.</value>
+  <data name="BuildingFloors.UpdateSuccess" xml:space="preserve">
+    <value>The floor was updated successfully.</value>
   </data>
   <data name="BuildingFloorStaircases.BuildingNotFound" xml:space="preserve">
     <value>The requested building was not found.</value>

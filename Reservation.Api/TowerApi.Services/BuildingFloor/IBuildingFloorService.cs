@@ -3,47 +3,28 @@ using TowerApi.Models.BuildingFloor;
 
 namespace TowerApi.Services.BuildingFloor
 {
-    public interface IBuildingFloorService
+
+    public interface IBuildingFloorsService
     {
-        Task<(
-            int ResultCode,
-            string MessageKey,
-            object? Data)>
-            GetListAsync(BuildingFloorQueryRequest request);
+        Task<(int Code, string MessageKey, IReadOnlyList<BuildingFloorModel>? Data)>
+            Get(long? buildingId, bool? isActive);
 
-        Task<(
-            int ResultCode,
-            string MessageKey,
-            object? Data)>
-            GetByIdAsync(long buildingFloorId);
+        Task<(int Code, string MessageKey, BuildingFloorModel? Data)>
+            GetById(long buildingFloorId);
 
-        Task<(
-            int ResultCode,
-            string MessageKey,
-            object? Data)>
-            AddAsync(
-                BuildingFloorCreateRequest request,
-                int userId);
+        Task<(int Code, string MessageKey, BuildingFloorModel? Data)>
+            Insert(BuildingFloorInsertRequest request);
 
-        Task<(
-            int ResultCode,
-            string MessageKey,
-            object? Data)>
-            EditAsync(
-                long buildingFloorId,
-                BuildingFloorUpdateRequest request,
-                int userId);
+        Task<(int Code, string MessageKey, BuildingFloorModel? Data)>
+            Update(long buildingFloorId, BuildingFloorUpdateRequest request);
 
-        Task<(
-            int ResultCode,
-            string MessageKey)>
-            DeleteAsync(
-                long buildingFloorId,
-                int userId);
+        Task<(int Code, string MessageKey, IReadOnlyList<BuildingFloorModel>? Data)>
+            BulkSave(BuildingFloorBulkSaveRequest request);
 
-        Task<BuildingFloorBulkServiceResult>
-            BulkSaveAsync(
-                BuildingFloorBulkSaveRequest request,
-                long currentUserId);
+        Task<(int Code, string MessageKey, object? Data)>
+            Delete(long buildingFloorId);
+
+        Task<(int Code, string MessageKey, object? Data)>
+            SetActive(long buildingFloorId, bool isActive);
     }
 }

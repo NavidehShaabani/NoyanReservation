@@ -4,300 +4,303 @@ using TowerApi.Repositories.BuildingFloor;
 
 namespace TowerApi.Services.BuildingFloor
 {
-    public class BuildingFloorService : IBuildingFloorService
+    public class BuildingFloorsService : IBuildingFloorsService
     {
-        private readonly IBuildingFloorRepository _repository;
+        private readonly IBuildingFloorsRepository _repository;
+        private readonly ICurrentUser _currentUser;
 
-        public BuildingFloorService(
-            IBuildingFloorRepository repository)
+        public BuildingFloorsService(
+            IBuildingFloorsRepository repository,
+            ICurrentUser currentUser)
         {
             _repository = repository;
+            _currentUser = currentUser;
+        }
+
+        private bool TryGetUserId(out int userId)
+        {
+            userId = 0;
+
+            if (!_currentUser.UserId.HasValue ||
+                _currentUser.UserId.Value <= 0 ||
+                _currentUser.UserId.Value > int.MaxValue)
+            {
+                return false;
+            }
+
+            userId = (int)_currentUser.UserId.Value;
+            return true;
+        }
+
+        private static string GetMessageKey(
+            int code,
+            string? message)
+        {
+            if (code == 500)
+                return "Common.InternalServerError";
+
+            var value = (message ?? string.Empty).Trim();
+
+            // پیام‌های شناخته‌شده Stored Procedure
+            if (value.Contains("No records", StringComparison.OrdinalIgnoreCase))
+                return "BuildingFloors.ItemsRequired";
+
+            if (value.Contains("Invalid floor", StringComparison.OrdinalIgnoreCase))
+                return "BuildingFloors.InvalidData";
+
+            if (value.Contains("Duplicate floor", StringComparison.OrdinalIgnoreCase))
+                return "BuildingFloors.DuplicateInRequest";
+
+            if (value.Contains("already exists", StringComparison.OrdinalIgnoreCase))
+                return "BuildingFloors.DuplicateFloor";
+
+            if (value.Contains("building", StringComparison.OrdinalIgnoreCase) &&
+                value.Contains("not found", StringComparison.OrdinalIgnoreCase))
+                return "BuildingFloors.BuildingNotFound";
+
+            if (value.Contains("floor", StringComparison.OrdinalIgnoreCase) &&
+                value.Contains("not found", StringComparison.OrdinalIgnoreCase))
+                return "BuildingFloors.NotFound";
+
+            if (value.Contains("dependent", StringComparison.OrdinalIgnoreCase))
+                return "BuildingFloors.HasDependencies";
+
+            if (value.Contains("active units", StringComparison.OrdinalIgnoreCase))
+                return "BuildingFloors.HasActiveUnits";
+
+            if (value.Contains("capacity", StringComparison.OrdinalIgnoreCase))
+                return "BuildingFloors.CapacityTooLow";
+
+            if (code == 201)
+                return "BuildingFloors.InsertSuccess";
+
+            if (code == 200)
+            {
+                if (value.Contains("deleted", StringComparison.OrdinalIgnoreCase))
+                    return "BuildingFloors.DeleteSuccess";
+
+                if (value.Contains("status", StringComparison.OrdinalIgnoreCase))
+                    return "BuildingFloors.SetActiveSuccess";
+
+                if (value.Contains("updated", StringComparison.OrdinalIgnoreCase))
+                    return "BuildingFloors.UpdateSuccess";
+
+                if (value.Contains("saved", StringComparison.OrdinalIgnoreCase))
+                    return "BuildingFloors.BulkSaveSuccess";
+
+                return "BuildingFloors.GetSuccess";
+            }
+
+            return code switch
+            {
+                400 => "BuildingFloors.InvalidData",
+                404 => "BuildingFloors.NotFound",
+                409 => "BuildingFloors.Conflict",
+                _ => "Common.InternalServerError"
+            };
+        }
+
+        private static bool IsValidText(
+            string? value,
+            int maxLength)
+        {
+            return !string.IsNullOrWhiteSpace(value) &&
+                   value.Trim().Length <= maxLength;
+        }
+
+        private static bool IsValidOptionalText(
+            string? value,
+            int maxLength)
+        {
+            return value == null || value.Length <= maxLength;
+        }
+
+        private static bool IsValidFloor(
+            string? floorCode,
+            string? floorName,
+            string? floorNameEn,
+            int maxUnits)
+        {
+            return IsValidText(floorCode, 40) &&
+                   IsValidText(floorName, 200) &&
+                   IsValidOptionalText(floorNameEn, 200) &&
+                   maxUnits > 0;
         }
 
         public async Task<(
-            int ResultCode,
+            int Code,
             string MessageKey,
-            object? Data)>
-            GetListAsync(BuildingFloorQueryRequest request)
+            IReadOnlyList<BuildingFloorModel>? Data
+        )> Get(long? buildingId, bool? isActive)
         {
-            if (request == null)
-                return (400, "BuildingFloors.InvalidQueryRequest", null);
-
-            if (request.PageNumber < 1 || request.PageSize < 1 ||
-                request.PageSize > 500)
-            {
-                return (400, "Common.InvalidPaginationParameters", null);
-            }
-
-            if (request.BuildingId.HasValue &&
-                request.BuildingId.Value <= 0)
-            {
+            if (buildingId.HasValue && buildingId.Value <= 0)
                 return (400, "BuildingFloors.InvalidBuildingId", null);
-            }
 
-            var result = await _repository.GetListAsync(request);
+            var result = await _repository.Get(buildingId, isActive);
 
             return (
                 result.ResultCode,
-                result.ResultMessage,
+                GetMessageKey(result.ResultCode, result.ResultMessage),
                 result.Data
             );
         }
 
         public async Task<(
-            int ResultCode,
+            int Code,
             string MessageKey,
-            object? Data)>
-            GetByIdAsync(long buildingFloorId)
+            BuildingFloorModel? Data
+        )> GetById(long buildingFloorId)
         {
             if (buildingFloorId <= 0)
-            {
-                return (
-                    400,
-                    "BuildingFloors.InvalidBuildingFloorId",
-                    null
-                );
-            }
+                return (400, "BuildingFloors.InvalidId", null);
 
-            var result = await _repository.GetByIdAsync(buildingFloorId);
+            var result = await _repository.GetById(buildingFloorId);
 
             return (
                 result.ResultCode,
-                result.ResultMessage,
+                GetMessageKey(result.ResultCode, result.ResultMessage),
                 result.Data
             );
         }
 
         public async Task<(
-            int ResultCode,
+            int Code,
             string MessageKey,
-            object? Data)>
-            AddAsync(
-                BuildingFloorCreateRequest request,
-                int userId)
+            BuildingFloorModel? Data
+        )> Insert(BuildingFloorInsertRequest request)
         {
-            if (request == null)
-                return (400, "Common.InvalidRequest", null);
+            if (request == null ||
+                request.BuildingId <= 0 ||
+                !IsValidFloor(
+                    request.FloorCode,
+                    request.FloorName,
+                    request.FloorNameEn,
+                    request.MaxUnits))
+            {
+                return (400, "BuildingFloors.InvalidData", null);
+            }
 
-            if (userId <= 0)
+            if (!TryGetUserId(out var userId))
                 return (401, "Common.Unauthorized", null);
 
-            if (!ValidateRequest(request, out var messageKey))
-                return (400, messageKey, null);
-
-            var result = await _repository.AddAsync(request, userId);
+            var result = await _repository.Insert(request, userId);
 
             return (
                 result.ResultCode,
-                result.ResultMessage,
+                GetMessageKey(result.ResultCode, result.ResultMessage),
                 result.Data
             );
         }
 
         public async Task<(
-            int ResultCode,
+            int Code,
             string MessageKey,
-            object? Data)>
-            EditAsync(
-                long buildingFloorId,
-                BuildingFloorUpdateRequest request,
-                int userId)
+            BuildingFloorModel? Data
+        )> Update(
+            long buildingFloorId,
+            BuildingFloorUpdateRequest request)
         {
-            if (buildingFloorId <= 0)
+            if (buildingFloorId <= 0 ||
+                request == null ||
+                !IsValidFloor(
+                    request.FloorCode,
+                    request.FloorName,
+                    request.FloorNameEn,
+                    request.MaxUnits))
             {
-                return (
-                    400,
-                    "BuildingFloors.InvalidBuildingFloorId",
-                    null
-                );
+                return (400, "BuildingFloors.InvalidData", null);
             }
 
-            if (request == null)
-                return (400, "Common.InvalidRequest", null);
-
-            if (userId <= 0)
+            if (!TryGetUserId(out var userId))
                 return (401, "Common.Unauthorized", null);
 
-            if (!ValidateRequest(request, out var messageKey))
-                return (400, messageKey, null);
-
-            var result = await _repository.EditAsync(
+            var result = await _repository.Update(
                 buildingFloorId,
                 request,
                 userId);
 
             return (
                 result.ResultCode,
-                result.ResultMessage,
+                GetMessageKey(result.ResultCode, result.ResultMessage),
                 result.Data
             );
         }
 
-        public async Task<(int ResultCode, string MessageKey)>
-            DeleteAsync(long buildingFloorId, int userId)
+        public async Task<(
+            int Code,
+            string MessageKey,
+            IReadOnlyList<BuildingFloorModel>? Data
+        )> BulkSave(BuildingFloorBulkSaveRequest request)
         {
-            if (buildingFloorId <= 0)
+            if (request?.Items == null || request.Items.Count == 0)
+                return (400, "BuildingFloors.ItemsRequired", null);
+
+            foreach (var item in request.Items)
             {
-                return (
-                    400,
-                    "BuildingFloors.InvalidBuildingFloorId"
-                );
+                if (item.BuildingFloorId < 0 ||
+                    item.BuildingId <= 0 ||
+                    !IsValidFloor(
+                        item.FloorCode,
+                        item.FloorName,
+                        item.FloorNameEn,
+                        item.MaxUnits))
+                {
+                    return (400, "BuildingFloors.InvalidData", null);
+                }
             }
 
-            if (userId <= 0)
-                return (401, "Common.Unauthorized");
+            if (!TryGetUserId(out var userId))
+                return (401, "Common.Unauthorized", null);
 
-            var result = await _repository.DeleteAsync(
+            var result = await _repository.BulkSave(request, userId);
+
+            return (
+                result.ResultCode,
+                GetMessageKey(result.ResultCode, result.ResultMessage),
+                result.Data
+            );
+        }
+
+        public async Task<(
+            int Code,
+            string MessageKey,
+            object? Data
+        )> Delete(long buildingFloorId)
+        {
+            if (buildingFloorId <= 0)
+                return (400, "BuildingFloors.InvalidId", null);
+
+            var result = await _repository.Delete(buildingFloorId);
+
+            return (
+                result.ResultCode,
+                GetMessageKey(result.ResultCode, result.ResultMessage),
+                null
+            );
+        }
+
+        public async Task<(
+            int Code,
+            string MessageKey,
+            object? Data
+        )> SetActive(long buildingFloorId, bool isActive)
+        {
+            if (buildingFloorId <= 0)
+                return (400, "BuildingFloors.InvalidId", null);
+
+            if (!TryGetUserId(out var userId))
+                return (401, "Common.Unauthorized", null);
+
+            var result = await _repository.SetActive(
                 buildingFloorId,
+                isActive,
                 userId);
 
             return (
                 result.ResultCode,
-                result.ResultMessage
+                GetMessageKey(result.ResultCode, result.ResultMessage),
+                null
             );
-        }
-
-        public async Task<BuildingFloorBulkServiceResult>
-            BulkSaveAsync(
-                BuildingFloorBulkSaveRequest request,
-                long currentUserId)
-        {
-            if (request?.Items == null || request.Items.Count == 0)
-            {
-                return InvalidBulkData(
-                    "BuildingFloors.InvalidData");
-            }
-
-            if (currentUserId <= 0 || currentUserId > int.MaxValue)
-            {
-                return InvalidBulkData(
-                    "Common.InvalidUserId");
-            }
-
-            foreach (var item in request.Items)
-            {
-                if (item.BuildingId <= 0)
-                {
-                    return InvalidBulkData(
-                        "BuildingFloors.InvalidBuildingId");
-                }
-
-                if (item.BuildingFloorId < 0)
-                {
-                    return InvalidBulkData(
-                        "BuildingFloors.InvalidBuildingFloorId");
-                }
-
-                if (!ValidateRequest(item, out var messageKey))
-                    return InvalidBulkData(messageKey);
-            }
-
-            var duplicateIds = request.Items
-                .Where(x =>
-                    x.BuildingFloorId.HasValue &&
-                    x.BuildingFloorId.Value > 0)
-                .GroupBy(x => x.BuildingFloorId!.Value)
-                .Any(g => g.Count() > 1);
-
-            var duplicateFloorNumbers = request.Items
-                .GroupBy(x => new { x.BuildingId, x.FloorNumber })
-                .Any(g => g.Count() > 1);
-
-            var duplicateFloorCodes = request.Items
-                .GroupBy(x => new
-                {
-                    x.BuildingId,
-                    FloorCode = x.FloorCode.Trim().ToUpperInvariant()
-                })
-                .Any(g => g.Count() > 1);
-
-            if (duplicateIds ||
-                duplicateFloorNumbers ||
-                duplicateFloorCodes)
-            {
-                return InvalidBulkData(
-                    "BuildingFloors.DuplicateItems");
-            }
-
-            var result = await _repository.BulkSaveAsync(
-                request.Items,
-                currentUserId);
-
-            return new BuildingFloorBulkServiceResult
-            {
-                Code = result.ResultCode,
-                MessageKey = result.ResultCode switch
-                {
-                    200 => "BuildingFloors.BulkSaveSuccessfully",
-                    201 => "BuildingFloors.BulkSaveSuccessfully",
-                    400 => "BuildingFloors.InvalidData",
-                    404 => "BuildingFloors.ReferenceNotFound",
-                    409 => "BuildingFloors.Conflict",
-                    _ => "Common.SystemError"
-                }
-            };
-        }
-
-        private static bool ValidateRequest(
-            BuildingFloorCreateRequest request,
-            out string messageKey)
-        {
-            messageKey = string.Empty;
-
-            if (request.BuildingId <= 0)
-                messageKey = "BuildingFloors.InvalidBuildingId";
-
-            else if (string.IsNullOrWhiteSpace(request.FloorCode) ||
-                     request.FloorCode.Length > 40)
-                messageKey = "BuildingFloors.InvalidFloorCode";
-
-            else if (string.IsNullOrWhiteSpace(request.FloorName) ||
-                     request.FloorName.Length > 200)
-                messageKey = "BuildingFloors.InvalidFloorName";
-
-            else if (request.FloorNameEn?.Length > 200)
-                messageKey = "BuildingFloors.InvalidFloorNameEn";
-
-            else if (request.MaxUnits < 1)
-                messageKey = "BuildingFloors.InvalidMaxUnits";
-
-            return string.IsNullOrEmpty(messageKey);
-        }
-
-        private static bool ValidateRequest(
-            BuildingFloorBulkItem request,
-            out string messageKey)
-        {
-            messageKey = string.Empty;
-
-            if (request.BuildingId <= 0)
-                messageKey = "BuildingFloors.InvalidBuildingId";
-
-            else if (string.IsNullOrWhiteSpace(request.FloorCode) ||
-                     request.FloorCode.Length > 40)
-                messageKey = "BuildingFloors.InvalidFloorCode";
-
-            else if (string.IsNullOrWhiteSpace(request.FloorName) ||
-                     request.FloorName.Length > 200)
-                messageKey = "BuildingFloors.InvalidFloorName";
-
-            else if (request.FloorNameEn?.Length > 200)
-                messageKey = "BuildingFloors.InvalidFloorNameEn";
-
-            else if (request.MaxUnits < 1)
-                messageKey = "BuildingFloors.InvalidMaxUnits";
-
-            return string.IsNullOrEmpty(messageKey);
-        }
-
-        private static BuildingFloorBulkServiceResult InvalidBulkData(
-            string messageKey)
-        {
-            return new BuildingFloorBulkServiceResult
-            {
-                Code = 400,
-                MessageKey = messageKey
-            };
         }
     }
 }

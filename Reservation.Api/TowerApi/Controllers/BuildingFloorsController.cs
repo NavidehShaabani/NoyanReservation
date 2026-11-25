@@ -10,83 +10,56 @@ namespace TowerApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
     public class BuildingFloorsController : ControllerBase
     {
-        private readonly IBuildingFloorService _service;
-        private readonly ICurrentUser _currentUser;
+        private readonly IBuildingFloorsService _service;
         private readonly IApiResponseFactory _responseFactory;
 
         public BuildingFloorsController(
-            IBuildingFloorService service,
-            ICurrentUser currentUser,
+            IBuildingFloorsService service,
             IApiResponseFactory responseFactory)
         {
             _service = service;
-            _currentUser = currentUser;
             _responseFactory = responseFactory;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetList(
-            [FromQuery] BuildingFloorQueryRequest request)
+        private IActionResult CreateResponse<T>(
+            (int Code, string MessageKey, T? Data) result)
         {
-            var result = await _service.GetListAsync(request);
+            return StatusCode(
+                ApiResponseMessageMapper.GetHttpStatusCode(result.Code),
+                result.Code is 200 or 201
+                    ? _responseFactory.Success(
+                        result.Code,
+                        result.MessageKey,
+                        result.Data)
+                    : _responseFactory.Error(
+                        result.Code,
+                        result.MessageKey));
+        }
 
-            if (result.ResultCode == 200)
-            {
-                return Ok(_responseFactory.Success(
-                    result.ResultCode,
-                    "Common.GetSuccessfully",
-                    result.Data));
-            }
-
-            return CreateErrorResponse(
-                result.ResultCode,
-                result.MessageKey);
+        [HttpGet]
+        public async Task<IActionResult> Get(
+            [FromQuery] long? buildingId,
+            [FromQuery] bool? isActive)
+        {
+            var result = await _service.Get(buildingId, isActive);
+            return CreateResponse(result);
         }
 
         [HttpGet("{buildingFloorId:long}")]
         public async Task<IActionResult> GetById(long buildingFloorId)
         {
-            var result = await _service.GetByIdAsync(buildingFloorId);
-
-            if (result.ResultCode == 200)
-            {
-                return Ok(_responseFactory.Success(
-                    result.ResultCode,
-                    "Common.GetSuccessfully",
-                    result.Data));
-            }
-
-            return CreateErrorResponse(
-                result.ResultCode,
-                result.MessageKey);
+            var result = await _service.GetById(buildingFloorId);
+            return CreateResponse(result);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(
-            [FromBody] BuildingFloorCreateRequest request)
+        public async Task<IActionResult> Insert(
+            [FromBody] BuildingFloorInsertRequest request)
         {
-            if (!TryGetCurrentUserId(out var userId, out var error))
-                return error!;
-
-            var result = await _service.AddAsync(request, userId);
-
-            if (result.ResultCode == 200 ||
-                result.ResultCode == 201)
-            {
-                return StatusCode(
-                    result.ResultCode,
-                    _responseFactory.Success(
-                        result.ResultCode,
-                        "Common.CreatedSuccessfully",
-                        result.Data));
-            }
-
-            return CreateErrorResponse(
-                result.ResultCode,
-                result.MessageKey);
+            var result = await _service.Insert(request);
+            return CreateResponse(result);
         }
 
         [HttpPut("{buildingFloorId:long}")]
@@ -94,133 +67,38 @@ namespace TowerApi.Controllers
             long buildingFloorId,
             [FromBody] BuildingFloorUpdateRequest request)
         {
-            if (!TryGetCurrentUserId(out var userId, out var error))
-                return error!;
-
-            var result = await _service.EditAsync(
+            var result = await _service.Update(
                 buildingFloorId,
-                request,
-                userId);
+                request);
 
-            if (result.ResultCode == 200)
-            {
-                return Ok(_responseFactory.Success(
-                    result.ResultCode,
-                    "Common.UpdatedSuccessfully",
-                    result.Data));
-            }
+            return CreateResponse(result);
+        }
 
-            return CreateErrorResponse(
-                result.ResultCode,
-                result.MessageKey);
+        [HttpPost("bulk-save")]
+        public async Task<IActionResult> BulkSave(
+            [FromBody] BuildingFloorBulkSaveRequest request)
+        {
+            var result = await _service.BulkSave(request);
+            return CreateResponse(result);
         }
 
         [HttpDelete("{buildingFloorId:long}")]
         public async Task<IActionResult> Delete(long buildingFloorId)
         {
-            if (!TryGetCurrentUserId(out var userId, out var error))
-                return error!;
+            var result = await _service.Delete(buildingFloorId);
+            return CreateResponse(result);
+        }
 
-            var result = await _service.DeleteAsync(
+        [HttpPatch("{buildingFloorId:long}/active")]
+        public async Task<IActionResult> SetActive(
+            long buildingFloorId,
+            [FromBody] BuildingFloorSetActiveRequest request)
+        {
+            var result = await _service.SetActive(
                 buildingFloorId,
-                userId);
+                request.IsActive);
 
-            if (result.ResultCode == 200)
-            {
-                return Ok(_responseFactory.Success(
-                    result.ResultCode,
-                    "Common.DeletedSuccessfully",
-                    (object?)null));
-            }
-
-            return CreateErrorResponse(
-                result.ResultCode,
-                result.MessageKey);
-        }
-
-        [HttpPost("BulkSave")]
-        public async Task<IActionResult> BulkSave(
-            [FromBody] BuildingFloorBulkSaveRequest request)
-        {
-            if (!_currentUser.UserId.HasValue)
-            {
-                return CreateErrorResponse(
-                    401,
-                    "Common.Unauthorized");
-            }
-
-            if (_currentUser.UserId.Value <= 0 ||
-                _currentUser.UserId.Value > int.MaxValue)
-            {
-                return CreateErrorResponse(
-                    400,
-                    "Common.InvalidUserId");
-            }
-
-            var result = await _service.BulkSaveAsync(
-                request,
-                _currentUser.UserId.Value);
-
-            if (result.Code == 200 || result.Code == 201)
-            {
-                return StatusCode(
-                    result.Code,
-                    _responseFactory.Success(
-                        result.Code,
-                        result.MessageKey,
-                        (object?)null));
-            }
-
-            return CreateErrorResponse(
-                result.Code,
-                result.MessageKey);
-        }
-
-        private bool TryGetCurrentUserId(
-            out int userId,
-            out IActionResult? error)
-        {
-            userId = 0;
-            error = null;
-
-            if (!_currentUser.UserId.HasValue)
-            {
-                error = CreateErrorResponse(
-                    401,
-                    "Common.Unauthorized");
-
-                return false;
-            }
-
-            var currentUserId = _currentUser.UserId.Value;
-
-            if (currentUserId <= 0 || currentUserId > int.MaxValue)
-            {
-                error = CreateErrorResponse(
-                    400,
-                    "Common.InvalidUserId");
-
-                return false;
-            }
-
-            userId = (int)currentUserId;
-            return true;
-        }
-
-        private IActionResult CreateErrorResponse(
-            int resultCode,
-            string? messageKey)
-        {
-            var key = !string.IsNullOrWhiteSpace(messageKey)
-                ? messageKey
-                : ApiResponseMessageMapper.GetMessageKey(resultCode);
-
-            var statusCode =
-                ApiResponseMessageMapper.GetHttpStatusCode(resultCode);
-
-            return StatusCode(
-                statusCode,
-                _responseFactory.Error(resultCode, key));
+            return CreateResponse(result);
         }
     }
 }
