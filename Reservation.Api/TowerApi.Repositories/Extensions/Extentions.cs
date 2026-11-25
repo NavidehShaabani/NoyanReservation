@@ -79,7 +79,7 @@ namespace TowerApi.Repositories.Extensions
             _services.AddScoped<IEnrollmentWaitlistRepository,EnrollmentWaitlistRepository>();
             _services.AddScoped<IPricingRuleRepository,PricingRuleRepository>();
             _services.AddScoped<IBuildingConfigurationRepository,BuildingConfigurationRepository>();
-            _services.AddScoped<IBuildingFloorRepository,BuildingFloorRepository>();
+            _services.AddScoped<IBuildingFloorsRepository,BuildingFloorsRepository>();
             _services.AddScoped<IBuildingStaircaseRepository,BuildingStaircaseRepository>();
             _services.AddScoped<IBuildingFloorStaircaseRepository,BuildingFloorStaircaseRepository>();
             _services.AddScoped<IUnitStaircaseRepository,UnitStaircaseRepository>();

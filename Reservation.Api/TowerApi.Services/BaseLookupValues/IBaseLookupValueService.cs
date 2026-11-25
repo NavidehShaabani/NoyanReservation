@@ -11,5 +11,9 @@ namespace TowerApi.Services.BaseLookupValues
             GetByIdAsync(
                 int lookupValueId,
                 CancellationToken cancellationToken = default);
+        Task<BaseLookupValueResult<dynamic>>
+            GetByLookupIdAsync(
+                int lookupId,
+                CancellationToken cancellationToken = default);
     }
 }

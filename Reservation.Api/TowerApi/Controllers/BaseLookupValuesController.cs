@@ -79,5 +79,39 @@ namespace TowerApi.Controllers
                     ApiResponseMessageMapper.GetMessageKey(
                         result.ResultCode)));
         }
+        [HttpGet("bylookupid/{lookupId:int}")]
+        public async Task<IActionResult> GetByLookupId(
+            int lookupId,
+            CancellationToken cancellationToken)
+        {
+            if (lookupId <= 0)
+            {
+                return BadRequest(
+                    _responseFactory.Error(
+                        400,
+                        "Common.InvalidRequest"));
+            }
+
+            var result = await _service.GetByLookupIdAsync(
+                lookupId,
+                cancellationToken);
+
+            if (result.ResultCode == 200)
+            {
+                return Ok(
+                    _responseFactory.Success(
+                        200,
+                        "Common.GetSuccessfully",
+                        result.Data));
+            }
+
+            return StatusCode(
+                ApiResponseMessageMapper.GetHttpStatusCode(
+                    result.ResultCode),
+                _responseFactory.Error(
+                    result.ResultCode,
+                    ApiResponseMessageMapper.GetMessageKey(
+                        result.ResultCode)));
+        }
     }
 }

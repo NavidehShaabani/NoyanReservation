@@ -76,7 +76,7 @@ namespace TowerApi.Services.Extensions
             _services.AddScoped<IEnrollmentWaitlistService,EnrollmentWaitlistService>();
             _services.AddScoped<IPricingRuleService,PricingRuleService>();
             _services.AddScoped<IBuildingConfigurationService,BuildingConfigurationService>();
-            _services.AddScoped<IBuildingFloorService,BuildingFloorService>();
+            _services.AddScoped<IBuildingFloorsService,BuildingFloorsService>();
             _services.AddScoped<IBuildingStaircaseService,BuildingStaircaseService>();
             _services.AddScoped<IBuildingFloorStaircaseService,BuildingFloorStaircaseService>();
             _services.AddScoped<IUnitStaircaseService,UnitStaircaseService>();

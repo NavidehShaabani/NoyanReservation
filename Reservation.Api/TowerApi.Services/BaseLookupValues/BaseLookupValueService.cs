@@ -40,5 +40,25 @@ namespace TowerApi.Services.BaseLookupValues
                 lookupValueId,
                 cancellationToken);
         }
+        public Task<BaseLookupValueResult<dynamic>>
+            GetByLookupIdAsync(
+                int lookupId,
+                CancellationToken cancellationToken = default)
+        {
+            if (lookupId <= 0)
+            {
+                return Task.FromResult(
+                    new BaseLookupValueResult<dynamic>
+                    {
+                        ResultCode = 400,
+                        ResultMessage = "Common.InvalidRequest",
+                        Data = null
+                    });
+            }
+
+            return _repository.GetByLookupIdAsync(
+                lookupId,
+                cancellationToken);
+        }
     }
 }
